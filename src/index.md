@@ -1103,15 +1103,6 @@ display(
 </div>
 
 <div class="prose-block">
-  <h2>Watch the count unfold</h2>
-  <p>
-    This animated chart shows how candidates’ vote totals changed across the count,
-    as surpluses and eliminations were redistributed.
-  </p>
-</div>
-
-
-<div class="prose-block">
   <h2>Explore the vote standings through the counts</h2>
   <p>Take a look at votes cast by party or by the status of candidates in the election.</p>
 </div>
