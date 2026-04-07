@@ -535,7 +535,7 @@ function renderQuotaWaffleChunk(rows, { width = 1000 } = {}) {
     label: null,
     height: 300,
     marginTop: 12,
-    marginBottom: 100,
+    marginBottom: 90,
     fx: {
       padding: 0.3,
       domain: rows.map((d) => d.displayName)
@@ -1047,8 +1047,7 @@ electionTimelineControls({
   <div class="section-driver-block__intro">
     <p>
       Dáil elections take place over multiple counts, during which votes in excess
-      of the quota or votes from eliminated candidates are redistributed.
-    </p>
+      of the quota or votes from eliminated candidates are redistributed. Chart shows percentage of quota attained by candidates by count.
   </div>
 </div>
 
