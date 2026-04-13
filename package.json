@@ -6,13 +6,15 @@
     "build": "observable build",
     "dev": "observable preview",
     "deploy": "gh-pages -d dist",
-    "build:election-normalised": "node src/data/transformers/normalize-election-2024.js",
-    "build:election-final": "node src/data/transformers/build-final-rows.js",
-    "build:election-data": "npm run build:election-normalised && npm run build:election-final",
+    "build:retrieve-debate": "node src/data/transformers/retrieve-debate.js",
+    "build:build-pqs": "node src/scripts/build-pq-sports-links.mjs",
+    "build:sports-funding": "node src/data/transformers/sports-funding-enriched.json.js",
+    "build:waterfall": "node src/data/transformers/build-waterfall-segments.js src/data/derived/sports-funding-enriched.json src/data/derived/waterfall-segments.json",
     "observable": "observable"
   },
   "dependencies": {
     "@observablehq/framework": "^1.13.4",
+    "@turf/turf": "^7.2.0",
     "d3": "^7.9.0",
     "d3-dsv": "^3.0.1"
   },
