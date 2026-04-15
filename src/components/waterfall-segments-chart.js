@@ -39,6 +39,30 @@ export function waterfallSegmentsChart(
     return `€${(Number(value || 0) / 1_000_000).toFixed(2)}m`;
   }
 
+  function sanitizePlotAccessibility(root) {
+    if (!root) return;
+
+    const svg = root.querySelector("svg");
+    if (!svg) return;
+
+    svg.setAttribute("role", "img");
+
+    if (title || caption) {
+      const label = [title, caption].filter(Boolean).join(". ");
+      if (label) svg.setAttribute("aria-label", label);
+    } else {
+      svg.setAttribute("aria-label", "Funding by sport type waterfall chart");
+    }
+
+    const invalidLabelledGroups = svg.querySelectorAll("g[aria-label]");
+    invalidLabelledGroups.forEach((el) => {
+      const role = el.getAttribute("role");
+      if (!role) {
+        el.removeAttribute("aria-label");
+      }
+    });
+  }
+
   const chart = Plot.plot({
     width,
     height,
@@ -76,6 +100,7 @@ export function waterfallSegmentsChart(
         stroke: "white",
         strokeWidth: 0.5,
         rx: 3,
+        ariaHidden: true,
       }),
 
       Plot.ruleX(
@@ -85,6 +110,7 @@ export function waterfallSegmentsChart(
           x2: (d) => Math.max(0, d.x1 - maxValue * 0.012),
           y: "Segment",
           stroke: "#999",
+          ariaHidden: true,
         },
       ),
 
@@ -111,10 +137,12 @@ export function waterfallSegmentsChart(
         lineAnchor: "middle",
         fontSize: 10,
         fontWeight: 600,
+        ariaHidden: true,
       }),
     ],
   });
 
+  sanitizePlotAccessibility(chart);
   wrap.appendChild(chart);
 
   if (minorSegments.length) {
