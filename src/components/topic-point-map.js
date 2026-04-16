@@ -231,14 +231,15 @@ export function topicPointMap({
 
   const map = L.map(container);
 
-  map.attributionControl.setPrefix(
-    '<a href="https://leafletjs.com">Leaflet</a>',
-  );
+  map.attributionControl
+    .setPrefix
+    //'<a href="https://leafletjs.com">Leaflet</a>',
+    ();
 
   const osm = L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
-      attribution: "© OpenStreetMap contributors",
+      //attribution: "© OpenStreetMap contributors",
       detectRetina: true,
       errorTileUrl: BLANK_TILE,
     },
