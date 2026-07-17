@@ -1,5 +1,5 @@
 const tabs = [
-  { id: "people", label: "People", href: "./" },
+  { id: "people", label: "People", href: "./people" },
   { id: "education", label: "Education", href: "./education" },
   { id: "employment", label: "Work", href: "./employment" },
   { id: "housing", label: "Housing", href: "./housing" },
