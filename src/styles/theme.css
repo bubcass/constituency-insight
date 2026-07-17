@@ -1,6 +1,197 @@
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
 @import "./base.css";
 
+/* Constituency Insights index */
+
+.observablehq--block:has(> .insights-index-intro),
+.observablehq--block:has(> .insights-index-grid) {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.insights-index-intro {
+    max-width: var(--page-max);
+    margin: 0 auto var(--space-6);
+}
+
+.insights-index-intro__eyebrow {
+    margin: 0 0 0.45rem;
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.insights-index-intro h1 {
+    margin-bottom: 0.55rem;
+}
+
+.insights-index-intro > p:last-child {
+    max-width: 62rem;
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+
+.insights-index-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: var(--page-max);
+    margin: 0 auto;
+}
+
+.insights-index-card {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    min-height: 15.5rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #171512;
+    box-shadow: var(--shadow-soft);
+    color: #fffdf8;
+    text-decoration: none;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.insights-index-card:hover,
+.insights-index-card:focus-visible {
+    transform: translateY(-2px);
+    border-color: #b7ad95;
+    box-shadow: 0 10px 28px rgba(47, 47, 47, 0.1);
+    color: #fffdf8;
+    text-decoration: none;
+}
+
+.insights-index-card:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.insights-index-card__media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #d8d1c1;
+}
+
+.insights-index-card__media::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+        180deg,
+        rgba(17, 16, 13, 0.06) 0%,
+        rgba(17, 16, 13, 0.16) 48%,
+        rgba(17, 16, 13, 0.46) 100%
+    );
+    pointer-events: none;
+}
+
+.insights-index-card__asset {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.insights-index-card:hover .insights-index-card__asset,
+.insights-index-card:focus-visible .insights-index-card__asset {
+    transform: scale(1.015);
+}
+
+.insights-index-card__content {
+    position: relative;
+    z-index: 1;
+    align-self: end;
+    display: grid;
+    gap: 0.25rem;
+    margin: auto 0.9rem 0.9rem;
+    padding: 1rem 1.05rem 1.1rem;
+    border: 1px solid rgba(255, 253, 248, 0.2);
+    border-radius: calc(var(--radius) + 1px);
+    background: linear-gradient(
+        180deg,
+        rgba(24, 22, 19, 0.48) 0%,
+        rgba(24, 22, 19, 0.66) 100%
+    );
+    -webkit-backdrop-filter: blur(18px) saturate(125%);
+    backdrop-filter: blur(18px) saturate(125%);
+    box-shadow: 0 10px 30px rgba(17, 16, 13, 0.16);
+}
+
+.insights-index-card__eyebrow {
+    margin: 0;
+    color: rgba(255, 248, 227, 0.84);
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.insights-index-card .insights-index-card__heading {
+    display: flex;
+    gap: 0.3rem;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 253, 248, 0.94);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.insights-index-card__arrow {
+    flex: 0 0 auto;
+    transition: transform 180ms ease;
+}
+
+.insights-index-card:hover .insights-index-card__arrow,
+.insights-index-card:focus-visible .insights-index-card__arrow {
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .insights-index-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .insights-index-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .insights-index-card {
+        min-height: 13.5rem;
+    }
+
+    .insights-index-card__content {
+        margin: auto 0.7rem 0.7rem;
+        padding: 0.9rem 0.95rem 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .insights-index-card,
+    .insights-index-card__asset,
+    .insights-index-card__arrow {
+        transition: none;
+    }
+}
+
 /* Topic navigation */
 
 .insights-tabs-shell {
