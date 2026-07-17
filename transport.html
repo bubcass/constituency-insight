@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Transport | Constituency Insights</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.6a63e2c4.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.6a63e2c4.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.ccd14dec.js">
+<link rel="modulepreload" href="./_import/components/constituency-select.7443b005.js">
+<link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
+<link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
+<link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
+<link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
+<link rel="modulepreload" href="./_npm/@turf/invariant@7.3.4/0f53e08e.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+
+    <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
+    <script>
+      document.documentElement.lang = "en-IE";
+
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1");
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(meta);
+      }
+    </script>
+  
+<script type="module">
+
+import {define} from "./_observablehq/client.409fdcff.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./data/demographics-age-2022.csv", {"name":"./data/demographics-age-2022.csv","mimeType":"text/csv","path":"./_file/data/demographics-age-2022.0c09fdf2.csv","lastModified":1784138384647,"size":1276786});
+registerFile("./data/derived/recent-transport-contributions.json", {"name":"./data/derived/recent-transport-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-transport-contributions.e572103e.json","lastModified":1784301711827,"size":212645});
+registerFile("./data/derived/recent-transport-questions.json", {"name":"./data/derived/recent-transport-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-transport-questions.0ba6e7a2.json","lastModified":1784301724237,"size":1478904});
+registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
+registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.e173e9d0.geojson","lastModified":1784138384648,"size":5710128});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
+registerFile("./media/dublin-quays.mp4", {"name":"./media/dublin-quays.mp4","mimeType":"video/mp4","path":"./_file/media/dublin-quays.e27390af.mp4","lastModified":1784300919196,"size":6271001});
+
+define({id: "084f3ce5", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","parliamentaryQuestionList","memberContributionList","constituencyRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentTransportContributions","transportHeroVideo","TRANSPORT_HEADING_MATCHER","partyColorMap","state","constituencies","savedConstituency","constituencyMembers","rowsForConstituency","districtOptions","selectedDistrictName","ensureDistrict","selectedConstituencyGeoJSON","recentConstituencyTransportQuestions","recentConstituencyTransportContributions","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer"], body: async (FileAttachment) => {
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {parliamentaryQuestionList, memberContributionList}] = await Promise.all([import("./_import/components/insights-tabs.ccd14dec.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js")]);
+
+const constituencyRows = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
+const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
+const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
+const membersLookup = await FileAttachment("./data/members-lookup.json").json();
+const recentQuestionsByConstituency = await FileAttachment("./data/derived/recent-transport-questions.json").json();
+const recentTransportContributions = await FileAttachment("./data/derived/recent-transport-contributions.json").json();
+const transportHeroVideo = await FileAttachment("./media/dublin-quays.mp4").url();
+
+const TRANSPORT_HEADING_MATCHER = /\b(?:transport|buses?|rail(?:way)?|trains?|roads?|motorways?|traffic|road safety|cycling|active travel|aviation|airports?|ports?|ferr(?:y|ies)|vehicles?|commut(?:e|er|ers|ing))\b/i;
+const partyColorMap = new Map([
+  ["Fianna Fáil", "#40b34e"],
+  ["Sinn Féin", "#088460"],
+  ["Fine Gael", "#303591"],
+  ["Independent", "#666666"],
+  ["Labour Party", "#c82832"],
+  ["Social Democrats", "#782b81"],
+  ["Independent Ireland", "#17becf"],
+  ["People Before Profit-Solidarity", "#c5568b"],
+  ["Aontú", "#ff7f0e"],
+  ["Green Party", "#b4d143"]
+]);
+
+if (typeof window !== "undefined" && !window.transportState) {
+  window.transportState = {constituency: null, district: "all"};
+}
+
+const state = window.transportState;
+if (!state.district) state.district = "all";
+const constituencies = Array.from(
+  new Set(constituencyRows.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
+).sort((a, b) => a.localeCompare(b, "en"));
+const savedConstituency = readSavedConstituency(constituencies);
+
+if (savedConstituency) {
+  state.constituency = savedConstituency;
+} else {
+  if (!constituencies.includes(state.constituency)) state.constituency = constituencies[0] ?? null;
+  const detected = await detectConstituencyFromLocation({
+    constituencyGeoJSON: constituenciesGeo,
+    availableConstituencies: constituencies,
+    prompt: false
+  });
+  if (detected.ok) state.constituency = detected.constituency;
+}
+
+function constituencyMembers() {
+  return Object.values(membersLookup ?? {})
+    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
+    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+}
+
+function rowsForConstituency() {
+  return constituencyRows.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
+}
+
+function districtOptions() {
+  return rowsForConstituency()
+    .map((d) => ({value: d.ED_GUID, label: d.GEOGDESC}))
+    .sort((a, b) => a.label.localeCompare(b.label, "en"));
+}
+
+function selectedDistrictName() {
+  if (state.district === "all") return state.constituency;
+  return districtOptions().find((d) => d.value === state.district)?.label ?? "Selected district";
+}
+
+function ensureDistrict() {
+  const valid = new Set(districtOptions().map((d) => d.value));
+  if (state.district !== "all" && !valid.has(state.district)) state.district = "all";
+}
+
+function selectedConstituencyGeoJSON() {
+  return {
+    type: "FeatureCollection",
+    features: constituenciesGeo.features.filter(
+      (feature) => String(feature?.properties?.ENG_NAME_VALUE ?? "").replace(/\s*\(\d+\)\s*$/, "").trim() === state.constituency
+    )
+  };
+}
+
+function recentConstituencyTransportQuestions(limit = 6) {
+  const record = recentQuestionsByConstituency.find((entry) => entry.constituency === state.constituency);
+  const sorted = (record?.questions ?? [])
+    .slice()
+    .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")));
+  const direct = sorted.filter((question) => TRANSPORT_HEADING_MATCHER.test(question.heading ?? ""));
+  const contextual = sorted.filter((question) => !TRANSPORT_HEADING_MATCHER.test(question.heading ?? ""));
+  return [...direct, ...contextual].slice(0, limit);
+}
+
+function recentConstituencyTransportContributions(limit = 6, perMemberLimit = 3) {
+  const memberCodes = new Set(constituencyMembers().map((member) => member.memberCode).filter(Boolean));
+  const memberCounts = new Map();
+  return recentTransportContributions
+    .filter((contribution) => memberCodes.has(contribution.memberCode))
+    .slice()
+    .sort((a, b) => {
+      const dateComparison = String(b.date ?? "").localeCompare(String(a.date ?? ""));
+      return dateComparison || Number(b.sectionNumber ?? 0) - Number(a.sectionNumber ?? 0);
+    })
+    .filter((contribution) => {
+      const count = memberCounts.get(contribution.memberCode) ?? 0;
+      if (count >= perMemberLimit) return false;
+      memberCounts.set(contribution.memberCode, count + 1);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+function restoreScroll(x, y) {
+  const restore = () => window.scrollTo(x, y);
+  restore();
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    restore();
+    setTimeout(restore, 60);
+  }));
+}
+
+function rerender({preserveScroll = true} = {}) {
+  const x = window.scrollX;
+  const y = window.scrollY;
+  window.dispatchEvent(new CustomEvent("transport:change"));
+  if (preserveScroll) restoreScroll(x, y);
+}
+
+function mountReactive(renderFn) {
+  const el = document.createElement("div");
+  let runId = 0;
+  let hasRendered = false;
+  async function run() {
+    const current = ++runId;
+    const result = await renderFn();
+    if (current !== runId) return;
+    el.replaceChildren(result);
+    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      result.animate?.([{opacity: 0.72}, {opacity: 1}], {duration: 180, easing: "ease-out"});
+    }
+    hasRendered = true;
+  }
+  run();
+  window.addEventListener("transport:change", run);
+  return el;
+}
+
+function renderScopeControl() {
+  const wrap = document.createElement("section");
+  wrap.className = "insights-controls transport-scope-control";
+  wrap.appendChild(constituencySelect({
+    state,
+    resultsPromise: Promise.resolve(constituencies.map((constituency) => ({constituency}))),
+    onChange: () => {
+      state.district = "all";
+      saveSelectedConstituency(state.constituency);
+      rerender();
+    },
+    onLocate: () => detectConstituencyFromLocation({
+      constituencyGeoJSON: constituenciesGeo,
+      availableConstituencies: constituencies,
+      prompt: true
+    })
+  }));
+  return wrap;
+}
+
+function renderDistrictMapExplorer() {
+  const section = document.createElement("section");
+  section.className = "demographics-map-explorer transport-map-explorer";
+  const mapHost = document.createElement("div");
+  mapHost.className = "demographics-map-explorer__map-host";
+  section.appendChild(mapHost);
+  let mapNode = null;
+  let renderedConstituency = null;
+
+  function buildMap() {
+    mapNode?.destroy?.();
+    mapHost.replaceChildren();
+    const guids = new Set(rowsForConstituency().map((d) => d.ED_GUID));
+    const features = districtGeo.features.filter((feature) => guids.has(feature?.properties?.ED_GUID));
+    mapNode = electoralDistrictMap({
+      constituencyGeoJSON: selectedConstituencyGeoJSON(),
+      districtGeoJSON: {type: "FeatureCollection", features},
+      selectedGuid: state.district,
+      height: 500,
+      onSelect: (guid) => {
+        if (!guid || guid === state.district) return;
+        state.district = guid;
+        rerender();
+      }
+    });
+    renderedConstituency = state.constituency;
+    mapHost.appendChild(mapNode);
+  }
+
+  function update() {
+    ensureDistrict();
+    if (!mapNode || renderedConstituency !== state.constituency) buildMap();
+    else mapNode.setSelectedGuid?.(state.district);
+  }
+
+  update();
+  window.addEventListener("transport:change", update);
+  return section;
+}
+return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,electoralDistrictMap,memberCards,parliamentaryQuestionList,memberContributionList,constituencyRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentTransportContributions,transportHeroVideo,TRANSPORT_HEADING_MATCHER,partyColorMap,state,constituencies,savedConstituency,constituencyMembers,rowsForConstituency,districtOptions,selectedDistrictName,ensureDistrict,selectedConstituencyGeoJSON,recentConstituencyTransportQuestions,recentConstituencyTransportContributions,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer};
+}});
+
+define({id: "796dd947", inputs: ["transportHeroVideo","display"], outputs: ["hero"], body: (transportHeroVideo,display) => {
+const hero = document.createElement("div");
+hero.className = "hero transport-hero";
+hero.innerHTML = `
+  <div class="hero__media">
+    <video class="hero__video" src="${transportHeroVideo}" autoplay muted loop playsinline aria-hidden="true"></video>
+  </div>
+  <div class="hero__overlay">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Constituency insights</p>
+      <h1 class="hero__title">Transport</h1>
+      <p class="hero__subtitle">Follow recent transport questions and contributions from the Members representing each constituency.</p>
+    </div>
+  </div>
+`;
+display(hero);
+return {hero};
+}});
+
+define({id: "e2e5e560", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("transport"));
+}});
+
+define({id: "9f148872", inputs: ["display","renderScopeControl"], body: (display,renderScopeControl) => {
+display(renderScopeControl());
+}});
+
+define({id: "61fd8d47", inputs: ["display","renderDistrictMapExplorer"], body: (display,renderDistrictMapExplorer) => {
+display(renderDistrictMapExplorer());
+}});
+
+define({id: "6adf8919", inputs: ["display","mountReactive","state","selectedDistrictName","rowsForConstituency","rerender"], body: (display,mountReactive,state,selectedDistrictName,rowsForConstituency,rerender) => {
+display(mountReactive(async () => {
+  const note = document.createElement("div");
+  note.className = "reactive-prose demographic-story-callout transport-scope-note";
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "Selected area";
+  const heading = document.createElement("h2");
+  heading.textContent = state.district === "all"
+    ? `${state.constituency} transport and representation`
+    : `${selectedDistrictName()} transport context`;
+  const context = document.createElement("div");
+  context.className = "demographic-scope-context";
+  const scope = document.createElement("p");
+  scope.className = "demographic-scope-context__copy";
+  scope.textContent = state.district === "all"
+    ? `${state.constituency} is a constituency with ${rowsForConstituency().length.toLocaleString("en-IE")} electoral districts in this dataset.`
+    : `${selectedDistrictName()} is an electoral district in the ${state.constituency} constituency.`;
+  context.appendChild(scope);
+  if (state.district !== "all") {
+    const clear = document.createElement("button");
+    clear.type = "button";
+    clear.className = "demographic-scope-context__clear";
+    clear.setAttribute("aria-label", `Clear ${selectedDistrictName()} electoral district selection`);
+    clear.innerHTML = `<span class="demographic-scope-context__clear-icon" aria-hidden="true">×</span><span>Clear district</span>`;
+    clear.addEventListener("click", () => { state.district = "all"; rerender(); });
+    context.appendChild(clear);
+  }
+  const detail = document.createElement("p");
+  detail.textContent = "The Members and parliamentary activity below remain constituency-level information.";
+  note.append(label, heading, context, detail);
+  return note;
+}));
+}});
+
+define({id: "d60348a4", inputs: ["display","mountReactive","memberCards","constituencyMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,constituencyMembers,partyColorMap,state) => {
+display(mountReactive(async () => memberCards({
+  members: constituencyMembers().map((member) => ({
+    ...member,
+    displayName: member.memberName,
+    matchedParty: member.party,
+    imageUrl: member.memberCode
+      ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
+      : null
+  })),
+  partyColorMap,
+  title: `How ${state.constituency} is represented in Parliament`
+})));
+}});
+
+define({id: "511d6c91", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyTransportQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyTransportQuestions,constituencyMembers,partyColorMap) => {
+display(mountReactive(async () => parliamentaryQuestionList({
+  rows: recentConstituencyTransportQuestions(6),
+  members: constituencyMembers(),
+  partyColorMap,
+  emptyMessage: "No recent transport-related parliamentary questions are available for this constituency."
+})));
+}});
+
+define({id: "2105c453", inputs: ["display","mountReactive","memberContributionList","recentConstituencyTransportContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyTransportContributions,constituencyMembers,partyColorMap) => {
+display(mountReactive(async () => memberContributionList({
+  rows: recentConstituencyTransportContributions(6),
+  members: constituencyMembers(),
+  partyColorMap,
+  emptyMessage: "No recent transport-related Dáil contributions are available for this constituency."
+})));
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:084f3ce5:--></div>
+<div class="observablehq observablehq--block"><!--:796dd947:--></div>
+<div class="observablehq observablehq--block"><!--:e2e5e560:--></div>
+<div class="prose-block lead">
+  <p>Choose a constituency to see its current Dáil Members and their recent parliamentary activity concerning public transport, roads, rail, active travel and related issues. You can also select an electoral district on the map for optional local context.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:9f148872:--></div>
+<div class="observablehq observablehq--block"><!--:61fd8d47:--></div>
+<div class="observablehq observablehq--block"><!--:6adf8919:--></div>
+<div class="observablehq observablehq--block"><!--:d60348a4:--></div>
+<div class="prose-block">
+  <h2>Recent parliamentary questions about transport</h2>
+  <p>Read recent transport-related questions from Deputies representing the selected constituency.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:511d6c91:--></div>
+</div>
+<div class="prose-block">
+  <h2>Recent contributions about transport</h2>
+  <p>Read recent transport-related Dáil contributions from local Members.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:2105c453:--></div>
+</div>
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p>Questions and Dáil contributions are drawn from the Houses of the Oireachtas open-data APIs for the most recent 18 months and matched using transport-related terms. The results always relate to the selected constituency, even where a contribution discusses a place elsewhere. <a href="https://api.oireachtas.ie/" target="_blank" rel="noreferrer">View the Oireachtas API</a>.</p>
+</div>
+</main>
+</div>
+</body>
+</html>

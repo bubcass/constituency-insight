@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/boolean-overlap@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+import{segmentEach as t}from"../meta@7.3.4/1244e006.js";import{getGeom as e}from"../invariant@7.3.4/0f53e08e.js";import{lineOverlap as r}from"../line-overlap@7.3.4/234a5889.js";import{lineIntersect as n}from"../line-intersect@7.3.4/6e46e428.js";import{geojsonEquality as o}from"../../geojson-equality-ts@1.0.2/214e60d7.js";function i(i,s){const a=e(i),l=e(s),u=a.type,m=l.type;if("MultiPoint"===u&&"MultiPoint"!==m||("LineString"===u||"MultiLineString"===u)&&"LineString"!==m&&"MultiLineString"!==m||("Polygon"===u||"MultiPolygon"===u)&&"Polygon"!==m&&"MultiPolygon"!==m)throw new Error("features must be of the same type");if("Point"===u)throw new Error("Point geometry not supported");if(o(i,s,{precision:6}))return!1;let f=0;switch(u){case"MultiPoint":for(var g=0;g<a.coordinates.length;g++)for(var p=0;p<l.coordinates.length;p++){var c=a.coordinates[g],y=l.coordinates[p];if(c[0]===y[0]&&c[1]===y[1])return!0}return!1;case"LineString":case"MultiLineString":t(i,(e=>{t(s,(t=>{r(e,t).features.length&&f++}))}));break;case"Polygon":case"MultiPolygon":t(i,(e=>{t(s,(t=>{n(e,t).features.length&&f++}))}))}return f>0}var s=i;export{i as booleanOverlap,s as default};

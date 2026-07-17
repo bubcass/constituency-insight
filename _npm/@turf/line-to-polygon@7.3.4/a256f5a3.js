@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/line-to-polygon@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+import{bbox as r}from"../bbox@7.3.4/59288137.js";import{getCoords as t,getGeom as e}from"../invariant@7.3.4/0f53e08e.js";import{multiPolygon as n,lineString as o,polygon as u}from"../helpers@7.3.4/a5e57fe3.js";import{clone as i}from"../clone@7.3.4/9edb039d.js";function a(r,e={}){var o,u,a,p=e.properties,f=null==(o=e.autoComplete)||o,m=null==(u=e.orderCoords)||u;if(null!=(a=e.mutate)&&a||(r=i(r)),"FeatureCollection"===r.type){var l=[];return r.features.forEach((function(r){l.push(t(s(r,{},f,m)))})),n(l,p)}return s(r,p,f,m)}function s(t,n,i,a){n=n||("Feature"===t.type?t.properties:{});var s=e(t),f=s.coordinates,m=s.type;if(!f.length)throw new Error("line must contain coordinates");switch(m){case"LineString":return i&&(f=p(f)),u([f],n);case"MultiLineString":var l=[],c=0;return f.forEach((function(t){if(i&&(t=p(t)),a){var e=function(r){var t=r[0],e=r[1],n=r[2],o=r[3];return Math.abs(t-n)*Math.abs(e-o)}(r(o(t)));e>c?(l.unshift(t),c=e):l.push(t)}else l.push(t)})),u(l,n);default:throw new Error("geometry type "+m+" is not supported")}}function p(r){var t=r[0],e=t[0],n=t[1],o=r[r.length-1],u=o[0],i=o[1];return e===u&&n===i||r.push(t),r}var f=a;export{f as default,a as lineToPolygon};

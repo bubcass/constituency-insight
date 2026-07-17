@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/clusters-dbscan@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+import{clone as e}from"../clone@7.3.4/9edb039d.js";import r from"../../kdbush@4.0.2/42d735f7.js";import*as t from"../../geokdbush@2.1.0/2f565311.js";function o(o,s,a={}){!0!==a.mutate&&(o=e(o));const n=a.minPoints||3,m=new r(o.features.length);for(const e of o.features)m.add(e.geometry.coordinates[0],e.geometry.coordinates[1]);m.finish();var f=o.features.map((e=>!1)),i=o.features.map((e=>!1)),u=o.features.map((e=>!1)),c=o.features.map((e=>-1));const p=e=>{const r=o.features[e],[a,n]=r.geometry.coordinates;return t.around(m,a,n,void 0,s).map((e=>({minX:o.features[e].geometry.coordinates[0],minY:o.features[e].geometry.coordinates[1],maxX:o.features[e].geometry.coordinates[0],maxY:o.features[e].geometry.coordinates[1],index:e})))};var d=0;return o.features.forEach(((e,r)=>{if(f[r])return;const t=p(r);if(t.length>=n){const e=d;d++,f[r]=!0,((e,r)=>{for(var t=0;t<r.length;t++){const o=r[t].index;if(!f[o]){f[o]=!0;const e=p(o);e.length>=n&&r.push(...e)}i[o]||(i[o]=!0,c[o]=e)}})(e,t)}else u[r]=!0})),o.features.forEach(((e,r)=>{var t=o.features[r];t.properties||(t.properties={}),c[r]>=0?(t.properties.dbscan=u[r]?"edge":"core",t.properties.cluster=c[r]):t.properties.dbscan="noise"})),o}var s=o;export{o as clustersDbscan,s as default};

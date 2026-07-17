@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/clone@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+function e(e){if(!e)throw new Error("geojson is required");switch(e.type){case"Feature":return t(e);case"FeatureCollection":return function(e){const r={type:"FeatureCollection"};return Object.keys(e).forEach((t=>{switch(t){case"type":case"features":return;default:r[t]=e[t]}})),r.features=e.features.map((e=>t(e))),r}(e);case"Point":case"LineString":case"Polygon":case"MultiPoint":case"MultiLineString":case"MultiPolygon":case"GeometryCollection":return o(e);default:throw new Error("unknown GeoJSON type")}}function t(e){const t={type:"Feature"};return Object.keys(e).forEach((r=>{switch(r){case"type":case"properties":case"geometry":return;default:t[r]=e[r]}})),t.properties=r(e.properties),null==e.geometry?t.geometry=null:t.geometry=o(e.geometry),t}function r(e){const t={};return e?(Object.keys(e).forEach((o=>{const n=e[o];"object"==typeof n?null===n?t[o]=null:Array.isArray(n)?t[o]=n.map((e=>e)):t[o]=r(n):t[o]=n})),t):t}function o(e){const t={type:e.type};return e.bbox&&(t.bbox=e.bbox),"GeometryCollection"===e.type?(t.geometries=e.geometries.map((e=>o(e))),t):(t.coordinates=n(e.coordinates),t)}function n(e){const t=e;return"object"!=typeof t[0]?t.slice():t.map((e=>n(e)))}var c=e;export{e as clone,r as cloneProperties,c as default};

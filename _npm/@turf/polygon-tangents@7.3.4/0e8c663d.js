@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/polygon-tangents@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+import{getCoords as t,getType as r}from"../invariant@7.3.4/0f53e08e.js";import{featureCollection as e,point as n}from"../helpers@7.3.4/a5e57fe3.js";import{bbox as o}from"../bbox@7.3.4/59288137.js";import{explode as f}from"../explode@7.3.4/84a7a349.js";import{nearestPoint as m}from"../nearest-point@7.3.4/b0def124.js";function l(l,u){const a=t(l),p=t(u);let c,g=[],h=[];const b=o(u);let d=0,v=null;a[0]>b[0]&&a[0]<b[2]&&a[1]>b[1]&&a[1]<b[3]&&(v=m(l,f(u)),d=v.properties.featureIndex);switch(r(u)){case"Polygon":g=p[0][d],h=p[0][0],null!==v&&v.geometry.coordinates[1]<a[1]&&(h=p[0][d]),c=s(p[0][0],p[0][p[0].length-1],a),[g,h]=i(p[0],a,c,g,h);break;case"MultiPolygon":for(var x=0,k=0,y=0,P=0;P<p[0].length;P++){x=P;for(var w=!1,E=0;E<p[0][P].length;E++){if(k=E,y===d){w=!0;break}y++}if(w)break}g=p[0][x][k],h=p[0][x][k],c=s(p[0][0][0],p[0][0][p[0][0].length-1],a),p.forEach((function(t){[g,h]=i(t[0],a,c,g,h)}))}return e([n(g),n(h)])}function i(t,r,e,n,o){for(let f=0;f<t.length;f++){const m=t[f];let l=t[f+1];f===t.length-1&&(l=t[0]);const i=s(m,l,r);e<=0&&i>0?s(r,m,n)<0||(n=m):e>0&&i<=0&&(u(r,m,o)||(o=m)),e=i}return[n,o]}function u(t,r,e){return s(t,r,e)>0}function s(t,r,e){return(r[0]-t[0])*(e[1]-t[1])-(e[0]-t[0])*(r[1]-t[1])}var a=l;export{a as default,l as polygonTangents};

@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/polygon-smooth@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+import{polygon as t,multiPolygon as e,featureCollection as o}from"../helpers@7.3.4/a5e57fe3.js";import{geomEach as r,coordEach as i}from"../meta@7.3.4/1244e006.js";function n(i,n){(n=n||{}).iterations=n.iterations||1;const{iterations:f}=n,l=[];if(!i)throw new Error("inputPolys is required");return r(i,(function(o,r,i){if("Polygon"===o.type){let e=[[]];for(let r=0;r<f;r++){let i=[],n=o;r>0&&(n=t(e).geometry),s(n,i),e=i.slice(0)}l.push(t(e,i))}else{if("MultiPolygon"!==o.type)throw new Error("geometry is invalid, must be Polygon or MultiPolygon");{let t=[[[]]];for(let r=0;r<f;r++){let i=[],n=o;r>0&&(n=e(t).geometry),u(n,i),t=i.slice(0)}l.push(e(t,i))}}})),o(l)}function s(t,e){var o,r;i(t,(function(t,i,n,s,u){if(r!==u)e.push([]);else{var f=o[0],l=o[1],p=t[0],h=t[1];e[u].push([.75*f+.25*p,.75*l+.25*h]),e[u].push([.25*f+.75*p,.25*l+.75*h])}o=t,r=u}),!1),e.forEach((function(t){t.push(t[0])}))}function u(t,e){let o,r,n;i(t,(function(t,i,s,u,f){if(r!==u)e.push([[]]);else if(n!==f)e[u].push([]);else{var l=o[0],p=o[1],h=t[0],c=t[1];e[u][f].push([.75*l+.25*h,.75*p+.25*c]),e[u][f].push([.25*l+.75*h,.25*p+.75*c])}o=t,r=u,n=f}),!1),e.forEach((function(t){t.forEach((function(t){t.push(t[0])}))}))}var f=n;export{f as default,n as polygonSmooth};

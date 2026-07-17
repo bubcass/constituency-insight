@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Spotlights | Constituency Insights</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.6a63e2c4.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.6a63e2c4.css">
+<link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.ccd14dec.js">
+
+    <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
+    <script>
+      document.documentElement.lang = "en-IE";
+
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1");
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(meta);
+      }
+    </script>
+  
+<script type="module">
+
+import {define} from "./_observablehq/client.409fdcff.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg","mimeType":"image/jpeg","path":"./_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
+registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
+
+define({id: "748c40c8", inputs: ["FileAttachment"], outputs: ["insightsTabs","roadSafetyImage","sportsFundingVideo"], body: async (FileAttachment) => {
+const {insightsTabs} = await import("./_import/components/insights-tabs.ccd14dec.js");
+
+const roadSafetyImage = await FileAttachment("./media/road-with-glass.jpg").url();
+const sportsFundingVideo = await FileAttachment("./media/sports-funding-hero.mp4").url();
+return {insightsTabs,roadSafetyImage,sportsFundingVideo};
+}});
+
+define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights"));
+}});
+
+define({id: "686756cb", inputs: ["roadSafetyImage","sportsFundingVideo","display"], outputs: ["grid","topics"], body: (roadSafetyImage,sportsFundingVideo,display) => {
+const grid = document.createElement("section");
+grid.className = "spotlight-card-grid";
+
+const topics = [
+  {
+    href: "./road-accidents",
+    eyebrow: "Latest spotlight",
+    title: "Road safety",
+    description: "Explore reported road collisions by year, severity, location and the road users involved.",
+    image: roadSafetyImage,
+  },
+  {
+    href: "./sports-funding",
+    eyebrow: "Spotlight",
+    title: "Sports funding",
+    description: "See how community sports funding has been distributed across projects, organisations and activities.",
+    video: sportsFundingVideo,
+  },
+];
+
+for (const topic of topics) {
+  const card = document.createElement("a");
+  card.className = "spotlight-card";
+  card.href = topic.href;
+  const media = topic.image
+    ? `<img src="${topic.image}" alt="">`
+    : `<video src="${topic.video}" autoplay muted loop playsinline aria-hidden="true"></video>`;
+  card.innerHTML = `
+    <div class="spotlight-card__media">
+      ${media}
+    </div>
+    <div class="spotlight-card__copy">
+      <p class="spotlight-card__eyebrow">${topic.eyebrow}</p>
+      <h2>${topic.title}</h2>
+      <p>${topic.description}</p>
+      <span class="spotlight-card__action">Explore ${topic.title}<span aria-hidden="true"> →</span></span>
+    </div>
+  `;
+  grid.appendChild(card);
+}
+
+display(grid);
+return {grid,topics};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:748c40c8:--></div>
+<div class="spotlights-hero">
+  <p class="spotlights-hero__eyebrow">Constituency insights</p>
+  <h1>Spotlights</h1>
+  <p>Detailed explorations of important local issues and public datasets, gathered in one permanent collection.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
+<div class="prose-block spotlights-intro">
+  <h2>Explore the collection</h2>
+  <p>Each spotlight takes a closer look at a specialist topic through constituency-level data, maps and interactive filters. New spotlights can be added without removing the existing collection.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:686756cb:--></div>
+</main>
+</div>
+</body>
+</html>

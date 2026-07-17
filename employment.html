@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Work | Constituency Insights</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.6a63e2c4.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.6a63e2c4.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.ccd14dec.js">
+<link rel="modulepreload" href="./_import/components/constituency-select.7443b005.js">
+<link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
+<link rel="modulepreload" href="./_import/components/metric-cards.990954a2.js">
+<link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
+<link rel="modulepreload" href="./_import/components/employment-charts.05c3d4a0.js">
+<link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
+<link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
+<link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
+<link rel="modulepreload" href="./_npm/@turf/invariant@7.3.4/0f53e08e.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+
+    <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
+    <script>
+      document.documentElement.lang = "en-IE";
+
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1");
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(meta);
+      }
+    </script>
+  
+<script type="module">
+
+import {define} from "./_observablehq/client.409fdcff.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./data/derived/recent-work-contributions.json", {"name":"./data/derived/recent-work-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-contributions.63648e5e.json","lastModified":1784301711826,"size":70174});
+registerFile("./data/derived/recent-work-questions.json", {"name":"./data/derived/recent-work-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-questions.57a5d763.json","lastModified":1784301724229,"size":1588256});
+registerFile("./data/employment-industry-2022.csv", {"name":"./data/employment-industry-2022.csv","mimeType":"text/csv","path":"./_file/data/employment-industry-2022.fffc6813.csv","lastModified":1784292898869,"size":523742});
+registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
+registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.e173e9d0.geojson","lastModified":1784138384648,"size":5710128});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
+registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
+
+define({id: "c673f804", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","memberCards","parliamentaryQuestionList","memberContributionList","employmentData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","employmentStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {memberCards}, {parliamentaryQuestionList, memberContributionList}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.ccd14dec.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.990954a2.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/employment-charts.05c3d4a0.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js")]);
+
+const employmentData = await FileAttachment("./data/employment-industry-2022.csv").csv({typed: true});
+const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
+const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
+const membersLookup = await FileAttachment("./data/members-lookup.json").json();
+const recentQuestionsByConstituency = await FileAttachment("./data/derived/recent-work-questions.json").json();
+const recentWorkContributions = await FileAttachment("./data/derived/recent-work-contributions.json").json();
+const workHeroVideo = await FileAttachment("./media/harvest-hero.mp4").url();
+
+const WORK_MATCHER = /\b(?:work(?:er|ers|ing|place|places)?|employment|jobs?)\b/i;
+const partyColorMap = new Map([
+  ["Fianna Fáil", "#40b34e"],
+  ["Sinn Féin", "#088460"],
+  ["Fine Gael", "#303591"],
+  ["Independent", "#666666"],
+  ["Labour Party", "#c82832"],
+  ["Social Democrats", "#782b81"],
+  ["Independent Ireland", "#17becf"],
+  ["People Before Profit-Solidarity", "#c5568b"],
+  ["Aontú", "#ff7f0e"],
+  ["Green Party", "#b4d143"]
+]);
+
+const INDUSTRIES = [
+  "Agriculture, forestry and fishing",
+  "Building and construction",
+  "Manufacturing industries",
+  "Commerce and trade",
+  "Transport and communications",
+  "Public administration",
+  "Professional services",
+  "Other"
+];
+
+if (typeof window !== "undefined" && !window.employmentState) {
+  window.employmentState = {constituency: null, district: "all"};
+}
+
+const state = window.employmentState;
+const constituencies = Array.from(
+  new Set(employmentData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
+).sort((a, b) => a.localeCompare(b, "en"));
+const savedConstituency = readSavedConstituency(constituencies);
+
+if (savedConstituency) {
+  state.constituency = savedConstituency;
+} else {
+  if (!constituencies.includes(state.constituency)) state.constituency = constituencies[0] ?? null;
+  const detected = await detectConstituencyFromLocation({
+    constituencyGeoJSON: constituenciesGeo,
+    availableConstituencies: constituencies,
+    prompt: false
+  });
+  if (detected.ok) state.constituency = detected.constituency;
+}
+
+function rowsForConstituency() {
+  return employmentData.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
+}
+
+function rowsForDistrict() {
+  const rows = rowsForConstituency();
+  return state.district === "all" ? rows : rows.filter((d) => d.ED_GUID === state.district);
+}
+
+function constituencyMembers() {
+  return Object.values(membersLookup ?? {})
+    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
+    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+}
+
+function recentConstituencyWorkQuestions(limit = 6) {
+  const record = recentQuestionsByConstituency.find((entry) => entry.constituency === state.constituency);
+  return (record?.questions ?? [])
+    .filter((question) => WORK_MATCHER.test(`${question.heading ?? ""} ${question.question ?? ""}`))
+    .slice()
+    .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")))
+    .slice(0, limit);
+}
+
+function recentConstituencyWorkContributions(limit = 6, perMemberLimit = 3) {
+  const memberCodes = new Set(constituencyMembers().map((member) => member.memberCode).filter(Boolean));
+  const memberCounts = new Map();
+  return recentWorkContributions
+    .filter((contribution) => memberCodes.has(contribution.memberCode))
+    .slice()
+    .sort((a, b) => {
+      const dateComparison = String(b.date ?? "").localeCompare(String(a.date ?? ""));
+      return dateComparison || Number(b.sectionNumber ?? 0) - Number(a.sectionNumber ?? 0);
+    })
+    .filter((contribution) => {
+      const count = memberCounts.get(contribution.memberCode) ?? 0;
+      if (count >= perMemberLimit) return false;
+      memberCounts.set(contribution.memberCode, count + 1);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+function aggregateEmployment(rows = rowsForDistrict()) {
+  return INDUSTRIES.map((industry) => ({
+    sector: industry,
+    total: d3.sum(rows, (row) => Number(row[`${industry} (Both Sexes)`]) || 0)
+  }));
+}
+
+function employmentStats(rows = rowsForDistrict()) {
+  const profile = aggregateEmployment(rows);
+  const total = d3.sum(profile, (d) => d.total) || 1;
+  const largest = d3.greatest(profile, (d) => d.total);
+  const value = (labels) => d3.sum(profile.filter((d) => labels.includes(d.sector)), (d) => d.total);
+  return {
+    profile,
+    total,
+    largest,
+    professionalServicesShare: value(["Professional services"]) / total,
+    productionShare: value(["Building and construction", "Manufacturing industries"]) / total
+  };
+}
+
+const nationalStats = employmentStats(employmentData);
+
+function districtOptions() {
+  return rowsForConstituency()
+    .map((d) => ({value: d.ED_GUID, label: d.GEOGDESC}))
+    .sort((a, b) => a.label.localeCompare(b.label, "en"));
+}
+
+function selectedDistrictName() {
+  if (state.district === "all") return state.constituency;
+  return districtOptions().find((d) => d.value === state.district)?.label ?? "Selected district";
+}
+
+function scopeLabel() {
+  return state.district === "all" ? state.constituency : selectedDistrictName();
+}
+
+function ensureDistrict() {
+  const valid = new Set(districtOptions().map((d) => d.value));
+  if (state.district !== "all" && !valid.has(state.district)) state.district = "all";
+}
+
+function selectedConstituencyGeoJSON() {
+  return {
+    type: "FeatureCollection",
+    features: constituenciesGeo.features.filter(
+      (feature) => String(feature?.properties?.ENG_NAME_VALUE ?? "").replace(/\s*\(\d+\)\s*$/, "").trim() === state.constituency
+    )
+  };
+}
+
+function differenceText(value) {
+  const points = Math.abs(value * 100).toFixed(1);
+  if (Math.abs(value) < 0.001) return "in line with the national profile";
+  return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the national profile`;
+}
+
+function restoreScroll(x, y) {
+  const restore = () => window.scrollTo(x, y);
+  restore();
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    restore();
+    setTimeout(restore, 60);
+  }));
+}
+
+function rerender({preserveScroll = true} = {}) {
+  const x = window.scrollX;
+  const y = window.scrollY;
+  window.dispatchEvent(new CustomEvent("employment:change"));
+  if (preserveScroll) restoreScroll(x, y);
+}
+
+function mountReactive(renderFn) {
+  const el = document.createElement("div");
+  let runId = 0;
+  let hasRendered = false;
+  async function run() {
+    const current = ++runId;
+    const result = await renderFn();
+    if (current !== runId) return;
+    el.replaceChildren(result);
+    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      result.animate?.([{opacity: 0.72}, {opacity: 1}], {duration: 180, easing: "ease-out"});
+    }
+    hasRendered = true;
+  }
+  run();
+  window.addEventListener("employment:change", run);
+  return el;
+}
+
+function renderScopeControl() {
+  const wrap = document.createElement("section");
+  wrap.className = "insights-controls employment-scope-control";
+  wrap.appendChild(constituencySelect({
+    state,
+    resultsPromise: Promise.resolve(constituencies.map((constituency) => ({constituency}))),
+    onChange: () => {
+      state.district = "all";
+      saveSelectedConstituency(state.constituency);
+      rerender();
+    },
+    onLocate: () => detectConstituencyFromLocation({
+      constituencyGeoJSON: constituenciesGeo,
+      availableConstituencies: constituencies,
+      prompt: true
+    })
+  }));
+  return wrap;
+}
+
+function renderDistrictMapExplorer() {
+  const section = document.createElement("section");
+  section.className = "demographics-map-explorer employment-map-explorer";
+  const mapHost = document.createElement("div");
+  mapHost.className = "demographics-map-explorer__map-host";
+  section.appendChild(mapHost);
+  let mapNode = null;
+  let renderedConstituency = null;
+
+  function buildMap() {
+    mapNode?.destroy?.();
+    mapHost.replaceChildren();
+    const guids = new Set(rowsForConstituency().map((d) => d.ED_GUID));
+    const features = districtGeo.features.filter((feature) => guids.has(feature?.properties?.ED_GUID));
+    mapNode = electoralDistrictMap({
+      constituencyGeoJSON: selectedConstituencyGeoJSON(),
+      districtGeoJSON: {type: "FeatureCollection", features},
+      selectedGuid: state.district,
+      height: 500,
+      onSelect: (guid) => {
+        if (!guid || guid === state.district) return;
+        state.district = guid;
+        rerender();
+      }
+    });
+    renderedConstituency = state.constituency;
+    mapHost.appendChild(mapNode);
+  }
+
+  function update() {
+    ensureDistrict();
+    if (!mapNode || renderedConstituency !== state.constituency) buildMap();
+    else mapNode.setSelectedGuid?.(state.district);
+  }
+  update();
+  window.addEventListener("employment:change", update);
+  return section;
+}
+
+const EMPLOYMENT_CHART_WIDTH = 790;
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,employmentWaffle,memberCards,parliamentaryQuestionList,memberContributionList,employmentData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentWorkContributions,workHeroVideo,WORK_MATCHER,partyColorMap,INDUSTRIES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,constituencyMembers,recentConstituencyWorkQuestions,recentConstituencyWorkContributions,aggregateEmployment,employmentStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,differenceText,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,EMPLOYMENT_CHART_WIDTH};
+}});
+
+define({id: "86156aff", inputs: ["workHeroVideo","display"], outputs: ["hero"], body: (workHeroVideo,display) => {
+const hero = document.createElement("div");
+hero.className = "hero employment-hero";
+hero.innerHTML = `
+  <div class="hero__media">
+    <video class="hero__video" src="${workHeroVideo}" autoplay muted loop playsinline aria-hidden="true"></video>
+  </div>
+  <div class="hero__overlay">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Constituency insights</p>
+      <h1 class="hero__title">Work</h1>
+      <p class="hero__subtitle">Explore where people at work in each constituency are employed.</p>
+    </div>
+  </div>
+`;
+display(hero);
+return {hero};
+}});
+
+define({id: "9279bc04", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("employment"));
+}});
+
+define({id: "9f148872", inputs: ["display","renderScopeControl"], body: (display,renderScopeControl) => {
+display(renderScopeControl());
+}});
+
+define({id: "61fd8d47", inputs: ["display","renderDistrictMapExplorer"], body: (display,renderDistrictMapExplorer) => {
+display(renderDistrictMapExplorer());
+}});
+
+define({id: "32679f8e", inputs: ["display","mountReactive","employmentStats","scopeLabel","state","d3","rowsForConstituency","selectedDistrictName","rerender"], body: (display,mountReactive,employmentStats,scopeLabel,state,d3,rowsForConstituency,selectedDistrictName,rerender) => {
+display(mountReactive(async () => {
+  const stats = employmentStats();
+  const note = document.createElement("div");
+  note.className = "reactive-prose demographic-story-callout";
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "At a glance";
+  const heading = document.createElement("h2");
+  heading.textContent = `${stats.largest.sector} is the largest employment sector in ${scopeLabel()}.`;
+  const context = document.createElement("div");
+  context.className = "demographic-scope-context";
+  const scope = document.createElement("p");
+  scope.className = "demographic-scope-context__copy";
+  scope.textContent = state.district === "all"
+    ? `${state.constituency} is a constituency with ${d3.format(",")(rowsForConstituency().length)} electoral districts in this dataset.`
+    : `${selectedDistrictName()} is an electoral district in the ${state.constituency} constituency.`;
+  context.appendChild(scope);
+  if (state.district !== "all") {
+    const clear = document.createElement("button");
+    clear.type = "button";
+    clear.className = "demographic-scope-context__clear";
+    clear.setAttribute("aria-label", `Clear ${selectedDistrictName()} electoral district selection`);
+    clear.innerHTML = `<span class="demographic-scope-context__clear-icon" aria-hidden="true">×</span><span>Clear district</span>`;
+    clear.addEventListener("click", () => { state.district = "all"; rerender(); });
+    context.appendChild(clear);
+  }
+  const detail = document.createElement("p");
+  detail.innerHTML = `<strong>${d3.format(".1%")(stats.largest.total / stats.total)}</strong> of people at work in the selected area are employed in this sector.`;
+  note.append(label, heading, context, detail);
+  return note;
+}));
+}});
+
+define({id: "8f278770", inputs: ["display","mountReactive","employmentStats","metricCards","d3","differenceText","nationalStats"], body: (display,mountReactive,employmentStats,metricCards,d3,differenceText,nationalStats) => {
+display(mountReactive(async () => {
+  const stats = employmentStats();
+  const cards = metricCards({metrics: [
+    {label: "People at work", value: d3.format(",")(stats.total), note: "Census 2022"},
+    {label: "Largest sector", value: stats.largest.sector, note: `${d3.format(".1%")(stats.largest.total / stats.total)} of people at work`},
+    {label: "Professional services", value: d3.format(".1%")(stats.professionalServicesShare), note: differenceText(stats.professionalServicesShare - nationalStats.professionalServicesShare)},
+    {label: "Production and construction", value: d3.format(".1%")(stats.productionShare), note: differenceText(stats.productionShare - nationalStats.productionShare)}
+  ]});
+  const wrap = document.createElement("section");
+  wrap.className = "insights-metrics-full employment-metrics";
+  wrap.appendChild(cards);
+  return wrap;
+}));
+}});
+
+define({id: "99ef02d5", inputs: ["display","mountReactive","employmentWaffle","employmentStats","EMPLOYMENT_CHART_WIDTH","scopeLabel","d3"], body: (display,mountReactive,employmentWaffle,employmentStats,EMPLOYMENT_CHART_WIDTH,scopeLabel,d3) => {
+display(mountReactive(async () => employmentWaffle(employmentStats().profile, {
+  width: EMPLOYMENT_CHART_WIDTH,
+  title: `Industry profile for ${scopeLabel()}`,
+  subtitle: `Census 2022 · n = ${d3.format(",")(employmentStats().total)}`
+})));
+}});
+
+define({id: "d60348a4", inputs: ["display","mountReactive","memberCards","constituencyMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,constituencyMembers,partyColorMap,state) => {
+display(mountReactive(async () => memberCards({
+  members: constituencyMembers().map((member) => ({
+    ...member,
+    displayName: member.memberName,
+    matchedParty: member.party,
+    imageUrl: member.memberCode
+      ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
+      : null
+  })),
+  partyColorMap,
+  title: `How ${state.constituency} is represented in Parliament`
+})));
+}});
+
+define({id: "b66fc554", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyWorkQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyWorkQuestions,constituencyMembers,partyColorMap) => {
+display(mountReactive(async () => parliamentaryQuestionList({
+  rows: recentConstituencyWorkQuestions(6),
+  members: constituencyMembers(),
+  partyColorMap,
+  emptyMessage: "No recent work-related parliamentary questions are available for this constituency."
+})));
+}});
+
+define({id: "79480f7f", inputs: ["display","mountReactive","memberContributionList","recentConstituencyWorkContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyWorkContributions,constituencyMembers,partyColorMap) => {
+display(mountReactive(async () => memberContributionList({
+  rows: recentConstituencyWorkContributions(6),
+  members: constituencyMembers(),
+  partyColorMap,
+  emptyMessage: "No recent work-related Dáil contributions are available for this constituency."
+})));
+}});
+
+define({id: "37152148", inputs: ["display","mountReactive","downloadButton","rowsForDistrict","aggregateEmployment","scopeLabel"], body: (display,mountReactive,downloadButton,rowsForDistrict,aggregateEmployment,scopeLabel) => {
+display(mountReactive(async () => {
+  const wrap = document.createElement("div");
+  wrap.className = "download-block";
+  wrap.appendChild(downloadButton(
+    rowsForDistrict().flatMap((district) => aggregateEmployment([district]).map((row) => ({
+      constituency: district["NEW CONSTITUENCY"],
+      electoral_district: district.GEOGDESC,
+      electoral_district_id: district.ED_GUID,
+      industry: row.sector,
+      people: row.total
+    }))),
+    `${scopeLabel().toLowerCase().replace(/[^a-z0-9]+/g, "-")}-employment-2022.csv`,
+    {label: `Download employment data for ${scopeLabel()}`}
+  ));
+  return wrap;
+}));
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:c673f804:--></div>
+<div class="observablehq observablehq--block"><!--:86156aff:--></div>
+<div class="observablehq observablehq--block"><!--:9279bc04:--></div>
+<div class="prose-block lead">
+  <p>Census 2022 shows where people at work in each constituency are employed. Choose a constituency for the overall industry profile, or select an electoral district on the map for optional local detail.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:9f148872:--></div>
+<div class="observablehq observablehq--block"><!--:61fd8d47:--></div>
+<div class="observablehq observablehq--block"><!--:32679f8e:--></div>
+<div class="observablehq observablehq--block"><!--:8f278770:--></div>
+<div class="prose-block">
+  <h2>Overall industry profile</h2>
+</div>
+<div class="chart-block chart-block--wide">
+<div class="observablehq observablehq--block"><!--:99ef02d5:--></div>
+</div>
+<div class="observablehq observablehq--block"><!--:d60348a4:--></div>
+<div class="prose-block">
+  <h2>Recent parliamentary questions about work</h2>
+  <p>Read recent questions containing “work”, “employment” or “jobs” from Deputies representing the selected constituency.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:b66fc554:--></div>
+</div>
+<div class="prose-block">
+  <h2>Recent contributions about work</h2>
+  <p>Read recent Dáil contributions containing “work”, “employment” or “jobs” from local Members.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:79480f7f:--></div>
+</div>
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p>Industry counts are from Census 2022 table SAP2022T14T1ED and describe persons at work by broad industry group. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T14T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the source CSO dataset</a>.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:37152148:--></div>
+</main>
+</div>
+</body>
+</html>

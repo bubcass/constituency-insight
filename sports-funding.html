@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Sports funding | Constituency Insights</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.6a63e2c4.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.6a63e2c4.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="./_import/components/constituency-select.7443b005.js">
+<link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
+<link rel="modulepreload" href="./_import/components/metric-cards.990954a2.js">
+<link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="./_import/components/topic-point-map.19f0a6a5.js">
+<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.ec64b4aa.js">
+<link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.ccd14dec.js">
+<link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="./_import/topics/sports-funding/config.351068a5.js">
+<link rel="modulepreload" href="./_import/topics/sports-funding/transforms.9bbffe4d.js">
+<link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
+<link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
+<link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_npm/@turf/turf@7.3.4/55001c14.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
+<link rel="modulepreload" href="./_npm/@turf/invariant@7.3.4/0f53e08e.js">
+<link rel="modulepreload" href="./_npm/@turf/along@7.3.4/0339bb0c.js">
+<link rel="modulepreload" href="./_npm/@turf/angle@7.3.4/d6e93734.js">
+<link rel="modulepreload" href="./_npm/@turf/area@7.3.4/d6ba3661.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox@7.3.4/59288137.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox-clip@7.3.4/279783d9.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox-polygon@7.3.4/d090b42f.js">
+<link rel="modulepreload" href="./_npm/@turf/bearing@7.3.4/2c3cb3af.js">
+<link rel="modulepreload" href="./_npm/@turf/bezier-spline@7.3.4/af2a1e1b.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-clockwise@7.3.4/f56a1f23.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-concave@7.3.4/ac213575.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-contains@7.3.4/40cb139a.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-crosses@7.3.4/37253b2f.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-disjoint@7.3.4/109c8144.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-equal@7.3.4/1b98d814.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-intersects@7.3.4/56313654.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-overlap@7.3.4/22eeb52c.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-parallel@7.3.4/11af2be4.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-point-on-line@7.3.4/e06f93aa.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-touches@7.3.4/c76af439.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-valid@7.3.4/0635f4d4.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-within@7.3.4/e5a6c9d3.js">
+<link rel="modulepreload" href="./_npm/@turf/buffer@7.3.4/3c35ceae.js">
+<link rel="modulepreload" href="./_npm/@turf/center@7.3.4/5fce4a03.js">
+<link rel="modulepreload" href="./_npm/@turf/center-mean@7.3.4/7d8480b0.js">
+<link rel="modulepreload" href="./_npm/@turf/center-median@7.3.4/47c7783a.js">
+<link rel="modulepreload" href="./_npm/@turf/center-of-mass@7.3.4/7539982e.js">
+<link rel="modulepreload" href="./_npm/@turf/centroid@7.3.4/b840a8be.js">
+<link rel="modulepreload" href="./_npm/@turf/circle@7.3.4/8fa375c0.js">
+<link rel="modulepreload" href="./_npm/@turf/clean-coords@7.3.4/e25962d8.js">
+<link rel="modulepreload" href="./_npm/@turf/clone@7.3.4/9edb039d.js">
+<link rel="modulepreload" href="./_npm/@turf/clusters@7.3.4/aa32c187.js">
+<link rel="modulepreload" href="./_npm/@turf/clusters-dbscan@7.3.4/d127999d.js">
+<link rel="modulepreload" href="./_npm/@turf/clusters-kmeans@7.3.4/56b76352.js">
+<link rel="modulepreload" href="./_npm/@turf/collect@7.3.4/5394bbcf.js">
+<link rel="modulepreload" href="./_npm/@turf/combine@7.3.4/49610389.js">
+<link rel="modulepreload" href="./_npm/@turf/concave@7.3.4/5a19d16e.js">
+<link rel="modulepreload" href="./_npm/@turf/convex@7.3.4/86e63121.js">
+<link rel="modulepreload" href="./_npm/@turf/destination@7.3.4/1a8912b6.js">
+<link rel="modulepreload" href="./_npm/@turf/difference@7.3.4/03002d55.js">
+<link rel="modulepreload" href="./_npm/@turf/dissolve@7.3.4/0ea055c1.js">
+<link rel="modulepreload" href="./_npm/@turf/distance@7.3.4/58cbc6ef.js">
+<link rel="modulepreload" href="./_npm/@turf/distance-weight@7.3.4/6fe5ffae.js">
+<link rel="modulepreload" href="./_npm/@turf/ellipse@7.3.4/ffbd434b.js">
+<link rel="modulepreload" href="./_npm/@turf/envelope@7.3.4/f7105862.js">
+<link rel="modulepreload" href="./_npm/@turf/explode@7.3.4/84a7a349.js">
+<link rel="modulepreload" href="./_npm/@turf/flatten@7.3.4/d27faef4.js">
+<link rel="modulepreload" href="./_npm/@turf/flip@7.3.4/4adca565.js">
+<link rel="modulepreload" href="./_npm/@turf/geojson-rbush@7.3.4/112d6764.js">
+<link rel="modulepreload" href="./_npm/@turf/great-circle@7.3.4/1571ecd0.js">
+<link rel="modulepreload" href="./_npm/@turf/hex-grid@7.3.4/a166e175.js">
+<link rel="modulepreload" href="./_npm/@turf/interpolate@7.3.4/9e96ae2a.js">
+<link rel="modulepreload" href="./_npm/@turf/intersect@7.3.4/d41bed0e.js">
+<link rel="modulepreload" href="./_npm/@turf/isobands@7.3.4/3e052809.js">
+<link rel="modulepreload" href="./_npm/@turf/isolines@7.3.4/c2ea7f2a.js">
+<link rel="modulepreload" href="./_npm/@turf/kinks@7.3.4/858bdddc.js">
+<link rel="modulepreload" href="./_npm/@turf/length@7.3.4/307c22ef.js">
+<link rel="modulepreload" href="./_npm/@turf/line-arc@7.3.4/1eaa469e.js">
+<link rel="modulepreload" href="./_npm/@turf/line-chunk@7.3.4/3428e424.js">
+<link rel="modulepreload" href="./_npm/@turf/line-intersect@7.3.4/6e46e428.js">
+<link rel="modulepreload" href="./_npm/@turf/line-offset@7.3.4/150a6e87.js">
+<link rel="modulepreload" href="./_npm/@turf/line-overlap@7.3.4/234a5889.js">
+<link rel="modulepreload" href="./_npm/@turf/line-segment@7.3.4/653449bf.js">
+<link rel="modulepreload" href="./_npm/@turf/line-slice@7.3.4/6dbfea17.js">
+<link rel="modulepreload" href="./_npm/@turf/line-slice-along@7.3.4/dbb48690.js">
+<link rel="modulepreload" href="./_npm/@turf/line-split@7.3.4/12716ae3.js">
+<link rel="modulepreload" href="./_npm/@turf/line-to-polygon@7.3.4/a256f5a3.js">
+<link rel="modulepreload" href="./_npm/@turf/mask@7.3.4/ea7f6c76.js">
+<link rel="modulepreload" href="./_npm/@turf/meta@7.3.4/1244e006.js">
+<link rel="modulepreload" href="./_npm/@turf/midpoint@7.3.4/e846d23f.js">
+<link rel="modulepreload" href="./_npm/@turf/moran-index@7.3.4/d6db1439.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-neighbor-analysis@7.3.4/c40f2a2d.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-point@7.3.4/b0def124.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-point-on-line@7.3.4/f3d65758.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-point-to-line@7.3.4/413c09fe.js">
+<link rel="modulepreload" href="./_npm/@turf/planepoint@7.3.4/762f3097.js">
+<link rel="modulepreload" href="./_npm/@turf/point-grid@7.3.4/d535ab83.js">
+<link rel="modulepreload" href="./_npm/@turf/point-on-feature@7.3.4/e1549de5.js">
+<link rel="modulepreload" href="./_npm/@turf/points-within-polygon@7.3.4/4c0fdb0f.js">
+<link rel="modulepreload" href="./_npm/@turf/point-to-line-distance@7.3.4/9468cd88.js">
+<link rel="modulepreload" href="./_npm/@turf/point-to-polygon-distance@7.3.4/71e32478.js">
+<link rel="modulepreload" href="./_npm/@turf/polygonize@7.3.4/d242e9df.js">
+<link rel="modulepreload" href="./_npm/@turf/polygon-smooth@7.3.4/1988776c.js">
+<link rel="modulepreload" href="./_npm/@turf/polygon-tangents@7.3.4/0e8c663d.js">
+<link rel="modulepreload" href="./_npm/@turf/polygon-to-line@7.3.4/0407b4f2.js">
+<link rel="modulepreload" href="./_npm/@turf/projection@7.3.4/0357785f.js">
+<link rel="modulepreload" href="./_npm/@turf/quadrat-analysis@7.3.4/6dfd8fe8.js">
+<link rel="modulepreload" href="./_npm/@turf/random@7.3.4/e1c02534.js">
+<link rel="modulepreload" href="./_npm/@turf/rectangle-grid@7.3.4/319b93f0.js">
+<link rel="modulepreload" href="./_npm/@turf/rewind@7.3.4/ca4e1bc6.js">
+<link rel="modulepreload" href="./_npm/@turf/rhumb-bearing@7.3.4/b4be7393.js">
+<link rel="modulepreload" href="./_npm/@turf/rhumb-destination@7.3.4/29240aa5.js">
+<link rel="modulepreload" href="./_npm/@turf/rhumb-distance@7.3.4/b9e69516.js">
+<link rel="modulepreload" href="./_npm/@turf/sample@7.3.4/61fe6c9c.js">
+<link rel="modulepreload" href="./_npm/@turf/sector@7.3.4/fb974eec.js">
+<link rel="modulepreload" href="./_npm/@turf/shortest-path@7.3.4/730a78b4.js">
+<link rel="modulepreload" href="./_npm/@turf/simplify@7.3.4/ab1b252b.js">
+<link rel="modulepreload" href="./_npm/@turf/square@7.3.4/fc331bad.js">
+<link rel="modulepreload" href="./_npm/@turf/square-grid@7.3.4/d0281a63.js">
+<link rel="modulepreload" href="./_npm/@turf/standard-deviational-ellipse@7.3.4/d221cfa8.js">
+<link rel="modulepreload" href="./_npm/@turf/tag@7.3.4/b7cf3522.js">
+<link rel="modulepreload" href="./_npm/@turf/tesselate@7.3.4/ed0cc787.js">
+<link rel="modulepreload" href="./_npm/@turf/tin@7.3.4/bb8c6138.js">
+<link rel="modulepreload" href="./_npm/@turf/transform-rotate@7.3.4/18675ed7.js">
+<link rel="modulepreload" href="./_npm/@turf/transform-scale@7.3.4/666a2700.js">
+<link rel="modulepreload" href="./_npm/@turf/transform-translate@7.3.4/54d20bb5.js">
+<link rel="modulepreload" href="./_npm/@turf/triangle-grid@7.3.4/1c463adb.js">
+<link rel="modulepreload" href="./_npm/@turf/truncate@7.3.4/db2edfb0.js">
+<link rel="modulepreload" href="./_npm/@turf/union@7.3.4/a3d529db.js">
+<link rel="modulepreload" href="./_npm/@turf/unkink-polygon@7.3.4/4c2e29bf.js">
+<link rel="modulepreload" href="./_npm/@turf/voronoi@7.3.4/51590525.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="modulepreload" href="./_npm/geojson-equality-ts@1.0.2/214e60d7.js">
+<link rel="modulepreload" href="./_npm/@turf/jsts@2.7.2/ae450af2.js">
+<link rel="modulepreload" href="./_npm/d3-geo@1.7.1/e060ca58.js">
+<link rel="modulepreload" href="./_npm/kdbush@4.0.2/42d735f7.js">
+<link rel="modulepreload" href="./_npm/geokdbush@2.1.0/2f565311.js">
+<link rel="modulepreload" href="./_npm/skmeans@0.9.7/9649a959.js">
+<link rel="modulepreload" href="./_npm/rbush@3.0.1/1ce3aa4f.js">
+<link rel="modulepreload" href="./_npm/topojson-client@3.1.0/edd9ee95.js">
+<link rel="modulepreload" href="./_npm/topojson-server@3.0.1/e681b2be.js">
+<link rel="modulepreload" href="./_npm/concaveman@1.2.1/bab7a7b0.js">
+<link rel="modulepreload" href="./_npm/polyclip-ts@0.16.8/c7396230.js">
+<link rel="modulepreload" href="./_npm/arc@0.2.0/60c20533.js">
+<link rel="modulepreload" href="./_npm/sweepline-intersections@1.5.0/1fa93ac9.js">
+<link rel="modulepreload" href="./_npm/fast-deep-equal@3.1.3/33012ac6.js">
+<link rel="modulepreload" href="./_npm/earcut@2.2.4/a130da3d.js">
+<link rel="modulepreload" href="./_npm/d3-voronoi@1.1.2/bfec861e.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/d3-array@1.2.4/a2c25531.js">
+<link rel="modulepreload" href="./_npm/tinyqueue@3.0.0/c6964f6e.js">
+<link rel="modulepreload" href="./_npm/quickselect@2.0.0/3173efc6.js">
+<link rel="modulepreload" href="./_npm/tinyqueue@2.0.3/46a53a68.js">
+<link rel="modulepreload" href="./_npm/point-in-polygon@1.1.0/ed68720b.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@2.0.4/umd/orient2d.min.js.0b81abd8.js">
+<link rel="modulepreload" href="./_npm/bignumber.js@9.3.1/031d311e.js">
+<link rel="modulepreload" href="./_npm/splaytree-ts@1.0.2/8a48eb63.js">
+
+    <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
+    <script>
+      document.documentElement.lang = "en-IE";
+
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1");
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(meta);
+      }
+    </script>
+  
+<script type="module">
+
+import {define} from "./_observablehq/client.409fdcff.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./data/derived/pq-sports-related-by-constituency.json", {"name":"./data/derived/pq-sports-related-by-constituency.json","mimeType":"application/json","path":"./_file/data/derived/pq-sports-related-by-constituency.591fa9cc.json","lastModified":1776086276506,"size":281497});
+registerFile("./data/derived/recent-sports-contributions.json", {"name":"./data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-contributions.6ef69bca.json","lastModified":1784301711822,"size":44416});
+registerFile("./data/derived/sports-funding-enriched.json", {"name":"./data/derived/sports-funding-enriched.json","mimeType":"application/json","path":"./_file/data/derived/sports-funding-enriched.526726eb.json","lastModified":1775934292986,"size":7985219});
+registerFile("./data/derived/waterfall-segments.json", {"name":"./data/derived/waterfall-segments.json","mimeType":"application/json","path":"./_file/data/derived/waterfall-segments.ed664633.json","lastModified":1776063491231,"size":389840});
+registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
+registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
+
+define({id: "7ec12ec6", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
+const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.990954a2.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/topic-point-map.19f0a6a5.js"), import("./_import/components/waterfall-segments-chart.ec64b4aa.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/insights-tabs.ccd14dec.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/topics/sports-funding/config.351068a5.js"), import("./_import/topics/sports-funding/transforms.9bbffe4d.js")]);
+
+
+const sportsFundingPromise = FileAttachment(
+  "./data/derived/sports-funding-enriched.json"
+).json();
+
+const waterfallPromise = FileAttachment(
+  "./data/derived/waterfall-segments.json"
+).json();
+
+const pqSportsByConstituencyPromise = FileAttachment(
+  "./data/derived/pq-sports-related-by-constituency.json"
+).json();
+
+const recentSportsContributionsPromise = FileAttachment(
+  "./data/derived/recent-sports-contributions.json"
+).json();
+
+const constituenciesGeoPromise = FileAttachment(
+  "./data/geo/constituencies.json"
+).json();
+
+const heroVideoPromise = FileAttachment("./media/sports-funding-hero.mp4").url();
+
+const membersLookupPromise = FileAttachment(
+  "./data/members-lookup.json"
+).json();
+
+const partyColorMap = new Map([
+  ["Fianna Fáil", "#40b34e"],
+  ["Sinn Féin", "#088460"],
+  ["Fine Gael", "#303591"],
+  ["Independent", "#666666"],
+  ["Labour Party", "#c82832"],
+  ["Social Democrats", "#782b81"],
+  ["Independent Ireland", "#17becf"],
+  ["People Before Profit-Solidarity", "#c5568b"],
+  ["Aontú", "#ff7f0e"],
+  ["100% RDR", "#985564"],
+  ["Green Party", "#b4d143"]
+]);
+
+if (typeof window !== "undefined" && !window.insightsState) {
+  window.insightsState = { constituency: null };
+}
+
+if (typeof window !== "undefined" && !window.waterfallState) {
+  window.waterfallState = { year: "All" };
+}
+
+function getState() {
+  return typeof window !== "undefined"
+    ? window.insightsState
+    : { constituency: null };
+}
+
+function getWaterfallState() {
+  return typeof window !== "undefined"
+    ? window.waterfallState
+    : { year: "All" };
+}
+
+function clean(value) {
+  return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function cleanConstituencyName(name) {
+  return clean(name).replace(/\s*\(\d+\)\s*$/, "");
+}
+
+function resolveLabel(label, context = {}) {
+  return typeof label === "function" ? label(context) : label;
+}
+
+function getMemberImageUrl(memberCode) {
+  const code = clean(memberCode);
+  return code
+    ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${code}/image/large`
+    : null;
+}
+
+async function getFundingRows() {
+  return await sportsFundingPromise;
+}
+
+async function getWaterfallData() {
+  return await waterfallPromise;
+}
+
+async function getPqSportsByConstituency() {
+  return await pqSportsByConstituencyPromise;
+}
+
+async function getRecentSportsContributionRows() {
+  const rows = await recentSportsContributionsPromise;
+  return Array.isArray(rows) ? rows : [];
+}
+
+async function getConstituenciesGeo() {
+  return await constituenciesGeoPromise;
+}
+
+async function getMembersLookup() {
+  return await membersLookupPromise;
+}
+
+async function getMembersArray() {
+  const lookup = await getMembersLookup();
+  return Object.values(lookup ?? {});
+}
+
+async function getAvailableConstituencies() {
+  const rows = await getFundingRows();
+  return Array.from(
+    new Set(rows.map((d) => d.__constituency).filter(Boolean))
+  ).sort((a, b) => a.localeCompare(b, "en"));
+}
+
+async function initialiseConstituencySelection() {
+  const [options, constituencyGeoJSON] = await Promise.all([
+    getAvailableConstituencies(),
+    getConstituenciesGeo()
+  ]);
+
+  if (!options.length) {
+    window.insightsState.constituency = null;
+    return;
+  }
+
+  const saved = readSavedConstituency(options);
+  if (saved) {
+    window.insightsState.constituency = saved;
+    return;
+  }
+
+  const detected = await detectConstituencyFromLocation({
+    constituencyGeoJSON,
+    availableConstituencies: options,
+    prompt: false
+  });
+
+  if (detected.ok) {
+    window.insightsState.constituency = detected.constituency;
+    return;
+  }
+
+  if (
+    !window.insightsState.constituency ||
+    !options.includes(window.insightsState.constituency)
+  ) {
+    window.insightsState.constituency = options[0];
+  }
+}
+
+async function ensureValidConstituency() {
+  const options = await getAvailableConstituencies();
+
+  if (!options.length) {
+    window.insightsState.constituency = null;
+    return null;
+  }
+
+  if (
+    !window.insightsState.constituency ||
+    !options.includes(window.insightsState.constituency)
+  ) {
+    window.insightsState.constituency = options[0];
+  }
+
+  return window.insightsState.constituency;
+}
+
+async function getSelectedRows() {
+  const rows = await getFundingRows();
+  const constituency = await ensureValidConstituency();
+  return filterRowsByConstituency(rows, constituency);
+}
+
+async function getFilteredConstituencyGeo() {
+  const selected = await ensureValidConstituency();
+  const constituenciesGeo = await getConstituenciesGeo();
+
+  return {
+    type: "FeatureCollection",
+    features: constituenciesGeo.features.filter(
+      (feature) =>
+        cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE) === selected
+    )
+  };
+}
+
+async function getMatchedMembers() {
+  const selected = await ensureValidConstituency();
+  const members = await getMembersArray();
+
+  return members
+    .filter((d) => clean(d.constituency) === clean(selected))
+    .map((member) => ({
+      ...member,
+      displayName: member.memberName ?? member.name ?? "Unknown member",
+      memberUrl: member.memberUrl ?? null,
+      matchedParty: member.party ?? "Independent",
+      imageUrl: member.memberCode
+        ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
+        : null
+    }));
+}
+
+async function getRecentSportsPQsForConstituency(limit = 6) {
+  const [grouped, constituency, members] = await Promise.all([
+    getPqSportsByConstituency(),
+    ensureValidConstituency(),
+    getMembersArray()
+  ]);
+
+  const rows = Array.isArray(grouped?.[constituency])
+    ? grouped[constituency]
+    : [];
+
+  const memberLookup = new Map(
+    members.map((m) => [clean(m.memberName ?? m.name).toLowerCase(), m])
+  );
+
+  return rows
+    .map((row) => {
+      const matched = memberLookup.get(clean(row.deputy).toLowerCase()) ?? null;
+      const party = matched?.party ?? "Independent";
+
+      return {
+        ...row,
+        matchedParty: party,
+        memberCode: matched?.memberCode ?? null,
+        imageUrl: getMemberImageUrl(matched?.memberCode),
+        initials: clean(row.deputy)
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((d) => d[0] ?? "")
+          .join("")
+          .toUpperCase()
+      };
+    })
+    .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")))
+    .slice(0, limit);
+}
+
+function getWaterfallColorLookup(rows = []) {
+  const lookup = new Map();
+
+  for (const row of rows) {
+    for (const segment of row.segments ?? []) {
+      if (segment?.Segment && segment?.color && !lookup.has(segment.Segment)) {
+        lookup.set(segment.Segment, segment.color);
+      }
+    }
+  }
+
+  return lookup;
+}
+
+async function getRecentSportsContributions(limit = 6, perMemberLimit = 3) {
+  const [rows, members] = await Promise.all([
+    getRecentSportsContributionRows(),
+    getMatchedMembers()
+  ]);
+  const memberCodes = new Set(members.map((member) => member.memberCode).filter(Boolean));
+  const memberCounts = new Map();
+  const sportsHeading = /\bsports?\b/i;
+
+  return rows
+    .filter((row) => memberCodes.has(row.memberCode))
+    .filter((row) => sportsHeading.test(clean(row.topic)))
+    .slice()
+    .sort((a, b) => {
+      const dateComparison = String(b.date ?? "").localeCompare(String(a.date ?? ""));
+      if (dateComparison !== 0) return dateComparison;
+      return Number(b.sectionNumber ?? 0) - Number(a.sectionNumber ?? 0);
+    })
+    .filter((row) => {
+      const count = memberCounts.get(row.memberCode) ?? 0;
+      if (count >= perMemberLimit) return false;
+      memberCounts.set(row.memberCode, count + 1);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+function formatIrishDate(isoDate) {
+  if (!isoDate) return "";
+  return new Intl.DateTimeFormat("en-IE", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  }).format(new Date(`${isoDate}T00:00:00`));
+}
+
+function rerender() {
+  window.dispatchEvent(new CustomEvent("insights:change"));
+  window.dispatchEvent(new CustomEvent("waterfall:change"));
+}
+
+function rerenderWaterfall() {
+  window.dispatchEvent(new CustomEvent("waterfall:change"));
+}
+
+function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40 } = {}) {
+  const el = document.createElement("div");
+  let timeoutId = null;
+  let runId = 0;
+
+  async function run() {
+    const currentRun = ++runId;
+    const result = await renderFn();
+    if (currentRun !== runId) return;
+    el.replaceChildren(result);
+  }
+
+  function onChange() {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(run, debounceMs);
+  }
+
+  run();
+  window.addEventListener(eventName, onChange);
+
+  return el;
+}
+
+function euro(value) {
+  return new Intl.NumberFormat("en-IE", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0
+  }).format(value ?? 0);
+}
+
+function chartPlaceholder(height = 320, text = "Updating…") {
+  const wrap = document.createElement("div");
+  wrap.className = "chart-loading";
+  wrap.style.minHeight = `${height}px`;
+  wrap.style.display = "grid";
+  wrap.style.alignItems = "center";
+  wrap.style.justifyItems = "center";
+  wrap.style.border = "1px solid var(--border)";
+  wrap.style.background = "rgba(255,255,255,0.55)";
+  wrap.style.padding = "1rem";
+  wrap.textContent = text;
+  return wrap;
+}
+
+function renderSegmentedControl({
+  label = "",
+  name = "",
+  options = [],
+  value = "",
+  onChange = () => {}
+} = {}) {
+  const wrap = document.createElement("div");
+  wrap.className = "segmented-control-wrap";
+
+  const group = document.createElement("div");
+  group.className = "segmented-control";
+  group.setAttribute("role", "radiogroup");
+  if (label) group.setAttribute("aria-label", label);
+
+  for (const option of options) {
+    const controlId = `${name}-${String(option.value)
+      .replace(/\s+/g, "-")
+      .toLowerCase()}`;
+
+    const labelEl = document.createElement("label");
+    labelEl.className = "segmented-control__option";
+    labelEl.setAttribute("for", controlId);
+
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = name;
+    input.id = controlId;
+    input.value = option.value;
+    input.checked = option.value === value;
+
+    input.addEventListener("change", () => {
+      if (input.checked) onChange(option.value);
+    });
+
+    const text = document.createElement("span");
+    text.textContent = option.label;
+
+    labelEl.appendChild(input);
+    labelEl.appendChild(text);
+    group.appendChild(labelEl);
+  }
+
+  wrap.appendChild(group);
+  return wrap;
+}
+
+async function getAvailableWaterfallYears() {
+  const rows = await getWaterfallData();
+  return Array.from(new Set(rows.map((d) => String(d.period)).filter(Boolean)))
+    .sort((a, b) => d3.ascending(a, b));
+}
+
+async function ensureValidWaterfallYear() {
+  const years = await getAvailableWaterfallYears();
+  const valid = ["All", ...years];
+
+  if (!valid.includes(window.waterfallState.year)) {
+    window.waterfallState.year = "All";
+  }
+
+  return window.waterfallState.year;
+}
+
+async function getSelectedWaterfallRecord() {
+  const [rows, constituency, selectedYear] = await Promise.all([
+    getWaterfallData(),
+    ensureValidConstituency(),
+    ensureValidWaterfallYear()
+  ]);
+
+  if (!constituency) return null;
+
+  const constituencyRows = rows.filter((d) => d.constituency === constituency);
+  if (!constituencyRows.length) return null;
+
+  if (selectedYear !== "All") {
+    return (
+      constituencyRows.find(
+        (d) => String(d.period) === String(selectedYear)
+      ) ?? null
+    );
+  }
+
+  const colorLookup = getWaterfallColorLookup(constituencyRows);
+
+  const segmentTotals = d3.rollups(
+    constituencyRows.flatMap((d) => d.segments ?? []),
+    (values) => d3.sum(values, (v) => Number(v.value) || 0),
+    (d) => d.Segment
+  )
+    .map(([Segment, value]) => ({ Segment, value }))
+    .sort(
+      (a, b) =>
+        d3.descending(a.value, b.value) ||
+        d3.ascending(a.Segment, b.Segment)
+    );
+
+  const total = d3.sum(segmentTotals, (d) => d.value);
+
+  let running = 0;
+  const segments = segmentTotals.map((d) => {
+    const x1 = running;
+    const x2 = running + d.value;
+    running = x2;
+
+    return {
+      Segment: d.Segment,
+      value: d.value,
+      color: colorLookup.get(d.Segment) ?? "#1f77b4",
+      x1,
+      x2,
+      share: total > 0 ? d.value / total : 0
+    };
+  });
+
+  return {
+    constituency,
+    period: "All",
+    total,
+    segments
+  };
+}
+
+await initialiseConstituencySelection();
+return {d3,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,memberCards,topicPointMap,waterfallSegmentsChart,downloadButton,insightsTabs,memberContributionList,sportsFundingTopic,filterRowsByConstituency,buildMetricCardData,sportsFundingPromise,waterfallPromise,pqSportsByConstituencyPromise,recentSportsContributionsPromise,constituenciesGeoPromise,heroVideoPromise,membersLookupPromise,partyColorMap,getState,getWaterfallState,clean,cleanConstituencyName,resolveLabel,getMemberImageUrl,getFundingRows,getWaterfallData,getPqSportsByConstituency,getRecentSportsContributionRows,getConstituenciesGeo,getMembersLookup,getMembersArray,getAvailableConstituencies,initialiseConstituencySelection,ensureValidConstituency,getSelectedRows,getFilteredConstituencyGeo,getMatchedMembers,getRecentSportsPQsForConstituency,getWaterfallColorLookup,getRecentSportsContributions,formatIrishDate,rerender,rerenderWaterfall,mountReactive,euro,chartPlaceholder,renderSegmentedControl,getAvailableWaterfallYears,ensureValidWaterfallYear,getSelectedWaterfallRecord};
+}});
+
+define({id: "723ddfaf", inputs: ["heroVideoPromise","sportsFundingTopic","display"], outputs: ["heroWrap","heroVideo"], body: async (heroVideoPromise,sportsFundingTopic,display) => {
+const heroWrap = document.createElement("div");
+heroWrap.className = "hero";
+
+const heroVideo = await heroVideoPromise;
+
+heroWrap.innerHTML = `
+  <div class="hero__media">
+    <video class="hero__video" src="${heroVideo}" autoplay muted loop playsinline></video>
+  </div>
+  <div class="hero__overlay">
+    <div class="hero__content">
+      <p class="hero__eyebrow">${sportsFundingTopic.eyebrow}</p>
+      <h1 class="hero__title">${sportsFundingTopic.heroTitle}</h1>
+      <p class="hero__subtitle">${sportsFundingTopic.heroSubtitle}</p>
+    </div>
+  </div>
+`;
+
+display(heroWrap);
+return {heroWrap,heroVideo};
+}});
+
+define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights"));
+}});
+
+define({id: "773bc848", inputs: ["display","mountReactive","getFundingRows","constituencySelect","getState","saveSelectedConstituency","rerender","detectConstituencyFromLocation","getConstituenciesGeo","getAvailableConstituencies"], body: (display,mountReactive,getFundingRows,constituencySelect,getState,saveSelectedConstituency,rerender,detectConstituencyFromLocation,getConstituenciesGeo,getAvailableConstituencies) => {
+display(
+  mountReactive(async () => {
+    const rows = await getFundingRows();
+
+    const wrap = document.createElement("section");
+    wrap.className = "insights-controls";
+
+    wrap.appendChild(
+      constituencySelect({
+        state: getState(),
+        resultsPromise: Promise.resolve(
+          rows.map((d) => ({ constituency: d.__constituency }))
+        ),
+        onChange: () => {
+          saveSelectedConstituency(getState().constituency);
+          rerender();
+        },
+        onLocate: async () => detectConstituencyFromLocation({
+          constituencyGeoJSON: await getConstituenciesGeo(),
+          availableConstituencies: await getAvailableConstituencies(),
+          prompt: true
+        })
+      })
+    );
+
+    return wrap;
+  })
+);
+}});
+
+define({id: "1a874474", inputs: ["display","mountReactive","getSelectedRows","metricCards","buildMetricCardData","sportsFundingTopic"], body: (display,mountReactive,getSelectedRows,metricCards,buildMetricCardData,sportsFundingTopic) => {
+display(
+  mountReactive(async () => {
+    const selectedRows = await getSelectedRows();
+
+    const wrap = document.createElement("section");
+    wrap.className = "insights-metrics-full";
+
+    wrap.appendChild(
+      metricCards({
+        title: null,
+        metrics: buildMetricCardData(selectedRows, sportsFundingTopic)
+      })
+    );
+
+    return wrap;
+  })
+);
+}});
+
+define({id: "e9765c22", inputs: ["display","mountReactive","getFilteredConstituencyGeo","getSelectedRows","topicPointMap","sportsFundingTopic"], body: (display,mountReactive,getFilteredConstituencyGeo,getSelectedRows,topicPointMap,sportsFundingTopic) => {
+display(
+  mountReactive(async () => {
+    const geo = await getFilteredConstituencyGeo();
+    const rows = await getSelectedRows();
+
+    if (!geo?.features?.length) {
+      const p = document.createElement("p");
+      p.className = "chart-loading";
+      p.textContent = "No map available for this constituency.";
+      return p;
+    }
+
+    return topicPointMap({
+      constituencyGeoJSON: geo,
+      data: rows,
+      height: 500,
+      enableGeolocation: false,
+      fields: {
+        lat: "__lat",
+        lon: "__lon",
+        amount: "__amount",
+        category: "__category",
+        year: "__year",
+        entity: "__entity",
+        title: "__title"
+      },
+      labels: sportsFundingTopic.labels,
+      palette: sportsFundingTopic.palette,
+      tooltipHTML: sportsFundingTopic.tooltipHTML,
+      amountFormatter: sportsFundingTopic.formatters.amount
+    });
+  })
+);
+}});
+
+define({id: "645318f2", inputs: ["display","mountReactive","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord","ensureValidConstituency","euro","renderSegmentedControl","rerenderWaterfall"], body: (display,mountReactive,getAvailableWaterfallYears,ensureValidWaterfallYear,getSelectedWaterfallRecord,ensureValidConstituency,euro,renderSegmentedControl,rerenderWaterfall) => {
+display(
+  mountReactive(async () => {
+    const [years, selectedYear, record, constituency] = await Promise.all([
+      getAvailableWaterfallYears(),
+      ensureValidWaterfallYear(),
+      getSelectedWaterfallRecord(),
+      ensureValidConstituency()
+    ]);
+
+    const wrap = document.createElement("div");
+    wrap.className = "section-local-control section-local-control--waterfall";
+
+    const intro = document.createElement("div");
+    intro.className = "section-local-control__intro";
+    intro.innerHTML = `
+      <p>
+        Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
+      </p>
+    `;
+
+    const summary = document.createElement("div");
+    summary.className = "section-local-control__summary";
+    summary.innerHTML = record?.total
+      ? `
+        <p>
+          <strong>Total funding in ${constituency} for ${
+            record.period === "All" ? "all years" : record.period
+          }:</strong>
+          ${euro(record.total)}
+        </p>
+      `
+      : `<p>No funding breakdown available for this selection.</p>`;
+
+    const control = document.createElement("div");
+    control.className = "section-local-control__control section-local-control__control--centered";
+
+    control.appendChild(
+      renderSegmentedControl({
+        label: "Filter sport type chart by year",
+        name: "waterfall-year",
+        value: selectedYear,
+        options: [
+          { value: "All", label: "All" },
+          ...years.map((year) => ({ value: year, label: year }))
+        ],
+        onChange: (nextValue) => {
+          window.waterfallState.year = nextValue;
+          rerenderWaterfall();
+        }
+      })
+    );
+
+    wrap.appendChild(intro);
+    wrap.appendChild(summary);
+    wrap.appendChild(control);
+
+    return wrap;
+  }, { eventName: "waterfall:change" })
+);
+}});
+
+define({id: "05fb74b8", inputs: ["display","mountReactive","getSelectedWaterfallRecord","chartPlaceholder","waterfallSegmentsChart"], body: (display,mountReactive,getSelectedWaterfallRecord,chartPlaceholder,waterfallSegmentsChart) => {
+display(
+  mountReactive(async () => {
+    const record = await getSelectedWaterfallRecord();
+
+    if (!record?.segments?.length) {
+      return chartPlaceholder(
+        260,
+        "No funding breakdown available for this selection."
+      );
+    }
+
+    const wrap = document.createElement("div");
+    wrap.className = "election-chart-wrap";
+
+    wrap.appendChild(
+      waterfallSegmentsChart(record.segments, {
+        width: Math.max(760, 790),
+        minRowHeight: 28
+      })
+    );
+
+    return wrap;
+  }, { eventName: "waterfall:change" })
+);
+}});
+
+define({id: "e435442c", inputs: ["display","mountReactive","getMatchedMembers","ensureValidConstituency","memberCards","partyColorMap","resolveLabel","sportsFundingTopic"], body: (display,mountReactive,getMatchedMembers,ensureValidConstituency,memberCards,partyColorMap,resolveLabel,sportsFundingTopic) => {
+display(
+  mountReactive(async () => {
+    const members = await getMatchedMembers();
+    const constituency = await ensureValidConstituency();
+
+    return memberCards({
+      members,
+      partyColorMap,
+      title: resolveLabel(sportsFundingTopic.labels.memberCardsTitle, {
+        constituency
+      })
+    });
+  })
+);
+}});
+
+define({id: "09334108", inputs: ["display","mountReactive","getRecentSportsPQsForConstituency","partyColorMap","formatIrishDate"], body: (display,mountReactive,getRecentSportsPQsForConstituency,partyColorMap,formatIrishDate) => {
+display(
+  mountReactive(async () => {
+    const rows = await getRecentSportsPQsForConstituency(6);
+
+    if (!rows.length) {
+      const p = document.createElement("p");
+      p.className = "chart-loading";
+      p.textContent = "No related parliamentary questions available for this constituency.";
+      return p;
+    }
+
+    const wrap = document.createElement("div");
+    wrap.className = "debates-list debates-list--pqs";
+
+    rows.forEach((d) => {
+      const row = document.createElement("article");
+      row.className = "debates-list__row debates-list__row--pqs";
+
+      const borderColor = partyColorMap.get(d.matchedParty) ?? "#666666";
+
+      const avatarMarkup = d.imageUrl
+        ? `
+          <div class="debates-list__avatar" style="--avatar-ring:${borderColor}">
+            <img src="${d.imageUrl}" alt="${d.deputy}" loading="lazy" />
+          </div>
+        `
+        : `
+          <div class="debates-list__avatar debates-list__avatar--placeholder" style="--avatar-ring:${borderColor}">
+            <span>${d.initials}</span>
+          </div>
+        `;
+
+      row.innerHTML = `
+        <div class="debates-list__date">
+          ${formatIrishDate(d.date)}
+        </div>
+
+        <div class="debates-list__topic debates-list__topic--with-avatar">
+          ${avatarMarkup}
+          <div class="debates-list__topic-main">
+            <div class="debates-list__topic-title">${d.heading ?? ""}</div>
+            <div class="debates-list__topic-meta">${d.deputy ?? ""}</div>
+          </div>
+        </div>
+
+        <div class="debates-list__action">
+          <a
+            class="debates-list__button"
+            href="${d.url}"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View
+          </a>
+        </div>
+      `;
+
+      wrap.appendChild(row);
+    });
+
+    return wrap;
+  })
+);
+}});
+
+define({id: "30077a6b", inputs: ["display","mountReactive","getRecentSportsContributions","getMatchedMembers","memberContributionList","partyColorMap"], body: (display,mountReactive,getRecentSportsContributions,getMatchedMembers,memberContributionList,partyColorMap) => {
+display(
+  mountReactive(async () => {
+    const [rows, members] = await Promise.all([
+      getRecentSportsContributions(6),
+      getMatchedMembers()
+    ]);
+
+    return memberContributionList({
+      rows,
+      members,
+      partyColorMap,
+      emptyMessage: "No recent sports-related Dáil contributions are available for this constituency."
+    });
+  })
+);
+}});
+
+define({id: "852f99f7", inputs: ["display","mountReactive","getFundingRows","downloadButton"], body: (display,mountReactive,getFundingRows,downloadButton) => {
+display(
+  mountReactive(async () => {
+    const rows = await getFundingRows();
+
+    const wrap = document.createElement("div");
+    wrap.className = "download-block";
+
+    wrap.appendChild(
+      downloadButton(
+        rows.map((d) => ({
+          year: d.__year ?? "",
+          constituency: d.__constituency ?? "",
+          project: d.__title ?? "",
+          organisation: d.__entity ?? "",
+          sport_type: d.__category ?? "",
+          amount: d.__amount ?? 0,
+          lat: d.__lat ?? "",
+          lon: d.__lon ?? ""
+        })),
+        "sports-funding-complete-dataset.csv",
+        {
+          label: "Download the complete sports funding dataset"
+        }
+      )
+    );
+
+    return wrap;
+  })
+);
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:7ec12ec6:--></div>
+<div class="observablehq observablehq--block"><!--:723ddfaf:--></div>
+<div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
+<div class="prose-block">
+  <p><a href="https://www.gov.ie/en/department-of-culture-communications-and-sport/collections/sports-capital-programme-allocations/" target="_blank" rel="noopener noreferrer">The community sports facilities fund</a>, formerly the sports capital and equipment fund, is the primary means of providing Government funding to sport and community organisations at local, regional and national level throughout the country.</p>
+  <p>The programme aims to foster an integrated and planned approach to the development of sports and physical recreation facilities and assists the purchase of non-personal sports equipment. Explore the allocations across constituencies.</p>
+  <h2>At a glance</h2>
+  <p>
+    Explore how the funding has been distributed across projects, organisations and sport types around the country.
+  </p>
+</div>
+<div class="observablehq observablehq--block"><!--:773bc848:--></div>
+<div class="observablehq observablehq--block"><!--:1a874474:--></div>
+<div class="prose-block">
+  <h2>Explore the map</h2>
+  <p>Using new research from our <strong><a href="https://www.oireachtas.ie/pbo" target="_blank" rel="noopener noreferrer">Parliamentary Budget Office</a></strong>, take an interactive look at how this special funding has been used and compare funding in other constituencies around the country.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:e9765c22:--></div>
+<div class="prose-block">
+  <h2>Explore by sport type</h2>
+  <p>
+    Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
+  </p>
+</div>
+<div class="observablehq observablehq--block"><!--:645318f2:--></div>
+<div class="chart-block chart-block--wide">
+<div class="observablehq observablehq--block"><!--:05fb74b8:--></div>
+</div>
+<div class="observablehq observablehq--block"><!--:e435442c:--></div>
+<div class="prose-block">
+  <h2>Explore parliamentary questions</h2>
+  <p>
+    Take a look at recent parliamentary questions related to sport and sports funding from Deputies in the constituency.
+  </p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:09334108:--></div>
+</div>
+<div class="prose-block">
+  <h2>Recent sports contributions from local Members</h2>
+  <p>
+    Read recent Dáil contributions whose debate headings contain “sport” or “sports”.
+  </p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:30077a6b:--></div>
+</div>
+<div class="observablehq observablehq--block"><!--:852f99f7:--></div>
+</main>
+</div>
+</body>
+</html>

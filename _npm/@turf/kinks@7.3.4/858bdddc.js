@@ -1,0 +1,7 @@
+/**
+ * Bundled by jsDelivr using Rollup v2.79.2 and Terser v5.39.0.
+ * Original file: /npm/@turf/kinks@7.3.4/dist/esm/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+import{point as e}from"../helpers@7.3.4/a5e57fe3.js";function n(n){let o,i;const r={type:"FeatureCollection",features:[]};if(i="Feature"===n.type?n.geometry:n,"LineString"===i.type)o=[i.coordinates];else if("MultiLineString"===i.type)o=i.coordinates;else if("MultiPolygon"===i.type)o=[].concat(...i.coordinates);else{if("Polygon"!==i.type)throw new Error("Input must be a LineString, MultiLineString, Polygon, or MultiPolygon Feature or Geometry");o=i.coordinates}return o.forEach((n=>{o.forEach((o=>{for(let i=0;i<n.length-1;i++)for(let l=i;l<o.length-1;l++){if(n===o){if(1===Math.abs(i-l))continue;if(0===i&&l===n.length-2&&n[i][0]===n[n.length-1][0]&&n[i][1]===n[n.length-1][1])continue}const u=t(n[i][0],n[i][1],n[i+1][0],n[i+1][1],o[l][0],o[l][1],o[l+1][0],o[l+1][1]);u&&r.features.push(e([u[0],u[1]]))}}))})),r}function t(e,n,t,o,i,r,l,u){let a,f,s,c,y;const g={x:null,y:null,onLine1:!1,onLine2:!1};return a=(u-r)*(t-e)-(l-i)*(o-n),0===a?null!==g.x&&null!==g.y&&g:(f=n-r,s=e-i,c=(l-i)*f-(u-r)*s,y=(t-e)*f-(o-n)*s,f=c/a,s=y/a,g.x=e+f*(t-e),g.y=n+f*(o-n),f>=0&&f<=1&&(g.onLine1=!0),s>=0&&s<=1&&(g.onLine2=!0),!(!g.onLine1||!g.onLine2)&&[g.x,g.y])}var o=n;export{o as default,n as kinks};
