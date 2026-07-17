@@ -8,8 +8,13 @@ export function waterfallSegmentsChart(
     title = null,
     caption = null,
     fontFamily = "IBM Plex Sans",
+    marginLeft = 120,
     minRowHeight = 32,
     minorShareThreshold = 0.01,
+    xLabel = "Funding (€ millions)",
+    tickFormat = null,
+    valueFormat = null,
+    ariaLabel = null,
   } = {},
 ) {
   const safeSegments = Array.isArray(segments) ? segments : [];
@@ -39,15 +44,24 @@ export function waterfallSegmentsChart(
     return `€${(Number(value || 0) / 1_000_000).toFixed(2)}m`;
   }
 
+  const resolvedTickFormat = typeof tickFormat === "function"
+    ? tickFormat
+    : formatMillionsTick;
+  const resolvedValueFormat = typeof valueFormat === "function"
+    ? valueFormat
+    : formatMillionsLabel;
+
   function sanitizePlotAccessibility(root) {
     if (!root) return;
 
-    const svg = root.querySelector("svg");
+    const svg = root.matches?.("svg") ? root : root.querySelector("svg");
     if (!svg) return;
 
     svg.setAttribute("role", "img");
 
-    if (title || caption) {
+    if (ariaLabel) {
+      svg.setAttribute("aria-label", ariaLabel);
+    } else if (title || caption) {
       const label = [title, caption].filter(Boolean).join(". ");
       if (label) svg.setAttribute("aria-label", label);
     } else {
@@ -66,7 +80,7 @@ export function waterfallSegmentsChart(
   const chart = Plot.plot({
     width,
     height,
-    marginLeft: 120,
+    marginLeft,
     marginRight: 30,
     marginTop: 50,
     marginBottom: 28,
@@ -78,10 +92,10 @@ export function waterfallSegmentsChart(
       fontFamily,
     },
     x: {
-      label: "Funding (€ millions)",
+      label: xLabel,
       axis: "top",
       grid: true,
-      tickFormat: (d) => formatMillionsTick(d),
+      tickFormat: (d) => resolvedTickFormat(d),
       domain: [0, maxValue],
     },
     y: {
@@ -123,7 +137,7 @@ export function waterfallSegmentsChart(
         },
         y: "Segment",
         text: (d) =>
-          `${formatMillionsLabel(d.value)} (${d3.format(".0%")(d.share)})`,
+          `${resolvedValueFormat(d.value)} (${d3.format(".0%")(d.share)})`,
         textAnchor: (d) => {
           const segmentWidth = d.x2 - d.x1;
           return segmentWidth < labelThreshold ? "end" : "middle";

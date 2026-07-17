@@ -1,3 +1,5 @@
+import { chartPalette } from "../../config/chart-palette.js";
+
 export const sportsFundingTopic = {
   slug: "sports-funding",
 
@@ -13,18 +15,7 @@ export const sportsFundingTopic = {
   sourceNote:
     "Sports funding records are mapped using project coordinates and filtered to the selected constituency boundary.",
 
-  palette: [
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-  ],
+  palette: chartPalette,
 
   fields: {
     lat: "latitude",

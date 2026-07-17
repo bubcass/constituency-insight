@@ -1,7 +1,8 @@
 import L from "npm:leaflet";
-
-const BLANK_TILE =
-  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+import {
+  addStandardBaseLayer,
+  addStandardMapControls,
+} from "./leaflet-map-ui.js";
 
 function cleanConstituencyLabel(name) {
   return String(name ?? "")
@@ -49,51 +50,18 @@ export function constituencyMap(featureCollection, options = {}) {
       vector-effect: non-scaling-stroke;
     }
 
-    .leaflet-control-fullscreen.leaflet-bar a {
-      width: 34px;
-      height: 34px;
-      line-height: 34px;
-      text-align: center;
-      font-size: 18px;
-      text-decoration: none;
-      background: #fff;
-    }
-
-    .constituency-map:fullscreen {
-      width: 100vw !important;
-      height: 100vh !important;
-    }
-
-    .constituency-map:-webkit-full-screen {
-      width: 100vw !important;
-      height: 100vh !important;
-    }
-
-    .constituency-map.is-fs {
-      position: fixed !important;
-      inset: 0;
-      width: 100vw !important;
-      height: 100vh !important;
-      z-index: 10000;
-      background: #fff;
-    }
   `;
   container.appendChild(cleanupStyle);
 
   const map = L.map(container, {
-    zoomControl: false,
+    zoomControl: true,
+    scrollWheelZoom: true,
   });
-
-  map.attributionControl.setPrefix(
-    '<a href="https://leafletjs.com">Leaflet</a>',
-  );
-
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    errorTileUrl: BLANK_TILE,
-    detectRetina: true,
-  }).addTo(map);
+  addStandardBaseLayer(map);
+  const mapUi = addStandardMapControls(map, container, {
+    scrollWheelZoom: true,
+    fullscreen: true,
+  });
 
   const geoLayer = L.geoJSON(featureCollection, {
     renderer: L.svg(),
@@ -105,83 +73,6 @@ export function constituencyMap(featureCollection, options = {}) {
       });
     },
   }).addTo(map);
-
-  const FullscreenControl = L.Control.extend({
-    options: { position: "bottomright" },
-    onAdd: () => {
-      const ctl = L.DomUtil.create(
-        "div",
-        "leaflet-control-fullscreen leaflet-bar",
-      );
-      const link = L.DomUtil.create("a", "", ctl);
-      link.href = "#";
-      link.title = "Toggle fullscreen";
-      link.setAttribute("aria-label", "Toggle fullscreen");
-      link.innerHTML = "⛶";
-
-      const isFsAPI = () =>
-        document.fullscreenElement === container ||
-        document.webkitFullscreenElement === container;
-
-      const enterFsAPI = async () => {
-        if (container.requestFullscreen) {
-          await container.requestFullscreen();
-        } else if (container.webkitRequestFullscreen) {
-          container.webkitRequestFullscreen();
-        }
-      };
-
-      const exitFsAPI = async () => {
-        if (document.exitFullscreen) {
-          await document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        }
-      };
-
-      let fallbackActive = false;
-
-      const enterFallback = () => {
-        fallbackActive = true;
-        container.classList.add("is-fs");
-        document.body.style.overflow = "hidden";
-        setTimeout(() => map.invalidateSize(), 50);
-      };
-
-      const exitFallback = () => {
-        fallbackActive = false;
-        container.classList.remove("is-fs");
-        document.body.style.overflow = "";
-        setTimeout(() => map.invalidateSize(), 50);
-      };
-
-      L.DomEvent.on(link, "click", (e) => {
-        L.DomEvent.stop(e);
-        (async () => {
-          try {
-            if (isFsAPI()) {
-              await exitFsAPI();
-            } else {
-              await enterFsAPI();
-            }
-          } catch {
-            if (fallbackActive) exitFallback();
-            else enterFallback();
-          }
-        })();
-      });
-
-      ["fullscreenchange", "webkitfullscreenchange"].forEach((ev) => {
-        document.addEventListener(ev, () => {
-          setTimeout(() => map.invalidateSize(), 50);
-        });
-      });
-
-      return ctl;
-    },
-  });
-
-  new FullscreenControl().addTo(map);
 
   const layers = geoLayer.getLayers();
 
@@ -212,6 +103,11 @@ export function constituencyMap(featureCollection, options = {}) {
       map.setView([53.4, -8.0], 6);
     });
   }
+
+  container.destroy = () => {
+    mapUi.destroy();
+    map.remove();
+  };
 
   return container;
 }

@@ -1,5 +1,28 @@
 # Elections Explorer
 
+## Recent Dáil contributions
+
+Run `npm run build:recent-contributions` to fetch the latest 120 days of Dáil
+debates from the Oireachtas API and rebuild
+`src/data/derived/recent-member-contributions.json`. Records are grouped by
+member and debate section and link to the Oireachtas `member-speech` page.
+The generated browser resource retains the 12 newest sections per member to
+keep the page payload compact.
+The same run also writes `recent-sports-contributions.json`, filtering the full
+120-day extraction for headings containing “sport” or “sports” before applying
+the per-member limit. This keeps topic pages complete without enlarging the
+general browser resource.
+
+The `Update recent member contributions` GitHub Actions workflow runs this
+each night and commits the dataset only when its contents change. A manual
+date range can be built with:
+
+```bash
+node src/scripts/build-recent-contributions.mjs \
+  --date-start 2026-07-01 \
+  --date-end 2026-07-17
+```
+
 This is an [Observable Framework](https://observablehq.com/framework/) app. To install the required dependencies, run:
 
 ```

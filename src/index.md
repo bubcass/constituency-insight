@@ -1,5 +1,5 @@
 ---
-title: "Constituency Insights"
+title: "People"
 header: false
 sidebar: false
 footer: false
@@ -8,45 +8,23 @@ toc: false
 
 ```js
 import * as d3 from "npm:d3";
-import * as turf from "npm:@turf/turf";
+import { insightsTabs } from "./components/insights-tabs.js";
 import { constituencySelect } from "./components/constituency-select.js";
+import { detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency } from "./components/constituency-location.js";
 import { metricCards } from "./components/metric-cards.js";
 import { memberCards } from "./components/member-cards.js";
-import { topicPointMap } from "./components/topic-point-map.js";
-import { waterfallSegmentsChart } from "./components/waterfall-segments-chart.js";
 import { downloadButton } from "./components/download-button.js";
+import { agePyramid, generationPercentageBar } from "./components/demographics-charts.js";
+import { electoralDistrictMap } from "./components/electoral-district-map.js";
+import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
 
-import { sportsFundingTopic } from "./topics/sports-funding/config.js";
-import {
-  filterRowsByConstituency,
-  buildMetricCardData
-} from "./topics/sports-funding/transforms.js";
-
-const sportsFundingPromise = FileAttachment(
-  "data/derived/sports-funding-enriched.json"
-).json();
-
-const waterfallPromise = FileAttachment(
-  "data/derived/waterfall-segments.json"
-).json();
-
-const pqSportsByConstituencyPromise = FileAttachment(
-  "data/derived/pq-sports-related-by-constituency.json"
-).json();
-
-const sportsDebatesPromise = FileAttachment(
-  "data/derived/debates-sections-sports.json"
-).json();
-
-const constituenciesGeoPromise = FileAttachment(
-  "data/geo/constituencies.json"
-).json();
-
-const heroVideoPromise = FileAttachment("media/sports-funding-hero.mp4").url();
-
-const membersLookupPromise = FileAttachment(
-  "data/members-lookup.json"
-).json();
+const ageData = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
+const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
+const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
+const membersLookup = await FileAttachment("data/members-lookup.json").json();
+const recentQuestionsByConstituency = await FileAttachment("data/derived/pq-recent-by-constituency.json").json();
+const recentMemberContributions = await FileAttachment("data/derived/recent-member-contributions.json").json();
+const peopleHeroVideo = await FileAttachment("media/people-walking-in-blurred.mp4").url();
 
 const partyColorMap = new Map([
   ["Fianna Fáil", "#40b34e"],
@@ -58,635 +36,408 @@ const partyColorMap = new Map([
   ["Independent Ireland", "#17becf"],
   ["People Before Profit-Solidarity", "#c5568b"],
   ["Aontú", "#ff7f0e"],
-  ["100% RDR", "#985564"],
   ["Green Party", "#b4d143"]
 ]);
 
-if (typeof window !== "undefined" && !window.insightsState) {
-  window.insightsState = { constituency: null };
-}
+const SEXES = ["Female", "Male"];
+const AGE_BANDS = [
+  { label: "0–9", fields: Array.from({length: 10}, (_, i) => `Age ${i}`) },
+  { label: "10–19", fields: Array.from({length: 10}, (_, i) => `Age ${i + 10}`) },
+  { label: "20–29", fields: ["Age 20 - 24", "Age 25 - 29"] },
+  { label: "30–39", fields: ["Age 30 - 34", "Age 35 - 39"] },
+  { label: "40–49", fields: ["Age 40 - 44", "Age 45 - 49"] },
+  { label: "50–59", fields: ["Age 50 - 54", "Age 55 - 59"] },
+  { label: "60–69", fields: ["Age 60 - 64", "Age 65 - 69"] },
+  { label: "70–79", fields: ["Age 70 - 74", "Age 75 - 79"] },
+  { label: "80+", fields: ["Age 80 - 84", "Age 85 and over"] }
+];
 
-if (typeof window !== "undefined" && !window.waterfallState) {
-  window.waterfallState = { year: "All" };
-}
-
-function getState() {
-  return typeof window !== "undefined"
-    ? window.insightsState
-    : { constituency: null };
-}
-
-function getWaterfallState() {
-  return typeof window !== "undefined"
-    ? window.waterfallState
-    : { year: "All" };
-}
-
-function clean(value) {
-  return String(value ?? "").replace(/\s+/g, " ").trim();
-}
-
-function cleanConstituencyName(name) {
-  return clean(name).replace(/\s*\(\d+\)\s*$/, "");
-}
-
-function resolveLabel(label, context = {}) {
-  return typeof label === "function" ? label(context) : label;
-}
-
-function getMemberImageUrl(memberCode) {
-  const code = clean(memberCode);
-  return code
-    ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${code}/image/large`
-    : null;
-}
-
-function pointInFeature(feature, lon, lat) {
-  try {
-    const pt = turf.point([lon, lat]);
-    return turf.booleanPointInPolygon(pt, feature);
-  } catch {
-    return false;
-  }
-}
-
-async function getFundingRows() {
-  return await sportsFundingPromise;
-}
-
-async function getWaterfallData() {
-  return await waterfallPromise;
-}
-
-async function getPqSportsByConstituency() {
-  return await pqSportsByConstituencyPromise;
-}
-
-async function getSportsDebates() {
-  const rows = await sportsDebatesPromise;
-  return Array.isArray(rows) ? rows : [];
-}
-
-async function getConstituenciesGeo() {
-  return await constituenciesGeoPromise;
-}
-
-async function getMembersLookup() {
-  return await membersLookupPromise;
-}
-
-async function getMembersArray() {
-  const lookup = await getMembersLookup();
-  return Object.values(lookup ?? {});
-}
-
-async function getAvailableConstituencies() {
-  const rows = await getFundingRows();
-  return Array.from(
-    new Set(rows.map((d) => d.__constituency).filter(Boolean))
-  ).sort((a, b) => a.localeCompare(b, "en"));
-}
-
-async function detectUserConstituencyFromLocation() {
-  if (typeof window === "undefined" || !navigator.geolocation) return null;
-
-  const geo = await getConstituenciesGeo();
-  const features = geo?.features ?? [];
-  if (!features.length) return null;
-
-  const position = await new Promise((resolve) => {
-    navigator.geolocation.getCurrentPosition(
-      (pos) => resolve(pos),
-      () => resolve(null),
-      {
-        enableHighAccuracy: true,
-        timeout: 8000,
-        maximumAge: 60000
-      }
-    );
-  });
-
-  if (!position) return null;
-
-  const lat = position.coords.latitude;
-  const lon = position.coords.longitude;
-
-  const matched = features.find((feature) =>
-    pointInFeature(feature, lon, lat)
-  );
-
-  if (!matched) return null;
-
-  return cleanConstituencyName(matched?.properties?.ENG_NAME_VALUE);
-}
-
-async function initialiseConstituencySelection() {
-  const options = await getAvailableConstituencies();
-
-  if (!options.length) {
-    window.insightsState.constituency = null;
-    return;
-  }
-
-  const detected = await detectUserConstituencyFromLocation();
-
-  if (detected && options.includes(detected)) {
-    window.insightsState.constituency = detected;
-    return;
-  }
-
-  if (
-    !window.insightsState.constituency ||
-    !options.includes(window.insightsState.constituency)
-  ) {
-    window.insightsState.constituency = options[0];
-  }
-}
-
-async function ensureValidConstituency() {
-  const options = await getAvailableConstituencies();
-
-  if (!options.length) {
-    window.insightsState.constituency = null;
-    return null;
-  }
-
-  if (
-    !window.insightsState.constituency ||
-    !options.includes(window.insightsState.constituency)
-  ) {
-    window.insightsState.constituency = options[0];
-  }
-
-  return window.insightsState.constituency;
-}
-
-async function getSelectedRows() {
-  const rows = await getFundingRows();
-  const constituency = await ensureValidConstituency();
-  return filterRowsByConstituency(rows, constituency);
-}
-
-async function getFilteredConstituencyGeo() {
-  const selected = await ensureValidConstituency();
-  const constituenciesGeo = await getConstituenciesGeo();
-
-  return {
-    type: "FeatureCollection",
-    features: constituenciesGeo.features.filter(
-      (feature) =>
-        cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE) === selected
-    )
+if (typeof window !== "undefined" && !window.demographicsState) {
+  window.demographicsState = {
+    constituency: null,
+    district: "all"
   };
 }
 
-async function getMatchedMembers() {
-  const selected = await ensureValidConstituency();
-  const members = await getMembersArray();
+const state = window.demographicsState;
+const constituencies = Array.from(
+  new Set(ageData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
+).sort((a, b) => a.localeCompare(b, "en"));
 
-  return members
-    .filter((d) => clean(d.constituency) === clean(selected))
-    .map((member) => ({
-      ...member,
-      displayName: member.memberName ?? member.name ?? "Unknown member",
-      memberUrl: member.memberUrl ?? null,
-      matchedParty: member.party ?? "Independent",
-      imageUrl: member.memberCode
-        ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
-        : null
-    }));
+const savedConstituency = readSavedConstituency(constituencies);
+
+if (savedConstituency) {
+  state.constituency = savedConstituency;
+} else {
+  if (!constituencies.includes(state.constituency)) {
+    state.constituency = constituencies[0] ?? null;
+  }
+
+  const silentlyDetectedConstituency = await detectConstituencyFromLocation({
+    constituencyGeoJSON: constituenciesGeo,
+    availableConstituencies: constituencies,
+    prompt: false
+  });
+
+  if (silentlyDetectedConstituency.ok) {
+    state.constituency = silentlyDetectedConstituency.constituency;
+  }
 }
 
-async function getRecentSportsPQsForConstituency(limit = 10) {
-  const [grouped, constituency, members] = await Promise.all([
-    getPqSportsByConstituency(),
-    ensureValidConstituency(),
-    getMembersArray()
-  ]);
+function rowsForConstituency() {
+  return ageData.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
+}
 
-  const rows = Array.isArray(grouped?.[constituency])
-    ? grouped[constituency]
-    : [];
+function rowsForDistrict() {
+  const rows = rowsForConstituency();
+  return state.district === "all"
+    ? rows
+    : rows.filter((d) => d.ED_GUID === state.district);
+}
 
-  const memberLookup = new Map(
-    members.map((m) => [clean(m.memberName ?? m.name).toLowerCase(), m])
+function constituencyMembers() {
+  return Object.values(membersLookup ?? {})
+    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
+    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+}
+
+function recentConstituencyQuestions(limit = 6) {
+  const record = recentQuestionsByConstituency.find(
+    (entry) => entry.constituency === state.constituency
   );
-
-  return rows
-    .map((row) => {
-      const matched = memberLookup.get(clean(row.deputy).toLowerCase()) ?? null;
-      const party = matched?.party ?? "Independent";
-
-      return {
-        ...row,
-        matchedParty: party,
-        memberCode: matched?.memberCode ?? null,
-        imageUrl: getMemberImageUrl(matched?.memberCode),
-        initials: clean(row.deputy)
-          .split(/\s+/)
-          .slice(0, 2)
-          .map((d) => d[0] ?? "")
-          .join("")
-          .toUpperCase()
-      };
-    })
+  return (record?.questions ?? [])
+    .slice()
     .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")))
     .slice(0, limit);
 }
 
-function getWaterfallColorLookup(rows = []) {
-  const lookup = new Map();
+function recentConstituencyContributions(limit = 6, perMemberLimit = 3) {
+  const memberCodes = new Set(
+    constituencyMembers().map((member) => member.memberCode).filter(Boolean)
+  );
 
-  for (const row of rows) {
-    for (const segment of row.segments ?? []) {
-      if (segment?.Segment && segment?.color && !lookup.has(segment.Segment)) {
-        lookup.set(segment.Segment, segment.color);
-      }
-    }
-  }
-
-  return lookup;
-}
-
-async function getRecentSportsDebates(limit = 5) {
-  const rows = await getSportsDebates();
-
-  return rows
-    .filter((d) => d?.date && d?.topic && d?.webpage)
-    .sort((a, b) => d3.descending(a.date, b.date))
+  const memberCounts = new Map();
+  return recentMemberContributions
+    .filter((contribution) => memberCodes.has(contribution.memberCode))
+    .slice()
+    .sort((a, b) => {
+      const dateComparison = String(b.date ?? "").localeCompare(String(a.date ?? ""));
+      if (dateComparison !== 0) return dateComparison;
+      return Number(b.sectionNumber ?? 0) - Number(a.sectionNumber ?? 0);
+    })
+    .filter((contribution) => {
+      const count = memberCounts.get(contribution.memberCode) ?? 0;
+      if (count >= perMemberLimit) return false;
+      memberCounts.set(contribution.memberCode, count + 1);
+      return true;
+    })
     .slice(0, limit);
 }
 
-function formatIrishDate(isoDate) {
-  if (!isoDate) return "";
-  return new Intl.DateTimeFormat("en-IE", {
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  }).format(new Date(`${isoDate}T00:00:00`));
+function cleanConstituencyName(value) {
+  return String(value ?? "").replace(/\s*\(\d+\)\s*$/, "").trim();
 }
 
-function rerender() {
-  window.dispatchEvent(new CustomEvent("insights:change"));
-  window.dispatchEvent(new CustomEvent("waterfall:change"));
-}
-
-function rerenderWaterfall() {
-  window.dispatchEvent(new CustomEvent("waterfall:change"));
-}
-
-function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40 } = {}) {
-  const el = document.createElement("div");
-  let timeoutId = null;
-  let runId = 0;
-
-  async function run() {
-    const currentRun = ++runId;
-    const result = await renderFn();
-    if (currentRun !== runId) return;
-    el.replaceChildren(result);
-  }
-
-  function onChange() {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(run, debounceMs);
-  }
-
-  run();
-  window.addEventListener(eventName, onChange);
-
-  return el;
-}
-
-function euro(value) {
-  return new Intl.NumberFormat("en-IE", {
-    style: "currency",
-    currency: "EUR",
-    maximumFractionDigits: 0
-  }).format(value ?? 0);
-}
-
-function chartPlaceholder(height = 320, text = "Updating…") {
-  const wrap = document.createElement("div");
-  wrap.className = "chart-loading";
-  wrap.style.minHeight = `${height}px`;
-  wrap.style.display = "grid";
-  wrap.style.alignItems = "center";
-  wrap.style.justifyItems = "center";
-  wrap.style.border = "1px solid var(--border)";
-  wrap.style.background = "rgba(255,255,255,0.55)";
-  wrap.style.padding = "1rem";
-  wrap.textContent = text;
-  return wrap;
-}
-
-function renderSegmentedControl({
-  label = "",
-  name = "",
-  options = [],
-  value = "",
-  onChange = () => {}
-} = {}) {
-  const wrap = document.createElement("div");
-  wrap.className = "segmented-control-wrap";
-
-  const group = document.createElement("div");
-  group.className = "segmented-control";
-  group.setAttribute("role", "radiogroup");
-  if (label) group.setAttribute("aria-label", label);
-
-  for (const option of options) {
-    const controlId = `${name}-${String(option.value)
-      .replace(/\s+/g, "-")
-      .toLowerCase()}`;
-
-    const labelEl = document.createElement("label");
-    labelEl.className = "segmented-control__option";
-    labelEl.setAttribute("for", controlId);
-
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.name = name;
-    input.id = controlId;
-    input.value = option.value;
-    input.checked = option.value === value;
-
-    input.addEventListener("change", () => {
-      if (input.checked) onChange(option.value);
-    });
-
-    const text = document.createElement("span");
-    text.textContent = option.label;
-
-    labelEl.appendChild(input);
-    labelEl.appendChild(text);
-    group.appendChild(labelEl);
-  }
-
-  wrap.appendChild(group);
-  return wrap;
-}
-
-async function getAvailableWaterfallYears() {
-  const rows = await getWaterfallData();
-  return Array.from(new Set(rows.map((d) => String(d.period)).filter(Boolean)))
-    .sort((a, b) => d3.ascending(a, b));
-}
-
-async function ensureValidWaterfallYear() {
-  const years = await getAvailableWaterfallYears();
-  const valid = ["All", ...years];
-
-  if (!valid.includes(window.waterfallState.year)) {
-    window.waterfallState.year = "All";
-  }
-
-  return window.waterfallState.year;
-}
-
-async function getSelectedWaterfallRecord() {
-  const [rows, constituency, selectedYear] = await Promise.all([
-    getWaterfallData(),
-    ensureValidConstituency(),
-    ensureValidWaterfallYear()
-  ]);
-
-  if (!constituency) return null;
-
-  const constituencyRows = rows.filter((d) => d.constituency === constituency);
-  if (!constituencyRows.length) return null;
-
-  if (selectedYear !== "All") {
-    return (
-      constituencyRows.find(
-        (d) => String(d.period) === String(selectedYear)
-      ) ?? null
-    );
-  }
-
-  const colorLookup = getWaterfallColorLookup(constituencyRows);
-
-  const segmentTotals = d3.rollups(
-    constituencyRows.flatMap((d) => d.segments ?? []),
-    (values) => d3.sum(values, (v) => Number(v.value) || 0),
-    (d) => d.Segment
-  )
-    .map(([Segment, value]) => ({ Segment, value }))
-    .sort(
-      (a, b) =>
-        d3.descending(a.value, b.value) ||
-        d3.ascending(a.Segment, b.Segment)
-    );
-
-  const total = d3.sum(segmentTotals, (d) => d.value);
-
-  let running = 0;
-  const segments = segmentTotals.map((d) => {
-    const x1 = running;
-    const x2 = running + d.value;
-    running = x2;
-
-    return {
-      Segment: d.Segment,
-      value: d.value,
-      color: colorLookup.get(d.Segment) ?? "#1f77b4",
-      x1,
-      x2,
-      share: total > 0 ? d.value / total : 0
-    };
-  });
-
+function selectedConstituencyGeoJSON() {
   return {
-    constituency,
-    period: "All",
-    total,
-    segments
+    type: "FeatureCollection",
+    features: constituenciesGeo.features.filter(
+      (feature) => cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE) === state.constituency
+    )
   };
 }
 
-await initialiseConstituencySelection();
+function aggregateAge(rows) {
+  return AGE_BANDS.flatMap((band) =>
+    SEXES.map((sex) => ({
+      ageBand: band.label,
+      sex,
+      population: d3.sum(rows, (row) =>
+        d3.sum(band.fields, (field) => Number(row[`${field} - ${sex === "Male" ? "Males" : "Females"}`]) || 0)
+      )
+    }))
+  );
+}
+
+function combineSexes(profile) {
+  return Array.from(
+    d3.rollup(profile, (values) => d3.sum(values, (d) => d.population), (d) => d.ageBand),
+    ([ageBand, population]) => ({ageBand, population})
+  );
+}
+
+function districtOptions() {
+  return rowsForConstituency()
+    .map((d) => ({value: d.ED_GUID, label: d.GEOGDESC}))
+    .sort((a, b) => a.label.localeCompare(b.label, "en"));
+}
+
+function selectedDistrictName() {
+  if (state.district === "all") return state.constituency;
+  return districtOptions().find((d) => d.value === state.district)?.label ?? "Selected district";
+}
+
+function scopeLabel() {
+  return state.district === "all" ? state.constituency : selectedDistrictName();
+}
+
+function scopeDescription() {
+  return state.district === "all"
+    ? `Constituency · ${d3.format(",")(rowsForConstituency().length)} electoral districts`
+    : `Electoral district · ${state.constituency}`;
+}
+
+function ensureDistrict() {
+  const valid = new Set(districtOptions().map((d) => d.value));
+  if (state.district !== "all" && !valid.has(state.district)) state.district = "all";
+}
+
+function restoreScrollThroughLayout(x, y) {
+  const restore = () => window.scrollTo(x, y);
+
+  restore();
+  requestAnimationFrame(() => {
+    restore();
+    requestAnimationFrame(() => {
+      restore();
+      setTimeout(restore, 0);
+      setTimeout(restore, 60);
+      setTimeout(restore, 150);
+    });
+  });
+}
+
+function rerender({preserveScroll = true} = {}) {
+  const x = window.scrollX;
+  const y = window.scrollY;
+  window.dispatchEvent(new CustomEvent("demographics:change"));
+  if (preserveScroll) restoreScrollThroughLayout(x, y);
+}
+
+function mountReactive(renderFn) {
+  const el = document.createElement("div");
+  let runId = 0;
+  let hasRendered = false;
+
+  async function run() {
+    const current = ++runId;
+    const result = await renderFn();
+    if (current !== runId) return;
+
+    el.replaceChildren(result);
+    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      result.animate?.(
+        [{opacity: 0.72}, {opacity: 1}],
+        {duration: 180, easing: "ease-out"}
+      );
+    }
+    hasRendered = true;
+  }
+
+  run();
+  window.addEventListener("demographics:change", run);
+  return el;
+}
+
+function renderScopeControl() {
+  ensureDistrict();
+  const wrap = document.createElement("section");
+  wrap.className = "insights-controls demographics-scope-control";
+
+  wrap.appendChild(
+    constituencySelect({
+      state,
+      resultsPromise: Promise.resolve(constituencies.map((constituency) => ({constituency}))),
+      onChange: () => {
+        state.district = "all";
+        saveSelectedConstituency(state.constituency);
+        rerender();
+      },
+      onLocate: () => detectConstituencyFromLocation({
+        constituencyGeoJSON: constituenciesGeo,
+        availableConstituencies: constituencies,
+        prompt: true
+      })
+    })
+  );
+
+  return wrap;
+}
+
+function renderDistrictMapExplorer() {
+  ensureDistrict();
+
+  const section = document.createElement("section");
+  section.className = "demographics-map-explorer";
+
+  const mapHost = document.createElement("div");
+  mapHost.className = "demographics-map-explorer__map-host";
+  section.appendChild(mapHost);
+
+  let mapNode = null;
+  let renderedConstituency = null;
+
+  function buildMap() {
+    mapNode?.destroy?.();
+    mapHost.replaceChildren();
+
+    const guids = new Set(rowsForConstituency().map((d) => d.ED_GUID));
+    const features = districtGeo.features.filter((feature) => guids.has(feature?.properties?.ED_GUID));
+
+    mapNode = electoralDistrictMap({
+      constituencyGeoJSON: selectedConstituencyGeoJSON(),
+      districtGeoJSON: {type: "FeatureCollection", features},
+      selectedGuid: state.district,
+      height: 500,
+      onSelect: (guid) => {
+        if (!guid || guid === state.district) return;
+        state.district = guid;
+        rerender();
+      }
+    });
+
+    renderedConstituency = state.constituency;
+    mapHost.appendChild(mapNode);
+  }
+
+  function update() {
+    ensureDistrict();
+
+    if (!mapNode || renderedConstituency !== state.constituency) buildMap();
+    else mapNode.setSelectedGuid?.(state.district);
+  }
+
+  update();
+  window.addEventListener("demographics:change", update);
+  return section;
+}
+
+function profileStats(rows = rowsForDistrict()) {
+  const profile = combineSexes(aggregateAge(rows));
+  const total = d3.sum(profile, (d) => d.population);
+  const largest = d3.greatest(profile, (d) => d.population);
+  const older = d3.sum(profile.filter((d) => ["70–79", "80+"].includes(d.ageBand)), (d) => d.population);
+  const under20 = d3.sum(profile.filter((d) => ["0–9", "10–19"].includes(d.ageBand)), (d) => d.population);
+  return {profile, total, largest, olderShare: older / total, under20Share: under20 / total};
+}
+
+const nationalStats = profileStats(ageData);
+
+function differenceText(value) {
+  const points = Math.abs(value * 100).toFixed(1);
+  if (Math.abs(value) < 0.001) return "in line with the national figure";
+  return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the national figure`;
+}
+
+const DEMOGRAPHICS_CHART_WIDTH = 790;
 ```
 
 ```js
-const heroWrap = document.createElement("div");
-heroWrap.className = "hero";
-
-const heroVideo = await heroVideoPromise;
-
-heroWrap.innerHTML = `
+const peopleHero = document.createElement("div");
+peopleHero.className = "hero";
+peopleHero.innerHTML = `
   <div class="hero__media">
-    <video class="hero__video" src="${heroVideo}" autoplay muted loop playsinline></video>
+    <video class="hero__video" src="${peopleHeroVideo}" autoplay muted loop playsinline aria-hidden="true"></video>
   </div>
   <div class="hero__overlay">
     <div class="hero__content">
-      <p class="hero__eyebrow">${sportsFundingTopic.eyebrow}</p>
-      <h1 class="hero__title">${sportsFundingTopic.heroTitle}</h1>
-      <p class="hero__subtitle">${sportsFundingTopic.heroSubtitle}</p>
+      <p class="hero__eyebrow">Constituency insights</p>
+      <h1 class="hero__title">People</h1>
+      <p class="hero__subtitle">Explore the demographic profile of constituents.</p>
     </div>
   </div>
 `;
-
-display(heroWrap);
+display(peopleHero);
 ```
 
-<div class="prose-block">
-  <p><a href="https://www.gov.ie/en/department-of-culture-communications-and-sport/collections/sports-capital-programme-allocations/" target="_blank">The community sports facilities fund</a>, formerly the sports capital and equipment fund, is the primary means of providing Government funding to sport and community organisations at local, regional and national level throughout the country.</p>
-  <p>The programme aims to foster an integrated and planned approach to the development of sports and physical recreation facilities and assists the purchase of non-personal sports equipment. Explore the allocations across constituencies.</p>
-  <h2>At a glance</h2>
-  <p>
-    Explore how the funding has been distributed across projects, organisations and sport types around the country.
-  </p>
+```js
+display(insightsTabs("people"));
+```
+
+<div class="prose-block lead">
+  <p>Census 2022 gives a detailed view of the people living in each constituency. Choose an area to compare generations, see where its population is concentrated and explore differences between local electoral districts.</p>
 </div>
 
 ```js
-display(
-  mountReactive(async () => {
-    const rows = await getFundingRows();
+display(renderScopeControl());
+```
 
-    const wrap = document.createElement("section");
-    wrap.className = "insights-controls";
-
-    wrap.appendChild(
-      constituencySelect({
-        state: getState(),
-        resultsPromise: Promise.resolve(
-          rows.map((d) => ({ constituency: d.__constituency }))
-        ),
-        onChange: () => rerender()
-      })
-    );
-
-    return wrap;
-  })
-);
+```js
+display(renderDistrictMapExplorer());
 ```
 
 ```js
 display(
   mountReactive(async () => {
-    const selectedRows = await getSelectedRows();
+    const stats = profileStats();
+    const note = document.createElement("div");
+    note.className = "reactive-prose demographic-story-callout";
 
-    const wrap = document.createElement("section");
-    wrap.className = "insights-metrics-full";
+    const label = document.createElement("p");
+    label.className = "demographic-story-callout__label";
+    label.textContent = "At a glance";
 
-    wrap.appendChild(
-      metricCards({
-        title: null,
-        metrics: buildMetricCardData(selectedRows, sportsFundingTopic)
-      })
-    );
+    const heading = document.createElement("h2");
+    heading.textContent = `The largest population cohort in ${scopeLabel()} is the ${stats.largest.ageBand} age band.`;
 
-    return wrap;
-  })
-);
-```
+    const context = document.createElement("div");
+    context.className = "demographic-scope-context";
 
-<div class="prose-block">
-  <h2>Explore the map</h2>
-  <p>Using new research from our <strong><a href="https://www.oireachtas.ie/pbo">Parliamentary Budget Office</a></strong>, take an interactive look at how this special funding has been used and compare funding in other constituencies around the country.</p>
-</div>
+    const scope = document.createElement("p");
+    scope.className = "demographic-scope-context__copy";
+    scope.textContent = state.district === "all"
+      ? `${state.constituency} is a constituency with ${d3.format(",")(rowsForConstituency().length)} electoral districts.`
+      : `${selectedDistrictName()} is an electoral district in the ${state.constituency} constituency.`;
+    context.appendChild(scope);
 
-```js
-display(
-  mountReactive(async () => {
-    const geo = await getFilteredConstituencyGeo();
-    const rows = await getSelectedRows();
+    if (state.district !== "all") {
+      const clear = document.createElement("button");
+      clear.type = "button";
+      clear.className = "demographic-scope-context__clear";
+      clear.setAttribute("aria-label", `Clear ${selectedDistrictName()} electoral district selection`);
+      clear.title = "Return to the constituency overview";
 
-    if (!geo?.features?.length) {
-      const p = document.createElement("p");
-      p.className = "chart-loading";
-      p.textContent = "No map available for this constituency.";
-      return p;
+      const clearIcon = document.createElement("span");
+      clearIcon.className = "demographic-scope-context__clear-icon";
+      clearIcon.setAttribute("aria-hidden", "true");
+      clearIcon.textContent = "×";
+
+      const clearLabel = document.createElement("span");
+      clearLabel.textContent = "Clear district";
+      clear.append(clearIcon, clearLabel);
+      clear.addEventListener("click", () => {
+        state.district = "all";
+        rerender();
+      });
+      context.appendChild(clear);
     }
 
-    return topicPointMap({
-      constituencyGeoJSON: geo,
-      data: rows,
-      height: 500,
-      fields: {
-        lat: "__lat",
-        lon: "__lon",
-        amount: "__amount",
-        category: "__category",
-        year: "__year",
-        entity: "__entity",
-        title: "__title"
-      },
-      labels: sportsFundingTopic.labels,
-      palette: sportsFundingTopic.palette,
-      tooltipHTML: sportsFundingTopic.tooltipHTML,
-      amountFormatter: sportsFundingTopic.formatters.amount
-    });
+    const detail = document.createElement("p");
+    detail.innerHTML = `People under 20 account for <strong>${d3.format(".1%")(stats.under20Share)}</strong> of people, ${differenceText(stats.under20Share - nationalStats.under20Share)}.`;
+
+    note.append(label, heading, context, detail);
+    return note;
   })
 );
 ```
 
-<div class="prose-block">
-  <h2>Explore by sport type</h2>
-  <p>
-    Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
-  </p>
-</div>
-
 ```js
 display(
   mountReactive(async () => {
-    const [years, selectedYear, record, constituency] = await Promise.all([
-      getAvailableWaterfallYears(),
-      ensureValidWaterfallYear(),
-      getSelectedWaterfallRecord(),
-      ensureValidConstituency()
-    ]);
-
-    const wrap = document.createElement("div");
-    wrap.className = "section-local-control section-local-control--waterfall";
-
-    const intro = document.createElement("div");
-    intro.className = "section-local-control__intro";
-    intro.innerHTML = `
-      <p>
-        Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
-      </p>
-    `;
-
-    const summary = document.createElement("div");
-    summary.className = "section-local-control__summary";
-    summary.innerHTML = record?.total
-      ? `
-        <p>
-          <strong>Total funding in ${constituency} for ${
-            record.period === "All" ? "all years" : record.period
-          }:</strong>
-          ${euro(record.total)}
-        </p>
-      `
-      : `<p>No funding breakdown available for this selection.</p>`;
-
-    const control = document.createElement("div");
-    control.className = "section-local-control__control section-local-control__control--centered";
-
-    control.appendChild(
-      renderSegmentedControl({
-        label: "Filter sport type chart by year",
-        name: "waterfall-year",
-        value: selectedYear,
-        options: [
-          { value: "All", label: "All" },
-          ...years.map((year) => ({ value: year, label: year }))
-        ],
-        onChange: (nextValue) => {
-          window.waterfallState.year = nextValue;
-          rerenderWaterfall();
-        }
-      })
-    );
-
-    wrap.appendChild(intro);
-    wrap.appendChild(summary);
-    wrap.appendChild(control);
-
+    const stats = profileStats();
+    const cards = metricCards({
+      metrics: [
+        {label: "Population", value: d3.format(",")(stats.total), note: "Census 2022"},
+        {label: "Largest age group", value: stats.largest?.ageBand ?? "—", note: `${d3.format(".1%")(stats.largest.population / stats.total)} of residents`},
+        {label: "Aged 70 or over", value: d3.format(".1%")(stats.olderShare), note: differenceText(stats.olderShare - nationalStats.olderShare)},
+        {label: "Under 20", value: d3.format(".1%")(stats.under20Share), note: differenceText(stats.under20Share - nationalStats.under20Share)}
+      ]
+    });
+    const wrap = document.createElement("section");
+    wrap.className = "insights-metrics-full demographics-metrics";
+    wrap.appendChild(cards);
     return wrap;
-  }, { eventName: "waterfall:change" })
+  })
 );
 ```
 
@@ -695,207 +446,114 @@ display(
 ```js
 display(
   mountReactive(async () => {
-    const record = await getSelectedWaterfallRecord();
-
-    if (!record?.segments?.length) {
-      return chartPlaceholder(
-        260,
-        "No funding breakdown available for this selection."
-      );
-    }
-
-    const wrap = document.createElement("div");
-    wrap.className = "election-chart-wrap";
-
-    wrap.appendChild(
-      waterfallSegmentsChart(record.segments, {
-        width: Math.max(760, 790),
-        minRowHeight: 28
-      })
-    );
-
-    return wrap;
-  }, { eventName: "waterfall:change" })
+    const profile = aggregateAge(rowsForDistrict());
+    return agePyramid(profile, {
+      width: DEMOGRAPHICS_CHART_WIDTH,
+      title: `Population profile for ${scopeLabel()}`
+    });
+  })
 );
+```
+
+</div>
+
+<div class="prose-block">
+  <h2>How generations are distributed</h2>
+  <p>This view combines female and male residents to show the share of the selected area's population in each ten-year age band.</p>
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => generationPercentageBar(
+  combineSexes(aggregateAge(rowsForDistrict())),
+  {
+    width: DEMOGRAPHICS_CHART_WIDTH,
+    title: `Age bands in ${scopeLabel()}`
+  }
+)));
 ```
 
 </div>
 
 ```js
 display(
-  mountReactive(async () => {
-    const members = await getMatchedMembers();
-    const constituency = await ensureValidConstituency();
-
-    return memberCards({
-      members,
-      partyColorMap,
-      title: resolveLabel(sportsFundingTopic.labels.memberCardsTitle, {
-        constituency
-      })
-    });
-  })
+  mountReactive(async () => memberCards({
+    members: constituencyMembers().map((member) => ({
+      ...member,
+      displayName: member.memberName,
+      matchedParty: member.party,
+      imageUrl: member.memberCode
+        ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
+        : null
+    })),
+    partyColorMap,
+    title: `How ${state.constituency} is represented in Parliament`
+  }))
 );
 ```
 
 <div class="prose-block">
   <h2>Explore parliamentary questions</h2>
-  <p>
-    Take a look at recent parliamentary questions related to sport and sports funding from Deputies in the constituency.
-  </p>
+  <p>Read the most recent parliamentary questions submitted by Deputies representing the selected constituency.</p>
 </div>
 
 <div class="chart-block">
 
 ```js
 display(
-  mountReactive(async () => {
-    const rows = await getRecentSportsPQsForConstituency(10);
-
-    if (!rows.length) {
-      const p = document.createElement("p");
-      p.className = "chart-loading";
-      p.textContent = "No related parliamentary questions available for this constituency.";
-      return p;
-    }
-
-    const wrap = document.createElement("div");
-    wrap.className = "debates-list debates-list--pqs";
-
-    rows.forEach((d) => {
-      const row = document.createElement("article");
-      row.className = "debates-list__row debates-list__row--pqs";
-
-      const borderColor = partyColorMap.get(d.matchedParty) ?? "#666666";
-
-      const avatarMarkup = d.imageUrl
-        ? `
-          <div class="debates-list__avatar" style="--avatar-ring:${borderColor}">
-            <img src="${d.imageUrl}" alt="${d.deputy}" loading="lazy" />
-          </div>
-        `
-        : `
-          <div class="debates-list__avatar debates-list__avatar--placeholder" style="--avatar-ring:${borderColor}">
-            <span>${d.initials}</span>
-          </div>
-        `;
-
-      row.innerHTML = `
-        <div class="debates-list__date">
-          ${formatIrishDate(d.date)}
-        </div>
-
-        <div class="debates-list__topic debates-list__topic--with-avatar">
-          ${avatarMarkup}
-          <div class="debates-list__topic-main">
-            <div class="debates-list__topic-title">${d.heading ?? ""}</div>
-            <div class="debates-list__topic-meta">${d.deputy ?? ""}</div>
-          </div>
-        </div>
-
-        <div class="debates-list__action">
-          <a
-            class="debates-list__button"
-            href="${d.url}"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View
-          </a>
-        </div>
-      `;
-
-      wrap.appendChild(row);
-    });
-
-    return wrap;
-  })
+  mountReactive(async () => parliamentaryQuestionList({
+    rows: recentConstituencyQuestions(6),
+    members: constituencyMembers(),
+    partyColorMap
+  }))
 );
 ```
 
 </div>
 
 <div class="prose-block">
-  <h2>Explore debates</h2>
-  <p>
-    Read the most recent Dáil debates related to sports and community funding.
-  </p>
+  <h2>Recent contributions from local Members</h2>
+  <p>Read recent Dáil contributions from Members representing the selected constituency.</p>
 </div>
 
 <div class="chart-block">
 
 ```js
 display(
-  mountReactive(async () => {
-    const debates = await getRecentSportsDebates(5);
-
-    if (!debates.length) {
-      const p = document.createElement("p");
-      p.className = "chart-loading";
-      p.textContent = "No related debates available.";
-      return p;
-    }
-
-    const wrap = document.createElement("div");
-    wrap.className = "debates-list";
-
-    debates.forEach((d) => {
-      const row = document.createElement("article");
-      row.className = "debates-list__row";
-
-      row.innerHTML = `
-        <div class="debates-list__date">${formatIrishDate(d.date)}</div>
-        <div class="debates-list__topic">${d.topic ?? ""}</div>
-        <div class="debates-list__action">
-          <a
-            class="debates-list__button"
-            href="${d.webpage}"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View
-          </a>
-        </div>
-      `;
-
-      wrap.appendChild(row);
-    });
-
-    return wrap;
-  })
+  mountReactive(async () => memberContributionList({
+    rows: recentConstituencyContributions(6),
+    members: constituencyMembers(),
+    partyColorMap
+  }))
 );
 ```
 
 </div>
 
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Electoral district values are aggregated to the current Dáil constituency boundaries used by the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
+</div>
+
 ```js
-display(
-  mountReactive(async () => {
-    const rows = await getFundingRows();
-
-    const wrap = document.createElement("div");
-    wrap.className = "download-block";
-
-    wrap.appendChild(
-      downloadButton(
-        rows.map((d) => ({
-          year: d.__year ?? "",
-          constituency: d.__constituency ?? "",
-          project: d.__title ?? "",
-          organisation: d.__entity ?? "",
-          sport_type: d.__category ?? "",
-          amount: d.__amount ?? 0,
-          lat: d.__lat ?? "",
-          lon: d.__lon ?? ""
-        })),
-        "sports-funding-complete-dataset.csv",
-        {
-          label: "Download the complete sports funding dataset"
-        }
-      )
-    );
-
-    return wrap;
-  })
-);
+display(mountReactive(async () => {
+  const wrap = document.createElement("div");
+  wrap.className = "download-block";
+  wrap.appendChild(downloadButton(
+    rowsForDistrict().flatMap((district) =>
+      aggregateAge([district]).map((row) => ({
+        constituency: district["NEW CONSTITUENCY"],
+        electoral_district: district.GEOGDESC,
+        electoral_district_id: district.ED_GUID,
+        age_band: row.ageBand,
+        sex: row.sex,
+        population: row.population
+      }))
+    ),
+    `${scopeLabel().toLowerCase().replace(/[^a-z0-9]+/g, "-")}-demographics-2022.csv`,
+    {label: `Download demographic data for ${scopeLabel()}`}
+  ));
+  return wrap;
+}));
 ```

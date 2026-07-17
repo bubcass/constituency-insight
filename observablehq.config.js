@@ -1,5 +1,5 @@
 export default {
-  title: "Sports funding",
+  title: "Constituency Insights",
   head: `
     <link rel="icon" href="logo.png" type="image/png" sizes="32x32">
     <script>

@@ -1,9 +1,11 @@
 import L from "npm:leaflet";
 import * as d3 from "npm:d3";
 import * as turf from "npm:@turf/turf";
-
-const BLANK_TILE =
-  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+import { chartPalette } from "../config/chart-palette.js";
+import {
+  addStandardBaseLayer,
+  addStandardMapControls,
+} from "./leaflet-map-ui.js";
 
 function toNumber(value) {
   if (typeof value === "number") return value;
@@ -67,18 +69,7 @@ function polygonsOnly(input) {
 }
 
 function buildCategoryColorResolver(categories, palette) {
-  const fallbackPalette = [
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-  ];
+  const fallbackPalette = chartPalette;
 
   if (palette instanceof Map) {
     const ordinal = d3.scaleOrdinal().domain(categories).range(fallbackPalette);
@@ -101,18 +92,7 @@ export function topicPointMap({
   constituencyGeoJSON,
   data = [],
   height = 500,
-  palette = [
-    "#1f77b4",
-    "#ff7f0e",
-    "#2ca02c",
-    "#d62728",
-    "#9467bd",
-    "#8c564b",
-    "#e377c2",
-    "#7f7f7f",
-    "#bcbd22",
-    "#17becf",
-  ],
+  palette = chartPalette,
   fields = {
     lat: "__lat",
     lon: "__lon",
@@ -153,6 +133,7 @@ export function topicPointMap({
           maximumFractionDigits: 0,
         }).format(v)
       : "—",
+  recordFilters = [],
   enableGeolocation = true,
   onLocate = null,
 } = {}) {
@@ -188,62 +169,14 @@ export function topicPointMap({
       display: none;
     }
 
-    .leaflet-control-fullscreen.leaflet-bar a,
-    .leaflet-control-geolocate.leaflet-bar button {
-      width: 34px;
-      height: 34px;
-      line-height: 34px;
-      text-align: center;
-      font-size: 18px;
-      text-decoration: none;
-      background: #fff;
-      font-family: "IBM Plex Sans", sans-serif;
-      border: 0;
-      padding: 0;
-      cursor: pointer;
-      display: block;
-    }
-
-    .leaflet-control-geolocate.leaflet-bar button:hover {
-      background: #f5f5f5;
-    }
-
-    .topic-map:fullscreen {
-      width: 100vw !important;
-      height: 100vh !important;
-    }
-
-    .topic-map:-webkit-full-screen {
-      width: 100vw !important;
-      height: 100vh !important;
-    }
-
-    .topic-map.is-fs {
-      position: fixed !important;
-      inset: 0;
-      width: 100vw !important;
-      height: 100vh !important;
-      z-index: 10000;
-      background: #fff;
-    }
   `;
   container.appendChild(style);
 
-  const map = L.map(container);
-
-  map.attributionControl
-    .setPrefix
-    //'<a href="https://leafletjs.com">Leaflet</a>',
-    ();
-
-  const osm = L.tileLayer(
-    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    {
-      //attribution: "© OpenStreetMap contributors",
-      detectRetina: true,
-      errorTileUrl: BLANK_TILE,
-    },
-  ).addTo(map);
+  const map = L.map(container, {
+    zoomControl: true,
+    scrollWheelZoom: true,
+  });
+  const osm = addStandardBaseLayer(map);
 
   const boundaryLayer = L.geoJSON(constituencyGeoJSON, {
     style: boundaryStyle,
@@ -274,6 +207,27 @@ export function topicPointMap({
       __raw: d,
     }))
     .filter((d) => Number.isFinite(d.__lat) && Number.isFinite(d.__lon));
+
+  const localFilters = (Array.isArray(recordFilters) ? recordFilters : [])
+    .map((filter) => ({
+      key: cleanText(filter?.key),
+      label: cleanText(filter?.label || filter?.key),
+      test: filter?.test,
+    }))
+    .filter((filter) => filter.key && typeof filter.test === "function");
+  const enabledLocalFilters = new Set(localFilters.map((filter) => filter.key));
+
+  function passesLocalFilters(record) {
+    if (!localFilters.length || enabledLocalFilters.size === localFilters.length) {
+      return true;
+    }
+    if (!enabledLocalFilters.size) return false;
+    return localFilters.some(
+      (filter) =>
+        enabledLocalFilters.has(filter.key) &&
+        filter.test(record.__raw, record),
+    );
+  }
 
   if (polygons.length) {
     const [minX, minY, maxX, maxY] = turf.bbox(
@@ -347,6 +301,7 @@ export function topicPointMap({
       },
     );
 
+    d.__marker = marker;
     categoryLayers.get(d.__category)?.addLayer(marker);
   });
 
@@ -416,6 +371,66 @@ export function topicPointMap({
       scheduleUpdate();
     }
   });
+
+  function refreshFilteredMarkers() {
+    categoryLayers.forEach((layer) => layer.clearLayers());
+    records.forEach((record) => {
+      if (passesLocalFilters(record)) {
+        categoryLayers.get(record.__category)?.addLayer(record.__marker);
+      }
+    });
+    scheduleUpdate();
+  }
+
+  if (localFilters.length) {
+    const RecordFilterControl = L.Control.extend({
+      options: { position: "topright" },
+      onAdd: () => {
+        const control = L.DomUtil.create(
+          "div",
+          "topic-map-record-filters leaflet-control",
+        );
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        const list = document.createElement("div");
+        list.className = "topic-map-record-filters__list";
+
+        const updateSummary = () => {
+          const count = enabledLocalFilters.size;
+          summary.textContent = count === localFilters.length
+            ? "Road users: All"
+            : `Road users: ${count}`;
+        };
+
+        localFilters.forEach((filter) => {
+          const label = document.createElement("label");
+          const input = document.createElement("input");
+          const text = document.createElement("span");
+          input.type = "checkbox";
+          input.checked = true;
+          input.value = filter.key;
+          text.textContent = filter.label;
+          input.addEventListener("change", () => {
+            if (input.checked) enabledLocalFilters.add(filter.key);
+            else enabledLocalFilters.delete(filter.key);
+            updateSummary();
+            refreshFilteredMarkers();
+          });
+          label.append(input, text);
+          list.appendChild(label);
+        });
+
+        details.append(summary, list);
+        control.appendChild(details);
+        updateSummary();
+        L.DomEvent.disableClickPropagation(control);
+        L.DomEvent.disableScrollPropagation(control);
+        return control;
+      },
+    });
+
+    new RecordFilterControl().addTo(map);
+  }
 
   const isMobile = window.matchMedia("(max-width: 640px)").matches;
 
@@ -506,6 +521,7 @@ export function topicPointMap({
 
     return records.filter(
       (d) =>
+        passesLocalFilters(d) &&
         enabledCategories.has(d.__category) &&
         bounds.contains(L.latLng(d.__lat, d.__lon)),
     );
@@ -776,79 +792,10 @@ export function topicPointMap({
     new GeolocateControl().addTo(map);
   }
 
-  const FullscreenControl = L.Control.extend({
-    options: { position: "bottomright" },
-    onAdd: () => {
-      const ctl = L.DomUtil.create(
-        "div",
-        "leaflet-control-fullscreen leaflet-bar",
-      );
-
-      const link = L.DomUtil.create("a", "", ctl);
-      link.href = "#";
-      link.title = "Toggle fullscreen";
-      link.setAttribute("aria-label", "Toggle fullscreen");
-      link.innerHTML = "⛶";
-      link.style.fontFamily = '"IBM Plex Sans", sans-serif';
-
-      const isFsAPI = () =>
-        document.fullscreenElement === container ||
-        document.webkitFullscreenElement === container;
-
-      const enterFsAPI = async () => {
-        if (container.requestFullscreen) await container.requestFullscreen();
-        else if (container.webkitRequestFullscreen) {
-          container.webkitRequestFullscreen();
-        }
-      };
-
-      const exitFsAPI = async () => {
-        if (document.exitFullscreen) await document.exitFullscreen();
-        else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        }
-      };
-
-      let fallbackActive = false;
-
-      const enterFallback = () => {
-        fallbackActive = true;
-        container.classList.add("is-fs");
-        document.body.style.overflow = "hidden";
-        setTimeout(() => map.invalidateSize(), 50);
-      };
-
-      const exitFallback = () => {
-        fallbackActive = false;
-        container.classList.remove("is-fs");
-        document.body.style.overflow = "";
-        setTimeout(() => map.invalidateSize(), 50);
-      };
-
-      L.DomEvent.on(link, "click", (e) => {
-        L.DomEvent.stop(e);
-        (async () => {
-          try {
-            if (isFsAPI()) await exitFsAPI();
-            else await enterFsAPI();
-          } catch {
-            if (fallbackActive) exitFallback();
-            else enterFallback();
-          }
-        })();
-      });
-
-      ["fullscreenchange", "webkitfullscreenchange"].forEach((ev) => {
-        document.addEventListener(ev, () =>
-          setTimeout(() => map.invalidateSize(), 50),
-        );
-      });
-
-      return ctl;
-    },
+  const mapUi = addStandardMapControls(map, container, {
+    scrollWheelZoom: true,
+    fullscreen: true,
   });
-
-  new FullscreenControl().addTo(map);
 
   requestAnimationFrame(() => {
     map.invalidateSize();
@@ -860,6 +807,11 @@ export function topicPointMap({
     }
     doUpdate();
   });
+
+  container.destroy = () => {
+    mapUi.destroy();
+    map.remove();
+  };
 
   return container;
 }
