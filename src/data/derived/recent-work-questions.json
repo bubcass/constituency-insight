@@ -1943,6 +1943,14 @@
     "constituency": "Cork North-Central",
     "questions": [
       {
+        "date": "2026-07-16",
+        "deputy": "Colm Burke",
+        "memberCode": "Colm-Burke.S.2011-05-25",
+        "heading": "Defence Forces",
+        "question": "126. Deputy Colm Burke asked the Minister for Defence the improvements to Army barracks in Cork that have occurred in the past number of years; the work that has been carried out; and if she will make a statement on the matter. [54220/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/126/"
+      },
+      {
         "date": "2026-07-15",
         "deputy": "Thomas Gould",
         "memberCode": "Thomas-Gould.D.2020-02-08",
@@ -2413,14 +2421,6 @@
         "heading": "Departmental Data",
         "question": "2501. Deputy Ken O'Flynn asked the Minister for Further and Higher Education, Research, Innovation and Science whether their Department, the Higher Education Authority, or any body under their aegis has undertaken an assessment of the number of Irish-qualified graduates working abroad in healthcare and other critical skills sectors; whether estimates are available by profession, qualification type and destination country; whether any analysis has been conducted of graduate emigration, return migration, retention rates or workforce losses within five years of qualification; and if he will make a statement on the matter. [43656/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/2501/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Ken O'Flynn",
-        "memberCode": "Ken-O'Flynn.D.2024-11-29",
-        "heading": "Departmental Data",
-        "question": "2502. Deputy Ken O'Flynn asked the Minister for Further and Higher Education, Research, Innovation and Science whether their Department has considered, proposed or participated in the development of any national strategy, programme, incentive scheme or interdepartmental initiative aimed at encouraging Irish-qualified graduates working overseas, including healthcare professionals, to return to Ireland; whether any discussions have taken place with the Department of Health, the HSE, the Higher Education Authority, employer representative bodies or other stakeholders regarding such measures; and if he will make a statement on the matter. [43657/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/2502/"
       }
     ]
   },
@@ -2916,6 +2916,22 @@
         "date": "2026-07-16",
         "deputy": "Pádraig Rice",
         "memberCode": "Pádraig-Rice.D.2024-11-29",
+        "heading": "Health Services",
+        "question": "543. Deputy Pádraig Rice asked the Minister for Health the options available to her should there be no meaningful increase in the number of public only consultant consultants working evening and Saturday shifts (details supplied); the steps she intends to take if the situation does not improve; and if she will make a statement on the matter. [54536/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/543/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pádraig Rice",
+        "memberCode": "Pádraig-Rice.D.2024-11-29",
+        "heading": "Health Services",
+        "question": "557. Deputy Pádraig Rice asked the Minister for Health the status of a proposal to introduce publicly funded pre-natal testing (details supplied); the date on which she received the initial proposal; the date on which she received the revised proposal; the timeline she is working towards in concluding the negotiations; the expected cost; and if she will make a statement on the matter. [54604/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/557/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pádraig Rice",
+        "memberCode": "Pádraig-Rice.D.2024-11-29",
         "heading": "Hospital Staff",
         "question": "506. Deputy Pádraig Rice asked the Minister for Health if she will provide the job descriptions of any post at Connolly Hospital, Blanchardstown, identified as holding responsibility for projects, construction works or building alterations, as evidence of an embedded governance structure and clear lines of accountability; and if she will make a statement on the matter. [54392/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/506/"
@@ -3375,22 +3391,6 @@
         "heading": "Trade Unions",
         "question": "1157. Deputy Pádraig Rice asked the Minister for Enterprise, Tourism and Employment if he is aware of issues relating to specific companies’ engagement with union representatives (details supplied); and if he will make a statement on the matter. [25771/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1157/"
-      },
-      {
-        "date": "2026-03-26",
-        "deputy": "Pádraig Rice",
-        "memberCode": "Pádraig-Rice.D.2024-11-29",
-        "heading": "General Practitioner Services",
-        "question": "459. Deputy Pádraig Rice asked the Minister for Health further to Parliamentary Question No. 666 of 19 February 2026, if her position has changed regarding the sole use of Pobal data with respect to the granting of social deprivation practice grants (details supplied); if work is now being carried out in her Department to address the flaws identified and the potential implications for other services; and if she will make a statement on the matter. [23293/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-26/459/"
-      },
-      {
-        "date": "2026-03-26",
-        "deputy": "Pádraig Rice",
-        "memberCode": "Pádraig-Rice.D.2024-11-29",
-        "heading": "Health Strategies",
-        "question": "513. Deputy Pádraig Rice asked the Minister for Health if there are plans to roll out a school-based oral health promotion initiative to all primary schools (details supplied); if her Department is carrying out any work in this regard; and if she will make a statement on the matter. [23519/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-26/513/"
       }
     ]
   },
@@ -10978,8 +10978,64 @@
         "deputy": "Pa Daly",
         "memberCode": "Pa-Daly.D.2020-02-08",
         "heading": "Climate Action Plan",
+        "question": "222. Deputy Pa Daly asked the Minister for Climate, Energy and the Environment to provide an update on the work of the NEAT taskforce; if the action plan is expected to be approved and published by Q3; and when the action plan will be enacted. [54570/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/222/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Climate Action Plan",
         "question": "295. Deputy Pa Daly asked the Minister for Enterprise, Tourism and Employment the position regarding all actions in each of the Climate Action Plans 2021 to 2025 under the remit of his Department; to provide a breakdown of the legacy actions remaining, broken down by the year of the climate action plan they were initially included in; and the estimated timelines for completion, in tabular form. [54627/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/295/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Departmental Consultations",
+        "question": "256. Deputy Pa Daly asked the Minister for Transport his Department's expenditure on IT consultancy; to provide a breakdown of all IT consultants engaged by his Department; the dates of their engagement; the nature of their work and the costs associated with their services in each of the years 2015 to 2025 and to date in 2026, in tabular form. [54572/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/256/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Departmental Consultations",
+        "question": "257. Deputy Pa Daly asked the Minister for Transport to provide details of his Department's expenditure on consultancy; to provide a breakdown of the consultants engaged by his Department; the dates of their engagement; the nature of their work and the costs associated with their services in each of the years 2015 to 2025. [54573/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/257/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Departmental Contracts",
+        "question": "255. Deputy Pa Daly asked the Minister for Transport the costs incurred by his Department and bodies under its aegis from contracts awarded to communications and PR firms in each of the years 2020 to 2025 and to date in 2026, in tabular form; the name of the contractor and a description of the work undertaken in each case; and if he will make a statement on the matter. [54571/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/255/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Departmental Expenditure",
+        "question": "219. Deputy Pa Daly asked the Minister for Climate, Energy and the Environment the costs incurred by his Department and bodies under its aegis from contracts awarded to communications and PR firms in each of the years 2020 to date; the name of the contractor and a description of the work undertaken in each case, in tabular form; and if he will make a statement on the matter. [54567/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/219/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Departmental Expenditure",
+        "question": "220. Deputy Pa Daly asked the Minister for Climate, Energy and the Environment his Department’s expenditure on IT consultancy; the breakdown of all IT consultants engaged by his Department; the dates of their engagement; the nature of their work; and the costs associated with their services in each of the years 2015 to date, in tabular form. [54568/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/220/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Pa Daly",
+        "memberCode": "Pa-Daly.D.2020-02-08",
+        "heading": "Departmental Expenditure",
+        "question": "221. Deputy Pa Daly asked the Minister for Climate, Energy and the Environment his Department’s expenditure on consultancy; the breakdown of all consultants engaged by his department; the dates of their engagement; the nature of their work; and the costs associated with their services in each of the years 2015 to 2025. [54569/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/221/"
       },
       {
         "date": "2026-07-16",
@@ -11388,62 +11444,6 @@
         "heading": "EU Regulations",
         "question": "526. Deputy Michael Healy-Rae asked the Minister for Enterprise, Tourism and Employment if the Government has assessed the proportion of licensed firearms in Ireland which would be unsuitable or unsafe for use with steel ammunition under proposed EU lead restrictions; to provide the findings of the assessment; and if he will make a statement on the matter. [35225/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/526/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Danny Healy-Rae",
-        "memberCode": "Danny-Healy-Rae.D.2016-10-03",
-        "heading": "Grant Payments",
-        "question": "155. Deputy Danny Healy-Rae asked the Minister for Further and Higher Education, Research, Innovation and Science his views regarding the holiday earnings disregard for students applying for Student Universal Support Ireland, SUSI, grants; his views on whether it is unfair that only income from work during holidays is considered, and students who have a small weekend job lose out on the SUSI grant as that puts them over the threshold for a grant; and if he will review this matter. [35185/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/155/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Michael Cahill",
-        "memberCode": "Michael-Cahill.D.2024-11-29",
-        "heading": "Health Services",
-        "question": "1052. Deputy Michael Cahill asked the Minister for Health further to Parliamentary Question No. 2778 of 14 April 2026 (details supplied), if she will confirm the length of time these vacancies have existed; if they will be filled in a temporary capacity pending permanent appointments; her views that there will be additional vacancies due to sick leave and maternity leave, and that the HSE has a 9.57% absence rate for staff who work in patient and client care positions; her views on whether patients are receiving the best care and service, with this level of vacancy; and if she will make a statement on the matter. [34226/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/1052/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Michael Cahill",
-        "memberCode": "Michael-Cahill.D.2024-11-29",
-        "heading": "Legislative Measures",
-        "question": "506. Deputy Michael Cahill asked the Minister for Enterprise, Tourism and Employment regarding short-term lets legislation, the impact it will have on the remaining tourist accommodation stock, given that County Kerry is heavily reliant on the tourism sector for the local economy, that tourist accommodation is key to its success, and that according to Failte Ireland, self catering has accounted for 40% of tourist accommodation in Ireland; if he has any concerns that in County Kerry, a substantial number of holiday homes are already used for Government contracts and long-term rental contracts; and if he will make a statement on the matter. [34173/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/506/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Michael Cahill",
-        "memberCode": "Michael-Cahill.D.2024-11-29",
-        "heading": "Legislative Measures",
-        "question": "508. Deputy Michael Cahill asked the Minister for Enterprise, Tourism and Employment to urgently review the short term lets legislation (details supplied); and if he will make a statement on the matter. [34242/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/508/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Michael Cahill",
-        "memberCode": "Michael-Cahill.D.2024-11-29",
-        "heading": "Legislative Measures",
-        "question": "509. Deputy Michael Cahill asked the Minister for Enterprise, Tourism and Employment when he will be introducing the Short -Term Lets and Tourism Bill 2025; if the National Short Term Lets Register will be in place on 20 May 2026; and if he will make a statement on the matter. [34269/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/509/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Michael Cahill",
-        "memberCode": "Michael-Cahill.D.2024-11-29",
-        "heading": "Work Permits",
-        "question": "840. Deputy Michael Cahill asked the Minister for Justice, Home Affairs and Migration to expedite a work visa (details supplied); and if he will make a statement on the matter. [34784/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/840/"
-      },
-      {
-        "date": "2026-05-07",
-        "deputy": "Michael Cahill",
-        "memberCode": "Michael-Cahill.D.2024-11-29",
-        "heading": "Rental Sector",
-        "question": "278. Deputy Michael Cahill asked the Minister for Enterprise, Tourism and Employment the most up-to-date position on short-term lets (details supplied); and if he will make a statement on the matter. [33759/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-07/278/"
       }
     ]
   },
@@ -11457,6 +11457,14 @@
         "heading": "Youth Work Supports",
         "question": "2. Deputy Aidan Farrelly asked the Minister for Education and Youth if she will provide an update on the commitment in Opportunities for Youth: National Strategy for Youth Work and Related Services 2024-2028 to produce a workforce development strategy; if an advisory group has, or is intended to be, set up; the terms of reference for the group; if pay and conditions are to be considered as part of the strategy; if she intends to publish the findings of the surveys and consultations undertaken to date to inform the strategy; and if she will make a statement on the matter. [53905/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/2/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "Aidan Farrelly",
+        "memberCode": "Aidan-Farrelly.D.2024-11-29",
+        "heading": "Youth Work Supports",
+        "question": "102. Deputy Aidan Farrelly asked the Minister for Education and Youth when arrangements for the youth capital funding scheme for 2026 will be finalised and released; if funding will be released under the youth capital funding scheme for 2026 have to be drawn down and spent within the 2026 calendar year; and if she will make a statement on the matter. [53907/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/102/"
       },
       {
         "date": "2026-07-15",
@@ -11921,14 +11929,6 @@
         "heading": "Artificial Intelligence",
         "question": "1140. Deputy Naoise Ó Cearúil asked the Minister for Enterprise, Tourism and Employment the targeted supports that are being developed to assist SMEs in adopting AI safely and effectively, including training, advisory services, or financial supports; the way these will be communicated to smaller firms; and if he will make a statement on the matter. [24657/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1140/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Naoise Ó Cearúil",
-        "memberCode": "Naoise-Ó-Cearúil.D.2024-11-29",
-        "heading": "Artificial Intelligence",
-        "question": "1141. Deputy Naoise Ó Cearúil asked the Minister for Enterprise, Tourism and Employment the way in which his Department intends to ensure that access to AI tools, training and supports is distributed across businesses of all sizes and not concentrated primarily within large enterprises; and if he will make a statement on the matter. [24658/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1141/"
       }
     ]
   },
@@ -12432,6 +12432,14 @@
         "date": "2026-07-16",
         "deputy": "William Aird",
         "memberCode": "William-Aird.D.2024-11-29",
+        "heading": "Nursing Homes",
+        "question": "548. Deputy William Aird asked the Minister for Health if she will outline the steps being taken to develop a national career pathway for healthcare assistants working in the nursing home sector; and if she will make a statement on the matter. [54576/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/548/"
+      },
+      {
+        "date": "2026-07-16",
+        "deputy": "William Aird",
+        "memberCode": "William-Aird.D.2024-11-29",
         "heading": "Rural Schemes",
         "question": "618. Deputy William Aird asked the Minister for Rural and Community Development and the Gaeltacht the progress made in delivering the LEADER programme 2023–2027; the level of funding allocated to date to support rural enterprise development, job creation, social inclusion and environmental projects; the steps being taken to ensure that communities in all regions can access and benefit from this funding; and if he will make a statement on the matter. [54558/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/618/"
@@ -12891,14 +12899,6 @@
         "heading": "Artificial Intelligence",
         "question": "23. Deputy Sean Fleming asked the Minister for Enterprise, Tourism and Employment if he plans to put the AI advisory council, which currently operates on a voluntary basis, on a permanent footing and provide it with State funding; and if he will make a statement on the matter. [12951/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/23/"
-      },
-      {
-        "date": "2026-02-19",
-        "deputy": "Sean Fleming",
-        "memberCode": "Seán-Fleming.D.1997-06-26",
-        "heading": "Artificial Intelligence",
-        "question": "87. Deputy Sean Fleming asked the Minister for Enterprise, Tourism and Employment if he will provide for the development of a national AI risk register within the national AI office to identify and monitor systemic risks across sectors; and if he will make a statement on the matter. [12950/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/87/"
       }
     ]
   },
@@ -19861,6 +19861,14 @@
     "constituency": "Wicklow-Wexford",
     "questions": [
       {
+        "date": "2026-07-16",
+        "deputy": "Malcolm Byrne",
+        "memberCode": "Malcolm-Byrne.D.2019-11-29",
+        "heading": "National Security",
+        "question": "132. Deputy Malcolm Byrne asked the Minister for Defence to report on the work of the Irish Military Intelligence Service; and what it currently views as the potentially most serious threats to the security of the State. [53710/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/132/"
+      },
+      {
         "date": "2026-07-14",
         "deputy": "Malcolm Byrne",
         "memberCode": "Malcolm-Byrne.D.2019-11-29",
@@ -20331,14 +20339,6 @@
         "heading": "Official Engagements",
         "question": "438. Deputy Malcolm Byrne asked the Minister for Enterprise, Tourism and Employment the number of businesses and business representative organisations he and State Ministers of State in his Department met for the St. Patrick's Day engagements overseas this year. [21936/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-24/438/"
-      },
-      {
-        "date": "2026-03-24",
-        "deputy": "Malcolm Byrne",
-        "memberCode": "Malcolm-Byrne.D.2019-11-29",
-        "heading": "St. Patrick's Day Celebrations",
-        "question": "439. Deputy Malcolm Byrne asked the Minister for Enterprise, Tourism and Employment the value of trade and tourism respectively, between Ireland and the states visited by him and by Ministers of State in his Department for the St Patrick's Day engagements overseas this year; and if he will make a statement on the matter. [21954/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-24/439/"
       }
     ]
   }
