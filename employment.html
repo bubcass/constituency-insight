@@ -7,29 +7,31 @@
 <title>Work | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.5b1eaba1.css">
+<link rel="preload" as="style" href="./_import/style.437f2bb0.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.5b1eaba1.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.437f2bb0.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
-<link rel="modulepreload" href="./_import/components/insights-tabs.9b805f3a.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.e25d43f8.js">
 <link rel="modulepreload" href="./_import/components/constituency-select.7443b005.js">
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
-<link rel="modulepreload" href="./_import/components/metric-cards.990954a2.js">
+<link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
-<link rel="modulepreload" href="./_import/components/employment-charts.05c3d4a0.js">
+<link rel="modulepreload" href="./_import/components/employment-charts.2e800c03.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_import/config/chart-style.e62386e1.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
@@ -90,16 +92,16 @@
 import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
-registerFile("./data/derived/recent-work-contributions.json", {"name":"./data/derived/recent-work-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-contributions.63648e5e.json","lastModified":1784301711826,"size":70174});
-registerFile("./data/derived/recent-work-questions.json", {"name":"./data/derived/recent-work-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-questions.57a5d763.json","lastModified":1784301724229,"size":1588256});
+registerFile("./data/derived/recent-work-contributions.json", {"name":"./data/derived/recent-work-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-contributions.9c7a1e5d.json","lastModified":1785504648841,"size":87694});
+registerFile("./data/derived/recent-work-questions.json", {"name":"./data/derived/recent-work-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-questions.6348a74e.json","lastModified":1785504648843,"size":1586374});
 registerFile("./data/employment-industry-2022.csv", {"name":"./data/employment-industry-2022.csv","mimeType":"text/csv","path":"./_file/data/employment-industry-2022.fffc6813.csv","lastModified":1784292898869,"size":523742});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.e173e9d0.geojson","lastModified":1784138384648,"size":5710128});
 registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
 registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
 
-define({id: "c673f804", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","memberCards","parliamentaryQuestionList","memberContributionList","employmentData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","employmentStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {memberCards}, {parliamentaryQuestionList, memberContributionList}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.9b805f3a.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.990954a2.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/employment-charts.05c3d4a0.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js")]);
+define({id: "6ae5bd2a", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","memberCards","parliamentaryQuestionList","memberContributionList","relatedResearchResource","employmentData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","employmentStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {memberCards}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/employment-charts.2e800c03.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js")]);
 
 const employmentData = await FileAttachment("./data/employment-industry-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
@@ -352,7 +354,7 @@ function renderDistrictMapExplorer() {
 }
 
 const EMPLOYMENT_CHART_WIDTH = 790;
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,employmentWaffle,memberCards,parliamentaryQuestionList,memberContributionList,employmentData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentWorkContributions,workHeroVideo,WORK_MATCHER,partyColorMap,INDUSTRIES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,constituencyMembers,recentConstituencyWorkQuestions,recentConstituencyWorkContributions,aggregateEmployment,employmentStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,differenceText,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,EMPLOYMENT_CHART_WIDTH};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,employmentWaffle,memberCards,parliamentaryQuestionList,memberContributionList,relatedResearchResource,employmentData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentWorkContributions,workHeroVideo,WORK_MATCHER,partyColorMap,INDUSTRIES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,constituencyMembers,recentConstituencyWorkQuestions,recentConstituencyWorkContributions,aggregateEmployment,employmentStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,differenceText,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,EMPLOYMENT_CHART_WIDTH};
 }});
 
 define({id: "86156aff", inputs: ["workHeroVideo","display"], outputs: ["hero"], body: (workHeroVideo,display) => {
@@ -477,6 +479,18 @@ display(mountReactive(async () => memberContributionList({
 })));
 }});
 
+define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
+}});
+
 define({id: "37152148", inputs: ["display","mountReactive","downloadButton","rowsForDistrict","aggregateEmployment","scopeLabel"], body: (display,mountReactive,downloadButton,rowsForDistrict,aggregateEmployment,scopeLabel) => {
 display(mountReactive(async () => {
   const wrap = document.createElement("div");
@@ -501,7 +515,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:c673f804:--></div>
+<div class="observablehq observablehq--block"><!--:6ae5bd2a:--></div>
 <div class="observablehq observablehq--block"><!--:86156aff:--></div>
 <div class="observablehq observablehq--block"><!--:9279bc04:--></div>
 <div class="prose-block lead">
@@ -531,6 +545,13 @@ display(mountReactive(async () => {
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:79480f7f:--></div>
+</div>
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
 </div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>

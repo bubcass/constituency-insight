@@ -7,31 +7,35 @@
 <title>People | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.5b1eaba1.css">
+<link rel="preload" as="style" href="./_import/style.437f2bb0.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.5b1eaba1.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.437f2bb0.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
-<link rel="modulepreload" href="./_import/components/insights-tabs.9b805f3a.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.e25d43f8.js">
 <link rel="modulepreload" href="./_import/components/constituency-select.7443b005.js">
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
-<link rel="modulepreload" href="./_import/components/metric-cards.990954a2.js">
+<link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
-<link rel="modulepreload" href="./_import/components/demographics-charts.dec05554.js">
+<link rel="modulepreload" href="./_import/components/demographics-charts.d6198621.js">
 <link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
+<link rel="modulepreload" href="./_import/components/people-charts.e388304c.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
-<link rel="modulepreload" href="./_import/components/percentage-strip-chart.24f515d4.js">
+<link rel="modulepreload" href="./_import/config/chart-style.e62386e1.js">
+<link rel="modulepreload" href="./_import/components/percentage-strip-chart.9cd4cf03.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.0190d384.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
 <link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
@@ -91,18 +95,28 @@
 import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
+registerFile("./data/carers-2022.csv", {"name":"./data/carers-2022.csv","mimeType":"text/csv","path":"./_file/data/carers-2022.6ab35f44.csv","lastModified":1785499565093,"size":262592});
 registerFile("./data/demographics-age-2022.csv", {"name":"./data/demographics-age-2022.csv","mimeType":"text/csv","path":"./_file/data/demographics-age-2022.0c09fdf2.csv","lastModified":1784138384647,"size":1276786});
+registerFile("./data/deprivation-index-2022.csv", {"name":"./data/deprivation-index-2022.csv","mimeType":"text/csv","path":"./_file/data/deprivation-index-2022.1711b2c5.csv","lastModified":1785493915705,"size":330648});
 registerFile("./data/derived/pq-recent-by-constituency.json", {"name":"./data/derived/pq-recent-by-constituency.json","mimeType":"application/json","path":"./_file/data/derived/pq-recent-by-constituency.68b4c9bc.json","lastModified":1784230929961,"size":346091});
-registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.2cf58f1f.json","lastModified":1784301711821,"size":1155555});
+registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.4e4f5d6e.json","lastModified":1785504648837,"size":1169655});
+registerFile("./data/disability-2022.csv", {"name":"./data/disability-2022.csv","mimeType":"text/csv","path":"./_file/data/disability-2022.62f2a3a3.csv","lastModified":1785493915679,"size":264329});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.e173e9d0.geojson","lastModified":1784138384648,"size":5710128});
+registerFile("./data/irish-speaking-frequency-2022.csv", {"name":"./data/irish-speaking-frequency-2022.csv","mimeType":"text/csv","path":"./_file/data/irish-speaking-frequency-2022.f8e5f252.csv","lastModified":1785491079636,"size":326336});
 registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
+registerFile("./data/principal-economic-status-2022.csv", {"name":"./data/principal-economic-status-2022.csv","mimeType":"text/csv","path":"./_file/data/principal-economic-status-2022.2e075488.csv","lastModified":1785492307919,"size":357176});
 registerFile("./media/people-walking-in-blurred.mp4", {"name":"./media/people-walking-in-blurred.mp4","mimeType":"video/mp4","path":"./_file/media/people-walking-in-blurred.e416fe30.mp4","lastModified":1784202251836,"size":5247083});
 
-define({id: "fe28f74a", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","downloadButton","agePyramid","generationPercentageBar","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","ageData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {downloadButton}, {agePyramid, generationPercentageBar}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.9b805f3a.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.990954a2.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.dec05554.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/parliamentary-activity.78f3ba08.js")]);
+define({id: "b125e369", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","downloadButton","agePyramid","generationPercentageBar","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","relatedResearchResource","principalEconomicStatusWaterfall","irishSpeakerShareWaffle","ageData","economicStatusData","irishSpeakingFrequency","disabilityData","carersData","deprivationData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","irishSpeakerPopulation","disabilityProfile","carerProfile","deprivationProfile","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","nationalDisabilityTotal","nationalDisabilityShare","nationalCarerTotal","nationalCarerShare","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {downloadButton}, {agePyramid, generationPercentageBar}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {principalEconomicStatusWaterfall, irishSpeakerShareWaffle}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.d6198621.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/people-charts.e388304c.js")]);
 
 const ageData = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
+const economicStatusData = await FileAttachment("./data/principal-economic-status-2022.csv").csv({typed: true});
+const irishSpeakingFrequency = await FileAttachment("./data/irish-speaking-frequency-2022.csv").csv({typed: true});
+const disabilityData = await FileAttachment("./data/disability-2022.csv").csv({typed: true});
+const carersData = await FileAttachment("./data/carers-2022.csv").csv({typed: true});
+const deprivationData = await FileAttachment("./data/deprivation-index-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("./data/members-lookup.json").json();
@@ -134,6 +148,17 @@ const AGE_BANDS = [
   { label: "60–69", fields: ["Age 60 - 64", "Age 65 - 69"] },
   { label: "70–79", fields: ["Age 70 - 74", "Age 75 - 79"] },
   { label: "80+", fields: ["Age 80 - 84", "Age 85 and over"] }
+];
+const ECONOMIC_STATUSES = [
+  "At work",
+  "Looking for first regular job",
+  "Short term unemployed",
+  "Long term unemployed",
+  "Student",
+  "Looking after home/family",
+  "Retired",
+  "Unable to work due to permanent sickness or disability",
+  "Other"
 ];
 
 if (typeof window !== "undefined" && !window.demographicsState) {
@@ -177,6 +202,74 @@ function rowsForDistrict() {
   return state.district === "all"
     ? rows
     : rows.filter((d) => d.ED_GUID === state.district);
+}
+
+function rowsForSelectedArea(data) {
+  return data.filter((d) =>
+    d["NEW CONSTITUENCY"] === state.constituency &&
+    (state.district === "all" || d.ED_GUID === state.district)
+  );
+}
+
+function economicStatusProfile() {
+  const rows = rowsForSelectedArea(economicStatusData);
+  return ECONOMIC_STATUSES.map((economicStatus) => ({
+    economicStatus,
+    total: d3.sum(rows, (row) => Number(row[economicStatus]) || 0)
+  }));
+}
+
+function economicStatusPopulation() {
+  return d3.sum(rowsForSelectedArea(economicStatusData), (row) => Number(row.Total) || 0);
+}
+
+function irishSpeakerPopulation() {
+  return d3.sum(
+    rowsForSelectedArea(irishSpeakingFrequency),
+    (row) => Number(row["All Irish speakers"]) || 0
+  );
+}
+
+function disabilityProfile() {
+  const count = d3.sum(
+    rowsForSelectedArea(disabilityData),
+    (row) => Number(row["Persons with a disability"]) || 0
+  );
+  const population = profileStats().total;
+  return {count, population, share: population > 0 ? count / population : 0};
+}
+
+function carerProfile() {
+  const count = d3.sum(
+    rowsForSelectedArea(carersData),
+    (row) => Number(row.Carers) || 0
+  );
+  const population = profileStats().total;
+  return {count, population, share: population > 0 ? count / population : 0};
+}
+
+function deprivationProfile() {
+  const rows = rowsForSelectedArea(deprivationData);
+  if (!rows.length) return null;
+
+  if (state.district !== "all") {
+    const row = rows[0];
+    return {
+      level: "district",
+      description: row["Deprivation description"],
+      score: Number(row["Deprivation score"]),
+      count: 1,
+      total: 1
+    };
+  }
+
+  const classifications = d3.rollups(
+    rows,
+    (values) => values.length,
+    (row) => row["Deprivation description"]
+  ).sort((a, b) => d3.descending(a[1], b[1]) || d3.ascending(a[0], b[0]));
+  const [description, count] = classifications[0];
+  return {level: "constituency", description, count, total: rows.length};
 }
 
 function constituencyMembers() {
@@ -406,6 +499,16 @@ function profileStats(rows = rowsForDistrict()) {
 }
 
 const nationalStats = profileStats(ageData);
+const nationalDisabilityTotal = d3.sum(
+  disabilityData,
+  (row) => Number(row["Persons with a disability"]) || 0
+);
+const nationalDisabilityShare = nationalDisabilityTotal / nationalStats.total;
+const nationalCarerTotal = d3.sum(
+  carersData,
+  (row) => Number(row.Carers) || 0
+);
+const nationalCarerShare = nationalCarerTotal / nationalStats.total;
 
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
@@ -414,7 +517,7 @@ function differenceText(value) {
 }
 
 const DEMOGRAPHICS_CHART_WIDTH = 790;
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,memberCards,downloadButton,agePyramid,generationPercentageBar,electoralDistrictMap,parliamentaryQuestionList,memberContributionList,ageData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentMemberContributions,peopleHeroVideo,partyColorMap,SEXES,AGE_BANDS,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,constituencyMembers,recentConstituencyQuestions,recentConstituencyContributions,cleanConstituencyName,selectedConstituencyGeoJSON,aggregateAge,combineSexes,districtOptions,selectedDistrictName,scopeLabel,scopeDescription,ensureDistrict,restoreScrollThroughLayout,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,profileStats,nationalStats,differenceText,DEMOGRAPHICS_CHART_WIDTH};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,memberCards,downloadButton,agePyramid,generationPercentageBar,electoralDistrictMap,parliamentaryQuestionList,memberContributionList,relatedResearchResource,principalEconomicStatusWaterfall,irishSpeakerShareWaffle,ageData,economicStatusData,irishSpeakingFrequency,disabilityData,carersData,deprivationData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentMemberContributions,peopleHeroVideo,partyColorMap,SEXES,AGE_BANDS,ECONOMIC_STATUSES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,rowsForSelectedArea,economicStatusProfile,economicStatusPopulation,irishSpeakerPopulation,disabilityProfile,carerProfile,deprivationProfile,constituencyMembers,recentConstituencyQuestions,recentConstituencyContributions,cleanConstituencyName,selectedConstituencyGeoJSON,aggregateAge,combineSexes,districtOptions,selectedDistrictName,scopeLabel,scopeDescription,ensureDistrict,restoreScrollThroughLayout,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,profileStats,nationalStats,nationalDisabilityTotal,nationalDisabilityShare,nationalCarerTotal,nationalCarerShare,differenceText,DEMOGRAPHICS_CHART_WIDTH};
 }});
 
 define({id: "bc91cfc6", inputs: ["peopleHeroVideo","display"], outputs: ["peopleHero"], body: (peopleHeroVideo,display) => {
@@ -503,16 +606,29 @@ display(
 );
 }});
 
-define({id: "45fca477", inputs: ["display","mountReactive","profileStats","metricCards","d3","differenceText","nationalStats"], body: (display,mountReactive,profileStats,metricCards,d3,differenceText,nationalStats) => {
+define({id: "eb4e2ca1", inputs: ["display","mountReactive","profileStats","deprivationProfile","metricCards","d3","differenceText","nationalStats"], body: (display,mountReactive,profileStats,deprivationProfile,metricCards,d3,differenceText,nationalStats) => {
 display(
   mountReactive(async () => {
     const stats = profileStats();
+    const deprivation = deprivationProfile();
     const cards = metricCards({
       metrics: [
         {label: "Population", value: d3.format(",")(stats.total), note: "Census 2022"},
         {label: "Largest age group", value: stats.largest?.ageBand ?? "—", note: `${d3.format(".1%")(stats.largest.population / stats.total)} of residents`},
         {label: "Aged 70 or over", value: d3.format(".1%")(stats.olderShare), note: differenceText(stats.olderShare - nationalStats.olderShare)},
-        {label: "Under 20", value: d3.format(".1%")(stats.under20Share), note: differenceText(stats.under20Share - nationalStats.under20Share)}
+        deprivation?.level === "district"
+          ? {
+              label: "HP deprivation index",
+              value: deprivation.description,
+              note: `Score ${d3.format("+.1f")(deprivation.score)} · 0 is the national average`,
+              compactValue: true
+            }
+          : {
+              label: "Most common deprivation type",
+              value: deprivation?.description ?? "—",
+              note: deprivation ? `${deprivation.count} of ${deprivation.total} electoral districts` : "HP Deprivation Index 2022",
+              compactValue: true
+            }
       ]
     });
     const wrap = document.createElement("section");
@@ -543,6 +659,52 @@ display(mountReactive(async () => generationPercentageBar(
     title: `Age bands in ${scopeLabel()}`
   }
 )));
+}});
+
+define({id: "50a027a6", inputs: ["display","mountReactive","principalEconomicStatusWaterfall","economicStatusProfile","scopeLabel","d3","economicStatusPopulation"], body: (display,mountReactive,principalEconomicStatusWaterfall,economicStatusProfile,scopeLabel,d3,economicStatusPopulation) => {
+display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatusProfile(), {
+  width: 1000,
+  title: `Principal economic status in ${scopeLabel()}`,
+  subtitle: `Population aged 15 and over · Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
+})));
+}});
+
+define({id: "184f3997", inputs: ["display","mountReactive","disabilityProfile","carerProfile","d3","differenceText","nationalDisabilityShare","nationalCarerShare","metricCards"], body: (display,mountReactive,disabilityProfile,carerProfile,d3,differenceText,nationalDisabilityShare,nationalCarerShare,metricCards) => {
+display(
+  mountReactive(async () => {
+    const disability = disabilityProfile();
+    const carers = carerProfile();
+    const metrics = [
+      {
+        label: "People who indicated a disability",
+        value: d3.format(",")(disability.count),
+        note: `${d3.format(".1%")(disability.share)} of the population · ${differenceText(disability.share - nationalDisabilityShare)}`
+      },
+      {
+        label: "Carers",
+        value: d3.format(",")(carers.count),
+        note: `${d3.format(".1%")(carers.share)} of the population · ${differenceText(carers.share - nationalCarerShare)}`
+      }
+    ];
+
+    const cards = metricCards({metrics});
+    const wrap = document.createElement("section");
+    wrap.className = "insights-metrics-full people-context-metrics";
+    wrap.appendChild(cards);
+    return wrap;
+  })
+);
+}});
+
+define({id: "7ce314e0", inputs: ["display","mountReactive","irishSpeakerShareWaffle","irishSpeakerPopulation","profileStats","DEMOGRAPHICS_CHART_WIDTH","scopeLabel"], body: (display,mountReactive,irishSpeakerShareWaffle,irishSpeakerPopulation,profileStats,DEMOGRAPHICS_CHART_WIDTH,scopeLabel) => {
+display(mountReactive(async () => irishSpeakerShareWaffle({
+  speakers: irishSpeakerPopulation(),
+  population: profileStats().total
+}, {
+  width: DEMOGRAPHICS_CHART_WIDTH,
+  title: `Irish speakers in ${scopeLabel()}`,
+  subtitle: "Census 2022 · both sexes"
+})));
 }});
 
 define({id: "e86731dc", inputs: ["display","mountReactive","memberCards","constituencyMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,constituencyMembers,partyColorMap,state) => {
@@ -582,6 +744,18 @@ display(
 );
 }});
 
+define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
+}});
+
 define({id: "cdc1e954", inputs: ["display","mountReactive","downloadButton","rowsForDistrict","aggregateAge","scopeLabel"], body: (display,mountReactive,downloadButton,rowsForDistrict,aggregateAge,scopeLabel) => {
 display(mountReactive(async () => {
   const wrap = document.createElement("div");
@@ -610,7 +784,7 @@ display(mountReactive(async () => {
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
 <!-- People topic page -->
-<div class="observablehq observablehq--block"><!--:fe28f74a:--></div>
+<div class="observablehq observablehq--block"><!--:b125e369:--></div>
 <div class="observablehq observablehq--block"><!--:bc91cfc6:--></div>
 <div class="observablehq observablehq--block"><!--:4c9f943b:--></div>
 <div class="prose-block lead">
@@ -619,7 +793,7 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:9f148872:--></div>
 <div class="observablehq observablehq--block"><!--:61fd8d47:--></div>
 <div class="observablehq observablehq--block"><!--:ad640b21:--></div>
-<div class="observablehq observablehq--block"><!--:45fca477:--></div>
+<div class="observablehq observablehq--block"><!--:eb4e2ca1:--></div>
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:68ece3cb:--></div>
 </div>
@@ -629,6 +803,25 @@ display(mountReactive(async () => {
 </div>
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:c928d084:--></div>
+</div>
+<div class="prose-block prose-block--section">
+  <h2>Population by principal economic status</h2>
+  <p>The waterfall shows how each principal economic-status category contributes to the population aged 15 and over in the selected constituency or electoral district.</p>
+</div>
+<div class="chart-block chart-block--wide">
+<div class="observablehq observablehq--block"><!--:50a027a6:--></div>
+</div>
+<div class="prose-block prose-block--section">
+  <h2>Disability and unpaid care</h2>
+  <p>These Census counts show people who indicated a disability alongside people providing regular unpaid care. Both measures are available for constituencies and individual electoral districts.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:184f3997:--></div>
+<div class="prose-block prose-block--section">
+  <h2>Irish speakers as a share of the population</h2>
+  <p>The waffle compares the number of Irish speakers aged three and over with the total population of the selected constituency or electoral district.</p>
+</div>
+<div class="chart-block chart-block--wide">
+<div class="observablehq observablehq--block"><!--:7ce314e0:--></div>
 </div>
 <div class="observablehq observablehq--block"><!--:e86731dc:--></div>
 <div class="prose-block">
@@ -645,9 +838,16 @@ display(mountReactive(async () => {
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:85fe1659:--></div>
 </div>
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
+</div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Electoral district values are aggregated to the current Dáil constituency boundaries used by the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
+  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the Irish-language dataset</a>, or visit the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:cdc1e954:--></div>
 </main>

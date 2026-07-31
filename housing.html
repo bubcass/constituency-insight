@@ -7,31 +7,37 @@
 <title>Housing | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.5b1eaba1.css">
+<link rel="preload" as="style" href="./_import/style.437f2bb0.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.5b1eaba1.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.437f2bb0.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
-<link rel="modulepreload" href="./_import/components/insights-tabs.9b805f3a.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.e25d43f8.js">
 <link rel="modulepreload" href="./_import/components/constituency-select.7443b005.js">
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
-<link rel="modulepreload" href="./_import/components/metric-cards.990954a2.js">
+<link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
-<link rel="modulepreload" href="./_import/components/housing-charts.33296500.js">
+<link rel="modulepreload" href="./_import/components/topic-point-map.0470735b.js">
+<link rel="modulepreload" href="./_import/components/housing-charts.e2068609.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
+<link rel="modulepreload" href="./_import/topics/planning-applications/config.7a8b9af0.js">
+<link rel="modulepreload" href="./_import/topics/planning-applications/transforms.72a81cff.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
-<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.ec64b4aa.js">
-<link rel="modulepreload" href="./_import/components/percentage-strip-chart.24f515d4.js">
+<link rel="modulepreload" href="./_npm/@turf/turf@7.3.4/55001c14.js">
+<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.0190d384.js">
+<link rel="modulepreload" href="./_import/components/percentage-strip-chart.9cd4cf03.js">
+<link rel="modulepreload" href="./_import/config/chart-style.e62386e1.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
@@ -65,12 +71,146 @@
 <link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
 <link rel="modulepreload" href="./_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
 <link rel="modulepreload" href="./_npm/@turf/invariant@7.3.4/0f53e08e.js">
+<link rel="modulepreload" href="./_npm/@turf/along@7.3.4/0339bb0c.js">
+<link rel="modulepreload" href="./_npm/@turf/angle@7.3.4/d6e93734.js">
+<link rel="modulepreload" href="./_npm/@turf/area@7.3.4/d6ba3661.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox@7.3.4/59288137.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox-clip@7.3.4/279783d9.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox-polygon@7.3.4/d090b42f.js">
+<link rel="modulepreload" href="./_npm/@turf/bearing@7.3.4/2c3cb3af.js">
+<link rel="modulepreload" href="./_npm/@turf/bezier-spline@7.3.4/af2a1e1b.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-clockwise@7.3.4/f56a1f23.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-concave@7.3.4/ac213575.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-contains@7.3.4/40cb139a.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-crosses@7.3.4/37253b2f.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-disjoint@7.3.4/109c8144.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-equal@7.3.4/1b98d814.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-intersects@7.3.4/56313654.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-overlap@7.3.4/22eeb52c.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-parallel@7.3.4/11af2be4.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-point-on-line@7.3.4/e06f93aa.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-touches@7.3.4/c76af439.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-valid@7.3.4/0635f4d4.js">
+<link rel="modulepreload" href="./_npm/@turf/boolean-within@7.3.4/e5a6c9d3.js">
+<link rel="modulepreload" href="./_npm/@turf/buffer@7.3.4/3c35ceae.js">
+<link rel="modulepreload" href="./_npm/@turf/center@7.3.4/5fce4a03.js">
+<link rel="modulepreload" href="./_npm/@turf/center-mean@7.3.4/7d8480b0.js">
+<link rel="modulepreload" href="./_npm/@turf/center-median@7.3.4/47c7783a.js">
+<link rel="modulepreload" href="./_npm/@turf/center-of-mass@7.3.4/7539982e.js">
+<link rel="modulepreload" href="./_npm/@turf/centroid@7.3.4/b840a8be.js">
+<link rel="modulepreload" href="./_npm/@turf/circle@7.3.4/8fa375c0.js">
+<link rel="modulepreload" href="./_npm/@turf/clean-coords@7.3.4/e25962d8.js">
+<link rel="modulepreload" href="./_npm/@turf/clone@7.3.4/9edb039d.js">
+<link rel="modulepreload" href="./_npm/@turf/clusters@7.3.4/aa32c187.js">
+<link rel="modulepreload" href="./_npm/@turf/clusters-dbscan@7.3.4/d127999d.js">
+<link rel="modulepreload" href="./_npm/@turf/clusters-kmeans@7.3.4/56b76352.js">
+<link rel="modulepreload" href="./_npm/@turf/collect@7.3.4/5394bbcf.js">
+<link rel="modulepreload" href="./_npm/@turf/combine@7.3.4/49610389.js">
+<link rel="modulepreload" href="./_npm/@turf/concave@7.3.4/5a19d16e.js">
+<link rel="modulepreload" href="./_npm/@turf/convex@7.3.4/86e63121.js">
+<link rel="modulepreload" href="./_npm/@turf/destination@7.3.4/1a8912b6.js">
+<link rel="modulepreload" href="./_npm/@turf/difference@7.3.4/03002d55.js">
+<link rel="modulepreload" href="./_npm/@turf/dissolve@7.3.4/0ea055c1.js">
+<link rel="modulepreload" href="./_npm/@turf/distance@7.3.4/58cbc6ef.js">
+<link rel="modulepreload" href="./_npm/@turf/distance-weight@7.3.4/6fe5ffae.js">
+<link rel="modulepreload" href="./_npm/@turf/ellipse@7.3.4/ffbd434b.js">
+<link rel="modulepreload" href="./_npm/@turf/envelope@7.3.4/f7105862.js">
+<link rel="modulepreload" href="./_npm/@turf/explode@7.3.4/84a7a349.js">
+<link rel="modulepreload" href="./_npm/@turf/flatten@7.3.4/d27faef4.js">
+<link rel="modulepreload" href="./_npm/@turf/flip@7.3.4/4adca565.js">
+<link rel="modulepreload" href="./_npm/@turf/geojson-rbush@7.3.4/112d6764.js">
+<link rel="modulepreload" href="./_npm/@turf/great-circle@7.3.4/1571ecd0.js">
+<link rel="modulepreload" href="./_npm/@turf/hex-grid@7.3.4/a166e175.js">
+<link rel="modulepreload" href="./_npm/@turf/interpolate@7.3.4/9e96ae2a.js">
+<link rel="modulepreload" href="./_npm/@turf/intersect@7.3.4/d41bed0e.js">
+<link rel="modulepreload" href="./_npm/@turf/isobands@7.3.4/3e052809.js">
+<link rel="modulepreload" href="./_npm/@turf/isolines@7.3.4/c2ea7f2a.js">
+<link rel="modulepreload" href="./_npm/@turf/kinks@7.3.4/858bdddc.js">
+<link rel="modulepreload" href="./_npm/@turf/length@7.3.4/307c22ef.js">
+<link rel="modulepreload" href="./_npm/@turf/line-arc@7.3.4/1eaa469e.js">
+<link rel="modulepreload" href="./_npm/@turf/line-chunk@7.3.4/3428e424.js">
+<link rel="modulepreload" href="./_npm/@turf/line-intersect@7.3.4/6e46e428.js">
+<link rel="modulepreload" href="./_npm/@turf/line-offset@7.3.4/150a6e87.js">
+<link rel="modulepreload" href="./_npm/@turf/line-overlap@7.3.4/234a5889.js">
+<link rel="modulepreload" href="./_npm/@turf/line-segment@7.3.4/653449bf.js">
+<link rel="modulepreload" href="./_npm/@turf/line-slice@7.3.4/6dbfea17.js">
+<link rel="modulepreload" href="./_npm/@turf/line-slice-along@7.3.4/dbb48690.js">
+<link rel="modulepreload" href="./_npm/@turf/line-split@7.3.4/12716ae3.js">
+<link rel="modulepreload" href="./_npm/@turf/line-to-polygon@7.3.4/a256f5a3.js">
+<link rel="modulepreload" href="./_npm/@turf/mask@7.3.4/ea7f6c76.js">
+<link rel="modulepreload" href="./_npm/@turf/meta@7.3.4/1244e006.js">
+<link rel="modulepreload" href="./_npm/@turf/midpoint@7.3.4/e846d23f.js">
+<link rel="modulepreload" href="./_npm/@turf/moran-index@7.3.4/d6db1439.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-neighbor-analysis@7.3.4/c40f2a2d.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-point@7.3.4/b0def124.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-point-on-line@7.3.4/f3d65758.js">
+<link rel="modulepreload" href="./_npm/@turf/nearest-point-to-line@7.3.4/413c09fe.js">
+<link rel="modulepreload" href="./_npm/@turf/planepoint@7.3.4/762f3097.js">
+<link rel="modulepreload" href="./_npm/@turf/point-grid@7.3.4/d535ab83.js">
+<link rel="modulepreload" href="./_npm/@turf/point-on-feature@7.3.4/e1549de5.js">
+<link rel="modulepreload" href="./_npm/@turf/points-within-polygon@7.3.4/4c0fdb0f.js">
+<link rel="modulepreload" href="./_npm/@turf/point-to-line-distance@7.3.4/9468cd88.js">
+<link rel="modulepreload" href="./_npm/@turf/point-to-polygon-distance@7.3.4/71e32478.js">
+<link rel="modulepreload" href="./_npm/@turf/polygonize@7.3.4/d242e9df.js">
+<link rel="modulepreload" href="./_npm/@turf/polygon-smooth@7.3.4/1988776c.js">
+<link rel="modulepreload" href="./_npm/@turf/polygon-tangents@7.3.4/0e8c663d.js">
+<link rel="modulepreload" href="./_npm/@turf/polygon-to-line@7.3.4/0407b4f2.js">
+<link rel="modulepreload" href="./_npm/@turf/projection@7.3.4/0357785f.js">
+<link rel="modulepreload" href="./_npm/@turf/quadrat-analysis@7.3.4/6dfd8fe8.js">
+<link rel="modulepreload" href="./_npm/@turf/random@7.3.4/e1c02534.js">
+<link rel="modulepreload" href="./_npm/@turf/rectangle-grid@7.3.4/319b93f0.js">
+<link rel="modulepreload" href="./_npm/@turf/rewind@7.3.4/ca4e1bc6.js">
+<link rel="modulepreload" href="./_npm/@turf/rhumb-bearing@7.3.4/b4be7393.js">
+<link rel="modulepreload" href="./_npm/@turf/rhumb-destination@7.3.4/29240aa5.js">
+<link rel="modulepreload" href="./_npm/@turf/rhumb-distance@7.3.4/b9e69516.js">
+<link rel="modulepreload" href="./_npm/@turf/sample@7.3.4/61fe6c9c.js">
+<link rel="modulepreload" href="./_npm/@turf/sector@7.3.4/fb974eec.js">
+<link rel="modulepreload" href="./_npm/@turf/shortest-path@7.3.4/730a78b4.js">
+<link rel="modulepreload" href="./_npm/@turf/simplify@7.3.4/ab1b252b.js">
+<link rel="modulepreload" href="./_npm/@turf/square@7.3.4/fc331bad.js">
+<link rel="modulepreload" href="./_npm/@turf/square-grid@7.3.4/d0281a63.js">
+<link rel="modulepreload" href="./_npm/@turf/standard-deviational-ellipse@7.3.4/d221cfa8.js">
+<link rel="modulepreload" href="./_npm/@turf/tag@7.3.4/b7cf3522.js">
+<link rel="modulepreload" href="./_npm/@turf/tesselate@7.3.4/ed0cc787.js">
+<link rel="modulepreload" href="./_npm/@turf/tin@7.3.4/bb8c6138.js">
+<link rel="modulepreload" href="./_npm/@turf/transform-rotate@7.3.4/18675ed7.js">
+<link rel="modulepreload" href="./_npm/@turf/transform-scale@7.3.4/666a2700.js">
+<link rel="modulepreload" href="./_npm/@turf/transform-translate@7.3.4/54d20bb5.js">
+<link rel="modulepreload" href="./_npm/@turf/triangle-grid@7.3.4/1c463adb.js">
+<link rel="modulepreload" href="./_npm/@turf/truncate@7.3.4/db2edfb0.js">
+<link rel="modulepreload" href="./_npm/@turf/union@7.3.4/a3d529db.js">
+<link rel="modulepreload" href="./_npm/@turf/unkink-polygon@7.3.4/4c2e29bf.js">
+<link rel="modulepreload" href="./_npm/@turf/voronoi@7.3.4/51590525.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
 <link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
 <link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
 <link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
 <link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="modulepreload" href="./_npm/geojson-equality-ts@1.0.2/214e60d7.js">
+<link rel="modulepreload" href="./_npm/@turf/jsts@2.7.2/ae450af2.js">
+<link rel="modulepreload" href="./_npm/d3-geo@1.7.1/e060ca58.js">
+<link rel="modulepreload" href="./_npm/kdbush@4.0.2/42d735f7.js">
+<link rel="modulepreload" href="./_npm/geokdbush@2.1.0/2f565311.js">
+<link rel="modulepreload" href="./_npm/skmeans@0.9.7/9649a959.js">
+<link rel="modulepreload" href="./_npm/rbush@3.0.1/1ce3aa4f.js">
+<link rel="modulepreload" href="./_npm/topojson-client@3.1.0/edd9ee95.js">
+<link rel="modulepreload" href="./_npm/topojson-server@3.0.1/e681b2be.js">
+<link rel="modulepreload" href="./_npm/concaveman@1.2.1/bab7a7b0.js">
+<link rel="modulepreload" href="./_npm/polyclip-ts@0.16.8/c7396230.js">
+<link rel="modulepreload" href="./_npm/arc@0.2.0/60c20533.js">
+<link rel="modulepreload" href="./_npm/sweepline-intersections@1.5.0/1fa93ac9.js">
+<link rel="modulepreload" href="./_npm/fast-deep-equal@3.1.3/33012ac6.js">
+<link rel="modulepreload" href="./_npm/earcut@2.2.4/a130da3d.js">
+<link rel="modulepreload" href="./_npm/d3-voronoi@1.1.2/bfec861e.js">
 <link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/d3-array@1.2.4/a2c25531.js">
+<link rel="modulepreload" href="./_npm/tinyqueue@3.0.0/c6964f6e.js">
+<link rel="modulepreload" href="./_npm/quickselect@2.0.0/3173efc6.js">
+<link rel="modulepreload" href="./_npm/tinyqueue@2.0.3/46a53a68.js">
+<link rel="modulepreload" href="./_npm/point-in-polygon@1.1.0/ed68720b.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@2.0.4/umd/orient2d.min.js.0b81abd8.js">
+<link rel="modulepreload" href="./_npm/bignumber.js@9.3.1/031d311e.js">
+<link rel="modulepreload" href="./_npm/splaytree-ts@1.0.2/8a48eb63.js">
 
     <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
     <script>
@@ -92,8 +232,9 @@
 import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
-registerFile("./data/derived/recent-housing-contributions.json", {"name":"./data/derived/recent-housing-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-contributions.e59fcd2a.json","lastModified":1784301711826,"size":105857});
-registerFile("./data/derived/recent-housing-questions.json", {"name":"./data/derived/recent-housing-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-questions.ce486e38.json","lastModified":1784301724233,"size":1453813});
+registerFile("./data/derived/planning-applications-normalized.csv", {"name":"./data/derived/planning-applications-normalized.csv","mimeType":"text/csv","path":"./_file/data/derived/planning-applications-normalized.f37f5389.csv","lastModified":1785422302664,"size":44886886});
+registerFile("./data/derived/recent-housing-contributions.json", {"name":"./data/derived/recent-housing-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-contributions.2e83f7ae.json","lastModified":1785504648830,"size":160891});
+registerFile("./data/derived/recent-housing-questions.json", {"name":"./data/derived/recent-housing-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-questions.b7ead616.json","lastModified":1785504648832,"size":1449748});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.e173e9d0.geojson","lastModified":1784138384648,"size":5710128});
 registerFile("./data/housing-stock-2022.csv", {"name":"./data/housing-stock-2022.csv","mimeType":"text/csv","path":"./_file/data/housing-stock-2022.6da7bb5d.csv","lastModified":1784298968184,"size":327013});
@@ -101,11 +242,12 @@ registerFile("./data/housing-tenure-2022.csv", {"name":"./data/housing-tenure-20
 registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
 registerFile("./media/housing.mp4", {"name":"./media/housing.mp4","mimeType":"video/mp4","path":"./_file/media/housing.3381d41e.mp4","lastModified":1784297244767,"size":3517495});
 
-define({id: "5d06f92d", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","housingStockBar","housingTenureWaterfall","memberCards","parliamentaryQuestionList","memberContributionList","housingData","housingStockData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {parliamentaryQuestionList, memberContributionList}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.9b805f3a.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.990954a2.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/housing-charts.33296500.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js")]);
+define({id: "e70e8889", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","parliamentaryQuestionList","memberContributionList","relatedResearchResource","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","housingData","housingStockData","planningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","planningYears","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/housing-charts.e2068609.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/topics/planning-applications/config.7a8b9af0.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
 
 const housingData = await FileAttachment("./data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("./data/housing-stock-2022.csv").csv({typed: true});
+const planningApplicationRows = await FileAttachment("./data/derived/planning-applications-normalized.csv").csv({typed: true});
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("./data/members-lookup.json").json();
@@ -144,11 +286,25 @@ const HOUSING_STOCK_CATEGORIES = [
   ["Holiday home", "Holiday home"]
 ];
 
+const planningYears = Array.from(
+  new Set(planningApplicationRows.map((row) => Number(row.year)).filter(Number.isFinite))
+).sort((a, b) => a - b);
+
 if (typeof window !== "undefined" && !window.housingState) {
-  window.housingState = {constituency: null, district: "all"};
+  window.housingState = {
+    constituency: null,
+    district: "all",
+    planningStartYear: planningYears[0],
+    planningEndYear: planningYears.at(-1)
+  };
 }
 
 const state = window.housingState;
+if (!planningYears.includes(Number(state.planningStartYear))) state.planningStartYear = planningYears[0];
+if (!planningYears.includes(Number(state.planningEndYear))) state.planningEndYear = planningYears.at(-1);
+if (state.planningStartYear > state.planningEndYear) {
+  [state.planningStartYear, state.planningEndYear] = [state.planningEndYear, state.planningStartYear];
+}
 const constituencies = Array.from(
   new Set(housingData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, "en"));
@@ -288,6 +444,31 @@ function selectedConstituencyGeoJSON() {
   };
 }
 
+function selectedPlanningApplications() {
+  return filterPlanningApplications(planningApplicationRows, {
+    constituency: state.constituency,
+    electoralDistrictGuid: state.district,
+    startYear: state.planningStartYear,
+    endYear: state.planningEndYear
+  });
+}
+
+function selectedPlanningGeoJSON() {
+  if (state.district === "all") return selectedConstituencyGeoJSON();
+  return {
+    type: "FeatureCollection",
+    features: districtGeo.features.filter(
+      (feature) => feature?.properties?.ED_GUID === state.district
+    )
+  };
+}
+
+function planningPeriodLabel() {
+  return state.planningStartYear === state.planningEndYear
+    ? String(state.planningStartYear)
+    : `${state.planningStartYear}–${state.planningEndYear}`;
+}
+
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
   if (Math.abs(value) < 0.001) return "in line with the national profile";
@@ -327,6 +508,29 @@ function mountReactive(renderFn) {
   run();
   window.addEventListener("housing:change", run);
   return el;
+}
+
+function mountPlanningReactive(renderFn) {
+  const el = document.createElement("div");
+  let runId = 0;
+  async function run() {
+    const current = ++runId;
+    const result = await renderFn();
+    if (current !== runId) return;
+    el.firstElementChild?.destroy?.();
+    el.replaceChildren(result);
+  }
+  run();
+  window.addEventListener("housing:change", run);
+  window.addEventListener("planning-applications:change", run);
+  return el;
+}
+
+function rerenderPlanning() {
+  const x = window.scrollX;
+  const y = window.scrollY;
+  window.dispatchEvent(new CustomEvent("planning-applications:change"));
+  restoreScroll(x, y);
 }
 
 function renderScopeControl() {
@@ -388,8 +592,82 @@ function renderDistrictMapExplorer() {
   return section;
 }
 
+function renderPlanningYearFilter() {
+  const section = document.createElement("section");
+  section.className = "insights-controls planning-application-controls";
+
+  const yearControl = document.createElement("div");
+  yearControl.className = "road-accident-year planning-application-year";
+  const yearLabel = document.createElement("span");
+  yearLabel.className = "road-accident-control-label";
+  const yearSelectionLabel = () => state.planningStartYear === state.planningEndYear
+    ? `Applications received in ${state.planningStartYear}`
+    : `Applications received from ${state.planningStartYear} to ${state.planningEndYear}`;
+  yearLabel.textContent = yearSelectionLabel();
+
+  const range = document.createElement("div");
+  range.className = "road-accident-year__range";
+  const track = document.createElement("div");
+  track.className = "road-accident-year__track";
+  const fill = document.createElement("div");
+  fill.className = "road-accident-year__fill";
+  track.appendChild(fill);
+
+  const startSlider = document.createElement("input");
+  const endSlider = document.createElement("input");
+  for (const slider of [startSlider, endSlider]) {
+    slider.type = "range";
+    slider.min = planningYears[0];
+    slider.max = planningYears.at(-1);
+    slider.step = 1;
+  }
+  startSlider.value = state.planningStartYear;
+  startSlider.setAttribute("aria-label", "First planning application year");
+  endSlider.value = state.planningEndYear;
+  endSlider.setAttribute("aria-label", "Last planning application year");
+
+  const updateRange = () => {
+    const span = planningYears.at(-1) - planningYears[0] || 1;
+    const startPercent = ((state.planningStartYear - planningYears[0]) / span) * 100;
+    const endPercent = ((state.planningEndYear - planningYears[0]) / span) * 100;
+    fill.style.left = `${startPercent}%`;
+    fill.style.right = `${100 - endPercent}%`;
+    yearLabel.textContent = yearSelectionLabel();
+    startSlider.style.zIndex =
+      state.planningStartYear === state.planningEndYear &&
+      state.planningEndYear === planningYears[0] ? 2 : 3;
+    endSlider.style.zIndex =
+      state.planningStartYear === state.planningEndYear &&
+      state.planningEndYear === planningYears[0] ? 3 : 2;
+  };
+
+  startSlider.addEventListener("input", () => {
+    state.planningStartYear = Math.min(Number(startSlider.value), state.planningEndYear);
+    startSlider.value = state.planningStartYear;
+    updateRange();
+  });
+  endSlider.addEventListener("input", () => {
+    state.planningEndYear = Math.max(Number(endSlider.value), state.planningStartYear);
+    endSlider.value = state.planningEndYear;
+    updateRange();
+  });
+  startSlider.addEventListener("change", rerenderPlanning);
+  endSlider.addEventListener("change", rerenderPlanning);
+
+  range.append(track, startSlider, endSlider);
+  const yearScale = document.createElement("div");
+  yearScale.className = "road-accident-year__scale";
+  yearScale.innerHTML = planningYears
+    .map((year) => `<span>${year}</span>`)
+    .join("");
+  yearControl.append(yearLabel, range, yearScale);
+  section.appendChild(yearControl);
+  updateRange();
+  return section;
+}
+
 const HOUSING_CHART_WIDTH = 790;
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,housingStockBar,housingTenureWaterfall,memberCards,parliamentaryQuestionList,memberContributionList,housingData,housingStockData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentHousingContributions,housingHeroVideo,partyColorMap,TENURES,HOUSING_STOCK_CATEGORIES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,stockRowsForDistrict,constituencyMembers,recentConstituencyHousingQuestions,recentConstituencyHousingContributions,aggregateTenure,housingStats,housingStockStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,differenceText,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,HOUSING_CHART_WIDTH};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,topicPointMap,housingStockBar,housingTenureWaterfall,memberCards,parliamentaryQuestionList,memberContributionList,relatedResearchResource,planningApplicationsTopic,buildPlanningApplicationDownloadRows,buildPlanningApplicationMetrics,filterPlanningApplications,housingData,housingStockData,planningApplicationRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentHousingContributions,housingHeroVideo,partyColorMap,TENURES,HOUSING_STOCK_CATEGORIES,planningYears,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,stockRowsForDistrict,constituencyMembers,recentConstituencyHousingQuestions,recentConstituencyHousingContributions,aggregateTenure,housingStats,housingStockStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,selectedPlanningApplications,selectedPlanningGeoJSON,planningPeriodLabel,differenceText,restoreScroll,rerender,mountReactive,mountPlanningReactive,rerenderPlanning,renderScopeControl,renderDistrictMapExplorer,renderPlanningYearFilter,HOUSING_CHART_WIDTH};
 }});
 
 define({id: "a9ac24af", inputs: ["housingHeroVideo","display"], outputs: ["hero"], body: (housingHeroVideo,display) => {
@@ -493,6 +771,61 @@ display(mountReactive(async () => {
 }));
 }});
 
+define({id: "e505d9b3", inputs: ["display","mountPlanningReactive","renderPlanningYearFilter"], body: (display,mountPlanningReactive,renderPlanningYearFilter) => {
+display(mountPlanningReactive(async () => renderPlanningYearFilter()));
+}});
+
+define({id: "bfa8a8ed", inputs: ["display","mountPlanningReactive","metricCards","buildPlanningApplicationMetrics","selectedPlanningApplications"], body: (display,mountPlanningReactive,metricCards,buildPlanningApplicationMetrics,selectedPlanningApplications) => {
+display(mountPlanningReactive(async () => {
+  const wrap = document.createElement("section");
+  wrap.className = "insights-metrics-full planning-application-metrics";
+  wrap.appendChild(metricCards({
+    title: null,
+    metrics: buildPlanningApplicationMetrics(selectedPlanningApplications())
+  }));
+  return wrap;
+}));
+}});
+
+define({id: "df0232c7", inputs: ["display","mountPlanningReactive","selectedPlanningGeoJSON","topicPointMap","selectedPlanningApplications","planningApplicationsTopic"], body: (display,mountPlanningReactive,selectedPlanningGeoJSON,topicPointMap,selectedPlanningApplications,planningApplicationsTopic) => {
+display(mountPlanningReactive(async () => {
+  const geo = selectedPlanningGeoJSON();
+  if (!geo.features.length) {
+    const message = document.createElement("p");
+    message.className = "chart-loading";
+    message.textContent = "No map is available for this constituency.";
+    return message;
+  }
+
+  return topicPointMap({
+    constituencyGeoJSON: geo,
+    data: selectedPlanningApplications(),
+    height: 540,
+    enableGeolocation: false,
+    fields: planningApplicationsTopic.fields,
+    labels: planningApplicationsTopic.labels,
+    palette: planningApplicationsTopic.palette,
+    tooltipHTML: planningApplicationsTopic.tooltipHTML,
+    popupHTML: planningApplicationsTopic.popupHTML,
+    amountFormatter: (value) => `${planningApplicationsTopic.formatCount(value)} ${Number(value) === 1 ? "unit or unreported" : "reported units"}`
+  });
+}));
+}});
+
+define({id: "c527952c", inputs: ["display","mountPlanningReactive","buildPlanningApplicationDownloadRows","selectedPlanningApplications","downloadButton","state","planningPeriodLabel"], body: (display,mountPlanningReactive,buildPlanningApplicationDownloadRows,selectedPlanningApplications,downloadButton,state,planningPeriodLabel) => {
+display(mountPlanningReactive(async () => {
+  const rows = buildPlanningApplicationDownloadRows(selectedPlanningApplications());
+  const wrap = document.createElement("div");
+  wrap.className = "download-block planning-application-download";
+  wrap.appendChild(downloadButton(
+    rows,
+    `planning-applications-${state.constituency.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${planningPeriodLabel()}.csv`,
+    {label: `Download mapped planning applications for ${state.constituency}, ${planningPeriodLabel()}`}
+  ));
+  return wrap;
+}));
+}});
+
 define({id: "d60348a4", inputs: ["display","mountReactive","memberCards","constituencyMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,constituencyMembers,partyColorMap,state) => {
 display(mountReactive(async () => memberCards({
   members: constituencyMembers().map((member) => ({
@@ -526,6 +859,18 @@ display(mountReactive(async () => memberContributionList({
 })));
 }});
 
+define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
+}});
+
 define({id: "c4bf4281", inputs: ["display","mountReactive","downloadButton","rowsForDistrict","TENURES","scopeLabel"], body: (display,mountReactive,downloadButton,rowsForDistrict,TENURES,scopeLabel) => {
 display(mountReactive(async () => {
   const wrap = document.createElement("div");
@@ -551,7 +896,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:5d06f92d:--></div>
+<div class="observablehq observablehq--block"><!--:e70e8889:--></div>
 <div class="observablehq observablehq--block"><!--:a9ac24af:--></div>
 <div class="observablehq observablehq--block"><!--:c9f292ef:--></div>
 <div class="prose-block lead">
@@ -575,6 +920,15 @@ display(mountReactive(async () => {
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:5f0e5456:--></div>
 </div>
+<div class="prose-block">
+  <h2>Housing planning applications</h2>
+  <p>Explore housing-related planning applications received in the selected constituency or electoral district during the rolling six-year period. A district selected on the housing map above also filters these cards and this map. Use the year range to focus the results, then hover for a summary or click a point to open the fuller record on the relevant planning authority website.</p>
+  <p>Development descriptions from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> are used to classify housing applications but are omitted from the map dataset to keep it compact. Residential-unit totals reflect values reported in the source and are not available for every application.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:e505d9b3:--></div>
+<div class="observablehq observablehq--block"><!--:bfa8a8ed:--></div>
+<div class="observablehq observablehq--block"><!--:df0232c7:--></div>
+<div class="observablehq observablehq--block"><!--:c527952c:--></div>
 <div class="observablehq observablehq--block"><!--:d60348a4:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions about housing</h2>
@@ -589,6 +943,13 @@ display(mountReactive(async () => {
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:62e4816d:--></div>
+</div>
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
 </div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
