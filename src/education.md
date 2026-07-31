@@ -7,14 +7,18 @@ toc: false
 ---
 
 ```js
+import * as d3 from "npm:d3";
 import {insightsTabs} from "./components/insights-tabs.js";
 import {constituencySelect} from "./components/constituency-select.js";
 import {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency} from "./components/constituency-location.js";
 import {electoralDistrictMap} from "./components/electoral-district-map.js";
 import {memberCards} from "./components/member-cards.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
+import {relatedResearchResource} from "./components/related-research.js";
+import {educationQualificationWaterfall} from "./components/education-charts.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
+const educationQualification = await FileAttachment("data/education-qualification-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();
@@ -23,6 +27,20 @@ const recentEducationContributions = await FileAttachment("data/derived/recent-e
 const educationHeroVideo = await FileAttachment("media/education-hero.mp4").url();
 
 const EDUCATION_HEADING_MATCHER = /\b(?:education|schools?|teachers?|pupils?|students?|classrooms?|special education|universit(?:y|ies)|colleges?|third[- ]level|further education|higher education|apprenticeships?|early learning|childcare)\b/i;
+const EDUCATION_LEVELS = [
+  "No formal education",
+  "Primary education",
+  "Lower secondary",
+  "Upper secondary",
+  "Technical or vocational qualification",
+  "Advanced certificate/Completed apprenticeship",
+  "Higher certificate",
+  "Ordinary bachelor degree or national diploma",
+  "Honours bachelor degree, professional qualification or both",
+  "Postgraduate diploma or degree",
+  "Doctorate(Ph.D) or higher",
+  "Not stated"
+];
 const partyColorMap = new Map([
   ["Fianna Fáil", "#40b34e"],
   ["Sinn Féin", "#088460"],
@@ -63,6 +81,25 @@ function rowsForConstituency() {
   return constituencyRows.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
 }
 
+function educationRowsForScope() {
+  return educationQualification.filter((d) =>
+    d["NEW CONSTITUENCY"] === state.constituency &&
+    (state.district === "all" || d.ED_GUID === state.district)
+  );
+}
+
+function educationProfile() {
+  const rows = educationRowsForScope();
+  return EDUCATION_LEVELS.map((qualification) => ({
+    qualification,
+    total: d3.sum(rows, (row) => Number(row[qualification]) || 0)
+  }));
+}
+
+function educationPopulation() {
+  return d3.sum(educationRowsForScope(), (row) => Number(row.Total) || 0);
+}
+
 function districtOptions() {
   return rowsForConstituency()
     .map((d) => ({value: d.ED_GUID, label: d.GEOGDESC}))
@@ -72,6 +109,10 @@ function districtOptions() {
 function selectedDistrictName() {
   if (state.district === "all") return state.constituency;
   return districtOptions().find((d) => d.value === state.district)?.label ?? "Selected district";
+}
+
+function scopeLabel() {
+  return state.district === "all" ? state.constituency : selectedDistrictName();
 }
 
 function ensureDistrict() {
@@ -253,6 +294,23 @@ display(renderScopeControl());
 display(renderDistrictMapExplorer());
 ```
 
+<div class="prose-block prose-block--section">
+  <h2>Highest level of education completed</h2>
+  <p>The waterfall shows how each education category contributes to the population aged 15 and over. Choose a constituency or select an electoral district on the map to update the profile.</p>
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => educationQualificationWaterfall(educationProfile(), {
+  width: 1100,
+  title: `Highest level of education completed in ${scopeLabel()}`,
+  subtitle: `Census 2022 · both sexes · n = ${d3.format(",")(educationPopulation())}`
+})));
+```
+
+</div>
+
 ```js
 display(mountReactive(async () => {
   const note = document.createElement("div");
@@ -339,7 +397,28 @@ display(mountReactive(async () => memberContributionList({
 
 </div>
 
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+
+<div class="chart-block">
+
+```js
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
+```
+
+</div>
+
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Questions and Dáil contributions are drawn from the Houses of the Oireachtas open-data APIs for the most recent 18 months and matched using education-related terms. The results always relate to the selected constituency, even where a contribution discusses a place elsewhere. <a href="https://api.oireachtas.ie/" target="_blank" rel="noreferrer">View the Oireachtas API</a>.</p>
+  <p>Highest-qualification counts are from Census 2022 table SAP2022T10T4ED and describe the population aged 15 and over. The chart uses the combined count for both sexes. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T10T4ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the qualification dataset</a>. Questions and Dáil contributions are drawn from the Houses of the Oireachtas open-data APIs for the most recent 18 months and matched using education-related terms. The results always relate to the selected constituency, even where a contribution discusses a place elsewhere. <a href="https://api.oireachtas.ie/" target="_blank" rel="noreferrer">View the Oireachtas API</a>.</p>
 </div>

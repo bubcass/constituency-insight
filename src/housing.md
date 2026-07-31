@@ -14,12 +14,17 @@ import {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConst
 import {metricCards} from "./components/metric-cards.js";
 import {downloadButton} from "./components/download-button.js";
 import {electoralDistrictMap} from "./components/electoral-district-map.js";
+import {topicPointMap} from "./components/topic-point-map.js";
 import {housingStockBar, housingTenureWaterfall} from "./components/housing-charts.js";
 import {memberCards} from "./components/member-cards.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
+import {relatedResearchResource} from "./components/related-research.js";
+import {planningApplicationsTopic} from "./topics/planning-applications/config.js";
+import {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications} from "./topics/planning-applications/transforms.js";
 
 const housingData = await FileAttachment("data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("data/housing-stock-2022.csv").csv({typed: true});
+const planningApplicationRows = await FileAttachment("data/derived/planning-applications-normalized.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();
@@ -58,11 +63,25 @@ const HOUSING_STOCK_CATEGORIES = [
   ["Holiday home", "Holiday home"]
 ];
 
+const planningYears = Array.from(
+  new Set(planningApplicationRows.map((row) => Number(row.year)).filter(Number.isFinite))
+).sort((a, b) => a - b);
+
 if (typeof window !== "undefined" && !window.housingState) {
-  window.housingState = {constituency: null, district: "all"};
+  window.housingState = {
+    constituency: null,
+    district: "all",
+    planningStartYear: planningYears[0],
+    planningEndYear: planningYears.at(-1)
+  };
 }
 
 const state = window.housingState;
+if (!planningYears.includes(Number(state.planningStartYear))) state.planningStartYear = planningYears[0];
+if (!planningYears.includes(Number(state.planningEndYear))) state.planningEndYear = planningYears.at(-1);
+if (state.planningStartYear > state.planningEndYear) {
+  [state.planningStartYear, state.planningEndYear] = [state.planningEndYear, state.planningStartYear];
+}
 const constituencies = Array.from(
   new Set(housingData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, "en"));
@@ -202,6 +221,31 @@ function selectedConstituencyGeoJSON() {
   };
 }
 
+function selectedPlanningApplications() {
+  return filterPlanningApplications(planningApplicationRows, {
+    constituency: state.constituency,
+    electoralDistrictGuid: state.district,
+    startYear: state.planningStartYear,
+    endYear: state.planningEndYear
+  });
+}
+
+function selectedPlanningGeoJSON() {
+  if (state.district === "all") return selectedConstituencyGeoJSON();
+  return {
+    type: "FeatureCollection",
+    features: districtGeo.features.filter(
+      (feature) => feature?.properties?.ED_GUID === state.district
+    )
+  };
+}
+
+function planningPeriodLabel() {
+  return state.planningStartYear === state.planningEndYear
+    ? String(state.planningStartYear)
+    : `${state.planningStartYear}–${state.planningEndYear}`;
+}
+
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
   if (Math.abs(value) < 0.001) return "in line with the national profile";
@@ -241,6 +285,29 @@ function mountReactive(renderFn) {
   run();
   window.addEventListener("housing:change", run);
   return el;
+}
+
+function mountPlanningReactive(renderFn) {
+  const el = document.createElement("div");
+  let runId = 0;
+  async function run() {
+    const current = ++runId;
+    const result = await renderFn();
+    if (current !== runId) return;
+    el.firstElementChild?.destroy?.();
+    el.replaceChildren(result);
+  }
+  run();
+  window.addEventListener("housing:change", run);
+  window.addEventListener("planning-applications:change", run);
+  return el;
+}
+
+function rerenderPlanning() {
+  const x = window.scrollX;
+  const y = window.scrollY;
+  window.dispatchEvent(new CustomEvent("planning-applications:change"));
+  restoreScroll(x, y);
 }
 
 function renderScopeControl() {
@@ -299,6 +366,80 @@ function renderDistrictMapExplorer() {
   }
   update();
   window.addEventListener("housing:change", update);
+  return section;
+}
+
+function renderPlanningYearFilter() {
+  const section = document.createElement("section");
+  section.className = "insights-controls planning-application-controls";
+
+  const yearControl = document.createElement("div");
+  yearControl.className = "road-accident-year planning-application-year";
+  const yearLabel = document.createElement("span");
+  yearLabel.className = "road-accident-control-label";
+  const yearSelectionLabel = () => state.planningStartYear === state.planningEndYear
+    ? `Applications received in ${state.planningStartYear}`
+    : `Applications received from ${state.planningStartYear} to ${state.planningEndYear}`;
+  yearLabel.textContent = yearSelectionLabel();
+
+  const range = document.createElement("div");
+  range.className = "road-accident-year__range";
+  const track = document.createElement("div");
+  track.className = "road-accident-year__track";
+  const fill = document.createElement("div");
+  fill.className = "road-accident-year__fill";
+  track.appendChild(fill);
+
+  const startSlider = document.createElement("input");
+  const endSlider = document.createElement("input");
+  for (const slider of [startSlider, endSlider]) {
+    slider.type = "range";
+    slider.min = planningYears[0];
+    slider.max = planningYears.at(-1);
+    slider.step = 1;
+  }
+  startSlider.value = state.planningStartYear;
+  startSlider.setAttribute("aria-label", "First planning application year");
+  endSlider.value = state.planningEndYear;
+  endSlider.setAttribute("aria-label", "Last planning application year");
+
+  const updateRange = () => {
+    const span = planningYears.at(-1) - planningYears[0] || 1;
+    const startPercent = ((state.planningStartYear - planningYears[0]) / span) * 100;
+    const endPercent = ((state.planningEndYear - planningYears[0]) / span) * 100;
+    fill.style.left = `${startPercent}%`;
+    fill.style.right = `${100 - endPercent}%`;
+    yearLabel.textContent = yearSelectionLabel();
+    startSlider.style.zIndex =
+      state.planningStartYear === state.planningEndYear &&
+      state.planningEndYear === planningYears[0] ? 2 : 3;
+    endSlider.style.zIndex =
+      state.planningStartYear === state.planningEndYear &&
+      state.planningEndYear === planningYears[0] ? 3 : 2;
+  };
+
+  startSlider.addEventListener("input", () => {
+    state.planningStartYear = Math.min(Number(startSlider.value), state.planningEndYear);
+    startSlider.value = state.planningStartYear;
+    updateRange();
+  });
+  endSlider.addEventListener("input", () => {
+    state.planningEndYear = Math.max(Number(endSlider.value), state.planningStartYear);
+    endSlider.value = state.planningEndYear;
+    updateRange();
+  });
+  startSlider.addEventListener("change", rerenderPlanning);
+  endSlider.addEventListener("change", rerenderPlanning);
+
+  range.append(track, startSlider, endSlider);
+  const yearScale = document.createElement("div");
+  yearScale.className = "road-accident-year__scale";
+  yearScale.innerHTML = planningYears
+    .map((year) => `<span>${year}</span>`)
+    .join("");
+  yearControl.append(yearLabel, range, yearScale);
+  section.appendChild(yearControl);
+  updateRange();
   return section;
 }
 
@@ -427,6 +568,67 @@ display(mountReactive(async () => {
 
 </div>
 
+<div class="prose-block">
+  <h2>Housing planning applications</h2>
+  <p>Explore housing-related planning applications received in the selected constituency or electoral district during the rolling six-year period. A district selected on the housing map above also filters these cards and this map. Use the year range to focus the results, then hover for a summary or click a point to open the fuller record on the relevant planning authority website.</p>
+  <p>Development descriptions from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> are used to classify housing applications but are omitted from the map dataset to keep it compact. Residential-unit totals reflect values reported in the source and are not available for every application.</p>
+</div>
+
+```js
+display(mountPlanningReactive(async () => renderPlanningYearFilter()));
+```
+
+```js
+display(mountPlanningReactive(async () => {
+  const wrap = document.createElement("section");
+  wrap.className = "insights-metrics-full planning-application-metrics";
+  wrap.appendChild(metricCards({
+    title: null,
+    metrics: buildPlanningApplicationMetrics(selectedPlanningApplications())
+  }));
+  return wrap;
+}));
+```
+
+```js
+display(mountPlanningReactive(async () => {
+  const geo = selectedPlanningGeoJSON();
+  if (!geo.features.length) {
+    const message = document.createElement("p");
+    message.className = "chart-loading";
+    message.textContent = "No map is available for this constituency.";
+    return message;
+  }
+
+  return topicPointMap({
+    constituencyGeoJSON: geo,
+    data: selectedPlanningApplications(),
+    height: 540,
+    enableGeolocation: false,
+    fields: planningApplicationsTopic.fields,
+    labels: planningApplicationsTopic.labels,
+    palette: planningApplicationsTopic.palette,
+    tooltipHTML: planningApplicationsTopic.tooltipHTML,
+    popupHTML: planningApplicationsTopic.popupHTML,
+    amountFormatter: (value) => `${planningApplicationsTopic.formatCount(value)} ${Number(value) === 1 ? "unit or unreported" : "reported units"}`
+  });
+}));
+```
+
+```js
+display(mountPlanningReactive(async () => {
+  const rows = buildPlanningApplicationDownloadRows(selectedPlanningApplications());
+  const wrap = document.createElement("div");
+  wrap.className = "download-block planning-application-download";
+  wrap.appendChild(downloadButton(
+    rows,
+    `planning-applications-${state.constituency.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${planningPeriodLabel()}.csv`,
+    {label: `Download mapped planning applications for ${state.constituency}, ${planningPeriodLabel()}`}
+  ));
+  return wrap;
+}));
+```
+
 ```js
 display(mountReactive(async () => memberCards({
   members: constituencyMembers().map((member) => ({
@@ -474,6 +676,27 @@ display(mountReactive(async () => memberContributionList({
   partyColorMap,
   emptyMessage: "No recent housing-related Dáil contributions are available for this constituency."
 })));
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+
+<div class="chart-block">
+
+```js
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
 ```
 
 </div>

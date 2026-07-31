@@ -1,5 +1,6 @@
 import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
+import {chartStyle, plotStyle} from "../config/chart-style.js";
 
 export function waterfallSegmentsChart(
   segments,
@@ -7,7 +8,7 @@ export function waterfallSegmentsChart(
     width = 1000,
     title = null,
     caption = null,
-    fontFamily = "IBM Plex Sans",
+    fontFamily = chartStyle.fontFamily,
     marginLeft = 120,
     minRowHeight = 32,
     minorShareThreshold = 0.01,
@@ -88,7 +89,7 @@ export function waterfallSegmentsChart(
     title,
     caption,
     style: {
-      fontSize: 12,
+      ...plotStyle(),
       fontFamily,
     },
     x: {
@@ -111,7 +112,7 @@ export function waterfallSegmentsChart(
         x2: "x2",
         y: "Segment",
         fill: "color",
-        stroke: "white",
+        stroke: chartStyle.separator,
         strokeWidth: 0.5,
         rx: 3,
         ariaHidden: true,
@@ -123,7 +124,7 @@ export function waterfallSegmentsChart(
           x: "x1",
           x2: (d) => Math.max(0, d.x1 - maxValue * 0.012),
           y: "Segment",
-          stroke: "#999",
+          stroke: chartStyle.softText,
           ariaHidden: true,
         },
       ),
@@ -144,12 +145,12 @@ export function waterfallSegmentsChart(
         },
         fill: (d) => {
           const segmentWidth = d.x2 - d.x1;
-          return segmentWidth < labelThreshold ? "#4a463d" : "white";
+          return segmentWidth < labelThreshold ? chartStyle.text : chartStyle.separator;
         },
         dx: 0,
         dy: 0,
         lineAnchor: "middle",
-        fontSize: 10,
+        fontSize: chartStyle.labelFontSize,
         fontWeight: 600,
         ariaHidden: true,
       }),
@@ -175,10 +176,6 @@ export function waterfallSegmentsChart(
 
     const note = document.createElement("p");
     note.className = "waterfall-segments-chart__note";
-    note.style.margin = "0.75rem 0 0";
-    note.style.fontSize = "0.95rem";
-    note.style.lineHeight = "1.45";
-    note.style.color = "var(--text-soft, #5f5a50)";
     note.textContent = summaryText;
 
     wrap.appendChild(note);

@@ -1,6 +1,7 @@
 import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 import { chartPalette } from "../config/chart-palette.js";
+import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.js";
 
 const WAFFLE_COLUMNS = 20;
 const WAFFLE_ROWS = 5;
@@ -9,25 +10,29 @@ export function employmentWaffle(data, {
   width = 790,
   title = "",
   subtitle = "",
+  populationLabel = "people",
+  populationContext = "people at work",
+  note = "Each dot represents 1% of people at work in the selected area.",
+  ariaLabel = "Industry profile waffle chart",
+  sort = true,
 } = {}) {
   const wrap = chartFrame(title, subtitle);
-  const rows = normaliseRows(data);
+  const rows = normaliseRows(data, {sort});
   const total = d3.sum(rows, (d) => d.total) || 1;
   const colors = colorLookup(rows);
   const dots = allocateDots(rows, total);
+  const plotWidth = responsivePlotWidth(width, {cap: 650});
+  const dotRadius = Math.max(5.5, Math.min(13, plotWidth / 50));
 
   const shell = document.createElement("div");
   shell.className = "employment-waffle";
 
   const plot = Plot.plot({
-    width: Math.min(width, 650),
-    height: 175,
+    width: plotWidth,
+    height: Math.max(96, Math.round(plotWidth * 175 / 650)),
     margin: 8,
     axis: null,
-    style: {
-      fontFamily: "IBM Plex Sans",
-      fontSize: 12,
-    },
+    style: plotStyle(),
     x: { domain: [-0.7, WAFFLE_COLUMNS - 0.3] },
     y: { domain: [WAFFLE_ROWS - 0.3, -0.7] },
     color: {
@@ -40,15 +45,15 @@ export function employmentWaffle(data, {
         x: "column",
         y: "row",
         fill: "sector",
-        r: 13,
-        stroke: "#fffdf8",
+        r: dotRadius,
+        stroke: chartStyle.separator,
         strokeWidth: 1.5,
-        title: (d) => `${d.sector}: ${d3.format(",")(d.total)} people (${d3.format(".1%")(d.share)})`,
+        title: (d) => `${d.sector}: ${d3.format(",")(d.total)} ${populationLabel} (${d3.format(".1%")(d.share)} of ${populationContext})`,
       }),
     ],
   });
   plot.setAttribute("role", "img");
-  plot.setAttribute("aria-label", title || "Industry profile waffle chart");
+  plot.setAttribute("aria-label", title || ariaLabel);
 
   const legend = document.createElement("div");
   legend.className = "employment-waffle__legend";
@@ -69,10 +74,10 @@ export function employmentWaffle(data, {
   const plotWrap = document.createElement("div");
   plotWrap.className = "employment-waffle__plot";
 
-  const note = document.createElement("p");
-  note.className = "employment-waffle__note";
-  note.textContent = "Each dot represents 1% of people at work in the selected area.";
-  plotWrap.append(plot, note);
+  const noteElement = document.createElement("p");
+  noteElement.className = "employment-waffle__note";
+  noteElement.textContent = note;
+  plotWrap.append(plot, noteElement);
 
   shell.append(legend, plotWrap);
   wrap.appendChild(shell);
@@ -90,18 +95,16 @@ export function employmentLollipop(data, {
   const colors = colorLookup(rows);
   const maxValue = d3.max(rows, (d) => d.total) || 1;
   const height = Math.max(390, rows.length * 39 + 80);
+  const plotWidth = Math.max(620, Math.min(Number(width) || 790, 790));
 
   const chart = Plot.plot({
-    width,
+    width: plotWidth,
     height,
     marginTop: 24,
     marginRight: 86,
     marginBottom: 42,
     marginLeft: 230,
-    style: {
-      fontFamily: "IBM Plex Sans",
-      fontSize: 12,
-    },
+    style: plotStyle(),
     x: {
       domain: [0, maxValue * 1.13],
       grid: true,
@@ -115,7 +118,7 @@ export function employmentLollipop(data, {
       padding: 0.42,
     },
     marks: [
-      Plot.ruleX([0], { stroke: "#8c877d" }),
+      Plot.ruleX([0], { stroke: chartStyle.baseline }),
       Plot.ruleY(rows, {
         y: "sector",
         x1: 0,
@@ -135,8 +138,8 @@ export function employmentLollipop(data, {
         text: (d) => d3.format(",")(d.total),
         dx: 12,
         textAnchor: "start",
-        fill: "#4a463d",
-        fontSize: 11,
+        fill: chartStyle.text,
+        fontSize: chartStyle.labelFontSize,
       }),
       Plot.rectX(rows, {
         className: "employment-chart__hit-target",
@@ -173,7 +176,7 @@ function chartFrame(title, subtitle) {
 
 function withTooltip(chart, rows, tooltipHTML) {
   const shell = document.createElement("div");
-  shell.className = "demographic-chart__plot";
+  shell.className = "demographic-chart__plot demographic-chart__plot--scroll";
   const tooltip = document.createElement("div");
   tooltip.className = "demographic-chart__tooltip";
   tooltip.setAttribute("role", "tooltip");
@@ -216,11 +219,11 @@ function withTooltip(chart, rows, tooltipHTML) {
   return shell;
 }
 
-function normaliseRows(data) {
-  return (Array.isArray(data) ? data : [])
+function normaliseRows(data, {sort = true} = {}) {
+  const rows = (Array.isArray(data) ? data : [])
     .map((d) => ({ sector: String(d.sector ?? ""), total: Number(d.total) || 0 }))
-    .filter((d) => d.sector && d.total > 0)
-    .sort((a, b) => d3.descending(a.total, b.total));
+    .filter((d) => d.sector && d.total > 0);
+  return sort ? rows.sort((a, b) => d3.descending(a.total, b.total)) : rows;
 }
 
 function colorLookup(rows) {

@@ -1,6 +1,7 @@
 import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 import { chartColors, chartPalette } from "../config/chart-palette.js";
+import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.js";
 import { percentageStripChart } from "./percentage-strip-chart.js";
 
 const FEMALE = chartColors.orange;
@@ -84,6 +85,7 @@ function chartWithTooltip(chart, values, tooltipHTML, { targetSelector = "rect" 
 
 export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}) {
   const wrap = chartFrame(title, subtitle);
+  const plotWidth = responsivePlotWidth(width);
   const values = data.map((d) => ({
     ...d,
     plottedPopulation: d.sex === "Female" ? -d.population : d.population,
@@ -92,13 +94,13 @@ export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}
   const ageOrder = Array.from(new Set(values.map((d) => d.ageBand))).reverse();
 
   const chart = Plot.plot({
-      width,
-      height: Math.max(390, Math.min(470, width * 0.28)),
+      width: plotWidth,
+      height: Math.max(340, Math.min(470, plotWidth * 0.52)),
       marginTop: 42,
       marginRight: 24,
       marginBottom: 36,
-      marginLeft: width < 560 ? 60 : 78,
-      style: { fontFamily: "IBM Plex Sans", fontSize: 12 },
+      marginLeft: plotWidth < 560 ? 60 : 78,
+      style: plotStyle(),
       x: {
         label: null,
         domain: [-max * 1.08, max * 1.08],
@@ -128,7 +130,7 @@ export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}
           stroke: "sex",
           r: 5,
         }),
-        Plot.ruleX([0], { stroke: "#746f65", strokeWidth: 1 }),
+        Plot.ruleX([0], { stroke: chartStyle.baseline, strokeWidth: 1 }),
         Plot.rectX(values, {
           x1: (d) => d.sex === "Female" ? -max * 1.08 : 0,
           x2: (d) => d.sex === "Female" ? 0 : max * 1.08,

@@ -15,6 +15,7 @@ import {downloadButton} from "./components/download-button.js";
 import {metricCards} from "./components/metric-cards.js";
 import {memberCards} from "./components/member-cards.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
+import {relatedResearchResource} from "./components/related-research.js";
 import {waterfallSegmentsChart} from "./components/waterfall-segments-chart.js";
 import {roadAccidentsTopic} from "./topics/road-accidents/config.js";
 import {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents} from "./topics/road-accidents/transforms.js";
@@ -496,6 +497,27 @@ display(mountReactive(async () => memberContributionList({
   partyColorMap,
   emptyMessage: "No recent road-safety Dáil contributions are available for this constituency."
 })));
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+
+<div class="chart-block">
+
+```js
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
 ```
 
 </div>

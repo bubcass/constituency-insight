@@ -14,10 +14,12 @@ export function metricCards({ metrics = [], title = null } = {}) {
 
   const grid = document.createElement("div");
   grid.className = "metrics-grid";
+  grid.dataset.count = String(metrics.length);
 
   for (const metric of metrics) {
     const card = document.createElement("article");
     card.className = "metric-card";
+    if (metric.compactValue) card.classList.add("metric-card--compact-value");
 
     const label = document.createElement("p");
     label.className = "metric-card__label";

@@ -17,6 +17,7 @@ import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { employmentWaffle } from "./components/employment-charts.js";
 import { memberCards } from "./components/member-cards.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
+import { relatedResearchResource } from "./components/related-research.js";
 
 const employmentData = await FileAttachment("data/employment-industry-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
@@ -418,6 +419,27 @@ display(mountReactive(async () => memberContributionList({
   partyColorMap,
   emptyMessage: "No recent work-related Dáil contributions are available for this constituency."
 })));
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+
+<div class="chart-block">
+
+```js
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
 ```
 
 </div>

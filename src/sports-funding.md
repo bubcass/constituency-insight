@@ -17,6 +17,7 @@ import { waterfallSegmentsChart } from "./components/waterfall-segments-chart.js
 import { downloadButton } from "./components/download-button.js";
 import { insightsTabs } from "./components/insights-tabs.js";
 import { memberContributionList } from "./components/parliamentary-activity.js";
+import { relatedResearchResource } from "./components/related-research.js";
 
 import { sportsFundingTopic } from "./topics/sports-funding/config.js";
 import {
@@ -844,6 +845,27 @@ display(
     });
   })
 );
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+
+<div class="chart-block">
+
+```js
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
 ```
 
 </div>

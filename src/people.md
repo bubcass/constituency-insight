@@ -19,8 +19,15 @@ import { downloadButton } from "./components/download-button.js";
 import { agePyramid, generationPercentageBar } from "./components/demographics-charts.js";
 import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
+import { relatedResearchResource } from "./components/related-research.js";
+import { principalEconomicStatusWaterfall, irishSpeakerShareWaffle } from "./components/people-charts.js";
 
 const ageData = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
+const economicStatusData = await FileAttachment("data/principal-economic-status-2022.csv").csv({typed: true});
+const irishSpeakingFrequency = await FileAttachment("data/irish-speaking-frequency-2022.csv").csv({typed: true});
+const disabilityData = await FileAttachment("data/disability-2022.csv").csv({typed: true});
+const carersData = await FileAttachment("data/carers-2022.csv").csv({typed: true});
+const deprivationData = await FileAttachment("data/deprivation-index-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();
@@ -52,6 +59,17 @@ const AGE_BANDS = [
   { label: "60–69", fields: ["Age 60 - 64", "Age 65 - 69"] },
   { label: "70–79", fields: ["Age 70 - 74", "Age 75 - 79"] },
   { label: "80+", fields: ["Age 80 - 84", "Age 85 and over"] }
+];
+const ECONOMIC_STATUSES = [
+  "At work",
+  "Looking for first regular job",
+  "Short term unemployed",
+  "Long term unemployed",
+  "Student",
+  "Looking after home/family",
+  "Retired",
+  "Unable to work due to permanent sickness or disability",
+  "Other"
 ];
 
 if (typeof window !== "undefined" && !window.demographicsState) {
@@ -95,6 +113,74 @@ function rowsForDistrict() {
   return state.district === "all"
     ? rows
     : rows.filter((d) => d.ED_GUID === state.district);
+}
+
+function rowsForSelectedArea(data) {
+  return data.filter((d) =>
+    d["NEW CONSTITUENCY"] === state.constituency &&
+    (state.district === "all" || d.ED_GUID === state.district)
+  );
+}
+
+function economicStatusProfile() {
+  const rows = rowsForSelectedArea(economicStatusData);
+  return ECONOMIC_STATUSES.map((economicStatus) => ({
+    economicStatus,
+    total: d3.sum(rows, (row) => Number(row[economicStatus]) || 0)
+  }));
+}
+
+function economicStatusPopulation() {
+  return d3.sum(rowsForSelectedArea(economicStatusData), (row) => Number(row.Total) || 0);
+}
+
+function irishSpeakerPopulation() {
+  return d3.sum(
+    rowsForSelectedArea(irishSpeakingFrequency),
+    (row) => Number(row["All Irish speakers"]) || 0
+  );
+}
+
+function disabilityProfile() {
+  const count = d3.sum(
+    rowsForSelectedArea(disabilityData),
+    (row) => Number(row["Persons with a disability"]) || 0
+  );
+  const population = profileStats().total;
+  return {count, population, share: population > 0 ? count / population : 0};
+}
+
+function carerProfile() {
+  const count = d3.sum(
+    rowsForSelectedArea(carersData),
+    (row) => Number(row.Carers) || 0
+  );
+  const population = profileStats().total;
+  return {count, population, share: population > 0 ? count / population : 0};
+}
+
+function deprivationProfile() {
+  const rows = rowsForSelectedArea(deprivationData);
+  if (!rows.length) return null;
+
+  if (state.district !== "all") {
+    const row = rows[0];
+    return {
+      level: "district",
+      description: row["Deprivation description"],
+      score: Number(row["Deprivation score"]),
+      count: 1,
+      total: 1
+    };
+  }
+
+  const classifications = d3.rollups(
+    rows,
+    (values) => values.length,
+    (row) => row["Deprivation description"]
+  ).sort((a, b) => d3.descending(a[1], b[1]) || d3.ascending(a[0], b[0]));
+  const [description, count] = classifications[0];
+  return {level: "constituency", description, count, total: rows.length};
 }
 
 function constituencyMembers() {
@@ -324,6 +410,16 @@ function profileStats(rows = rowsForDistrict()) {
 }
 
 const nationalStats = profileStats(ageData);
+const nationalDisabilityTotal = d3.sum(
+  disabilityData,
+  (row) => Number(row["Persons with a disability"]) || 0
+);
+const nationalDisabilityShare = nationalDisabilityTotal / nationalStats.total;
+const nationalCarerTotal = d3.sum(
+  carersData,
+  (row) => Number(row.Carers) || 0
+);
+const nationalCarerShare = nationalCarerTotal / nationalStats.total;
 
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
@@ -427,12 +523,25 @@ display(
 display(
   mountReactive(async () => {
     const stats = profileStats();
+    const deprivation = deprivationProfile();
     const cards = metricCards({
       metrics: [
         {label: "Population", value: d3.format(",")(stats.total), note: "Census 2022"},
         {label: "Largest age group", value: stats.largest?.ageBand ?? "—", note: `${d3.format(".1%")(stats.largest.population / stats.total)} of residents`},
         {label: "Aged 70 or over", value: d3.format(".1%")(stats.olderShare), note: differenceText(stats.olderShare - nationalStats.olderShare)},
-        {label: "Under 20", value: d3.format(".1%")(stats.under20Share), note: differenceText(stats.under20Share - nationalStats.under20Share)}
+        deprivation?.level === "district"
+          ? {
+              label: "HP deprivation index",
+              value: deprivation.description,
+              note: `Score ${d3.format("+.1f")(deprivation.score)} · 0 is the national average`,
+              compactValue: true
+            }
+          : {
+              label: "Most common deprivation type",
+              value: deprivation?.description ?? "—",
+              note: deprivation ? `${deprivation.count} of ${deprivation.total} electoral districts` : "HP Deprivation Index 2022",
+              compactValue: true
+            }
       ]
     });
     const wrap = document.createElement("section");
@@ -474,6 +583,75 @@ display(mountReactive(async () => generationPercentageBar(
     title: `Age bands in ${scopeLabel()}`
   }
 )));
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Population by principal economic status</h2>
+  <p>The waterfall shows how each principal economic-status category contributes to the population aged 15 and over in the selected constituency or electoral district.</p>
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatusProfile(), {
+  width: 1000,
+  title: `Principal economic status in ${scopeLabel()}`,
+  subtitle: `Population aged 15 and over · Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
+})));
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Disability and unpaid care</h2>
+  <p>These Census counts show people who indicated a disability alongside people providing regular unpaid care. Both measures are available for constituencies and individual electoral districts.</p>
+</div>
+
+```js
+display(
+  mountReactive(async () => {
+    const disability = disabilityProfile();
+    const carers = carerProfile();
+    const metrics = [
+      {
+        label: "People who indicated a disability",
+        value: d3.format(",")(disability.count),
+        note: `${d3.format(".1%")(disability.share)} of the population · ${differenceText(disability.share - nationalDisabilityShare)}`
+      },
+      {
+        label: "Carers",
+        value: d3.format(",")(carers.count),
+        note: `${d3.format(".1%")(carers.share)} of the population · ${differenceText(carers.share - nationalCarerShare)}`
+      }
+    ];
+
+    const cards = metricCards({metrics});
+    const wrap = document.createElement("section");
+    wrap.className = "insights-metrics-full people-context-metrics";
+    wrap.appendChild(cards);
+    return wrap;
+  })
+);
+```
+
+<div class="prose-block prose-block--section">
+  <h2>Irish speakers as a share of the population</h2>
+  <p>The waffle compares the number of Irish speakers aged three and over with the total population of the selected constituency or electoral district.</p>
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => irishSpeakerShareWaffle({
+  speakers: irishSpeakerPopulation(),
+  population: profileStats().total
+}, {
+  width: DEMOGRAPHICS_CHART_WIDTH,
+  title: `Irish speakers in ${scopeLabel()}`,
+  subtitle: "Census 2022 · both sexes"
+})));
 ```
 
 </div>
@@ -533,9 +711,30 @@ display(
 
 </div>
 
+<div class="prose-block prose-block--section">
+  <h2>Related research</h2>
+  <p>Read research and analysis related to this topic.</p>
+</div>
+
+<div class="chart-block">
+
+```js
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
+```
+
+</div>
+
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Electoral district values are aggregated to the current Dáil constituency boundaries used by the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
+  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the Irish-language dataset</a>, or visit the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
 </div>
 
 ```js

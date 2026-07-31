@@ -1,6 +1,7 @@
 import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 import {chartPalette} from "../config/chart-palette.js";
+import {plotStyle, responsivePlotWidth} from "../config/chart-style.js";
 
 export function percentageStripChart(
   data,
@@ -25,6 +26,7 @@ export function percentageStripChart(
     .filter((d) => d.category);
   const total = d3.sum(rows, (d) => d.total) || 1;
   const cells = allocateCells(rows, total);
+  const plotWidth = responsivePlotWidth(width);
 
   const wrap = document.createElement("figure");
   wrap.className = ["demographic-chart", "percentage-strip", className].filter(Boolean).join(" ");
@@ -51,11 +53,11 @@ export function percentageStripChart(
   }
 
   const plot = Plot.plot({
-    width,
+    width: plotWidth,
     height: 116,
     margin: 8,
     axis: null,
-    style: {fontFamily: "IBM Plex Sans", fontSize: 12},
+    style: plotStyle(),
     x: {domain: d3.range(100)},
     y: {domain: [0]},
     color: {

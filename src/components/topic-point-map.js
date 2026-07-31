@@ -125,6 +125,7 @@ export function topicPointMap({
   },
   bufferMetres = 10,
   tooltipHTML = defaultTooltipHTML,
+  popupHTML = null,
   amountFormatter = (v) =>
     Number.isFinite(v)
       ? new Intl.NumberFormat("en-IE", {
@@ -300,6 +301,16 @@ export function topicPointMap({
         offset: [0, -4],
       },
     );
+
+    if (typeof popupHTML === "function") {
+      marker.bindPopup(
+        popupHTML(d.__raw, {
+          formatAmount: amountFormatter,
+          escapeHtml,
+        }),
+        { maxWidth: 330 },
+      );
+    }
 
     d.__marker = marker;
     categoryLayers.get(d.__category)?.addLayer(marker);

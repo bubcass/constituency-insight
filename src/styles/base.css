@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
+    --font-sans: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --page-bg: #f6f3ea;
     --text: #4a463d;
     --text-soft: #5f5a50;
@@ -28,6 +29,13 @@
     --space-8: 3rem;
     --radius: 4px;
     --shadow-soft: 0 6px 20px rgba(47, 47, 47, 0.06);
+    --chart-title-size: 1rem;
+    --chart-meta-size: 0.875rem;
+    --chart-legend-size: 0.8125rem;
+    --chart-note-size: 0.8125rem;
+    --card-label-size: 0.8125rem;
+    --card-value-size: clamp(1.35rem, 2vw, 1.6rem);
+    --card-note-size: 0.875rem;
 }
 
 html {
@@ -38,22 +46,24 @@ body {
     margin: 0 auto;
     background: var(--page-bg);
     color: var(--text);
-    font-family:
-        "IBM Plex Sans",
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+    font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.6;
 }
 
-main,
-.observablehq {
+main.observablehq {
     max-width: var(--page-max);
     margin: 0 auto;
     padding: var(--space-5) var(--space-5) var(--space-7);
+}
+
+/* Observable wraps every JavaScript cell in .observablehq--block. Page-shell
+   spacing belongs on the main element only; applying it to every cell quietly
+   consumes another gutter and scales charts down on narrow screens. */
+main.observablehq > .observablehq--block {
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 .observablehq--block:has(> .hero),
@@ -316,6 +326,13 @@ a:focus-visible {
     box-shadow: none !important;
 }
 
+.chart-block .observablehq,
+.chart-block .observablehq--block {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
 .chart-block svg {
     display: block;
     width: 100%;
@@ -325,7 +342,7 @@ a:focus-visible {
 .chart-caption {
     display: block;
     max-width: var(--text-max);
-    margin: 0 auto 0.75rem;
+    margin: 0 auto var(--space-6);
     color: var(--text-muted);
     font-size: 0.92rem;
     line-height: 1.45;
@@ -355,8 +372,11 @@ a:focus-visible {
         font-size: 0.95rem;
     }
 
-    main,
-    .observablehq {
+    #observablehq-center {
+        margin-inline: 0;
+    }
+
+    main.observablehq {
         padding: var(--space-4) var(--space-4) var(--space-6);
     }
 
