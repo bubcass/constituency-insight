@@ -13,8 +13,10 @@ import {constituencySelect} from "./components/constituency-select.js";
 import {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency} from "./components/constituency-location.js";
 import {electoralDistrictMap} from "./components/electoral-district-map.js";
 import {memberCards} from "./components/member-cards.js";
+import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
+import {createReactiveMount} from "./components/reactive-mount.js";
 import {educationQualificationWaterfall} from "./components/education-charts.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
@@ -130,9 +132,7 @@ function selectedConstituencyGeoJSON() {
 }
 
 function constituencyMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
-    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+  return membersForConstituency(membersLookup, state.constituency);
 }
 
 function recentConstituencyEducationQuestions(limit = 6) {
@@ -180,23 +180,11 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScroll(x, y);
 }
 
-function mountReactive(renderFn) {
-  const el = document.createElement("div");
-  let runId = 0;
-  let hasRendered = false;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    el.replaceChildren(result);
-    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      result.animate?.([{opacity: 0.72}, {opacity: 1}], {duration: 180, easing: "ease-out"});
-    }
-    hasRendered = true;
-  }
-  run();
-  window.addEventListener("education:change", run);
-  return el;
+function mountReactive(renderFn, options = {}) {
+  return createReactiveMount(renderFn, {
+    eventName: "education:change",
+    ...options
+  });
 }
 
 function renderScopeControl() {
@@ -343,7 +331,7 @@ display(mountReactive(async () => {
   detail.textContent = "The Members and parliamentary activity below remain constituency-level information.";
   note.append(label, heading, context, detail);
   return note;
-}));
+}, {skeleton: "text"}));
 ```
 
 ```js
@@ -358,7 +346,7 @@ display(mountReactive(async () => memberCards({
   })),
   partyColorMap,
   title: `How ${state.constituency} is represented in Parliament`
-})));
+}), {skeleton: "cards"}));
 ```
 
 <div class="prose-block">
@@ -374,7 +362,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent education-related parliamentary questions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>
@@ -392,7 +380,7 @@ display(mountReactive(async () => memberContributionList({
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent education-related Dáil contributions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>

@@ -9,6 +9,7 @@
     "build:retrieve-debate": "node src/data/transformers/retrieve-debate.js",
     "build:recent-contributions": "node src/scripts/build-recent-contributions.mjs",
     "build:recent-questions": "node src/scripts/build-recent-questions.mjs",
+    "build:members": "node src/scripts/build-members-lookup.mjs",
     "build:education-qualification": "node src/scripts/build-education-qualification.mjs",
     "build:irish-speaking": "node src/scripts/build-irish-speaking.mjs",
     "build:principal-economic-status": "node src/scripts/build-principal-economic-status.mjs",
@@ -23,6 +24,7 @@
     "build:road-accidents": "node src/data/transformers/road-accidents-normalized.js",
     "build:planning-applications": "node src/data/transformers/planning-applications-normalized.js",
     "build:waterfall": "node src/data/transformers/build-waterfall-segments.js src/data/derived/sports-funding-enriched.json src/data/derived/waterfall-segments.json",
+    "build:electoral-districts": "node src/scripts/build-electoral-districts.mjs",
     "observable": "observable"
   },
   "dependencies": {
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
+    "mapshaper": "^0.7.49",
     "rimraf": "^5.0.5"
   },
   "engines": {

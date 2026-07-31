@@ -192,7 +192,7 @@ h2,
 main h2 {
     font-size: clamp(1.3rem, 2vw, 1.6rem);
     margin-top: var(--space-5);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
     padding-top: 0 !important;
     border-top: 0 !important;
     box-shadow: none !important;
@@ -233,7 +233,7 @@ a:focus-visible {
 
 .prose-block {
     max-width: var(--text-max);
-    margin: 0.65rem auto 0.45rem;
+    margin: var(--space-5) auto var(--space-6);
 }
 
 .prose-block a[href^="http"] {
@@ -306,7 +306,7 @@ a:focus-visible {
 
 .chart-block {
     max-width: var(--data-max);
-    margin: 0 auto 0.35rem;
+    margin: 0 auto var(--space-5);
     padding: 0;
     background: transparent !important;
     border: 0 !important;

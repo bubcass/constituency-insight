@@ -15,11 +15,13 @@ import { constituencySelect } from "./components/constituency-select.js";
 import { detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency } from "./components/constituency-location.js";
 import { metricCards } from "./components/metric-cards.js";
 import { memberCards } from "./components/member-cards.js";
+import { membersForConstituency } from "./components/member-data.js";
 import { downloadButton } from "./components/download-button.js";
 import { agePyramid, generationPercentageBar } from "./components/demographics-charts.js";
 import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
+import { createReactiveMount } from "./components/reactive-mount.js";
 import { principalEconomicStatusWaterfall, irishSpeakerShareWaffle } from "./components/people-charts.js";
 
 const ageData = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
@@ -184,9 +186,7 @@ function deprivationProfile() {
 }
 
 function constituencyMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
-    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+  return membersForConstituency(membersLookup, state.constituency);
 }
 
 function recentConstituencyQuestions(limit = 6) {
@@ -302,29 +302,11 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScrollThroughLayout(x, y);
 }
 
-function mountReactive(renderFn) {
-  const el = document.createElement("div");
-  let runId = 0;
-  let hasRendered = false;
-
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-
-    el.replaceChildren(result);
-    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      result.animate?.(
-        [{opacity: 0.72}, {opacity: 1}],
-        {duration: 180, easing: "ease-out"}
-      );
-    }
-    hasRendered = true;
-  }
-
-  run();
-  window.addEventListener("demographics:change", run);
-  return el;
+function mountReactive(renderFn, options = {}) {
+  return createReactiveMount(renderFn, {
+    eventName: "demographics:change",
+    ...options
+  });
 }
 
 function renderScopeControl() {
@@ -515,7 +497,7 @@ display(
 
     note.append(label, heading, context, detail);
     return note;
-  })
+  }, {skeleton: "text"})
 );
 ```
 
@@ -548,7 +530,7 @@ display(
     wrap.className = "insights-metrics-full demographics-metrics";
     wrap.appendChild(cards);
     return wrap;
-  })
+  }, {skeleton: "cards"})
 );
 ```
 
@@ -632,7 +614,7 @@ display(
     wrap.className = "insights-metrics-full people-context-metrics";
     wrap.appendChild(cards);
     return wrap;
-  })
+  }, {skeleton: "cards"})
 );
 ```
 
@@ -669,7 +651,7 @@ display(
     })),
     partyColorMap,
     title: `How ${state.constituency} is represented in Parliament`
-  }))
+  }), {skeleton: "cards"})
 );
 ```
 
@@ -686,7 +668,7 @@ display(
     rows: recentConstituencyQuestions(6),
     members: constituencyMembers(),
     partyColorMap
-  }))
+  }), {skeleton: "table"})
 );
 ```
 
@@ -705,7 +687,7 @@ display(
     rows: recentConstituencyContributions(6),
     members: constituencyMembers(),
     partyColorMap
-  }))
+  }), {skeleton: "table"})
 );
 ```
 
@@ -756,5 +738,5 @@ display(mountReactive(async () => {
     {label: `Download demographic data for ${scopeLabel()}`}
   ));
   return wrap;
-}));
+}, {skeleton: "text"}));
 ```

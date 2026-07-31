@@ -16,8 +16,10 @@ import { downloadButton } from "./components/download-button.js";
 import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { employmentWaffle } from "./components/employment-charts.js";
 import { memberCards } from "./components/member-cards.js";
+import { membersForConstituency } from "./components/member-data.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
+import { createReactiveMount } from "./components/reactive-mount.js";
 
 const employmentData = await FileAttachment("data/employment-industry-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
@@ -84,9 +86,7 @@ function rowsForDistrict() {
 }
 
 function constituencyMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
-    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+  return membersForConstituency(membersLookup, state.constituency);
 }
 
 function recentConstituencyWorkQuestions(limit = 6) {
@@ -191,23 +191,11 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScroll(x, y);
 }
 
-function mountReactive(renderFn) {
-  const el = document.createElement("div");
-  let runId = 0;
-  let hasRendered = false;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    el.replaceChildren(result);
-    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      result.animate?.([{opacity: 0.72}, {opacity: 1}], {duration: 180, easing: "ease-out"});
-    }
-    hasRendered = true;
-  }
-  run();
-  window.addEventListener("employment:change", run);
-  return el;
+function mountReactive(renderFn, options = {}) {
+  return createReactiveMount(renderFn, {
+    eventName: "employment:change",
+    ...options
+  });
 }
 
 function renderScopeControl() {
@@ -337,7 +325,7 @@ display(mountReactive(async () => {
   detail.innerHTML = `<strong>${d3.format(".1%")(stats.largest.total / stats.total)}</strong> of people at work in the selected area are employed in this sector.`;
   note.append(label, heading, context, detail);
   return note;
-}));
+}, {skeleton: "text"}));
 ```
 
 ```js
@@ -353,7 +341,7 @@ display(mountReactive(async () => {
   wrap.className = "insights-metrics-full employment-metrics";
   wrap.appendChild(cards);
   return wrap;
-}));
+}, {skeleton: "cards"}));
 ```
 
 <div class="prose-block">
@@ -367,7 +355,7 @@ display(mountReactive(async () => employmentWaffle(employmentStats().profile, {
   width: EMPLOYMENT_CHART_WIDTH,
   title: `Industry profile for ${scopeLabel()}`,
   subtitle: `Census 2022 · n = ${d3.format(",")(employmentStats().total)}`
-})));
+}), {skeleton: "cards"}));
 ```
 
 </div>
@@ -384,7 +372,7 @@ display(mountReactive(async () => memberCards({
   })),
   partyColorMap,
   title: `How ${state.constituency} is represented in Parliament`
-})));
+}), {skeleton: "table"}));
 ```
 
 <div class="prose-block">
@@ -400,7 +388,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent work-related parliamentary questions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>
@@ -465,5 +453,5 @@ display(mountReactive(async () => {
     {label: `Download employment data for ${scopeLabel()}`}
   ));
   return wrap;
-}));
+}, {skeleton: "text"}));
 ```

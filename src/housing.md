@@ -17,8 +17,10 @@ import {electoralDistrictMap} from "./components/electoral-district-map.js";
 import {topicPointMap} from "./components/topic-point-map.js";
 import {housingStockBar, housingTenureWaterfall} from "./components/housing-charts.js";
 import {memberCards} from "./components/member-cards.js";
+import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
+import {createReactiveMount} from "./components/reactive-mount.js";
 import {planningApplicationsTopic} from "./topics/planning-applications/config.js";
 import {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications} from "./topics/planning-applications/transforms.js";
 
@@ -114,9 +116,7 @@ function stockRowsForDistrict() {
 }
 
 function constituencyMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
-    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+  return membersForConstituency(membersLookup, state.constituency);
 }
 
 function recentConstituencyHousingQuestions(limit = 6) {
@@ -268,39 +268,19 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScroll(x, y);
 }
 
-function mountReactive(renderFn) {
-  const el = document.createElement("div");
-  let runId = 0;
-  let hasRendered = false;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    el.replaceChildren(result);
-    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      result.animate?.([{opacity: 0.72}, {opacity: 1}], {duration: 180, easing: "ease-out"});
-    }
-    hasRendered = true;
-  }
-  run();
-  window.addEventListener("housing:change", run);
-  return el;
+function mountReactive(renderFn, options = {}) {
+  return createReactiveMount(renderFn, {
+    eventName: "housing:change",
+    ...options
+  });
 }
 
-function mountPlanningReactive(renderFn) {
-  const el = document.createElement("div");
-  let runId = 0;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    el.firstElementChild?.destroy?.();
-    el.replaceChildren(result);
-  }
-  run();
-  window.addEventListener("housing:change", run);
-  window.addEventListener("planning-applications:change", run);
-  return el;
+function mountPlanningReactive(renderFn, options = {}) {
+  return createReactiveMount(renderFn, {
+    eventNames: ["housing:change", "planning-applications:change"],
+    destroyPrevious: true,
+    ...options
+  });
 }
 
 function rerenderPlanning() {
@@ -457,7 +437,7 @@ hero.innerHTML = `
     <div class="hero__content">
       <p class="hero__eyebrow">Constituency insights</p>
       <h1 class="hero__title">Housing</h1>
-      <p class="hero__subtitle">Explore housing tenure, housing stock and vacancy across each constituency.</p>
+      <p class="hero__subtitle">Explore housing types and stock, vacancy rates and planning applications across each constituency.</p>
     </div>
   </div>
 `;
@@ -469,7 +449,7 @@ display(insightsTabs("housing"));
 ```
 
 <div class="prose-block lead">
-  <p>Census 2022 shows how permanent private households are occupied and how the wider housing stock is used. Choose a constituency for the overall profile, or select an electoral district on the map for optional local detail.</p>
+  <p>Data from the most recent census indicates how permanent private households are occupied and how the wider housing stock is used. Local authorities also have data on applications to build housing accommodation.<p><p>Choose a constituency for the overall profile, or select an electoral district on the map for optional local detail.</p>
 </div>
 
 ```js
@@ -511,15 +491,16 @@ display(mountReactive(async () => {
   detail.innerHTML = `<strong>${d3.format(".1%")(stats.largest.total / stats.households)}</strong> of permanent private households in the selected area are in this category.`;
   note.append(label, heading, context, detail);
   return note;
-}));
+}, {skeleton: "text"}));
 ```
 
 ```js
 display(mountReactive(async () => {
   const stats = housingStats();
+  const stockStats = housingStockStats();
   const cards = metricCards({metrics: [
     {label: "Permanent private households", value: d3.format(",")(stats.households), note: "Census 2022"},
-    {label: "Largest tenure", value: stats.largest.tenure, note: `${d3.format(".1%")(stats.largest.total / stats.households)} of households`},
+    {label: "Housing vacancy rate", value: `${d3.format(".1f")(stockStats.vacancyRate)}%`, note: "Vacant houses and flats as a share of total housing stock"},
     {label: "Owned", value: d3.format(".1%")(stats.ownedShare), note: differenceText(stats.ownedShare - nationalStats.ownedShare)},
     {label: "Rented", value: d3.format(".1%")(stats.rentedShare), note: differenceText(stats.rentedShare - nationalStats.rentedShare)}
   ]});
@@ -527,12 +508,12 @@ display(mountReactive(async () => {
   wrap.className = "insights-metrics-full housing-metrics";
   wrap.appendChild(cards);
   return wrap;
-}));
+}, {skeleton: "cards"}));
 ```
 
 <div class="prose-block">
-  <h2>How permanent private households are occupied</h2>
-  <p>The waterfall shows how each tenure category contributes to the total number of permanent private households in the selected area.</p>
+  <h2>Occupancy type</h2>
+  <p>Tenure categories of permanent private households in the area.</p>
 </div>
 
 <div class="chart-block chart-block--wide">
@@ -541,15 +522,15 @@ display(mountReactive(async () => {
 display(mountReactive(async () => housingTenureWaterfall(housingStats().profile, {
   width: HOUSING_CHART_WIDTH,
   title: `Housing tenure in ${scopeLabel()}`,
-  subtitle: `Census 2022 · n = ${d3.format(",")(housingStats().households)}`
+  subtitle: `As of Census 2022 · n = ${d3.format(",")(housingStats().households)}`
 })));
 ```
 
 </div>
 
 <div class="prose-block">
-  <h2>How housing stock is used</h2>
-  <p>The 100% bar shows whether homes in the selected area were occupied, temporarily unoccupied, vacant or used as holiday homes on Census night.</p>
+  <h2>Housing stock use</h2>
+  <p>Explore the breakdown of housing occupancy and vacancy as of the 2022 census.</p>
 </div>
 
 <div class="chart-block chart-block--wide">
@@ -569,13 +550,12 @@ display(mountReactive(async () => {
 </div>
 
 <div class="prose-block">
-  <h2>Housing planning applications</h2>
-  <p>Explore housing-related planning applications received in the selected constituency or electoral district during the rolling six-year period. A district selected on the housing map above also filters these cards and this map. Use the year range to focus the results, then hover for a summary or click a point to open the fuller record on the relevant planning authority website.</p>
-  <p>Development descriptions from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> are used to classify housing applications but are omitted from the map dataset to keep it compact. Residential-unit totals reflect values reported in the source and are not available for every application.</p>
+  <h2>Planning applications</h2>
+  <p>Planning applications related to the provision of housing may give insight into demand or other issues relating to questions of housing need in constituencies and individual districts. Explore these applications with our interactive map, view the summary or click through to see the full record on the relevant planning authority website.</p>
 </div>
 
 ```js
-display(mountPlanningReactive(async () => renderPlanningYearFilter()));
+display(mountPlanningReactive(async () => renderPlanningYearFilter(), {skeleton: "control"}));
 ```
 
 ```js
@@ -587,7 +567,7 @@ display(mountPlanningReactive(async () => {
     metrics: buildPlanningApplicationMetrics(selectedPlanningApplications())
   }));
   return wrap;
-}));
+}, {skeleton: "cards"}));
 ```
 
 ```js
@@ -612,7 +592,7 @@ display(mountPlanningReactive(async () => {
     popupHTML: planningApplicationsTopic.popupHTML,
     amountFormatter: (value) => `${planningApplicationsTopic.formatCount(value)} ${Number(value) === 1 ? "unit or unreported" : "reported units"}`
   });
-}));
+}, {skeleton: "map", skeletonHeight: 540}));
 ```
 
 ```js
@@ -626,7 +606,7 @@ display(mountPlanningReactive(async () => {
     {label: `Download mapped planning applications for ${state.constituency}, ${planningPeriodLabel()}`}
   ));
   return wrap;
-}));
+}, {skeleton: "text"}));
 ```
 
 ```js
@@ -641,12 +621,12 @@ display(mountReactive(async () => memberCards({
   })),
   partyColorMap,
   title: `How ${state.constituency} is represented in Parliament`
-})));
+}), {skeleton: "cards"}));
 ```
 
 <div class="prose-block">
-  <h2>Recent parliamentary questions about housing</h2>
-  <p>Read recent housing-related questions from Deputies representing the selected constituency.</p>
+  <h2>Recent parliamentary questions related to housing</h2>
+  <p>Read recent parliamentary questions tabled by constituency TDs related to housing matters.</p>
 </div>
 
 <div class="chart-block">
@@ -657,14 +637,14 @@ display(mountReactive(async () => parliamentaryQuestionList({
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent housing-related parliamentary questions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>
 
 <div class="prose-block">
-  <h2>Recent contributions about housing</h2>
-  <p>Read recent housing-related Dáil contributions from local Members.</p>
+  <h2>Recent speeches related to housing</h2>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
 </div>
 
 <div class="chart-block">
@@ -675,14 +655,14 @@ display(mountReactive(async () => memberContributionList({
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent housing-related Dáil contributions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>
 
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore the research</h2>
+  <p>Our research and analysis takes a deep dive into housing and related topics.</p>
 </div>
 
 <div class="chart-block">
@@ -690,11 +670,11 @@ display(mountReactive(async () => memberContributionList({
 ```js
 display(relatedResearchResource({
   rows: [{
-    date: "2025-09-09",
-    author: "PBO",
-    authorUrl: "https://www.oireachtas.ie/pbo",
-    title: "Community Sport Facilities Fund",
-    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+    date: "2025-02-25",
+    author: "L&RS",
+    authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
+    title: "Capacity constraints and Ireland's housing supply",
+    url: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/research-matters/2025-02-25-capacity-constraints-and-irelands-housing-supply/"
   }]
 }));
 ```
@@ -703,7 +683,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. For aggregated areas, the vacancy rate is recalculated as vacant houses and flats divided by total housing stock rather than averaging local rates. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a> or <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>.</p>
+  <p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. For aggregated areas, the vacancy rate is recalculated as vacant houses and flats divided by total housing stock rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a> or <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
 </div>
 
 ```js
@@ -723,5 +703,5 @@ display(mountReactive(async () => {
     {label: `Download housing tenure data for ${scopeLabel()}`}
   ));
   return wrap;
-}));
+}, {skeleton: "text"}));
 ```

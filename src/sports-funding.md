@@ -12,12 +12,14 @@ import { constituencySelect } from "./components/constituency-select.js";
 import { detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency } from "./components/constituency-location.js";
 import { metricCards } from "./components/metric-cards.js";
 import { memberCards } from "./components/member-cards.js";
+import { membersForConstituency } from "./components/member-data.js";
 import { topicPointMap } from "./components/topic-point-map.js";
 import { waterfallSegmentsChart } from "./components/waterfall-segments-chart.js";
 import { downloadButton } from "./components/download-button.js";
 import { insightsTabs } from "./components/insights-tabs.js";
 import { memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
+import { createReactiveMount } from "./components/reactive-mount.js";
 
 import { sportsFundingTopic } from "./topics/sports-funding/config.js";
 import {
@@ -216,10 +218,9 @@ async function getFilteredConstituencyGeo() {
 
 async function getMatchedMembers() {
   const selected = await ensureValidConstituency();
-  const members = await getMembersArray();
+  const lookup = await getMembersLookup();
 
-  return members
-    .filter((d) => clean(d.constituency) === clean(selected))
+  return membersForConstituency(lookup, selected)
     .map((member) => ({
       ...member,
       displayName: member.memberName ?? member.name ?? "Unknown member",
@@ -327,27 +328,8 @@ function rerenderWaterfall() {
   window.dispatchEvent(new CustomEvent("waterfall:change"));
 }
 
-function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40 } = {}) {
-  const el = document.createElement("div");
-  let timeoutId = null;
-  let runId = 0;
-
-  async function run() {
-    const currentRun = ++runId;
-    const result = await renderFn();
-    if (currentRun !== runId) return;
-    el.replaceChildren(result);
-  }
-
-  function onChange() {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(run, debounceMs);
-  }
-
-  run();
-  window.addEventListener(eventName, onChange);
-
-  return el;
+function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40, ...options } = {}) {
+  return createReactiveMount(renderFn, {eventName, debounceMs, ...options});
 }
 
 function euro(value) {
@@ -561,7 +543,7 @@ display(
     );
 
     return wrap;
-  })
+  }, {skeleton: "control"})
 );
 ```
 
@@ -581,7 +563,7 @@ display(
     );
 
     return wrap;
-  })
+  }, {skeleton: "cards"})
 );
 ```
 
@@ -622,7 +604,7 @@ display(
       tooltipHTML: sportsFundingTopic.tooltipHTML,
       amountFormatter: sportsFundingTopic.formatters.amount
     });
-  })
+  }, {skeleton: "map", skeletonHeight: 500})
 );
 ```
 
@@ -691,7 +673,7 @@ display(
     wrap.appendChild(control);
 
     return wrap;
-  }, { eventName: "waterfall:change" })
+  }, { eventName: "waterfall:change", skeleton: "text" })
 );
 ```
 
@@ -739,7 +721,7 @@ display(
         constituency
       })
     });
-  })
+  }, {skeleton: "cards"})
 );
 ```
 
@@ -814,7 +796,7 @@ display(
     });
 
     return wrap;
-  })
+  }, {skeleton: "table"})
 );
 ```
 
@@ -843,7 +825,7 @@ display(
       partyColorMap,
       emptyMessage: "No recent sports-related Dáil contributions are available for this constituency."
     });
-  })
+  }, {skeleton: "table"})
 );
 ```
 
@@ -898,6 +880,6 @@ display(
     );
 
     return wrap;
-  })
+  }, {skeleton: "text"})
 );
 ```

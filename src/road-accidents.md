@@ -14,8 +14,10 @@ import {topicPointMap} from "./components/topic-point-map.js";
 import {downloadButton} from "./components/download-button.js";
 import {metricCards} from "./components/metric-cards.js";
 import {memberCards} from "./components/member-cards.js";
+import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
+import {createReactiveMount} from "./components/reactive-mount.js";
 import {waterfallSegmentsChart} from "./components/waterfall-segments-chart.js";
 import {roadAccidentsTopic} from "./topics/road-accidents/config.js";
 import {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents} from "./topics/road-accidents/transforms.js";
@@ -96,8 +98,7 @@ function roadUserChartRows() {
 }
 
 function matchedMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
+  return membersForConstituency(membersLookup, state.constituency)
     .map((member) => ({
       ...member,
       displayName: member.memberName ?? member.name ?? "Unknown member",
@@ -150,19 +151,12 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScroll(x, y);
 }
 
-function mountReactive(renderFn, {eventName = "road-accidents:change"} = {}) {
-  const host = document.createElement("div");
-  let runId = 0;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    host.firstElementChild?.destroy?.();
-    host.replaceChildren(result);
-  }
-  run();
-  window.addEventListener(eventName, run);
-  return host;
+function mountReactive(renderFn, {eventName = "road-accidents:change", ...options} = {}) {
+  return createReactiveMount(renderFn, {
+    eventName,
+    destroyPrevious: true,
+    ...options
+  });
 }
 
 function renderSegmentedControl({label, name, options, value, onChange}) {
@@ -343,7 +337,7 @@ display(insightsTabs("spotlights"));
 </div>
 
 ```js
-display(mountReactive(async () => renderConstituencyFilter()));
+display(mountReactive(async () => renderConstituencyFilter(), {skeleton: "control"}));
 ```
 
 ```js
@@ -355,11 +349,11 @@ display(mountReactive(async () => {
     metrics: buildRoadAccidentMetrics(selectedRows())
   }));
   return wrap;
-}));
+}, {skeleton: "cards"}));
 ```
 
 ```js
-display(mountReactive(async () => renderIncidentFilters()));
+display(mountReactive(async () => renderIncidentFilters(), {skeleton: "control"}));
 ```
 
 ```js
@@ -385,7 +379,7 @@ display(mountReactive(async () => {
     recordFilters: roadAccidentsTopic.roadUserFilters,
     amountFormatter: (value) => `${roadAccidentsTopic.formatCount(value)} ${Number(value) === 1 ? "person" : "people"}`
   });
-}));
+}, {skeleton: "map", skeletonHeight: 540}));
 ```
 
 <div class="prose-block">
@@ -425,7 +419,7 @@ display(mountReactive(async () => {
 
   wrap.append(intro, summary, control);
   return wrap;
-}, {eventName: "road-user-chart:change"}));
+}, {eventName: "road-user-chart:change", skeleton: "text"}));
 ```
 
 <div class="chart-block chart-block--wide">
@@ -462,7 +456,7 @@ display(mountReactive(async () => memberCards({
   members: matchedMembers(),
   partyColorMap,
   title: `Members for ${state.constituency}`
-})));
+}), {skeleton: "cards"}));
 ```
 
 <div class="prose-block">
@@ -478,7 +472,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
   members: matchedMembers(),
   partyColorMap,
   emptyMessage: "No recent road-safety parliamentary questions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>
@@ -496,7 +490,7 @@ display(mountReactive(async () => memberContributionList({
   members: matchedMembers(),
   partyColorMap,
   emptyMessage: "No recent road-safety Dáil contributions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 ```
 
 </div>
@@ -532,5 +526,5 @@ display(mountReactive(async () => {
     label: `Download mapped incidents for ${state.constituency}, ${selectedYears}`
   }));
   return wrap;
-}));
+}, {skeleton: "text"}));
 ```
