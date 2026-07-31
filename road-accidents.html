@@ -7,10 +7,10 @@
 <title>Road safety | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.437f2bb0.css">
+<link rel="preload" as="style" href="./_import/style.9e032d8c.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.437f2bb0.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.9e032d8c.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -22,8 +22,10 @@
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
+<link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
 <link rel="modulepreload" href="./_import/components/waterfall-segments-chart.0190d384.js">
 <link rel="modulepreload" href="./_import/topics/road-accidents/config.fa3a66e9.js">
 <link rel="modulepreload" href="./_import/topics/road-accidents/transforms.2876253d.js">
@@ -233,11 +235,11 @@ registerFile("./data/derived/recent-transport-contributions.json", {"name":"./da
 registerFile("./data/derived/recent-transport-questions.json", {"name":"./data/derived/recent-transport-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-transport-questions.a83680dd.json","lastModified":1785504648839,"size":1481002});
 registerFile("./data/derived/road-accidents-normalized.csv", {"name":"./data/derived/road-accidents-normalized.csv","mimeType":"text/csv","path":"./_file/data/derived/road-accidents-normalized.83236add.csv","lastModified":1784305507010,"size":8375039});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785515012149,"size":123367});
 registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg","mimeType":"image/jpeg","path":"./_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
 
-define({id: "d300c83f", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","downloadButton","metricCards","memberCards","parliamentaryQuestionList","memberContributionList","relatedResearchResource","waterfallSegmentsChart","roadAccidentsTopic","buildRoadAccidentDownloadRows","buildRoadAccidentMetrics","buildRoadUserSegments","filterRoadAccidents","accidentRows","constituenciesGeo","membersLookup","transportQuestions","transportContributions","heroImage","INCIDENT_TYPES","years","constituencies","ROAD_SAFETY_MATCHER","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","roadUserChartRows","matchedMembers","relevantQuestions","relevantContributions","restoreScroll","rerender","mountReactive","renderSegmentedControl","renderConstituencyFilter","renderIncidentFilters"], body: async (FileAttachment) => {
-const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {downloadButton}, {metricCards}, {memberCards}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {waterfallSegmentsChart}, {roadAccidentsTopic}, {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents}] = await Promise.all([import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/waterfall-segments-chart.0190d384.js"), import("./_import/topics/road-accidents/config.fa3a66e9.js"), import("./_import/topics/road-accidents/transforms.2876253d.js")]);
+define({id: "d9809a81", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","downloadButton","metricCards","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","waterfallSegmentsChart","roadAccidentsTopic","buildRoadAccidentDownloadRows","buildRoadAccidentMetrics","buildRoadUserSegments","filterRoadAccidents","accidentRows","constituenciesGeo","membersLookup","transportQuestions","transportContributions","heroImage","INCIDENT_TYPES","years","constituencies","ROAD_SAFETY_MATCHER","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","roadUserChartRows","matchedMembers","relevantQuestions","relevantContributions","restoreScroll","rerender","mountReactive","renderSegmentedControl","renderConstituencyFilter","renderIncidentFilters"], body: async (FileAttachment) => {
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {downloadButton}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {waterfallSegmentsChart}, {roadAccidentsTopic}, {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents}] = await Promise.all([import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/waterfall-segments-chart.0190d384.js"), import("./_import/topics/road-accidents/config.fa3a66e9.js"), import("./_import/topics/road-accidents/transforms.2876253d.js")]);
 
 const accidentRows = await FileAttachment("./data/derived/road-accidents-normalized.csv").csv({typed: true});
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
@@ -315,8 +317,7 @@ function roadUserChartRows() {
 }
 
 function matchedMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
+  return membersForConstituency(membersLookup, state.constituency)
     .map((member) => ({
       ...member,
       displayName: member.memberName ?? member.name ?? "Unknown member",
@@ -369,19 +370,12 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScroll(x, y);
 }
 
-function mountReactive(renderFn, {eventName = "road-accidents:change"} = {}) {
-  const host = document.createElement("div");
-  let runId = 0;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    host.firstElementChild?.destroy?.();
-    host.replaceChildren(result);
-  }
-  run();
-  window.addEventListener(eventName, run);
-  return host;
+function mountReactive(renderFn, {eventName = "road-accidents:change", ...options} = {}) {
+  return createReactiveMount(renderFn, {
+    eventName,
+    destroyPrevious: true,
+    ...options
+  });
 }
 
 function renderSegmentedControl({label, name, options, value, onChange}) {
@@ -530,7 +524,7 @@ function renderIncidentFilters() {
   section.appendChild(filterGrid);
   return section;
 }
-return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,topicPointMap,downloadButton,metricCards,memberCards,parliamentaryQuestionList,memberContributionList,relatedResearchResource,waterfallSegmentsChart,roadAccidentsTopic,buildRoadAccidentDownloadRows,buildRoadAccidentMetrics,buildRoadUserSegments,filterRoadAccidents,accidentRows,constituenciesGeo,membersLookup,transportQuestions,transportContributions,heroImage,INCIDENT_TYPES,years,constituencies,ROAD_SAFETY_MATCHER,partyColorMap,state,savedConstituency,cleanConstituencyName,selectedConstituencyGeoJSON,selectedRows,roadUserChartRows,matchedMembers,relevantQuestions,relevantContributions,restoreScroll,rerender,mountReactive,renderSegmentedControl,renderConstituencyFilter,renderIncidentFilters};
+return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,topicPointMap,downloadButton,metricCards,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,waterfallSegmentsChart,roadAccidentsTopic,buildRoadAccidentDownloadRows,buildRoadAccidentMetrics,buildRoadUserSegments,filterRoadAccidents,accidentRows,constituenciesGeo,membersLookup,transportQuestions,transportContributions,heroImage,INCIDENT_TYPES,years,constituencies,ROAD_SAFETY_MATCHER,partyColorMap,state,savedConstituency,cleanConstituencyName,selectedConstituencyGeoJSON,selectedRows,roadUserChartRows,matchedMembers,relevantQuestions,relevantContributions,restoreScroll,rerender,mountReactive,renderSegmentedControl,renderConstituencyFilter,renderIncidentFilters};
 }});
 
 define({id: "cc17336b", inputs: ["heroImage","display"], outputs: ["hero"], body: (heroImage,display) => {
@@ -556,11 +550,11 @@ define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insig
 display(insightsTabs("spotlights"));
 }});
 
-define({id: "6a41df4c", inputs: ["display","mountReactive","renderConstituencyFilter"], body: (display,mountReactive,renderConstituencyFilter) => {
-display(mountReactive(async () => renderConstituencyFilter()));
+define({id: "00f2d2b1", inputs: ["display","mountReactive","renderConstituencyFilter"], body: (display,mountReactive,renderConstituencyFilter) => {
+display(mountReactive(async () => renderConstituencyFilter(), {skeleton: "control"}));
 }});
 
-define({id: "a62a4769", inputs: ["display","mountReactive","metricCards","buildRoadAccidentMetrics","selectedRows"], body: (display,mountReactive,metricCards,buildRoadAccidentMetrics,selectedRows) => {
+define({id: "4f559943", inputs: ["display","mountReactive","metricCards","buildRoadAccidentMetrics","selectedRows"], body: (display,mountReactive,metricCards,buildRoadAccidentMetrics,selectedRows) => {
 display(mountReactive(async () => {
   const wrap = document.createElement("section");
   wrap.className = "insights-metrics-full road-accident-metrics";
@@ -569,14 +563,14 @@ display(mountReactive(async () => {
     metrics: buildRoadAccidentMetrics(selectedRows())
   }));
   return wrap;
-}));
+}, {skeleton: "cards"}));
 }});
 
-define({id: "96bc03a9", inputs: ["display","mountReactive","renderIncidentFilters"], body: (display,mountReactive,renderIncidentFilters) => {
-display(mountReactive(async () => renderIncidentFilters()));
+define({id: "11f70fd0", inputs: ["display","mountReactive","renderIncidentFilters"], body: (display,mountReactive,renderIncidentFilters) => {
+display(mountReactive(async () => renderIncidentFilters(), {skeleton: "control"}));
 }});
 
-define({id: "8b7f5069", inputs: ["display","mountReactive","selectedRows","selectedConstituencyGeoJSON","topicPointMap","roadAccidentsTopic"], body: (display,mountReactive,selectedRows,selectedConstituencyGeoJSON,topicPointMap,roadAccidentsTopic) => {
+define({id: "a20ebd22", inputs: ["display","mountReactive","selectedRows","selectedConstituencyGeoJSON","topicPointMap","roadAccidentsTopic"], body: (display,mountReactive,selectedRows,selectedConstituencyGeoJSON,topicPointMap,roadAccidentsTopic) => {
 display(mountReactive(async () => {
   const rows = selectedRows();
   const geo = selectedConstituencyGeoJSON();
@@ -599,10 +593,10 @@ display(mountReactive(async () => {
     recordFilters: roadAccidentsTopic.roadUserFilters,
     amountFormatter: (value) => `${roadAccidentsTopic.formatCount(value)} ${Number(value) === 1 ? "person" : "people"}`
   });
-}));
+}, {skeleton: "map", skeletonHeight: 540}));
 }});
 
-define({id: "34d89821", inputs: ["display","mountReactive","buildRoadUserSegments","roadUserChartRows","roadAccidentsTopic","state","renderSegmentedControl","years"], body: (display,mountReactive,buildRoadUserSegments,roadUserChartRows,roadAccidentsTopic,state,renderSegmentedControl,years) => {
+define({id: "9e57b1e3", inputs: ["display","mountReactive","buildRoadUserSegments","roadUserChartRows","roadAccidentsTopic","state","renderSegmentedControl","years"], body: (display,mountReactive,buildRoadUserSegments,roadUserChartRows,roadAccidentsTopic,state,renderSegmentedControl,years) => {
 display(mountReactive(async () => {
   const breakdown = buildRoadUserSegments(roadUserChartRows(), roadAccidentsTopic.roadUserPalette);
   const wrap = document.createElement("div");
@@ -634,7 +628,7 @@ display(mountReactive(async () => {
 
   wrap.append(intro, summary, control);
   return wrap;
-}, {eventName: "road-user-chart:change"}));
+}, {eventName: "road-user-chart:change", skeleton: "text"}));
 }});
 
 define({id: "94f14e06", inputs: ["display","mountReactive","buildRoadUserSegments","roadUserChartRows","roadAccidentsTopic","waterfallSegmentsChart","state"], body: (display,mountReactive,buildRoadUserSegments,roadUserChartRows,roadAccidentsTopic,waterfallSegmentsChart,state) => {
@@ -662,30 +656,30 @@ display(mountReactive(async () => {
 }, {eventName: "road-user-chart:change"}));
 }});
 
-define({id: "c86a46ee", inputs: ["display","mountReactive","memberCards","matchedMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,matchedMembers,partyColorMap,state) => {
+define({id: "4224610f", inputs: ["display","mountReactive","memberCards","matchedMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,matchedMembers,partyColorMap,state) => {
 display(mountReactive(async () => memberCards({
   members: matchedMembers(),
   partyColorMap,
   title: `Members for ${state.constituency}`
-})));
+}), {skeleton: "cards"}));
 }});
 
-define({id: "ceebbcbd", inputs: ["display","mountReactive","parliamentaryQuestionList","relevantQuestions","matchedMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,relevantQuestions,matchedMembers,partyColorMap) => {
+define({id: "89e68153", inputs: ["display","mountReactive","parliamentaryQuestionList","relevantQuestions","matchedMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,relevantQuestions,matchedMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: relevantQuestions(6),
   members: matchedMembers(),
   partyColorMap,
   emptyMessage: "No recent road-safety parliamentary questions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 }});
 
-define({id: "a56ae9b0", inputs: ["display","mountReactive","memberContributionList","relevantContributions","matchedMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,relevantContributions,matchedMembers,partyColorMap) => {
+define({id: "36d05ba9", inputs: ["display","mountReactive","memberContributionList","relevantContributions","matchedMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,relevantContributions,matchedMembers,partyColorMap) => {
 display(mountReactive(async () => memberContributionList({
   rows: relevantContributions(6),
   members: matchedMembers(),
   partyColorMap,
   emptyMessage: "No recent road-safety Dáil contributions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 }});
 
 define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
@@ -700,7 +694,7 @@ display(relatedResearchResource({
 }));
 }});
 
-define({id: "874be488", inputs: ["display","mountReactive","buildRoadAccidentDownloadRows","selectedRows","state","downloadButton"], body: (display,mountReactive,buildRoadAccidentDownloadRows,selectedRows,state,downloadButton) => {
+define({id: "5bc060c8", inputs: ["display","mountReactive","buildRoadAccidentDownloadRows","selectedRows","state","downloadButton"], body: (display,mountReactive,buildRoadAccidentDownloadRows,selectedRows,state,downloadButton) => {
 display(mountReactive(async () => {
   const rows = buildRoadAccidentDownloadRows(selectedRows());
   const wrap = document.createElement("div");
@@ -710,7 +704,7 @@ display(mountReactive(async () => {
     label: `Download mapped incidents for ${state.constituency}, ${selectedYears}`
   }));
   return wrap;
-}));
+}, {skeleton: "text"}));
 }});
 
 </script>
@@ -718,7 +712,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:d300c83f:--></div>
+<div class="observablehq observablehq--block"><!--:d9809a81:--></div>
 <div class="observablehq observablehq--block"><!--:cc17336b:--></div>
 <div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
 <div class="prose-block lead">
@@ -727,32 +721,32 @@ display(mountReactive(async () => {
   <h2>At a glance</h2>
   <p>Key figures update with the constituency, year range and incident types selected below.</p>
 </div>
-<div class="observablehq observablehq--block"><!--:6a41df4c:--></div>
-<div class="observablehq observablehq--block"><!--:a62a4769:--></div>
-<div class="observablehq observablehq--block"><!--:96bc03a9:--></div>
-<div class="observablehq observablehq--block"><!--:8b7f5069:--></div>
+<div class="observablehq observablehq--block"><!--:00f2d2b1:--></div>
+<div class="observablehq observablehq--block"><!--:4f559943:--></div>
+<div class="observablehq observablehq--block"><!--:11f70fd0:--></div>
+<div class="observablehq observablehq--block"><!--:a20ebd22:--></div>
 <div class="prose-block">
   <h2>Explore by road-user type</h2>
   <p>See the people recorded in collisions as drivers, passengers, pedestrians, cyclists, motorcyclists or e-scooter/other road users. Use the filter to view one year or the combined period.</p>
 </div>
-<div class="observablehq observablehq--block"><!--:34d89821:--></div>
+<div class="observablehq observablehq--block"><!--:9e57b1e3:--></div>
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:94f14e06:--></div>
 </div>
-<div class="observablehq observablehq--block"><!--:c86a46ee:--></div>
+<div class="observablehq observablehq--block"><!--:4224610f:--></div>
 <div class="prose-block">
   <h2>Parliamentary questions about road safety</h2>
   <p>Recent questions from Deputies in the constituency concerning road collisions, road safety, traffic offences and the safety of different road users.</p>
 </div>
 <div class="chart-block">
-<div class="observablehq observablehq--block"><!--:ceebbcbd:--></div>
+<div class="observablehq observablehq--block"><!--:89e68153:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent road-safety contributions from local Members</h2>
   <p>Read recent Dáil contributions about road collisions, traffic safety, dangerous driving and related issues.</p>
 </div>
 <div class="chart-block">
-<div class="observablehq observablehq--block"><!--:a56ae9b0:--></div>
+<div class="observablehq observablehq--block"><!--:36d05ba9:--></div>
 </div>
 <div class="prose-block prose-block--section">
   <h2>Related research</h2>
@@ -761,7 +755,7 @@ display(mountReactive(async () => {
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
 </div>
-<div class="observablehq observablehq--block"><!--:874be488:--></div>
+<div class="observablehq observablehq--block"><!--:5bc060c8:--></div>
 </main>
 </div>
 </body>

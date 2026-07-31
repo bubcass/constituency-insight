@@ -7,10 +7,10 @@
 <title>Education | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.437f2bb0.css">
+<link rel="preload" as="style" href="./_import/style.9e032d8c.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.437f2bb0.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.9e032d8c.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -21,8 +21,10 @@
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
 <link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
+<link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
 <link rel="modulepreload" href="./_import/components/education-charts.34c34b18.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
@@ -96,12 +98,12 @@ registerFile("./data/derived/recent-education-contributions.json", {"name":"./da
 registerFile("./data/derived/recent-education-questions.json", {"name":"./data/derived/recent-education-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-education-questions.cf4c842a.json","lastModified":1785504648830,"size":1562966});
 registerFile("./data/education-qualification-2022.csv", {"name":"./data/education-qualification-2022.csv","mimeType":"text/csv","path":"./_file/data/education-qualification-2022.3791975a.csv","lastModified":1785490457734,"size":390964});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
-registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.e173e9d0.geojson","lastModified":1784138384648,"size":5710128});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.5a575ad4.json","lastModified":1775303425959,"size":121021});
+registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.79d7eb54.geojson","lastModified":1785513965574,"size":9442035});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785515012149,"size":123367});
 registerFile("./media/education-hero.mp4", {"name":"./media/education-hero.mp4","mimeType":"video/mp4","path":"./_file/media/education-hero.30f4b4e2.mp4","lastModified":1784301742505,"size":4148933});
 
-define({id: "42e3d4c0", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","parliamentaryQuestionList","memberContributionList","relatedResearchResource","educationQualificationWaterfall","constituencyRows","educationQualification","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentEducationContributions","educationHeroVideo","EDUCATION_HEADING_MATCHER","EDUCATION_LEVELS","partyColorMap","state","constituencies","savedConstituency","rowsForConstituency","educationRowsForScope","educationProfile","educationPopulation","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","constituencyMembers","recentConstituencyEducationQuestions","recentConstituencyEducationContributions","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {educationQualificationWaterfall}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/education-charts.34c34b18.js")]);
+define({id: "3cab5076", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","educationQualificationWaterfall","constituencyRows","educationQualification","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentEducationContributions","educationHeroVideo","EDUCATION_HEADING_MATCHER","EDUCATION_LEVELS","partyColorMap","state","constituencies","savedConstituency","rowsForConstituency","educationRowsForScope","educationProfile","educationPopulation","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","constituencyMembers","recentConstituencyEducationQuestions","recentConstituencyEducationContributions","restoreScroll","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {educationQualificationWaterfall}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/education-charts.34c34b18.js")]);
 
 const constituencyRows = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
 const educationQualification = await FileAttachment("./data/education-qualification-2022.csv").csv({typed: true});
@@ -216,9 +218,7 @@ function selectedConstituencyGeoJSON() {
 }
 
 function constituencyMembers() {
-  return Object.values(membersLookup ?? {})
-    .filter((member) => String(member.constituency ?? "").trim() === state.constituency)
-    .sort((a, b) => String(a.memberName ?? "").localeCompare(String(b.memberName ?? ""), "en"));
+  return membersForConstituency(membersLookup, state.constituency);
 }
 
 function recentConstituencyEducationQuestions(limit = 6) {
@@ -266,23 +266,11 @@ function rerender({preserveScroll = true} = {}) {
   if (preserveScroll) restoreScroll(x, y);
 }
 
-function mountReactive(renderFn) {
-  const el = document.createElement("div");
-  let runId = 0;
-  let hasRendered = false;
-  async function run() {
-    const current = ++runId;
-    const result = await renderFn();
-    if (current !== runId) return;
-    el.replaceChildren(result);
-    if (hasRendered && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      result.animate?.([{opacity: 0.72}, {opacity: 1}], {duration: 180, easing: "ease-out"});
-    }
-    hasRendered = true;
-  }
-  run();
-  window.addEventListener("education:change", run);
-  return el;
+function mountReactive(renderFn, options = {}) {
+  return createReactiveMount(renderFn, {
+    eventName: "education:change",
+    ...options
+  });
 }
 
 function renderScopeControl() {
@@ -344,7 +332,7 @@ function renderDistrictMapExplorer() {
   window.addEventListener("education:change", update);
   return section;
 }
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,electoralDistrictMap,memberCards,parliamentaryQuestionList,memberContributionList,relatedResearchResource,educationQualificationWaterfall,constituencyRows,educationQualification,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentEducationContributions,educationHeroVideo,EDUCATION_HEADING_MATCHER,EDUCATION_LEVELS,partyColorMap,state,constituencies,savedConstituency,rowsForConstituency,educationRowsForScope,educationProfile,educationPopulation,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,constituencyMembers,recentConstituencyEducationQuestions,recentConstituencyEducationContributions,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,electoralDistrictMap,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,educationQualificationWaterfall,constituencyRows,educationQualification,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentEducationContributions,educationHeroVideo,EDUCATION_HEADING_MATCHER,EDUCATION_LEVELS,partyColorMap,state,constituencies,savedConstituency,rowsForConstituency,educationRowsForScope,educationProfile,educationPopulation,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,constituencyMembers,recentConstituencyEducationQuestions,recentConstituencyEducationContributions,restoreScroll,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer};
 }});
 
 define({id: "bd687d18", inputs: ["educationHeroVideo","display"], outputs: ["hero"], body: (educationHeroVideo,display) => {
@@ -386,7 +374,7 @@ display(mountReactive(async () => educationQualificationWaterfall(educationProfi
 })));
 }});
 
-define({id: "5780dfef", inputs: ["display","mountReactive","state","selectedDistrictName","rowsForConstituency","rerender"], body: (display,mountReactive,state,selectedDistrictName,rowsForConstituency,rerender) => {
+define({id: "39db8c3e", inputs: ["display","mountReactive","state","selectedDistrictName","rowsForConstituency","rerender"], body: (display,mountReactive,state,selectedDistrictName,rowsForConstituency,rerender) => {
 display(mountReactive(async () => {
   const note = document.createElement("div");
   note.className = "reactive-prose demographic-story-callout education-scope-note";
@@ -418,10 +406,10 @@ display(mountReactive(async () => {
   detail.textContent = "The Members and parliamentary activity below remain constituency-level information.";
   note.append(label, heading, context, detail);
   return note;
-}));
+}, {skeleton: "text"}));
 }});
 
-define({id: "d60348a4", inputs: ["display","mountReactive","memberCards","constituencyMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,constituencyMembers,partyColorMap,state) => {
+define({id: "f70e287b", inputs: ["display","mountReactive","memberCards","constituencyMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,constituencyMembers,partyColorMap,state) => {
 display(mountReactive(async () => memberCards({
   members: constituencyMembers().map((member) => ({
     ...member,
@@ -433,25 +421,25 @@ display(mountReactive(async () => memberCards({
   })),
   partyColorMap,
   title: `How ${state.constituency} is represented in Parliament`
-})));
+}), {skeleton: "cards"}));
 }});
 
-define({id: "da351262", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyEducationQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyEducationQuestions,constituencyMembers,partyColorMap) => {
+define({id: "9902b2ae", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyEducationQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyEducationQuestions,constituencyMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: recentConstituencyEducationQuestions(6),
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent education-related parliamentary questions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 }});
 
-define({id: "a04463f1", inputs: ["display","mountReactive","memberContributionList","recentConstituencyEducationContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyEducationContributions,constituencyMembers,partyColorMap) => {
+define({id: "091d3cba", inputs: ["display","mountReactive","memberContributionList","recentConstituencyEducationContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyEducationContributions,constituencyMembers,partyColorMap) => {
 display(mountReactive(async () => memberContributionList({
   rows: recentConstituencyEducationContributions(6),
   members: constituencyMembers(),
   partyColorMap,
   emptyMessage: "No recent education-related Dáil contributions are available for this constituency."
-})));
+}), {skeleton: "table"}));
 }});
 
 define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
@@ -471,7 +459,7 @@ display(relatedResearchResource({
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:42e3d4c0:--></div>
+<div class="observablehq observablehq--block"><!--:3cab5076:--></div>
 <div class="observablehq observablehq--block"><!--:bd687d18:--></div>
 <div class="observablehq observablehq--block"><!--:834d2a93:--></div>
 <div class="prose-block lead">
@@ -486,21 +474,21 @@ display(relatedResearchResource({
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:afe47ffa:--></div>
 </div>
-<div class="observablehq observablehq--block"><!--:5780dfef:--></div>
-<div class="observablehq observablehq--block"><!--:d60348a4:--></div>
+<div class="observablehq observablehq--block"><!--:39db8c3e:--></div>
+<div class="observablehq observablehq--block"><!--:f70e287b:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions about education</h2>
   <p>Read recent education-related questions from Deputies representing the selected constituency.</p>
 </div>
 <div class="chart-block">
-<div class="observablehq observablehq--block"><!--:da351262:--></div>
+<div class="observablehq observablehq--block"><!--:9902b2ae:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent contributions about education</h2>
   <p>Read recent education-related Dáil contributions from local Members.</p>
 </div>
 <div class="chart-block">
-<div class="observablehq observablehq--block"><!--:a04463f1:--></div>
+<div class="observablehq observablehq--block"><!--:091d3cba:--></div>
 </div>
 <div class="prose-block prose-block--section">
   <h2>Related research</h2>
