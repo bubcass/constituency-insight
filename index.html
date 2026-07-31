@@ -7,9 +7,9 @@
 <title>Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.9e032d8c.css">
+<link rel="preload" as="style" href="./_import/style.7549b185.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.9e032d8c.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.7549b185.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
@@ -35,23 +35,23 @@ import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
 registerFile("./media/dublin-quays.mp4", {"name":"./media/dublin-quays.mp4","mimeType":"video/mp4","path":"./_file/media/dublin-quays.e27390af.mp4","lastModified":1784300919196,"size":6271001});
-registerFile("./media/education-hero.mp4", {"name":"./media/education-hero.mp4","mimeType":"video/mp4","path":"./_file/media/education-hero.30f4b4e2.mp4","lastModified":1784301742505,"size":4148933});
+registerFile("./media/education-hero.jpg", {"name":"./media/education-hero.jpg","mimeType":"image/jpeg","path":"./_file/media/education-hero.4fc6aa8c.jpg","lastModified":1785525766172,"size":1142222});
 registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
-registerFile("./media/housing.mp4", {"name":"./media/housing.mp4","mimeType":"video/mp4","path":"./_file/media/housing.3381d41e.mp4","lastModified":1784297244767,"size":3517495});
+registerFile("./media/housing.jpg", {"name":"./media/housing.jpg","mimeType":"image/jpeg","path":"./_file/media/housing.f27123d4.jpg","lastModified":1785525720080,"size":130372});
 registerFile("./media/people-walking-in-blurred.mp4", {"name":"./media/people-walking-in-blurred.mp4","mimeType":"video/mp4","path":"./_file/media/people-walking-in-blurred.e416fe30.mp4","lastModified":1784202251836,"size":5247083});
 registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg","mimeType":"image/jpeg","path":"./_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
 
-define({id: "dd6b05d1", inputs: ["FileAttachment"], outputs: ["peopleVideo","educationVideo","workVideo","housingVideo","transportVideo","spotlightsImage"], body: async (FileAttachment) => {
+define({id: "2e33bc2b", inputs: ["FileAttachment"], outputs: ["peopleVideo","educationImage","workVideo","housingImage","transportVideo","spotlightsImage"], body: async (FileAttachment) => {
 const peopleVideo = await FileAttachment("./media/people-walking-in-blurred.mp4").url();
-const educationVideo = await FileAttachment("./media/education-hero.mp4").url();
+const educationImage = await FileAttachment("./media/education-hero.jpg").url();
 const workVideo = await FileAttachment("./media/harvest-hero.mp4").url();
-const housingVideo = await FileAttachment("./media/housing.mp4").url();
+const housingImage = await FileAttachment("./media/housing.jpg").url();
 const transportVideo = await FileAttachment("./media/dublin-quays.mp4").url();
 const spotlightsImage = await FileAttachment("./media/road-with-glass.jpg").url();
-return {peopleVideo,educationVideo,workVideo,housingVideo,transportVideo,spotlightsImage};
+return {peopleVideo,educationImage,workVideo,housingImage,transportVideo,spotlightsImage};
 }});
 
-define({id: "b831ecad", inputs: ["peopleVideo","educationVideo","workVideo","housingVideo","transportVideo","spotlightsImage","display"], outputs: ["topics","grid"], body: (peopleVideo,educationVideo,workVideo,housingVideo,transportVideo,spotlightsImage,display) => {
+define({id: "31be66e5", inputs: ["peopleVideo","educationImage","workVideo","housingImage","transportVideo","spotlightsImage","display"], outputs: ["topics","grid"], body: (peopleVideo,educationImage,workVideo,housingImage,transportVideo,spotlightsImage,display) => {
 const topics = [
   {
     href: "./people",
@@ -63,7 +63,7 @@ const topics = [
     href: "./education",
     eyebrow: "Insight",
     title: "Education",
-    video: educationVideo,
+    image: educationImage,
   },
   {
     href: "./employment",
@@ -75,7 +75,7 @@ const topics = [
     href: "./housing",
     eyebrow: "Insight",
     title: "Housing",
-    video: housingVideo,
+    image: housingImage,
   },
   {
     href: "./transport",
@@ -129,12 +129,12 @@ return {topics,grid};
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:dd6b05d1:--></div>
+<div class="observablehq observablehq--block"><!--:2e33bc2b:--></div>
 <section class="insights-index-intro" aria-labelledby="insights-index-title">
-  <h1 id="insights-index-title"><a class="observablehq-header-anchor" href="#insights-index-title">Constituency Insights</a></h1>
+  <h2 id="insights-index-title"><a class="observablehq-header-anchor" href="#insights-index-title">Constituency Insights</a></h2>
   <p>See beyond the numbers with our data-driven exploration of the people and policies that matter in the constituencies represented by our TDs.</p>
 </section>
-<div class="observablehq observablehq--block"><!--:b831ecad:--></div>
+<div class="observablehq observablehq--block"><!--:31be66e5:--></div>
 </main>
 </div>
 </body>

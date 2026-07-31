@@ -1,6 +1,6 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import {chartPalette} from "../config/chart-palette.dbce5681.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.0190d384.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.12242099.js";
 
 export function educationQualificationWaterfall(
   data,

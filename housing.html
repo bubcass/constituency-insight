@@ -7,10 +7,10 @@
 <title>Housing | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.9e032d8c.css">
+<link rel="preload" as="style" href="./_import/style.7549b185.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.9e032d8c.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.7549b185.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -23,7 +23,7 @@
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/electoral-district-map.87975180.js">
 <link rel="modulepreload" href="./_import/components/topic-point-map.0470735b.js">
-<link rel="modulepreload" href="./_import/components/housing-charts.e2068609.js">
+<link rel="modulepreload" href="./_import/components/housing-charts.3ed36006.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
@@ -37,7 +37,7 @@
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
 <link rel="modulepreload" href="./_npm/@turf/turf@7.3.4/55001c14.js">
-<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.0190d384.js">
+<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.12242099.js">
 <link rel="modulepreload" href="./_import/components/percentage-strip-chart.9cd4cf03.js">
 <link rel="modulepreload" href="./_import/config/chart-style.e62386e1.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
@@ -245,7 +245,7 @@ registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json",
 registerFile("./media/housing.mp4", {"name":"./media/housing.mp4","mimeType":"video/mp4","path":"./_file/media/housing.3381d41e.mp4","lastModified":1784297244767,"size":3517495});
 
 define({id: "7bc0b375", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","housingData","housingStockData","planningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","planningYears","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/housing-charts.e2068609.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/topics/planning-applications/config.7a8b9af0.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/housing-charts.3ed36006.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/topics/planning-applications/config.7a8b9af0.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
 
 const housingData = await FileAttachment("./data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("./data/housing-stock-2022.csv").csv({typed: true});

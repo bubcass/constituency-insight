@@ -2,7 +2,7 @@ import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import * as Plot from "../../_npm/@observablehq/plot@0.6.17/a96a6bbb.js";
 import {chartPalette} from "../config/chart-palette.dbce5681.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.e62386e1.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.0190d384.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.12242099.js";
 
 export function principalEconomicStatusWaterfall(
   data,
