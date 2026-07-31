@@ -32,10 +32,20 @@ export function waterfallSegmentsChart(
   const height = Math.max(220, rowCount * minRowHeight + 90);
 
   const maxValue = d3.max(safeSegments, (d) => d.x2) ?? 1;
-  const labelThreshold = maxValue * 0.08;
+  const marginRight = 30;
 
   const wrap = document.createElement("div");
   wrap.className = "waterfall-segments-chart-wrap";
+
+  const scrollHint = document.createElement("p");
+  scrollHint.className = "waterfall-segments-chart__scroll-hint";
+  scrollHint.textContent = "Scroll horizontally to explore →";
+
+  const scrollRegion = document.createElement("div");
+  scrollRegion.className = "waterfall-segments-chart__scroll";
+  scrollRegion.setAttribute("role", "region");
+  scrollRegion.setAttribute("aria-label", "Scrollable waterfall chart");
+  scrollRegion.tabIndex = 0;
 
   function formatMillionsTick(value) {
     return `€${d3.format("~g")(Number(value || 0) / 1_000_000)}m`;
@@ -51,6 +61,20 @@ export function waterfallSegmentsChart(
   const resolvedValueFormat = typeof valueFormat === "function"
     ? valueFormat
     : formatMillionsLabel;
+
+  function segmentLabel(d) {
+    return `${resolvedValueFormat(d.value)} (${d3.format(".0%")(d.share)})`;
+  }
+
+  function labelFitsInside(d) {
+    const plotWidth = Math.max(1, width - marginLeft - marginRight);
+    const segmentWidth = Math.max(0, Number(d.x2) - Number(d.x1));
+    const segmentWidthPx = (segmentWidth / maxValue) * plotWidth;
+    const labelWidthPx = Array.from(segmentLabel(d)).length * chartStyle.labelFontSize * 0.62;
+    const horizontalPaddingPx = 22;
+
+    return segmentWidthPx >= labelWidthPx + horizontalPaddingPx;
+  }
 
   function sanitizePlotAccessibility(root) {
     if (!root) return;
@@ -82,7 +106,7 @@ export function waterfallSegmentsChart(
     width,
     height,
     marginLeft,
-    marginRight: 30,
+    marginRight,
     marginTop: 50,
     marginBottom: 28,
     grid: true,
@@ -119,7 +143,7 @@ export function waterfallSegmentsChart(
       }),
 
       Plot.ruleX(
-        majorSegments.filter((d) => d.x2 - d.x1 < labelThreshold),
+        majorSegments.filter((d) => !labelFitsInside(d)),
         {
           x: "x1",
           x2: (d) => Math.max(0, d.x1 - maxValue * 0.012),
@@ -131,22 +155,14 @@ export function waterfallSegmentsChart(
 
       Plot.text(majorSegments, {
         x: (d) => {
-          const segmentWidth = d.x2 - d.x1;
-          return segmentWidth < labelThreshold
+          return !labelFitsInside(d)
             ? Math.max(0, d.x1 - maxValue * 0.055)
             : (d.x1 + d.x2) / 2;
         },
         y: "Segment",
-        text: (d) =>
-          `${resolvedValueFormat(d.value)} (${d3.format(".0%")(d.share)})`,
-        textAnchor: (d) => {
-          const segmentWidth = d.x2 - d.x1;
-          return segmentWidth < labelThreshold ? "end" : "middle";
-        },
-        fill: (d) => {
-          const segmentWidth = d.x2 - d.x1;
-          return segmentWidth < labelThreshold ? chartStyle.text : chartStyle.separator;
-        },
+        text: segmentLabel,
+        textAnchor: (d) => labelFitsInside(d) ? "middle" : "end",
+        fill: (d) => labelFitsInside(d) ? chartStyle.separator : chartStyle.text,
         dx: 0,
         dy: 0,
         lineAnchor: "middle",
@@ -158,7 +174,8 @@ export function waterfallSegmentsChart(
   });
 
   sanitizePlotAccessibility(chart);
-  wrap.appendChild(chart);
+  scrollRegion.appendChild(chart);
+  wrap.append(scrollHint, scrollRegion);
 
   if (minorSegments.length) {
     const names = minorSegments.map((d) => d.Segment);

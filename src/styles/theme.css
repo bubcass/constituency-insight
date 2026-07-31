@@ -904,16 +904,35 @@
 }
 
 .demographic-chart__plot--scroll,
-.waterfall-segments-chart-wrap {
+.waterfall-segments-chart__scroll {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scrollbar-width: thin;
 }
 
 .demographic-chart__plot--scroll > svg,
-.waterfall-segments-chart-wrap > svg {
+.waterfall-segments-chart__scroll > svg {
     min-width: 620px;
     max-width: none;
+}
+
+.waterfall-segments-chart__scroll-hint {
+    display: none;
+    margin: 0 0 var(--space-2);
+    color: var(--text-soft);
+    font-size: var(--chart-note-size);
+    line-height: 1.4;
+}
+
+.waterfall-segments-chart__scroll:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+    .waterfall-segments-chart__scroll-hint {
+        display: block;
+    }
 }
 
 .demographic-chart__tooltip {

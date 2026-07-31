@@ -8,15 +8,15 @@ toc: false
 
 ```js
 const peopleVideo = await FileAttachment("media/people-walking-in-blurred.mp4").url();
-const educationVideo = await FileAttachment("media/education-hero.mp4").url();
+const educationImage = await FileAttachment("media/education-hero.jpg").url();
 const workVideo = await FileAttachment("media/harvest-hero.mp4").url();
-const housingVideo = await FileAttachment("media/housing.mp4").url();
+const housingImage = await FileAttachment("media/housing.jpg").url();
 const transportVideo = await FileAttachment("media/dublin-quays.mp4").url();
 const spotlightsImage = await FileAttachment("media/road-with-glass.jpg").url();
 ```
 
 <section class="insights-index-intro" aria-labelledby="insights-index-title">
-  <h1 id="insights-index-title">Constituency Insights</h1>
+  <h2 id="insights-index-title">Constituency Insights</h2>
   <p>See beyond the numbers with our data-driven exploration of the people and policies that matter in the constituencies represented by our TDs.</p>
 </section>
 
@@ -32,7 +32,7 @@ const topics = [
     href: "./education",
     eyebrow: "Insight",
     title: "Education",
-    video: educationVideo,
+    image: educationImage,
   },
   {
     href: "./employment",
@@ -44,7 +44,7 @@ const topics = [
     href: "./housing",
     eyebrow: "Insight",
     title: "Housing",
-    video: housingVideo,
+    image: housingImage,
   },
   {
     href: "./transport",
