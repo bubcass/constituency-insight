@@ -46,7 +46,7 @@ export function principalEconomicStatusWaterfall(
   wrap.appendChild(
     waterfallSegmentsChart(segments, {
       width,
-      marginLeft: 285,
+      marginLeft: 315,
       minRowHeight: 36,
       minorShareThreshold: 0,
       xLabel: "Cumulative population",

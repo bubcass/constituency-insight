@@ -28,7 +28,7 @@
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
 <link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
-<link rel="modulepreload" href="./_import/components/people-charts.6924156a.js">
+<link rel="modulepreload" href="./_import/components/people-charts.c8681b34.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
@@ -100,18 +100,18 @@ import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 registerFile("./data/carers-2022.csv", {"name":"./data/carers-2022.csv","mimeType":"text/csv","path":"./_file/data/carers-2022.6ab35f44.csv","lastModified":1785499565093,"size":262592});
 registerFile("./data/demographics-age-2022.csv", {"name":"./data/demographics-age-2022.csv","mimeType":"text/csv","path":"./_file/data/demographics-age-2022.0c09fdf2.csv","lastModified":1784138384647,"size":1276786});
 registerFile("./data/deprivation-index-2022.csv", {"name":"./data/deprivation-index-2022.csv","mimeType":"text/csv","path":"./_file/data/deprivation-index-2022.1711b2c5.csv","lastModified":1785493915705,"size":330648});
-registerFile("./data/derived/pq-recent-by-constituency.json", {"name":"./data/derived/pq-recent-by-constituency.json","mimeType":"application/json","path":"./_file/data/derived/pq-recent-by-constituency.68b4c9bc.json","lastModified":1784230929961,"size":346091});
-registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.4e4f5d6e.json","lastModified":1785504648837,"size":1169655});
+registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.460088fe.json","lastModified":1785611614232,"size":1170187});
+registerFile("./data/derived/recent-questions.json", {"name":"./data/derived/recent-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-questions.b8be3540.json","lastModified":1785611614234,"size":1499071});
 registerFile("./data/disability-2022.csv", {"name":"./data/disability-2022.csv","mimeType":"text/csv","path":"./_file/data/disability-2022.62f2a3a3.csv","lastModified":1785493915679,"size":264329});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.79d7eb54.geojson","lastModified":1785513965574,"size":9442035});
 registerFile("./data/irish-speaking-frequency-2022.csv", {"name":"./data/irish-speaking-frequency-2022.csv","mimeType":"text/csv","path":"./_file/data/irish-speaking-frequency-2022.f8e5f252.csv","lastModified":1785491079636,"size":326336});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785515012149,"size":123367});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785597251477,"size":123367});
 registerFile("./data/principal-economic-status-2022.csv", {"name":"./data/principal-economic-status-2022.csv","mimeType":"text/csv","path":"./_file/data/principal-economic-status-2022.2e075488.csv","lastModified":1785492307919,"size":357176});
 registerFile("./media/people-walking-in-blurred.mp4", {"name":"./media/people-walking-in-blurred.mp4","mimeType":"video/mp4","path":"./_file/media/people-walking-in-blurred.e416fe30.mp4","lastModified":1784202251836,"size":5247083});
 
-define({id: "d6405588", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","downloadButton","agePyramid","generationPercentageBar","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","principalEconomicStatusWaterfall","irishSpeakerShareWaffle","ageData","economicStatusData","irishSpeakingFrequency","disabilityData","carersData","deprivationData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","irishSpeakerPopulation","disabilityProfile","carerProfile","deprivationProfile","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","nationalDisabilityTotal","nationalDisabilityShare","nationalCarerTotal","nationalCarerShare","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {downloadButton}, {agePyramid, generationPercentageBar}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {principalEconomicStatusWaterfall, irishSpeakerShareWaffle}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.d6198621.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/people-charts.6924156a.js")]);
+define({id: "0d204201", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","downloadButton","agePyramid","generationPercentageBar","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","principalEconomicStatusWaterfall","irishSpeakerShareWaffle","ageData","economicStatusData","irishSpeakingFrequency","disabilityData","carersData","deprivationData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","irishSpeakerPopulation","disabilityProfile","carerProfile","deprivationProfile","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","nationalDisabilityTotal","nationalDisabilityShare","nationalCarerTotal","nationalCarerShare","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {downloadButton}, {agePyramid, generationPercentageBar}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {principalEconomicStatusWaterfall, irishSpeakerShareWaffle}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.d6198621.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/people-charts.c8681b34.js")]);
 
 const ageData = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
 const economicStatusData = await FileAttachment("./data/principal-economic-status-2022.csv").csv({typed: true});
@@ -122,7 +122,7 @@ const deprivationData = await FileAttachment("./data/deprivation-index-2022.csv"
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("./data/members-lookup.json").json();
-const recentQuestionsByConstituency = await FileAttachment("./data/derived/pq-recent-by-constituency.json").json();
+const recentQuestionsByConstituency = await FileAttachment("./data/derived/recent-questions.json").json();
 const recentMemberContributions = await FileAttachment("./data/derived/recent-member-contributions.json").json();
 const peopleHeroVideo = await FileAttachment("./media/people-walking-in-blurred.mp4").url();
 
@@ -588,7 +588,7 @@ display(
 );
 }});
 
-define({id: "aa99bf4e", inputs: ["display","mountReactive","profileStats","deprivationProfile","metricCards","d3","differenceText","nationalStats"], body: (display,mountReactive,profileStats,deprivationProfile,metricCards,d3,differenceText,nationalStats) => {
+define({id: "1afc719d", inputs: ["display","mountReactive","profileStats","deprivationProfile","metricCards","d3","differenceText","nationalStats"], body: (display,mountReactive,profileStats,deprivationProfile,metricCards,d3,differenceText,nationalStats) => {
 display(
   mountReactive(async () => {
     const stats = profileStats();
@@ -602,7 +602,7 @@ display(
           ? {
               label: "HP deprivation index",
               value: deprivation.description,
-              note: `Score ${d3.format("+.1f")(deprivation.score)} · 0 is the national average`,
+              note: `Score ${d3.format("+.1f")(deprivation.score)} · 0 indicates the national average`,
               compactValue: true
             }
           : {
@@ -643,11 +643,11 @@ display(mountReactive(async () => generationPercentageBar(
 )));
 }});
 
-define({id: "50a027a6", inputs: ["display","mountReactive","principalEconomicStatusWaterfall","economicStatusProfile","scopeLabel","d3","economicStatusPopulation"], body: (display,mountReactive,principalEconomicStatusWaterfall,economicStatusProfile,scopeLabel,d3,economicStatusPopulation) => {
+define({id: "56909426", inputs: ["display","mountReactive","principalEconomicStatusWaterfall","economicStatusProfile","scopeLabel","d3","economicStatusPopulation"], body: (display,mountReactive,principalEconomicStatusWaterfall,economicStatusProfile,scopeLabel,d3,economicStatusPopulation) => {
 display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatusProfile(), {
   width: 1000,
   title: `Principal economic status in ${scopeLabel()}`,
-  subtitle: `Population aged 15 and over · Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
+  subtitle: `Population aged 15 and over as at Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
 })));
 }});
 
@@ -678,14 +678,14 @@ display(
 );
 }});
 
-define({id: "7ce314e0", inputs: ["display","mountReactive","irishSpeakerShareWaffle","irishSpeakerPopulation","profileStats","DEMOGRAPHICS_CHART_WIDTH","scopeLabel"], body: (display,mountReactive,irishSpeakerShareWaffle,irishSpeakerPopulation,profileStats,DEMOGRAPHICS_CHART_WIDTH,scopeLabel) => {
+define({id: "48fefb3f", inputs: ["display","mountReactive","irishSpeakerShareWaffle","irishSpeakerPopulation","profileStats","DEMOGRAPHICS_CHART_WIDTH","scopeLabel"], body: (display,mountReactive,irishSpeakerShareWaffle,irishSpeakerPopulation,profileStats,DEMOGRAPHICS_CHART_WIDTH,scopeLabel) => {
 display(mountReactive(async () => irishSpeakerShareWaffle({
   speakers: irishSpeakerPopulation(),
   population: profileStats().total
 }, {
   width: DEMOGRAPHICS_CHART_WIDTH,
   title: `Irish speakers in ${scopeLabel()}`,
-  subtitle: "Census 2022 · both sexes"
+  subtitle: "As at Census 2022"
 })));
 }});
 
@@ -726,15 +726,31 @@ display(
 );
 }});
 
-define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+define({id: "1652f1fb", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
 display(relatedResearchResource({
-  rows: [{
-    date: "2025-09-09",
-    author: "PBO",
-    authorUrl: "https://www.oireachtas.ie/pbo",
-    title: "Community Sport Facilities Fund",
-    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
-  }]
+  rows: [
+    {
+      date: "2026-07-16",
+      author: "Committee of Public Accounts",
+      authorUrl: "https://www.oireachtas.ie/en/committees/34/committee-of-public-accounts/",
+      title: "Interim Report on the National Children's Science Centre",
+      url: "https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/committee_of_public_accounts/reports/2026/2026-07-16_interim-report-on-the-national-children-s-science-centre_en.pdf"
+    },
+    {
+      date: "2026-07-15",
+      author: "L&RS",
+      authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
+      title: "Briefing: Social Welfare and Other Matters Bill",
+      url: "https://data.oireachtas.ie/ie/oireachtas/libraryResearch/2026/2026-07-15_briefing-paper-general-scheme-of-the-social-welfare-and-other-matters-bill-2026_en.pdf"
+    },
+    {
+      date: "2026-07-07",
+      author: "PBO",
+      authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/parliamentary-budget-office/",
+      title: "Distributional Analysis of Fuel Measures",
+      url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2026/2026-07-07_distributional-analysis-of-fuel-measures_en.pdf"
+    }
+  ]
 }));
 }});
 
@@ -766,70 +782,72 @@ display(mountReactive(async () => {
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
 <!-- People topic page -->
-<div class="observablehq observablehq--block"><!--:d6405588:--></div>
+<div class="observablehq observablehq--block"><!--:0d204201:--></div>
 <div class="observablehq observablehq--block"><!--:bc91cfc6:--></div>
 <div class="observablehq observablehq--block"><!--:4c9f943b:--></div>
 <div class="prose-block lead">
-  <p>Census 2022 gives a detailed view of the people living in each constituency. Choose an area to compare generations, see where its population is concentrated and explore differences between local electoral districts.</p>
+    <p>Data from the most recent census gives a detailed description of the people living in each of the <a href="https://www.oireachtas.ie/en/members/constituencies/" target="_blank" rel="noreferrer">43 Dáil constituencies</a> and the electoral districts within them.</p>
+    <p>Choose a constituency to explore overall profiles or see local detail by selecting a district.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:9f148872:--></div>
 <div class="observablehq observablehq--block"><!--:61fd8d47:--></div>
 <div class="observablehq observablehq--block"><!--:ec998a1b:--></div>
-<div class="observablehq observablehq--block"><!--:aa99bf4e:--></div>
+<div class="observablehq observablehq--block"><!--:1afc719d:--></div>
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:68ece3cb:--></div>
 </div>
 <div class="prose-block">
-  <h2>How generations are distributed</h2>
-  <p>This view combines female and male residents to show the share of the selected area's population in each ten-year age band.</p>
+  <h2>Age distribution</h2>
+  <p>The share of population in ten-year age bands.</p>
 </div>
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:c928d084:--></div>
 </div>
 <div class="prose-block prose-block--section">
-  <h2>Population by principal economic status</h2>
-  <p>The waterfall shows how each principal economic-status category contributes to the population aged 15 and over in the selected constituency or electoral district.</p>
+  <h2>Principal economic status of people</h2>
+  <p>Census data on economic status indicates whether people aged 15 and over are studying, working, looking for work, unable to work or retired.</p>
 </div>
 <div class="chart-block chart-block--wide">
-<div class="observablehq observablehq--block"><!--:50a027a6:--></div>
+<div class="observablehq observablehq--block"><!--:56909426:--></div>
 </div>
 <div class="prose-block prose-block--section">
   <h2>Disability and unpaid care</h2>
-  <p>These Census counts show people who indicated a disability alongside people providing regular unpaid care. Both measures are available for constituencies and individual electoral districts.</p>
+  <p>Explore the proportions of people who indicated a disability and the proportion providing regular unpaid care.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:f36daf14:--></div>
 <div class="prose-block prose-block--section">
-  <h2>Irish speakers as a share of the population</h2>
-  <p>The waffle compares the number of Irish speakers aged three and over with the total population of the selected constituency or electoral district.</p>
+  <h2>Irish speakers</h2>
+  <p>The proportion of the population aged three and over who indicate an ability to speak Irish.</p>
 </div>
 <div class="chart-block chart-block--wide">
-<div class="observablehq observablehq--block"><!--:7ce314e0:--></div>
+<div class="observablehq observablehq--block"><!--:48fefb3f:--></div>
 </div>
 <div class="observablehq observablehq--block"><!--:91dc20c9:--></div>
 <div class="prose-block">
-  <h2>Explore parliamentary questions</h2>
-  <p>Read the most recent parliamentary questions submitted by Deputies representing the selected constituency.</p>
+  <h2>Recent parliamentary questions</h2>
+  <p>Questions are an intrinsic part of Parliament and each year tens of thousands of questions are asked by Members.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:a5822b3a:--></div>
 </div>
 <div class="prose-block">
-  <h2>Recent contributions from local Members</h2>
-  <p>Read recent Dáil contributions from Members representing the selected constituency.</p>
+  <h2>Recent parliamentary speeches</h2>
+  <p>A fundamental part of a TD's role is to speak in the Dáil on behalf of constituents with respect to legislation and topical matters of concern.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:96f58931:--></div>
 </div>
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into the topics that are discussed across Parliament and informs TDs in their work.</p>
+  <p>Explore our latest research from the Library &amp; Research Service, the Parliamentary Budget Office and our committees.</p>
 </div>
 <div class="chart-block">
-<div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
+<div class="observablehq observablehq--block"><!--:1652f1fb:--></div>
 </div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the Irish-language dataset</a>, or visit the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
+  <p>Data collected for Census 2022 by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:4d042f9f:--></div>
 </main>

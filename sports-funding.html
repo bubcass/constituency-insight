@@ -231,15 +231,15 @@
 import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
-registerFile("./data/derived/pq-sports-related-by-constituency.json", {"name":"./data/derived/pq-sports-related-by-constituency.json","mimeType":"application/json","path":"./_file/data/derived/pq-sports-related-by-constituency.591fa9cc.json","lastModified":1776086276506,"size":281497});
-registerFile("./data/derived/recent-sports-contributions.json", {"name":"./data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-contributions.6ef69bca.json","lastModified":1784301711822,"size":44416});
+registerFile("./data/derived/recent-sports-contributions.json", {"name":"./data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-contributions.b0b8f557.json","lastModified":1785611614234,"size":45556});
+registerFile("./data/derived/recent-sports-questions.json", {"name":"./data/derived/recent-sports-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-questions.a929d57b.json","lastModified":1785611614235,"size":634636});
 registerFile("./data/derived/sports-funding-enriched.json", {"name":"./data/derived/sports-funding-enriched.json","mimeType":"application/json","path":"./_file/data/derived/sports-funding-enriched.526726eb.json","lastModified":1775934292986,"size":7985219});
 registerFile("./data/derived/waterfall-segments.json", {"name":"./data/derived/waterfall-segments.json","mimeType":"application/json","path":"./_file/data/derived/waterfall-segments.ed664633.json","lastModified":1776063491231,"size":389840});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785515012149,"size":123367});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785597251477,"size":123367});
 registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
 
-define({id: "1933cd4d", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
+define({id: "d67b8142", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
 const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/waterfall-segments-chart.12242099.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/topics/sports-funding/config.351068a5.js"), import("./_import/topics/sports-funding/transforms.9bbffe4d.js")]);
 
 
@@ -252,7 +252,7 @@ const waterfallPromise = FileAttachment(
 ).json();
 
 const pqSportsByConstituencyPromise = FileAttachment(
-  "./data/derived/pq-sports-related-by-constituency.json"
+  "./data/derived/recent-sports-questions.json"
 ).json();
 
 const recentSportsContributionsPromise = FileAttachment(
@@ -455,8 +455,8 @@ async function getRecentSportsPQsForConstituency(limit = 6) {
     getMembersArray()
   ]);
 
-  const rows = Array.isArray(grouped?.[constituency])
-    ? grouped[constituency]
+  const rows = Array.isArray(grouped)
+    ? grouped.find((entry) => entry.constituency === constituency)?.questions ?? []
     : [];
 
   const memberLookup = new Map(
@@ -1051,7 +1051,7 @@ display(
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:1933cd4d:--></div>
+<div class="observablehq observablehq--block"><!--:d67b8142:--></div>
 <div class="observablehq observablehq--block"><!--:723ddfaf:--></div>
 <div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
 <div class="prose-block">
