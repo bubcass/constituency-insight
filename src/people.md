@@ -33,7 +33,7 @@ const deprivationData = await FileAttachment("data/deprivation-index-2022.csv").
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();
-const recentQuestionsByConstituency = await FileAttachment("data/derived/pq-recent-by-constituency.json").json();
+const recentQuestionsByConstituency = await FileAttachment("data/derived/recent-questions.json").json();
 const recentMemberContributions = await FileAttachment("data/derived/recent-member-contributions.json").json();
 const peopleHeroVideo = await FileAttachment("media/people-walking-in-blurred.mp4").url();
 
@@ -435,7 +435,8 @@ display(insightsTabs("people"));
 ```
 
 <div class="prose-block lead">
-  <p>Census 2022 gives a detailed view of the people living in each constituency. Choose an area to compare generations, see where its population is concentrated and explore differences between local electoral districts.</p>
+    <p>Data from the most recent census gives a detailed description of the people living in each of the <a href="https://www.oireachtas.ie/en/members/constituencies/" target="_blank" rel="noreferrer">43 Dáil constituencies</a> and the electoral districts within them.</p>
+    <p>Choose a constituency to explore overall profiles or see local detail by selecting a district.</p>
 </div>
 
 ```js
@@ -515,7 +516,7 @@ display(
           ? {
               label: "HP deprivation index",
               value: deprivation.description,
-              note: `Score ${d3.format("+.1f")(deprivation.score)} · 0 is the national average`,
+              note: `Score ${d3.format("+.1f")(deprivation.score)} · 0 indicates the national average`,
               compactValue: true
             }
           : {
@@ -551,8 +552,8 @@ display(
 </div>
 
 <div class="prose-block">
-  <h2>How generations are distributed</h2>
-  <p>This view combines female and male residents to show the share of the selected area's population in each ten-year age band.</p>
+  <h2>Age distribution</h2>
+  <p>The share of population in ten-year age bands.</p>
 </div>
 
 <div class="chart-block chart-block--wide">
@@ -570,8 +571,8 @@ display(mountReactive(async () => generationPercentageBar(
 </div>
 
 <div class="prose-block prose-block--section">
-  <h2>Population by principal economic status</h2>
-  <p>The waterfall shows how each principal economic-status category contributes to the population aged 15 and over in the selected constituency or electoral district.</p>
+  <h2>Principal economic status of people</h2>
+  <p>Census data on economic status indicates whether people aged 15 and over are studying, working, looking for work, unable to work or retired.</p>
 </div>
 
 <div class="chart-block chart-block--wide">
@@ -580,7 +581,7 @@ display(mountReactive(async () => generationPercentageBar(
 display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatusProfile(), {
   width: 1000,
   title: `Principal economic status in ${scopeLabel()}`,
-  subtitle: `Population aged 15 and over · Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
+  subtitle: `Population aged 15 and over as at Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
 })));
 ```
 
@@ -588,7 +589,7 @@ display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatu
 
 <div class="prose-block prose-block--section">
   <h2>Disability and unpaid care</h2>
-  <p>These Census counts show people who indicated a disability alongside people providing regular unpaid care. Both measures are available for constituencies and individual electoral districts.</p>
+  <p>Explore the proportions of people who indicated a disability and the proportion providing regular unpaid care.</p>
 </div>
 
 ```js
@@ -619,8 +620,8 @@ display(
 ```
 
 <div class="prose-block prose-block--section">
-  <h2>Irish speakers as a share of the population</h2>
-  <p>The waffle compares the number of Irish speakers aged three and over with the total population of the selected constituency or electoral district.</p>
+  <h2>Irish speakers</h2>
+  <p>The proportion of the population aged three and over who indicate an ability to speak Irish.</p>
 </div>
 
 <div class="chart-block chart-block--wide">
@@ -632,7 +633,7 @@ display(mountReactive(async () => irishSpeakerShareWaffle({
 }, {
   width: DEMOGRAPHICS_CHART_WIDTH,
   title: `Irish speakers in ${scopeLabel()}`,
-  subtitle: "Census 2022 · both sexes"
+  subtitle: "As at Census 2022"
 })));
 ```
 
@@ -656,8 +657,8 @@ display(
 ```
 
 <div class="prose-block">
-  <h2>Explore parliamentary questions</h2>
-  <p>Read the most recent parliamentary questions submitted by Deputies representing the selected constituency.</p>
+  <h2>Recent parliamentary questions</h2>
+  <p>Questions are an intrinsic part of Parliament and each year tens of thousands of questions are asked by Members.</p>
 </div>
 
 <div class="chart-block">
@@ -675,8 +676,8 @@ display(
 </div>
 
 <div class="prose-block">
-  <h2>Recent contributions from local Members</h2>
-  <p>Read recent Dáil contributions from Members representing the selected constituency.</p>
+  <h2>Recent parliamentary speeches</h2>
+  <p>A fundamental part of a TD's role is to speak in the Dáil on behalf of constituents with respect to legislation and topical matters of concern.</p>
 </div>
 
 <div class="chart-block">
@@ -694,21 +695,38 @@ display(
 </div>
 
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into the topics that are discussed across Parliament and informs TDs in their work.</p>
+  <p>Explore our latest research from the Library & Research Service, the Parliamentary Budget Office and our committees.</p>
 </div>
 
 <div class="chart-block">
 
 ```js
 display(relatedResearchResource({
-  rows: [{
-    date: "2025-09-09",
-    author: "PBO",
-    authorUrl: "https://www.oireachtas.ie/pbo",
-    title: "Community Sport Facilities Fund",
-    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
-  }]
+  rows: [
+    {
+      date: "2026-07-16",
+      author: "Committee of Public Accounts",
+      authorUrl: "https://www.oireachtas.ie/en/committees/34/committee-of-public-accounts/",
+      title: "Interim Report on the National Children's Science Centre",
+      url: "https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/committee_of_public_accounts/reports/2026/2026-07-16_interim-report-on-the-national-children-s-science-centre_en.pdf"
+    },
+    {
+      date: "2026-07-15",
+      author: "L&RS",
+      authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
+      title: "Briefing: Social Welfare and Other Matters Bill",
+      url: "https://data.oireachtas.ie/ie/oireachtas/libraryResearch/2026/2026-07-15_briefing-paper-general-scheme-of-the-social-welfare-and-other-matters-bill-2026_en.pdf"
+    },
+    {
+      date: "2026-07-07",
+      author: "PBO",
+      authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/parliamentary-budget-office/",
+      title: "Distributional Analysis of Fuel Measures",
+      url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2026/2026-07-07_distributional-analysis-of-fuel-measures_en.pdf"
+    }
+  ]
 }));
 ```
 
@@ -716,7 +734,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the Irish-language dataset</a>, or visit the <a href="https://observablehq.com/d/c17308f91ec2c26a?collection=@cassdavid/constituency-insights" target="_blank" rel="noreferrer">source demographics notebook</a>.</p>
+  <p>Data collected for Census 2022 by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
 </div>
 
 ```js

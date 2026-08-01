@@ -1,8 +1,13 @@
 # Elections Explorer
 
-## Recent Dáil contributions
+## Recent parliamentary activity
 
-Run `npm run build:recent-contributions` to fetch the latest 120 days of Dáil
+Run `npm run build:parliamentary` to refresh the sitting-member lookup,
+contributions and every question feed in one pass. `npm run build` then packages
+those generated snapshots into the static site; it does not fetch parliamentary
+data itself.
+
+Run `npm run build:recent-contributions` to fetch recent Dáil
 debates from the Oireachtas API and rebuild
 `src/data/derived/recent-member-contributions.json`. Records are grouped by
 member and debate section and link to the Oireachtas `member-speech` page.
@@ -13,14 +18,31 @@ The same run also writes `recent-sports-contributions.json`, filtering the full
 the per-member limit. This keeps topic pages complete without enlarging the
 general browser resource.
 
-The `Update recent member contributions` GitHub Actions workflow runs this
-each night and commits the dataset only when its contents change. A manual
-date range can be built with:
+Run `npm run build:recent-questions` to fetch PQ Explorer's committed annual
+constituency datasets from `bubcass/pq-explorer`. One run rebuilds the general,
+sports, work, housing, transport and education question feeds from that shared
+source. Questions are limited to Deputies marked as sitting in
+`src/data/members-lookup.json`. New topic pages should add their matcher and
+output to `TOPICS` in `src/scripts/build-recent-questions.mjs` rather than
+introducing a separate question source.
+
+The `Update recent parliamentary activity` GitHub Actions workflow runs both
+refreshes each night, commits the datasets only when their contents change and
+thereby triggers a new GitHub Pages deployment. A manual contributions date
+range can be built with:
 
 ```bash
 node src/scripts/build-recent-contributions.mjs \
   --date-start 2026-07-01 \
   --date-end 2026-07-17
+```
+
+For local question-pipeline development, a PQ Explorer checkout can be used
+without downloading its GitHub snapshots:
+
+```bash
+npm run build:recent-questions -- \
+  --source-dir /path/to/pq-explorer/src/data/pq
 ```
 
 This is an [Observable Framework](https://observablehq.com/framework/) app. To install the required dependencies, run:

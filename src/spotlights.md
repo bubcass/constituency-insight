@@ -16,7 +16,7 @@ const sportsFundingVideo = await FileAttachment("media/sports-funding-hero.mp4")
 <div class="spotlights-hero">
   <p class="spotlights-hero__eyebrow">Constituency insights</p>
   <h1>Spotlights</h1>
-  <p>Detailed explorations of important local issues and public datasets, gathered in one permanent collection.</p>
+  <p>Detailed explorations of the topics that matter in constituencies.</p>
 </div>
 
 ```js
@@ -24,8 +24,9 @@ display(insightsTabs("spotlights"));
 ```
 
 <div class="prose-block spotlights-intro">
-  <h2>Explore the collection</h2>
-  <p>Each spotlight takes a closer look at a specialist topic through constituency-level data, maps and interactive filters. New spotlights can be added without removing the existing collection.</p>
+  <h2>Specialist insight, local focus</h2>
+  <p>Each spotlight is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
+  <p>With constituency and district-level data, maps and interactive filters, see beyond the headline numbers and explore how national issues affect constituents at a local level.</p>
 </div>
 
 ```js
@@ -37,14 +38,14 @@ const topics = [
     href: "./road-accidents",
     eyebrow: "Latest spotlight",
     title: "Road safety",
-    description: "Explore reported road collisions by year, severity, location and the road users involved.",
+    description: "Reported road collisions by year, severity, location and the type of road users involved.",
     image: roadSafetyImage,
   },
   {
     href: "./sports-funding",
     eyebrow: "Spotlight",
     title: "Sports funding",
-    description: "See how community sports funding has been distributed across projects, organisations and activities.",
+    description: "Community sports funding distribution across projects, organisations and activities.",
     video: sportsFundingVideo,
   },
 ];
@@ -64,7 +65,7 @@ for (const topic of topics) {
       <p class="spotlight-card__eyebrow">${topic.eyebrow}</p>
       <h2>${topic.title}</h2>
       <p>${topic.description}</p>
-      <span class="spotlight-card__action">Explore ${topic.title}<span aria-hidden="true"> →</span></span>
+      <span class="spotlight-card__action">Explore<span aria-hidden="true"> →</span></span>
     </div>
   `;
   grid.appendChild(card);

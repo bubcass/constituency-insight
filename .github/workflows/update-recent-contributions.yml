@@ -24,20 +24,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build recent contributions dataset
-        run: node src/scripts/build-recent-contributions.mjs
-
-      - name: Build recent questions dataset
-        run: node src/scripts/build-recent-questions.mjs
+      - name: Build current parliamentary activity datasets
+        run: npm run build:parliamentary
 
       - name: Commit changed dataset
         run: |
-          if git diff --quiet -- src/data/derived/recent-member-contributions.json src/data/derived/recent-sports-contributions.json src/data/derived/recent-work-contributions.json src/data/derived/recent-work-questions.json src/data/derived/recent-housing-contributions.json src/data/derived/recent-housing-questions.json src/data/derived/recent-transport-contributions.json src/data/derived/recent-transport-questions.json src/data/derived/recent-education-contributions.json src/data/derived/recent-education-questions.json; then
+          if git diff --quiet -- src/data/members-lookup.json src/data/derived/recent-member-contributions.json src/data/derived/recent-sports-contributions.json src/data/derived/recent-work-contributions.json src/data/derived/recent-questions.json src/data/derived/recent-sports-questions.json src/data/derived/recent-work-questions.json src/data/derived/recent-housing-contributions.json src/data/derived/recent-housing-questions.json src/data/derived/recent-transport-contributions.json src/data/derived/recent-transport-questions.json src/data/derived/recent-education-contributions.json src/data/derived/recent-education-questions.json; then
             echo "No parliamentary activity changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/derived/recent-member-contributions.json src/data/derived/recent-sports-contributions.json src/data/derived/recent-work-contributions.json src/data/derived/recent-work-questions.json src/data/derived/recent-housing-contributions.json src/data/derived/recent-housing-questions.json src/data/derived/recent-transport-contributions.json src/data/derived/recent-transport-questions.json src/data/derived/recent-education-contributions.json src/data/derived/recent-education-questions.json
+          git add src/data/members-lookup.json src/data/derived/recent-member-contributions.json src/data/derived/recent-sports-contributions.json src/data/derived/recent-work-contributions.json src/data/derived/recent-questions.json src/data/derived/recent-sports-questions.json src/data/derived/recent-work-questions.json src/data/derived/recent-housing-contributions.json src/data/derived/recent-housing-questions.json src/data/derived/recent-transport-contributions.json src/data/derived/recent-transport-questions.json src/data/derived/recent-education-contributions.json src/data/derived/recent-education-questions.json
           git commit -m "Update recent parliamentary activity"
           git push

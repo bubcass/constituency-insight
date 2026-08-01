@@ -36,7 +36,7 @@ const waterfallPromise = FileAttachment(
 ).json();
 
 const pqSportsByConstituencyPromise = FileAttachment(
-  "data/derived/pq-sports-related-by-constituency.json"
+  "data/derived/recent-sports-questions.json"
 ).json();
 
 const recentSportsContributionsPromise = FileAttachment(
@@ -239,8 +239,8 @@ async function getRecentSportsPQsForConstituency(limit = 6) {
     getMembersArray()
   ]);
 
-  const rows = Array.isArray(grouped?.[constituency])
-    ? grouped[constituency]
+  const rows = Array.isArray(grouped)
+    ? grouped.find((entry) => entry.constituency === constituency)?.questions ?? []
     : [];
 
   const memberLookup = new Map(

@@ -449,7 +449,7 @@ display(insightsTabs("housing"));
 ```
 
 <div class="prose-block lead">
-  <p>Data from the most recent census indicates how permanent private households are occupied and how the wider housing stock is used. Local authorities also have data on applications to build housing accommodation.<p><p>Choose a constituency for the overall profile, or select an electoral district on the map for optional local detail.</p>
+  <p>Data from the most recent census indicates how permanent private households are occupied and how the wider housing stock is used. Local authorities also have data on applications to build housing.<p><p>Choose a constituency to explore overall profiles or see local detail by selecting a district.</p>
 </div>
 
 ```js
@@ -683,7 +683,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. For aggregated areas, the vacancy rate is recalculated as vacant houses and flats divided by total housing stock rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a> or <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
+  <p>Data collected for Census 2022 by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. For aggregated areas, the vacancy rate is recalculated as vacant housing units divided by total housing stock rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a> or <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
 </div>
 
 ```js
