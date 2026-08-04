@@ -7,10 +7,10 @@
 <title>Housing | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.7549b185.css">
+<link rel="preload" as="style" href="./_import/style.ceb9ec8d.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.7549b185.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.ceb9ec8d.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -29,6 +29,7 @@
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
 <link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
+<link rel="modulepreload" href="./_import/components/hero-share.98307b19.js">
 <link rel="modulepreload" href="./_import/topics/planning-applications/config.7a8b9af0.js">
 <link rel="modulepreload" href="./_import/topics/planning-applications/transforms.72a81cff.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
@@ -234,6 +235,7 @@
 import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
+registerFile("./data/adults-living-with-parents-2022.csv", {"name":"./data/adults-living-with-parents-2022.csv","mimeType":"text/csv","path":"./_file/data/adults-living-with-parents-2022.797263e0.csv","lastModified":1785752232664,"size":277884});
 registerFile("./data/derived/planning-applications-normalized.csv", {"name":"./data/derived/planning-applications-normalized.csv","mimeType":"text/csv","path":"./_file/data/derived/planning-applications-normalized.f37f5389.csv","lastModified":1785422302664,"size":44886886});
 registerFile("./data/derived/recent-housing-contributions.json", {"name":"./data/derived/recent-housing-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-contributions.2e83f7ae.json","lastModified":1785597253612,"size":160891});
 registerFile("./data/derived/recent-housing-questions.json", {"name":"./data/derived/recent-housing-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-questions.db9dbf1f.json","lastModified":1785611653619,"size":1379014});
@@ -241,14 +243,15 @@ registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencie
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.79d7eb54.geojson","lastModified":1785513965574,"size":9442035});
 registerFile("./data/housing-stock-2022.csv", {"name":"./data/housing-stock-2022.csv","mimeType":"text/csv","path":"./_file/data/housing-stock-2022.6da7bb5d.csv","lastModified":1784298968184,"size":327013});
 registerFile("./data/housing-tenure-2022.csv", {"name":"./data/housing-tenure-2022.csv","mimeType":"text/csv","path":"./_file/data/housing-tenure-2022.142f638f.csv","lastModified":1784297322862,"size":422124});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785597251477,"size":123367});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.fd30305b.json","lastModified":1785838507780,"size":123367});
 registerFile("./media/housing.mp4", {"name":"./media/housing.mp4","mimeType":"video/mp4","path":"./_file/media/housing.3381d41e.mp4","lastModified":1784297244767,"size":3517495});
 
-define({id: "7bc0b375", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","housingData","housingStockData","planningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","planningYears","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/housing-charts.3ed36006.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/topics/planning-applications/config.7a8b9af0.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
+define({id: "c47631b5", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","housingData","housingStockData","adultsWithParentsData","planningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","planningYears","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","adultsWithParentsStats","nationalAdultsWithParentsStats","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.7443b005.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.87975180.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/housing-charts.3ed36006.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.98307b19.js"), import("./_import/topics/planning-applications/config.7a8b9af0.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
 
 const housingData = await FileAttachment("./data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("./data/housing-stock-2022.csv").csv({typed: true});
+const adultsWithParentsData = await FileAttachment("./data/adults-living-with-parents-2022.csv").csv({typed: true});
 const planningApplicationRows = await FileAttachment("./data/derived/planning-applications-normalized.csv").csv({typed: true});
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
@@ -337,6 +340,24 @@ function stockRowsForDistrict() {
   const rows = housingStockData.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
   return state.district === "all" ? rows : rows.filter((d) => d.ED_GUID === state.district);
 }
+
+function adultsWithParentsStats() {
+  const constituencyRows = adultsWithParentsData.filter(
+    (row) => row["NEW CONSTITUENCY"] === state.constituency
+  );
+  const rows = state.district === "all"
+    ? constituencyRows
+    : constituencyRows.filter((row) => row.ED_GUID === state.district);
+  const population = d3.sum(rows, (row) => Number(row["Adults aged 18+"]) || 0);
+  const count = d3.sum(rows, (row) => Number(row["Adults living with parents"]) || 0);
+  return {population, count, rate: population ? count / population : 0};
+}
+
+const nationalAdultsWithParentsStats = (() => {
+  const population = d3.sum(adultsWithParentsData, (row) => Number(row["Adults aged 18+"]) || 0);
+  const count = d3.sum(adultsWithParentsData, (row) => Number(row["Adults living with parents"]) || 0);
+  return {population, count, rate: population ? count / population : 0};
+})();
 
 function constituencyMembers() {
   return membersForConstituency(membersLookup, state.constituency);
@@ -647,10 +668,10 @@ function renderPlanningYearFilter() {
 }
 
 const HOUSING_CHART_WIDTH = 790;
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,topicPointMap,housingStockBar,housingTenureWaterfall,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,planningApplicationsTopic,buildPlanningApplicationDownloadRows,buildPlanningApplicationMetrics,filterPlanningApplications,housingData,housingStockData,planningApplicationRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentHousingContributions,housingHeroVideo,partyColorMap,TENURES,HOUSING_STOCK_CATEGORIES,planningYears,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,stockRowsForDistrict,constituencyMembers,recentConstituencyHousingQuestions,recentConstituencyHousingContributions,aggregateTenure,housingStats,housingStockStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,selectedPlanningApplications,selectedPlanningGeoJSON,planningPeriodLabel,differenceText,restoreScroll,rerender,mountReactive,mountPlanningReactive,rerenderPlanning,renderScopeControl,renderDistrictMapExplorer,renderPlanningYearFilter,HOUSING_CHART_WIDTH};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,topicPointMap,housingStockBar,housingTenureWaterfall,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,planningApplicationsTopic,buildPlanningApplicationDownloadRows,buildPlanningApplicationMetrics,filterPlanningApplications,housingData,housingStockData,adultsWithParentsData,planningApplicationRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentHousingContributions,housingHeroVideo,partyColorMap,TENURES,HOUSING_STOCK_CATEGORIES,planningYears,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,stockRowsForDistrict,adultsWithParentsStats,nationalAdultsWithParentsStats,constituencyMembers,recentConstituencyHousingQuestions,recentConstituencyHousingContributions,aggregateTenure,housingStats,housingStockStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,selectedPlanningApplications,selectedPlanningGeoJSON,planningPeriodLabel,differenceText,restoreScroll,rerender,mountReactive,mountPlanningReactive,rerenderPlanning,renderScopeControl,renderDistrictMapExplorer,renderPlanningYearFilter,HOUSING_CHART_WIDTH};
 }});
 
-define({id: "b6172074", inputs: ["housingHeroVideo","display"], outputs: ["hero"], body: (housingHeroVideo,display) => {
+define({id: "cc96da0f", inputs: ["housingHeroVideo","enhanceHeroWithShare","display"], outputs: ["hero"], body: (housingHeroVideo,enhanceHeroWithShare,display) => {
 const hero = document.createElement("div");
 hero.className = "hero housing-hero";
 hero.innerHTML = `
@@ -665,6 +686,7 @@ hero.innerHTML = `
     </div>
   </div>
 `;
+enhanceHeroWithShare(hero, {title: "Housing — Constituency Insights"});
 display(hero);
 return {hero};
 }});
@@ -738,6 +760,25 @@ display(mountReactive(async () => housingTenureWaterfall(housingStats().profile,
   title: `Housing tenure in ${scopeLabel()}`,
   subtitle: `As of Census 2022 · n = ${d3.format(",")(housingStats().households)}`
 })));
+}});
+
+define({id: "5fe8d49c", inputs: ["display","mountReactive","adultsWithParentsStats","d3","scopeLabel","differenceText","nationalAdultsWithParentsStats"], body: (display,mountReactive,adultsWithParentsStats,d3,scopeLabel,differenceText,nationalAdultsWithParentsStats) => {
+display(mountReactive(async () => {
+  const stats = adultsWithParentsStats();
+  const card = document.createElement("section");
+  card.className = "reactive-prose demographic-story-callout housing-parents-callout";
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "At a glance";
+  const heading = document.createElement("h2");
+  heading.textContent = `${d3.format(".1%")(stats.rate)} of adults in ${scopeLabel()} were living with their parents.`;
+  const detail = document.createElement("p");
+  detail.innerHTML = `<strong>${d3.format(",")(stats.count)}</strong> people aged 18 and over, as recorded in Census 2022.`;
+  const comparison = document.createElement("p");
+  comparison.innerHTML = `This is <strong>${differenceText(stats.rate - nationalAdultsWithParentsStats.rate)}</strong>; the national figure was ${d3.format(".1%")(nationalAdultsWithParentsStats.rate)}.`;
+  card.append(label, heading, detail, comparison);
+  return card;
+}, {skeleton: "text"}));
 }});
 
 define({id: "5f0e5456", inputs: ["display","mountReactive","housingStockStats","housingStockBar","HOUSING_CHART_WIDTH","scopeLabel","d3"], body: (display,mountReactive,housingStockStats,housingStockBar,HOUSING_CHART_WIDTH,scopeLabel,d3) => {
@@ -877,8 +918,8 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:7bc0b375:--></div>
-<div class="observablehq observablehq--block"><!--:b6172074:--></div>
+<div class="observablehq observablehq--block"><!--:c47631b5:--></div>
+<div class="observablehq observablehq--block"><!--:cc96da0f:--></div>
 <div class="observablehq observablehq--block"><!--:c9f292ef:--></div>
 <div class="prose-block lead">
   <p>Data from the most recent census indicates how permanent private households are occupied and how the wider housing stock is used. Local authorities also have data on applications to build housing.</p><p></p><p>Choose a constituency to explore overall profiles or see local detail by selecting a district.</p>
@@ -894,6 +935,7 @@ display(mountReactive(async () => {
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:01761bcf:--></div>
 </div>
+<div class="observablehq observablehq--block"><!--:5fe8d49c:--></div>
 <div class="prose-block">
   <h2>Housing stock use</h2>
   <p>Explore the breakdown of housing occupancy and vacancy as of the 2022 census.</p>
@@ -933,7 +975,7 @@ display(mountReactive(async () => {
 </div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Data collected for Census 2022 by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. For aggregated areas, the vacancy rate is recalculated as vacant housing units divided by total housing stock rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a> or <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. Adults living with their parents are from table F3055. For aggregated areas, percentages and vacancy rates are recalculated from their underlying counts rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a>, <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a> or <a href="https://data.cso.ie/table/F3055" target="_blank" rel="noreferrer">view the adults living with parents dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:0b7d09df:--></div>
 </main>
