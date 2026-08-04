@@ -56,13 +56,14 @@ export function constituencySelect({
     `;
 
     const select = container.querySelector("select");
-    select?.addEventListener("change", () => {
-      state.constituency = select.value;
-      onChange(state);
-    });
-
     const locateButton = container.querySelector(".constituency-location-action");
     const locateStatus = container.querySelector(".constituency-location-status");
+
+    select?.addEventListener("change", () => {
+      state.constituency = select.value;
+      if (locateStatus) locateStatus.textContent = "";
+      onChange(state);
+    });
 
     locateButton?.addEventListener("click", async () => {
       locateButton.disabled = true;
