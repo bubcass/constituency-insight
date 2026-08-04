@@ -17,6 +17,7 @@ import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
 import {createReactiveMount} from "./components/reactive-mount.js";
+import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {educationQualificationWaterfall} from "./components/education-charts.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
@@ -263,6 +264,7 @@ hero.innerHTML = `
     </div>
   </div>
 `;
+enhanceHeroWithShare(hero, {title: "Education — Constituency Insights"});
 display(hero);
 ```
 

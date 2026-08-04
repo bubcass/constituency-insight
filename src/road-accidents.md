@@ -18,6 +18,7 @@ import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
 import {createReactiveMount} from "./components/reactive-mount.js";
+import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {waterfallSegmentsChart} from "./components/waterfall-segments-chart.js";
 import {roadAccidentsTopic} from "./topics/road-accidents/config.js";
 import {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents} from "./topics/road-accidents/transforms.js";
@@ -46,14 +47,12 @@ if (typeof window !== "undefined" && !window.roadAccidentState) {
     constituency: null,
     startYear: years[0],
     endYear: years.at(-1),
-    incidentTypes: new Set(INCIDENT_TYPES),
-    roadUserChartYear: "All"
+    incidentTypes: new Set(INCIDENT_TYPES)
   };
 }
 
 const state = window.roadAccidentState;
 if (!(state.incidentTypes instanceof Set)) state.incidentTypes = new Set(INCIDENT_TYPES);
-if (state.roadUserChartYear !== "All" && !years.includes(Number(state.roadUserChartYear))) state.roadUserChartYear = "All";
 if (!years.includes(Number(state.startYear))) state.startYear = years[0];
 if (!years.includes(Number(state.endYear))) state.endYear = years.at(-1);
 if (state.startYear > state.endYear) [state.startYear, state.endYear] = [state.endYear, state.startYear];
@@ -89,12 +88,17 @@ function selectedRows() {
 }
 
 function roadUserChartRows() {
-  const chartYear = state.roadUserChartYear;
   return filterRoadAccidents(accidentRows, {
     constituency: state.constituency,
-    startYear: chartYear === "All" ? years[0] : Number(chartYear),
-    endYear: chartYear === "All" ? years.at(-1) : Number(chartYear)
+    startYear: state.startYear,
+    endYear: state.endYear
   });
+}
+
+function selectedPeriodLabel() {
+  return state.startYear === state.endYear
+    ? String(state.startYear)
+    : `${state.startYear}–${state.endYear}`;
 }
 
 function matchedMembers() {
@@ -147,7 +151,6 @@ function rerender({preserveScroll = true} = {}) {
   const x = window.scrollX;
   const y = window.scrollY;
   window.dispatchEvent(new CustomEvent("road-accidents:change"));
-  window.dispatchEvent(new CustomEvent("road-user-chart:change"));
   if (preserveScroll) restoreScroll(x, y);
 }
 
@@ -157,34 +160,6 @@ function mountReactive(renderFn, {eventName = "road-accidents:change", ...option
     destroyPrevious: true,
     ...options
   });
-}
-
-function renderSegmentedControl({label, name, options, value, onChange}) {
-  const wrap = document.createElement("div");
-  wrap.className = "segmented-control-wrap";
-  const group = document.createElement("div");
-  group.className = "segmented-control";
-  group.setAttribute("role", "radiogroup");
-  group.setAttribute("aria-label", label);
-  for (const option of options) {
-    const id = `${name}-${String(option.value).toLowerCase()}`;
-    const optionLabel = document.createElement("label");
-    optionLabel.className = "segmented-control__option";
-    optionLabel.htmlFor = id;
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.name = name;
-    input.id = id;
-    input.value = option.value;
-    input.checked = option.value === value;
-    input.addEventListener("change", () => input.checked && onChange(option.value));
-    const text = document.createElement("span");
-    text.textContent = option.label;
-    optionLabel.append(input, text);
-    group.appendChild(optionLabel);
-  }
-  wrap.appendChild(group);
-  return wrap;
 }
 
 function renderConstituencyFilter() {
@@ -322,6 +297,7 @@ hero.innerHTML = `
     </div>
   </div>
 `;
+enhanceHeroWithShare(hero, {title: "Road safety — Constituency Insights"});
 display(hero);
 ```
 
@@ -330,10 +306,8 @@ display(insightsTabs("spotlights"));
 ```
 
 <div class="prose-block lead">
-  <p>Choose a constituency, one year or a range of years, and the incident types to explore reported road collisions from 2016 to 2024. Hover over a point for casualty numbers and the road users involved.</p>
-  <p class="data-note">The source identifies the month, not the exact day. Normalized dates therefore use the first day of each month so they remain valid, sortable dates.</p>
-  <h2>At a glance</h2>
-  <p>Key figures update with the constituency, year range and incident types selected below.</p>
+  <p>The Road Safety Authority (RSA) is a statutory public body with a core road safety remit. The authority publishes data <a href="https://www.rsa.ie/road-safety/statistics/collisions" target="_blank" rel="noreferrer">on road collisions</a> indicating the location and severity of these reported collisions.</p>
+  <p>Choose a constituency to explore collision profiles or see local detail by selecting a district.</p>
 </div>
 
 ```js
@@ -383,8 +357,8 @@ display(mountReactive(async () => {
 ```
 
 <div class="prose-block">
-  <h2>Explore by road-user type</h2>
-  <p>See the people recorded in collisions as drivers, passengers, pedestrians, cyclists, motorcyclists or e-scooter/other road users. Use the filter to view one year or the combined period.</p>
+  <h2>Explore by road user type</h2>
+  <p>See the people recorded in collisions as drivers, passengers, pedestrians, cyclists, motorcyclists or e-scooter/other road users. The year slider above controls both the map and this chart.</p>
 </div>
 
 ```js
@@ -395,31 +369,16 @@ display(mountReactive(async () => {
 
   const intro = document.createElement("div");
   intro.className = "section-local-control__intro";
-  intro.innerHTML = `<p>Road-user counts are a breakdown of people involved, rather than unique incidents. The chart includes all incident severities.</p>`;
 
   const summary = document.createElement("div");
   summary.className = "section-local-control__summary";
-  const period = state.roadUserChartYear === "All" ? "all years" : state.roadUserChartYear;
   summary.innerHTML = breakdown.total
-    ? `<p><strong>Road users recorded in ${state.constituency} for ${period}:</strong> ${roadAccidentsTopic.formatCount(breakdown.total)}</p>`
+    ? `<p>Total road users involved in a recorded collision in ${state.constituency}, ${selectedPeriodLabel()}: <strong>${roadAccidentsTopic.formatCount(breakdown.total)}</strong></p>`
     : `<p>No road-user breakdown is available for this selection.</p>`;
 
-  const control = document.createElement("div");
-  control.className = "section-local-control__control section-local-control__control--centered";
-  control.appendChild(renderSegmentedControl({
-    label: "Filter road-user chart by year",
-    name: "road-user-year",
-    value: String(state.roadUserChartYear),
-    options: [{value: "All", label: "All"}, ...years.map((year) => ({value: String(year), label: String(year)}))],
-    onChange: (value) => {
-      state.roadUserChartYear = value;
-      window.dispatchEvent(new CustomEvent("road-user-chart:change"));
-    }
-  }));
-
-  wrap.append(intro, summary, control);
+  wrap.append(intro, summary);
   return wrap;
-}, {eventName: "road-user-chart:change", skeleton: "text"}));
+}, {skeleton: "text"}));
 ```
 
 <div class="chart-block chart-block--wide">
@@ -446,7 +405,7 @@ display(mountReactive(async () => {
     ariaLabel: `Road users recorded in collisions in ${state.constituency}`
   }));
   return wrap;
-}, {eventName: "road-user-chart:change"}));
+}));
 ```
 
 </div>
@@ -505,15 +464,23 @@ display(mountReactive(async () => memberContributionList({
 ```js
 display(relatedResearchResource({
   rows: [{
-    date: "2025-09-09",
-    author: "PBO",
-    authorUrl: "https://www.oireachtas.ie/pbo",
-    title: "Community Sport Facilities Fund",
-    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+    date: "2023-05-31",
+    author: "Joint Committee on Justice",
+    authorUrl: "https://www.oireachtas.ie/en/committees/33/justice/",
+    title: "Report on an Examination of Enforcement of Road Safety Offences",
+    url: "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_justice/reports/2023/2023-05-31_report-on-an-examination-of-enforcement-of-road-traffic-offences_en.pdf"
   }]
 }));
 ```
 
+</div>
+
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p><strong>Source: Road Safety Authority (RSA).</strong></p>
+  <p>Constituency Insights uses the downloadable source data published with the RSA's <a href="https://www.rsa.ie/road-safety/statistics/collisions" target="_blank" rel="noreferrer">Map of collisions</a>, retrieved on 17 July 2026. This copy covers casualty collisions from January 2016 to December 2024 and is based on collision information collected by An Garda Síochána and transferred to the RSA.</p>
+  <p>Casualty collisions are collisions in which somebody was killed, seriously injured or received a minor injury. A fatal collision is one in which a death occurs within 30 days. The RSA advises that records from 2022 onwards are provisional and subject to change. It also notes that fewer than 1% of collisions do not have co-ordinates and cannot be mapped. Hospital-derived HIPE serious-injury records are not included because collision co-ordinates are unavailable, so this map should not be treated as a complete measure of all serious road injuries.</p>
+  <p>The published collision and casualty values have not been altered. Processing standardises labels, calculates displayed totals from the published road user injury fields and spatially assigns coordinate points to the constituency and 2022 electoral-district boundaries used by this site. Of 50,554 RSA source records, 50,152 could be matched to the constituency layer and are included here. Downloads and reuse should acknowledge the Road Safety Authority and cite the source data date above. The RSA's page contains the complete <a href="https://www.rsa.ie/road-safety/statistics/collisions#" target="_blank" rel="noreferrer">definitions and conditions for using the collision data</a>.</p>
 </div>
 
 ```js

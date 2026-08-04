@@ -662,23 +662,6 @@
     }
 }
 
-.road-user-waterfall .segmented-control {
-    grid-auto-flow: row !important;
-    grid-auto-columns: unset !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    width: min(100%, 720px) !important;
-}
-
-.road-user-waterfall .segmented-control-wrap {
-    width: min(100%, 720px) !important;
-}
-
-@media (max-width: 620px) {
-    .road-user-waterfall .segmented-control {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-}
-
 /* Demographics */
 
 .demographics-hero {

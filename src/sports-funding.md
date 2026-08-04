@@ -20,6 +20,7 @@ import { insightsTabs } from "./components/insights-tabs.js";
 import { memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
 import { createReactiveMount } from "./components/reactive-mount.js";
+import { enhanceHeroWithShare } from "./components/hero-share.js";
 
 import { sportsFundingTopic } from "./topics/sports-funding/config.js";
 import {
@@ -500,6 +501,7 @@ heroWrap.innerHTML = `
   </div>
 `;
 
+enhanceHeroWithShare(heroWrap, {title: `${sportsFundingTopic.heroTitle} — Constituency Insights`});
 display(heroWrap);
 ```
 

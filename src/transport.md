@@ -16,6 +16,7 @@ import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
 import {createReactiveMount} from "./components/reactive-mount.js";
+import {enhanceHeroWithShare} from "./components/hero-share.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
@@ -223,6 +224,7 @@ hero.innerHTML = `
     </div>
   </div>
 `;
+enhanceHeroWithShare(hero, {title: "Transport — Constituency Insights"});
 display(hero);
 ```
 

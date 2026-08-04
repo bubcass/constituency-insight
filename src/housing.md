@@ -21,11 +21,13 @@ import {membersForConstituency} from "./components/member-data.js";
 import {parliamentaryQuestionList, memberContributionList} from "./components/parliamentary-activity.js";
 import {relatedResearchResource} from "./components/related-research.js";
 import {createReactiveMount} from "./components/reactive-mount.js";
+import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {planningApplicationsTopic} from "./topics/planning-applications/config.js";
 import {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications} from "./topics/planning-applications/transforms.js";
 
 const housingData = await FileAttachment("data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("data/housing-stock-2022.csv").csv({typed: true});
+const adultsWithParentsData = await FileAttachment("data/adults-living-with-parents-2022.csv").csv({typed: true});
 const planningApplicationRows = await FileAttachment("data/derived/planning-applications-normalized.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
@@ -114,6 +116,24 @@ function stockRowsForDistrict() {
   const rows = housingStockData.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
   return state.district === "all" ? rows : rows.filter((d) => d.ED_GUID === state.district);
 }
+
+function adultsWithParentsStats() {
+  const constituencyRows = adultsWithParentsData.filter(
+    (row) => row["NEW CONSTITUENCY"] === state.constituency
+  );
+  const rows = state.district === "all"
+    ? constituencyRows
+    : constituencyRows.filter((row) => row.ED_GUID === state.district);
+  const population = d3.sum(rows, (row) => Number(row["Adults aged 18+"]) || 0);
+  const count = d3.sum(rows, (row) => Number(row["Adults living with parents"]) || 0);
+  return {population, count, rate: population ? count / population : 0};
+}
+
+const nationalAdultsWithParentsStats = (() => {
+  const population = d3.sum(adultsWithParentsData, (row) => Number(row["Adults aged 18+"]) || 0);
+  const count = d3.sum(adultsWithParentsData, (row) => Number(row["Adults living with parents"]) || 0);
+  return {population, count, rate: population ? count / population : 0};
+})();
 
 function constituencyMembers() {
   return membersForConstituency(membersLookup, state.constituency);
@@ -441,6 +461,7 @@ hero.innerHTML = `
     </div>
   </div>
 `;
+enhanceHeroWithShare(hero, {title: "Housing — Constituency Insights"});
 display(hero);
 ```
 
@@ -527,6 +548,25 @@ display(mountReactive(async () => housingTenureWaterfall(housingStats().profile,
 ```
 
 </div>
+
+```js
+display(mountReactive(async () => {
+  const stats = adultsWithParentsStats();
+  const card = document.createElement("section");
+  card.className = "reactive-prose demographic-story-callout housing-parents-callout";
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "At a glance";
+  const heading = document.createElement("h2");
+  heading.textContent = `${d3.format(".1%")(stats.rate)} of adults in ${scopeLabel()} were living with their parents.`;
+  const detail = document.createElement("p");
+  detail.innerHTML = `<strong>${d3.format(",")(stats.count)}</strong> people aged 18 and over, as recorded in Census 2022.`;
+  const comparison = document.createElement("p");
+  comparison.innerHTML = `This is <strong>${differenceText(stats.rate - nationalAdultsWithParentsStats.rate)}</strong>; the national figure was ${d3.format(".1%")(nationalAdultsWithParentsStats.rate)}.`;
+  card.append(label, heading, detail, comparison);
+  return card;
+}, {skeleton: "text"}));
+```
 
 <div class="prose-block">
   <h2>Housing stock use</h2>
@@ -683,7 +723,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Data collected for Census 2022 by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. For aggregated areas, the vacancy rate is recalculated as vacant housing units divided by total housing stock rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a> or <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. Adults living with their parents are from table F3055. For aggregated areas, percentages and vacancy rates are recalculated from their underlying counts rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a>, <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a> or <a href="https://data.cso.ie/table/F3055" target="_blank" rel="noreferrer">view the adults living with parents dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
 </div>
 
 ```js

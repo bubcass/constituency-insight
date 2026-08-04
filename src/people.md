@@ -22,6 +22,7 @@ import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
 import { createReactiveMount } from "./components/reactive-mount.js";
+import { enhanceHeroWithShare } from "./components/hero-share.js";
 import { principalEconomicStatusWaterfall, irishSpeakerShareWaffle } from "./components/people-charts.js";
 
 const ageData = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
@@ -427,6 +428,7 @@ peopleHero.innerHTML = `
     </div>
   </div>
 `;
+enhanceHeroWithShare(peopleHero, {title: "People — Constituency Insights"});
 display(peopleHero);
 ```
 
@@ -734,7 +736,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Data collected for Census 2022 by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
 </div>
 
 ```js
