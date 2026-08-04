@@ -1,5 +1,13 @@
 # Elections Explorer
 
+## Transport access
+
+Run `npm run build:transport-access` to refresh the bus-stop, rail-station,
+Luas-stop and rail-network snapshot used on the transport page. The build reads the NTA NaPTAN feed and
+Tailte Éireann's Rail Network Segment feature service, assigns features to the
+site's electoral-district and constituency geography, and writes
+`src/data/derived/transport-access.json`.
+
 ## Recent parliamentary activity
 
 Run `npm run build:parliamentary` to refresh the sitting-member lookup,

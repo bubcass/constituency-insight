@@ -454,6 +454,128 @@
     margin-bottom: 1.5rem;
 }
 
+.transport-map-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: var(--space-3);
+}
+
+.transport-map-layers__label {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.86rem;
+    font-weight: 650;
+}
+
+.transport-map-layers__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.transport-map-layer {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 0.8rem;
+    border: 1.5px solid var(--border);
+    border-radius: 0;
+    background: #fffdf8;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.transport-map-layer::before {
+    display: inline-block;
+    width: 0.58rem;
+    height: 0.58rem;
+    flex: 0 0 auto;
+    margin-right: 0.42rem;
+    border-radius: 50%;
+    background: var(--layer-color);
+    content: "";
+}
+
+.transport-map-layer.is-active {
+    border-color: var(--layer-color);
+    background: color-mix(in srgb, var(--layer-color) 10%, #fffdf8);
+}
+
+.transport-map-layer:hover {
+    border-color: var(--layer-color);
+    background: color-mix(in srgb, var(--layer-color) 7%, #ebe6da);
+    box-shadow: var(--shadow-soft);
+}
+
+.transport-map-layer:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--layer-color) 35%, transparent);
+    outline-offset: 2px;
+}
+
+.transport-map-layer__count {
+    margin-left: 0.38rem;
+    color: var(--text-soft);
+    font-size: 0.76rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+.transport-map-layer__count:not(:empty)::before {
+    content: "· ";
+}
+
+.transport-access-metrics {
+    margin-top: var(--space-4);
+}
+
+.transport-access-metrics .metrics-grid {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.transport-access-metrics .metric-card {
+    flex: 1 1 0;
+}
+
+.transport-access-empty {
+    margin: 0;
+    padding: 1rem 1.05rem;
+    border-left: 3px solid var(--gold);
+    background: rgba(255, 253, 248, 0.72);
+    color: var(--text-soft);
+}
+
+.transport-access-tooltip.leaflet-tooltip {
+    border: 1px solid rgba(40, 40, 40, 0.14);
+    border-radius: 3px;
+    color: var(--text);
+    font: 0.78rem/1.35 "IBM Plex Sans", sans-serif;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 640px) {
+    .transport-map-layers__buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.35rem;
+    }
+
+    .transport-map-layer {
+        padding-inline: 0.7rem;
+    }
+}
+
 @media (max-width: 760px) {
     .employment-waffle__legend {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2789,6 +2911,10 @@ body.has-map-fullscreen {
     .metrics-grid,
     .insights-metrics-full .metrics-grid {
         grid-template-columns: 1fr;
+    }
+
+    .transport-access-metrics .metrics-grid {
+        flex-direction: column;
     }
 
     .elected-strip {

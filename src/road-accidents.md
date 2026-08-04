@@ -414,13 +414,13 @@ display(mountReactive(async () => {
 display(mountReactive(async () => memberCards({
   members: matchedMembers(),
   partyColorMap,
-  title: `Members for ${state.constituency}`
+  title: `How ${state.constituency} is represented in Parliament`
 }), {skeleton: "cards"}));
 ```
 
 <div class="prose-block">
-  <h2>Parliamentary questions about road safety</h2>
-  <p>Recent questions from Deputies in the constituency concerning road collisions, road safety, traffic offences and the safety of different road users.</p>
+  <h2>Recent parliamentary questions related to road safety</h2>
+  <p>Read recent parliamentary questions tabled by constituency TDs related to road safety matters.</p>
 </div>
 
 <div class="chart-block">
@@ -437,8 +437,8 @@ display(mountReactive(async () => parliamentaryQuestionList({
 </div>
 
 <div class="prose-block">
-  <h2>Recent road-safety contributions from local Members</h2>
-  <p>Read recent Dáil contributions about road collisions, traffic safety, dangerous driving and related issues.</p>
+  <h2>Recent speeches related to road safety</h2>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
 </div>
 
 <div class="chart-block">
@@ -455,8 +455,8 @@ display(mountReactive(async () => memberContributionList({
 </div>
 
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into road safety and related topics.</p>
 </div>
 
 <div class="chart-block">

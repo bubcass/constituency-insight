@@ -5,14 +5,43 @@ import {
   addStandardMapControls,
 } from "./leaflet-map-ui.js";
 
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function defaultPointTooltip(point) {
+  if (point.type === "station") {
+    return `<strong>${escapeHtml(point.name || "Rail station")}</strong><br>Rail station`;
+  }
+  if (point.type === "luas") {
+    return `<strong>${escapeHtml(point.name || "Luas stop")}</strong><br>Luas stop`;
+  }
+  const indicator = point.indicator ? ` · ${escapeHtml(point.indicator)}` : "";
+  return `<strong>${escapeHtml(point.name || "Bus stop")}</strong>${indicator}`;
+}
+
 export function electoralDistrictMap({
   constituencyGeoJSON,
   districtGeoJSON,
   selectedGuid = "all",
   height = 500,
   onSelect = () => {},
+  points = [],
+  lines = [],
+  enabledFeatureTypes = new Set(["bus", "station", "luas", "rail"]),
+  pointTypeStyles = {
+    bus: {color: chartColors.blue, fillColor: chartColors.blue, radius: 4},
+    station: {color: chartColors.brown, fillColor: chartColors.red, shape: "diamond"},
+    luas: {color: "#ffffff", fillColor: chartColors.purple, radius: 6, weight: 2},
+  },
+  pointTooltipHTML = defaultPointTooltip,
 } = {}) {
   let currentSelectedGuid = selectedGuid;
+  let currentFeatureTypes = new Set(enabledFeatureTypes);
   const container = document.createElement("div");
   container.className = "topic-map demographics-map";
   container.style.height = `${height}px`;
@@ -37,6 +66,26 @@ export function electoralDistrictMap({
 
     .demographics-map .leaflet-interactive {
       vector-effect: non-scaling-stroke;
+    }
+
+    .demographics-map .transport-station-marker {
+      position: relative;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: 3px solid #ffffff;
+      border-radius: 2px;
+      background: var(--marker-fill);
+      box-shadow: 0 0 0 2px var(--marker-stroke), 0 2px 6px rgba(0, 0, 0, 0.34);
+      transform: rotate(45deg);
+    }
+
+    .demographics-map .transport-station-marker::after {
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      background: #ffffff;
+      content: "";
     }
   `;
   container.appendChild(style);
@@ -114,6 +163,90 @@ export function electoralDistrictMap({
 
   districtLayer.bringToFront();
 
+  map.createPane("transportRailLines");
+  map.getPane("transportRailLines").style.zIndex = 610;
+  map.createPane("transportAccessPoints");
+  map.getPane("transportAccessPoints").style.zIndex = 620;
+  const railLayer = L.geoJSON(null, {
+    pane: "transportRailLines",
+    interactive: false,
+    style: {
+      pane: "transportRailLines",
+      color: chartColors.grey,
+      opacity: 0.56,
+      weight: 1.6,
+    },
+  }).addTo(map);
+  const pointRenderer = L.canvas({pane: "transportAccessPoints", padding: 0.5});
+  const pointLayers = new Map();
+  const pointRecords = (Array.isArray(points) ? points : [])
+    .map((point) => ({
+      ...point,
+      latitude: Number(point.latitude),
+      longitude: Number(point.longitude),
+    }))
+    .filter((point) => Number.isFinite(point.latitude) && Number.isFinite(point.longitude));
+
+  for (const point of pointRecords) {
+    if (!pointLayers.has(point.type)) pointLayers.set(point.type, L.layerGroup().addTo(map));
+    const style = pointTypeStyles[point.type] ?? {};
+    point.__marker = style.shape === "diamond"
+      ? L.marker([point.latitude, point.longitude], {
+          pane: "transportAccessPoints",
+          icon: L.divIcon({
+            className: "transport-station-div-icon",
+            html: `<span class="transport-station-marker" style="--marker-fill: ${style.fillColor}; --marker-stroke: ${style.color}" aria-hidden="true"></span>`,
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
+          }),
+        })
+      : L.circleMarker([point.latitude, point.longitude], {
+          renderer: pointRenderer,
+          pane: "transportAccessPoints",
+          radius: style.radius ?? 4.5,
+          color: style.color ?? "#4d4d4d",
+          fillColor: style.fillColor ?? style.color ?? "#777777",
+          fillOpacity: style.fillOpacity ?? 0.9,
+          opacity: 1,
+          weight: style.weight ?? 1.25,
+        });
+    point.__marker.bindTooltip(pointTooltipHTML(point), {
+      direction: "top",
+      sticky: true,
+      opacity: 0.97,
+      className: "transport-access-tooltip",
+      offset: [0, -4],
+    });
+  }
+
+  const lineRecords = (Array.isArray(lines) ? lines : [])
+    .filter((line) => line?.geometry && line.type);
+
+  function refreshFeatures() {
+    pointLayers.forEach((layer) => layer.clearLayers());
+    for (const point of pointRecords) {
+      if (!currentFeatureTypes.has(point.type)) continue;
+      if (currentSelectedGuid !== "all" && point.edGuid !== currentSelectedGuid) continue;
+      pointLayers.get(point.type)?.addLayer(point.__marker);
+    }
+
+    railLayer.clearLayers();
+    if (currentFeatureTypes.has("rail")) {
+      railLayer.addData({
+        type: "FeatureCollection",
+        features: lineRecords
+          .filter((line) => currentSelectedGuid === "all" || line.edGuid === currentSelectedGuid)
+          .map((line) => ({
+            type: "Feature",
+            properties: {id: line.id, edGuid: line.edGuid, edName: line.edName},
+            geometry: line.geometry,
+          })),
+      });
+    }
+  }
+
+  refreshFeatures();
+
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       map.invalidateSize();
@@ -144,6 +277,12 @@ export function electoralDistrictMap({
 
     if (selectedLayer) selectedLayer.bringToFront();
     else districtLayer.bringToFront();
+    refreshFeatures();
+  };
+
+  container.setEnabledFeatureTypes = (types = []) => {
+    currentFeatureTypes = new Set(types);
+    refreshFeatures();
   };
 
   container.destroy = () => {
