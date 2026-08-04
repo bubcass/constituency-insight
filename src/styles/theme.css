@@ -461,6 +461,52 @@
     margin-bottom: var(--space-3);
 }
 
+.transport-timing-control-block {
+    width: 100%;
+    max-width: var(--text-max);
+    margin: var(--space-2) auto var(--space-6);
+}
+
+.transport-timing-control-block .observablehq,
+.transport-timing-control-block .observablehq--block {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.transport-timing-control {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.transport-timing-control .segmented-control {
+    grid-auto-columns: max-content;
+}
+
+.transport-timing-strip .percentage-strip__legend {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 760px) {
+    .transport-timing-strip .percentage-strip__legend {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 440px) {
+    .transport-timing-control .segmented-control {
+        grid-auto-flow: row;
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+
+    .transport-timing-strip .percentage-strip__legend {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 .transport-map-layers__label {
     margin: 0;
     color: var(--text);

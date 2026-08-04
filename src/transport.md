@@ -19,6 +19,7 @@ import {createReactiveMount} from "./components/reactive-mount.js";
 import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {metricCards} from "./components/metric-cards.js";
 import {chartColors} from "./config/chart-palette.js";
+import {transportMeansWaterfall, commuteTimingStrip} from "./components/transport-charts.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
@@ -27,9 +28,13 @@ const membersLookup = await FileAttachment("data/members-lookup.json").json();
 const recentQuestionsByConstituency = await FileAttachment("data/derived/recent-transport-questions.json").json();
 const recentTransportContributions = await FileAttachment("data/derived/recent-transport-contributions.json").json();
 const transportAccessData = await FileAttachment("data/derived/transport-access.json").json();
+const transportCommutingData = await FileAttachment("data/transport-commuting-2022.json").json();
 const transportHeroVideo = await FileAttachment("media/dublin-quays.mp4").url();
 const transportAccessRows = Array.isArray(transportAccessData?.records) ? transportAccessData.records : [];
 const transportRailLines = Array.isArray(transportAccessData?.lines) ? transportAccessData.lines : [];
+const transportCommutingRows = Array.isArray(transportCommutingData?.records) ? transportCommutingData.records : [];
+const transportCommutingCategories = transportCommutingData?.categories ?? {means: [], departure: [], journey: []};
+const TRANSPORT_CHART_WIDTH = 790;
 const TRANSPORT_LAYERS = [
   {value: "bus", label: "Bus stops", color: chartColors.blue},
   {value: "station", label: "Rail stations", color: chartColors.red},
@@ -52,11 +57,12 @@ const partyColorMap = new Map([
 ]);
 
 if (typeof window !== "undefined" && !window.transportState) {
-  window.transportState = {constituency: null, district: "all", featureTypes: new Set(TRANSPORT_LAYERS.map((d) => d.value))};
+  window.transportState = {constituency: null, district: "all", timingView: "departure", featureTypes: new Set(TRANSPORT_LAYERS.map((d) => d.value))};
 }
 
 const state = window.transportState;
 if (!state.district) state.district = "all";
+if (!new Set(["departure", "journey"]).has(state.timingView)) state.timingView = "departure";
 if (!(state.featureTypes instanceof Set)) state.featureTypes = new Set(TRANSPORT_LAYERS.map((d) => d.value));
 const constituencies = Array.from(
   new Set(constituencyRows.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
@@ -92,6 +98,10 @@ function districtOptions() {
 function selectedDistrictName() {
   if (state.district === "all") return state.constituency;
   return districtOptions().find((d) => d.value === state.district)?.label ?? "Selected district";
+}
+
+function scopeLabel() {
+  return state.district === "all" ? state.constituency : selectedDistrictName();
 }
 
 function ensureDistrict() {
@@ -140,6 +150,97 @@ function formatKilometres(value) {
 function formatCount(value) {
   return Number(value ?? 0).toLocaleString("en-IE");
 }
+
+function formatPercent(value) {
+  return Number(value ?? 0).toLocaleString("en-IE", {style: "percent", minimumFractionDigits: 1, maximumFractionDigits: 1});
+}
+
+function percentagePointDifference(value) {
+  const points = Math.abs(Number(value ?? 0) * 100);
+  if (points < 0.05) return "in line with the national figure";
+  return `${points.toLocaleString("en-IE", {minimumFractionDigits: 1, maximumFractionDigits: 1})} percentage points ${value > 0 ? "above" : "below"} the national figure`;
+}
+
+function addArrays(left, right) {
+  const length = Math.max(left?.length ?? 0, right?.length ?? 0);
+  return Array.from({length}, (_, index) => (Number(left?.[index]) || 0) + (Number(right?.[index]) || 0));
+}
+
+function aggregateCommutingRows(rows) {
+  return rows.reduce((aggregate, row) => ({
+    means: addArrays(aggregate.means, row.means),
+    meansNotStated: aggregate.meansNotStated + (Number(row.meansNotStated) || 0),
+    meansTotal: aggregate.meansTotal + (Number(row.meansTotal) || 0),
+    departure: addArrays(aggregate.departure, row.departure),
+    departureNotStated: aggregate.departureNotStated + (Number(row.departureNotStated) || 0),
+    departureTotal: aggregate.departureTotal + (Number(row.departureTotal) || 0),
+    journey: addArrays(aggregate.journey, row.journey),
+    journeyNotStated: aggregate.journeyNotStated + (Number(row.journeyNotStated) || 0),
+    journeyTotal: aggregate.journeyTotal + (Number(row.journeyTotal) || 0)
+  }), {
+    means: [], meansNotStated: 0, meansTotal: 0,
+    departure: [], departureNotStated: 0, departureTotal: 0,
+    journey: [], journeyNotStated: 0, journeyTotal: 0
+  });
+}
+
+function selectedCommutingProfile() {
+  const rows = state.district === "all"
+    ? transportCommutingRows.filter((row) => row.constituency === state.constituency)
+    : transportCommutingRows.filter((row) => row.edGuid === state.district);
+  return aggregateCommutingRows(rows);
+}
+
+function profileRows(profile, key, shortLabels = {}) {
+  return (transportCommutingCategories[key] ?? []).map((category, index) => ({
+    ...category,
+    label: key === "means" ? displayModeLabel(category.label) : category.label,
+    headlineLabel: key === "means" ? headlineModeLabel(category.code, category.label) : category.label,
+    shortLabel: shortLabels[category.code] ?? category.label,
+    total: Number(profile?.[key]?.[index]) || 0
+  }));
+}
+
+function headlineModeLabel(code, fallback) {
+  return ({
+    F: "Walking",
+    BI: "Cycling",
+    BU: "Bus, minibus or coach",
+    TDL: "Train, DART or Luas",
+    M: "Motorcycle or scooter",
+    CD: "Driving a car",
+    CP: "Travelling as a car passenger",
+    V: "Travelling by van",
+    OTH: "Other means of travel",
+    WMFH: "Working mainly at or from home"
+  })[code] ?? displayModeLabel(fallback);
+}
+
+function displayModeLabel(label) {
+  return String(label ?? "")
+    .replace("Car Driver", "Car driver")
+    .replace("LUAS", "Luas");
+}
+
+function modeStats(profile) {
+  const rows = profileRows(profile, "means");
+  const total = rows.reduce((sum, row) => sum + row.total, 0);
+  const largest = rows.reduce((best, row) => !best || row.total > best.total ? row : best, null);
+  return {rows, total, largest, notStated: Number(profile?.meansNotStated) || 0};
+}
+
+const nationalModeStats = modeStats(transportCommutingData.national);
+const DEPARTURE_SHORT_LABELS = {
+  T1: "Before 06:30", T2: "06:30–07:00", T3: "07:01–07:30", T4: "07:31–08:00",
+  T5: "08:01–08:30", T6: "08:31–09:00", T7: "09:01–09:30", T8: "After 09:30"
+};
+const JOURNEY_SHORT_LABELS = {
+  D1: "Under 15", D2: "15–29", D3: "30–44", D4: "45–59", D5: "60–89", D6: "90+"
+};
+const JOURNEY_CARD_LABELS = {
+  D1: "Under 15 minutes", D2: "15–29 minutes", D3: "30–44 minutes",
+  D4: "45–59 minutes", D5: "60–89 minutes", D6: "90 minutes or more"
+};
 
 function recentConstituencyTransportQuestions(limit = 6) {
   const record = recentQuestionsByConstituency.find((entry) => entry.constituency === state.constituency);
@@ -191,6 +292,39 @@ function mountReactive(renderFn, options = {}) {
     eventName: "transport:change",
     ...options
   });
+}
+
+function renderTimingViewControl() {
+  const wrap = document.createElement("div");
+  wrap.className = "segmented-control-wrap transport-timing-control";
+  const group = document.createElement("div");
+  group.className = "segmented-control";
+  group.setAttribute("role", "radiogroup");
+  group.setAttribute("aria-label", "Travel timing view");
+  const options = [
+    {value: "departure", label: "Time leaving home"},
+    {value: "journey", label: "Length of journey"}
+  ];
+  for (const option of options) {
+    const label = document.createElement("label");
+    label.className = "segmented-control__option";
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "transport-timing-view";
+    input.value = option.value;
+    input.checked = state.timingView === option.value;
+    input.addEventListener("change", () => {
+      if (!input.checked) return;
+      state.timingView = option.value;
+      rerender();
+    });
+    const text = document.createElement("span");
+    text.textContent = option.label;
+    label.append(input, text);
+    group.appendChild(label);
+  }
+  wrap.appendChild(group);
+  return wrap;
 }
 
 function renderScopeControl() {
@@ -356,7 +490,7 @@ hero.innerHTML = `
     <div class="hero__content">
       <p class="hero__eyebrow">Constituency insights</p>
       <h1 class="hero__title">Transport</h1>
-      <p class="hero__subtitle">Follow recent transport questions and contributions from the Members representing each constituency.</p>
+      <p class="hero__subtitle">Explore how people in constituencies get to school and work, how long journeys take and public transport options.</p>
     </div>
   </div>
 `;
@@ -369,7 +503,8 @@ display(insightsTabs("transport"));
 ```
 
 <div class="prose-block lead">
-  <p>Choose a constituency to explore local transport access and see its current Dáil Members and their recent parliamentary activity concerning public transport, roads, rail, active travel and related issues.</p>
+  <p>Data from the most recent census indicates how people around the country get to school, work and child care, how long they spend in cars, buses and trains and what time they have to leave the house. Transport Infrastructure Ireland also maintains data on our public transport options</p>
+  <p>Choose a constituency to explore local transport profiles and access or see local detail by selecting a district.</p>
 </div>
 
 ```js
@@ -382,15 +517,17 @@ display(renderDistrictMapExplorer());
 
 ```js
 display(mountReactive(async () => {
+  const stats = modeStats(selectedCommutingProfile());
+  const nationalMatch = nationalModeStats.rows.find((row) => row.code === stats.largest?.code);
+  const localShare = stats.total > 0 ? stats.largest.total / stats.total : 0;
+  const nationalShare = nationalModeStats.total > 0 ? (nationalMatch?.total ?? 0) / nationalModeStats.total : 0;
   const note = document.createElement("div");
   note.className = "reactive-prose demographic-story-callout transport-scope-note";
   const label = document.createElement("p");
   label.className = "demographic-story-callout__label";
-  label.textContent = "Selected area";
+  label.textContent = "At a glance";
   const heading = document.createElement("h2");
-  heading.textContent = state.district === "all"
-    ? `${state.constituency} transport and representation`
-    : `${selectedDistrictName()} transport context`;
+  heading.textContent = `${stats.largest?.headlineLabel ?? "The leading mode"} is the most common way people travel to work, school, college or childcare in ${scopeLabel()}.`;
   const context = document.createElement("div");
   context.className = "demographic-scope-context";
   const scope = document.createElement("p");
@@ -409,11 +546,99 @@ display(mountReactive(async () => {
     context.appendChild(clear);
   }
   const detail = document.createElement("p");
-  detail.textContent = "The map and transport-access figures follow the selected area. Members and parliamentary activity below remain constituency-level information.";
-  note.append(label, heading, context, detail);
+  detail.innerHTML = `<strong>${formatPercent(localShare)}</strong> of people with a stated means of travel used this mode — <strong>${formatCount(stats.largest?.total)}</strong> people.`;
+  const comparison = document.createElement("p");
+  comparison.innerHTML = `This is <strong>${percentagePointDifference(localShare - nationalShare)}</strong>; the national figure was ${formatPercent(nationalShare)}.`;
+  note.append(label, heading, context, detail, comparison);
   return note;
 }, {skeleton: "text"}));
 ```
+
+```js
+display(mountReactive(async () => {
+  const profile = selectedCommutingProfile();
+  const departureRows = profileRows(profile, "departure", DEPARTURE_SHORT_LABELS);
+  const journeyRows = profileRows(profile, "journey", JOURNEY_SHORT_LABELS);
+  const departureTotal = departureRows.reduce((sum, row) => sum + row.total, 0);
+  const journeyTotal = journeyRows.reduce((sum, row) => sum + row.total, 0);
+  const largestDeparture = departureRows.reduce((best, row) => !best || row.total > best.total ? row : best, null);
+  const largestJourney = journeyRows.reduce((best, row) => !best || row.total > best.total ? row : best, null);
+  const cards = metricCards({metrics: [
+    {
+      label: "Most common time leaving home",
+      value: largestDeparture?.shortLabel ?? "—",
+      note: largestDeparture && departureTotal
+        ? `${formatPercent(largestDeparture.total / departureTotal)} of stated departure times · ${formatCount(largestDeparture.total)} people`
+        : "No stated departure times"
+    },
+    {
+      label: "Most common journey length",
+      value: JOURNEY_CARD_LABELS[largestJourney?.code] ?? largestJourney?.shortLabel ?? "—",
+      note: largestJourney && journeyTotal
+        ? `${formatPercent(largestJourney.total / journeyTotal)} of stated journey times · ${formatCount(largestJourney.total)} people`
+        : "No stated journey times",
+      compactValue: true
+    }
+  ]});
+  const wrap = document.createElement("section");
+  wrap.className = "insights-metrics-full transport-commuting-metrics";
+  wrap.appendChild(cards);
+  return wrap;
+}, {skeleton: "cards"}));
+```
+
+<div class="prose-block prose-block--section">
+  <h2>How people usually travel</h2>
+  <p>Explore the main means of travel used for the longest part of the usual journey to work, school, college or child care.</p>
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => {
+  const stats = modeStats(selectedCommutingProfile());
+  return transportMeansWaterfall(stats.rows, {
+    width: TRANSPORT_CHART_WIDTH,
+    title: `Usual means of travel in ${scopeLabel()}`,
+    subtitle: `Census 2022 · n = ${formatCount(stats.total)} stated responses`
+  });
+}));
+```
+
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>When people leave and journey time</h2>
+  <p>Departure times and journey durations for people aged five and over travelling to work, school or college indicate commuting patterns.</p>
+</div>
+
+<div class="transport-timing-control-block">
+
+```js
+display(mountReactive(async () => renderTimingViewControl()));
+```
+
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => {
+  const profile = selectedCommutingProfile();
+  const isDeparture = state.timingView === "departure";
+  const key = isDeparture ? "departure" : "journey";
+  const rows = profileRows(profile, key, isDeparture ? DEPARTURE_SHORT_LABELS : JOURNEY_SHORT_LABELS);
+  const statedTotal = rows.reduce((sum, row) => sum + row.total, 0);
+  return commuteTimingStrip(rows, {
+    title: `${isDeparture ? "Time leaving home" : "Length of journey"} in ${scopeLabel()}`,
+    subtitle: `Census 2022 · n = ${formatCount(statedTotal)} stated responses`,
+    notStated: profile[`${key}NotStated`],
+    ariaLabel: `${isDeparture ? "Usual departure time" : "Usual journey duration"} in ${scopeLabel()}`
+  });
+}));
+```
+
+</div>
 
 
 
@@ -543,6 +768,8 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p>
+  <p>Usual means of travel figures come from Census 2022 table <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T11T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">SAP2022T11T1ED</a>. The headline and waterfall use the combined work, school, college and childcare statistic. Departure-time and journey-time distributions come from tables <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T11T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">SAP2022T11T2ED</a> and <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T11T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">SAP2022T11T3ED</a>. These two distributions describe people aged five and over travelling to work, school or college and therefore have a different population base from the means-of-travel figures. They are displayed as separate rows and cannot show whether the same people fall into particular departure-time and journey-duration groups. “Not stated” responses are reported beneath the timing chart but excluded from the percentage bases.</p>
   <p>Bus-stop, rail-station and Luas-stop locations come from the National Transport Authority's <a href="https://data.gov.ie/dataset/national-public-transport-access-nodes-naptan" target="_blank" rel="noreferrer">National Public Transport Access Nodes (NaPTAN)</a> dataset. The dataset is licensed under Creative Commons Attribution 4.0 and is normally updated weekly. Bus-stop classifications BCT, BCS and BCE are included alongside RLY rail-station access areas. Luas platforms are consolidated into one point for each named GTMU stop area.</p>
   <p>Rail geometry comes from Tailte Éireann's <a href="https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/Rail_Network_Segment/FeatureServer/3" target="_blank" rel="noreferrer">Rail Network Segment feature layer</a> (© Tailte Éireann). It represents a notional centreline of the rail network rather than individual physical tracks. The displayed distance is the sum of the source lengths for segments assigned to the selected area.</p>
   <p>Bus and station co-ordinates and rail-segment midpoints are spatially assigned during the build to the 2022 electoral districts and current constituency groupings used by this site. Features that cannot be matched to an electoral district are excluded.</p>

@@ -22,6 +22,7 @@
     "build:housing-stock": "node src/scripts/build-housing-stock.mjs",
     "build:adults-with-parents": "node src/scripts/build-adults-living-with-parents.mjs",
     "build:transport-access": "node src/scripts/build-transport-access.mjs",
+    "build:transport-commuting": "node src/scripts/build-transport-commuting.mjs",
     "build:sports-funding": "node src/data/transformers/sports-funding-enriched.json.js",
     "build:road-accidents": "node src/data/transformers/road-accidents-normalized.js",
     "build:planning-applications": "node src/data/transformers/planning-applications-normalized.js",
