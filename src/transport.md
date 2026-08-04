@@ -18,8 +18,9 @@ import {relatedResearchResource} from "./components/related-research.js";
 import {createReactiveMount} from "./components/reactive-mount.js";
 import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {metricCards} from "./components/metric-cards.js";
+import {downloadButton} from "./components/download-button.js";
 import {chartColors} from "./config/chart-palette.js";
-import {transportMeansWaterfall, commuteTimingStrip} from "./components/transport-charts.js";
+import {transportMeansWaterfall, commuteTimingHeatmap} from "./components/transport-charts.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
@@ -184,11 +185,14 @@ function aggregateCommutingRows(rows) {
   });
 }
 
-function selectedCommutingProfile() {
-  const rows = state.district === "all"
+function selectedCommutingRows() {
+  return state.district === "all"
     ? transportCommutingRows.filter((row) => row.constituency === state.constituency)
     : transportCommutingRows.filter((row) => row.edGuid === state.district);
-  return aggregateCommutingRows(rows);
+}
+
+function selectedCommutingProfile() {
+  return aggregateCommutingRows(selectedCommutingRows());
 }
 
 function profileRows(profile, key, shortLabels = {}) {
@@ -241,6 +245,74 @@ const JOURNEY_CARD_LABELS = {
   D1: "Under 15 minutes", D2: "15–29 minutes", D3: "30–44 minutes",
   D4: "45–59 minutes", D5: "60–89 minutes", D6: "90 minutes or more"
 };
+
+const COMMUTING_DOWNLOAD_META = {
+  means: {measure: "Usual means of travel", table: "SAP2022T11T1ED"},
+  departure: {measure: "Usual time leaving home", table: "SAP2022T11T2ED"},
+  journey: {measure: "Usual journey duration", table: "SAP2022T11T3ED"}
+};
+
+function commutingDownloadRows() {
+  return selectedCommutingRows().flatMap((district) =>
+    Object.entries(COMMUTING_DOWNLOAD_META).flatMap(([key, meta]) => {
+      const categories = transportCommutingCategories[key] ?? [];
+      const values = district[key] ?? [];
+      const statedTotal = values.reduce((sum, value) => sum + (Number(value) || 0), 0);
+      return categories.map((category, index) => ({
+        constituency: district.constituency,
+        electoral_district: district.edName,
+        electoral_district_id: district.edGuid,
+        source_table: meta.table,
+        measure: meta.measure,
+        category_code: category.code,
+        category: category.label,
+        people: Number(values[index]) || 0,
+        percentage_of_stated_responses: statedTotal
+          ? Number((((Number(values[index]) || 0) / statedTotal) * 100).toFixed(1))
+          : 0,
+        stated_responses: statedTotal,
+        not_stated: Number(district[`${key}NotStated`]) || 0,
+        total_responses: Number(district[`${key}Total`]) || 0
+      }));
+    })
+  );
+}
+
+function accessDownloadRows() {
+  const points = selectedAccessRows().map((row) => ({
+    constituency: row.constituency,
+    electoral_district: row.edName,
+    electoral_district_id: row.edGuid,
+    feature_type: row.type,
+    feature_id: row.id,
+    feature_name: row.name,
+    indicator: row.indicator,
+    source_stop_type: row.stopType,
+    latitude: row.latitude,
+    longitude: row.longitude,
+    length_km: "",
+    geometry_geojson: ""
+  }));
+  const lines = selectedRailLines().map((line) => ({
+    constituency: line.constituency,
+    electoral_district: line.edName,
+    electoral_district_id: line.edGuid,
+    feature_type: "rail_network",
+    feature_id: line.id,
+    feature_name: "",
+    indicator: "",
+    source_stop_type: "",
+    latitude: "",
+    longitude: "",
+    length_km: Number(((Number(line.lengthMetres) || 0) / 1000).toFixed(3)),
+    geometry_geojson: JSON.stringify(line.geometry ?? null)
+  }));
+  return [...points, ...lines];
+}
+
+function scopeSlug() {
+  return scopeLabel().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
 
 function recentConstituencyTransportQuestions(limit = 6) {
   const record = recentQuestionsByConstituency.find((entry) => entry.constituency === state.constituency);
@@ -527,7 +599,7 @@ display(mountReactive(async () => {
   label.className = "demographic-story-callout__label";
   label.textContent = "At a glance";
   const heading = document.createElement("h2");
-  heading.textContent = `${stats.largest?.headlineLabel ?? "The leading mode"} is the most common way people travel to work, school, college or childcare in ${scopeLabel()}.`;
+  heading.textContent = `${stats.largest?.headlineLabel ?? "The leading mode"} is the most common way people travel to work, school, college or child care in ${scopeLabel()}.`;
   const context = document.createElement("div");
   context.className = "demographic-scope-context";
   const scope = document.createElement("p");
@@ -629,10 +701,28 @@ display(mountReactive(async () => {
   const key = isDeparture ? "departure" : "journey";
   const rows = profileRows(profile, key, isDeparture ? DEPARTURE_SHORT_LABELS : JOURNEY_SHORT_LABELS);
   const statedTotal = rows.reduce((sum, row) => sum + row.total, 0);
-  return commuteTimingStrip(rows, {
+  const markers = isDeparture
+    ? [
+        {afterCode: "T1", label: "6:30 a.m."},
+        {afterCode: "T2", label: "7 a.m."},
+        {afterCode: "T3", label: "7:30 a.m."},
+        {afterCode: "T4", label: "8 a.m."},
+        {afterCode: "T5", label: "8:30 a.m."},
+        {afterCode: "T6", label: "9 a.m."},
+        {afterCode: "T7", label: "9:30 a.m."}
+      ]
+    : [
+        {afterCode: "D1", label: "15 min"},
+        {afterCode: "D2", label: "30 min"},
+        {afterCode: "D3", label: "45 min"},
+        {afterCode: "D4", label: "60 min"},
+        {afterCode: "D5", label: "90 min"}
+      ];
+  return commuteTimingHeatmap(rows, {
     title: `${isDeparture ? "Time leaving home" : "Length of journey"} in ${scopeLabel()}`,
     subtitle: `Census 2022 · n = ${formatCount(statedTotal)} stated responses`,
     notStated: profile[`${key}NotStated`],
+    markers,
     ariaLabel: `${isDeparture ? "Usual departure time" : "Usual journey duration"} in ${scopeLabel()}`
   });
 }));
@@ -774,3 +864,23 @@ display(relatedResearchResource({
   <p>Rail geometry comes from Tailte Éireann's <a href="https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/Rail_Network_Segment/FeatureServer/3" target="_blank" rel="noreferrer">Rail Network Segment feature layer</a> (© Tailte Éireann). It represents a notional centreline of the rail network rather than individual physical tracks. The displayed distance is the sum of the source lengths for segments assigned to the selected area.</p>
   <p>Bus and station co-ordinates and rail-segment midpoints are spatially assigned during the build to the 2022 electoral districts and current constituency groupings used by this site. Features that cannot be matched to an electoral district are excluded.</p>
 </div>
+
+```js
+display(mountReactive(async () => {
+  const wrap = document.createElement("div");
+  wrap.className = "download-block transport-downloads";
+  wrap.append(
+    downloadButton(
+      commutingDownloadRows(),
+      `${scopeSlug()}-census-travel-patterns-2022.csv`,
+      {label: `Download Census travel data for ${scopeLabel()}`}
+    ),
+    downloadButton(
+      accessDownloadRows(),
+      `${scopeSlug()}-public-transport-access.csv`,
+      {label: `Download public transport access data for ${scopeLabel()}`}
+    )
+  );
+  return wrap;
+}, {skeleton: "text"}));
+```

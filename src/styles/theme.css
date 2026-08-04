@@ -485,12 +485,87 @@
     grid-auto-columns: max-content;
 }
 
-.transport-timing-strip .percentage-strip__legend {
+.transport-timing-heatmap {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+}
+
+.transport-timing-heatmap__legend {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.transport-timing-heatmap__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--timing-columns), minmax(0, 1fr));
+    gap: 2px;
+    min-height: 108px;
+}
+
+.transport-timing-heatmap__cell {
+    display: grid;
+    min-width: 0;
+    place-items: center;
+    border: 1px solid rgba(74, 70, 61, 0.1);
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.transport-timing-heatmap__cell.is-dark {
+    color: #fffdf8;
+}
+
+.transport-timing-heatmap__cell:focus-visible {
+    position: relative;
+    z-index: 1;
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+.transport-timing-heatmap__cell strong {
+    font-size: 0.9rem;
+}
+
+.transport-timing-markers {
+    padding: 0;
+}
+
+.transport-timing-markers__rail {
+    position: relative;
+    height: calc(2rem + var(--marker-tracks, 0) * 1.15rem);
+    border-top: 1px solid var(--border);
+}
+
+.transport-timing-markers__marker {
+    position: absolute;
+    top: 0;
+    display: grid;
+    justify-items: center;
+    color: var(--text-soft);
+    font-size: var(--chart-note-size);
+    line-height: 1;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.transport-timing-markers__marker i {
+    width: 1px;
+    height: calc(0.45rem + var(--marker-track, 0) * 1.15rem);
+    background: var(--text-soft);
+}
+
+.transport-timing-markers__marker b {
+    margin-top: 0.3rem;
+    font-weight: 500;
+}
+
+.transport-downloads {
+    display: grid;
+    gap: 0.75rem;
+}
+
 @media (max-width: 760px) {
-    .transport-timing-strip .percentage-strip__legend {
+    .transport-timing-heatmap__legend {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -502,8 +577,24 @@
         justify-content: center;
     }
 
-    .transport-timing-strip .percentage-strip__legend {
+    .transport-timing-heatmap__legend {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .transport-timing-heatmap__grid {
+        min-height: 82px;
+    }
+
+    .transport-timing-heatmap__cell strong {
+        font-size: 0.7rem;
+    }
+
+    .transport-timing-markers__rail {
+        --marker-tracks: 1 !important;
+    }
+
+    .transport-timing-markers__marker:nth-child(even) {
+        --marker-track: 1 !important;
     }
 }
 
@@ -1021,6 +1112,9 @@
 
 .demographic-chart__heading {
     display: flex;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.2rem 1rem;
