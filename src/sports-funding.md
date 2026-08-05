@@ -512,10 +512,6 @@ display(insightsTabs("spotlights"));
 <div class="prose-block">
   <p><a href="https://www.gov.ie/en/department-of-culture-communications-and-sport/collections/sports-capital-programme-allocations/" target="_blank">The community sports facilities fund</a>, formerly the sports capital and equipment fund, is the primary means of providing Government funding to sport and community organisations at local, regional and national level throughout the country.</p>
   <p>The programme aims to foster an integrated and planned approach to the development of sports and physical recreation facilities and assists the purchase of non-personal sports equipment. Explore the allocations across constituencies.</p>
-  <h2>At a glance</h2>
-  <p>
-    Explore how the funding has been distributed across projects, organisations and sport types around the country.
-  </p>
 </div>
 
 ```js
@@ -612,9 +608,6 @@ display(
 
 <div class="prose-block">
   <h2>Explore by sport type</h2>
-  <p>
-    Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
-  </p>
 </div>
 
 ```js
@@ -728,9 +721,9 @@ display(
 ```
 
 <div class="prose-block">
-  <h2>Explore parliamentary questions</h2>
+  <h2>Recent parliamentary questions related to sports funding</h2>
   <p>
-    Take a look at recent parliamentary questions related to sport and sports funding from Deputies in the constituency.
+      Read recent parliamentary questions tabled by constituency TDs related to sports funding.
   </p>
 </div>
 
@@ -805,9 +798,9 @@ display(
 </div>
 
 <div class="prose-block">
-  <h2>Recent sports contributions from local Members</h2>
+  <h2>Recent speeches related to sports funding</h2>
   <p>
-    Read recent Dáil contributions whose debate headings contain “sport” or “sports”.
+    Read recent contributions in Dáil Éireann by the TDs who represent the constituency.
   </p>
 </div>
 
@@ -834,8 +827,8 @@ display(
 </div>
 
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into sports funding allocations and related topics.</p>
 </div>
 
 <div class="chart-block">
@@ -852,6 +845,11 @@ display(relatedResearchResource({
 }));
 ```
 
+</div>
+
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p>Constituency Insights uses the downloadable source data published with the PBO's bespoke sports funding dataset.</p>
 </div>
 
 ```js

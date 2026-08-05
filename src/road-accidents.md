@@ -326,6 +326,11 @@ display(mountReactive(async () => {
 }, {skeleton: "cards"}));
 ```
 
+<div class="prose-block">
+  <h2>Explore the map</h2>
+  <p>Using new research from our <strong><a href="https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/use-our-research/">Library & Research Service</a></strong>, take an interactive look at what type of road collisions are reported across constituencies, their severity and where they have occurred.</p>
+</div>
+
 ```js
 display(mountReactive(async () => renderIncidentFilters(), {skeleton: "control"}));
 ```

@@ -743,6 +743,19 @@ display(renderTransportAvailabilityExplorer());
 
 ```js
 display(mountReactive(async () => {
+  const wrap = document.createElement("div");
+  wrap.className = "download-block transport-access-download";
+  wrap.appendChild(downloadButton(
+    accessDownloadRows(),
+    `${scopeSlug()}-public-transport-access.csv`,
+    {label: `Download public transport access data for ${scopeLabel()}`}
+  ));
+  return wrap;
+}, {skeleton: "text"}));
+```
+
+```js
+display(mountReactive(async () => {
   const rows = selectedAccessRows();
   const busStops = rows.filter((row) => row.type === "bus").length;
   const railStations = rows.filter((row) => row.type === "station").length;
@@ -869,18 +882,11 @@ display(relatedResearchResource({
 display(mountReactive(async () => {
   const wrap = document.createElement("div");
   wrap.className = "download-block transport-downloads";
-  wrap.append(
-    downloadButton(
-      commutingDownloadRows(),
-      `${scopeSlug()}-census-travel-patterns-2022.csv`,
-      {label: `Download Census travel data for ${scopeLabel()}`}
-    ),
-    downloadButton(
-      accessDownloadRows(),
-      `${scopeSlug()}-public-transport-access.csv`,
-      {label: `Download public transport access data for ${scopeLabel()}`}
-    )
-  );
+  wrap.appendChild(downloadButton(
+    commutingDownloadRows(),
+    `${scopeSlug()}-census-travel-patterns-2022.csv`,
+    {label: `Download travel data for ${scopeLabel()}`}
+  ));
   return wrap;
 }, {skeleton: "text"}));
 ```
