@@ -83,7 +83,16 @@ function chartWithTooltip(chart, values, tooltipHTML, { targetSelector = "rect" 
   return shell;
 }
 
-export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}) {
+function populationDotUnit(values) {
+  const maxPopulation = d3.max(values, (d) => d.population) || 1;
+  const roughUnit = maxPopulation / 150;
+  const magnitude = 10 ** Math.floor(Math.log10(Math.max(1, roughUnit)));
+  const normalized = roughUnit / magnitude;
+  const nice = normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 5 ? 5 : 10;
+  return nice * magnitude;
+}
+
+export function agePyramidWaffle(data, { width = 790, title = "", subtitle = "" } = {}) {
   const wrap = chartFrame(title, subtitle);
   const plotWidth = responsivePlotWidth(width);
   const values = data.map((d) => ({
@@ -92,10 +101,11 @@ export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}
   }));
   const max = d3.max(values, (d) => Math.abs(d.plottedPopulation)) || 1;
   const ageOrder = Array.from(new Set(values.map((d) => d.ageBand))).reverse();
+  const dotUnit = populationDotUnit(values);
 
   const chart = Plot.plot({
       width: plotWidth,
-      height: Math.max(340, Math.min(470, plotWidth * 0.52)),
+      height: Math.max(390, Math.min(500, plotWidth * 0.6)),
       marginTop: 42,
       marginRight: 24,
       marginBottom: 36,
@@ -115,20 +125,13 @@ export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}
         label: "Sex",
       },
       marks: [
-        Plot.link(values, {
-          x1: 0,
-          x2: "plottedPopulation",
-          y1: "ageBand",
-          y2: "ageBand",
-          stroke: "sex",
-          strokeWidth: 2.25,
-        }),
-        Plot.dot(values, {
+        Plot.waffleX(values, {
           x: "plottedPopulation",
           y: "ageBand",
           fill: "sex",
-          stroke: "sex",
-          r: 5,
+          unit: dotUnit,
+          gap: 1.4,
+          rx: "100%",
         }),
         Plot.ruleX([0], { stroke: chartStyle.baseline, strokeWidth: 1 }),
         Plot.rectX(values, {
@@ -142,6 +145,81 @@ export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}
       ],
     });
 
+  const chartShell = chartWithTooltip(
+    chart,
+    values,
+    (d) => `<strong>${d.sex}, age ${d.ageBand}</strong><span>${d3.format(",")(d.population)} people</span>`,
+    {targetSelector: 'g[aria-label="rect"] rect'},
+  );
+  const note = document.createElement("p");
+  note.className = "demographic-chart__note";
+  note.textContent = `Each dot represents approximately ${d3.format(",")(dotUnit)} ${dotUnit === 1 ? "person" : "people"}; hover or focus for the exact count.`;
+
+  wrap.append(chartShell, note);
+
+  return wrap;
+}
+
+// Retained as a rollback option while the dot-based pyramid is evaluated.
+export function agePyramidLollipop(data, { width = 790, title = "", subtitle = "" } = {}) {
+  const wrap = chartFrame(title, subtitle);
+  const plotWidth = responsivePlotWidth(width);
+  const values = data.map((d) => ({
+    ...d,
+    plottedPopulation: d.sex === "Female" ? -d.population : d.population,
+  }));
+  const max = d3.max(values, (d) => Math.abs(d.plottedPopulation)) || 1;
+  const ageOrder = Array.from(new Set(values.map((d) => d.ageBand))).reverse();
+
+  const chart = Plot.plot({
+    width: plotWidth,
+    height: Math.max(340, Math.min(470, plotWidth * 0.52)),
+    marginTop: 42,
+    marginRight: 24,
+    marginBottom: 36,
+    marginLeft: plotWidth < 560 ? 60 : 78,
+    style: plotStyle(),
+    x: {
+      label: null,
+      domain: [-max * 1.08, max * 1.08],
+      tickFormat: (value) => d3.format("~s")(Math.abs(value)),
+      grid: true,
+    },
+    y: { label: null, domain: ageOrder, tickSize: 0, padding: 0 },
+    color: {
+      domain: ["Female", "Male"],
+      range: [FEMALE, MALE],
+      legend: true,
+      label: "Sex",
+    },
+    marks: [
+      Plot.link(values, {
+        x1: 0,
+        x2: "plottedPopulation",
+        y1: "ageBand",
+        y2: "ageBand",
+        stroke: "sex",
+        strokeWidth: 2.25,
+      }),
+      Plot.dot(values, {
+        x: "plottedPopulation",
+        y: "ageBand",
+        fill: "sex",
+        stroke: "sex",
+        r: 5,
+      }),
+      Plot.ruleX([0], { stroke: chartStyle.baseline, strokeWidth: 1 }),
+      Plot.rectX(values, {
+        x1: (d) => d.sex === "Female" ? -max * 1.08 : 0,
+        x2: (d) => d.sex === "Female" ? 0 : max * 1.08,
+        y: "ageBand",
+        fill: "transparent",
+        insetTop: 1,
+        insetBottom: 1,
+      }),
+    ],
+  });
+
   wrap.appendChild(
     chartWithTooltip(
       chart,
@@ -153,6 +231,9 @@ export function agePyramid(data, { width = 790, title = "", subtitle = "" } = {}
 
   return wrap;
 }
+
+// Change this alias to agePyramidLollipop for an immediate rollback.
+export const agePyramid = agePyramidWaffle;
 
 export function generationPercentageBar(data, { width = 790, title = "", subtitle = "" } = {}) {
   return percentageStripChart(

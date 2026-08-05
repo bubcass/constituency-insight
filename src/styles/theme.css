@@ -1218,6 +1218,13 @@
   outline: none;
 }
 
+.demographic-chart__note {
+    margin: 0.35rem 0 0;
+    color: var(--text-soft);
+    font-size: var(--chart-note-size);
+    line-height: 1.4;
+}
+
 .demographics-map {
     width: 100%;
     min-height: 360px;
