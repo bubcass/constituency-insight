@@ -21,7 +21,7 @@
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
-<link rel="modulepreload" href="./_import/components/topic-point-map.0470735b.js">
+<link rel="modulepreload" href="./_import/components/topic-point-map.4dc7dbe9.js">
 <link rel="modulepreload" href="./_import/components/waterfall-segments-chart.12242099.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/insights-tabs.e25d43f8.js">
@@ -36,7 +36,8 @@
 <link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.4fd45fb1.js">
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
-<link rel="modulepreload" href="./_npm/@turf/turf@7.3.4/55001c14.js">
+<link rel="modulepreload" href="./_npm/@turf/bbox@7.3.4/59288137.js">
+<link rel="modulepreload" href="./_npm/@turf/buffer@7.3.4/3c35ceae.js">
 <link rel="modulepreload" href="./_import/config/chart-style.e62386e1.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
@@ -71,146 +72,17 @@
 <link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
 <link rel="modulepreload" href="./_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
 <link rel="modulepreload" href="./_npm/@turf/invariant@7.3.4/0f53e08e.js">
-<link rel="modulepreload" href="./_npm/@turf/along@7.3.4/0339bb0c.js">
-<link rel="modulepreload" href="./_npm/@turf/angle@7.3.4/d6e93734.js">
-<link rel="modulepreload" href="./_npm/@turf/area@7.3.4/d6ba3661.js">
-<link rel="modulepreload" href="./_npm/@turf/bbox@7.3.4/59288137.js">
-<link rel="modulepreload" href="./_npm/@turf/bbox-clip@7.3.4/279783d9.js">
-<link rel="modulepreload" href="./_npm/@turf/bbox-polygon@7.3.4/d090b42f.js">
-<link rel="modulepreload" href="./_npm/@turf/bearing@7.3.4/2c3cb3af.js">
-<link rel="modulepreload" href="./_npm/@turf/bezier-spline@7.3.4/af2a1e1b.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-clockwise@7.3.4/f56a1f23.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-concave@7.3.4/ac213575.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-contains@7.3.4/40cb139a.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-crosses@7.3.4/37253b2f.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-disjoint@7.3.4/109c8144.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-equal@7.3.4/1b98d814.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-intersects@7.3.4/56313654.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-overlap@7.3.4/22eeb52c.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-parallel@7.3.4/11af2be4.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-point-on-line@7.3.4/e06f93aa.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-touches@7.3.4/c76af439.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-valid@7.3.4/0635f4d4.js">
-<link rel="modulepreload" href="./_npm/@turf/boolean-within@7.3.4/e5a6c9d3.js">
-<link rel="modulepreload" href="./_npm/@turf/buffer@7.3.4/3c35ceae.js">
-<link rel="modulepreload" href="./_npm/@turf/center@7.3.4/5fce4a03.js">
-<link rel="modulepreload" href="./_npm/@turf/center-mean@7.3.4/7d8480b0.js">
-<link rel="modulepreload" href="./_npm/@turf/center-median@7.3.4/47c7783a.js">
-<link rel="modulepreload" href="./_npm/@turf/center-of-mass@7.3.4/7539982e.js">
-<link rel="modulepreload" href="./_npm/@turf/centroid@7.3.4/b840a8be.js">
-<link rel="modulepreload" href="./_npm/@turf/circle@7.3.4/8fa375c0.js">
-<link rel="modulepreload" href="./_npm/@turf/clean-coords@7.3.4/e25962d8.js">
-<link rel="modulepreload" href="./_npm/@turf/clone@7.3.4/9edb039d.js">
-<link rel="modulepreload" href="./_npm/@turf/clusters@7.3.4/aa32c187.js">
-<link rel="modulepreload" href="./_npm/@turf/clusters-dbscan@7.3.4/d127999d.js">
-<link rel="modulepreload" href="./_npm/@turf/clusters-kmeans@7.3.4/56b76352.js">
-<link rel="modulepreload" href="./_npm/@turf/collect@7.3.4/5394bbcf.js">
-<link rel="modulepreload" href="./_npm/@turf/combine@7.3.4/49610389.js">
-<link rel="modulepreload" href="./_npm/@turf/concave@7.3.4/5a19d16e.js">
-<link rel="modulepreload" href="./_npm/@turf/convex@7.3.4/86e63121.js">
-<link rel="modulepreload" href="./_npm/@turf/destination@7.3.4/1a8912b6.js">
-<link rel="modulepreload" href="./_npm/@turf/difference@7.3.4/03002d55.js">
-<link rel="modulepreload" href="./_npm/@turf/dissolve@7.3.4/0ea055c1.js">
-<link rel="modulepreload" href="./_npm/@turf/distance@7.3.4/58cbc6ef.js">
-<link rel="modulepreload" href="./_npm/@turf/distance-weight@7.3.4/6fe5ffae.js">
-<link rel="modulepreload" href="./_npm/@turf/ellipse@7.3.4/ffbd434b.js">
-<link rel="modulepreload" href="./_npm/@turf/envelope@7.3.4/f7105862.js">
-<link rel="modulepreload" href="./_npm/@turf/explode@7.3.4/84a7a349.js">
-<link rel="modulepreload" href="./_npm/@turf/flatten@7.3.4/d27faef4.js">
-<link rel="modulepreload" href="./_npm/@turf/flip@7.3.4/4adca565.js">
-<link rel="modulepreload" href="./_npm/@turf/geojson-rbush@7.3.4/112d6764.js">
-<link rel="modulepreload" href="./_npm/@turf/great-circle@7.3.4/1571ecd0.js">
-<link rel="modulepreload" href="./_npm/@turf/hex-grid@7.3.4/a166e175.js">
-<link rel="modulepreload" href="./_npm/@turf/interpolate@7.3.4/9e96ae2a.js">
-<link rel="modulepreload" href="./_npm/@turf/intersect@7.3.4/d41bed0e.js">
-<link rel="modulepreload" href="./_npm/@turf/isobands@7.3.4/3e052809.js">
-<link rel="modulepreload" href="./_npm/@turf/isolines@7.3.4/c2ea7f2a.js">
-<link rel="modulepreload" href="./_npm/@turf/kinks@7.3.4/858bdddc.js">
-<link rel="modulepreload" href="./_npm/@turf/length@7.3.4/307c22ef.js">
-<link rel="modulepreload" href="./_npm/@turf/line-arc@7.3.4/1eaa469e.js">
-<link rel="modulepreload" href="./_npm/@turf/line-chunk@7.3.4/3428e424.js">
-<link rel="modulepreload" href="./_npm/@turf/line-intersect@7.3.4/6e46e428.js">
-<link rel="modulepreload" href="./_npm/@turf/line-offset@7.3.4/150a6e87.js">
-<link rel="modulepreload" href="./_npm/@turf/line-overlap@7.3.4/234a5889.js">
-<link rel="modulepreload" href="./_npm/@turf/line-segment@7.3.4/653449bf.js">
-<link rel="modulepreload" href="./_npm/@turf/line-slice@7.3.4/6dbfea17.js">
-<link rel="modulepreload" href="./_npm/@turf/line-slice-along@7.3.4/dbb48690.js">
-<link rel="modulepreload" href="./_npm/@turf/line-split@7.3.4/12716ae3.js">
-<link rel="modulepreload" href="./_npm/@turf/line-to-polygon@7.3.4/a256f5a3.js">
-<link rel="modulepreload" href="./_npm/@turf/mask@7.3.4/ea7f6c76.js">
 <link rel="modulepreload" href="./_npm/@turf/meta@7.3.4/1244e006.js">
-<link rel="modulepreload" href="./_npm/@turf/midpoint@7.3.4/e846d23f.js">
-<link rel="modulepreload" href="./_npm/@turf/moran-index@7.3.4/d6db1439.js">
-<link rel="modulepreload" href="./_npm/@turf/nearest-neighbor-analysis@7.3.4/c40f2a2d.js">
-<link rel="modulepreload" href="./_npm/@turf/nearest-point@7.3.4/b0def124.js">
-<link rel="modulepreload" href="./_npm/@turf/nearest-point-on-line@7.3.4/f3d65758.js">
-<link rel="modulepreload" href="./_npm/@turf/nearest-point-to-line@7.3.4/413c09fe.js">
-<link rel="modulepreload" href="./_npm/@turf/planepoint@7.3.4/762f3097.js">
-<link rel="modulepreload" href="./_npm/@turf/point-grid@7.3.4/d535ab83.js">
-<link rel="modulepreload" href="./_npm/@turf/point-on-feature@7.3.4/e1549de5.js">
-<link rel="modulepreload" href="./_npm/@turf/points-within-polygon@7.3.4/4c0fdb0f.js">
-<link rel="modulepreload" href="./_npm/@turf/point-to-line-distance@7.3.4/9468cd88.js">
-<link rel="modulepreload" href="./_npm/@turf/point-to-polygon-distance@7.3.4/71e32478.js">
-<link rel="modulepreload" href="./_npm/@turf/polygonize@7.3.4/d242e9df.js">
-<link rel="modulepreload" href="./_npm/@turf/polygon-smooth@7.3.4/1988776c.js">
-<link rel="modulepreload" href="./_npm/@turf/polygon-tangents@7.3.4/0e8c663d.js">
-<link rel="modulepreload" href="./_npm/@turf/polygon-to-line@7.3.4/0407b4f2.js">
-<link rel="modulepreload" href="./_npm/@turf/projection@7.3.4/0357785f.js">
-<link rel="modulepreload" href="./_npm/@turf/quadrat-analysis@7.3.4/6dfd8fe8.js">
-<link rel="modulepreload" href="./_npm/@turf/random@7.3.4/e1c02534.js">
-<link rel="modulepreload" href="./_npm/@turf/rectangle-grid@7.3.4/319b93f0.js">
-<link rel="modulepreload" href="./_npm/@turf/rewind@7.3.4/ca4e1bc6.js">
-<link rel="modulepreload" href="./_npm/@turf/rhumb-bearing@7.3.4/b4be7393.js">
-<link rel="modulepreload" href="./_npm/@turf/rhumb-destination@7.3.4/29240aa5.js">
-<link rel="modulepreload" href="./_npm/@turf/rhumb-distance@7.3.4/b9e69516.js">
-<link rel="modulepreload" href="./_npm/@turf/sample@7.3.4/61fe6c9c.js">
-<link rel="modulepreload" href="./_npm/@turf/sector@7.3.4/fb974eec.js">
-<link rel="modulepreload" href="./_npm/@turf/shortest-path@7.3.4/730a78b4.js">
-<link rel="modulepreload" href="./_npm/@turf/simplify@7.3.4/ab1b252b.js">
-<link rel="modulepreload" href="./_npm/@turf/square@7.3.4/fc331bad.js">
-<link rel="modulepreload" href="./_npm/@turf/square-grid@7.3.4/d0281a63.js">
-<link rel="modulepreload" href="./_npm/@turf/standard-deviational-ellipse@7.3.4/d221cfa8.js">
-<link rel="modulepreload" href="./_npm/@turf/tag@7.3.4/b7cf3522.js">
-<link rel="modulepreload" href="./_npm/@turf/tesselate@7.3.4/ed0cc787.js">
-<link rel="modulepreload" href="./_npm/@turf/tin@7.3.4/bb8c6138.js">
-<link rel="modulepreload" href="./_npm/@turf/transform-rotate@7.3.4/18675ed7.js">
-<link rel="modulepreload" href="./_npm/@turf/transform-scale@7.3.4/666a2700.js">
-<link rel="modulepreload" href="./_npm/@turf/transform-translate@7.3.4/54d20bb5.js">
-<link rel="modulepreload" href="./_npm/@turf/triangle-grid@7.3.4/1c463adb.js">
-<link rel="modulepreload" href="./_npm/@turf/truncate@7.3.4/db2edfb0.js">
-<link rel="modulepreload" href="./_npm/@turf/union@7.3.4/a3d529db.js">
-<link rel="modulepreload" href="./_npm/@turf/unkink-polygon@7.3.4/4c2e29bf.js">
-<link rel="modulepreload" href="./_npm/@turf/voronoi@7.3.4/51590525.js">
+<link rel="modulepreload" href="./_npm/@turf/center@7.3.4/5fce4a03.js">
+<link rel="modulepreload" href="./_npm/@turf/jsts@2.7.2/ae450af2.js">
+<link rel="modulepreload" href="./_npm/d3-geo@1.7.1/e060ca58.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
 <link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
 <link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
 <link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
 <link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
-<link rel="modulepreload" href="./_npm/geojson-equality-ts@1.0.2/214e60d7.js">
-<link rel="modulepreload" href="./_npm/@turf/jsts@2.7.2/ae450af2.js">
-<link rel="modulepreload" href="./_npm/d3-geo@1.7.1/e060ca58.js">
-<link rel="modulepreload" href="./_npm/kdbush@4.0.2/42d735f7.js">
-<link rel="modulepreload" href="./_npm/geokdbush@2.1.0/2f565311.js">
-<link rel="modulepreload" href="./_npm/skmeans@0.9.7/9649a959.js">
-<link rel="modulepreload" href="./_npm/rbush@3.0.1/1ce3aa4f.js">
-<link rel="modulepreload" href="./_npm/topojson-client@3.1.0/edd9ee95.js">
-<link rel="modulepreload" href="./_npm/topojson-server@3.0.1/e681b2be.js">
-<link rel="modulepreload" href="./_npm/concaveman@1.2.1/bab7a7b0.js">
-<link rel="modulepreload" href="./_npm/polyclip-ts@0.16.8/c7396230.js">
-<link rel="modulepreload" href="./_npm/arc@0.2.0/60c20533.js">
-<link rel="modulepreload" href="./_npm/sweepline-intersections@1.5.0/1fa93ac9.js">
-<link rel="modulepreload" href="./_npm/fast-deep-equal@3.1.3/33012ac6.js">
-<link rel="modulepreload" href="./_npm/earcut@2.2.4/a130da3d.js">
-<link rel="modulepreload" href="./_npm/d3-voronoi@1.1.2/bfec861e.js">
-<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
 <link rel="modulepreload" href="./_npm/d3-array@1.2.4/a2c25531.js">
-<link rel="modulepreload" href="./_npm/tinyqueue@3.0.0/c6964f6e.js">
-<link rel="modulepreload" href="./_npm/quickselect@2.0.0/3173efc6.js">
-<link rel="modulepreload" href="./_npm/tinyqueue@2.0.3/46a53a68.js">
-<link rel="modulepreload" href="./_npm/point-in-polygon@1.1.0/ed68720b.js">
-<link rel="modulepreload" href="./_npm/robust-predicates@2.0.4/umd/orient2d.min.js.0b81abd8.js">
-<link rel="modulepreload" href="./_npm/bignumber.js@9.3.1/031d311e.js">
-<link rel="modulepreload" href="./_npm/splaytree-ts@1.0.2/8a48eb63.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
 
     <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
     <script>
@@ -225,6 +97,34 @@
         meta.content = "width=device-width, initial-scale=1";
         document.head.appendChild(meta);
       }
+
+      (() => {
+        const retryParameter = "__module_retry";
+        const moduleFailure = /importing a module script failed|failed to fetch dynamically imported module|error loading dynamically imported module/i;
+        let retryStarted = false;
+
+        const retryOnce = () => {
+          const url = new URL(window.location.href);
+          if (retryStarted || url.searchParams.has(retryParameter)) return;
+          retryStarted = true;
+          url.searchParams.set(retryParameter, Date.now().toString());
+          window.location.replace(url);
+        };
+
+        window.addEventListener("error", (event) => {
+          const target = event.target;
+          const failedModuleResource =
+            (target instanceof HTMLScriptElement && target.type === "module") ||
+            (target instanceof HTMLLinkElement && target.rel === "modulepreload");
+          const message = event.error?.message || event.message || "";
+          if (failedModuleResource || moduleFailure.test(String(message))) retryOnce();
+        }, true);
+
+        window.addEventListener("unhandledrejection", (event) => {
+          const message = event.reason?.message || event.reason || "";
+          if (moduleFailure.test(String(message))) retryOnce();
+        });
+      })();
     </script>
   
 <script type="module">
@@ -241,7 +141,7 @@ registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json",
 registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
 
 define({id: "287e4dde", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
-const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/topic-point-map.0470735b.js"), import("./_import/components/waterfall-segments-chart.12242099.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.98307b19.js"), import("./_import/topics/sports-funding/config.351068a5.js"), import("./_import/topics/sports-funding/transforms.9bbffe4d.js")]);
+const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/topic-point-map.4dc7dbe9.js"), import("./_import/components/waterfall-segments-chart.12242099.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.98307b19.js"), import("./_import/topics/sports-funding/config.351068a5.js"), import("./_import/topics/sports-funding/transforms.9bbffe4d.js")]);
 
 
 const sportsFundingPromise = FileAttachment(
@@ -1076,7 +976,7 @@ display(
 </div>
 <div class="observablehq observablehq--block"><!--:b9d8b073:--></div>
 <div class="prose-block">
-  <h2>Recent parliamentary questions related to sports funding</h2>
+  <h2>Recent questions related to sports funding</h2>
   <p>
       Read recent parliamentary questions tabled by constituency TDs related to sports funding.
   </p>
