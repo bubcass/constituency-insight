@@ -7,10 +7,10 @@
 <title>Housing | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.260c11f4.css">
+<link rel="preload" as="style" href="./_import/style.fd09de54.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.260c11f4.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.fd09de54.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -781,15 +781,24 @@ display(mountReactive(async () => memberContributionList({
 }), {skeleton: "table"}));
 }});
 
-define({id: "47827d60", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+define({id: "e7047649", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
 display(relatedResearchResource({
-  rows: [{
+  rows: [
+    {
+      date: "2025-03-19",
+      author: "L&RS",
+      authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
+      title: "Tackling homelessness",
+      url: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/research-matters/2025-03-19-tackling-homelessness/"
+    },
+    {
     date: "2025-02-25",
     author: "L&RS",
     authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
     title: "Capacity constraints and Ireland's housing supply",
     url: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/research-matters/2025-02-25-capacity-constraints-and-irelands-housing-supply/"
-  }]
+  }
+  ]
 }));
 }});
 
@@ -871,7 +880,7 @@ display(mountReactive(async () => {
   <p>Our research and analysis takes a deep dive into housing and related topics.</p>
 </div>
 <div class="chart-block">
-<div class="observablehq observablehq--block"><!--:47827d60:--></div>
+<div class="observablehq observablehq--block"><!--:e7047649:--></div>
 </div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>

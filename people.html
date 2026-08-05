@@ -7,10 +7,10 @@
 <title>People | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.260c11f4.css">
+<link rel="preload" as="style" href="./_import/style.fd09de54.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.260c11f4.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.fd09de54.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -137,9 +137,10 @@ registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/
 registerFile("./data/irish-speaking-frequency-2022.csv", {"name":"./data/irish-speaking-frequency-2022.csv","mimeType":"text/csv","path":"./_file/data/irish-speaking-frequency-2022.f8e5f252.csv","lastModified":1785491079636,"size":326336});
 registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785920590309,"size":123367});
 registerFile("./data/principal-economic-status-2022.csv", {"name":"./data/principal-economic-status-2022.csv","mimeType":"text/csv","path":"./_file/data/principal-economic-status-2022.2e075488.csv","lastModified":1785492307919,"size":357176});
+registerFile("./data/renewable-energy-households-2022.csv", {"name":"./data/renewable-energy-households-2022.csv","mimeType":"text/csv","path":"./_file/data/renewable-energy-households-2022.9c970adc.csv","lastModified":1785930409231,"size":299752});
 registerFile("./media/people-walking-in-blurred.mp4", {"name":"./media/people-walking-in-blurred.mp4","mimeType":"video/mp4","path":"./_file/media/people-walking-in-blurred.e416fe30.mp4","lastModified":1784202251836,"size":5247083});
 
-define({id: "50da859a", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","downloadButton","agePyramid","generationPercentageBar","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","principalEconomicStatusWaterfall","irishSpeakerShareWaffle","ageData","economicStatusData","irishSpeakingFrequency","disabilityData","carersData","deprivationData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","irishSpeakerPopulation","disabilityProfile","carerProfile","deprivationProfile","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","nationalDisabilityTotal","nationalDisabilityShare","nationalCarerTotal","nationalCarerShare","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
+define({id: "90c1947a", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","downloadButton","agePyramid","generationPercentageBar","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","principalEconomicStatusWaterfall","irishSpeakerShareWaffle","ageData","economicStatusData","irishSpeakingFrequency","disabilityData","carersData","renewableEnergyHouseholdsData","deprivationData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","irishSpeakerPopulation","disabilityProfile","carerProfile","renewableEnergyHouseholdProfile","deprivationProfile","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","nationalDisabilityTotal","nationalDisabilityShare","nationalCarerTotal","nationalCarerShare","nationalRenewableEnergyHouseholdProfile","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
 const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {downloadButton}, {agePyramid, generationPercentageBar}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {principalEconomicStatusWaterfall, irishSpeakerShareWaffle}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.d6198621.js"), import("./_import/components/electoral-district-map.960d5603.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.98307b19.js"), import("./_import/components/people-charts.c8681b34.js")]);
 
 const ageData = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
@@ -147,6 +148,7 @@ const economicStatusData = await FileAttachment("./data/principal-economic-statu
 const irishSpeakingFrequency = await FileAttachment("./data/irish-speaking-frequency-2022.csv").csv({typed: true});
 const disabilityData = await FileAttachment("./data/disability-2022.csv").csv({typed: true});
 const carersData = await FileAttachment("./data/carers-2022.csv").csv({typed: true});
+const renewableEnergyHouseholdsData = await FileAttachment("./data/renewable-energy-households-2022.csv").csv({typed: true});
 const deprivationData = await FileAttachment("./data/deprivation-index-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
@@ -277,6 +279,15 @@ function carerProfile() {
   );
   const population = profileStats().total;
   return {count, population, share: population > 0 ? count / population : 0};
+}
+
+function renewableEnergyHouseholdProfile(rows = rowsForSelectedArea(renewableEnergyHouseholdsData)) {
+  const count = d3.sum(
+    rows,
+    (row) => Number(row["Households with at least one renewable energy source"]) || 0
+  );
+  const households = d3.sum(rows, (row) => Number(row["All households"]) || 0);
+  return {count, households, share: households > 0 ? count / households : 0};
 }
 
 function deprivationProfile() {
@@ -520,6 +531,7 @@ const nationalCarerTotal = d3.sum(
   (row) => Number(row.Carers) || 0
 );
 const nationalCarerShare = nationalCarerTotal / nationalStats.total;
+const nationalRenewableEnergyHouseholdProfile = renewableEnergyHouseholdProfile(renewableEnergyHouseholdsData);
 
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
@@ -528,7 +540,7 @@ function differenceText(value) {
 }
 
 const DEMOGRAPHICS_CHART_WIDTH = 790;
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,memberCards,membersForConstituency,downloadButton,agePyramid,generationPercentageBar,electoralDistrictMap,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,principalEconomicStatusWaterfall,irishSpeakerShareWaffle,ageData,economicStatusData,irishSpeakingFrequency,disabilityData,carersData,deprivationData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentMemberContributions,peopleHeroVideo,partyColorMap,SEXES,AGE_BANDS,ECONOMIC_STATUSES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,rowsForSelectedArea,economicStatusProfile,economicStatusPopulation,irishSpeakerPopulation,disabilityProfile,carerProfile,deprivationProfile,constituencyMembers,recentConstituencyQuestions,recentConstituencyContributions,cleanConstituencyName,selectedConstituencyGeoJSON,aggregateAge,combineSexes,districtOptions,selectedDistrictName,scopeLabel,scopeDescription,ensureDistrict,restoreScrollThroughLayout,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,profileStats,nationalStats,nationalDisabilityTotal,nationalDisabilityShare,nationalCarerTotal,nationalCarerShare,differenceText,DEMOGRAPHICS_CHART_WIDTH};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,memberCards,membersForConstituency,downloadButton,agePyramid,generationPercentageBar,electoralDistrictMap,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,principalEconomicStatusWaterfall,irishSpeakerShareWaffle,ageData,economicStatusData,irishSpeakingFrequency,disabilityData,carersData,renewableEnergyHouseholdsData,deprivationData,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentMemberContributions,peopleHeroVideo,partyColorMap,SEXES,AGE_BANDS,ECONOMIC_STATUSES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,rowsForSelectedArea,economicStatusProfile,economicStatusPopulation,irishSpeakerPopulation,disabilityProfile,carerProfile,renewableEnergyHouseholdProfile,deprivationProfile,constituencyMembers,recentConstituencyQuestions,recentConstituencyContributions,cleanConstituencyName,selectedConstituencyGeoJSON,aggregateAge,combineSexes,districtOptions,selectedDistrictName,scopeLabel,scopeDescription,ensureDistrict,restoreScrollThroughLayout,rerender,mountReactive,renderScopeControl,renderDistrictMapExplorer,profileStats,nationalStats,nationalDisabilityTotal,nationalDisabilityShare,nationalCarerTotal,nationalCarerShare,nationalRenewableEnergyHouseholdProfile,differenceText,DEMOGRAPHICS_CHART_WIDTH};
 }});
 
 define({id: "14f4fc8e", inputs: ["peopleHeroVideo","enhanceHeroWithShare","display"], outputs: ["peopleHero"], body: (peopleHeroVideo,enhanceHeroWithShare,display) => {
@@ -681,6 +693,32 @@ display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatu
 })));
 }});
 
+define({id: "1591ffd2", inputs: ["display","mountReactive","renewableEnergyHouseholdProfile","d3","scopeLabel","differenceText","nationalRenewableEnergyHouseholdProfile"], body: (display,mountReactive,renewableEnergyHouseholdProfile,d3,scopeLabel,differenceText,nationalRenewableEnergyHouseholdProfile) => {
+display(
+  mountReactive(async () => {
+    const renewable = renewableEnergyHouseholdProfile();
+    const card = document.createElement("section");
+    card.className = "reactive-prose demographic-story-callout";
+
+    const label = document.createElement("p");
+    label.className = "demographic-story-callout__label";
+    label.textContent = "At a glance";
+
+    const heading = document.createElement("h2");
+    heading.textContent = `${d3.format(".1%")(renewable.share)} of households in ${scopeLabel()} had at least one renewable energy source.`;
+
+    const detail = document.createElement("p");
+    detail.innerHTML = `<strong>${d3.format(",")(renewable.count)}</strong> of ${d3.format(",")(renewable.households)} households, as recorded in Census 2022.`;
+
+    const comparison = document.createElement("p");
+    comparison.innerHTML = `This is <strong>${differenceText(renewable.share - nationalRenewableEnergyHouseholdProfile.share)}</strong>; the national figure was ${d3.format(".1%")(nationalRenewableEnergyHouseholdProfile.share)}.`;
+
+    card.append(label, heading, detail, comparison);
+    return card;
+  }, {skeleton: "text"})
+);
+}});
+
 define({id: "f36daf14", inputs: ["display","mountReactive","disabilityProfile","carerProfile","d3","differenceText","nationalDisabilityShare","nationalCarerShare","metricCards"], body: (display,mountReactive,disabilityProfile,carerProfile,d3,differenceText,nationalDisabilityShare,nationalCarerShare,metricCards) => {
 display(
   mountReactive(async () => {
@@ -812,7 +850,7 @@ display(mountReactive(async () => {
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
 <!-- People topic page -->
-<div class="observablehq observablehq--block"><!--:50da859a:--></div>
+<div class="observablehq observablehq--block"><!--:90c1947a:--></div>
 <div class="observablehq observablehq--block"><!--:14f4fc8e:--></div>
 <div class="observablehq observablehq--block"><!--:4c9f943b:--></div>
 <div class="prose-block lead">
@@ -840,6 +878,7 @@ display(mountReactive(async () => {
 <div class="chart-block chart-block--wide">
 <div class="observablehq observablehq--block"><!--:56909426:--></div>
 </div>
+<div class="observablehq observablehq--block"><!--:1591ffd2:--></div>
 <div class="prose-block prose-block--section">
   <h2>Disability and unpaid care</h2>
   <p>Explore the proportions of people who indicated a disability and the proportion providing regular unpaid care.</p>
@@ -877,7 +916,7 @@ display(mountReactive(async () => {
 </div>
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Household renewable-energy figures are from table SAP2022T6T10ED; the card divides households with at least one renewable energy source by all households, including households for which renewable-energy status was not stated. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T10ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the household renewable-energy dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:4d042f9f:--></div>
 </main>
