@@ -15,6 +15,9 @@ import { metricCards } from "./components/metric-cards.js";
 import { downloadButton } from "./components/download-button.js";
 import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { employmentWaffle } from "./components/employment-charts.js";
+import { principalEconomicStatusWaterfall } from "./components/people-charts.js";
+import { percentageStripChart } from "./components/percentage-strip-chart.js";
+import { chartColors } from "./config/chart-palette.js";
 import { memberCards } from "./components/member-cards.js";
 import { membersForConstituency } from "./components/member-data.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
@@ -23,6 +26,10 @@ import { createReactiveMount } from "./components/reactive-mount.js";
 import { enhanceHeroWithShare } from "./components/hero-share.js";
 
 const employmentData = await FileAttachment("data/employment-industry-2022.csv").csv({typed: true});
+const occupationData = await FileAttachment("data/employment-occupation-2022.csv").csv({typed: true});
+const economicStatusData = await FileAttachment("data/principal-economic-status-2022.csv").csv({typed: true});
+const workingFromHomeData = await FileAttachment("data/working-from-home-2022.csv").csv({typed: true});
+const householdIncomeData = await FileAttachment("data/household-income-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();
@@ -55,11 +62,36 @@ const INDUSTRIES = [
   "Other"
 ];
 
+const OCCUPATIONS = [
+  "Managers, Directors and Senior Officials",
+  "Professional Occupations",
+  "Associate Professional and Technical Occupations",
+  "Administrative and Secretarial Occupations",
+  "Skilled Trades Occupations",
+  "Caring, Leisure and Other Service Occupations",
+  "Sales and Customer Service Occupations",
+  "Process, Plant and Machine Operatives",
+  "Elementary Occupations"
+];
+
+const ECONOMIC_STATUSES = [
+  "At work",
+  "Looking for first regular job",
+  "Short term unemployed",
+  "Long term unemployed",
+  "Student",
+  "Looking after home/family",
+  "Retired",
+  "Unable to work due to permanent sickness or disability",
+  "Other"
+];
+
 if (typeof window !== "undefined" && !window.employmentState) {
-  window.employmentState = {constituency: null, district: "all"};
+  window.employmentState = {constituency: null, district: "all", profileView: "industry"};
 }
 
 const state = window.employmentState;
+if (!new Set(["industry", "occupation"]).has(state.profileView)) state.profileView = "industry";
 const constituencies = Array.from(
   new Set(employmentData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, "en"));
@@ -84,6 +116,30 @@ function rowsForConstituency() {
 function rowsForDistrict() {
   const rows = rowsForConstituency();
   return state.district === "all" ? rows : rows.filter((d) => d.ED_GUID === state.district);
+}
+
+function occupationRowsForDistrict() {
+  const rows = occupationData.filter((d) => d["NEW CONSTITUENCY"] === state.constituency);
+  return state.district === "all" ? rows : rows.filter((d) => d.ED_GUID === state.district);
+}
+
+function rowsForSelectedArea(data) {
+  return data.filter((d) =>
+    d["NEW CONSTITUENCY"] === state.constituency &&
+    (state.district === "all" || d.ED_GUID === state.district)
+  );
+}
+
+function economicStatusProfile() {
+  const rows = rowsForSelectedArea(economicStatusData);
+  return ECONOMIC_STATUSES.map((economicStatus) => ({
+    economicStatus,
+    total: d3.sum(rows, (row) => Number(row[economicStatus]) || 0)
+  }));
+}
+
+function economicStatusPopulation() {
+  return d3.sum(rowsForSelectedArea(economicStatusData), (row) => Number(row.Total) || 0);
 }
 
 function constituencyMembers() {
@@ -125,6 +181,13 @@ function aggregateEmployment(rows = rowsForDistrict()) {
   }));
 }
 
+function aggregateOccupations(rows = occupationRowsForDistrict()) {
+  return OCCUPATIONS.map((occupation) => ({
+    sector: occupation,
+    total: d3.sum(rows, (row) => Number(row[`${occupation} (Both Sexes)`]) || 0)
+  }));
+}
+
 function employmentStats(rows = rowsForDistrict()) {
   const profile = aggregateEmployment(rows);
   const total = d3.sum(profile, (d) => d.total) || 1;
@@ -139,7 +202,46 @@ function employmentStats(rows = rowsForDistrict()) {
   };
 }
 
+function workingFromHomeStats(rows = rowsForSelectedArea(workingFromHomeData)) {
+  const worksFromHome = d3.sum(rows, (row) => Number(row["Persons who work from home"]) || 0);
+  const neverWorksFromHome = d3.sum(rows, (row) => Number(row["Persons who never work from home"]) || 0);
+  const notStated = d3.sum(rows, (row) => Number(row["Work From Home status - Not stated"]) || 0);
+  const stated = worksFromHome + neverWorksFromHome;
+  return {worksFromHome, neverWorksFromHome, notStated, stated, share: stated ? worksFromHome / stated : 0};
+}
+
+function labourForceStats(rows = rowsForSelectedArea(economicStatusData)) {
+  const atWork = d3.sum(rows, (row) => Number(row["At work"]) || 0);
+  const firstJob = d3.sum(rows, (row) => Number(row["Looking for first regular job"]) || 0);
+  const shortTerm = d3.sum(rows, (row) => Number(row["Short term unemployed"]) || 0);
+  const longTerm = d3.sum(rows, (row) => Number(row["Long term unemployed"]) || 0);
+  const unemployed = firstJob + shortTerm + longTerm;
+  const labourForce = atWork + unemployed;
+  return {
+    atWork,
+    firstJob,
+    shortTerm,
+    longTerm,
+    unemployed,
+    labourForce,
+    unemploymentRate: labourForce ? unemployed / labourForce : 0
+  };
+}
+
+function selectedDistrictHouseholdIncome() {
+  if (state.district === "all") return null;
+  const row = householdIncomeData.find((d) => d.ED_GUID === state.district);
+  if (!row) return null;
+  return {
+    median: Number(row["Median Gross Household Income"]) || 0,
+    mean: Number(row["Mean Gross Household Income"]) || 0,
+    nationalMedian: Number(row["Ireland Median Gross Household Income"]) || 0,
+    nationalMean: Number(row["Ireland Mean Gross Household Income"]) || 0
+  };
+}
+
 const nationalStats = employmentStats(employmentData);
+const nationalWorkingFromHomeStats = workingFromHomeStats(workingFromHomeData);
 
 function districtOptions() {
   return rowsForConstituency()
@@ -170,10 +272,16 @@ function selectedConstituencyGeoJSON() {
   };
 }
 
-function differenceText(value) {
+function differenceText(value, comparison = "national profile") {
   const points = Math.abs(value * 100).toFixed(1);
-  if (Math.abs(value) < 0.001) return "in line with the national profile";
-  return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the national profile`;
+  if (Math.abs(value) < 0.001) return `in line with the ${comparison}`;
+  return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the ${comparison}`;
+}
+
+function currencyDifferenceText(value, comparison) {
+  const difference = value - comparison;
+  if (Math.abs(difference) < 1) return "in line with the national figure";
+  return `€${d3.format(",.0f")(Math.abs(difference))} ${difference > 0 ? "above" : "below"} the national figure`;
 }
 
 function restoreScroll(x, y) {
@@ -216,6 +324,39 @@ function renderScopeControl() {
       prompt: true
     })
   }));
+  return wrap;
+}
+
+function renderProfileViewControl() {
+  const wrap = document.createElement("div");
+  wrap.className = "segmented-control-wrap employment-profile-control";
+  const group = document.createElement("div");
+  group.className = "segmented-control";
+  group.setAttribute("role", "radiogroup");
+  group.setAttribute("aria-label", "Employment profile view");
+  const options = [
+    {value: "industry", label: "Industry profile"},
+    {value: "occupation", label: "Occupation profile"}
+  ];
+  for (const option of options) {
+    const label = document.createElement("label");
+    label.className = "segmented-control__option";
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "employment-profile-view";
+    input.value = option.value;
+    input.checked = state.profileView === option.value;
+    input.addEventListener("change", () => {
+      if (!input.checked) return;
+      state.profileView = option.value;
+      rerender();
+    });
+    const text = document.createElement("span");
+    text.textContent = option.label;
+    label.append(input, text);
+    group.appendChild(label);
+  }
+  wrap.appendChild(group);
   return wrap;
 }
 
@@ -285,7 +426,7 @@ display(insightsTabs("employment"));
 ```
 
 <div class="prose-block lead">
-  <p>Census 2022 shows where people at work in each constituency are employed. Choose a constituency for the overall industry profile, or select an electoral district on the map for optional local detail.</p>
+  <p>Data from the most recent census indicates where people around the country work and what they do. Choose a constituency to explore work and industry profiles or see local detail by selecting a district.</p>
 </div>
 
 ```js
@@ -333,9 +474,10 @@ display(mountReactive(async () => {
 ```js
 display(mountReactive(async () => {
   const stats = employmentStats();
+  const homeStats = workingFromHomeStats();
   const cards = metricCards({metrics: [
     {label: "People at work", value: d3.format(",")(stats.total), note: "Census 2022"},
-    {label: "Largest sector", value: stats.largest.sector, note: `${d3.format(".1%")(stats.largest.total / stats.total)} of people at work`},
+    {label: "Works from home", value: d3.format(".1%")(homeStats.share), note: differenceText(homeStats.share - nationalWorkingFromHomeStats.share, "national figure")},
     {label: "Professional services", value: d3.format(".1%")(stats.professionalServicesShare), note: differenceText(stats.professionalServicesShare - nationalStats.professionalServicesShare)},
     {label: "Production and construction", value: d3.format(".1%")(stats.productionShare), note: differenceText(stats.productionShare - nationalStats.productionShare)}
   ]});
@@ -346,21 +488,110 @@ display(mountReactive(async () => {
 }, {skeleton: "cards"}));
 ```
 
-<div class="prose-block">
-  <h2>Overall industry profile</h2>
+<div class="prose-block prose-block--section">
+  <h2>What people do</h2>
+  <p>Census data on economic status indicates whether people aged 15 and over are studying, working, looking for work, unable to work or retired.</p>
 </div>
 
 <div class="chart-block chart-block--wide">
 
 ```js
-display(mountReactive(async () => employmentWaffle(employmentStats().profile, {
-  width: EMPLOYMENT_CHART_WIDTH,
-  title: `Industry profile for ${scopeLabel()}`,
-  subtitle: `Census 2022 · n = ${d3.format(",")(employmentStats().total)}`
-}), {skeleton: "cards"}));
+display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatusProfile(), {
+  width: 1000,
+  title: `Principal economic status in ${scopeLabel()}`,
+  subtitle: `Population aged 15 and over as at Census 2022 · n = ${d3.format(",")(economicStatusPopulation())}`
+})));
 ```
 
 </div>
+
+<div class="prose-block">
+  <h2>Work profile</h2>
+  <p>Take a look at the type of industries where people work and the type or roles that workers fill.</p>
+</div>
+
+<div class="employment-profile-control-block">
+
+```js
+display(mountReactive(async () => renderProfileViewControl()));
+```
+
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => {
+  const isIndustry = state.profileView === "industry";
+  const profile = isIndustry ? employmentStats().profile : aggregateOccupations();
+  const total = d3.sum(profile, (d) => d.total);
+  return employmentWaffle(profile, {
+    width: EMPLOYMENT_CHART_WIDTH,
+    title: `${isIndustry ? "Industry" : "Occupation"} profile for ${scopeLabel()}`,
+    subtitle: `Census 2022 · n = ${d3.format(",")(total)}${isIndustry ? "" : " stated responses"}`,
+    populationContext: isIndustry ? "people at work" : "people at work or unemployed with a stated occupation",
+    note: isIndustry
+      ? "Each dot represents 1% of people at work in the selected area."
+      : "Each dot represents 1% of people at work or unemployed with a stated occupation in the selected area."
+  });
+}, {skeleton: "cards"}));
+```
+
+</div>
+
+```js
+display(mountReactive(async () => {
+  const income = selectedDistrictHouseholdIncome();
+  if (!income) return document.createDocumentFragment();
+
+  const card = document.createElement("section");
+  card.className = "reactive-prose demographic-story-callout";
+
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "At a glance";
+
+  const heading = document.createElement("h2");
+  heading.textContent = `Gross median household income in ${scopeLabel()} was €${d3.format(",.0f")(income.median)}.`;
+
+  const detail = document.createElement("p");
+  detail.innerHTML = `Gross mean household income was <strong>€${d3.format(",.0f")(income.mean)}</strong> in 2022.`;
+
+  const comparison = document.createElement("p");
+  comparison.innerHTML = `The median was <strong>${currencyDifferenceText(income.median, income.nationalMedian)}</strong> (€${d3.format(",.0f")(income.nationalMedian)} nationally); the mean was <strong>${currencyDifferenceText(income.mean, income.nationalMean)}</strong> (€${d3.format(",.0f")(income.nationalMean)} nationally).`;
+
+  card.append(label, heading, detail, comparison);
+  return card;
+}, {skeleton: "text"}));
+```
+
+<div class="prose-block">
+  <h2>Labour force status as of Census 2022</h2>
+  <p>Census 2022 provides a snapshot of the proportions of populations employed and those seeking working as of April 2022. The latter includes first-time job seekers and people in short- or long-term unemployment. People outside the labour force are not included.</p><p>The CSO maintains current employment data<a href="https://www.cso.ie/en/statistics/labourmarket/" target="_blank" rel="noreferrer">, including monthly unemployment and live register information</a>.</p>
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => {
+  const stats = labourForceStats();
+  return percentageStripChart([
+    {category: "At work", total: stats.atWork, color: chartColors.blue},
+    {category: "Unemployed", total: stats.unemployed, color: chartColors.red}
+  ], {
+    width: EMPLOYMENT_CHART_WIDTH,
+    title: `Census 2022 labour force status in ${scopeLabel()}`,
+    subtitle: `Census 2022 · n = ${d3.format(",")(stats.labourForce)}`,
+    itemLabel: "people",
+    shareLabel: "of the labour force",
+    noteHtml: `Each stripe represents approximately 1% of the Census-defined labour force. People outside the labour force are excluded. <strong>Census 2022 unemployment rate: ${d3.format(".1%")(stats.unemploymentRate)}</strong>`,
+    ariaLabel: `Census 2022 labour-force status in ${scopeLabel()}`
+  });
+}, {skeleton: "cards"}));
+```
+
+</div>
+
 
 ```js
 display(mountReactive(async () => memberCards({
@@ -378,8 +609,8 @@ display(mountReactive(async () => memberCards({
 ```
 
 <div class="prose-block">
-  <h2>Recent parliamentary questions about work</h2>
-  <p>Read recent questions containing “work”, “employment” or “jobs” from Deputies representing the selected constituency.</p>
+  <h2>Recent parliamentary questions related to work</h2>
+  <p>Read recent parliamentary questions tabled by constituency TDs related to work and employment.</p>
 </div>
 
 <div class="chart-block">
@@ -396,8 +627,8 @@ display(mountReactive(async () => parliamentaryQuestionList({
 </div>
 
 <div class="prose-block">
-  <h2>Recent contributions about work</h2>
-  <p>Read recent Dáil contributions containing “work”, “employment” or “jobs” from local Members.</p>
+  <h2>Recent speeches related to work</h2>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
 </div>
 
 <div class="chart-block">
@@ -414,8 +645,8 @@ display(mountReactive(async () => memberContributionList({
 </div>
 
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into employment and related topics.</p>
 </div>
 
 <div class="chart-block">
@@ -423,12 +654,19 @@ display(mountReactive(async () => memberContributionList({
 ```js
 display(relatedResearchResource({
   rows: [{
-    date: "2025-09-09",
+    date: "2026-07-15",
+    author: "L&RS",
+    authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
+    title: "Briefing: Social Welfare and Other Matters Bill 2026",
+    url: "https://data.oireachtas.ie/ie/oireachtas/libraryResearch/2026/2026-07-15_briefing-paper-general-scheme-of-the-social-welfare-and-other-matters-bill-2026_en.pdf"
+  },
+  {
+    date: "2025-10-03",
     author: "PBO",
-    authorUrl: "https://www.oireachtas.ie/pbo",
-    title: "Community Sport Facilities Fund",
-    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
-  }]
+    authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/parliamentary-budget-office/",
+    title: "Costing Analysis on Increasing Employers PRSI Rate",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-10-03_costing-analysis-on-increasing-employers-prsi-rate_en.pdf"
+  },]
 }));
 ```
 
@@ -436,7 +674,8 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Industry counts are from Census 2022 table SAP2022T14T1ED and describe persons at work by broad industry group. Electoral-division values are joined by CSO GUID and aggregated to the current Dáil constituency boundaries. <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T14T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the source CSO dataset</a>.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p>
+  <p>Industry counts are from Census 2022 table SAP2022T14T1ED and describe persons at work by broad industry group. Occupation counts are from table SAP2022T13T1ED and describe people at work or unemployed; “Not stated” responses are excluded from the occupation profile. Principal economic and labour-force status comes from table SAP2022T8T1ED. Its Census unemployment rate is the number seeking a first job or in short- or long-term unemployment divided by the labour force. Working-from-home counts come from table SAP2022T11T4ED, with “Not stated” excluded from the card percentage. ED household-income estimates are from the CSO Frontier Series table GPIIA01 and are shown only when an ED is selected because the table does not contain Dáil constituency estimates. They use available administrative income data, exclude households with no administrative income and are not the official SILC household-income measure. The datasets are joined by CSO electoral-division GUID and, except for income, aggregated to the current Dáil constituency boundaries.</p><p>View the source CSO datasets for <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T14T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">industry</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T13T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">occupation</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">principal economic and labour-force status</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T11T4ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">working from home</a> and <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/GPIIA01/JSON-stat/2.0/en" target="_blank" rel="noreferrer">ED household income</a>.</p>
 </div>
 
 ```js

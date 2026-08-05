@@ -709,13 +709,22 @@ display(mountReactive(async () => memberContributionList({
 
 ```js
 display(relatedResearchResource({
-  rows: [{
+  rows: [
+    {
+      date: "2025-03-19",
+      author: "L&RS",
+      authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
+      title: "Tackling homelessness",
+      url: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/research-matters/2025-03-19-tackling-homelessness/"
+    },
+    {
     date: "2025-02-25",
     author: "L&RS",
     authorUrl: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/",
     title: "Capacity constraints and Ireland's housing supply",
     url: "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/library-and-research-service/research-matters/2025-02-25-capacity-constraints-and-irelands-housing-supply/"
-  }]
+  }
+  ]
 }));
 ```
 
