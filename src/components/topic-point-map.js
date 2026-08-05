@@ -1,6 +1,9 @@
 import L from "npm:leaflet";
 import * as d3 from "npm:d3";
-import * as turf from "npm:@turf/turf";
+import bbox from "npm:@turf/bbox";
+import booleanPointInPolygon from "npm:@turf/boolean-point-in-polygon";
+import buffer from "npm:@turf/buffer";
+import {featureCollection, multiPolygon, point, polygon} from "npm:@turf/helpers";
 import { chartPalette } from "../config/chart-palette.js";
 import {
   addStandardBaseLayer,
@@ -56,10 +59,10 @@ function polygonsOnly(input) {
         (obj.geometries || []).forEach((g) => visit(g, props));
         break;
       case "Polygon":
-        out.push(turf.polygon(obj.coordinates, props));
+        out.push(polygon(obj.coordinates, props));
         break;
       case "MultiPolygon":
-        out.push(turf.multiPolygon(obj.coordinates, props));
+        out.push(multiPolygon(obj.coordinates, props));
         break;
     }
   };
@@ -191,7 +194,7 @@ export function topicPointMap({
 
   if (bufferMetres > 0 && polygons.length) {
     polygons = polygons.map((p) =>
-      turf.buffer(p, bufferMetres, { units: "meters" }),
+      buffer(p, bufferMetres, { units: "meters" }),
     );
   }
 
@@ -231,9 +234,7 @@ export function topicPointMap({
   }
 
   if (polygons.length) {
-    const [minX, minY, maxX, maxY] = turf.bbox(
-      turf.featureCollection(polygons),
-    );
+    const [minX, minY, maxX, maxY] = bbox(featureCollection(polygons));
 
     records = records.filter((d) => {
       if (
@@ -244,8 +245,8 @@ export function topicPointMap({
       ) {
         return false;
       }
-      const pt = turf.point([d.__lon, d.__lat]);
-      return polygons.some((poly) => turf.booleanPointInPolygon(pt, poly));
+      const pt = point([d.__lon, d.__lat]);
+      return polygons.some((poly) => booleanPointInPolygon(pt, poly));
     });
   }
 
@@ -725,9 +726,9 @@ export function topicPointMap({
         userLayer.addLayer(accuracyCircle);
         userLayer.addLayer(userMarker);
 
-        const pt = turf.point([lon, lat]);
+        const pt = point([lon, lat]);
         const inside = polygons.some((poly) =>
-          turf.booleanPointInPolygon(pt, poly),
+          booleanPointInPolygon(pt, poly),
         );
 
         map.flyTo(latlng, Math.max(map.getZoom(), 13), {

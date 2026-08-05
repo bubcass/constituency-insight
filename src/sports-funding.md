@@ -721,7 +721,7 @@ display(
 ```
 
 <div class="prose-block">
-  <h2>Recent parliamentary questions related to sports funding</h2>
+  <h2>Recent questions related to sports funding</h2>
   <p>
       Read recent parliamentary questions tabled by constituency TDs related to sports funding.
   </p>
