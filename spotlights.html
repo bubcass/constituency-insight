@@ -7,9 +7,9 @@
 <title>Spotlights | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.fd09de54.css">
+<link rel="preload" as="style" href="./_import/style.85d25f4f.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.fd09de54.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.85d25f4f.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
@@ -63,22 +63,24 @@
 import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
+registerFile("./media/health-services-hero.jpg", {"name":"./media/health-services-hero.jpg","mimeType":"image/jpeg","path":"./_file/media/health-services-hero.bc59fb4e.jpg","lastModified":1785964191909,"size":1841587});
 registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg","mimeType":"image/jpeg","path":"./_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
 registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
 
-define({id: "748c40c8", inputs: ["FileAttachment"], outputs: ["insightsTabs","roadSafetyImage","sportsFundingVideo"], body: async (FileAttachment) => {
+define({id: "11e2ed23", inputs: ["FileAttachment"], outputs: ["insightsTabs","roadSafetyImage","healthServicesImage","sportsFundingVideo"], body: async (FileAttachment) => {
 const {insightsTabs} = await import("./_import/components/insights-tabs.e25d43f8.js");
 
 const roadSafetyImage = await FileAttachment("./media/road-with-glass.jpg").url();
+const healthServicesImage = await FileAttachment("./media/health-services-hero.jpg").url();
 const sportsFundingVideo = await FileAttachment("./media/sports-funding-hero.mp4").url();
-return {insightsTabs,roadSafetyImage,sportsFundingVideo};
+return {insightsTabs,roadSafetyImage,healthServicesImage,sportsFundingVideo};
 }});
 
 define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
 display(insightsTabs("spotlights"));
 }});
 
-define({id: "3f0a5ac9", inputs: ["roadSafetyImage","sportsFundingVideo","display"], outputs: ["grid","topics"], body: (roadSafetyImage,sportsFundingVideo,display) => {
+define({id: "41fbf732", inputs: ["roadSafetyImage","sportsFundingVideo","healthServicesImage","display"], outputs: ["grid","topics"], body: (roadSafetyImage,sportsFundingVideo,healthServicesImage,display) => {
 const grid = document.createElement("section");
 grid.className = "spotlight-card-grid";
 
@@ -96,6 +98,13 @@ const topics = [
     title: "Sports funding",
     description: "Community sports funding distribution across projects, organisations and activities.",
     video: sportsFundingVideo,
+  },
+  {
+    href: "./health-services",
+    eyebrow: "Spotlight",
+    title: "Health services",
+    description: "How constituencies are served by hospitals, health centres, GP practices and pharmacies.",
+    image: healthServicesImage,
   },
 ];
 
@@ -129,7 +138,7 @@ return {grid,topics};
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:748c40c8:--></div>
+<div class="observablehq observablehq--block"><!--:11e2ed23:--></div>
 <div class="spotlights-hero">
   <p class="spotlights-hero__eyebrow">Constituency insights</p>
   <h1>Spotlights</h1>
@@ -141,7 +150,7 @@ return {grid,topics};
   <p>Each spotlight is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
   <p>With constituency and district-level data, maps and interactive filters, see beyond the headline numbers and explore how national issues affect constituents at a local level.</p>
 </div>
-<div class="observablehq observablehq--block"><!--:3f0a5ac9:--></div>
+<div class="observablehq observablehq--block"><!--:41fbf732:--></div>
 </main>
 </div>
 </body>
