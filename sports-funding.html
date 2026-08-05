@@ -233,11 +233,11 @@ import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
 registerFile("./data/derived/recent-sports-contributions.json", {"name":"./data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-contributions.b0b8f557.json","lastModified":1785611614234,"size":45556});
-registerFile("./data/derived/recent-sports-questions.json", {"name":"./data/derived/recent-sports-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-questions.a929d57b.json","lastModified":1785611614235,"size":634636});
+registerFile("./data/derived/recent-sports-questions.json", {"name":"./data/derived/recent-sports-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-sports-questions.4eb0a78c.json","lastModified":1785920590299,"size":647211});
 registerFile("./data/derived/sports-funding-enriched.json", {"name":"./data/derived/sports-funding-enriched.json","mimeType":"application/json","path":"./_file/data/derived/sports-funding-enriched.526726eb.json","lastModified":1775934292986,"size":7985219});
 registerFile("./data/derived/waterfall-segments.json", {"name":"./data/derived/waterfall-segments.json","mimeType":"application/json","path":"./_file/data/derived/waterfall-segments.ed664633.json","lastModified":1776063491231,"size":389840});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.fd30305b.json","lastModified":1785838507780,"size":123367});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785920590309,"size":123367});
 registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
 
 define({id: "287e4dde", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
@@ -1059,10 +1059,6 @@ display(
 <div class="prose-block">
   <p><a href="https://www.gov.ie/en/department-of-culture-communications-and-sport/collections/sports-capital-programme-allocations/" target="_blank" rel="noopener noreferrer">The community sports facilities fund</a>, formerly the sports capital and equipment fund, is the primary means of providing Government funding to sport and community organisations at local, regional and national level throughout the country.</p>
   <p>The programme aims to foster an integrated and planned approach to the development of sports and physical recreation facilities and assists the purchase of non-personal sports equipment. Explore the allocations across constituencies.</p>
-  <h2>At a glance</h2>
-  <p>
-    Explore how the funding has been distributed across projects, organisations and sport types around the country.
-  </p>
 </div>
 <div class="observablehq observablehq--block"><!--:1f3e7e73:--></div>
 <div class="observablehq observablehq--block"><!--:5352797c:--></div>
@@ -1073,9 +1069,6 @@ display(
 <div class="observablehq observablehq--block"><!--:8fc8b493:--></div>
 <div class="prose-block">
   <h2>Explore by sport type</h2>
-  <p>
-    Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
-  </p>
 </div>
 <div class="observablehq observablehq--block"><!--:5a5ba568:--></div>
 <div class="chart-block chart-block--wide">
@@ -1083,29 +1076,33 @@ display(
 </div>
 <div class="observablehq observablehq--block"><!--:b9d8b073:--></div>
 <div class="prose-block">
-  <h2>Explore parliamentary questions</h2>
+  <h2>Recent parliamentary questions related to sports funding</h2>
   <p>
-    Take a look at recent parliamentary questions related to sport and sports funding from Deputies in the constituency.
+      Read recent parliamentary questions tabled by constituency TDs related to sports funding.
   </p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:47957d16:--></div>
 </div>
 <div class="prose-block">
-  <h2>Recent sports contributions from local Members</h2>
+  <h2>Recent speeches related to sports funding</h2>
   <p>
-    Read recent Dáil contributions whose debate headings contain “sport” or “sports”.
+    Read recent contributions in Dáil Éireann by the TDs who represent the constituency.
   </p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:80f481af:--></div>
 </div>
 <div class="prose-block prose-block--section">
-  <h2>Related research</h2>
-  <p>Read research and analysis related to this topic.</p>
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into sports funding allocations and related topics.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
+</div>
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p>Constituency Insights uses the downloadable source data published with the PBO's bespoke sports funding dataset.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:ad406b4c:--></div>
 </main>
