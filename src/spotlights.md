@@ -10,6 +10,7 @@ toc: false
 import {insightsTabs} from "./components/insights-tabs.js";
 
 const roadSafetyImage = await FileAttachment("media/road-with-glass.jpg").url();
+const healthServicesImage = await FileAttachment("media/health-services-hero.jpg").url();
 const sportsFundingVideo = await FileAttachment("media/sports-funding-hero.mp4").url();
 ```
 
@@ -47,6 +48,13 @@ const topics = [
     title: "Sports funding",
     description: "Community sports funding distribution across projects, organisations and activities.",
     video: sportsFundingVideo,
+  },
+  {
+    href: "./health-services",
+    eyebrow: "Spotlight",
+    title: "Health services",
+    description: "How constituencies are served by hospitals, health centres, GP practices and pharmacies.",
+    image: healthServicesImage,
   },
 ];
 

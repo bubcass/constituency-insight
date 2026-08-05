@@ -29,6 +29,7 @@
     "build:transport-commuting": "node src/scripts/build-transport-commuting.mjs",
     "build:sports-funding": "node src/data/transformers/sports-funding-enriched.json.js",
     "build:road-accidents": "node src/data/transformers/road-accidents-normalized.js",
+    "build:health-services": "node src/data/transformers/health-services-normalized.js",
     "build:planning-applications": "node src/data/transformers/planning-applications-normalized.js",
     "build:waterfall": "node src/data/transformers/build-waterfall-segments.js src/data/derived/sports-funding-enriched.json src/data/derived/waterfall-segments.json",
     "build:electoral-districts": "node src/scripts/build-electoral-districts.mjs",

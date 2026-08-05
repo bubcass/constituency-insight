@@ -423,21 +423,21 @@ function renderTransportAvailabilityExplorer() {
   const section = document.createElement("section");
   section.className = "demographics-map-explorer transport-map-explorer";
   const controls = document.createElement("div");
-  controls.className = "transport-map-layers";
+  controls.className = "map-layer-controls";
   const controlsLabel = document.createElement("p");
-  controlsLabel.className = "transport-map-layers__label";
+  controlsLabel.className = "map-layer-controls__label";
   controlsLabel.textContent = "Map layers";
   const buttons = document.createElement("div");
-  buttons.className = "transport-map-layers__buttons";
+  buttons.className = "map-layer-controls__buttons";
   const layerButtons = new Map();
 
   for (const layer of TRANSPORT_LAYERS) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "transport-map-layer";
+    button.className = "map-layer-control";
     button.dataset.type = layer.value;
     button.style.setProperty("--layer-color", layer.color);
-    button.innerHTML = `<span>${layer.label}</span><span class="transport-map-layer__count"></span>`;
+    button.innerHTML = `<span>${layer.label}</span><span class="map-layer-control__count"></span>`;
     button.addEventListener("click", () => {
       if (state.featureTypes.has(layer.value)) state.featureTypes.delete(layer.value);
       else state.featureTypes.add(layer.value);
@@ -500,7 +500,7 @@ function renderTransportAvailabilityExplorer() {
       const active = state.featureTypes.has(layer.value);
       button?.classList.toggle("is-active", active);
       button?.setAttribute("aria-pressed", String(active));
-      const count = button?.querySelector(".transport-map-layer__count");
+      const count = button?.querySelector(".map-layer-control__count");
       if (count) count.textContent = counts.get(layer.value);
     }
   }

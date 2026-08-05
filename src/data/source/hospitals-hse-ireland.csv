@@ -1,0 +1,133 @@
+﻿OBJECTID,category,subcategory,name,address1,address2,address3,address4,Eircode,POINT_X,POINT_Y
+1,Hospital,Community,Abbeyleix,Ballinakill Road,Abbeyleix,Co. Laois,,R32 FV52,-7.34278400867691,52.9118528352185
+2,Hospital,Community,Athy,Saint Vincent's Hospital,Woodstock Street,Athy,Co. Kildare,R14 AY22,-6.99481391435073,52.9981363959695
+3,Hospital,Private General,Aut Even Hospital,Freshford Road,Kilkenny,,,R95 D370,-7.27002879558277,52.6765103770434
+4,Hospital,Community,Baggot Street,14/18 Baggot Street Upper,Dublin 4,,,D04 T6N3,-6.24404607031313,53.3338425649059
+5,Hospital,Community,Baltinglass District Hospital,Newtownsaunders,Baltinglass,Co. Wicklow,,W91 EK59,-6.67912751460685,52.9315160872043
+6,Hospital,Community,Bandon Community Hospital,Cloughmacsimon,Bandon,Co. Cork,,P72 W564,-8.72458793402485,51.7439923338343
+7,Hospital,General/Acute,Bantry General Hospital,Carrignagat,Bantry,Co. Cork,,P75 DX93,-9.44967122043656,51.6759898293536
+8,Hospital,Private General,Barrington's Hospital,George's Quay,Limerick,,,V94 HE2T,-8.62138010691413,52.6668201220892
+9,Hospital,Private General,Beacon Hospital,Beacon Court,Sandyford Industrial Estate,Dublin 18,,D18 AK68,-6.21995985886942,53.2767907151726
+10,Hospital,General/Acute,Beaumont Hospital,Beaumont Road,Dublin 9,,,D09 C562,-6.22565374930009,53.3921303873479
+11,Hospital,Community,Belmullet Community Hospital,Belmullet,Co. Mayo,,,F26 K1H9,-9.9863314014218,54.228282979492
+12,Hospital,Community,Birr,Sandymount,Birr,Co. Offaly,,R42 VN80,-7.89965349468653,53.0980193756078
+13,Hospital,Private General,Blackrock Clinic,Rock Road,Blackrock,Co. Dublin,,A94 E4X7,-6.18817153270403,53.303467514542
+14,Hospital,Private General,Bon Secours Hospital - Cork,College Road,Cork,,,T12 DV56,-8.49730354117876,51.8915483825522
+15,Hospital,Private General,Bon Secours Hospital - Dublin ,Glasnevin Hill,Dublin 9,,,D09 YN97,-6.26738720249183,53.3758783220239
+16,Hospital,Private General,Bon Secours Hospital - Galway,Renmore Road,Galway,,,H91 KC7H,-9.01961931600873,53.2779353269779
+17,Hospital,Private General,Bon Secours Hospital - Kerry,Strand Street,Tralee,Co. Kerry,,V92 P663,-9.71303761731934,52.2695855608268
+18,Hospital,Community,Buncrana,Maginn Avenue,Buncrana,Co. Donegal,,F93 X225,-7.45011450444936,55.1340791034713
+19,Hospital,Community,Cahercalla,Community Hospital And Hospice,Cahircalla,Ennis,Co. Clare,V95 NR59,-9.00380239266034,52.8329001519622
+20,Hospital,Community,Caherciveen,Valentia Road,Caherciveen,Co. Kerry,,V23 PW84,-10.2345030219417,51.9419778917395
+21,Hospital,Community,Carndonagh Community Hospital,Derry Road,Carndonagh,Co. Donegal,,F93 EW7T,-7.26770406627396,55.2452903298772
+22,Hospital,Community,Castlebar,Pontoon Road,Castlebar,Co. Mayo,,F23 XV38,-9.29900312626241,53.8633523412398
+23,Hospital,Community,Castlecomer,Donaguile,Castlecomer,Co. Kilkenny,,R95 A5XC,-7.21401497316399,52.7994164321452
+24,Hospital,General/Acute,Cavan General Hospital,Lisdarn,Cavan,,,H12 Y7W1,-7.37220334114225,54.0018306264278
+25,Hospital,Mixed Use,Cherry Orchard Hospital ,Ballyfermot Road,Dublin 10,,,D10 Y821,-6.37828827664511,53.3434576995195
+26,Hospital,Paediatric,Children's University Hospital Temple Street,Children's University Hospital,Temple Street,Dublin 1,,D01 YC67,-6.2620400225042,53.3568927479105
+27,Hospital,Community,Clifden,Hospital Road,Clifden,Co. Galway,,H71 YV83,-10.015577613155,53.489528957243
+28,Hospital,Community,Clonakilty,Mount Carmel,Convent Road,Clonakilty,Co. Cork,P85 K160,-8.87637595871752,51.6304768853243
+29,Hospital,General/Acute,Connolly Hospital Blanchardstown,Mill Road,Dublin 15,,,D15 X40D,-6.36813840909578,53.3885696878288
+30,Hospital,Maternity,Coombe Women & Infant University Hospital,Dolphin's Barn Street,Dublin 8,,,D08 XW7X,-6.28850735186389,53.3348321846386
+31,Hospital,Community,Cork City,Saint Finbarr's Hospital,Douglas Road,Cork,,T12 XH60,-8.45983923249658,51.8890274246153
+32,Hospital,General/Acute,Cork University Hospital,Wilton,Cork,,,T12 DC4A,-8.51053291713533,51.8833630555284
+33,Hospital,Maternity,Cork University Maternity Hospital,Wilton,Cork,,,T12 YE02,-8.51056624293366,51.8822825467067
+34,Hospital,Orthopaedic,Croom Orthopaedic Hospital,Skagh,Croom,Co. Limerick,,V35 F434,-8.71223268196709,52.527518890719
+35,Hospital,Community,Dingle ,Farran,Dingle,Co. Kerry,,V92 PF65,-10.2663433622158,52.1364560026833
+36,Hospital,Community,Donegal,Donegal Community Hospital,Drumlonagher,Donegal,,F94 V670,-8.09905379725316,54.6555686931357
+37,Hospital,Continuing Care Service,Drogheda,Saint Mary's Hospital,Dublin Road,Drogheda,Co. Louth,A92 X862,-6.34101627965175,53.7113630726791
+38,Hospital,Dental,Dublin Dental Hospital,Lincoln Place,Dublin 2,,,D02 F859,-6.25195413399824,53.3423780396739
+39,Hospital,Community,St. Joseph's Dungarvan ,Springmount,Dungarvan,Co. Waterford,,X35 WA22,-7.63573093803932,52.0876315975995
+40,Hospital,Community,Dungloe Community Hospital,Gweedore Road,Dungloe,Co. Donegal,,F94 Y326,-8.35764607682304,54.9519569759519
+41,Hospital,Community,Dunmanway,Dunmanway Community Hospital,Ballyhalwick,Dunmanway,Co. Cork,P47 WN27,-9.08980738234421,51.7293907379147
+42,Hospital,General/Acute,Ennis Hospital,Gort Road,Ennis,Co. Clare,,V95 HN29,-8.98324773761983,52.8511111955516
+43,Hospital,Community,Ennistymon,Dough,Ennistymon,Co. Clare,,V95 CD58,-9.31579929578743,52.936127701503
+44,Hospital,Community,Fermoy,Saint Patrick's Community Hospital,Courthouse Road,Fermoy,Co. Cork,P61 H582,-8.2559118946406,52.1390140099157
+45,Hospital,Private General,Galway Clinic,Doughiska,Galway,,,H91 HHT0,-8.97384915223672,53.2826879777194
+46,Hospital,General/Acute,Galway University Hospital - Merlin Park,Merlin Park,Galway,,,H91 N973,-8.99319867694738,53.2774188967083
+47,Hospital,General/Acute,Galway University Hospitals,Newcastle Road,Galway,,,H91 YR71,-9.0650135338509,53.2758611090126
+48,Hospital,Community,Gorey District Hospital,Gorey,Co. Wexford,,,Y25 KX86,-6.30006276156964,52.6744105263798
+49,Hospital,Private General,Hermitage Medical Clinic,Lucan Road Old,Dublin 20,,,D20 W722,-6.40599726232214,53.3591972868414
+50,Hospital,Community,Kanturk Community Hospital,Hospital Hill,Kanturk,Co. Cork,,P51 PT61,-8.91666552729349,52.1761658074667
+51,Hospital,Community,Kenmare Community Hospital,Kenmare,Co. Kerry,,,V93 AW24,-9.58164238735041,51.8890917413361
+52,Hospital,Orthopaedic,Kilcreene Regional Orthopaedic Hospital,Kilcreene Hospital,Kilkenny,,,R95 DK07,-7.27423451919722,52.6524183316504
+53,Hospital,Community,Killarney,Saint Margaret's Road,Killarney,Co. Kerry,,V93 EH42,-9.51726486552949,52.0654791296312
+54,Hospital,Community,Killybegs,Donegal Road,Killybegs,Co. Donegal,,F94 PK84,-8.43889624534357,54.637886100431
+55,Hospital,Private General,"Kingsbridge Private Hospital, ",Ray Mcsharry Road,,,Sligo,F91 X054,-8.48160479287497,54.2687783118903
+56,Hospital,Community,Kinsale,Rath Beg,Kinsale,Co. Cork,,P17 A027,-8.52708307801892,51.7129661344407
+57,Hospital,General/Acute,Letterkenny University Hospital,Kilmacrennan Road,Letterkenny,Co. Donegal,,F92 AE81,-7.73434295606475,54.9600179932137
+58,Hospital,Community,Lifford,Lifford Bridge,Lifford,Co. Donegal,,F93 YW02,-7.48337540093791,54.831284805008
+59,Hospital,Community,Saint Camillus Hospital - Limerick,Shelbourne Road,Limerick,,,V94 5V24,-8.64100593563745,52.6687301006225
+60,Hospital,Community,Listowel,Convent Road,Listowel,Co. Kerry,,V31 RF79,-9.49770041003246,52.4472363299202
+61,Hospital,Community,"Macroom Community Hospital, ",Macroom,Co. Cork,,,P12 AX83,-8.967650021893,51.9073733848862
+62,Hospital,General/Acute,Mallow General Hospital,Kilknockin,Mallow,Co. Cork,,P51 N288,-8.66360686173169,52.1513313179169
+63,Hospital,Community,Manorhamilton,Our Lady's Hospital,Hospital Road,Manorhamilton,Co. Leitrim,F91 X012,-8.16720545848028,54.3036958792956
+64,Hospital,General/Acute,"Mater Misericordiae University Hospital, ",Eccles Street,Dublin 7,,,D07 R2WY,-6.26822553903888,53.3593953750699
+65,Hospital,Private General,Mater Private Hospital,Eccles Street,Dublin 7,,,D07 WKW8,-6.2643214317169,53.3580320066567
+66,Hospital,General/Acute,Mayo University Hospital,Westport Road,Castlebar,Co. Mayo,,F23 H529,-9.30342858611951,53.8520409238393
+67,Hospital,General/Acute,Mercy University Hospital,Grenville Place,Cork,,,T12 WE28,-8.48244862639434,51.8987533513088
+68,Hospital,General/Acute,Midland Regional Hospital Mullingar,Longford Road,Mullingar,Co. Westmeath,,N91 NA43,-7.3491167181124,53.5341763466826
+69,Hospital,General/Acute,Midland Regional Hospital Portlaoise,Dublin Road,Portlaoise,Co. Laois,,R32 RW61,-7.27599298415257,53.0379573293887
+70,Hospital,General/Acute,Midland Regional Hospital Tullamore,Arden Road,Tullamore,Co. Offaly,,R35 NY51,-7.49101055751514,53.2821744557318
+71,Hospital,Community,Midleton,The Green,Midleton,Co. Cork,,P25 DT96,-8.17266148731898,51.9177338669472
+72,Hospital,Community,Millstreet,Inchileigh,Millstreet,Co. Cork,,P51 TV27,-9.07793516251728,52.0577780081445
+73,Hospital,General/Acute,Monaghan Hospital,Monaghan,,,,H18 NV91,-6.97435285044941,54.2494916296823
+74,Hospital,Psycho-Geriatric,"Mount Alvernia Hospital, ",Newberry,Mallow,Co. Cork,,P51 XT95,-8.6846246678436,52.1243503505786
+75,Hospital,Community,Mount Carmel,Braemor Park,Dublin 14,,,D14 A5R2,-6.26555387862994,53.3046001206812
+76,Hospital,General/Acute,Naas General Hospital,Craddockstown Road,Naas,Co. Kildare,,W91 AE76,-6.6615785411723,53.211474852513
+77,Hospital,Maternity,National Maternity Hospital,Holles Street,Dublin 2,,,D02 YH21,-6.24599289767926,53.3402480610166
+78,Hospital,Orthopaedic,National Orthopaedic Hospital Cappagh,Cappagh Road,Dublin 11,,,D11 EV29,-6.32770385420002,53.3943899350652
+79,Hospital,Rehabilitation,National Rehab,Rochestown Avenue,Dun Laoghaire,Co. Dublin,,A96 E2H2,-6.15257747607588,53.2758102559841
+80,Hospital,General/Acute,Nenagh Hospital,Tyone,Nenagh,Co. Tipperary,,E45 PT86,-8.19119508040878,52.8576521367398
+81,Hospital,Community,Saint Ita's Community Hospital,Newcastle West,Co. Limerick,,,V42 HD66,-9.05402212138947,52.4557357839309
+82,Hospital,General/Acute,Our Lady of Lourdes Hospital Drogheda,Drogheda,Co. Louth,,,A92 VW28,-6.35494704414084,53.722735138756
+83,Hospital,Community,Our Lady's Campus,Lower Green,Cashel,Co. Tipperary,,E25 P407,-7.88831034057971,52.5140049086764
+84,Hospital,Paediatric,Our Lady's Children's Hospital Crumlin,Crumlin,Dublin 12,,,D12 N512,-6.31860325577137,53.3260367904067
+85,Hospital,General/Acute,Our Lady's Hospital Navan,Navan,Co. Meath,,,C15 RK7Y,-6.6971447388856,53.6503009443711
+86,Hospital,Mixed Use,Peamount,Peamount Road,Newcastle,Co. Dublin,,D22 W1Y6,-6.48373071276719,53.3169692482389
+87,Hospital,General/Acute,Portiuncula University Hospital,Ballinasloe,Co. Galway,,,H53 T971,-8.23463396213798,53.3266482959251
+88,Hospital,Community,Raheen,Tuamgraney,Co. Clare,,,V94 AE71,-8.50763502164488,52.8940123585384
+89,Hospital,Community,Ramelton ,Back Road,Ramelton,Co. Donegal,,F92 PX58,-7.64833858182154,55.0343941452105
+90,Hospital,General/Acute,Roscommon University Hospital,Ardsallagh Beg,Co. Roscommon,,,F42 AX61,-8.17508290936544,53.624762190034
+91,Hospital,Maternity,Rotunda Hospital,Parnell Street,Dublin 1,,,D01 P5W9,-6.26315856325202,53.352344111787
+92,Hospital,Opthalmic/ENT,Royal Victoria Eye And Ear Hospital,Adelaide Road,Dublin 2,,,D02 XK51,-6.25618319957582,53.3328262208963
+93,Hospital,Community,Saint Brigids Hospital,Pill Road,Carrick-on-suir,Co. Tipperary,,E32 D281,-7.404039581144,52.3475389655896
+94,Hospital,Mixed Use,Saint Colman's Hospital,Ballygannon,Rathdrum,Co. Wicklow,,A67 AK06,-6.23977571382895,52.9338176214875
+95,Hospital,Community,Saint Dympna's Hospital,Athy Road,Carlow,,,R93 DE62,-6.92732389866747,52.8423251335014
+96,Hospital,Private General,Saint Francis Private Hospital,Ballinderry,Mullingar,Co. Westmeath,,N91 FE40,-7.3347473678983,53.5140609004916
+97,Hospital,General/Acute,"Saint James's Hospital, ",James's Street,Dublin 8,,,D08 NHY1,-6.29662764713114,53.3392395589189
+98,Hospital,Community,Saint John's Community Hospital,Ballytivnan Road,Ballytivnan,Sligo,,F91 H224,-8.46865450697279,54.2797589870743
+99,Hospital,Community,Saint Joseph's District Hospital,Mercy Road,Ballina,Co. Mayo,,F26 PP92,-9.1656305814595,54.1141885039611
+100,Hospital,Community,Saint Joseph's Hospital -Castletownbere,Derrymihan West,Castletownbere,Co. Cork,,P75 PW81,-9.90069333327621,51.6518708630091
+101,Hospital,Community,Saint Mary's Hospital - Castleblayney,Bree,Castleblayney,Co. Monaghan,,A75 TD61,-6.74480347803651,54.1200580036614
+102,Hospital,Mixed Use,Saint Patrick's Community Hospital,Summerhill,Carrick-on-shannon,Co. Leitrim,,N41 P897,-8.08615241077942,53.9505016814158
+103,Hospital,Mental Health,Saint Patrick's University Hospital, James St. ,Dublin 8,,,D08 K7YW,-6.29185312720182,53.3440013202842
+104,Hospital,Community,Saint Teresa's Hospital - Clogheen,Mountanglesby,Clogheen,Co. Tipperary,,E21 Y447,-7.99159151667937,52.2719491882399
+105,Hospital,Private General,"Saint Vincent's Private Hospital, ",Herbert Avenue,Merrion Road,Dublin 4,,D04 N2E0,-6.20920090905664,53.3153257324967
+106,Hospital,Community,Schull,Colla Road,Schull,Co. Cork,,P81 NT97,-9.54610909131262,51.5215766248513
+107,Hospital,Community,Shiel Hospital,College Street,Ballyshannon,Co. Donegal,,F94 DR40,-8.18402663251391,54.5016398182124
+108,Hospital,Community,"Skibbereen District Hospital, ",Coolnagurrane,Skibbereen,Co. Cork,,P81 HC43,-9.26323653985882,51.5635665124356
+109,Hospital,General/Acute,Sligo University Hospital,The Mall,Sligo,,,F91 H684,-8.46336092765425,54.2741780111546
+110,Hospital,General/Acute,South Infirmary Victoria University Hospital,Old Blackrock Road,Cork,,,T12 X23H,-8.46379174599017,51.8935578555502
+111,Hospital,General/Acute,South Tipperary General Hospital,Western Road,Clonmel,Co. Tipperary,,E91 VY40,-7.714320695475,52.3554814938763
+112,Hospital,Private General,Sports Surgery Clinic,Northwood Avenue,Northwood,Santry,Dublin 9,D09 C523,-6.2536634900727,53.404731081514
+113,Hospital,General/Acute,St Columcille's Hospital,Bray Road,Loughlinstown,Co. Dublin,,D18 V9K1,-6.13243255007083,53.2428290717169
+114,Hospital,General/Acute,St John's Hospital Limerick,John's Street,Limerick,,,V94 H272,-8.61706465301596,52.6630449055071
+115,Hospital,General/Acute,St Luke's General Hospital Kilkenny,Freshford Road,Kilkenny,,,R95 FY71,-7.26279985462671,52.6660366101228
+116,Hospital,Cancer,St Luke's Radiation Oncology Network,Highfield Road,Dublin 6,,,D06 HH36,-6.26748251989804,53.3101552809686
+117,Hospital,General/Acute,St Vincent's University Hospital,Elm Park,Nutley Lane,Dublin 4,,D04 T6F4,-6.21324963789635,53.3165906659923
+118,Hospital,Mixed Use,St. Joseph's Community Hospital,Springdale Road,Dublin 5,,,D05 W504,-6.18206108111945,53.3826238455261
+119,Hospital,General/Acute,St. Michael's Hospital ,George's Street Lower,Dun Laoghaire,Co. Dublin,,A96 P902,-6.13852318998612,53.2938016659324
+120,Hospital,Community,Stranorlar,Saint Joseph's Community Hospital,Mullindrait,Stranorlar,Co. Donegal,F93 FCR6,-7.7510404872857,54.8054320550566
+121,Hospital,Community,"Swinford District Hospital, ",Dublin Road,Swinford,Co. Mayo,,F12 K229,-8.94590799270314,53.9428496220234
+122,Hospital,General/Acute,Tallaght University Hospital,Belgard Square North,Dublin 24,,,D24 NR0A,-6.37825402187289,53.2906454607107
+123,Hospital,Paediatric,Temple Street Children's University Hospital,Children's University Hospital,Temple Street,Dublin 1,,D01 F772,-6.26215839950044,53.3572750633112
+124,Hospital,Private General,The Mater Private - Cork,Building 3000,City Gate,Mahon,Cork,T12 K199,-8.40619928794906,51.8862683432831
+125,Hospital,Dental,University Dental School & Hospital,Cork University Hospital,Wilton,Cork,,T12 E8YV,-8.51291173695061,51.8836326646861
+126,Hospital,General/Acute,University Hospital Kerry,Tralee,Co. Kerry,,,V92 NX94,-9.68915045063373,52.2653827196249
+127,Hospital,General/Acute,University Hospital Limerick,Saint Nessan's Road,Dooradoyle,Limerick,,V94 F858,-8.65333286073656,52.6358689677238
+128,Hospital,General/Acute,University Hospital Waterford,Dunmore Road,Waterford,,,X91 ER8E,-7.07850025766585,52.2485559209289
+129,Hospital,Maternity,University Maternity Hospital Limerick,Ennis Road,Limerick,,,V94 C566,-8.63336808061002,52.6673179835864
+130,Hospital,General/Acute,Wexford General Hospital,Newtown Road,Wexford,,,Y35 Y17D,-6.48240215307805,52.3428307866052
+131,Hospital,Private General,Whitfield Clinic,Cork Road,Butlerstown North,Waterford,,X91 DH9W,-7.17172203985048,52.2403575076561
+132,Hospital,Community,Youghal,Upper Cork Hill,Youghal,Co. Cork,,P36 HX95,-7.86005530064029,51.9575674397723

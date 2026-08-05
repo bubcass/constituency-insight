@@ -454,7 +454,7 @@
     margin-bottom: 1.5rem;
 }
 
-.transport-map-layers {
+.map-layer-controls {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -604,21 +604,21 @@
     }
 }
 
-.transport-map-layers__label {
+.map-layer-controls__label {
     margin: 0;
     color: var(--text);
     font-size: 0.86rem;
     font-weight: 650;
 }
 
-.transport-map-layers__buttons {
+.map-layer-controls__buttons {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.5rem;
     width: 100%;
 }
 
-.transport-map-layer {
+.map-layer-control {
     appearance: none;
     display: flex;
     align-items: center;
@@ -640,7 +640,7 @@
         box-shadow 0.2s ease;
 }
 
-.transport-map-layer::before {
+.map-layer-control::before {
     display: inline-block;
     width: 0.58rem;
     height: 0.58rem;
@@ -651,23 +651,23 @@
     content: "";
 }
 
-.transport-map-layer.is-active {
+.map-layer-control.is-active {
     border-color: var(--layer-color);
     background: color-mix(in srgb, var(--layer-color) 10%, #fffdf8);
 }
 
-.transport-map-layer:hover {
+.map-layer-control:hover {
     border-color: var(--layer-color);
     background: color-mix(in srgb, var(--layer-color) 7%, #ebe6da);
     box-shadow: var(--shadow-soft);
 }
 
-.transport-map-layer:focus-visible {
+.map-layer-control:focus-visible {
     outline: 3px solid color-mix(in srgb, var(--layer-color) 35%, transparent);
     outline-offset: 2px;
 }
 
-.transport-map-layer__count {
+.map-layer-control__count {
     margin-left: 0.38rem;
     color: var(--text-soft);
     font-size: 0.76rem;
@@ -675,7 +675,7 @@
     font-variant-numeric: tabular-nums;
 }
 
-.transport-map-layer__count:not(:empty)::before {
+.map-layer-control__count:not(:empty)::before {
     content: "· ";
 }
 
@@ -709,12 +709,12 @@
 }
 
 @media (max-width: 640px) {
-    .transport-map-layers__buttons {
+    .map-layer-controls__buttons {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.35rem;
     }
 
-    .transport-map-layer {
+    .map-layer-control {
         padding-inline: 0.7rem;
     }
 }
@@ -891,6 +891,10 @@
 
 .road-accident-hero__image {
     object-position: center 62%;
+}
+
+.health-services-hero__image {
+    object-position: center 54%;
 }
 
 .spotlight-card__copy {
@@ -1512,6 +1516,7 @@
     .road-accident-severity__button {
         padding-inline: 0.7rem;
     }
+
 }
 
 .insights-map-block {
