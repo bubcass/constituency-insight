@@ -1,6 +1,8 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import {chartPalette} from "../config/chart-palette.dbce5681.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.12242099.js";
+import {employmentWaffle} from "./employment-charts.d9b90483.js";
+import {percentageStripChart} from "./percentage-strip-chart.9cd4cf03.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.1fa9ae9f.js";
 
 export function educationQualificationWaterfall(
   data,
@@ -47,13 +49,78 @@ export function educationQualificationWaterfall(
       marginLeft: 330,
       minRowHeight: 36,
       minorShareThreshold: 0,
-      xLabel: "Cumulative population aged 15 and over",
+      xLabel: "Cumulative population aged 15+ whose education had ceased",
       tickFormat: (value) => d3.format("~s")(value),
       valueFormat: (value) => d3.format(",")(value),
+      shareFormat: (value) => d3.format(".1%")(value),
       ariaLabel: title || "Highest level of education completed",
     }),
   );
   return wrap;
+}
+
+export function educationCeasedAgeWaffle(
+  data,
+  {width = 960, title = "", subtitle = ""} = {},
+) {
+  const colors = [
+    "#d62728",
+    "#ff7f0e",
+    "#bcbd22",
+    "#2ca02c",
+    "#17becf",
+    "#1f77b4",
+    "#303591",
+    "#9467bd",
+    "#7f7f7f",
+  ];
+  return employmentWaffle(
+    (Array.isArray(data) ? data : []).map((d, index) => ({
+      sector: d.label,
+      total: d.total,
+      color: colors[index % colors.length],
+    })),
+    {
+      width,
+      title,
+      subtitle,
+      populationLabel: "people",
+      populationContext: "people whose education has ceased",
+      note: "Each dot represents approximately 1% of people in the selected area whose education has ceased.",
+      ariaLabel: title || "Age at which education ceased waffle chart",
+      sort: false,
+    },
+  );
+}
+
+export function irishLanguagePercentageBar(
+  data,
+  {
+    width = 960,
+    title = "",
+    subtitle = "",
+    itemLabel = "people",
+    shareLabel = "of the selected population",
+    note = "Each stripe represents approximately 1% of the selected population.",
+  } = {},
+) {
+  return percentageStripChart(
+    (Array.isArray(data) ? data : []).map((d, index) => ({
+      category: d.category,
+      total: d.total,
+      color: d.color || chartPalette[index % chartPalette.length],
+    })),
+    {
+      width,
+      title,
+      subtitle,
+      className: "education-irish-frequency",
+      itemLabel,
+      shareLabel,
+      note,
+      ariaLabel: title || "Irish-language profile",
+    },
+  );
 }
 
 function escapeHtml(value) {

@@ -221,13 +221,20 @@ function withTooltip(chart, rows, tooltipHTML) {
 
 function normaliseRows(data, {sort = true} = {}) {
   const rows = (Array.isArray(data) ? data : [])
-    .map((d) => ({ sector: String(d.sector ?? ""), total: Number(d.total) || 0 }))
+    .map((d) => ({
+      sector: String(d.sector ?? ""),
+      total: Number(d.total) || 0,
+      color: d.color ? String(d.color) : null,
+    }))
     .filter((d) => d.sector && d.total > 0);
   return sort ? rows.sort((a, b) => d3.descending(a.total, b.total)) : rows;
 }
 
 function colorLookup(rows) {
-  return new Map(rows.map((d, index) => [d.sector, chartPalette[index % chartPalette.length]]));
+  return new Map(rows.map((d, index) => [
+    d.sector,
+    d.color || chartPalette[index % chartPalette.length],
+  ]));
 }
 
 function allocateDots(rows, total) {

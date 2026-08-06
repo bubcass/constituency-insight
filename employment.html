@@ -7,10 +7,10 @@
 <title>Work | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.5ac6791b.css">
+<link rel="preload" as="style" href="./_import/style.c1ee4db5.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.5ac6791b.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.c1ee4db5.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -22,8 +22,8 @@
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/electoral-district-map.960d5603.js">
-<link rel="modulepreload" href="./_import/components/employment-charts.2e800c03.js">
-<link rel="modulepreload" href="./_import/components/people-charts.c8681b34.js">
+<link rel="modulepreload" href="./_import/components/employment-charts.d9b90483.js">
+<link rel="modulepreload" href="./_import/components/people-charts.57579837.js">
 <link rel="modulepreload" href="./_import/components/percentage-strip-chart.9cd4cf03.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.dbce5681.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
@@ -38,7 +38,7 @@
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
 <link rel="modulepreload" href="./_import/config/chart-style.e62386e1.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
-<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.12242099.js">
+<link rel="modulepreload" href="./_import/components/waterfall-segments-chart.1fa9ae9f.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
 <link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
@@ -138,8 +138,8 @@ registerFile("./data/principal-economic-status-2022.csv", {"name":"./data/princi
 registerFile("./data/working-from-home-2022.csv", {"name":"./data/working-from-home-2022.csv","mimeType":"text/csv","path":"./_file/data/working-from-home-2022.573b2544.csv","lastModified":1785929021550,"size":301112});
 registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
 
-define({id: "3b7e9b3b", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","principalEconomicStatusWaterfall","percentageStripChart","chartColors","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","employmentData","occupationData","economicStatusData","workingFromHomeData","householdIncomeData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","OCCUPATIONS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","occupationRowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","aggregateOccupations","employmentStats","workingFromHomeStats","labourForceStats","selectedDistrictHouseholdIncome","nationalStats","nationalWorkingFromHomeStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","currencyDifferenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderProfileViewControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {principalEconomicStatusWaterfall}, {percentageStripChart}, {chartColors}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.960d5603.js"), import("./_import/components/employment-charts.2e800c03.js"), import("./_import/components/people-charts.c8681b34.js"), import("./_import/components/percentage-strip-chart.9cd4cf03.js"), import("./_import/config/chart-palette.dbce5681.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.98307b19.js")]);
+define({id: "ee9d0a9a", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","principalEconomicStatusWaterfall","percentageStripChart","chartColors","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","employmentData","occupationData","economicStatusData","workingFromHomeData","householdIncomeData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","OCCUPATIONS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","occupationRowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","aggregateOccupations","employmentStats","workingFromHomeStats","labourForceStats","selectedDistrictHouseholdIncome","nationalStats","nationalWorkingFromHomeStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","currencyDifferenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderProfileViewControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {principalEconomicStatusWaterfall}, {percentageStripChart}, {chartColors}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.e25d43f8.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.960d5603.js"), import("./_import/components/employment-charts.d9b90483.js"), import("./_import/components/people-charts.57579837.js"), import("./_import/components/percentage-strip-chart.9cd4cf03.js"), import("./_import/config/chart-palette.dbce5681.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.98307b19.js")]);
 
 const employmentData = await FileAttachment("./data/employment-industry-2022.csv").csv({typed: true});
 const occupationData = await FileAttachment("./data/employment-occupation-2022.csv").csv({typed: true});
@@ -390,7 +390,7 @@ function selectedConstituencyGeoJSON() {
 
 function differenceText(value, comparison = "national profile") {
   const points = Math.abs(value * 100).toFixed(1);
-  if (Math.abs(value) < 0.001) return `in line with the ${comparison}`;
+  if (Math.abs(value) < 0.0005) return `in line with the ${comparison}`;
   return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the ${comparison}`;
 }
 
@@ -751,7 +751,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:3b7e9b3b:--></div>
+<div class="observablehq observablehq--block"><!--:ee9d0a9a:--></div>
 <div class="observablehq observablehq--block"><!--:6373a063:--></div>
 <div class="observablehq observablehq--block"><!--:9279bc04:--></div>
 <div class="prose-block lead">

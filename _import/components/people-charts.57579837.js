@@ -2,7 +2,7 @@ import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import * as Plot from "../../_npm/@observablehq/plot@0.6.17/a96a6bbb.js";
 import {chartPalette} from "../config/chart-palette.dbce5681.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.e62386e1.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.12242099.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.1fa9ae9f.js";
 
 export function principalEconomicStatusWaterfall(
   data,
@@ -90,7 +90,7 @@ export function irishSpeakerShareWaffle(
   summary.className = "irish-speaker-share__summary";
   summary.innerHTML = `
     <strong>${d3.format(".1%")(share)}</strong>
-    <span>${d3.format(",")(safeSpeakers)} Irish speakers out of ${d3.format(",")(safePopulation)} residents</span>
+    <span>${d3.format(",")(safeSpeakers)} Irish speakers out of ${d3.format(",")(safePopulation)} residents aged three and over</span>
   `;
 
   const plot = Plot.plot({
@@ -111,15 +111,15 @@ export function irishSpeakerShareWaffle(
         stroke: chartStyle.separator,
         strokeWidth: 1.5,
         title: (d) => d.active
-          ? `${d3.format(",")(safeSpeakers)} Irish speakers (${d3.format(".1%")(share)} of the total population)`
-          : `${d3.format(",")(rest)} other residents (${d3.format(".1%")(1 - share)} of the total population)`,
+          ? `${d3.format(",")(safeSpeakers)} Irish speakers (${d3.format(".1%")(share)} of residents aged three and over)`
+          : `${d3.format(",")(rest)} other residents (${d3.format(".1%")(1 - share)} of residents aged three and over)`,
       }),
     ],
   });
   plot.setAttribute("role", "img");
   plot.setAttribute(
     "aria-label",
-    `${d3.format(".1%")(share)} of the total population are Irish speakers aged three and over.`,
+    `${d3.format(".1%")(share)} of residents aged three and over are Irish speakers.`,
   );
 
   const plotWrap = document.createElement("div");
@@ -130,12 +130,12 @@ export function irishSpeakerShareWaffle(
   legend.className = "irish-speaker-share__legend";
   legend.innerHTML = `
     <span><i style="--irish-share-color:${highlight}" aria-hidden="true"></i>Irish speakers</span>
-    <span><i style="--irish-share-color:${remainder}" aria-hidden="true"></i>Rest of population</span>
+    <span><i style="--irish-share-color:${remainder}" aria-hidden="true"></i>Other residents aged 3+</span>
   `;
 
   const note = document.createElement("p");
   note.className = "irish-speaker-share__note";
-  note.textContent = "Each dot represents approximately 1% of the total population in the selected area.";
+  note.textContent = "Each dot represents approximately 1% of residents aged three and over in the selected area.";
 
   wrap.append(heading, summary, plotWrap, legend, note);
   return wrap;
