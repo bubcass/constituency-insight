@@ -12,11 +12,13 @@
     "build:parliamentary": "node src/scripts/build-parliamentary-activity.mjs",
     "build:members": "node src/scripts/build-members-lookup.mjs",
     "build:education-qualification": "node src/scripts/build-education-qualification.mjs",
+    "build:education-participation": "node src/scripts/build-education-participation.mjs",
     "build:irish-speaking": "node src/scripts/build-irish-speaking.mjs",
     "build:principal-economic-status": "node src/scripts/build-principal-economic-status.mjs",
     "build:disability": "node src/scripts/build-disability.mjs",
     "build:carers": "node src/scripts/build-carers.mjs",
     "build:renewable-energy-households": "node src/scripts/build-renewable-energy-households.mjs",
+    "build:household-composition": "node src/scripts/build-household-composition.mjs",
     "build:household-income": "node src/scripts/build-household-income.mjs",
     "build:deprivation-index": "node src/scripts/build-deprivation-index.mjs",
     "build:employment": "node src/scripts/build-employment-industry.mjs",
@@ -33,6 +35,7 @@
     "build:planning-applications": "node src/data/transformers/planning-applications-normalized.js",
     "build:waterfall": "node src/data/transformers/build-waterfall-segments.js src/data/derived/sports-funding-enriched.json src/data/derived/waterfall-segments.json",
     "build:electoral-districts": "node src/scripts/build-electoral-districts.mjs",
+    "audit:consistency": "node src/scripts/audit-metric-consistency.mjs",
     "observable": "observable"
   },
   "dependencies": {

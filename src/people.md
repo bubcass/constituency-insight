@@ -17,20 +17,21 @@ import { metricCards } from "./components/metric-cards.js";
 import { memberCards } from "./components/member-cards.js";
 import { membersForConstituency } from "./components/member-data.js";
 import { downloadButton } from "./components/download-button.js";
-import { agePyramid, generationPercentageBar } from "./components/demographics-charts.js";
+import { agePyramid, generationPercentageWaffle } from "./components/demographics-charts.js";
 import { electoralDistrictMap } from "./components/electoral-district-map.js";
 import { parliamentaryQuestionList, memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
 import { createReactiveMount } from "./components/reactive-mount.js";
 import { enhanceHeroWithShare } from "./components/hero-share.js";
 import { principalEconomicStatusWaterfall, irishSpeakerShareWaffle } from "./components/people-charts.js";
+import { percentageStripChart } from "./components/percentage-strip-chart.js";
 
 const ageData = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
 const economicStatusData = await FileAttachment("data/principal-economic-status-2022.csv").csv({typed: true});
 const irishSpeakingFrequency = await FileAttachment("data/irish-speaking-frequency-2022.csv").csv({typed: true});
 const disabilityData = await FileAttachment("data/disability-2022.csv").csv({typed: true});
 const carersData = await FileAttachment("data/carers-2022.csv").csv({typed: true});
-const renewableEnergyHouseholdsData = await FileAttachment("data/renewable-energy-households-2022.csv").csv({typed: true});
+const householdCompositionData = await FileAttachment("data/household-composition-2022.csv").csv({typed: true});
 const deprivationData = await FileAttachment("data/deprivation-index-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
@@ -79,11 +80,13 @@ const ECONOMIC_STATUSES = [
 if (typeof window !== "undefined" && !window.demographicsState) {
   window.demographicsState = {
     constituency: null,
-    district: "all"
+    district: "all",
+    householdView: "size"
   };
 }
 
 const state = window.demographicsState;
+if (!new Set(["size", "type"]).has(state.householdView)) state.householdView = "size";
 const constituencies = Array.from(
   new Set(ageData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, "en"));
@@ -145,6 +148,15 @@ function irishSpeakerPopulation() {
   );
 }
 
+function populationAgedThreePlus(rows = rowsForDistrict()) {
+  return d3.sum(rows, (row) =>
+    (Number(row.Total) || 0) -
+    (Number(row["Age 0 - Total"]) || 0) -
+    (Number(row["Age 1 - Total"]) || 0) -
+    (Number(row["Age 2 - Total"]) || 0)
+  );
+}
+
 function disabilityProfile() {
   const count = d3.sum(
     rowsForSelectedArea(disabilityData),
@@ -163,13 +175,41 @@ function carerProfile() {
   return {count, population, share: population > 0 ? count / population : 0};
 }
 
-function renewableEnergyHouseholdProfile(rows = rowsForSelectedArea(renewableEnergyHouseholdsData)) {
-  const count = d3.sum(
-    rows,
-    (row) => Number(row["Households with at least one renewable energy source"]) || 0
-  );
-  const households = d3.sum(rows, (row) => Number(row["All households"]) || 0);
-  return {count, households, share: households > 0 ? count / households : 0};
+function householdProfile(rows = rowsForSelectedArea(householdCompositionData)) {
+  const total = d3.sum(rows, (row) => Number(row["Household size — Total households"]) || 0);
+  const value = (field) => d3.sum(rows, (row) => Number(row[field]) || 0);
+  const onePerson = value("Household size — 1 person households");
+  const sizeProfile = [
+    ["1 person", ["Household size — 1 person households"]],
+    ["2 people", ["Household size — 2 person households"]],
+    ["3 people", ["Household size — 3 person households"]],
+    ["4 people", ["Household size — 4 person households"]],
+    ["5 people", ["Household size — 5 person households"]],
+    ["6+ people", [
+      "Household size — 6 person households",
+      "Household size — 7 person households",
+      "Household size — 8 or more persons households"
+    ]]
+  ].map(([category, fields]) => ({category, total: d3.sum(fields, value)}));
+  const typeProfile = [
+    ["One person", ["Household type — One person"]],
+    ["Couple without children", ["Household type — Married couple", "Household type — Cohabiting couple"]],
+    ["Couple with children", [
+      "Household type — Married couple with children",
+      "Household type — Cohabiting couple with children",
+      "Household type — Couple with children and others"
+    ]],
+    ["One-parent family", [
+      "Household type — One parent family (father) with children",
+      "Household type — One parent family (mother) with children",
+      "Household type — One parent family (father) with children and others",
+      "Household type — One parent family (mother) with children and others"
+    ]],
+    ["Multiple-family household", ["Household type — Two or more family units"]],
+    ["Other family or related household", ["Household type — Couple and others", "Household type — Non-family households and relations"]],
+    ["Unrelated people sharing", ["Household type — Two or more non-related persons"]]
+  ].map(([category, fields]) => ({category, total: d3.sum(fields, value)}));
+  return {total, onePerson, onePersonShare: total > 0 ? onePerson / total : 0, sizeProfile, typeProfile};
 }
 
 function deprivationProfile() {
@@ -320,6 +360,39 @@ function mountReactive(renderFn, options = {}) {
   });
 }
 
+function renderHouseholdViewControl() {
+  const wrap = document.createElement("div");
+  wrap.className = "segmented-control-wrap people-household-control";
+  const group = document.createElement("div");
+  group.className = "segmented-control";
+  group.setAttribute("role", "radiogroup");
+  group.setAttribute("aria-label", "Household profile view");
+  const options = [
+    {value: "size", label: "Household size"},
+    {value: "type", label: "Household type"}
+  ];
+  for (const option of options) {
+    const label = document.createElement("label");
+    label.className = "segmented-control__option";
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "people-household-view";
+    input.value = option.value;
+    input.checked = state.householdView === option.value;
+    input.addEventListener("change", () => {
+      if (!input.checked) return;
+      state.householdView = option.value;
+      rerender();
+    });
+    const text = document.createElement("span");
+    text.textContent = option.label;
+    label.append(input, text);
+    group.appendChild(label);
+  }
+  wrap.appendChild(group);
+  return wrap;
+}
+
 function renderScopeControl() {
   ensureDistrict();
   const wrap = document.createElement("section");
@@ -413,11 +486,11 @@ const nationalCarerTotal = d3.sum(
   (row) => Number(row.Carers) || 0
 );
 const nationalCarerShare = nationalCarerTotal / nationalStats.total;
-const nationalRenewableEnergyHouseholdProfile = renewableEnergyHouseholdProfile(renewableEnergyHouseholdsData);
+const nationalHouseholdProfile = householdProfile(householdCompositionData);
 
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
-  if (Math.abs(value) < 0.001) return "in line with the national figure";
+  if (Math.abs(value) < 0.0005) return "in line with the national figure";
   return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the national figure`;
 }
 
@@ -572,7 +645,7 @@ display(
 <div class="chart-block chart-block--wide">
 
 ```js
-display(mountReactive(async () => generationPercentageBar(
+display(mountReactive(async () => generationPercentageWaffle(
   combineSexes(aggregateAge(rowsForDistrict())),
   {
     width: DEMOGRAPHICS_CHART_WIDTH,
@@ -600,31 +673,43 @@ display(mountReactive(async () => principalEconomicStatusWaterfall(economicStatu
 
 </div>
 
+<div class="prose-block">
+  <h2>Household profiles</h2>
+  <p>See private households by the number of people living together or by household and family type.</p>
+</div>
+
+<div class="people-household-control-block">
+
 ```js
-display(
-  mountReactive(async () => {
-    const renewable = renewableEnergyHouseholdProfile();
-    const card = document.createElement("section");
-    card.className = "reactive-prose demographic-story-callout";
-
-    const label = document.createElement("p");
-    label.className = "demographic-story-callout__label";
-    label.textContent = "At a glance";
-
-    const heading = document.createElement("h2");
-    heading.textContent = `${d3.format(".1%")(renewable.share)} of households in ${scopeLabel()} had at least one renewable energy source.`;
-
-    const detail = document.createElement("p");
-    detail.innerHTML = `<strong>${d3.format(",")(renewable.count)}</strong> of ${d3.format(",")(renewable.households)} households, as recorded in Census 2022.`;
-
-    const comparison = document.createElement("p");
-    comparison.innerHTML = `This is <strong>${differenceText(renewable.share - nationalRenewableEnergyHouseholdProfile.share)}</strong>; the national figure was ${d3.format(".1%")(nationalRenewableEnergyHouseholdProfile.share)}.`;
-
-    card.append(label, heading, detail, comparison);
-    return card;
-  }, {skeleton: "text"})
-);
+display(mountReactive(async () => renderHouseholdViewControl()));
 ```
+
+</div>
+
+<div class="chart-block chart-block--wide">
+
+```js
+display(mountReactive(async () => {
+  const households = householdProfile();
+  const isSize = state.householdView === "size";
+  return percentageStripChart(isSize ? households.sizeProfile : households.typeProfile, {
+    width: DEMOGRAPHICS_CHART_WIDTH,
+    title: `Private households by ${isSize ? "size" : "type"} in ${scopeLabel()}`,
+    subtitle: `Census 2022 · n = ${d3.format(",")(households.total)} households`,
+    className: isSize ? "household-size-profile" : "household-type-profile",
+    itemLabel: "households",
+    shareLabel: "of private households",
+    note: isSize
+      ? "Each stripe represents approximately 1% of private households. Larger households are grouped as six or more people."
+      : "Each stripe represents approximately 1% of private households in the selected area.",
+    ariaLabel: isSize
+      ? `Private households by number of residents in ${scopeLabel()}`
+      : `Private households by household type in ${scopeLabel()}`
+  });
+}));
+```
+
+</div>
 
 <div class="prose-block prose-block--section">
   <h2>Disability and unpaid care</h2>
@@ -668,7 +753,7 @@ display(
 ```js
 display(mountReactive(async () => irishSpeakerShareWaffle({
   speakers: irishSpeakerPopulation(),
-  population: profileStats().total
+  population: populationAgedThreePlus()
 }, {
   width: DEMOGRAPHICS_CHART_WIDTH,
   title: `Irish speakers in ${scopeLabel()}`,
@@ -773,7 +858,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Household renewable-energy figures are from table SAP2022T6T10ED; the card divides households with at least one renewable energy source by all households, including households for which renewable-energy status was not stated. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table F8011; the waffle divides all Irish speakers aged three and over by the total population of the selected area.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T10ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the household renewable-energy dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/F8011/JSON-stat/2.0/en" target="_blank" rel="noreferrer"> or view the Irish-language dataset</a>.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Population counts are from Census 2022 and have been grouped into ten-year age bands. Principal economic-status figures are from table SAP2022T8T1ED and describe the population aged 15 and over. Household-size and household-type figures are from tables SAP2022T5T2ED and SAP2022T5T1ED; all three household elements use total private households as their denominator. Disability and carer figures are the combined-sex counts from tables SAP2022T12T1ED and SAP2022T12T2ED and are compared with their national shares of the total population. The deprivation description and relative score come from the 2022 HP Deprivation Index; because this is an ED-level measure, the constituency card reports the most common ED classification rather than inferring a constituency score. Irish-language figures are from table SAP2022T3T2ED; the waffle divides all Irish speakers by residents aged three and over. That denominator is calculated from the single-year Census age counts by excluding ages zero, one and two.</p><p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T8T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the economic-status dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T5T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view household size</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T5T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view household type</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T1ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the disability dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T12T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the carers dataset</a>, <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T3T2ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">or view the Irish-language dataset</a>.</p>
 </div>
 
 ```js

@@ -274,7 +274,7 @@ function selectedConstituencyGeoJSON() {
 
 function differenceText(value, comparison = "national profile") {
   const points = Math.abs(value * 100).toFixed(1);
-  if (Math.abs(value) < 0.001) return `in line with the ${comparison}`;
+  if (Math.abs(value) < 0.0005) return `in line with the ${comparison}`;
   return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the ${comparison}`;
 }
 

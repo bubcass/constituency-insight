@@ -2,7 +2,7 @@ import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 import { chartColors, chartPalette } from "../config/chart-palette.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.js";
-import { percentageStripChart } from "./percentage-strip-chart.js";
+import { employmentWaffle } from "./employment-charts.js";
 
 const FEMALE = chartColors.orange;
 const MALE = chartColors.blue;
@@ -235,10 +235,10 @@ export function agePyramidLollipop(data, { width = 790, title = "", subtitle = "
 // Change this alias to agePyramidLollipop for an immediate rollback.
 export const agePyramid = agePyramidWaffle;
 
-export function generationPercentageBar(data, { width = 790, title = "", subtitle = "" } = {}) {
-  return percentageStripChart(
+export function generationPercentageWaffle(data, { width = 790, title = "", subtitle = "" } = {}) {
+  return employmentWaffle(
     data.map((d, index) => ({
-      category: d.ageBand,
+      sector: d.ageBand,
       total: d.population,
       color: chartPalette[index % chartPalette.length],
     })),
@@ -246,11 +246,11 @@ export function generationPercentageBar(data, { width = 790, title = "", subtitl
       width,
       title,
       subtitle,
-      className: "generation-percentage-strip",
-      itemLabel: "people",
-      shareLabel: "of the selected area's population",
-      note: "Each stripe represents approximately 1% of the selected area's population.",
-      ariaLabel: title || "Population by age band",
+      populationLabel: "people",
+      populationContext: "the selected area's population",
+      note: "Each dot represents approximately 1% of the selected area's population.",
+      ariaLabel: title || "Population by age band waffle chart",
+      sort: false,
     },
   );
 }

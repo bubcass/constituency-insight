@@ -28,6 +28,7 @@ import {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, f
 const housingData = await FileAttachment("data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("data/housing-stock-2022.csv").csv({typed: true});
 const adultsWithParentsData = await FileAttachment("data/adults-living-with-parents-2022.csv").csv({typed: true});
+const renewableEnergyHouseholdsData = await FileAttachment("data/renewable-energy-households-2022.csv").csv({typed: true});
 const planningApplicationRows = await FileAttachment("data/derived/planning-applications-normalized.csv").csv({typed: true});
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
@@ -129,11 +130,21 @@ function adultsWithParentsStats() {
   return {population, count, rate: population ? count / population : 0};
 }
 
+function renewableEnergyHouseholdProfile(rows = renewableEnergyHouseholdsData.filter((row) =>
+  row["NEW CONSTITUENCY"] === state.constituency &&
+  (state.district === "all" || row.ED_GUID === state.district)
+)) {
+  const count = d3.sum(rows, (row) => Number(row["Households with at least one renewable energy source"]) || 0);
+  const households = d3.sum(rows, (row) => Number(row["All households"]) || 0);
+  return {count, households, share: households > 0 ? count / households : 0};
+}
+
 const nationalAdultsWithParentsStats = (() => {
   const population = d3.sum(adultsWithParentsData, (row) => Number(row["Adults aged 18+"]) || 0);
   const count = d3.sum(adultsWithParentsData, (row) => Number(row["Adults living with parents"]) || 0);
   return {population, count, rate: population ? count / population : 0};
 })();
+const nationalRenewableEnergyHouseholdProfile = renewableEnergyHouseholdProfile(renewableEnergyHouseholdsData);
 
 function constituencyMembers() {
   return membersForConstituency(membersLookup, state.constituency);
@@ -268,7 +279,7 @@ function planningPeriodLabel() {
 
 function differenceText(value) {
   const points = Math.abs(value * 100).toFixed(1);
-  if (Math.abs(value) < 0.001) return "in line with the national profile";
+  if (Math.abs(value) < 0.0005) return "in line with the national profile";
   return `${points} percentage point${points === "1.0" ? "" : "s"} ${value > 0 ? "above" : "below"} the national profile`;
 }
 
@@ -589,6 +600,25 @@ display(mountReactive(async () => {
 
 </div>
 
+```js
+display(mountReactive(async () => {
+  const renewable = renewableEnergyHouseholdProfile();
+  const card = document.createElement("section");
+  card.className = "reactive-prose demographic-story-callout";
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "At a glance";
+  const heading = document.createElement("h2");
+  heading.textContent = `${d3.format(".1%")(renewable.share)} of households in ${scopeLabel()} had at least one renewable energy source.`;
+  const detail = document.createElement("p");
+  detail.innerHTML = `<strong>${d3.format(",")(renewable.count)}</strong> of ${d3.format(",")(renewable.households)} households, as recorded in Census 2022.`;
+  const comparison = document.createElement("p");
+  comparison.innerHTML = `This is <strong>${differenceText(renewable.share - nationalRenewableEnergyHouseholdProfile.share)}</strong>; the national figure was ${d3.format(".1%")(nationalRenewableEnergyHouseholdProfile.share)}.`;
+  card.append(label, heading, detail, comparison);
+  return card;
+}, {skeleton: "text"}));
+```
+
 <div class="prose-block">
   <h2>Planning applications</h2>
   <p>Planning applications related to the provision of housing may give insight into demand or other issues relating to questions of housing need in constituencies and individual districts. Explore these applications with our interactive map, view the summary or click through to see the full record on the relevant planning authority website.</p>
@@ -732,7 +762,7 @@ display(relatedResearchResource({
 
 <div class="prose-block demographics-source-note">
   <h2>About the data</h2>
-  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. Adults living with their parents are from table F3055. For aggregated areas, percentages and vacancy rates are recalculated from their underlying counts rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a>, <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a> or <a href="https://data.cso.ie/table/F3055" target="_blank" rel="noreferrer">view the adults living with parents dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
+  <p>Data collected for <a href="https://www.cso.ie/en/statistics/population/censusofpopulation2022/censusofpopulation2022-summaryresults/" target="_blank" rel="noreferrer">Census 2022</a> by the CSO underpins Constituency Insights.</p><p>Household tenure counts are from Census 2022 table SAP2022T6T3ED. Housing-stock and vacancy figures are from table F2095. Adults living with their parents are from table F3055. Household renewable-energy figures are from table SAP2022T6T10ED; the card divides households with at least one renewable energy source by all households, including households for which renewable-energy status was not stated. For aggregated areas, percentages and vacancy rates are recalculated from their underlying counts rather than averaging local rates.</p> <p><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T3ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">View the tenure dataset</a>, <a href="https://data.cso.ie/table/F2095" target="_blank" rel="noreferrer">view the housing-stock dataset</a>, <a href="https://data.cso.ie/table/F3055" target="_blank" rel="noreferrer">view the adults living with parents dataset</a> or <a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SAP2022T6T10ED/JSON-stat/2.0/en" target="_blank" rel="noreferrer">view the household renewable-energy dataset</a>.</p><p>Development descriptions are from the <a href="https://planning.geohive.ie/datasets/housinggovie::irishplanningapplications/about" target="_blank" rel="noreferrer">National Planning Application Database</a> and are used to classify housing applications but are omitted from the mapping dataset.</p>
 </div>
 
 ```js

@@ -462,7 +462,9 @@
 }
 
 .transport-timing-control-block,
-.employment-profile-control-block {
+.employment-profile-control-block,
+.education-irish-control-block,
+.people-household-control-block {
     width: 100%;
     max-width: var(--text-max);
     margin: var(--space-2) auto var(--space-6);
@@ -471,14 +473,20 @@
 .transport-timing-control-block .observablehq,
 .transport-timing-control-block .observablehq--block,
 .employment-profile-control-block .observablehq,
-.employment-profile-control-block .observablehq--block {
+.employment-profile-control-block .observablehq--block,
+.education-irish-control-block .observablehq,
+.education-irish-control-block .observablehq--block,
+.people-household-control-block .observablehq,
+.people-household-control-block .observablehq--block {
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
 }
 
 .transport-timing-control,
-.employment-profile-control {
+.employment-profile-control,
+.education-irish-control,
+.people-household-control {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -486,7 +494,9 @@
 }
 
 .transport-timing-control .segmented-control,
-.employment-profile-control .segmented-control {
+.employment-profile-control .segmented-control,
+.education-irish-control .segmented-control,
+.people-household-control .segmented-control {
     grid-auto-columns: max-content;
 }
 
@@ -577,7 +587,9 @@
 
 @media (max-width: 440px) {
     .transport-timing-control .segmented-control,
-    .employment-profile-control .segmented-control {
+    .employment-profile-control .segmented-control,
+    .education-irish-control .segmented-control,
+    .people-household-control .segmented-control {
         grid-auto-flow: row;
         grid-template-columns: max-content;
         justify-content: center;

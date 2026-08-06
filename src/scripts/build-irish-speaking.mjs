@@ -3,7 +3,7 @@ import path from "node:path";
 import {fileURLToPath} from "node:url";
 import {csvFormat, csvParse} from "d3-dsv";
 
-const TABLE = "F8011";
+const TABLE = "SAP2022T3T2ED";
 const API_URL = `https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/${TABLE}/JSON-stat/2.0/en`;
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.resolve(scriptDir, "../data");
@@ -33,8 +33,8 @@ const dimensions = Object.fromEntries(
     {id, index, size: dataset.size[index], ...dataset.dimension[id]},
   ]),
 );
-const sexDimension = dimensions.C02199V02655;
-const frequencyDimension = dimensions.C02697V03265;
+const sexDimension = dimensions.C03738V04487;
+const frequencyDimension = dimensions.C03757V04500;
 const geographyDimension = dimensions.C04167V04938;
 
 if (!sexDimension || !frequencyDimension || !geographyDimension) {
@@ -46,10 +46,10 @@ const frequencies = orderedCategories(frequencyDimension);
 const geographies = orderedCategories(geographyDimension);
 const sexByLabel = new Map(sexes.map((d) => [d.label, d]));
 const frequencyByLabel = new Map(frequencies.map((d) => [d.label, d]));
-const male = requiredCategory(sexByLabel, "Male");
-const female = requiredCategory(sexByLabel, "Female");
-const bothSexes = requiredCategory(sexByLabel, "Both sexes");
-const allSpeakers = requiredCategory(frequencyByLabel, "All Irish speakers");
+const male = requiredCategory(sexByLabel, "Males");
+const female = requiredCategory(sexByLabel, "Females");
+const bothSexes = requiredCategory(sexByLabel, "Both Sexes");
+const allSpeakers = requiredCategory(frequencyByLabel, "All Irish Speakers");
 const frequencyGroups = frequencies.filter((d) => d.code !== allSpeakers.code);
 const ireland = geographies.find((d) => d.code === "IE0");
 const electoralDivisions = geographies.filter((d) => d.code !== "IE0");
@@ -76,6 +76,7 @@ const outputRows = electoralDivisions.map((geography) => {
     GEOGDESC: geography.label,
   };
 
+  const raw = {};
   for (const frequency of frequencies) {
     const positions = {
       [frequencyDimension.id]: frequency.position,
@@ -87,23 +88,37 @@ const outputRows = electoralDivisions.map((geography) => {
     if (men + women !== combined) {
       throw new Error(`${geography.label}: ${frequency.label} sex totals do not match`);
     }
-    row[frequency.label] = combined;
+    raw[frequency.code] = combined;
   }
 
   const frequencySum = frequencyGroups.reduce(
-    (sum, frequency) => sum + row[frequency.label],
+    (sum, frequency) => sum + raw[frequency.code],
     0,
   );
-  if (frequencySum !== row[allSpeakers.label]) {
+  if (frequencySum !== raw[allSpeakers.code]) {
     throw new Error(
-      `${geography.label}: frequency groups sum to ${frequencySum}, expected ${row[allSpeakers.label]}`,
+      `${geography.label}: frequency groups sum to ${frequencySum}, expected ${raw[allSpeakers.code]}`,
     );
   }
+  row["All Irish speakers"] = raw.ALL;
+  row["Speaks Irish daily within the education system only"] = raw.DI + raw.DINO;
+  row["Speaks Irish daily"] = raw.DIDO + raw.DOES;
+  row["Speaks Irish weekly"] = raw.DIWO + raw.WOES;
+  row["Speaks Irish less often"] = raw.DILOO + raw.LOOES;
+  row["Never speaks Irish outside the education system only"] = raw.NOES;
+  row["Not stated"] = raw.NS;
   return row;
 });
 
 for (const frequency of frequencies) {
-  const edTotal = outputRows.reduce((sum, row) => sum + row[frequency.label], 0);
+  const edTotal = electoralDivisions.reduce((sum, geography) => {
+    const positions = {
+      [frequencyDimension.id]: frequency.position,
+      [geographyDimension.id]: geography.position,
+      [sexDimension.id]: bothSexes.position,
+    };
+    return sum + valueAt(dataset, positions);
+  }, 0);
   const nationalTotal = valueAt(dataset, {
     [sexDimension.id]: bothSexes.position,
     [frequencyDimension.id]: frequency.position,

@@ -15,6 +15,7 @@ export function waterfallSegmentsChart(
     xLabel = "Funding (€ millions)",
     tickFormat = null,
     valueFormat = null,
+    shareFormat = null,
     ariaLabel = null,
   } = {},
 ) {
@@ -61,9 +62,12 @@ export function waterfallSegmentsChart(
   const resolvedValueFormat = typeof valueFormat === "function"
     ? valueFormat
     : formatMillionsLabel;
+  const resolvedShareFormat = typeof shareFormat === "function"
+    ? shareFormat
+    : d3.format(".1%");
 
   function segmentLabel(d) {
-    return `${resolvedValueFormat(d.value)} (${d3.format(".0%")(d.share)})`;
+    return `${resolvedValueFormat(d.value)} (${resolvedShareFormat(d.share)})`;
   }
 
   function labelFitsInside(d) {
