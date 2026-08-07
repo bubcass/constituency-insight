@@ -809,7 +809,8 @@
     font-size: clamp(2.3rem, 6vw, 4rem);
 }
 
-.spotlights-hero > p:last-child {
+.spotlights-hero > p:last-child,
+.spotlights-hero__subtitle {
     max-width: 54ch;
     margin: 0;
     color: rgba(255, 255, 255, 0.88);
@@ -3095,5 +3096,126 @@ body.has-map-fullscreen {
     .topic-map,
     .map-skeleton {
         min-height: 300px;
+    }
+}
+
+/* Opt-in night-mode prototype. Light mode remains the default palette. */
+:root[data-theme="dark"] .insights-tabs {
+    background: color-mix(in srgb, var(--page-bg) 84%, transparent);
+}
+
+:root[data-theme="dark"] :is(
+    .map-layer-control,
+    .demographic-scope-context__clear,
+    .road-accident-severity__button,
+    .metric-card,
+    .segmented-control__option:not(:has(input:checked)),
+    .download-block .pq-download,
+    .debates-list__button,
+    .research-resource__button,
+    .elected-strip__card,
+    .demographic-chart__tooltip
+) {
+    background: var(--surface);
+}
+
+:root[data-theme="dark"] .control-input,
+:root[data-theme="dark"] .control-input:hover,
+:root[data-theme="dark"] .control-input:focus,
+:root[data-theme="dark"] .control-input option {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+:root[data-theme="dark"] .segmented-control__option:has(input:checked) {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--page-bg);
+}
+
+:root[data-theme="dark"] :is(
+    .hero__share:hover,
+    .hero__share:focus-visible,
+    .hero__share.is-copied
+) {
+    color: var(--page-bg);
+}
+
+:root[data-theme="dark"] .map-layer-control.is-active {
+    background: color-mix(in srgb, var(--layer-color) 18%, var(--surface));
+}
+
+:root[data-theme="dark"] .road-accident-severity__button.is-active {
+    background: color-mix(in srgb, var(--incident-color) 18%, var(--surface));
+}
+
+:root[data-theme="dark"] .map-layer-control:hover {
+    background: color-mix(in srgb, var(--layer-color) 12%, var(--surface-soft));
+}
+
+:root[data-theme="dark"] .road-accident-severity__button:hover {
+    background: color-mix(in srgb, var(--incident-color) 12%, var(--surface-soft));
+}
+
+:root[data-theme="dark"] :is(
+    .transport-access-empty,
+    .spotlight-card,
+    .demographic-story-callout,
+    .chart-skeleton
+) {
+    background: color-mix(in srgb, var(--surface) 76%, transparent);
+}
+
+:root[data-theme="dark"] :is(
+    .constituency-map,
+    .topic-map,
+    .constituency-map .leaflet-container,
+    .topic-map .leaflet-container,
+    .map-skeleton,
+    .skeleton-shimmer,
+    .elected-strip__ring,
+    .elected-strip__image,
+    .elected-strip__placeholder,
+    .debates-list__avatar,
+    .debates-list__avatar img,
+    .debates-list__avatar--placeholder
+) {
+    background: var(--surface-soft);
+}
+
+:root[data-theme="dark"] :is(
+    .topic-map-record-filters,
+    .constituency-map .leaflet-control-zoom a,
+    .topic-map .leaflet-control-zoom a,
+    .leaflet-control-map-tools button,
+    .leaflet-control-geolocate button,
+    .constituency-map .leaflet-popup-content-wrapper,
+    .constituency-map .leaflet-popup-tip,
+    .topic-map .leaflet-popup-content-wrapper,
+    .topic-map .leaflet-popup-tip,
+    .demographics-map .leaflet-tooltip
+) {
+    background: var(--surface);
+    color: var(--text);
+}
+
+:root[data-theme="dark"] :is(
+    .constituency-map .leaflet-control-attribution,
+    .topic-map .leaflet-control-attribution
+) {
+    background: var(--surface-glass);
+}
+
+@media (max-width: 720px) {
+    :root[data-theme="dark"] .insights-tabs__toggle,
+    :root[data-theme="dark"] .insights-tabs__list {
+        background: var(--surface-glass);
+        border-color: var(--border);
+    }
+
+    :root[data-theme="dark"] .insights-tabs__link:hover,
+    :root[data-theme="dark"] .insights-tabs__link:focus-visible,
+    :root[data-theme="dark"] .insights-tabs__link.is-active {
+        background: color-mix(in srgb, var(--surface-soft) 72%, transparent);
     }
 }

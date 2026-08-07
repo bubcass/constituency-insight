@@ -5,6 +5,27 @@ export default {
     <script>
       document.documentElement.lang = "en-IE";
 
+      (() => {
+        const storageKey = "constituency-insights-theme";
+        const colourScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const readSavedTheme = () => {
+          try {
+            const value = localStorage.getItem(storageKey);
+            return value === "dark" || value === "light" ? value : null;
+          } catch {
+            return null;
+          }
+        };
+        const systemTheme = () => colourScheme.matches ? "dark" : "light";
+        const savedTheme = readSavedTheme();
+        document.documentElement.dataset.theme =
+          savedTheme || systemTheme();
+
+        colourScheme.addEventListener("change", () => {
+          if (!readSavedTheme()) document.documentElement.dataset.theme = systemTheme();
+        });
+      })();
+
       const viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {
         viewport.setAttribute("content", "width=device-width, initial-scale=1");

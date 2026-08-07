@@ -8,6 +8,7 @@ toc: false
 
 ```js
 import {insightsTabs} from "./components/insights-tabs.js";
+import {enhanceHeroWithShare} from "./components/hero-share.js";
 
 const roadSafetyImage = await FileAttachment("media/road-with-glass.jpg").url();
 const healthServicesImage = await FileAttachment("media/health-services-hero.jpg").url();
@@ -17,8 +18,14 @@ const sportsFundingVideo = await FileAttachment("media/sports-funding-hero.mp4")
 <div class="spotlights-hero">
   <p class="spotlights-hero__eyebrow">Constituency insights</p>
   <h1>Spotlights</h1>
-  <p>Detailed explorations of the topics that matter in constituencies.</p>
+  <p class="spotlights-hero__subtitle">Detailed explorations of the topics that matter in constituencies.</p>
 </div>
+
+```js
+enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
+  title: "Spotlights — Constituency Insights",
+});
+```
 
 ```js
 display(insightsTabs("spotlights"));

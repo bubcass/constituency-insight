@@ -2,12 +2,12 @@ export const chartStyle = Object.freeze({
   fontFamily: '"IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   fontSize: 12,
   labelFontSize: 11,
-  text: "#4a463d",
-  softText: "#5f5a50",
-  grid: "#d4ccb8",
-  baseline: "#8c877d",
-  separator: "#f6f3ea",
-  neutral: "#d8d1c2",
+  text: "var(--text)",
+  softText: "var(--text-soft)",
+  grid: "var(--border)",
+  baseline: "var(--chart-baseline)",
+  separator: "var(--page-bg)",
+  neutral: "var(--chart-neutral)",
 });
 
 export function plotStyle(overrides = {}) {
