@@ -1,6 +1,6 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import {chartColors, chartPalette} from "../config/chart-palette.dbce5681.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.1fa9ae9f.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.69596b1d.js";
 
 export function transportMeansWaterfall(
   data,
