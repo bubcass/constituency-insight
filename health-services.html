@@ -7,10 +7,10 @@
 <title>Health services | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.b9379013.css">
+<link rel="preload" as="style" href="./_import/style.1ef21504.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.b9379013.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.1ef21504.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -114,6 +114,49 @@
       }
 
       (() => {
+        const setupBackToTop = () => {
+          if (!document.body || document.querySelector(".page-back-to-top")) return;
+
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "page-back-to-top";
+          button.setAttribute("aria-label", "Back to top");
+          button.title = "Back to top";
+          button.hidden = true;
+          button.innerHTML = '<span class="page-back-to-top__chevron" aria-hidden="true">⌃</span>';
+
+          const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+          button.addEventListener("click", () => {
+            window.scrollTo({
+              top: 0,
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+            });
+          });
+
+          let updatePending = false;
+          const updateVisibility = () => {
+            updatePending = false;
+            button.hidden = window.scrollY <= 640;
+          };
+          const onScroll = () => {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateVisibility);
+          };
+
+          window.addEventListener("scroll", onScroll, {passive: true});
+          document.body.appendChild(button);
+          updateVisibility();
+        };
+
+        if (document.readyState !== "complete") {
+          window.addEventListener("load", setupBackToTop, {once: true});
+        } else {
+          setupBackToTop();
+        }
+      })();
+
+      (() => {
         const retryParameter = "__module_retry";
         const moduleFailure = /importing a module script failed|failed to fetch dynamically imported module|error loading dynamically imported module/i;
         let retryStarted = false;
@@ -148,7 +191,7 @@ import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
 registerFile("./data/derived/health-services-normalized.csv", {"name":"./data/derived/health-services-normalized.csv","mimeType":"text/csv","path":"./_file/data/derived/health-services-normalized.8e35688b.csv","lastModified":1785955536774,"size":1110607});
-registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.5e0907e0.json","lastModified":1786093438645,"size":1171843});
+registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.b6a25be5.json","lastModified":1786373081441,"size":1171870});
 registerFile("./data/derived/recent-questions.json", {"name":"./data/derived/recent-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-questions.56187699.json","lastModified":1785920590297,"size":1517898});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.ed380774.json","lastModified":1785920590309,"size":123367});
