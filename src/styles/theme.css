@@ -906,6 +906,10 @@
     object-position: center 62%;
 }
 
+.derelict-sites-hero__image {
+    object-position: center 52%;
+}
+
 .health-services-hero__image {
     object-position: center 54%;
 }
@@ -1619,6 +1623,42 @@
 
 .people-context-metrics--single .metrics-grid {
     grid-template-columns: minmax(0, 1fr);
+}
+
+.derelict-sites-overview {
+    max-width: var(--text-max);
+    margin: 0 auto var(--space-6);
+}
+
+.derelict-sites-glance {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+    border-left-color: var(--accent);
+    background:
+        linear-gradient(115deg, rgba(159, 29, 32, 0.07), rgba(255, 255, 255, 0.54) 62%),
+        #fffdf8;
+}
+
+.derelict-sites-glance h2 {
+    max-width: 31ch;
+}
+
+.derelict-sites-glance > p:last-child {
+    max-width: 66ch;
+    color: var(--text-soft);
+    line-height: 1.55;
+}
+
+.derelict-sites-metrics {
+    margin-bottom: 0;
+}
+
+.derelict-sites-metrics .metrics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.derelict-sites-metrics .metric-card {
+    min-height: 8.25rem;
 }
 
 /* Metric cards */

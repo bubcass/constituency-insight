@@ -37,6 +37,49 @@ export default {
       }
 
       (() => {
+        const setupBackToTop = () => {
+          if (!document.body || document.querySelector(".page-back-to-top")) return;
+
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "page-back-to-top";
+          button.setAttribute("aria-label", "Back to top");
+          button.title = "Back to top";
+          button.hidden = true;
+          button.innerHTML = '<span class="page-back-to-top__chevron" aria-hidden="true">⌃</span>';
+
+          const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+          button.addEventListener("click", () => {
+            window.scrollTo({
+              top: 0,
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+            });
+          });
+
+          let updatePending = false;
+          const updateVisibility = () => {
+            updatePending = false;
+            button.hidden = window.scrollY <= 640;
+          };
+          const onScroll = () => {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateVisibility);
+          };
+
+          window.addEventListener("scroll", onScroll, {passive: true});
+          document.body.appendChild(button);
+          updateVisibility();
+        };
+
+        if (document.readyState !== "complete") {
+          window.addEventListener("load", setupBackToTop, {once: true});
+        } else {
+          setupBackToTop();
+        }
+      })();
+
+      (() => {
         const retryParameter = "__module_retry";
         const moduleFailure = /importing a module script failed|failed to fetch dynamically imported module|error loading dynamically imported module/i;
         let retryStarted = false;

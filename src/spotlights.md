@@ -11,6 +11,7 @@ import {insightsTabs} from "./components/insights-tabs.js";
 import {enhanceHeroWithShare} from "./components/hero-share.js";
 
 const roadSafetyImage = await FileAttachment("media/road-with-glass.jpg").url();
+const derelictSitesImage = await FileAttachment("media/abandoned-building.jpg").url();
 const healthServicesImage = await FileAttachment("media/health-services-hero.jpg").url();
 const sportsFundingVideo = await FileAttachment("media/sports-funding-hero.mp4").url();
 ```
@@ -63,6 +64,14 @@ const topics = [
     description: "How constituencies are served by hospitals, health centres, GP practices and pharmacies.",
     image: healthServicesImage,
   },
+  //{
+//    href: "./derelict-sites",
+//    eyebrow: "Spotlight",
+//    title: "Derelict sites",
+//    description: "Local authority derelict site records mapped by constituency.",
+ //   image: derelictSitesImage,
+  //}
+ // ,
 ];
 
 for (const topic of topics) {

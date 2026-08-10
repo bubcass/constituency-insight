@@ -459,6 +459,53 @@ a:focus-visible {
     font-size: 0.92rem;
 }
 
+.page-back-to-top {
+    position: fixed;
+    right: max(var(--space-4), env(safe-area-inset-right));
+    bottom: max(var(--space-4), env(safe-area-inset-bottom));
+    z-index: 1300;
+    display: grid;
+    width: 2.7rem;
+    height: 2.7rem;
+    padding: 0;
+    place-items: center;
+    border: 3px solid color-mix(in srgb, var(--gold) 72%, white 28%);
+    border-radius: 999px;
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+    color: var(--gold-hover);
+    cursor: pointer;
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.page-back-to-top[hidden] {
+    display: none;
+}
+
+.page-back-to-top:hover,
+.page-back-to-top:focus-visible {
+    box-shadow: 0 0.6rem 1.2rem rgba(47, 47, 47, 0.2);
+    transform: translateY(-1px);
+}
+
+:root[data-theme="dark"] .page-back-to-top:hover,
+:root[data-theme="dark"] .page-back-to-top:focus-visible {
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.38);
+}
+
+.page-back-to-top:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.page-back-to-top__chevron {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1;
+    transform: translateY(0.02em);
+}
+
 @media (max-width: 720px) {
     .hero__media {
         height: 240px;
@@ -486,5 +533,16 @@ a:focus-visible {
 
     h1 {
         font-size: 2rem;
+    }
+
+    .page-back-to-top {
+        right: max(var(--space-3), env(safe-area-inset-right));
+        bottom: max(var(--space-3), env(safe-area-inset-bottom));
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .page-back-to-top__chevron {
+        font-size: 1.08rem;
     }
 }
