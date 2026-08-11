@@ -2,7 +2,8 @@ import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import * as Plot from "../../_npm/@observablehq/plot@0.6.17/a96a6bbb.js";
 import { chartColors, chartPalette } from "../config/chart-palette.7185253a.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.ae393eab.js";
-import { employmentWaffle } from "./employment-charts.4b14b364.js";
+import { employmentWaffle } from "./employment-charts.03115eed.js";
+import {sanitizePlotAccessibility} from "./plot-accessibility.36b70e98.js";
 
 const FEMALE = chartColors.orange;
 const MALE = chartColors.blue;
@@ -26,6 +27,7 @@ function chartWithTooltip(chart, values, tooltipHTML, { targetSelector = "rect" 
   const tooltip = document.createElement("div");
   tooltip.className = "demographic-chart__tooltip";
   tooltip.setAttribute("role", "tooltip");
+  tooltip.setAttribute("aria-hidden", "true");
   tooltip.style.opacity = "0";
 
   shell.append(chart, tooltip);
@@ -34,6 +36,7 @@ function chartWithTooltip(chart, values, tooltipHTML, { targetSelector = "rect" 
 
   function show(event, value) {
     tooltip.innerHTML = tooltipHTML(value);
+    tooltip.setAttribute("aria-hidden", "false");
     tooltip.style.opacity = "1";
 
     const shellRect = shell.getBoundingClientRect();
@@ -60,6 +63,7 @@ function chartWithTooltip(chart, values, tooltipHTML, { targetSelector = "rect" 
 
   function hide() {
     tooltip.style.opacity = "0";
+    tooltip.setAttribute("aria-hidden", "true");
   }
 
   targets.forEach((target, index) => {
@@ -69,6 +73,7 @@ function chartWithTooltip(chart, values, tooltipHTML, { targetSelector = "rect" 
     target.classList.add("demographic-chart__hit-target");
     target.style.cursor = "pointer";
     target.setAttribute("tabindex", "0");
+    target.setAttribute("role", "img");
     target.setAttribute("aria-label", `${value.sex}, age ${value.ageBand}: ${d3.format(",")(value.population)} people`);
     target.addEventListener("mousemove", (event) => show(event, value));
     target.addEventListener("mouseenter", (event) => show(event, value));
@@ -132,9 +137,11 @@ export function agePyramidWaffle(data, { width = 790, title = "", subtitle = "" 
           unit: dotUnit,
           gap: 1.4,
           rx: "100%",
+          ariaHidden: true,
         }),
-        Plot.ruleX([0], { stroke: chartStyle.baseline, strokeWidth: 1 }),
+        Plot.ruleX([0], { stroke: chartStyle.baseline, strokeWidth: 1, ariaHidden: true }),
         Plot.rectX(values, {
+          className: "demographic-chart__age-hit-area",
           x1: (d) => d.sex === "Female" ? -max * 1.08 : 0,
           x2: (d) => d.sex === "Female" ? 0 : max * 1.08,
           y: "ageBand",
@@ -145,11 +152,13 @@ export function agePyramidWaffle(data, { width = 790, title = "", subtitle = "" 
       ],
     });
 
+  sanitizePlotAccessibility(chart);
+
   const chartShell = chartWithTooltip(
     chart,
     values,
     (d) => `<strong>${d.sex}, age ${d.ageBand}</strong><span>${d3.format(",")(d.population)} people</span>`,
-    {targetSelector: 'g[aria-label="rect"] rect'},
+    {targetSelector: ".demographic-chart__age-hit-area rect"},
   );
   const note = document.createElement("p");
   note.className = "demographic-chart__note";
@@ -210,6 +219,7 @@ export function agePyramidLollipop(data, { width = 790, title = "", subtitle = "
       }),
       Plot.ruleX([0], { stroke: chartStyle.baseline, strokeWidth: 1 }),
       Plot.rectX(values, {
+        className: "demographic-chart__age-hit-area",
         x1: (d) => d.sex === "Female" ? -max * 1.08 : 0,
         x2: (d) => d.sex === "Female" ? 0 : max * 1.08,
         y: "ageBand",
@@ -220,12 +230,14 @@ export function agePyramidLollipop(data, { width = 790, title = "", subtitle = "
     ],
   });
 
+  sanitizePlotAccessibility(chart);
+
   wrap.appendChild(
     chartWithTooltip(
       chart,
       values,
       (d) => `<strong>${d.sex}, age ${d.ageBand}</strong><span>${d3.format(",")(d.population)} people</span>`,
-      {targetSelector: 'g[aria-label="rect"] rect'},
+      {targetSelector: ".demographic-chart__age-hit-area rect"},
     ),
   );
 

@@ -1,7 +1,7 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import {chartPalette} from "../config/chart-palette.7185253a.js";
-import {employmentWaffle} from "./employment-charts.4b14b364.js";
-import {percentageStripChart} from "./percentage-strip-chart.bccf57d6.js";
+import {employmentWaffle} from "./employment-charts.03115eed.js";
+import {percentageStripChart} from "./percentage-strip-chart.a5b42dda.js";
 import {waterfallSegmentsChart} from "./waterfall-segments-chart.5f399609.js";
 
 export function educationQualificationWaterfall(

@@ -2,6 +2,7 @@ import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import * as Plot from "../../_npm/@observablehq/plot@0.6.17/a96a6bbb.js";
 import {chartPalette} from "../config/chart-palette.7185253a.js";
 import {plotStyle, responsivePlotWidth} from "../config/chart-style.ae393eab.js";
+import {sanitizePlotAccessibility} from "./plot-accessibility.36b70e98.js";
 
 export function percentageStripChart(
   data,
@@ -72,6 +73,7 @@ export function percentageStripChart(
         y: () => 0,
         fill: "category",
         inset: 0,
+        ariaHidden: true,
       }),
     ],
   });
@@ -82,12 +84,14 @@ export function percentageStripChart(
       .map((d) => `${d.category}: ${d3.format(".1%")(d.total / total)}`)
       .join("; ")}.`,
   );
+  sanitizePlotAccessibility(plot);
 
   const plotWrap = document.createElement("div");
   plotWrap.className = "demographic-chart__plot percentage-strip__plot";
   const tooltip = document.createElement("div");
   tooltip.className = "demographic-chart__tooltip";
   tooltip.setAttribute("role", "tooltip");
+  tooltip.setAttribute("aria-hidden", "true");
   tooltip.style.opacity = "0";
   plotWrap.append(plot, tooltip);
 
@@ -95,17 +99,13 @@ export function percentageStripChart(
   targets.forEach((target, index) => {
     const cell = cells[index];
     if (!cell) return;
-    target.setAttribute("tabindex", "0");
-    target.setAttribute(
-      "aria-label",
-      `${cell.category}: ${d3.format(",")(cell.total)} ${itemLabel}, ${d3.format(".1%")(cell.share)} ${shareLabel}`,
-    );
     const show = (event) => {
       tooltip.innerHTML = `
         <strong>${escapeHtml(cell.category)}</strong>
         <span>${d3.format(",")(cell.total)} ${escapeHtml(itemLabel)}</span>
         <span>${d3.format(".1%")(cell.share)} ${escapeHtml(shareLabel)}</span>
       `;
+      tooltip.setAttribute("aria-hidden", "false");
       tooltip.style.opacity = "1";
       const shellRect = plotWrap.getBoundingClientRect();
       const targetRect = target.getBoundingClientRect();
@@ -118,12 +118,13 @@ export function percentageStripChart(
       tooltip.style.left = `${left}px`;
       tooltip.style.top = `${top}px`;
     };
-    const hide = () => { tooltip.style.opacity = "0"; };
+    const hide = () => {
+      tooltip.style.opacity = "0";
+      tooltip.setAttribute("aria-hidden", "true");
+    };
     target.addEventListener("pointerenter", show);
     target.addEventListener("pointermove", show);
     target.addEventListener("pointerleave", hide);
-    target.addEventListener("focus", show);
-    target.addEventListener("blur", hide);
   });
 
   const noteElement = document.createElement("p");
