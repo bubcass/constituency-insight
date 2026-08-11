@@ -1,4 +1,42 @@
-# Elections Explorer
+# Constituency Insights
+
+## Complete data refresh
+
+Run `npm run data:refresh` from the repository root to rebuild the resource's
+complete data layer. The command validates the versioned static inputs, then:
+
+1. fetches the current electoral-district geometry;
+2. fetches and validates every CSO dataset used by the topic pages;
+3. refreshes Oireachtas, PQ Explorer and public-transport data;
+4. rebuilds the derived spotlight datasets from their versioned source files;
+5. runs the cross-dataset consistency audit.
+
+The Census age profile in `src/data/demographics-age-2022.csv`, constituency
+geometry and the files in `src/data/source` are deliberate versioned inputs.
+They are checked before a refresh but are not silently replaced. This includes
+the manually downloaded RSA, PBO, HSE, planning, derelict-site and deprivation
+snapshots. Replace those source files explicitly when a new edition is
+published, then rerun the command.
+
+Useful variants are:
+
+```bash
+# Refresh the data and build the deployable site.
+npm run build:fresh
+
+# Refresh only changing parliamentary and transport feeds.
+npm run data:refresh:current
+
+# Rebuild local derivatives after replacing a versioned source file.
+npm run data:rebuild
+
+# Show every stage without running it.
+npm run data:refresh -- --list
+```
+
+All stages run sequentially and the command exits on the first failure. A
+scheduled job should commit or deploy generated files only after the command
+exits successfully.
 
 ## Transport access
 
