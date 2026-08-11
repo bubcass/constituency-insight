@@ -67,7 +67,7 @@ The template should stay opinionated: one polished civic page layout, one consti
 | `src/data/members-lookup.json` | Shared sample/reference data | Keep as sample data or replace with a smaller fixture. Document member fields. |
 | `src/data/geo/constituencies.json` | Shared base data | Keep if the template is Ireland-specific; otherwise make this a sample and document how to replace boundaries. |
 | `src/data/derived/*.json` | Generated outputs | Keep small generated fixtures for the sample page, but document rebuild commands. Avoid making large derived files the only source of truth. |
-| `src/data/transformers/*.js` | Topic loaders/transformers | Keep as examples. Make naming consistent and explain input/output contracts. |
+| `src/scripts/spotlights/build-*.mjs` | Spotlight data builders | Keep as examples with consistent input/output naming. |
 | `src/scripts/build-recent-questions.mjs` | Shared parliamentary-data script | Keep as the single PQ Explorer source and add future topic matchers to its `TOPICS` configuration. |
 | `src/media/sports-funding-hero.mp4` | Sample asset | Replace with a small default asset or document how to replace. |
 | `src/media/election.mp4`, `src/media/bound-volume.jpeg` | Project/sample assets | Keep only if used by the sample page; otherwise remove from the template. |

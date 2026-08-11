@@ -7,7 +7,7 @@ const [inputPath, outputPath] = process.argv.slice(2);
 
 if (!inputPath || !outputPath) {
   console.error(
-    "Usage: node build-waterfall-segments.js <input-enriched.json> <output.json>",
+    "Usage: node src/scripts/spotlights/build-sports-funding-waterfall.mjs <input-enriched.json> <output.json>",
   );
   process.exit(1);
 }

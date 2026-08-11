@@ -46,15 +46,15 @@ const TASKS = [
   task("current", "Transport access", "src/scripts/build-transport-access.mjs"),
 
   task("derived", "Deprivation index", "src/scripts/build-deprivation-index.mjs"),
-  task("derived", "Sports-funding enrichment", "src/data/transformers/sports-funding-enriched.json.js"),
-  task("derived", "Sports-funding waterfall", "src/data/transformers/build-waterfall-segments.js", [
+  task("derived", "Sports-funding enrichment", "src/scripts/spotlights/build-sports-funding.mjs"),
+  task("derived", "Sports-funding waterfall", "src/scripts/spotlights/build-sports-funding-waterfall.mjs", [
     "src/data/derived/sports-funding-enriched.json",
     "src/data/derived/waterfall-segments.json",
   ]),
-  task("derived", "Road-accident normalization", "src/data/transformers/road-accidents-normalized.js"),
-  task("derived", "Derelict-site normalization", "src/data/transformers/derelict-sites-normalized.js"),
-  task("derived", "Health-service normalization", "src/data/transformers/health-services-normalized.js"),
-  task("derived", "Planning-application normalization", "src/data/transformers/planning-applications-normalized.js"),
+  task("derived", "Road-safety normalization", "src/scripts/spotlights/build-road-safety.mjs"),
+  task("derived", "Derelict-site normalization", "src/scripts/spotlights/build-derelict-sites.mjs"),
+  task("derived", "Health-service normalization", "src/scripts/spotlights/build-health-services.mjs"),
+  task("derived", "Planning-application normalization", "src/scripts/spotlights/build-planning-applications.mjs"),
 ];
 
 const GROUPS = new Set(["foundation", "census", "current", "derived"]);

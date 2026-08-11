@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { csvFormat, csvParse } from "d3-dsv";
+import {csvFormat, csvParse} from "d3-dsv";
 import * as turf from "@turf/turf";
 
 const ROOT = process.cwd();

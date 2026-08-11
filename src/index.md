@@ -53,7 +53,7 @@ const topics = [
     video: transportVideo,
   },
   {
-    href: "./spotlights",
+    href: "./spotlight",
     eyebrow: "Spotlights",
     title: "Explore",
     image: spotlightsImage,
