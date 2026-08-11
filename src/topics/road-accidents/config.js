@@ -1,3 +1,5 @@
+import {categoryColorMap} from "../../config/chart-palette.js";
+
 export const roadAccidentsTopic = {
   fields: {
     lat: "latitude",
@@ -35,14 +37,14 @@ export const roadAccidentsTopic = {
     { key: "pedestrians", label: "Pedestrians", test: (record) => Number(record.pedestrian_count) > 0 },
   ],
 
-  roadUserPalette: {
-    Drivers: "#2678a8",
-    Passengers: "#755894",
-    Pedestrians: "#b84d45",
-    Cyclists: "#2f8b68",
-    Motorcyclists: "#d47a2f",
-    "E-scooter/other": "#9b8738",
-  },
+  roadUserPalette: categoryColorMap([
+    "Drivers",
+    "Passengers",
+    "Pedestrians",
+    "Cyclists",
+    "Motorcyclists",
+    "E-scooter/other",
+  ]),
 
   formatCount(value) {
     return Number.isFinite(value)

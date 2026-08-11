@@ -20,6 +20,7 @@ import {relatedResearchResource} from "./components/related-research.js";
 import {createReactiveMount} from "./components/reactive-mount.js";
 import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {waterfallSegmentsChart} from "./components/waterfall-segments-chart.js";
+import {chartPalette} from "./config/chart-palette.js";
 import {derelictSitesTopic} from "./topics/derelict-sites/config.js";
 import {buildAuthoritySegments, buildDerelictSiteDownloadRows, buildDerelictSiteSummary, filterDerelictSites} from "./topics/derelict-sites/transforms.js";
 
@@ -31,7 +32,7 @@ const derelictContributions = await FileAttachment("data/derived/recent-derelict
 const heroImage = await FileAttachment("media/abandoned-building.jpg").url();
 
 const DERELICT_MATCHER = /\b(?:derelict(?:ion)?|derelict sites?|vacant and derelict|vacant sites?|vacant propert(?:y|ies)|vacant homes?|long-term vacancy)\b/i;
-const authorityPalette = ["#9f1d20", "#d47a2f", "#7f6c2e", "#2678a8", "#2f8b68", "#7457a6"];
+const authorityPalette = chartPalette;
 const constituencies = Array.from(new Set(
   constituenciesGeo.features.map((feature) => cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE)).filter(Boolean)
 )).sort((a, b) => a.localeCompare(b, "en"));

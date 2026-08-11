@@ -63,22 +63,11 @@ export function educationCeasedAgeWaffle(
   data,
   {width = 960, title = "", subtitle = ""} = {},
 ) {
-  const colors = [
-    "#d62728",
-    "#ff7f0e",
-    "#bcbd22",
-    "#2ca02c",
-    "#17becf",
-    "#1f77b4",
-    "#303591",
-    "#9467bd",
-    "#7f7f7f",
-  ];
   return employmentWaffle(
     (Array.isArray(data) ? data : []).map((d, index) => ({
       sector: d.label,
       total: d.total,
-      color: colors[index % colors.length],
+      color: chartPalette[index % chartPalette.length],
     })),
     {
       width,

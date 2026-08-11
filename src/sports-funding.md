@@ -21,6 +21,7 @@ import { memberContributionList } from "./components/parliamentary-activity.js";
 import { relatedResearchResource } from "./components/related-research.js";
 import { createReactiveMount } from "./components/reactive-mount.js";
 import { enhanceHeroWithShare } from "./components/hero-share.js";
+import { chartPalette } from "./config/chart-palette.js";
 
 import { sportsFundingTopic } from "./topics/sports-funding/config.js";
 import {
@@ -271,17 +272,13 @@ async function getRecentSportsPQsForConstituency(limit = 6) {
 }
 
 function getWaterfallColorLookup(rows = []) {
-  const lookup = new Map();
-
-  for (const row of rows) {
-    for (const segment of row.segments ?? []) {
-      if (segment?.Segment && segment?.color && !lookup.has(segment.Segment)) {
-        lookup.set(segment.Segment, segment.color);
-      }
-    }
-  }
-
-  return lookup;
+  const categories = Array.from(new Set(
+    rows.flatMap((row) => (row.segments ?? []).map((segment) => segment?.Segment)).filter(Boolean)
+  )).sort((a, b) => String(a).localeCompare(String(b), "en"));
+  return new Map(categories.map((category, index) => [
+    category,
+    chartPalette[index % chartPalette.length]
+  ]));
 }
 
 async function getRecentSportsContributions(limit = 6, perMemberLimit = 3) {
@@ -431,15 +428,20 @@ async function getSelectedWaterfallRecord() {
   const constituencyRows = rows.filter((d) => d.constituency === constituency);
   if (!constituencyRows.length) return null;
 
-  if (selectedYear !== "All") {
-    return (
-      constituencyRows.find(
-        (d) => String(d.period) === String(selectedYear)
-      ) ?? null
-    );
-  }
-
   const colorLookup = getWaterfallColorLookup(constituencyRows);
+
+  if (selectedYear !== "All") {
+    const record = constituencyRows.find(
+      (d) => String(d.period) === String(selectedYear)
+    );
+    return record ? {
+      ...record,
+      segments: (record.segments ?? []).map((segment) => ({
+        ...segment,
+        color: colorLookup.get(segment.Segment) ?? chartPalette[0]
+      }))
+    } : null;
+  }
 
   const segmentTotals = d3.rollups(
     constituencyRows.flatMap((d) => d.segments ?? []),
@@ -464,7 +466,7 @@ async function getSelectedWaterfallRecord() {
     return {
       Segment: d.Segment,
       value: d.value,
-      color: colorLookup.get(d.Segment) ?? "#1f77b4",
+      color: colorLookup.get(d.Segment) ?? chartPalette[0],
       x1,
       x2,
       share: total > 0 ? d.value / total : 0

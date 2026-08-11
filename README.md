@@ -53,6 +53,22 @@ npm run build:recent-questions -- \
   --source-dir /path/to/pq-explorer/src/data/pq
 ```
 
+## Chart palettes
+
+Categorical charts and topic maps use the shared palette selected by
+`chartPaletteName` in `src/config/chart-palette.js`. Set it to one of:
+
+- `"default"` — the existing Constituency Insights palette
+- `"muted"` — a lower-saturation version of the default palette
+- `"lrs"` — the L&RS/PRS palette
+- `"pbo"` — the PBO brand palette
+
+Changing that single value applies the selection site-wide. For a deliberate
+one-chart exception, import `getChartPalette` or pass a palette name as the
+second argument to `categoryColorMap`. Meaning-bearing colours such as party
+identity and road-collision severity are kept separate from categorical chart
+palettes.
+
 This is an [Observable Framework](https://observablehq.com/framework/) app. To install the required dependencies, run:
 
 ```

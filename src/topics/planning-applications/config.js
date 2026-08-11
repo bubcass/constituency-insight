@@ -1,3 +1,5 @@
+import {categoryColorMap} from "../../config/chart-palette.js";
+
 export const planningApplicationsTopic = {
   fields: {
     lat: "latitude",
@@ -19,16 +21,16 @@ export const planningApplicationsTopic = {
     clearAllTitle: "Hide all development types"
   },
 
-  palette: {
-    "New dwelling / one-off house": "#2678a8",
-    "New multi-unit housing": "#7457a6",
-    "Extension / alteration": "#d47a2f",
-    "Change of use to housing": "#2f8b68",
-    "Retention / regularisation": "#b84d45",
-    "Revision / amendment": "#9b8738",
-    "Domestic ancillary": "#557f52",
-    "Other residential": "#6f7782"
-  },
+  palette: categoryColorMap([
+    "New dwelling / one-off house",
+    "New multi-unit housing",
+    "Extension / alteration",
+    "Change of use to housing",
+    "Retention / regularisation",
+    "Revision / amendment",
+    "Domestic ancillary",
+    "Other residential",
+  ]),
 
   formatCount(value) {
     return Number.isFinite(Number(value))

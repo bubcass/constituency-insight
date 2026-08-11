@@ -21,6 +21,7 @@ import {createReactiveMount} from "./components/reactive-mount.js";
 import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {educationQualificationWaterfall, educationCeasedAgeWaffle, irishLanguagePercentageBar} from "./components/education-charts.js";
 import {downloadButton} from "./components/download-button.js";
+import {chartPalette} from "./config/chart-palette.js";
 
 const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
 const educationQualification = await FileAttachment("data/education-qualification-2022.csv").csv({typed: true});
@@ -202,7 +203,7 @@ function irishFrequencyProfile() {
 function irishAbilityProfile() {
   const {speakers, population} = irishSpeakerProfile();
   return [
-    {category: "Can speak Irish", total: speakers, color: "#1f77b4"},
+    {category: "Can speak Irish", total: speakers, color: chartPalette[0]},
     {category: "Cannot speak Irish", total: Math.max(0, population - speakers), color: "#d8d1c2"}
   ];
 }

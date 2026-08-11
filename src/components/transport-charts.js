@@ -1,5 +1,6 @@
 import * as d3 from "npm:d3";
 import {chartColors, chartPalette} from "../config/chart-palette.js";
+import {contrastingChartText} from "../config/chart-contrast.js";
 import {waterfallSegmentsChart} from "./waterfall-segments-chart.js";
 
 export function transportMeansWaterfall(
@@ -96,8 +97,8 @@ export function commuteTimingHeatmap(
 
     const cell = document.createElement("div");
     cell.className = "transport-timing-heatmap__cell";
-    if (d3.lab(fill).l < 56) cell.classList.add("is-dark");
     cell.style.backgroundColor = fill;
+    cell.style.color = contrastingChartText(fill);
     cell.tabIndex = 0;
     cell.title = `${row.fullLabel}: ${d3.format(",")(row.total)} people (${d3.format(".1%")(share)})`;
     cell.setAttribute("aria-label", cell.title);

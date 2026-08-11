@@ -456,7 +456,9 @@ export function topicPointMap({
     onAdd: () => {
       const div = L.DomUtil.create("div", "topic-map-legend leaflet-control");
       div.style.cssText = `
-        background: rgba(255,255,255,0.95);
+        background: var(--surface-glass);
+        color: var(--text);
+        border: 1px solid var(--border);
         padding: 6px 8px;
         border-radius: 8px;
         font: 10px/1.3 "IBM Plex Sans", sans-serif;
@@ -487,7 +489,8 @@ export function topicPointMap({
 
       toggleBtn = document.createElement("button");
       toggleBtn.style.cssText = `
-        margin-top:4px; background:#f5f5f5; border:1px solid #ddd; border-radius:6px;
+        margin-top:4px; background:var(--surface-soft); color:var(--text);
+        border:1px solid var(--border); border-radius:6px;
         padding:3px 5px; font-size:10px; cursor:pointer; display:none;
         font-family:"IBM Plex Sans", sans-serif;
       `;

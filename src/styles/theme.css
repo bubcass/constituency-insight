@@ -526,10 +526,6 @@
     font-variant-numeric: tabular-nums;
 }
 
-.transport-timing-heatmap__cell.is-dark {
-    color: #fffdf8;
-}
-
 .transport-timing-heatmap__cell:focus-visible {
     position: relative;
     z-index: 1;
