@@ -24,6 +24,13 @@ function defaultPointTooltip(point) {
   return `<strong>${escapeHtml(point.name || "Bus stop")}</strong>${indicator}`;
 }
 
+function pointAccessibleLabel(point) {
+  const name = String(point?.name ?? "").trim();
+  if (point?.type === "station") return name ? `Rail station: ${name}` : "Rail station";
+  if (point?.type === "luas") return name ? `Luas stop: ${name}` : "Luas stop";
+  return name ? `Bus stop: ${name}` : "Bus stop";
+}
+
 export function electoralDistrictMap({
   constituencyGeoJSON,
   districtGeoJSON,
@@ -190,9 +197,11 @@ export function electoralDistrictMap({
   for (const point of pointRecords) {
     if (!pointLayers.has(point.type)) pointLayers.set(point.type, L.layerGroup().addTo(map));
     const style = pointTypeStyles[point.type] ?? {};
+    const accessibleLabel = pointAccessibleLabel(point);
     point.__marker = style.shape === "diamond"
       ? L.marker([point.latitude, point.longitude], {
           pane: "transportAccessPoints",
+          title: accessibleLabel,
           icon: L.divIcon({
             className: "transport-station-div-icon",
             html: `<span class="transport-station-marker" style="--marker-fill: ${style.fillColor}; --marker-stroke: ${style.color}" aria-hidden="true"></span>`,
@@ -210,6 +219,11 @@ export function electoralDistrictMap({
           opacity: 1,
           weight: style.weight ?? 1.25,
         });
+    if (style.shape === "diamond") {
+      point.__marker.on("add", () => {
+        point.__marker.getElement()?.setAttribute("aria-label", accessibleLabel);
+      });
+    }
     point.__marker.bindTooltip(pointTooltipHTML(point), {
       direction: "top",
       sticky: true,

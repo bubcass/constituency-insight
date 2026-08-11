@@ -2,6 +2,7 @@ import * as d3 from "npm:d3";
 import * as Plot from "npm:@observablehq/plot";
 import { chartPalette } from "../config/chart-palette.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.js";
+import {sanitizePlotAccessibility} from "./plot-accessibility.js";
 
 const WAFFLE_COLUMNS = 20;
 const WAFFLE_ROWS = 5;
@@ -48,12 +49,14 @@ export function employmentWaffle(data, {
         r: dotRadius,
         stroke: chartStyle.separator,
         strokeWidth: 1.5,
+        ariaHidden: true,
         title: (d) => `${d.sector}: ${d3.format(",")(d.total)} ${populationLabel} (${d3.format(".1%")(d.share)} of ${populationContext})`,
       }),
     ],
   });
   plot.setAttribute("role", "img");
   plot.setAttribute("aria-label", title || ariaLabel);
+  sanitizePlotAccessibility(plot);
 
   const legend = document.createElement("div");
   legend.className = "employment-waffle__legend";

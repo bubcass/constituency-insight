@@ -3,6 +3,7 @@ import * as Plot from "npm:@observablehq/plot";
 import {chartPalette} from "../config/chart-palette.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.js";
 import {waterfallSegmentsChart} from "./waterfall-segments-chart.js";
+import {sanitizePlotAccessibility} from "./plot-accessibility.js";
 
 export function principalEconomicStatusWaterfall(
   data,
@@ -110,6 +111,7 @@ export function irishSpeakerShareWaffle(
         fillOpacity: (d) => d.active ? 1 : 0.68,
         stroke: chartStyle.separator,
         strokeWidth: 1.5,
+        ariaHidden: true,
         title: (d) => d.active
           ? `${d3.format(",")(safeSpeakers)} Irish speakers (${d3.format(".1%")(share)} of residents aged three and over)`
           : `${d3.format(",")(rest)} other residents (${d3.format(".1%")(1 - share)} of residents aged three and over)`,
@@ -121,6 +123,7 @@ export function irishSpeakerShareWaffle(
     "aria-label",
     `${d3.format(".1%")(share)} of residents aged three and over are Irish speakers.`,
   );
+  sanitizePlotAccessibility(plot);
 
   const plotWrap = document.createElement("div");
   plotWrap.className = "irish-speaker-share__plot";
