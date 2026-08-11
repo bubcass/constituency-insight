@@ -1,8 +1,8 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
-import {chartPalette} from "../config/chart-palette.dbce5681.js";
-import {employmentWaffle} from "./employment-charts.e1a60c8d.js";
-import {percentageStripChart} from "./percentage-strip-chart.b79c02ad.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.69596b1d.js";
+import {chartPalette} from "../config/chart-palette.7185253a.js";
+import {employmentWaffle} from "./employment-charts.4b14b364.js";
+import {percentageStripChart} from "./percentage-strip-chart.bccf57d6.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.5f399609.js";
 
 export function educationQualificationWaterfall(
   data,
@@ -63,22 +63,11 @@ export function educationCeasedAgeWaffle(
   data,
   {width = 960, title = "", subtitle = ""} = {},
 ) {
-  const colors = [
-    "#d62728",
-    "#ff7f0e",
-    "#bcbd22",
-    "#2ca02c",
-    "#17becf",
-    "#1f77b4",
-    "#303591",
-    "#9467bd",
-    "#7f7f7f",
-  ];
   return employmentWaffle(
     (Array.isArray(data) ? data : []).map((d, index) => ({
       sector: d.label,
       total: d.total,
-      color: colors[index % colors.length],
+      color: chartPalette[index % chartPalette.length],
     })),
     {
       width,

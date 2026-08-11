@@ -1,5 +1,5 @@
 import L from "../../_npm/leaflet@1.9.4/721623d8.js";
-import { chartColors } from "../config/chart-palette.dbce5681.js";
+import { chartColors } from "../config/chart-palette.7185253a.js";
 import {
   addStandardBaseLayer,
   addStandardMapControls,

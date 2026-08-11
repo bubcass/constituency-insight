@@ -1,3 +1,5 @@
+import {categoryColorMap} from "../../config/chart-palette.7185253a.js";
+
 export const derelictSitesTopic = {
   fields: {
     lat: "latitude",
@@ -19,12 +21,12 @@ export const derelictSitesTopic = {
     clearAllTitle: "Hide all location-evidence layers",
   },
 
-  palette: {
-    "Authority point": "#9f1d20",
-    "Polygon centroid": "#d47a2f",
-    "Transformed grid reference": "#7f6c2e",
-    "Other authority location": "#777777",
-  },
+  palette: categoryColorMap([
+    "Authority point",
+    "Polygon centroid",
+    "Transformed grid reference",
+    "Other authority location",
+  ]),
 
   formatCount(value) {
     return Number.isFinite(Number(value))

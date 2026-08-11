@@ -1,4 +1,4 @@
-import { sportsFundingTopic } from "./config.351068a5.js";
+import { sportsFundingTopic } from "./config.9943ea05.js";
 
 export function filterRowsByConstituency(rows, constituency) {
   const target = cleanText(constituency);

@@ -1,6 +1,7 @@
 import * as Plot from "../../_npm/@observablehq/plot@0.6.17/a96a6bbb.js";
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import {chartStyle, plotStyle} from "../config/chart-style.ae393eab.js";
+import {contrastingChartText} from "../config/chart-contrast.9ba5c9ff.js";
 
 export function waterfallSegmentsChart(
   segments,
@@ -166,7 +167,9 @@ export function waterfallSegmentsChart(
         y: "Segment",
         text: segmentLabel,
         textAnchor: (d) => labelFitsInside(d) ? "middle" : "end",
-        fill: (d) => labelFitsInside(d) ? chartStyle.separator : chartStyle.text,
+        fill: (d) => labelFitsInside(d)
+          ? contrastingChartText(d.color)
+          : chartStyle.text,
         dx: 0,
         dy: 0,
         lineAnchor: "middle",

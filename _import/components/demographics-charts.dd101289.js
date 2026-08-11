@@ -1,8 +1,8 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
 import * as Plot from "../../_npm/@observablehq/plot@0.6.17/a96a6bbb.js";
-import { chartColors, chartPalette } from "../config/chart-palette.dbce5681.js";
+import { chartColors, chartPalette } from "../config/chart-palette.7185253a.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.ae393eab.js";
-import { employmentWaffle } from "./employment-charts.e1a60c8d.js";
+import { employmentWaffle } from "./employment-charts.4b14b364.js";
 
 const FEMALE = chartColors.orange;
 const MALE = chartColors.blue;

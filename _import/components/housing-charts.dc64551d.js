@@ -1,7 +1,7 @@
 import * as d3 from "../../_npm/d3@7.9.0/66d82917.js";
-import {chartPalette} from "../config/chart-palette.dbce5681.js";
-import {waterfallSegmentsChart} from "./waterfall-segments-chart.69596b1d.js";
-import {percentageStripChart} from "./percentage-strip-chart.b79c02ad.js";
+import {chartPalette} from "../config/chart-palette.7185253a.js";
+import {waterfallSegmentsChart} from "./waterfall-segments-chart.5f399609.js";
+import {percentageStripChart} from "./percentage-strip-chart.bccf57d6.js";
 
 export function housingTenureWaterfall(
   data,

@@ -1,4 +1,4 @@
-import { chartPalette } from "../../config/chart-palette.dbce5681.js";
+import { chartPalette } from "../../config/chart-palette.7185253a.js";
 
 export const sportsFundingTopic = {
   slug: "sports-funding",
