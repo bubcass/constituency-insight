@@ -1,6 +1,6 @@
 import {categoryColorMap} from "../../config/chart-palette.7185253a.js";
 
-export const roadAccidentsTopic = {
+export const roadSafetyTopic = {
   fields: {
     lat: "latitude",
     lon: "longitude",

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Derelict sites | Constituency Insights</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="../_import/style.b1cac081.css">
+<link rel="preload" as="style" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="../_import/style.b1cac081.css">
+<link rel="stylesheet" type="text/css" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="../_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="../_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="../_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="../_import/components/insights-tabs.55f4617d.js">
+<link rel="modulepreload" href="../_import/components/constituency-select.be8dda34.js">
+<link rel="modulepreload" href="../_import/components/constituency-location.64a17faf.js">
+<link rel="modulepreload" href="../_import/components/topic-point-map.8c3ed662.js">
+<link rel="modulepreload" href="../_import/components/download-button.cf825c31.js">
+<link rel="modulepreload" href="../_import/components/metric-cards.1cb79023.js">
+<link rel="modulepreload" href="../_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="../_import/components/member-data.58a3d52a.js">
+<link rel="modulepreload" href="../_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="../_import/components/related-research.2ee2445a.js">
+<link rel="modulepreload" href="../_import/components/reactive-mount.40133ee8.js">
+<link rel="modulepreload" href="../_import/components/hero-share.7f75f0bd.js">
+<link rel="modulepreload" href="../_import/components/waterfall-segments-chart.5f399609.js">
+<link rel="modulepreload" href="../_import/config/chart-palette.7185253a.js">
+<link rel="modulepreload" href="../_import/topics/derelict-sites/config.7f01b0ae.js">
+<link rel="modulepreload" href="../_import/topics/derelict-sites/transforms.63c81271.js">
+<link rel="modulepreload" href="../_npm/@turf/helpers@7.3.4/a5e57fe3.js">
+<link rel="modulepreload" href="../_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
+<link rel="modulepreload" href="../_import/components/leaflet-map-ui.4fd45fb1.js">
+<link rel="modulepreload" href="../_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="../_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="../_npm/@turf/bbox@7.3.4/59288137.js">
+<link rel="modulepreload" href="../_npm/@turf/buffer@7.3.4/3c35ceae.js">
+<link rel="modulepreload" href="../_import/config/chart-style.ae393eab.js">
+<link rel="modulepreload" href="../_import/config/chart-contrast.9ba5c9ff.js">
+<link rel="modulepreload" href="../_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="../_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="../_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
+<link rel="modulepreload" href="../_npm/@turf/invariant@7.3.4/0f53e08e.js">
+<link rel="modulepreload" href="../_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="../_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="../_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="../_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="../_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="../_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="../_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="../_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="../_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="../_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="../_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="../_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="../_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="../_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="../_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="../_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="../_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="../_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="../_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="../_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="../_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="../_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="../_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="../_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="../_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="../_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="../_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="../_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="../_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="../_npm/@turf/meta@7.3.4/1244e006.js">
+<link rel="modulepreload" href="../_npm/@turf/center@7.3.4/5fce4a03.js">
+<link rel="modulepreload" href="../_npm/@turf/jsts@2.7.2/ae450af2.js">
+<link rel="modulepreload" href="../_npm/d3-geo@1.7.1/e060ca58.js">
+<link rel="modulepreload" href="../_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="../_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="../_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="modulepreload" href="../_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="../_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="../_npm/d3-array@1.2.4/a2c25531.js">
+<link rel="modulepreload" href="../_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+
+    <link rel="icon" href="../_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
+    <script>
+      document.documentElement.lang = "en-IE";
+
+      (() => {
+        const storageKey = "constituency-insights-theme";
+        const colourScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const readSavedTheme = () => {
+          try {
+            const value = localStorage.getItem(storageKey);
+            return value === "dark" || value === "light" ? value : null;
+          } catch {
+            return null;
+          }
+        };
+        const systemTheme = () => colourScheme.matches ? "dark" : "light";
+        const savedTheme = readSavedTheme();
+        document.documentElement.dataset.theme =
+          savedTheme || systemTheme();
+
+        colourScheme.addEventListener("change", () => {
+          if (!readSavedTheme()) document.documentElement.dataset.theme = systemTheme();
+        });
+      })();
+
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1");
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(meta);
+      }
+
+      (() => {
+        const setupBackToTop = () => {
+          if (!document.body || document.querySelector(".page-back-to-top")) return;
+
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "page-back-to-top";
+          button.setAttribute("aria-label", "Back to top");
+          button.title = "Back to top";
+          button.hidden = true;
+          button.innerHTML = '<span class="page-back-to-top__chevron" aria-hidden="true">⌃</span>';
+
+          const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+          button.addEventListener("click", () => {
+            window.scrollTo({
+              top: 0,
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+            });
+          });
+
+          let updatePending = false;
+          const updateVisibility = () => {
+            updatePending = false;
+            button.hidden = window.scrollY <= 640;
+          };
+          const onScroll = () => {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateVisibility);
+          };
+
+          window.addEventListener("scroll", onScroll, {passive: true});
+          document.body.appendChild(button);
+          updateVisibility();
+        };
+
+        if (document.readyState !== "complete") {
+          window.addEventListener("load", setupBackToTop, {once: true});
+        } else {
+          setupBackToTop();
+        }
+      })();
+
+      (() => {
+        const retryParameter = "__module_retry";
+        const moduleFailure = /importing a module script failed|failed to fetch dynamically imported module|error loading dynamically imported module/i;
+        let retryStarted = false;
+
+        const retryOnce = () => {
+          const url = new URL(window.location.href);
+          if (retryStarted || url.searchParams.has(retryParameter)) return;
+          retryStarted = true;
+          url.searchParams.set(retryParameter, Date.now().toString());
+          window.location.replace(url);
+        };
+
+        window.addEventListener("error", (event) => {
+          const target = event.target;
+          const failedModuleResource =
+            (target instanceof HTMLScriptElement && target.type === "module") ||
+            (target instanceof HTMLLinkElement && target.rel === "modulepreload");
+          const message = event.error?.message || event.message || "";
+          if (failedModuleResource || moduleFailure.test(String(message))) retryOnce();
+        }, true);
+
+        window.addEventListener("unhandledrejection", (event) => {
+          const message = event.reason?.message || event.reason || "";
+          if (moduleFailure.test(String(message))) retryOnce();
+        });
+      })();
+    </script>
+  
+<script type="module">
+
+import {define} from "../_observablehq/client.409fdcff.js";
+import {registerFile} from "../_observablehq/stdlib.277aeab8.js";
+
+registerFile("../data/derived/derelict-sites-normalized.csv", {"name":"../data/derived/derelict-sites-normalized.csv","mimeType":"text/csv","path":"../_file/data/derived/derelict-sites-normalized.a3d2ef1c.csv","lastModified":1786473163971,"size":438843});
+registerFile("../data/derived/recent-derelict-contributions.json", {"name":"../data/derived/recent-derelict-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-derelict-contributions.a7e5ee9c.json","lastModified":1786373081461,"size":133260});
+registerFile("../data/derived/recent-housing-questions.json", {"name":"../data/derived/recent-housing-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-housing-questions.dae3e66a.json","lastModified":1786093438643,"size":1391742});
+registerFile("../data/geo/constituencies.json", {"name":"../data/geo/constituencies.json","mimeType":"application/json","path":"../_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
+registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.ed380774.json","lastModified":1785920590309,"size":123367});
+registerFile("../media/abandoned-building.jpg", {"name":"../media/abandoned-building.jpg","mimeType":"image/jpeg","path":"../_file/media/abandoned-building.e4eaef06.jpg","lastModified":1786373081465,"size":640277});
+
+define({id: "e4eaa9de", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","downloadButton","metricCards","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","waterfallSegmentsChart","chartPalette","derelictSitesTopic","buildAuthoritySegments","buildDerelictSiteDownloadRows","buildDerelictSiteSummary","filterDerelictSites","siteRows","constituenciesGeo","membersLookup","housingQuestions","derelictContributions","heroImage","DERELICT_MATCHER","authorityPalette","constituencies","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","matchedMembers","relevantQuestions","relevantContributions","restoreScroll","rerender","mountReactive","renderConstituencyFilter"], body: async (FileAttachment) => {
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {downloadButton}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {waterfallSegmentsChart}, {chartPalette}, {derelictSitesTopic}, {buildAuthoritySegments, buildDerelictSiteDownloadRows, buildDerelictSiteSummary, filterDerelictSites}] = await Promise.all([import("../_import/components/insights-tabs.55f4617d.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/topic-point-map.8c3ed662.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.7f75f0bd.js"), import("../_import/components/waterfall-segments-chart.5f399609.js"), import("../_import/config/chart-palette.7185253a.js"), import("../_import/topics/derelict-sites/config.7f01b0ae.js"), import("../_import/topics/derelict-sites/transforms.63c81271.js")]);
+
+const siteRows = await FileAttachment("../data/derived/derelict-sites-normalized.csv").csv({typed: true});
+const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
+const membersLookup = await FileAttachment("../data/members-lookup.json").json();
+const housingQuestions = await FileAttachment("../data/derived/recent-housing-questions.json").json();
+const derelictContributions = await FileAttachment("../data/derived/recent-derelict-contributions.json").json();
+const heroImage = await FileAttachment("../media/abandoned-building.jpg").url();
+
+const DERELICT_MATCHER = /\b(?:derelict(?:ion)?|derelict sites?|vacant and derelict|vacant sites?|vacant propert(?:y|ies)|vacant homes?|long-term vacancy)\b/i;
+const authorityPalette = chartPalette;
+const constituencies = Array.from(new Set(
+  constituenciesGeo.features.map((feature) => cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE)).filter(Boolean)
+)).sort((a, b) => a.localeCompare(b, "en"));
+const partyColorMap = new Map([
+  ["Fianna Fáil", "#40b34e"], ["Sinn Féin", "#088460"],
+  ["Fine Gael", "#303591"], ["Independent", "#666666"],
+  ["Labour Party", "#c82832"], ["Social Democrats", "#782b81"],
+  ["Independent Ireland", "#17becf"], ["People Before Profit-Solidarity", "#c5568b"],
+  ["Aontú", "#ff7f0e"], ["100% RDR", "#985564"], ["Green Party", "#b4d143"]
+]);
+
+if (typeof window !== "undefined" && !window.derelictSitesState) {
+  window.derelictSitesState = {constituency: null};
+}
+const state = window.derelictSitesState;
+const savedConstituency = readSavedConstituency(constituencies);
+if (savedConstituency) {
+  state.constituency = savedConstituency;
+} else {
+  if (!constituencies.includes(state.constituency)) state.constituency = constituencies[0] ?? null;
+  const detected = await detectConstituencyFromLocation({
+    constituencyGeoJSON: constituenciesGeo,
+    availableConstituencies: constituencies,
+    prompt: false
+  });
+  if (detected.ok) state.constituency = detected.constituency;
+}
+
+function cleanConstituencyName(value) {
+  return String(value ?? "").replace(/\s*\(\d+\)\s*$/, "").trim();
+}
+
+function selectedConstituencyGeoJSON() {
+  return {
+    type: "FeatureCollection",
+    features: constituenciesGeo.features.filter(
+      (feature) => cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE) === state.constituency
+    )
+  };
+}
+
+function selectedRows() {
+  return filterDerelictSites(siteRows, state);
+}
+
+function matchedMembers() {
+  return membersForConstituency(membersLookup, state.constituency)
+    .map((member) => ({
+      ...member,
+      displayName: member.memberName ?? member.name ?? "Unknown member",
+      matchedParty: member.party ?? "Independent",
+      imageUrl: member.memberCode
+        ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
+        : null
+    }));
+}
+
+function relevantQuestions(limit = 6) {
+  const group = (Array.isArray(housingQuestions) ? housingQuestions : [])
+    .find((entry) => entry.constituency === state.constituency);
+  return (group?.questions ?? [])
+    .filter((row) => DERELICT_MATCHER.test(`${row.heading ?? ""} ${row.question ?? ""}`))
+    .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")))
+    .slice(0, limit);
+}
+
+function relevantContributions(limit = 6, perMemberLimit = 3) {
+  const memberCodes = new Set(matchedMembers().map((member) => member.memberCode).filter(Boolean));
+  const counts = new Map();
+  return (Array.isArray(derelictContributions) ? derelictContributions : [])
+    .filter((row) => memberCodes.has(row.memberCode))
+    .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")) || Number(b.sectionNumber ?? 0) - Number(a.sectionNumber ?? 0))
+    .filter((row) => {
+      const count = counts.get(row.memberCode) ?? 0;
+      if (count >= perMemberLimit) return false;
+      counts.set(row.memberCode, count + 1);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+function restoreScroll(x, y) {
+  const restore = () => window.scrollTo(x, y);
+  restore();
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    restore();
+    setTimeout(restore, 60);
+  }));
+}
+
+function rerender({preserveScroll = true} = {}) {
+  const x = window.scrollX;
+  const y = window.scrollY;
+  window.dispatchEvent(new CustomEvent("derelict-sites:change"));
+  if (preserveScroll) restoreScroll(x, y);
+}
+
+function mountReactive(renderFn, {eventName = "derelict-sites:change", ...options} = {}) {
+  return createReactiveMount(renderFn, {eventName, destroyPrevious: true, ...options});
+}
+
+function renderConstituencyFilter() {
+  const section = document.createElement("section");
+  section.className = "insights-controls";
+  section.appendChild(constituencySelect({
+    state,
+    resultsPromise: Promise.resolve(constituencies.map((constituency) => ({constituency}))),
+    onChange: () => {
+      saveSelectedConstituency(state.constituency);
+      rerender();
+    },
+    onLocate: () => detectConstituencyFromLocation({
+      constituencyGeoJSON: constituenciesGeo,
+      availableConstituencies: constituencies,
+      prompt: true
+    })
+  }));
+  return section;
+}
+return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,topicPointMap,downloadButton,metricCards,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,waterfallSegmentsChart,chartPalette,derelictSitesTopic,buildAuthoritySegments,buildDerelictSiteDownloadRows,buildDerelictSiteSummary,filterDerelictSites,siteRows,constituenciesGeo,membersLookup,housingQuestions,derelictContributions,heroImage,DERELICT_MATCHER,authorityPalette,constituencies,partyColorMap,state,savedConstituency,cleanConstituencyName,selectedConstituencyGeoJSON,selectedRows,matchedMembers,relevantQuestions,relevantContributions,restoreScroll,rerender,mountReactive,renderConstituencyFilter};
+}});
+
+define({id: "c0266136", inputs: ["heroImage","enhanceHeroWithShare","display"], outputs: ["hero"], body: (heroImage,enhanceHeroWithShare,display) => {
+const hero = document.createElement("div");
+hero.className = "hero derelict-sites-hero";
+hero.innerHTML = `
+  <div class="hero__media">
+    <img class="hero__image derelict-sites-hero__image" src="${heroImage}" alt="Interior of an abandoned building with damaged walls and debris">
+  </div>
+  <div class="hero__overlay">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Constituency insights</p>
+      <h1 class="hero__title">Derelict sites</h1>
+      <p class="hero__subtitle">Explore the locations of derelict properties as recorded by local authorities.</p>
+    </div>
+  </div>
+`;
+enhanceHeroWithShare(hero, {title: "Derelict sites — Constituency Insights"});
+display(hero);
+return {hero};
+}});
+
+define({id: "dfc394ae", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights", {basePath: ".."}));
+}});
+
+define({id: "00f2d2b1", inputs: ["display","mountReactive","renderConstituencyFilter"], body: (display,mountReactive,renderConstituencyFilter) => {
+display(mountReactive(async () => renderConstituencyFilter(), {skeleton: "control"}));
+}});
+
+define({id: "2228ad3a", inputs: ["display","mountReactive","buildDerelictSiteSummary","selectedRows","state","metricCards"], body: (display,mountReactive,buildDerelictSiteSummary,selectedRows,state,metricCards) => {
+display(mountReactive(async () => {
+  const summary = buildDerelictSiteSummary(selectedRows(), state.constituency);
+  const wrap = document.createElement("section");
+  wrap.className = "derelict-sites-overview";
+
+  const glance = document.createElement("div");
+  glance.className = "reactive-prose demographic-story-callout derelict-sites-glance";
+
+  const label = document.createElement("p");
+  label.className = "demographic-story-callout__label";
+  label.textContent = "At a glance";
+
+  const heading = document.createElement("h2");
+  heading.textContent = summary.headline;
+
+  const detail = document.createElement("p");
+  detail.textContent = summary.detail;
+
+  glance.append(label, heading, detail);
+
+  wrap.appendChild(glance);
+  if (summary.metrics.length) {
+    const cards = metricCards({title: null, metrics: summary.metrics});
+    const cardWrap = document.createElement("section");
+    cardWrap.className = "insights-metrics-full derelict-sites-metrics";
+    cardWrap.appendChild(cards);
+    wrap.appendChild(cardWrap);
+  }
+  return wrap;
+}, {skeleton: "cards"}));
+}});
+
+define({id: "9b179d54", inputs: ["display","mountReactive","selectedConstituencyGeoJSON","topicPointMap","selectedRows","derelictSitesTopic"], body: (display,mountReactive,selectedConstituencyGeoJSON,topicPointMap,selectedRows,derelictSitesTopic) => {
+display(mountReactive(async () => {
+  const geo = selectedConstituencyGeoJSON();
+  if (!geo.features.length) {
+    const message = document.createElement("p");
+    message.className = "chart-loading";
+    message.textContent = "No map is available for this constituency.";
+    return message;
+  }
+  return topicPointMap({
+    constituencyGeoJSON: geo,
+    data: selectedRows(),
+    height: 540,
+    enableGeolocation: false,
+    fields: derelictSitesTopic.fields,
+    labels: derelictSitesTopic.labels,
+    palette: derelictSitesTopic.palette,
+    tooltipHTML: derelictSitesTopic.tooltipHTML,
+    popupHTML: derelictSitesTopic.popupHTML,
+    amountFormatter: (value) => `${derelictSitesTopic.formatCount(value)} registered ${Number(value) === 1 ? "site" : "sites"}`
+  });
+}, {skeleton: "map", skeletonHeight: 540}));
+}});
+
+define({id: "435eafea", inputs: ["display","mountReactive","buildAuthoritySegments","selectedRows","authorityPalette","waterfallSegmentsChart","derelictSitesTopic","state"], body: (display,mountReactive,buildAuthoritySegments,selectedRows,authorityPalette,waterfallSegmentsChart,derelictSitesTopic,state) => {
+display(mountReactive(async () => {
+  const breakdown = buildAuthoritySegments(selectedRows(), authorityPalette);
+  if (!breakdown.segments.length) {
+    const message = document.createElement("p");
+    message.className = "chart-loading";
+    message.textContent = "No mapped register records are available for this constituency.";
+    return message;
+  }
+  const wrap = document.createElement("div");
+  wrap.className = "election-chart-wrap";
+  wrap.appendChild(waterfallSegmentsChart(breakdown.segments, {
+    width: 790,
+    minRowHeight: 36,
+    marginLeft: 210,
+    minorShareThreshold: 0,
+    xLabel: "Mapped register records",
+    tickFormat: (value) => derelictSitesTopic.formatCount(value),
+    valueFormat: (value) => derelictSitesTopic.formatCount(value),
+    ariaLabel: `Mapped derelict-site register records in ${state.constituency} by local authority`
+  }));
+  return wrap;
+}));
+}});
+
+define({id: "7421e627", inputs: ["display","mountReactive","memberCards","matchedMembers","partyColorMap","state"], body: (display,mountReactive,memberCards,matchedMembers,partyColorMap,state) => {
+display(mountReactive(async () => memberCards({
+  members: matchedMembers(),
+  partyColorMap,
+  title: `How ${state.constituency} is represented in Parliament`
+}), {skeleton: "cards"}));
+}});
+
+define({id: "5240e0a8", inputs: ["display","mountReactive","parliamentaryQuestionList","relevantQuestions","matchedMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,relevantQuestions,matchedMembers,partyColorMap) => {
+display(mountReactive(async () => parliamentaryQuestionList({
+  rows: relevantQuestions(6),
+  members: matchedMembers(),
+  partyColorMap,
+  emptyMessage: "No recent dereliction-related parliamentary questions are available for this constituency."
+}), {skeleton: "table"}));
+}});
+
+define({id: "8e105419", inputs: ["display","mountReactive","memberContributionList","relevantContributions","matchedMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,relevantContributions,matchedMembers,partyColorMap) => {
+display(mountReactive(async () => memberContributionList({
+  rows: relevantContributions(6),
+  members: matchedMembers(),
+  partyColorMap,
+  emptyMessage: "No recent dereliction-related Dáil contributions are available for this constituency."
+}), {skeleton: "table"}));
+}});
+
+define({id: "ed340b66", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+display(relatedResearchResource({
+  rows: [{
+    date: "2022-05-24",
+    author: "Joint Committee on Housing, Local Government and Heritage",
+    authorUrl: "https://www.oireachtas.ie/en/committees/33/housing-local-government-and-heritage/",
+    title: "Urban Regeneration",
+    url: "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_housing_local_government_and_heritage/reports/2022/2022-05-24_urban-regeneration_en.pdf"
+  }]
+}));
+}});
+
+define({id: "4ea981ed", inputs: ["display","mountReactive","buildDerelictSiteDownloadRows","selectedRows","downloadButton","state"], body: (display,mountReactive,buildDerelictSiteDownloadRows,selectedRows,downloadButton,state) => {
+display(mountReactive(async () => {
+  const rows = buildDerelictSiteDownloadRows(selectedRows());
+  const wrap = document.createElement("div");
+  wrap.className = "download-block";
+  wrap.appendChild(downloadButton(rows, `derelict-sites-${state.constituency}.csv`, {
+    label: `Download mapped register records for ${state.constituency}`
+  }));
+  return wrap;
+}, {skeleton: "text"}));
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:e4eaa9de:--></div>
+<div class="observablehq observablehq--block"><!--:c0266136:--></div>
+<div class="observablehq observablehq--block"><!--:dfc394ae:--></div>
+<div class="prose-block lead">
+  <p>Local authorities maintain derelict sites registers under the <a href="https://www.irishstatutebook.ie/eli/1990/act/14/enacted/en/html" target="_blank" rel="noreferrer">Derelict Sites Act 1990</a>. </p>
+  <p>Choose a constituency to explore locations of derelict sites as recorded by local authorities and maintained on registry records.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:00f2d2b1:--></div>
+<div class="observablehq observablehq--block"><!--:2228ad3a:--></div>
+<div class="prose-block">
+  <h2>Explore the map</h2>
+  <p>Sites are mapped according to local authority data. Where necessary, polygon centroids and transformed grid references are derived from council spatial information.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:9b179d54:--></div>
+<div class="prose-block">
+  <h2>Published records by local authority</h2>
+  <p>Constituency boundaries can cross local-authority areas. This view shows which councils supplied the mapped records in the selected constituency.</p>
+</div>
+<div class="chart-block chart-block--wide">
+<div class="observablehq observablehq--block"><!--:435eafea:--></div>
+</div>
+<div class="observablehq observablehq--block"><!--:7421e627:--></div>
+<div class="prose-block">
+  <h2>Recent parliamentary questions related to dereliction</h2>
+  <p>Read recent parliamentary questions tabled by constituency TDs about derelict sites, vacant properties and related measures.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:5240e0a8:--></div>
+</div>
+<div class="prose-block">
+  <h2>Recent speeches related to dereliction</h2>
+  <p>Read recent contributions in Dáil Éireann in which the TDs who represent the constituency addressed dereliction, vacancy or vacant-site policy.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:8e105419:--></div>
+</div>
+<div class="prose-block prose-block--section">
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into dereliction and regeneration of towns and cities.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:ed340b66:--></div>
+</div>
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p><strong>Sources: official derelict sites registers and spatial datasets published by Ireland's local authorities.</strong></p>
+  <p>This working national consolidation was retrieved and verified on 8 August 2026. It contains 2,041 unique register records acquired from 19 local authorities; the source audit covers all 31 authorities.</p>
+  <p>This is not a census of dereliction and should not be used to compare councils without considering publication gaps. Register formats, definitions and update dates vary. The accessible Dún Laoghaire-Rathdown spatial resource was dated 2025 and is flagged as stale in the audit.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:4ea981ed:--></div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Sports funding | Constituency Insights</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="../_import/style.b1cac081.css">
+<link rel="preload" as="style" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="../_import/style.b1cac081.css">
+<link rel="stylesheet" type="text/css" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="../_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="../_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="../_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="../_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="../_import/components/constituency-select.be8dda34.js">
+<link rel="modulepreload" href="../_import/components/constituency-location.64a17faf.js">
+<link rel="modulepreload" href="../_import/components/metric-cards.1cb79023.js">
+<link rel="modulepreload" href="../_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="../_import/components/member-data.58a3d52a.js">
+<link rel="modulepreload" href="../_import/components/topic-point-map.8c3ed662.js">
+<link rel="modulepreload" href="../_import/components/waterfall-segments-chart.5f399609.js">
+<link rel="modulepreload" href="../_import/components/download-button.cf825c31.js">
+<link rel="modulepreload" href="../_import/components/insights-tabs.55f4617d.js">
+<link rel="modulepreload" href="../_import/components/parliamentary-activity.78f3ba08.js">
+<link rel="modulepreload" href="../_import/components/related-research.2ee2445a.js">
+<link rel="modulepreload" href="../_import/components/reactive-mount.40133ee8.js">
+<link rel="modulepreload" href="../_import/components/hero-share.7f75f0bd.js">
+<link rel="modulepreload" href="../_import/config/chart-palette.7185253a.js">
+<link rel="modulepreload" href="../_import/topics/sports-funding/config.9943ea05.js">
+<link rel="modulepreload" href="../_import/topics/sports-funding/transforms.1a6f85fd.js">
+<link rel="modulepreload" href="../_npm/@turf/helpers@7.3.4/a5e57fe3.js">
+<link rel="modulepreload" href="../_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
+<link rel="modulepreload" href="../_import/components/leaflet-map-ui.4fd45fb1.js">
+<link rel="modulepreload" href="../_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="../_npm/@turf/bbox@7.3.4/59288137.js">
+<link rel="modulepreload" href="../_npm/@turf/buffer@7.3.4/3c35ceae.js">
+<link rel="modulepreload" href="../_import/config/chart-style.ae393eab.js">
+<link rel="modulepreload" href="../_import/config/chart-contrast.9ba5c9ff.js">
+<link rel="modulepreload" href="../_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="../_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="../_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="../_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="../_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="../_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="../_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="../_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="../_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="../_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="../_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="../_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="../_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="../_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="../_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="../_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="../_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="../_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="../_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="../_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="../_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="../_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="../_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="../_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="../_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="../_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="../_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="../_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="../_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="../_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="../_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="../_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
+<link rel="modulepreload" href="../_npm/@turf/invariant@7.3.4/0f53e08e.js">
+<link rel="modulepreload" href="../_npm/@turf/meta@7.3.4/1244e006.js">
+<link rel="modulepreload" href="../_npm/@turf/center@7.3.4/5fce4a03.js">
+<link rel="modulepreload" href="../_npm/@turf/jsts@2.7.2/ae450af2.js">
+<link rel="modulepreload" href="../_npm/d3-geo@1.7.1/e060ca58.js">
+<link rel="modulepreload" href="../_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="../_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="../_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="../_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="../_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="modulepreload" href="../_npm/d3-array@1.2.4/a2c25531.js">
+<link rel="modulepreload" href="../_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+
+    <link rel="icon" href="../_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
+    <script>
+      document.documentElement.lang = "en-IE";
+
+      (() => {
+        const storageKey = "constituency-insights-theme";
+        const colourScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const readSavedTheme = () => {
+          try {
+            const value = localStorage.getItem(storageKey);
+            return value === "dark" || value === "light" ? value : null;
+          } catch {
+            return null;
+          }
+        };
+        const systemTheme = () => colourScheme.matches ? "dark" : "light";
+        const savedTheme = readSavedTheme();
+        document.documentElement.dataset.theme =
+          savedTheme || systemTheme();
+
+        colourScheme.addEventListener("change", () => {
+          if (!readSavedTheme()) document.documentElement.dataset.theme = systemTheme();
+        });
+      })();
+
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1");
+      } else {
+        const meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(meta);
+      }
+
+      (() => {
+        const setupBackToTop = () => {
+          if (!document.body || document.querySelector(".page-back-to-top")) return;
+
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "page-back-to-top";
+          button.setAttribute("aria-label", "Back to top");
+          button.title = "Back to top";
+          button.hidden = true;
+          button.innerHTML = '<span class="page-back-to-top__chevron" aria-hidden="true">⌃</span>';
+
+          const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+          button.addEventListener("click", () => {
+            window.scrollTo({
+              top: 0,
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+            });
+          });
+
+          let updatePending = false;
+          const updateVisibility = () => {
+            updatePending = false;
+            button.hidden = window.scrollY <= 640;
+          };
+          const onScroll = () => {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateVisibility);
+          };
+
+          window.addEventListener("scroll", onScroll, {passive: true});
+          document.body.appendChild(button);
+          updateVisibility();
+        };
+
+        if (document.readyState !== "complete") {
+          window.addEventListener("load", setupBackToTop, {once: true});
+        } else {
+          setupBackToTop();
+        }
+      })();
+
+      (() => {
+        const retryParameter = "__module_retry";
+        const moduleFailure = /importing a module script failed|failed to fetch dynamically imported module|error loading dynamically imported module/i;
+        let retryStarted = false;
+
+        const retryOnce = () => {
+          const url = new URL(window.location.href);
+          if (retryStarted || url.searchParams.has(retryParameter)) return;
+          retryStarted = true;
+          url.searchParams.set(retryParameter, Date.now().toString());
+          window.location.replace(url);
+        };
+
+        window.addEventListener("error", (event) => {
+          const target = event.target;
+          const failedModuleResource =
+            (target instanceof HTMLScriptElement && target.type === "module") ||
+            (target instanceof HTMLLinkElement && target.rel === "modulepreload");
+          const message = event.error?.message || event.message || "";
+          if (failedModuleResource || moduleFailure.test(String(message))) retryOnce();
+        }, true);
+
+        window.addEventListener("unhandledrejection", (event) => {
+          const message = event.reason?.message || event.reason || "";
+          if (moduleFailure.test(String(message))) retryOnce();
+        });
+      })();
+    </script>
+  
+<script type="module">
+
+import {define} from "../_observablehq/client.409fdcff.js";
+import {registerFile} from "../_observablehq/stdlib.277aeab8.js";
+
+registerFile("../data/derived/recent-sports-contributions.json", {"name":"../data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-sports-contributions.b0b8f557.json","lastModified":1785611614234,"size":45556});
+registerFile("../data/derived/recent-sports-questions.json", {"name":"../data/derived/recent-sports-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-sports-questions.d165180e.json","lastModified":1786373081442,"size":636474});
+registerFile("../data/derived/sports-funding-enriched.json", {"name":"../data/derived/sports-funding-enriched.json","mimeType":"application/json","path":"../_file/data/derived/sports-funding-enriched.526726eb.json","lastModified":1786473162468,"size":7985219});
+registerFile("../data/derived/waterfall-segments.json", {"name":"../data/derived/waterfall-segments.json","mimeType":"application/json","path":"../_file/data/derived/waterfall-segments.ed664633.json","lastModified":1786473162713,"size":389840});
+registerFile("../data/geo/constituencies.json", {"name":"../data/geo/constituencies.json","mimeType":"application/json","path":"../_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
+registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.ed380774.json","lastModified":1785920590309,"size":123367});
+registerFile("../media/sports-funding-hero.mp4", {"name":"../media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"../_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
+
+define({id: "18aa9c61", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","chartPalette","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
+const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {chartPalette}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("../_npm/d3@7.9.0/66d82917.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/topic-point-map.8c3ed662.js"), import("../_import/components/waterfall-segments-chart.5f399609.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/insights-tabs.55f4617d.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.7f75f0bd.js"), import("../_import/config/chart-palette.7185253a.js"), import("../_import/topics/sports-funding/config.9943ea05.js"), import("../_import/topics/sports-funding/transforms.1a6f85fd.js")]);
+
+
+const sportsFundingPromise = FileAttachment(
+  "../data/derived/sports-funding-enriched.json"
+).json();
+
+const waterfallPromise = FileAttachment(
+  "../data/derived/waterfall-segments.json"
+).json();
+
+const pqSportsByConstituencyPromise = FileAttachment(
+  "../data/derived/recent-sports-questions.json"
+).json();
+
+const recentSportsContributionsPromise = FileAttachment(
+  "../data/derived/recent-sports-contributions.json"
+).json();
+
+const constituenciesGeoPromise = FileAttachment(
+  "../data/geo/constituencies.json"
+).json();
+
+const heroVideoPromise = FileAttachment("../media/sports-funding-hero.mp4").url();
+
+const membersLookupPromise = FileAttachment(
+  "../data/members-lookup.json"
+).json();
+
+const partyColorMap = new Map([
+  ["Fianna Fáil", "#40b34e"],
+  ["Sinn Féin", "#088460"],
+  ["Fine Gael", "#303591"],
+  ["Independent", "#666666"],
+  ["Labour Party", "#c82832"],
+  ["Social Democrats", "#782b81"],
+  ["Independent Ireland", "#17becf"],
+  ["People Before Profit-Solidarity", "#c5568b"],
+  ["Aontú", "#ff7f0e"],
+  ["100% RDR", "#985564"],
+  ["Green Party", "#b4d143"]
+]);
+
+if (typeof window !== "undefined" && !window.insightsState) {
+  window.insightsState = { constituency: null };
+}
+
+if (typeof window !== "undefined" && !window.waterfallState) {
+  window.waterfallState = { year: "All" };
+}
+
+function getState() {
+  return typeof window !== "undefined"
+    ? window.insightsState
+    : { constituency: null };
+}
+
+function getWaterfallState() {
+  return typeof window !== "undefined"
+    ? window.waterfallState
+    : { year: "All" };
+}
+
+function clean(value) {
+  return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function cleanConstituencyName(name) {
+  return clean(name).replace(/\s*\(\d+\)\s*$/, "");
+}
+
+function resolveLabel(label, context = {}) {
+  return typeof label === "function" ? label(context) : label;
+}
+
+function getMemberImageUrl(memberCode) {
+  const code = clean(memberCode);
+  return code
+    ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${code}/image/large`
+    : null;
+}
+
+async function getFundingRows() {
+  return await sportsFundingPromise;
+}
+
+async function getWaterfallData() {
+  return await waterfallPromise;
+}
+
+async function getPqSportsByConstituency() {
+  return await pqSportsByConstituencyPromise;
+}
+
+async function getRecentSportsContributionRows() {
+  const rows = await recentSportsContributionsPromise;
+  return Array.isArray(rows) ? rows : [];
+}
+
+async function getConstituenciesGeo() {
+  return await constituenciesGeoPromise;
+}
+
+async function getMembersLookup() {
+  return await membersLookupPromise;
+}
+
+async function getMembersArray() {
+  const lookup = await getMembersLookup();
+  return Object.values(lookup ?? {});
+}
+
+async function getAvailableConstituencies() {
+  const rows = await getFundingRows();
+  return Array.from(
+    new Set(rows.map((d) => d.__constituency).filter(Boolean))
+  ).sort((a, b) => a.localeCompare(b, "en"));
+}
+
+async function initialiseConstituencySelection() {
+  const [options, constituencyGeoJSON] = await Promise.all([
+    getAvailableConstituencies(),
+    getConstituenciesGeo()
+  ]);
+
+  if (!options.length) {
+    window.insightsState.constituency = null;
+    return;
+  }
+
+  const saved = readSavedConstituency(options);
+  if (saved) {
+    window.insightsState.constituency = saved;
+    return;
+  }
+
+  const detected = await detectConstituencyFromLocation({
+    constituencyGeoJSON,
+    availableConstituencies: options,
+    prompt: false
+  });
+
+  if (detected.ok) {
+    window.insightsState.constituency = detected.constituency;
+    return;
+  }
+
+  if (
+    !window.insightsState.constituency ||
+    !options.includes(window.insightsState.constituency)
+  ) {
+    window.insightsState.constituency = options[0];
+  }
+}
+
+async function ensureValidConstituency() {
+  const options = await getAvailableConstituencies();
+
+  if (!options.length) {
+    window.insightsState.constituency = null;
+    return null;
+  }
+
+  if (
+    !window.insightsState.constituency ||
+    !options.includes(window.insightsState.constituency)
+  ) {
+    window.insightsState.constituency = options[0];
+  }
+
+  return window.insightsState.constituency;
+}
+
+async function getSelectedRows() {
+  const rows = await getFundingRows();
+  const constituency = await ensureValidConstituency();
+  return filterRowsByConstituency(rows, constituency);
+}
+
+async function getFilteredConstituencyGeo() {
+  const selected = await ensureValidConstituency();
+  const constituenciesGeo = await getConstituenciesGeo();
+
+  return {
+    type: "FeatureCollection",
+    features: constituenciesGeo.features.filter(
+      (feature) =>
+        cleanConstituencyName(feature?.properties?.ENG_NAME_VALUE) === selected
+    )
+  };
+}
+
+async function getMatchedMembers() {
+  const selected = await ensureValidConstituency();
+  const lookup = await getMembersLookup();
+
+  return membersForConstituency(lookup, selected)
+    .map((member) => ({
+      ...member,
+      displayName: member.memberName ?? member.name ?? "Unknown member",
+      memberUrl: member.memberUrl ?? null,
+      matchedParty: member.party ?? "Independent",
+      imageUrl: member.memberCode
+        ? `https://data.oireachtas.ie/ie/oireachtas/member/id/${member.memberCode}/image/large`
+        : null
+    }));
+}
+
+async function getRecentSportsPQsForConstituency(limit = 6) {
+  const [grouped, constituency, members] = await Promise.all([
+    getPqSportsByConstituency(),
+    ensureValidConstituency(),
+    getMembersArray()
+  ]);
+
+  const rows = Array.isArray(grouped)
+    ? grouped.find((entry) => entry.constituency === constituency)?.questions ?? []
+    : [];
+
+  const memberLookup = new Map(
+    members.map((m) => [clean(m.memberName ?? m.name).toLowerCase(), m])
+  );
+
+  return rows
+    .map((row) => {
+      const matched = memberLookup.get(clean(row.deputy).toLowerCase()) ?? null;
+      const party = matched?.party ?? "Independent";
+
+      return {
+        ...row,
+        matchedParty: party,
+        memberCode: matched?.memberCode ?? null,
+        imageUrl: getMemberImageUrl(matched?.memberCode),
+        initials: clean(row.deputy)
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((d) => d[0] ?? "")
+          .join("")
+          .toUpperCase()
+      };
+    })
+    .sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? "")))
+    .slice(0, limit);
+}
+
+function getWaterfallColorLookup(rows = []) {
+  const categories = Array.from(new Set(
+    rows.flatMap((row) => (row.segments ?? []).map((segment) => segment?.Segment)).filter(Boolean)
+  )).sort((a, b) => String(a).localeCompare(String(b), "en"));
+  return new Map(categories.map((category, index) => [
+    category,
+    chartPalette[index % chartPalette.length]
+  ]));
+}
+
+async function getRecentSportsContributions(limit = 6, perMemberLimit = 3) {
+  const [rows, members] = await Promise.all([
+    getRecentSportsContributionRows(),
+    getMatchedMembers()
+  ]);
+  const memberCodes = new Set(members.map((member) => member.memberCode).filter(Boolean));
+  const memberCounts = new Map();
+  const sportsHeading = /\bsports?\b/i;
+
+  return rows
+    .filter((row) => memberCodes.has(row.memberCode))
+    .filter((row) => sportsHeading.test(clean(row.topic)))
+    .slice()
+    .sort((a, b) => {
+      const dateComparison = String(b.date ?? "").localeCompare(String(a.date ?? ""));
+      if (dateComparison !== 0) return dateComparison;
+      return Number(b.sectionNumber ?? 0) - Number(a.sectionNumber ?? 0);
+    })
+    .filter((row) => {
+      const count = memberCounts.get(row.memberCode) ?? 0;
+      if (count >= perMemberLimit) return false;
+      memberCounts.set(row.memberCode, count + 1);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+function formatIrishDate(isoDate) {
+  if (!isoDate) return "";
+  return new Intl.DateTimeFormat("en-IE", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  }).format(new Date(`${isoDate}T00:00:00`));
+}
+
+function rerender() {
+  window.dispatchEvent(new CustomEvent("insights:change"));
+  window.dispatchEvent(new CustomEvent("waterfall:change"));
+}
+
+function rerenderWaterfall() {
+  window.dispatchEvent(new CustomEvent("waterfall:change"));
+}
+
+function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40, ...options } = {}) {
+  return createReactiveMount(renderFn, {eventName, debounceMs, ...options});
+}
+
+function euro(value) {
+  return new Intl.NumberFormat("en-IE", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0
+  }).format(value ?? 0);
+}
+
+function chartPlaceholder(height = 320, text = "Updating…") {
+  const wrap = document.createElement("div");
+  wrap.className = "chart-loading";
+  wrap.style.minHeight = `${height}px`;
+  wrap.style.display = "grid";
+  wrap.style.alignItems = "center";
+  wrap.style.justifyItems = "center";
+  wrap.style.border = "1px solid var(--border)";
+  wrap.style.background = "rgba(255,255,255,0.55)";
+  wrap.style.padding = "1rem";
+  wrap.textContent = text;
+  return wrap;
+}
+
+function renderSegmentedControl({
+  label = "",
+  name = "",
+  options = [],
+  value = "",
+  onChange = () => {}
+} = {}) {
+  const wrap = document.createElement("div");
+  wrap.className = "segmented-control-wrap";
+
+  const group = document.createElement("div");
+  group.className = "segmented-control";
+  group.setAttribute("role", "radiogroup");
+  if (label) group.setAttribute("aria-label", label);
+
+  for (const option of options) {
+    const controlId = `${name}-${String(option.value)
+      .replace(/\s+/g, "-")
+      .toLowerCase()}`;
+
+    const labelEl = document.createElement("label");
+    labelEl.className = "segmented-control__option";
+    labelEl.setAttribute("for", controlId);
+
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = name;
+    input.id = controlId;
+    input.value = option.value;
+    input.checked = option.value === value;
+
+    input.addEventListener("change", () => {
+      if (input.checked) onChange(option.value);
+    });
+
+    const text = document.createElement("span");
+    text.textContent = option.label;
+
+    labelEl.appendChild(input);
+    labelEl.appendChild(text);
+    group.appendChild(labelEl);
+  }
+
+  wrap.appendChild(group);
+  return wrap;
+}
+
+async function getAvailableWaterfallYears() {
+  const rows = await getWaterfallData();
+  return Array.from(new Set(rows.map((d) => String(d.period)).filter(Boolean)))
+    .sort((a, b) => d3.ascending(a, b));
+}
+
+async function ensureValidWaterfallYear() {
+  const years = await getAvailableWaterfallYears();
+  const valid = ["All", ...years];
+
+  if (!valid.includes(window.waterfallState.year)) {
+    window.waterfallState.year = "All";
+  }
+
+  return window.waterfallState.year;
+}
+
+async function getSelectedWaterfallRecord() {
+  const [rows, constituency, selectedYear] = await Promise.all([
+    getWaterfallData(),
+    ensureValidConstituency(),
+    ensureValidWaterfallYear()
+  ]);
+
+  if (!constituency) return null;
+
+  const constituencyRows = rows.filter((d) => d.constituency === constituency);
+  if (!constituencyRows.length) return null;
+
+  const colorLookup = getWaterfallColorLookup(constituencyRows);
+
+  if (selectedYear !== "All") {
+    const record = constituencyRows.find(
+      (d) => String(d.period) === String(selectedYear)
+    );
+    return record ? {
+      ...record,
+      segments: (record.segments ?? []).map((segment) => ({
+        ...segment,
+        color: colorLookup.get(segment.Segment) ?? chartPalette[0]
+      }))
+    } : null;
+  }
+
+  const segmentTotals = d3.rollups(
+    constituencyRows.flatMap((d) => d.segments ?? []),
+    (values) => d3.sum(values, (v) => Number(v.value) || 0),
+    (d) => d.Segment
+  )
+    .map(([Segment, value]) => ({ Segment, value }))
+    .sort(
+      (a, b) =>
+        d3.descending(a.value, b.value) ||
+        d3.ascending(a.Segment, b.Segment)
+    );
+
+  const total = d3.sum(segmentTotals, (d) => d.value);
+
+  let running = 0;
+  const segments = segmentTotals.map((d) => {
+    const x1 = running;
+    const x2 = running + d.value;
+    running = x2;
+
+    return {
+      Segment: d.Segment,
+      value: d.value,
+      color: colorLookup.get(d.Segment) ?? chartPalette[0],
+      x1,
+      x2,
+      share: total > 0 ? d.value / total : 0
+    };
+  });
+
+  return {
+    constituency,
+    period: "All",
+    total,
+    segments
+  };
+}
+
+await initialiseConstituencySelection();
+return {d3,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,memberCards,membersForConstituency,topicPointMap,waterfallSegmentsChart,downloadButton,insightsTabs,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,chartPalette,sportsFundingTopic,filterRowsByConstituency,buildMetricCardData,sportsFundingPromise,waterfallPromise,pqSportsByConstituencyPromise,recentSportsContributionsPromise,constituenciesGeoPromise,heroVideoPromise,membersLookupPromise,partyColorMap,getState,getWaterfallState,clean,cleanConstituencyName,resolveLabel,getMemberImageUrl,getFundingRows,getWaterfallData,getPqSportsByConstituency,getRecentSportsContributionRows,getConstituenciesGeo,getMembersLookup,getMembersArray,getAvailableConstituencies,initialiseConstituencySelection,ensureValidConstituency,getSelectedRows,getFilteredConstituencyGeo,getMatchedMembers,getRecentSportsPQsForConstituency,getWaterfallColorLookup,getRecentSportsContributions,formatIrishDate,rerender,rerenderWaterfall,mountReactive,euro,chartPlaceholder,renderSegmentedControl,getAvailableWaterfallYears,ensureValidWaterfallYear,getSelectedWaterfallRecord};
+}});
+
+define({id: "447c89d8", inputs: ["heroVideoPromise","sportsFundingTopic","enhanceHeroWithShare","display"], outputs: ["heroWrap","heroVideo"], body: async (heroVideoPromise,sportsFundingTopic,enhanceHeroWithShare,display) => {
+const heroWrap = document.createElement("div");
+heroWrap.className = "hero";
+
+const heroVideo = await heroVideoPromise;
+
+heroWrap.innerHTML = `
+  <div class="hero__media">
+    <video class="hero__video" src="${heroVideo}" autoplay muted loop playsinline></video>
+  </div>
+  <div class="hero__overlay">
+    <div class="hero__content">
+      <p class="hero__eyebrow">${sportsFundingTopic.eyebrow}</p>
+      <h1 class="hero__title">${sportsFundingTopic.heroTitle}</h1>
+      <p class="hero__subtitle">${sportsFundingTopic.heroSubtitle}</p>
+    </div>
+  </div>
+`;
+
+enhanceHeroWithShare(heroWrap, {title: `${sportsFundingTopic.heroTitle} — Constituency Insights`});
+display(heroWrap);
+return {heroWrap,heroVideo};
+}});
+
+define({id: "dfc394ae", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights", {basePath: ".."}));
+}});
+
+define({id: "1f3e7e73", inputs: ["display","mountReactive","getFundingRows","constituencySelect","getState","saveSelectedConstituency","rerender","detectConstituencyFromLocation","getConstituenciesGeo","getAvailableConstituencies"], body: (display,mountReactive,getFundingRows,constituencySelect,getState,saveSelectedConstituency,rerender,detectConstituencyFromLocation,getConstituenciesGeo,getAvailableConstituencies) => {
+display(
+  mountReactive(async () => {
+    const rows = await getFundingRows();
+
+    const wrap = document.createElement("section");
+    wrap.className = "insights-controls";
+
+    wrap.appendChild(
+      constituencySelect({
+        state: getState(),
+        resultsPromise: Promise.resolve(
+          rows.map((d) => ({ constituency: d.__constituency }))
+        ),
+        onChange: () => {
+          saveSelectedConstituency(getState().constituency);
+          rerender();
+        },
+        onLocate: async () => detectConstituencyFromLocation({
+          constituencyGeoJSON: await getConstituenciesGeo(),
+          availableConstituencies: await getAvailableConstituencies(),
+          prompt: true
+        })
+      })
+    );
+
+    return wrap;
+  }, {skeleton: "control"})
+);
+}});
+
+define({id: "5352797c", inputs: ["display","mountReactive","getSelectedRows","metricCards","buildMetricCardData","sportsFundingTopic"], body: (display,mountReactive,getSelectedRows,metricCards,buildMetricCardData,sportsFundingTopic) => {
+display(
+  mountReactive(async () => {
+    const selectedRows = await getSelectedRows();
+
+    const wrap = document.createElement("section");
+    wrap.className = "insights-metrics-full";
+
+    wrap.appendChild(
+      metricCards({
+        title: null,
+        metrics: buildMetricCardData(selectedRows, sportsFundingTopic)
+      })
+    );
+
+    return wrap;
+  }, {skeleton: "cards"})
+);
+}});
+
+define({id: "8fc8b493", inputs: ["display","mountReactive","getFilteredConstituencyGeo","getSelectedRows","topicPointMap","sportsFundingTopic"], body: (display,mountReactive,getFilteredConstituencyGeo,getSelectedRows,topicPointMap,sportsFundingTopic) => {
+display(
+  mountReactive(async () => {
+    const geo = await getFilteredConstituencyGeo();
+    const rows = await getSelectedRows();
+
+    if (!geo?.features?.length) {
+      const p = document.createElement("p");
+      p.className = "chart-loading";
+      p.textContent = "No map available for this constituency.";
+      return p;
+    }
+
+    return topicPointMap({
+      constituencyGeoJSON: geo,
+      data: rows,
+      height: 500,
+      enableGeolocation: false,
+      fields: {
+        lat: "__lat",
+        lon: "__lon",
+        amount: "__amount",
+        category: "__category",
+        year: "__year",
+        entity: "__entity",
+        title: "__title"
+      },
+      labels: sportsFundingTopic.labels,
+      palette: sportsFundingTopic.palette,
+      tooltipHTML: sportsFundingTopic.tooltipHTML,
+      amountFormatter: sportsFundingTopic.formatters.amount
+    });
+  }, {skeleton: "map", skeletonHeight: 500})
+);
+}});
+
+define({id: "5a5ba568", inputs: ["display","mountReactive","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord","ensureValidConstituency","euro","renderSegmentedControl","rerenderWaterfall"], body: (display,mountReactive,getAvailableWaterfallYears,ensureValidWaterfallYear,getSelectedWaterfallRecord,ensureValidConstituency,euro,renderSegmentedControl,rerenderWaterfall) => {
+display(
+  mountReactive(async () => {
+    const [years, selectedYear, record, constituency] = await Promise.all([
+      getAvailableWaterfallYears(),
+      ensureValidWaterfallYear(),
+      getSelectedWaterfallRecord(),
+      ensureValidConstituency()
+    ]);
+
+    const wrap = document.createElement("div");
+    wrap.className = "section-local-control section-local-control--waterfall";
+
+    const intro = document.createElement("div");
+    intro.className = "section-local-control__intro";
+    intro.innerHTML = `
+      <p>
+        Funding is broken down by sport categories. Use the filter to view a single allocation year or the combined amount across all years in the data.
+      </p>
+    `;
+
+    const summary = document.createElement("div");
+    summary.className = "section-local-control__summary";
+    summary.innerHTML = record?.total
+      ? `
+        <p>
+          <strong>Total funding in ${constituency} for ${
+            record.period === "All" ? "all years" : record.period
+          }:</strong>
+          ${euro(record.total)}
+        </p>
+      `
+      : `<p>No funding breakdown available for this selection.</p>`;
+
+    const control = document.createElement("div");
+    control.className = "section-local-control__control section-local-control__control--centered";
+
+    control.appendChild(
+      renderSegmentedControl({
+        label: "Filter sport type chart by year",
+        name: "waterfall-year",
+        value: selectedYear,
+        options: [
+          { value: "All", label: "All" },
+          ...years.map((year) => ({ value: year, label: year }))
+        ],
+        onChange: (nextValue) => {
+          window.waterfallState.year = nextValue;
+          rerenderWaterfall();
+        }
+      })
+    );
+
+    wrap.appendChild(intro);
+    wrap.appendChild(summary);
+    wrap.appendChild(control);
+
+    return wrap;
+  }, { eventName: "waterfall:change", skeleton: "text" })
+);
+}});
+
+define({id: "05fb74b8", inputs: ["display","mountReactive","getSelectedWaterfallRecord","chartPlaceholder","waterfallSegmentsChart"], body: (display,mountReactive,getSelectedWaterfallRecord,chartPlaceholder,waterfallSegmentsChart) => {
+display(
+  mountReactive(async () => {
+    const record = await getSelectedWaterfallRecord();
+
+    if (!record?.segments?.length) {
+      return chartPlaceholder(
+        260,
+        "No funding breakdown available for this selection."
+      );
+    }
+
+    const wrap = document.createElement("div");
+    wrap.className = "election-chart-wrap";
+
+    wrap.appendChild(
+      waterfallSegmentsChart(record.segments, {
+        width: Math.max(760, 790),
+        minRowHeight: 28
+      })
+    );
+
+    return wrap;
+  }, { eventName: "waterfall:change" })
+);
+}});
+
+define({id: "b9d8b073", inputs: ["display","mountReactive","getMatchedMembers","ensureValidConstituency","memberCards","partyColorMap","resolveLabel","sportsFundingTopic"], body: (display,mountReactive,getMatchedMembers,ensureValidConstituency,memberCards,partyColorMap,resolveLabel,sportsFundingTopic) => {
+display(
+  mountReactive(async () => {
+    const members = await getMatchedMembers();
+    const constituency = await ensureValidConstituency();
+
+    return memberCards({
+      members,
+      partyColorMap,
+      title: resolveLabel(sportsFundingTopic.labels.memberCardsTitle, {
+        constituency
+      })
+    });
+  }, {skeleton: "cards"})
+);
+}});
+
+define({id: "47957d16", inputs: ["display","mountReactive","getRecentSportsPQsForConstituency","partyColorMap","formatIrishDate"], body: (display,mountReactive,getRecentSportsPQsForConstituency,partyColorMap,formatIrishDate) => {
+display(
+  mountReactive(async () => {
+    const rows = await getRecentSportsPQsForConstituency(6);
+
+    if (!rows.length) {
+      const p = document.createElement("p");
+      p.className = "chart-loading";
+      p.textContent = "No related parliamentary questions available for this constituency.";
+      return p;
+    }
+
+    const wrap = document.createElement("div");
+    wrap.className = "debates-list debates-list--pqs";
+
+    rows.forEach((d) => {
+      const row = document.createElement("article");
+      row.className = "debates-list__row debates-list__row--pqs";
+
+      const borderColor = partyColorMap.get(d.matchedParty) ?? "#666666";
+
+      const avatarMarkup = d.imageUrl
+        ? `
+          <div class="debates-list__avatar" style="--avatar-ring:${borderColor}">
+            <img src="${d.imageUrl}" alt="${d.deputy}" loading="lazy" />
+          </div>
+        `
+        : `
+          <div class="debates-list__avatar debates-list__avatar--placeholder" style="--avatar-ring:${borderColor}">
+            <span>${d.initials}</span>
+          </div>
+        `;
+
+      row.innerHTML = `
+        <div class="debates-list__date">
+          ${formatIrishDate(d.date)}
+        </div>
+
+        <div class="debates-list__topic debates-list__topic--with-avatar">
+          ${avatarMarkup}
+          <div class="debates-list__topic-main">
+            <div class="debates-list__topic-title">${d.heading ?? ""}</div>
+            <div class="debates-list__topic-meta">${d.deputy ?? ""}</div>
+          </div>
+        </div>
+
+        <div class="debates-list__action">
+          <a
+            class="debates-list__button"
+            href="${d.url}"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View
+          </a>
+        </div>
+      `;
+
+      wrap.appendChild(row);
+    });
+
+    return wrap;
+  }, {skeleton: "table"})
+);
+}});
+
+define({id: "80f481af", inputs: ["display","mountReactive","getRecentSportsContributions","getMatchedMembers","memberContributionList","partyColorMap"], body: (display,mountReactive,getRecentSportsContributions,getMatchedMembers,memberContributionList,partyColorMap) => {
+display(
+  mountReactive(async () => {
+    const [rows, members] = await Promise.all([
+      getRecentSportsContributions(6),
+      getMatchedMembers()
+    ]);
+
+    return memberContributionList({
+      rows,
+      members,
+      partyColorMap,
+      emptyMessage: "No recent sports-related Dáil contributions are available for this constituency."
+    });
+  }, {skeleton: "table"})
+);
+}});
+
+define({id: "a1f948ce", inputs: ["display","relatedResearchResource"], body: (display,relatedResearchResource) => {
+display(relatedResearchResource({
+  rows: [{
+    date: "2025-09-09",
+    author: "PBO",
+    authorUrl: "https://www.oireachtas.ie/pbo",
+    title: "Community Sport Facilities Fund",
+    url: "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-09-09_community-sport-facilities-fund_en.pdf"
+  }]
+}));
+}});
+
+define({id: "ad406b4c", inputs: ["display","mountReactive","getFundingRows","downloadButton"], body: (display,mountReactive,getFundingRows,downloadButton) => {
+display(
+  mountReactive(async () => {
+    const rows = await getFundingRows();
+
+    const wrap = document.createElement("div");
+    wrap.className = "download-block";
+
+    wrap.appendChild(
+      downloadButton(
+        rows.map((d) => ({
+          year: d.__year ?? "",
+          constituency: d.__constituency ?? "",
+          project: d.__title ?? "",
+          organisation: d.__entity ?? "",
+          sport_type: d.__category ?? "",
+          amount: d.__amount ?? 0,
+          lat: d.__lat ?? "",
+          lon: d.__lon ?? ""
+        })),
+        "sports-funding-complete-dataset.csv",
+        {
+          label: "Download the complete sports funding dataset"
+        }
+      )
+    );
+
+    return wrap;
+  }, {skeleton: "text"})
+);
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:18aa9c61:--></div>
+<div class="observablehq observablehq--block"><!--:447c89d8:--></div>
+<div class="observablehq observablehq--block"><!--:dfc394ae:--></div>
+<div class="prose-block">
+  <p><a href="https://www.gov.ie/en/department-of-culture-communications-and-sport/collections/sports-capital-programme-allocations/" target="_blank" rel="noopener noreferrer">The community sports facilities fund</a>, formerly the sports capital and equipment fund, is the primary means of providing Government funding to sport and community organisations at local, regional and national level throughout the country.</p>
+  <p>The programme aims to foster an integrated and planned approach to the development of sports and physical recreation facilities and assists the purchase of non-personal sports equipment. Explore the allocations across constituencies.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:1f3e7e73:--></div>
+<div class="observablehq observablehq--block"><!--:5352797c:--></div>
+<div class="prose-block">
+  <h2>Explore the map</h2>
+  <p>Using new research from our <strong><a href="https://www.oireachtas.ie/pbo" target="_blank" rel="noopener noreferrer">Parliamentary Budget Office</a></strong>, take an interactive look at how this special funding has been used and compare funding in other constituencies around the country.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:8fc8b493:--></div>
+<div class="prose-block">
+  <h2>Explore by sport type</h2>
+</div>
+<div class="observablehq observablehq--block"><!--:5a5ba568:--></div>
+<div class="chart-block chart-block--wide">
+<div class="observablehq observablehq--block"><!--:05fb74b8:--></div>
+</div>
+<div class="observablehq observablehq--block"><!--:b9d8b073:--></div>
+<div class="prose-block">
+  <h2>Recent questions related to sports funding</h2>
+  <p>
+      Read recent parliamentary questions tabled by constituency TDs related to sports funding.
+  </p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:47957d16:--></div>
+</div>
+<div class="prose-block">
+  <h2>Recent speeches related to sports funding</h2>
+  <p>
+    Read recent contributions in Dáil Éireann by the TDs who represent the constituency.
+  </p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:80f481af:--></div>
+</div>
+<div class="prose-block prose-block--section">
+  <h2>Explore our research</h2>
+  <p>Our research and analysis takes a deep dive into sports funding allocations and related topics.</p>
+</div>
+<div class="chart-block">
+<div class="observablehq observablehq--block"><!--:a1f948ce:--></div>
+</div>
+<div class="prose-block demographics-source-note">
+  <h2>About the data</h2>
+  <p>Constituency Insights uses the downloadable source data published with the PBO's bespoke sports funding dataset.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:ad406b4c:--></div>
+</main>
+</div>
+</body>
+</html>

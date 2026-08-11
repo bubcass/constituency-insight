@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Observable Framework v1.13.4">
-<title>Sports funding | Constituency Insights</title>
+<title>Spotlights | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="preload" as="style" href="./_import/style.b1cac081.css">
@@ -13,6 +13,8 @@
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_import/components/insights-tabs.55f4617d.js">
+<link rel="modulepreload" href="./_import/components/hero-share.7f75f0bd.js">
 
     <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
     <script>
@@ -124,9 +126,92 @@
 <script type="module">
 
 import {define} from "./_observablehq/client.409fdcff.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
-define({id: "01e1f253", body: () => {
-if (typeof window !== "undefined") window.location.replace("./spotlight/sports-funding");
+registerFile("./media/abandoned-building.jpg", {"name":"./media/abandoned-building.jpg","mimeType":"image/jpeg","path":"./_file/media/abandoned-building.e4eaef06.jpg","lastModified":1786373081465,"size":640277});
+registerFile("./media/health-services-hero.jpg", {"name":"./media/health-services-hero.jpg","mimeType":"image/jpeg","path":"./_file/media/health-services-hero.bc59fb4e.jpg","lastModified":1785964191909,"size":1841587});
+registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg","mimeType":"image/jpeg","path":"./_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
+registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
+
+define({id: "6c9e8e6a", inputs: ["FileAttachment"], outputs: ["insightsTabs","enhanceHeroWithShare","roadSafetyImage","derelictSitesImage","healthServicesImage","sportsFundingVideo"], body: async (FileAttachment) => {
+const [{insightsTabs}, {enhanceHeroWithShare}] = await Promise.all([import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/hero-share.7f75f0bd.js")]);
+
+const roadSafetyImage = await FileAttachment("./media/road-with-glass.jpg").url();
+const derelictSitesImage = await FileAttachment("./media/abandoned-building.jpg").url();
+const healthServicesImage = await FileAttachment("./media/health-services-hero.jpg").url();
+const sportsFundingVideo = await FileAttachment("./media/sports-funding-hero.mp4").url();
+return {insightsTabs,enhanceHeroWithShare,roadSafetyImage,derelictSitesImage,healthServicesImage,sportsFundingVideo};
+}});
+
+define({id: "0ff5eade", inputs: ["enhanceHeroWithShare"], body: (enhanceHeroWithShare) => {
+enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
+  title: "Spotlights — Constituency Insights",
+});
+}});
+
+define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights"));
+}});
+
+define({id: "2d724fe6", inputs: ["roadSafetyImage","sportsFundingVideo","healthServicesImage","display"], outputs: ["grid","topics"], body: (roadSafetyImage,sportsFundingVideo,healthServicesImage,display) => {
+const grid = document.createElement("section");
+grid.className = "spotlight-card-grid";
+
+const topics = [
+  {
+    href: "./spotlight/road-safety",
+    eyebrow: "Latest spotlight",
+    title: "Road safety",
+    description: "Reported road collisions by year, severity, location and the type of road users involved.",
+    image: roadSafetyImage,
+  },
+  {
+    href: "./spotlight/sports-funding",
+    eyebrow: "Spotlight",
+    title: "Sports funding",
+    description: "Community sports funding distribution across projects, organisations and activities.",
+    video: sportsFundingVideo,
+  },
+  {
+    href: "./spotlight/health-services",
+    eyebrow: "Spotlight",
+    title: "Health services",
+    description: "How constituencies are served by hospitals, health centres, GP practices and pharmacies.",
+    image: healthServicesImage,
+  },
+  //{
+//    href: "./spotlight/derelict-sites",
+//    eyebrow: "Spotlight",
+//    title: "Derelict sites",
+//    description: "Local authority derelict site records mapped by constituency.",
+ //   image: derelictSitesImage,
+  //}
+ // ,
+];
+
+for (const topic of topics) {
+  const card = document.createElement("a");
+  card.className = "spotlight-card";
+  card.href = topic.href;
+  const media = topic.image
+    ? `<img src="${topic.image}" alt="">`
+    : `<video src="${topic.video}" autoplay muted loop playsinline aria-hidden="true"></video>`;
+  card.innerHTML = `
+    <div class="spotlight-card__media">
+      ${media}
+    </div>
+    <div class="spotlight-card__copy">
+      <p class="spotlight-card__eyebrow">${topic.eyebrow}</p>
+      <h2>${topic.title}</h2>
+      <p>${topic.description}</p>
+      <span class="spotlight-card__action">Explore<span aria-hidden="true"> →</span></span>
+    </div>
+  `;
+  grid.appendChild(card);
+}
+
+display(grid);
+return {grid,topics};
 }});
 
 </script>
@@ -134,8 +219,20 @@ if (typeof window !== "undefined") window.location.replace("./spotlight/sports-f
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:01e1f253:--></div>
-<p>This spotlight has moved to <a href="./spotlight/sports-funding">Sports funding</a>.</p>
+<div class="observablehq observablehq--block"><!--:6c9e8e6a:--></div>
+<div class="spotlights-hero">
+  <p class="spotlights-hero__eyebrow">Constituency insights</p>
+  <h1>Spotlights</h1>
+  <p class="spotlights-hero__subtitle">Detailed explorations of the topics that matter in constituencies.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:0ff5eade:--></div>
+<div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
+<div class="prose-block spotlights-intro">
+  <h2>Specialist insight, local focus</h2>
+  <p>Each spotlight is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
+  <p>With constituency and district-level data, maps and interactive filters, see beyond the headline numbers and explore how national issues affect constituents at a local level.</p>
+</div>
+<div class="observablehq observablehq--block"><!--:2d724fe6:--></div>
 </main>
 </div>
 </body>

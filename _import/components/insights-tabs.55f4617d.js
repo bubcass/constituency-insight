@@ -4,12 +4,12 @@ const tabs = [
   { id: "employment", label: "Work", href: "./employment" },
   { id: "housing", label: "Housing", href: "./housing" },
   { id: "transport", label: "Transport", href: "./transport" },
-  { id: "spotlights", label: "Spotlights", href: "./spotlights" },
+  { id: "spotlights", label: "Spotlights", href: "./spotlight" },
 ];
 
 let tabsInstance = 0;
 
-export function insightsTabs(activeTab) {
+export function insightsTabs(activeTab, {basePath = "."} = {}) {
   const active = tabs.find((tab) => tab.id === activeTab) ?? tabs[0];
   const listId = `insights-topics-${++tabsInstance}`;
   const shell = document.createElement("div");
@@ -37,7 +37,7 @@ export function insightsTabs(activeTab) {
   for (const tab of tabs) {
     const link = document.createElement("a");
     link.className = "insights-tabs__link";
-    link.href = tab.href;
+    link.href = `${basePath.replace(/\/$/, "")}/${tab.href.replace(/^\.\//, "")}`;
     link.textContent = tab.label;
 
     if (tab.id === activeTab) {
