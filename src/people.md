@@ -782,7 +782,7 @@ display(
 
 <div class="prose-block">
   <h2>Recent parliamentary questions</h2>
-  <p>Questions are an intrinsic part of Parliament and each year tens of thousands of questions are asked by Members.</p>
+  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs.</p>
 </div>
 
 <div class="chart-block">
@@ -801,7 +801,7 @@ display(
 
 <div class="prose-block">
   <h2>Recent parliamentary speeches</h2>
-  <p>A fundamental part of a TD's role is to speak in the Dáil on behalf of constituents with respect to legislation and topical matters of concern.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent ${state.constituency}.</p>
 </div>
 
 <div class="chart-block">

@@ -705,7 +705,7 @@ display(mountReactive(async () => memberCards({
 
 <div class="prose-block">
   <h2>Recent parliamentary questions related to education</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs related to education and learning.</p>
+  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs related to education.</p>
 </div>
 
 <div class="chart-block">
@@ -723,7 +723,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
 
 <div class="prose-block">
   <h2>Recent speeches related to education and learning.</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent ${state.constituency}.</p>
 </div>
 
 <div class="chart-block">

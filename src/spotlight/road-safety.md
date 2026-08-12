@@ -425,7 +425,7 @@ display(mountReactive(async () => memberCards({
 
 <div class="prose-block">
   <h2>Recent parliamentary questions related to road safety</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs related to road safety matters.</p>
+  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs related to road safety matters.</p>
 </div>
 
 <div class="chart-block">
@@ -435,7 +435,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
   rows: relevantQuestions(6),
   members: matchedMembers(),
   partyColorMap,
-  emptyMessage: "No recent road-safety parliamentary questions are available for this constituency."
+  emptyMessage: "No recent road safety parliamentary questions are available for this constituency."
 }), {skeleton: "table"}));
 ```
 
@@ -443,7 +443,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
 
 <div class="prose-block">
   <h2>Recent speeches related to road safety</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent ${state.constituency}.</p>
 </div>
 
 <div class="chart-block">

@@ -292,7 +292,7 @@ display(mountReactive(async () => memberCards({
 
 <div class="prose-block">
   <h2>Recent parliamentary questions related to dereliction</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs about derelict sites, vacant properties and related measures.</p>
+  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs about derelict sites, vacant properties and related measures.</p>
 </div>
 
 <div class="chart-block">
@@ -310,7 +310,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
 
 <div class="prose-block">
   <h2>Recent speeches related to dereliction</h2>
-  <p>Read recent contributions in Dáil Éireann in which the TDs who represent the constituency addressed dereliction, vacancy or vacant-site policy.</p>
+  <p>Read recent contributions in Dáil Éireann in which the TDs who represent ${state.constituency} addressed dereliction and vacancy.</p>
 </div>
 
 <div class="chart-block">

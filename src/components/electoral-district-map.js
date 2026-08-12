@@ -36,6 +36,7 @@ export function electoralDistrictMap({
   districtGeoJSON,
   selectedGuid = "all",
   height = 500,
+  fitMaxZoom = 10,
   onSelect = () => {},
   points = [],
   lines = [],
@@ -272,7 +273,7 @@ export function electoralDistrictMap({
       if (targetBounds.isValid()) {
         map.fitBounds(targetBounds, {
           padding: [34, 34],
-          maxZoom: 10,
+          maxZoom: fitMaxZoom,
         });
       }
     });

@@ -119,6 +119,16 @@ function selectedConstituencyGeoJSON() {
   };
 }
 
+function selectedTransportGeoJSON() {
+  if (state.district === "all") return selectedConstituencyGeoJSON();
+  return {
+    type: "FeatureCollection",
+    features: districtGeo.features.filter(
+      (feature) => feature?.properties?.ED_GUID === state.district
+    )
+  };
+}
+
 function accessRowsForConstituency() {
   return transportAccessRows.filter((row) => row.constituency === state.constituency);
 }
@@ -452,36 +462,30 @@ function renderTransportAvailabilityExplorer() {
   mapHost.className = "demographics-map-explorer__map-host";
   section.append(controls, mapHost);
   let mapNode = null;
-  let renderedConstituency = null;
+  let renderedScope = null;
 
   function buildMap() {
     mapNode?.destroy?.();
     mapHost.replaceChildren();
-    const guids = new Set(rowsForConstituency().map((d) => d.ED_GUID));
-    const features = districtGeo.features.filter((feature) => guids.has(feature?.properties?.ED_GUID));
     mapNode = electoralDistrictMap({
-      constituencyGeoJSON: selectedConstituencyGeoJSON(),
-      districtGeoJSON: {type: "FeatureCollection", features},
+      constituencyGeoJSON: selectedTransportGeoJSON(),
+      districtGeoJSON: {type: "FeatureCollection", features: []},
       selectedGuid: state.district,
       height: 500,
+      fitMaxZoom: state.district === "all" ? 10 : 16,
       points: accessRowsForConstituency(),
       lines: railLinesForConstituency(),
-      enabledFeatureTypes: state.featureTypes,
-      onSelect: (guid) => {
-        if (!guid || guid === state.district) return;
-        state.district = guid;
-        rerender();
-      }
+      enabledFeatureTypes: state.featureTypes
     });
-    renderedConstituency = state.constituency;
+    renderedScope = `${state.constituency}:${state.district}`;
     mapHost.appendChild(mapNode);
   }
 
   function update() {
     ensureDistrict();
-    if (!mapNode || renderedConstituency !== state.constituency) buildMap();
+    const nextScope = `${state.constituency}:${state.district}`;
+    if (!mapNode || renderedScope !== nextScope) buildMap();
     else {
-      mapNode.setSelectedGuid?.(state.district);
       mapNode.setEnabledFeatureTypes?.(state.featureTypes);
     }
     const selectedPoints = selectedAccessRows();
@@ -798,7 +802,7 @@ display(mountReactive(async () => memberCards({
 
 <div class="prose-block">
   <h2>Recent parliamentary questions related to transport</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs related to transport matters.</p>
+  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs related to transport matters.</p>
 </div>
 
 <div class="chart-block">
@@ -816,7 +820,7 @@ display(mountReactive(async () => parliamentaryQuestionList({
 
 <div class="prose-block">
   <h2>Recent speeches related to transport</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent ${state.constituency}.</p>
 </div>
 
 <div class="chart-block">
