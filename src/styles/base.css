@@ -14,6 +14,9 @@
     --chip-hover: #dedbd4;
     --gold: #6b5922;
     --gold-hover: #473a16;
+    --clear-action: #9f3529;
+    --clear-action-hover: #79251d;
+    --clear-action-soft: #fff5f2;
     --focus-ring: #3f3414;
     --surface: #fffdf8;
     --surface-soft: #ebe6da;
@@ -60,6 +63,9 @@
     --chip-hover: #393a34;
     --gold: #d3bf72;
     --gold-hover: #ead993;
+    --clear-action: #ef8f82;
+    --clear-action-hover: #ffb1a6;
+    --clear-action-soft: #342522;
     --focus-ring: #ead993;
     --chart-baseline: #858276;
     --chart-neutral: #4c4d47;
@@ -498,12 +504,60 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-.page-back-to-top__chevron {
-    font-family: inherit;
-    font-size: 1.2rem;
+.page-back-to-top__arrow {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.65;
+}
+
+.page-clear-district {
+    position: fixed;
+    right: max(var(--space-4), env(safe-area-inset-right));
+    bottom: calc(max(var(--space-4), env(safe-area-inset-bottom)) + 3.35rem);
+    z-index: 1300;
+    display: inline-flex;
+    min-height: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0 0.8rem;
+    border: 2px solid var(--clear-action);
+    border-radius: 999px;
+    background: var(--clear-action-soft);
+    box-shadow: var(--shadow-soft);
+    color: var(--clear-action);
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition: box-shadow 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.page-clear-district[hidden] {
+    display: none;
+}
+
+.page-clear-district:hover,
+.page-clear-district:focus-visible {
+    color: var(--clear-action-hover);
+    box-shadow: 0 0.6rem 1.2rem rgba(47, 47, 47, 0.2);
+    transform: translateY(-1px);
+}
+
+.page-clear-district:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.page-clear-district__icon {
+    font-size: 1.05rem;
     font-weight: 500;
     line-height: 1;
-    transform: translateY(0.02em);
 }
 
 @media (max-width: 720px) {
@@ -542,7 +596,16 @@ a:focus-visible {
         height: 2.4rem;
     }
 
-    .page-back-to-top__chevron {
-        font-size: 1.08rem;
+    .page-back-to-top__arrow {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
+    .page-clear-district {
+        right: max(var(--space-3), env(safe-area-inset-right));
+        bottom: calc(max(var(--space-3), env(safe-area-inset-bottom)) + 2.95rem);
+        min-height: 2.4rem;
+        padding-inline: 0.7rem;
+        font-size: 0.82rem;
     }
 }

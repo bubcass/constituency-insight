@@ -1092,10 +1092,10 @@
     gap: 0.5rem;
     min-height: 48px;
     padding: 0 0.85rem;
-    border: 1.5px solid var(--button-border);
+    border: 2px solid var(--clear-action);
     border-radius: 0;
-    background: #fffdf8;
-    color: var(--text);
+    background: var(--clear-action-soft);
+    color: var(--clear-action);
     font: inherit;
     font-weight: 600;
     cursor: pointer;
@@ -1116,9 +1116,9 @@
 
 .demographic-scope-context__clear:hover,
 .demographic-scope-context__clear:focus-visible {
-    border-color: var(--accent);
-    background: var(--chip-hover);
-    color: var(--text);
+    border-color: var(--clear-action-hover);
+    background: var(--clear-action-soft);
+    color: var(--clear-action-hover);
 }
 
 .demographic-scope-context__clear:focus-visible {
@@ -3142,7 +3142,6 @@ body.has-map-fullscreen {
 
 :root[data-theme="dark"] :is(
     .map-layer-control,
-    .demographic-scope-context__clear,
     .road-accident-severity__button,
     .metric-card,
     .segmented-control__option:not(:has(input:checked)),

@@ -46,7 +46,7 @@ export default {
           button.setAttribute("aria-label", "Back to top");
           button.title = "Back to top";
           button.hidden = true;
-          button.innerHTML = '<span class="page-back-to-top__chevron" aria-hidden="true">⌃</span>';
+          button.innerHTML = '<svg class="page-back-to-top__arrow" aria-hidden="true" viewBox="0 0 24 24"><path d="m6.5 14.5 5.5-5.5 5.5 5.5"/></svg>';
 
           const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
           button.addEventListener("click", () => {
@@ -76,6 +76,61 @@ export default {
           window.addEventListener("load", setupBackToTop, {once: true});
         } else {
           setupBackToTop();
+        }
+      })();
+
+      (() => {
+        const setupDistrictClearShortcut = () => {
+          if (!document.body || document.querySelector(".page-clear-district")) return;
+
+          const shortcut = document.createElement("button");
+          shortcut.type = "button";
+          shortcut.className = "page-clear-district";
+          shortcut.title = "Return to the constituency overview";
+          shortcut.hidden = true;
+          shortcut.innerHTML = '<span class="page-clear-district__icon" aria-hidden="true">×</span><span>Clear district</span>';
+
+          const inlineSelector = ".demographic-scope-context__clear";
+          const inlineClearButton = () => document.querySelector(inlineSelector);
+          const isInViewport = (element) => {
+            const bounds = element.getBoundingClientRect();
+            return bounds.bottom > 0 && bounds.top < window.innerHeight;
+          };
+
+          let updatePending = false;
+          const updateVisibility = () => {
+            updatePending = false;
+            const inlineButton = inlineClearButton();
+            shortcut.hidden = !inlineButton || isInViewport(inlineButton);
+            if (inlineButton) {
+              shortcut.setAttribute(
+                "aria-label",
+                inlineButton.getAttribute("aria-label") || "Clear electoral district selection"
+              );
+            }
+          };
+          const scheduleUpdate = () => {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateVisibility);
+          };
+
+          shortcut.addEventListener("click", () => inlineClearButton()?.click());
+          window.addEventListener("scroll", scheduleUpdate, {passive: true});
+          window.addEventListener("resize", scheduleUpdate, {passive: true});
+          new MutationObserver(scheduleUpdate).observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
+
+          document.body.appendChild(shortcut);
+          updateVisibility();
+        };
+
+        if (document.readyState !== "complete") {
+          window.addEventListener("load", setupDistrictClearShortcut, {once: true});
+        } else {
+          setupDistrictClearShortcut();
         }
       })();
 
