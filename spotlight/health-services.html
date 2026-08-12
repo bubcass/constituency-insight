@@ -7,15 +7,15 @@
 <title>Health services | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="../_import/style.e40d1d7b.css">
+<link rel="preload" as="style" href="../_import/style.a02cf751.css">
 <link rel="preload" as="style" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="../_import/style.e40d1d7b.css">
+<link rel="stylesheet" type="text/css" href="../_import/style.a02cf751.css">
 <link rel="stylesheet" type="text/css" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="../_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="../_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="../_observablehq/stdlib.277aeab8.js">
-<link rel="modulepreload" href="../_import/components/insights-tabs.55f4617d.js">
+<link rel="modulepreload" href="../_import/components/insights-tabs.218f8509.js">
 <link rel="modulepreload" href="../_import/components/constituency-select.be8dda34.js">
 <link rel="modulepreload" href="../_import/components/constituency-location.64a17faf.js">
 <link rel="modulepreload" href="../_import/components/topic-point-map.8c3ed662.js">
@@ -26,7 +26,7 @@
 <link rel="modulepreload" href="../_import/components/related-research.2ee2445a.js">
 <link rel="modulepreload" href="../_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="../_import/components/reactive-mount.40133ee8.js">
-<link rel="modulepreload" href="../_import/components/hero-share.7f75f0bd.js">
+<link rel="modulepreload" href="../_import/components/hero-share.e5cf896c.js">
 <link rel="modulepreload" href="../_import/topics/health-services/config.0f4bb984.js">
 <link rel="modulepreload" href="../_import/topics/health-services/transforms.9d2701e0.js">
 <link rel="modulepreload" href="../_npm/@turf/helpers@7.3.4/a5e57fe3.js">
@@ -78,6 +78,7 @@
 <link rel="modulepreload" href="../_npm/delaunator@5.1.0/d4ec0aa1.js">
 <link rel="modulepreload" href="../_npm/d3-array@1.2.4/a2c25531.js">
 
+    <link rel="preload" href="../_file/oireachtas-logo.be2bef67.svg" as="image" type="image/svg+xml">
     <link rel="icon" href="../_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
     <script>
       document.documentElement.lang = "en-IE";
@@ -112,6 +113,150 @@
         meta.content = "width=device-width, initial-scale=1";
         document.head.appendChild(meta);
       }
+
+      (() => {
+        const setupOireachtasMasthead = () => {
+          if (!document.body || document.querySelector(".oireachtas-masthead")) return;
+
+          const masthead = document.createElement("header");
+          masthead.className = "oireachtas-masthead";
+
+          const inner = document.createElement("div");
+          inner.className = "oireachtas-masthead__inner";
+
+          const homeLink = document.createElement("a");
+          homeLink.className = "oireachtas-masthead__home";
+          homeLink.href = "https://www.oireachtas.ie/";
+          homeLink.setAttribute("aria-label", "Return to oireachtas.ie");
+          homeLink.title = "Return to oireachtas.ie";
+
+          const logo = document.createElement("img");
+          logo.className = "oireachtas-masthead__logo";
+          logo.alt = "";
+          logo.width = 163;
+          logo.height = 69;
+          logo.src = document.querySelector('link[rel="preload"][as="image"]')?.href || "oireachtas-logo.svg";
+
+          homeLink.appendChild(logo);
+
+          const resourceLink = document.createElement("a");
+          resourceLink.className = "oireachtas-masthead__resource";
+          resourceLink.textContent = "Constituency Insights";
+          const assetUrl = new URL(logo.src, window.location.href);
+          assetUrl.pathname = assetUrl.pathname.replace(/_file\/.*$/, "");
+          assetUrl.search = "";
+          assetUrl.hash = "";
+          resourceLink.href = assetUrl.href;
+          resourceLink.setAttribute("aria-label", "Constituency Insights home");
+          const normalizePath = (path) => path
+            .replace(/index(?:\.html)?$/, "")
+            .replace(/\/+$/, "/");
+
+          const indexTitle = document.createElement("h1");
+          indexTitle.className = "oireachtas-masthead__index-title";
+          indexTitle.textContent = "Constituency Insights";
+
+          const syncMastheadRoute = () => {
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
+            masthead.classList.toggle("oireachtas-masthead--index", isInsightsIndex);
+            resourceLink.hidden = isInsightsIndex;
+            indexTitle.hidden = !isInsightsIndex;
+          };
+
+          const actions = document.createElement("div");
+          actions.className = "oireachtas-masthead__actions";
+
+          inner.append(homeLink, resourceLink, indexTitle, actions);
+          masthead.appendChild(inner);
+          syncMastheadRoute();
+
+          const mobileTools = document.createElement("div");
+          mobileTools.className = "mobile-reading-tools";
+          mobileTools.hidden = true;
+          mobileTools.innerHTML = `
+            <button class="mobile-reading-tools__back" type="button" aria-label="Go back" title="Go back">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg>
+            </button>
+            <div class="mobile-reading-tools__more-wrap">
+              <button class="mobile-reading-tools__more" type="button" aria-label="More options" aria-expanded="false" title="More options">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+              </button>
+              <div class="mobile-reading-tools__menu" hidden></div>
+            </div>
+          `;
+
+          const backButton = mobileTools.querySelector(".mobile-reading-tools__back");
+          const moreButton = mobileTools.querySelector(".mobile-reading-tools__more");
+          const moreMenu = mobileTools.querySelector(".mobile-reading-tools__menu");
+          backButton.addEventListener("click", () => {
+            if (window.history.length > 1) window.history.back();
+            else window.location.href = resourceLink.href;
+          });
+          const setMoreOpen = (open) => {
+            moreMenu.hidden = !open;
+            moreButton.setAttribute("aria-expanded", String(open));
+          };
+          moreButton.addEventListener("click", () => setMoreOpen(moreMenu.hidden));
+          document.addEventListener("pointerdown", (event) => {
+            if (!moreMenu.hidden && !mobileTools.contains(event.target)) setMoreOpen(false);
+          });
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !moreMenu.hidden) {
+              setMoreOpen(false);
+              moreButton.focus();
+            }
+          });
+
+          const mobileQuery = window.matchMedia("(max-width: 720px)");
+          let updatePending = false;
+          const updateMobileTools = () => {
+            updatePending = false;
+            const tabsShell = document.querySelector(".insights-tabs-shell");
+            const pastTopicNav = tabsShell
+              ? tabsShell.getBoundingClientRect().top <= 12
+              : window.scrollY > masthead.offsetHeight + 48;
+            const visible = mobileQuery.matches && pastTopicNav;
+            mobileTools.hidden = !visible;
+            if (!visible) setMoreOpen(false);
+          };
+          const scheduleMobileToolsUpdate = () => {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateMobileTools);
+          };
+          window.addEventListener("scroll", scheduleMobileToolsUpdate, {passive: true});
+          window.addEventListener("resize", scheduleMobileToolsUpdate, {passive: true});
+          window.addEventListener("popstate", syncMastheadRoute);
+          window.navigation?.addEventListener("navigatesuccess", syncMastheadRoute);
+          document.addEventListener("click", (event) => {
+            const link = event.target.closest?.("a[href]");
+            if (!link) return;
+            const destination = new URL(link.href, window.location.href);
+            if (destination.origin !== window.location.origin) return;
+            window.setTimeout(syncMastheadRoute, 0);
+            window.setTimeout(syncMastheadRoute, 120);
+          });
+          const titleElement = document.querySelector("title");
+          if (titleElement) {
+            new MutationObserver(syncMastheadRoute).observe(titleElement, {
+              childList: true,
+              characterData: true,
+              subtree: true,
+            });
+          }
+          mobileQuery.addEventListener("change", scheduleMobileToolsUpdate);
+
+          document.body.prepend(masthead);
+          document.body.appendChild(mobileTools);
+          updateMobileTools();
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", setupOireachtasMasthead, {once: true});
+        } else {
+          setupOireachtasMasthead();
+        }
+      })();
 
       (() => {
         const setupBackToTop = () => {
@@ -253,7 +398,7 @@ registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json
 registerFile("../media/health-services-hero.jpg", {"name":"../media/health-services-hero.jpg","mimeType":"image/jpeg","path":"../_file/media/health-services-hero.bc59fb4e.jpg","lastModified":1785964191909,"size":1841587});
 
 define({id: "77e9390c", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","metricCards","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","downloadButton","createReactiveMount","enhanceHeroWithShare","healthServicesTopic","healthServiceTooltip","buildHealthServiceMetrics","filterHealthServices","healthServiceDownloadRows","serviceRows","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","heroImage","constituencies","HEALTH_TOPIC_MATCHER","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","constituencyMembers","recentHealthQuestions","recentHealthContributions","restoreScroll","rerender","mountReactive","renderScopeControl"], body: async (FileAttachment) => {
-const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {downloadButton}, {createReactiveMount}, {enhanceHeroWithShare}, {healthServicesTopic, healthServiceTooltip}, {buildHealthServiceMetrics, filterHealthServices, healthServiceDownloadRows}] = await Promise.all([import("../_import/components/insights-tabs.55f4617d.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/topic-point-map.8c3ed662.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.7f75f0bd.js"), import("../_import/topics/health-services/config.0f4bb984.js"), import("../_import/topics/health-services/transforms.9d2701e0.js")]);
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {downloadButton}, {createReactiveMount}, {enhanceHeroWithShare}, {healthServicesTopic, healthServiceTooltip}, {buildHealthServiceMetrics, filterHealthServices, healthServiceDownloadRows}] = await Promise.all([import("../_import/components/insights-tabs.218f8509.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/topic-point-map.8c3ed662.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.e5cf896c.js"), import("../_import/topics/health-services/config.0f4bb984.js"), import("../_import/topics/health-services/transforms.9d2701e0.js")]);
 
 const serviceRows = await FileAttachment("../data/derived/health-services-normalized.csv").csv({typed: true});
 const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
@@ -388,6 +533,10 @@ function renderScopeControl() {
 return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,topicPointMap,metricCards,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,downloadButton,createReactiveMount,enhanceHeroWithShare,healthServicesTopic,healthServiceTooltip,buildHealthServiceMetrics,filterHealthServices,healthServiceDownloadRows,serviceRows,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentMemberContributions,heroImage,constituencies,HEALTH_TOPIC_MATCHER,partyColorMap,state,savedConstituency,cleanConstituencyName,selectedConstituencyGeoJSON,selectedRows,constituencyMembers,recentHealthQuestions,recentHealthContributions,restoreScroll,rerender,mountReactive,renderScopeControl};
 }});
 
+define({id: "dfc394ae", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights", {basePath: ".."}));
+}});
+
 define({id: "13a220d2", inputs: ["heroImage","enhanceHeroWithShare","display"], outputs: ["hero"], body: (heroImage,enhanceHeroWithShare,display) => {
 const hero = document.createElement("div");
 hero.className = "hero health-services-hero";
@@ -406,10 +555,6 @@ hero.innerHTML = `
 enhanceHeroWithShare(hero, {title: "Health services — Constituency Insights"});
 display(hero);
 return {hero};
-}});
-
-define({id: "dfc394ae", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
-display(insightsTabs("spotlights", {basePath: ".."}));
 }});
 
 define({id: "9f148872", inputs: ["display","renderScopeControl"], body: (display,renderScopeControl) => {
@@ -576,8 +721,8 @@ display(mountReactive(async () => {
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
 <div class="observablehq observablehq--block"><!--:77e9390c:--></div>
-<div class="observablehq observablehq--block"><!--:13a220d2:--></div>
 <div class="observablehq observablehq--block"><!--:dfc394ae:--></div>
+<div class="observablehq observablehq--block"><!--:13a220d2:--></div>
 <div class="prose-block lead">
   <p>The HSE maintains data on the locations of hospitals, health centres, GP practices and pharmacies. These are the typical places where people find initial help for their health needs.</p>
   <p>Choose a constituency to explore where health services are accessed.</p>

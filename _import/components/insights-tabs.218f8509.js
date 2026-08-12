@@ -55,6 +55,7 @@ export function insightsTabs(activeTab, {basePath = "."} = {}) {
     let frame = null;
     let menuOpen = false;
     const mobileQuery = window.matchMedia("(max-width: 720px)");
+    const mastheadQuery = window.matchMedia("(min-width: 901px)");
 
     const setMenuOpen = (open, {focusToggle = false} = {}) => {
       menuOpen = mobileQuery.matches && open;
@@ -71,9 +72,32 @@ export function insightsTabs(activeTab, {basePath = "."} = {}) {
 
     const syncFloating = () => {
       frame = null;
-      const shouldFloat = shell.getBoundingClientRect().top <= 0;
+      const masthead = document.querySelector(".oireachtas-masthead");
+      const mastheadInner = masthead?.querySelector(".oireachtas-masthead__inner");
+      const mastheadActions = mastheadInner?.querySelector(".oireachtas-masthead__actions");
+      const mobileTools = document.querySelector(".mobile-reading-tools");
+      const mobileMore = mobileTools?.querySelector(".mobile-reading-tools__more-wrap");
+      const mastheadHeight = masthead?.offsetHeight || 0;
+      const navHeight = nav.offsetHeight;
+      const dockingLine = mobileQuery.matches ? 12 : mastheadHeight;
+      const shouldFloat = shell.getBoundingClientRect().top <= dockingLine;
+      const shouldDockInMasthead = shouldFloat && mastheadQuery.matches && mastheadInner;
+      const shouldDockInMobileTools = shouldFloat && mobileQuery.matches && mobileTools;
+
+      shell.style.height = shouldFloat ? `${navHeight}px` : "";
       shell.classList.toggle("insights-tabs-shell--floating", shouldFloat);
-      shell.style.height = shouldFloat ? `${nav.offsetHeight}px` : "";
+      nav.classList.toggle("insights-tabs--floating", shouldFloat);
+      nav.classList.toggle("insights-tabs--masthead", Boolean(shouldDockInMasthead));
+      nav.classList.toggle("insights-tabs--mobile-tools", Boolean(shouldDockInMobileTools));
+      document.documentElement.classList.toggle("has-floating-insights-tabs", shouldFloat);
+
+      if (shouldDockInMobileTools && nav.parentNode !== mobileTools) {
+        mobileTools.insertBefore(nav, mobileMore || null);
+      } else if (shouldDockInMasthead && nav.parentNode !== mastheadInner) {
+        mastheadInner.insertBefore(nav, mastheadActions || null);
+      } else if (!shouldDockInMobileTools && !shouldDockInMasthead && nav.parentNode !== shell) {
+        shell.appendChild(nav);
+      }
     };
 
     const scheduleSync = () => {
@@ -83,7 +107,7 @@ export function insightsTabs(activeTab, {basePath = "."} = {}) {
 
     toggle.addEventListener("click", () => setMenuOpen(!menuOpen));
     document.addEventListener("pointerdown", (event) => {
-      if (menuOpen && !shell.contains(event.target)) setMenuOpen(false);
+      if (menuOpen && !nav.contains(event.target)) setMenuOpen(false);
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && menuOpen) setMenuOpen(false, {focusToggle: true});
@@ -92,6 +116,7 @@ export function insightsTabs(activeTab, {basePath = "."} = {}) {
       if (event.target.closest("a")) setMenuOpen(false);
     });
     mobileQuery.addEventListener("change", syncNavigationMode);
+    mastheadQuery.addEventListener("change", scheduleSync);
 
     window.addEventListener("scroll", scheduleSync, { passive: true });
     window.addEventListener("resize", scheduleSync);
