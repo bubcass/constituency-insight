@@ -485,6 +485,10 @@ await initialiseConstituencySelection();
 ```
 
 ```js
+display(insightsTabs("spotlights", {basePath: ".."}));
+```
+
+```js
 const heroWrap = document.createElement("div");
 heroWrap.className = "hero";
 
@@ -505,10 +509,6 @@ heroWrap.innerHTML = `
 
 enhanceHeroWithShare(heroWrap, {title: `${sportsFundingTopic.heroTitle} — Constituency Insights`});
 display(heroWrap);
-```
-
-```js
-display(insightsTabs("spotlights", {basePath: ".."}));
 ```
 
 <div class="prose-block">

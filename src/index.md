@@ -7,16 +7,22 @@ toc: false
 ---
 
 ```js
+import {mountMastheadActions} from "./components/hero-share.js";
+
 const peopleVideo = await FileAttachment("media/people-walking-in-blurred.mp4").url();
 const educationImage = await FileAttachment("media/education-hero.jpg").url();
 const workVideo = await FileAttachment("media/harvest-hero.mp4").url();
 const housingImage = await FileAttachment("media/housing.jpg").url();
 const transportVideo = await FileAttachment("media/dublin-quays.mp4").url();
 const spotlightsImage = await FileAttachment("media/road-with-glass.jpg").url();
+
+mountMastheadActions({
+  title: "Constituency Insights",
+  text: "Explore constituency-level data and analysis from the Houses of the Oireachtas.",
+});
 ```
 
-<section class="insights-index-intro" aria-labelledby="insights-index-title">
-  <h2 id="insights-index-title">Constituency Insights</h2>
+<section class="insights-index-intro">
   <p>See beyond the numbers with our data-driven exploration of the people and policies that matter in the constituencies represented by our TDs.</p>
 </section>
 

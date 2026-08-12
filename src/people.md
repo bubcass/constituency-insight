@@ -498,6 +498,10 @@ const DEMOGRAPHICS_CHART_WIDTH = 790;
 ```
 
 ```js
+display(insightsTabs("people"));
+```
+
+```js
 const peopleHero = document.createElement("div");
 peopleHero.className = "hero";
 peopleHero.innerHTML = `
@@ -514,10 +518,6 @@ peopleHero.innerHTML = `
 `;
 enhanceHeroWithShare(peopleHero, {title: "People — Constituency Insights"});
 display(peopleHero);
-```
-
-```js
-display(insightsTabs("people"));
 ```
 
 <div class="prose-block lead">

@@ -403,6 +403,10 @@ const EMPLOYMENT_CHART_WIDTH = 790;
 ```
 
 ```js
+display(insightsTabs("employment"));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero employment-hero";
 hero.innerHTML = `
@@ -419,10 +423,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Work — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("employment"));
 ```
 
 <div class="prose-block lead">

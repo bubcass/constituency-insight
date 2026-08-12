@@ -458,6 +458,10 @@ const HOUSING_CHART_WIDTH = 790;
 ```
 
 ```js
+display(insightsTabs("housing"));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero housing-hero";
 hero.innerHTML = `
@@ -474,10 +478,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Housing — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("housing"));
 ```
 
 <div class="prose-block lead">

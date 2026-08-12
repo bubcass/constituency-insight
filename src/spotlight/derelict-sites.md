@@ -155,6 +155,10 @@ function renderConstituencyFilter() {
 ```
 
 ```js
+display(insightsTabs("spotlights", {basePath: ".."}));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero derelict-sites-hero";
 hero.innerHTML = `
@@ -171,10 +175,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Derelict sites — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("spotlights", {basePath: ".."}));
 ```
 
 <div class="prose-block lead">

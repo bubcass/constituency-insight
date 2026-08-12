@@ -556,6 +556,10 @@ function renderDistrictMapExplorer() {
 ```
 
 ```js
+display(insightsTabs("transport"));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero transport-hero";
 hero.innerHTML = `
@@ -572,10 +576,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Transport — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("transport"));
 ```
 
 <div class="prose-block lead">

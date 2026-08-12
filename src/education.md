@@ -516,6 +516,10 @@ function renderDistrictMapExplorer() {
 ```
 
 ```js
+display(insightsTabs("education"));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero education-hero";
 hero.innerHTML = `
@@ -532,10 +536,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Education — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("education"));
 ```
 
 <div class="prose-block lead">

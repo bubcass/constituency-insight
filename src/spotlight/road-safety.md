@@ -283,6 +283,10 @@ function renderIncidentFilters() {
 ```
 
 ```js
+display(insightsTabs("spotlights", {basePath: ".."}));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero road-accident-hero";
 hero.innerHTML = `
@@ -299,10 +303,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Road safety — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("spotlights", {basePath: ".."}));
 ```
 
 <div class="prose-block lead">

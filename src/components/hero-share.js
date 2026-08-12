@@ -29,82 +29,125 @@ const THEME_STORAGE_KEY = "constituency-insights-theme";
 export function enhanceHeroWithShare(hero, {title, text} = {}) {
   const content = hero?.querySelector?.(".hero__content") || hero;
   const subtitle = content?.querySelector?.(".hero__subtitle, .spotlights-hero__subtitle");
-  if (!content || !subtitle) return hero;
-
-  const row = document.createElement("div");
-  row.className = "hero__subtitle-row";
-  subtitle.replaceWith(row);
-
-  const actions = document.createElement("div");
-  actions.className = "hero__actions";
-
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "hero__share";
-  button.setAttribute("aria-label", "Share this page");
-  button.title = "Share this page";
-  button.innerHTML = SHARE_ICON;
-
-  const themeButton = document.createElement("button");
-  themeButton.type = "button";
-  themeButton.className = "hero__share hero__theme-toggle";
-  updateThemeButton(themeButton, currentTheme());
-
-  const themeObserver = new MutationObserver(() => {
-    if (!themeButton.isConnected) {
-      themeObserver.disconnect();
-      return;
-    }
-    updateThemeButton(themeButton, currentTheme());
+  mountMastheadActions({
+    title,
+    text: text || subtitle?.textContent?.trim(),
   });
-  themeObserver.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["data-theme"],
-  });
+  return hero;
+}
 
-  themeButton.addEventListener("click", () => {
-    const nextTheme = currentTheme() === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = nextTheme;
-    try {
-      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-    } catch {}
-    updateThemeButton(themeButton, nextTheme);
-  });
+export function mountMastheadActions({title, text} = {}) {
+  const actions = document.querySelector(".oireachtas-masthead__actions");
+  if (!actions) {
+    window.addEventListener(
+      "load",
+      () => mountMastheadActions({title, text}),
+      {once: true}
+    );
+    return;
+  }
+
+  actions.replaceChildren();
 
   const status = document.createElement("span");
-  status.className = "hero__share-status";
+  status.className = "oireachtas-masthead__status";
   status.setAttribute("aria-live", "polite");
 
-  button.addEventListener("click", async () => {
-    const url = window.location.href;
-    const shareData = {
-      title: title || document.title,
-      text: text || subtitle.textContent.trim(),
-      url,
-    };
+  const createThemeButton = (className) => {
+    const themeButton = document.createElement("button");
+    themeButton.type = "button";
+    themeButton.className = className;
+    updateThemeButton(themeButton, currentTheme());
 
-    try {
-      if (typeof navigator.share === "function") {
-        await navigator.share(shareData);
+    const themeObserver = new MutationObserver(() => {
+      if (!themeButton.isConnected) {
+        themeObserver.disconnect();
         return;
       }
+      updateThemeButton(themeButton, currentTheme());
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
-      await copyText(url);
-      showCopied(button, status);
-    } catch (error) {
-      if (error?.name === "AbortError") return;
+    themeButton.addEventListener("click", () => {
+      const nextTheme = currentTheme() === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
       try {
-        await copyText(url);
-        showCopied(button, status);
-      } catch {
-        status.textContent = "Unable to copy link";
-      }
-    }
-  });
+        localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch {}
+      updateThemeButton(themeButton, nextTheme);
+    });
+    return themeButton;
+  };
 
-  actions.append(button, themeButton);
-  row.append(subtitle, actions, status);
-  return hero;
+  const createShareButton = (className, buttonStatus = status) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = className;
+    button.setAttribute("aria-label", "Share this page");
+    button.title = "Share this page";
+    button.innerHTML = SHARE_ICON;
+
+    button.addEventListener("click", async () => {
+      const url = window.location.href;
+      const shareData = {
+        title: title || document.title,
+        text: text || document.querySelector(".hero__subtitle, .spotlights-hero__subtitle")?.textContent?.trim(),
+        url,
+      };
+
+      try {
+        if (typeof navigator.share === "function") {
+          await navigator.share(shareData);
+          return;
+        }
+
+        await copyText(url);
+        showCopied(button, buttonStatus);
+      } catch (error) {
+        if (error?.name === "AbortError") return;
+        try {
+          await copyText(url);
+          showCopied(button, buttonStatus);
+        } catch {
+          buttonStatus.textContent = "Unable to copy link";
+        }
+      }
+    });
+    return button;
+  };
+
+  const button = createShareButton("oireachtas-masthead__action");
+  const themeButton = createThemeButton("oireachtas-masthead__action oireachtas-masthead__theme-toggle");
+
+  actions.append(button, themeButton, status);
+
+  const mobileMenu = document.querySelector(".mobile-reading-tools__menu");
+  if (mobileMenu) {
+    const mobileStatus = document.createElement("span");
+    mobileStatus.className = "oireachtas-masthead__status";
+    mobileStatus.setAttribute("aria-live", "polite");
+    const mobileShare = createShareButton("mobile-reading-tools__menu-action", mobileStatus);
+    const mobileTheme = createThemeButton("mobile-reading-tools__menu-action");
+    mobileShare.insertAdjacentHTML("beforeend", "<span>Share</span>");
+    const syncThemeLabel = () => {
+      const label = currentTheme() === "dark" ? "Light mode" : "Dark mode";
+      let labelNode = mobileTheme.querySelector("span");
+      if (!labelNode) {
+        labelNode = document.createElement("span");
+        mobileTheme.appendChild(labelNode);
+      }
+      labelNode.textContent = label;
+    };
+    syncThemeLabel();
+    new MutationObserver(syncThemeLabel).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    mobileMenu.replaceChildren(mobileShare, mobileTheme, mobileStatus);
+  }
 }
 
 function currentTheme() {
@@ -139,17 +182,18 @@ async function copyText(value) {
 }
 
 function showCopied(button, status) {
+  const isMenuAction = button.classList.contains("mobile-reading-tools__menu-action");
   button.classList.add("is-copied");
   button.setAttribute("aria-label", "Link copied");
   button.title = "Link copied";
-  button.innerHTML = COPIED_ICON;
+  button.innerHTML = `${COPIED_ICON}${isMenuAction ? "<span>Link copied</span>" : ""}`;
   status.textContent = "Link copied";
 
   window.setTimeout(() => {
     button.classList.remove("is-copied");
     button.setAttribute("aria-label", "Share this page");
     button.title = "Share this page";
-    button.innerHTML = SHARE_ICON;
+    button.innerHTML = `${SHARE_ICON}${isMenuAction ? "<span>Share</span>" : ""}`;
     status.textContent = "";
   }, 2_000);
 }

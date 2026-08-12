@@ -155,6 +155,10 @@ function renderScopeControl() {
 ```
 
 ```js
+display(insightsTabs("spotlights", {basePath: ".."}));
+```
+
+```js
 const hero = document.createElement("div");
 hero.className = "hero health-services-hero";
 hero.innerHTML = `
@@ -171,10 +175,6 @@ hero.innerHTML = `
 `;
 enhanceHeroWithShare(hero, {title: "Health services — Constituency Insights"});
 display(hero);
-```
-
-```js
-display(insightsTabs("spotlights", {basePath: ".."}));
 ```
 
 <div class="prose-block lead">
