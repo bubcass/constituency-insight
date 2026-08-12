@@ -886,6 +886,21 @@ display(
 );
 }});
 
+define({id: "4fa69bb1", inputs: ["display","mountReactive","ensureValidConstituency"], body: (display,mountReactive,ensureValidConstituency) => {
+display(
+  mountReactive(async () => {
+    const constituency = await ensureValidConstituency();
+    const wrap = document.createElement("div");
+    wrap.className = "prose-block";
+    wrap.innerHTML = `
+      <h2>Recent questions related to sports funding</h2>
+      <p>Read recent parliamentary questions tabled by ${constituency} TDs related to sports funding.</p>
+    `;
+    return wrap;
+  }, {skeleton: "text"})
+);
+}});
+
 define({id: "47957d16", inputs: ["display","mountReactive","getRecentSportsPQsForConstituency","partyColorMap","formatIrishDate"], body: (display,mountReactive,getRecentSportsPQsForConstituency,partyColorMap,formatIrishDate) => {
 display(
   mountReactive(async () => {
@@ -949,6 +964,21 @@ display(
 
     return wrap;
   }, {skeleton: "table"})
+);
+}});
+
+define({id: "7565d3cf", inputs: ["display","mountReactive","ensureValidConstituency"], body: (display,mountReactive,ensureValidConstituency) => {
+display(
+  mountReactive(async () => {
+    const constituency = await ensureValidConstituency();
+    const wrap = document.createElement("div");
+    wrap.className = "prose-block";
+    wrap.innerHTML = `
+      <h2>Recent speeches related to sports funding</h2>
+      <p>Read recent contributions in Dáil Éireann by the TDs who represent ${constituency}.</p>
+    `;
+    return wrap;
+  }, {skeleton: "text"})
 );
 }});
 
@@ -1041,21 +1071,11 @@ display(
 <div class="observablehq observablehq--block"><!--:05fb74b8:--></div>
 </div>
 <div class="observablehq observablehq--block"><!--:b9d8b073:--></div>
-<div class="prose-block">
-  <h2>Recent questions related to sports funding</h2>
-  <p>
-      Read recent parliamentary questions tabled by constituency TDs related to sports funding.
-  </p>
-</div>
+<div class="observablehq observablehq--block"><!--:4fa69bb1:--></div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:47957d16:--></div>
 </div>
-<div class="prose-block">
-  <h2>Recent speeches related to sports funding</h2>
-  <p>
-    Read recent contributions in Dáil Éireann by the TDs who represent the constituency.
-  </p>
-</div>
+<div class="observablehq observablehq--block"><!--:7565d3cf:--></div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:80f481af:--></div>
 </div>

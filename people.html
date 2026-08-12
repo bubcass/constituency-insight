@@ -24,7 +24,7 @@
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
 <link rel="modulepreload" href="./_import/components/demographics-charts.5c2c45bd.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.c1991fc4.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.5d7c67c3.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
 <link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
@@ -196,7 +196,7 @@ import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 registerFile("./data/carers-2022.csv", {"name":"./data/carers-2022.csv","mimeType":"text/csv","path":"./_file/data/carers-2022.6ab35f44.csv","lastModified":1785499565093,"size":262592});
 registerFile("./data/demographics-age-2022.csv", {"name":"./data/demographics-age-2022.csv","mimeType":"text/csv","path":"./_file/data/demographics-age-2022.0c09fdf2.csv","lastModified":1784138384647,"size":1276786});
 registerFile("./data/deprivation-index-2022.csv", {"name":"./data/deprivation-index-2022.csv","mimeType":"text/csv","path":"./_file/data/deprivation-index-2022.5d73d418.csv","lastModified":1786473161685,"size":330648});
-registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.f12b88b7.json","lastModified":1786430547953,"size":1171852});
+registerFile("./data/derived/recent-member-contributions.json", {"name":"./data/derived/recent-member-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-member-contributions.c431f372.json","lastModified":1786519352665,"size":1172259});
 registerFile("./data/derived/recent-questions.json", {"name":"./data/derived/recent-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-questions.56187699.json","lastModified":1785920590297,"size":1517898});
 registerFile("./data/disability-2022.csv", {"name":"./data/disability-2022.csv","mimeType":"text/csv","path":"./_file/data/disability-2022.62f2a3a3.csv","lastModified":1785493915679,"size":264329});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
@@ -208,7 +208,7 @@ registerFile("./data/principal-economic-status-2022.csv", {"name":"./data/princi
 registerFile("./media/people-walking-in-blurred.mp4", {"name":"./media/people-walking-in-blurred.mp4","mimeType":"video/mp4","path":"./_file/media/people-walking-in-blurred.e416fe30.mp4","lastModified":1784202251836,"size":5247083});
 
 define({id: "5bd2dfe9", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","downloadButton","agePyramid","generationPercentageWaffle","electoralDistrictMap","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","principalEconomicStatusWaterfall","irishSpeakerShareWaffle","percentageStripChart","ageData","economicStatusData","irishSpeakingFrequency","disabilityData","carersData","householdCompositionData","deprivationData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","peopleHeroVideo","partyColorMap","SEXES","AGE_BANDS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","irishSpeakerPopulation","populationAgedThreePlus","disabilityProfile","carerProfile","householdProfile","deprivationProfile","constituencyMembers","recentConstituencyQuestions","recentConstituencyContributions","cleanConstituencyName","selectedConstituencyGeoJSON","aggregateAge","combineSexes","districtOptions","selectedDistrictName","scopeLabel","scopeDescription","ensureDistrict","restoreScrollThroughLayout","rerender","mountReactive","renderHouseholdViewControl","renderScopeControl","renderDistrictMapExplorer","profileStats","nationalStats","nationalDisabilityTotal","nationalDisabilityShare","nationalCarerTotal","nationalCarerShare","nationalHouseholdProfile","differenceText","DEMOGRAPHICS_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {downloadButton}, {agePyramid, generationPercentageWaffle}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {principalEconomicStatusWaterfall, irishSpeakerShareWaffle}, {percentageStripChart}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.5c2c45bd.js"), import("./_import/components/electoral-district-map.c1991fc4.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js"), import("./_import/components/people-charts.f1ebf957.js"), import("./_import/components/percentage-strip-chart.a5b42dda.js")]);
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {downloadButton}, {agePyramid, generationPercentageWaffle}, {electoralDistrictMap}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {principalEconomicStatusWaterfall, irishSpeakerShareWaffle}, {percentageStripChart}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/demographics-charts.5c2c45bd.js"), import("./_import/components/electoral-district-map.5d7c67c3.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js"), import("./_import/components/people-charts.f1ebf957.js"), import("./_import/components/percentage-strip-chart.a5b42dda.js")]);
 
 const ageData = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
 const economicStatusData = await FileAttachment("./data/principal-economic-status-2022.csv").csv({typed: true});
@@ -912,6 +912,12 @@ display(
 );
 }});
 
+define({id: "d4afd123", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
+}});
+
 define({id: "a5822b3a", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyQuestions,constituencyMembers,partyColorMap) => {
 display(
   mountReactive(async () => parliamentaryQuestionList({
@@ -920,6 +926,12 @@ display(
     partyColorMap
   }), {skeleton: "table"})
 );
+}});
+
+define({id: "d4afd123-1", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
 }});
 
 define({id: "96f58931", inputs: ["display","mountReactive","memberContributionList","recentConstituencyContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyContributions,constituencyMembers,partyColorMap) => {
@@ -1041,14 +1053,14 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:91dc20c9:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions</h2>
-  <p>Questions are an intrinsic part of Parliament and each year tens of thousands of questions are asked by Members.</p>
+  <p>Read recent parliamentary questions tabled by <observablehq-loading></observablehq-loading><!--:d4afd123:--> TDs.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:a5822b3a:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent parliamentary speeches</h2>
-  <p>A fundamental part of a TD's role is to speak in the Dáil on behalf of constituents with respect to legislation and topical matters of concern.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent <observablehq-loading></observablehq-loading><!--:d4afd123-1:-->.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:96f58931:--></div>

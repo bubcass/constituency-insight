@@ -21,7 +21,7 @@
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.c1991fc4.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.5d7c67c3.js">
 <link rel="modulepreload" href="./_import/components/topic-point-map.8c3ed662.js">
 <link rel="modulepreload" href="./_import/components/housing-charts.e9d6a0c5.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
@@ -214,7 +214,7 @@ registerFile("./data/renewable-energy-households-2022.csv", {"name":"./data/rene
 registerFile("./media/housing.mp4", {"name":"./media/housing.mp4","mimeType":"video/mp4","path":"./_file/media/housing.3381d41e.mp4","lastModified":1784297244767,"size":3517495});
 
 define({id: "9282ebe4", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","housingData","housingStockData","adultsWithParentsData","renewableEnergyHouseholdsData","planningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","planningYears","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","adultsWithParentsStats","renewableEnergyHouseholdProfile","nationalAdultsWithParentsStats","nationalRenewableEnergyHouseholdProfile","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.c1991fc4.js"), import("./_import/components/topic-point-map.8c3ed662.js"), import("./_import/components/housing-charts.e9d6a0c5.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js"), import("./_import/topics/planning-applications/config.d58aa6f8.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.5d7c67c3.js"), import("./_import/components/topic-point-map.8c3ed662.js"), import("./_import/components/housing-charts.e9d6a0c5.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js"), import("./_import/topics/planning-applications/config.d58aa6f8.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js")]);
 
 const housingData = await FileAttachment("./data/housing-tenure-2022.csv").csv({typed: true});
 const housingStockData = await FileAttachment("./data/housing-stock-2022.csv").csv({typed: true});
@@ -860,6 +860,12 @@ display(mountReactive(async () => memberCards({
 }), {skeleton: "cards"}));
 }});
 
+define({id: "d4afd123", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
+}});
+
 define({id: "0af3a9a8", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyHousingQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyHousingQuestions,constituencyMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: recentConstituencyHousingQuestions(6),
@@ -867,6 +873,12 @@ display(mountReactive(async () => parliamentaryQuestionList({
   partyColorMap,
   emptyMessage: "No recent housing-related parliamentary questions are available for this constituency."
 }), {skeleton: "table"}));
+}});
+
+define({id: "d4afd123-1", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
 }});
 
 define({id: "d411cb11", inputs: ["display","mountReactive","memberContributionList","recentConstituencyHousingContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyHousingContributions,constituencyMembers,partyColorMap) => {
@@ -961,14 +973,14 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:f70e287b:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions related to housing</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs related to housing matters.</p>
+  <p>Read recent parliamentary questions tabled by <observablehq-loading></observablehq-loading><!--:d4afd123:--> TDs related to housing matters.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:0af3a9a8:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent speeches related to housing</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent <observablehq-loading></observablehq-loading><!--:d4afd123-1:-->.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:d411cb11:--></div>

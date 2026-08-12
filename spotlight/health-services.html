@@ -191,7 +191,7 @@ import {define} from "../_observablehq/client.409fdcff.js";
 import {registerFile} from "../_observablehq/stdlib.277aeab8.js";
 
 registerFile("../data/derived/health-services-normalized.csv", {"name":"../data/derived/health-services-normalized.csv","mimeType":"text/csv","path":"../_file/data/derived/health-services-normalized.8e35688b.csv","lastModified":1786473164326,"size":1110607});
-registerFile("../data/derived/recent-member-contributions.json", {"name":"../data/derived/recent-member-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-member-contributions.f12b88b7.json","lastModified":1786430547953,"size":1171852});
+registerFile("../data/derived/recent-member-contributions.json", {"name":"../data/derived/recent-member-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-member-contributions.c431f372.json","lastModified":1786519352665,"size":1172259});
 registerFile("../data/derived/recent-questions.json", {"name":"../data/derived/recent-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-questions.56187699.json","lastModified":1785920590297,"size":1517898});
 registerFile("../data/geo/constituencies.json", {"name":"../data/geo/constituencies.json","mimeType":"application/json","path":"../_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.ed380774.json","lastModified":1785920590309,"size":123367});
@@ -451,6 +451,12 @@ display(mountReactive(async () => memberCards({
 }), {skeleton: "cards"}));
 }});
 
+define({id: "d4afd123", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
+}});
+
 define({id: "4f2f8d62", inputs: ["display","mountReactive","parliamentaryQuestionList","recentHealthQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentHealthQuestions,constituencyMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: recentHealthQuestions(6),
@@ -458,6 +464,12 @@ display(mountReactive(async () => parliamentaryQuestionList({
   partyColorMap,
   emptyMessage: "No recent health-related parliamentary questions are available for this constituency."
 }), {skeleton: "table"}));
+}});
+
+define({id: "d4afd123-1", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
 }});
 
 define({id: "fa798eb7", inputs: ["display","mountReactive","memberContributionList","recentHealthContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentHealthContributions,constituencyMembers,partyColorMap) => {
@@ -525,14 +537,14 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:f70e287b:--></div>
 <div class="prose-block">
   <h2>Recent questions related to health services</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs about health and care services.</p>
+  <p>Read recent parliamentary questions tabled by <observablehq-loading></observablehq-loading><!--:d4afd123:--> TDs about health and care services.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:4f2f8d62:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent speeches related to health services</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent <observablehq-loading></observablehq-loading><!--:d4afd123-1:-->.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:fa798eb7:--></div>

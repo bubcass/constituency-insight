@@ -18,7 +18,7 @@
 <link rel="modulepreload" href="./_import/components/insights-tabs.55f4617d.js">
 <link rel="modulepreload" href="./_import/components/constituency-select.be8dda34.js">
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.c1991fc4.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.5d7c67c3.js">
 <link rel="modulepreload" href="./_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
@@ -190,7 +190,7 @@ import {define} from "./_observablehq/client.409fdcff.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
 registerFile("./data/demographics-age-2022.csv", {"name":"./data/demographics-age-2022.csv","mimeType":"text/csv","path":"./_file/data/demographics-age-2022.0c09fdf2.csv","lastModified":1784138384647,"size":1276786});
-registerFile("./data/derived/recent-transport-contributions.json", {"name":"./data/derived/recent-transport-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-transport-contributions.361cc8b3.json","lastModified":1786430547954,"size":266444});
+registerFile("./data/derived/recent-transport-contributions.json", {"name":"./data/derived/recent-transport-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-transport-contributions.57333de0.json","lastModified":1786519352665,"size":267644});
 registerFile("./data/derived/recent-transport-questions.json", {"name":"./data/derived/recent-transport-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-transport-questions.da297881.json","lastModified":1786093438649,"size":1421252});
 registerFile("./data/derived/transport-access.json", {"name":"./data/derived/transport-access.json","mimeType":"application/json","path":"./_file/data/derived/transport-access.07770fbf.json","lastModified":1785845707516,"size":10837558});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
@@ -199,8 +199,8 @@ registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json",
 registerFile("./data/transport-commuting-2022.json", {"name":"./data/transport-commuting-2022.json","mimeType":"application/json","path":"./_file/data/transport-commuting-2022.8c0f4c51.json","lastModified":1785849992088,"size":1143966});
 registerFile("./media/dublin-quays.mp4", {"name":"./media/dublin-quays.mp4","mimeType":"video/mp4","path":"./_file/media/dublin-quays.e27390af.mp4","lastModified":1784300919196,"size":6271001});
 
-define({id: "baa5c27d", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","metricCards","downloadButton","chartColors","transportMeansWaterfall","commuteTimingHeatmap","constituencyRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentTransportContributions","transportAccessData","transportCommutingData","transportHeroVideo","transportAccessRows","transportRailLines","transportCommutingRows","transportCommutingCategories","TRANSPORT_CHART_WIDTH","TRANSPORT_LAYERS","TRANSPORT_HEADING_MATCHER","partyColorMap","state","constituencies","savedConstituency","constituencyMembers","rowsForConstituency","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","accessRowsForConstituency","selectedAccessRows","railLinesForConstituency","selectedRailLines","railKilometres","formatKilometres","formatCount","formatPercent","percentagePointDifference","addArrays","aggregateCommutingRows","selectedCommutingRows","selectedCommutingProfile","profileRows","headlineModeLabel","displayModeLabel","modeStats","nationalModeStats","DEPARTURE_SHORT_LABELS","JOURNEY_SHORT_LABELS","JOURNEY_CARD_LABELS","COMMUTING_DOWNLOAD_META","commutingDownloadRows","accessDownloadRows","scopeSlug","recentConstituencyTransportQuestions","recentConstituencyTransportContributions","restoreScroll","rerender","mountReactive","renderTimingViewControl","renderScopeControl","renderTransportAvailabilityExplorer","renderDistrictMapExplorer"], body: async (FileAttachment) => {
-const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {metricCards}, {downloadButton}, {chartColors}, {transportMeansWaterfall, commuteTimingHeatmap}] = await Promise.all([import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/electoral-district-map.c1991fc4.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/transport-charts.ceecd488.js")]);
+define({id: "63e10111", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","metricCards","downloadButton","chartColors","transportMeansWaterfall","commuteTimingHeatmap","constituencyRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentTransportContributions","transportAccessData","transportCommutingData","transportHeroVideo","transportAccessRows","transportRailLines","transportCommutingRows","transportCommutingCategories","TRANSPORT_CHART_WIDTH","TRANSPORT_LAYERS","TRANSPORT_HEADING_MATCHER","partyColorMap","state","constituencies","savedConstituency","constituencyMembers","rowsForConstituency","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedTransportGeoJSON","accessRowsForConstituency","selectedAccessRows","railLinesForConstituency","selectedRailLines","railKilometres","formatKilometres","formatCount","formatPercent","percentagePointDifference","addArrays","aggregateCommutingRows","selectedCommutingRows","selectedCommutingProfile","profileRows","headlineModeLabel","displayModeLabel","modeStats","nationalModeStats","DEPARTURE_SHORT_LABELS","JOURNEY_SHORT_LABELS","JOURNEY_CARD_LABELS","COMMUTING_DOWNLOAD_META","commutingDownloadRows","accessDownloadRows","scopeSlug","recentConstituencyTransportQuestions","recentConstituencyTransportContributions","restoreScroll","rerender","mountReactive","renderTimingViewControl","renderScopeControl","renderTransportAvailabilityExplorer","renderDistrictMapExplorer"], body: async (FileAttachment) => {
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {metricCards}, {downloadButton}, {chartColors}, {transportMeansWaterfall, commuteTimingHeatmap}] = await Promise.all([import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/electoral-district-map.5d7c67c3.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/transport-charts.ceecd488.js")]);
 
 const constituencyRows = await FileAttachment("./data/demographics-age-2022.csv").csv({typed: true});
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
@@ -295,6 +295,16 @@ function selectedConstituencyGeoJSON() {
     type: "FeatureCollection",
     features: constituenciesGeo.features.filter(
       (feature) => String(feature?.properties?.ENG_NAME_VALUE ?? "").replace(/\s*\(\d+\)\s*$/, "").trim() === state.constituency
+    )
+  };
+}
+
+function selectedTransportGeoJSON() {
+  if (state.district === "all") return selectedConstituencyGeoJSON();
+  return {
+    type: "FeatureCollection",
+    features: districtGeo.features.filter(
+      (feature) => feature?.properties?.ED_GUID === state.district
     )
   };
 }
@@ -632,36 +642,30 @@ function renderTransportAvailabilityExplorer() {
   mapHost.className = "demographics-map-explorer__map-host";
   section.append(controls, mapHost);
   let mapNode = null;
-  let renderedConstituency = null;
+  let renderedScope = null;
 
   function buildMap() {
     mapNode?.destroy?.();
     mapHost.replaceChildren();
-    const guids = new Set(rowsForConstituency().map((d) => d.ED_GUID));
-    const features = districtGeo.features.filter((feature) => guids.has(feature?.properties?.ED_GUID));
     mapNode = electoralDistrictMap({
-      constituencyGeoJSON: selectedConstituencyGeoJSON(),
-      districtGeoJSON: {type: "FeatureCollection", features},
+      constituencyGeoJSON: selectedTransportGeoJSON(),
+      districtGeoJSON: {type: "FeatureCollection", features: []},
       selectedGuid: state.district,
       height: 500,
+      fitMaxZoom: state.district === "all" ? 10 : 16,
       points: accessRowsForConstituency(),
       lines: railLinesForConstituency(),
-      enabledFeatureTypes: state.featureTypes,
-      onSelect: (guid) => {
-        if (!guid || guid === state.district) return;
-        state.district = guid;
-        rerender();
-      }
+      enabledFeatureTypes: state.featureTypes
     });
-    renderedConstituency = state.constituency;
+    renderedScope = `${state.constituency}:${state.district}`;
     mapHost.appendChild(mapNode);
   }
 
   function update() {
     ensureDistrict();
-    if (!mapNode || renderedConstituency !== state.constituency) buildMap();
+    const nextScope = `${state.constituency}:${state.district}`;
+    if (!mapNode || renderedScope !== nextScope) buildMap();
     else {
-      mapNode.setSelectedGuid?.(state.district);
       mapNode.setEnabledFeatureTypes?.(state.featureTypes);
     }
     const selectedPoints = selectedAccessRows();
@@ -729,7 +733,7 @@ function renderDistrictMapExplorer() {
   window.addEventListener("transport:change", update);
   return section;
 }
-return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,electoralDistrictMap,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,metricCards,downloadButton,chartColors,transportMeansWaterfall,commuteTimingHeatmap,constituencyRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentTransportContributions,transportAccessData,transportCommutingData,transportHeroVideo,transportAccessRows,transportRailLines,transportCommutingRows,transportCommutingCategories,TRANSPORT_CHART_WIDTH,TRANSPORT_LAYERS,TRANSPORT_HEADING_MATCHER,partyColorMap,state,constituencies,savedConstituency,constituencyMembers,rowsForConstituency,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,accessRowsForConstituency,selectedAccessRows,railLinesForConstituency,selectedRailLines,railKilometres,formatKilometres,formatCount,formatPercent,percentagePointDifference,addArrays,aggregateCommutingRows,selectedCommutingRows,selectedCommutingProfile,profileRows,headlineModeLabel,displayModeLabel,modeStats,nationalModeStats,DEPARTURE_SHORT_LABELS,JOURNEY_SHORT_LABELS,JOURNEY_CARD_LABELS,COMMUTING_DOWNLOAD_META,commutingDownloadRows,accessDownloadRows,scopeSlug,recentConstituencyTransportQuestions,recentConstituencyTransportContributions,restoreScroll,rerender,mountReactive,renderTimingViewControl,renderScopeControl,renderTransportAvailabilityExplorer,renderDistrictMapExplorer};
+return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,electoralDistrictMap,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,metricCards,downloadButton,chartColors,transportMeansWaterfall,commuteTimingHeatmap,constituencyRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentTransportContributions,transportAccessData,transportCommutingData,transportHeroVideo,transportAccessRows,transportRailLines,transportCommutingRows,transportCommutingCategories,TRANSPORT_CHART_WIDTH,TRANSPORT_LAYERS,TRANSPORT_HEADING_MATCHER,partyColorMap,state,constituencies,savedConstituency,constituencyMembers,rowsForConstituency,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,selectedTransportGeoJSON,accessRowsForConstituency,selectedAccessRows,railLinesForConstituency,selectedRailLines,railKilometres,formatKilometres,formatCount,formatPercent,percentagePointDifference,addArrays,aggregateCommutingRows,selectedCommutingRows,selectedCommutingProfile,profileRows,headlineModeLabel,displayModeLabel,modeStats,nationalModeStats,DEPARTURE_SHORT_LABELS,JOURNEY_SHORT_LABELS,JOURNEY_CARD_LABELS,COMMUTING_DOWNLOAD_META,commutingDownloadRows,accessDownloadRows,scopeSlug,recentConstituencyTransportQuestions,recentConstituencyTransportContributions,restoreScroll,rerender,mountReactive,renderTimingViewControl,renderScopeControl,renderTransportAvailabilityExplorer,renderDistrictMapExplorer};
 }});
 
 define({id: "bc7d01c2", inputs: ["transportHeroVideo","enhanceHeroWithShare","display"], outputs: ["hero"], body: (transportHeroVideo,enhanceHeroWithShare,display) => {
@@ -944,6 +948,12 @@ display(mountReactive(async () => memberCards({
 }), {skeleton: "cards"}));
 }});
 
+define({id: "d4afd123", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
+}});
+
 define({id: "79228c5e", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyTransportQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyTransportQuestions,constituencyMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: recentConstituencyTransportQuestions(6),
@@ -951,6 +961,12 @@ display(mountReactive(async () => parliamentaryQuestionList({
   partyColorMap,
   emptyMessage: "No recent transport-related parliamentary questions are available for this constituency."
 }), {skeleton: "table"}));
+}});
+
+define({id: "d4afd123-1", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
 }});
 
 define({id: "22313d0d", inputs: ["display","mountReactive","memberContributionList","recentConstituencyTransportContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyTransportContributions,constituencyMembers,partyColorMap) => {
@@ -1008,7 +1024,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:baa5c27d:--></div>
+<div class="observablehq observablehq--block"><!--:63e10111:--></div>
 <div class="observablehq observablehq--block"><!--:bc7d01c2:--></div>
 <div class="observablehq observablehq--block"><!--:e2e5e560:--></div>
 <div class="prose-block lead">
@@ -1046,14 +1062,14 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:f70e287b:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions related to transport</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs related to transport matters.</p>
+  <p>Read recent parliamentary questions tabled by <observablehq-loading></observablehq-loading><!--:d4afd123:--> TDs related to transport matters.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:79228c5e:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent speeches related to transport</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent <observablehq-loading></observablehq-loading><!--:d4afd123-1:-->.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:22313d0d:--></div>

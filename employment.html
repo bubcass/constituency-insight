@@ -21,7 +21,7 @@
 <link rel="modulepreload" href="./_import/components/constituency-location.64a17faf.js">
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.cf825c31.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.c1991fc4.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.5d7c67c3.js">
 <link rel="modulepreload" href="./_import/components/employment-charts.03115eed.js">
 <link rel="modulepreload" href="./_import/components/people-charts.f1ebf957.js">
 <link rel="modulepreload" href="./_import/components/percentage-strip-chart.a5b42dda.js">
@@ -205,7 +205,7 @@ registerFile("./data/working-from-home-2022.csv", {"name":"./data/working-from-h
 registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
 
 define({id: "ee9d0a9a", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","principalEconomicStatusWaterfall","percentageStripChart","chartColors","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","employmentData","occupationData","economicStatusData","workingFromHomeData","householdIncomeData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","OCCUPATIONS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","occupationRowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","aggregateOccupations","employmentStats","workingFromHomeStats","labourForceStats","selectedDistrictHouseholdIncome","nationalStats","nationalWorkingFromHomeStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","currencyDifferenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderProfileViewControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {principalEconomicStatusWaterfall}, {percentageStripChart}, {chartColors}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.c1991fc4.js"), import("./_import/components/employment-charts.03115eed.js"), import("./_import/components/people-charts.f1ebf957.js"), import("./_import/components/percentage-strip-chart.a5b42dda.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js")]);
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {principalEconomicStatusWaterfall}, {percentageStripChart}, {chartColors}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.55f4617d.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.64a17faf.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.cf825c31.js"), import("./_import/components/electoral-district-map.5d7c67c3.js"), import("./_import/components/employment-charts.03115eed.js"), import("./_import/components/people-charts.f1ebf957.js"), import("./_import/components/percentage-strip-chart.a5b42dda.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/member-cards.6cf0eabb.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.7f75f0bd.js")]);
 
 const employmentData = await FileAttachment("./data/employment-industry-2022.csv").csv({typed: true});
 const occupationData = await FileAttachment("./data/employment-occupation-2022.csv").csv({typed: true});
@@ -756,6 +756,12 @@ display(mountReactive(async () => memberCards({
 }), {skeleton: "table"}));
 }});
 
+define({id: "d4afd123", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
+}});
+
 define({id: "c9aa32ea", inputs: ["display","mountReactive","parliamentaryQuestionList","recentConstituencyWorkQuestions","constituencyMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,recentConstituencyWorkQuestions,constituencyMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: recentConstituencyWorkQuestions(6),
@@ -763,6 +769,12 @@ display(mountReactive(async () => parliamentaryQuestionList({
   partyColorMap,
   emptyMessage: "No recent work-related parliamentary questions are available for this constituency."
 }), {skeleton: "table"}));
+}});
+
+define({id: "d4afd123-1", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
 }});
 
 define({id: "79480f7f", inputs: ["display","mountReactive","memberContributionList","recentConstituencyWorkContributions","constituencyMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,recentConstituencyWorkContributions,constituencyMembers,partyColorMap) => {
@@ -855,14 +867,14 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:adba563d:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions related to work</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs related to work and employment.</p>
+  <p>Read recent parliamentary questions tabled by <observablehq-loading></observablehq-loading><!--:d4afd123:--> TDs related to work and employment.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:c9aa32ea:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent speeches related to work</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent the constituency.</p>
+  <p>Read recent contributions in Dáil Éireann by the TDs who represent <observablehq-loading></observablehq-loading><!--:d4afd123-1:-->.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:79480f7f:--></div>

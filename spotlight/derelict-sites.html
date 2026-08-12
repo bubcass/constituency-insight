@@ -456,6 +456,12 @@ display(mountReactive(async () => memberCards({
 }), {skeleton: "cards"}));
 }});
 
+define({id: "d4afd123", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
+}});
+
 define({id: "5240e0a8", inputs: ["display","mountReactive","parliamentaryQuestionList","relevantQuestions","matchedMembers","partyColorMap"], body: (display,mountReactive,parliamentaryQuestionList,relevantQuestions,matchedMembers,partyColorMap) => {
 display(mountReactive(async () => parliamentaryQuestionList({
   rows: relevantQuestions(6),
@@ -463,6 +469,12 @@ display(mountReactive(async () => parliamentaryQuestionList({
   partyColorMap,
   emptyMessage: "No recent dereliction-related parliamentary questions are available for this constituency."
 }), {skeleton: "table"}));
+}});
+
+define({id: "d4afd123-1", mode: "inline", inputs: ["state","display"], body: async (state,display) => {
+display(await(
+state.constituency
+))
 }});
 
 define({id: "8e105419", inputs: ["display","mountReactive","memberContributionList","relevantContributions","matchedMembers","partyColorMap"], body: (display,mountReactive,memberContributionList,relevantContributions,matchedMembers,partyColorMap) => {
@@ -527,14 +539,14 @@ display(mountReactive(async () => {
 <div class="observablehq observablehq--block"><!--:7421e627:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions related to dereliction</h2>
-  <p>Read recent parliamentary questions tabled by constituency TDs about derelict sites, vacant properties and related measures.</p>
+  <p>Read recent parliamentary questions tabled by <observablehq-loading></observablehq-loading><!--:d4afd123:--> TDs about derelict sites, vacant properties and related measures.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:5240e0a8:--></div>
 </div>
 <div class="prose-block">
   <h2>Recent speeches related to dereliction</h2>
-  <p>Read recent contributions in Dáil Éireann in which the TDs who represent the constituency addressed dereliction, vacancy or vacant-site policy.</p>
+  <p>Read recent contributions in Dáil Éireann in which the TDs who represent <observablehq-loading></observablehq-loading><!--:d4afd123-1:--> addressed dereliction and vacancy.</p>
 </div>
 <div class="chart-block">
 <div class="observablehq observablehq--block"><!--:8e105419:--></div>
