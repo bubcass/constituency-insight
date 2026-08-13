@@ -24,6 +24,8 @@ mountMastheadActions({
 
 <section class="insights-index-intro">
   <p>See beyond the numbers with our data-driven exploration of the people and policies that matter in the constituencies represented by our TDs.</p>
+  <p>Constituency Insights is part of our series of <strong><a class="link-arrow" href="https://bubcass.github.io/open-data-insights/" target="_self">Oireachtas Insights</a>.</strong></p>
+
 </section>
 
 ```js

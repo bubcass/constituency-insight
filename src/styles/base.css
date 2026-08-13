@@ -850,29 +850,29 @@ a:focus-visible {
     margin: var(--space-5) auto var(--space-6);
 }
 
-.prose-block a[href^="http"] {
+:is(.prose-block a[href^="http"], a.link-arrow) {
     color: var(--text-soft);
     text-decoration: none;
     transition: color 0.25s ease;
 }
 
-.prose-block a[href^="http"]:hover,
-.prose-block a[href^="http"]:focus-visible {
+:is(.prose-block a[href^="http"], a.link-arrow):hover,
+:is(.prose-block a[href^="http"], a.link-arrow):focus-visible {
     color: var(--link-hover);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
-.prose-block a[href^="http"]::after {
+:is(.prose-block a[href^="http"], a.link-arrow)::after {
     content: " ↗";
     font-size: 0.85em;
     color: var(--text-muted);
     transition: color 0.25s ease;
 }
 
-.prose-block a[href^="http"]:hover::after,
-.prose-block a[href^="http"]:focus-visible::after {
+:is(.prose-block a[href^="http"], a.link-arrow):hover::after,
+:is(.prose-block a[href^="http"], a.link-arrow):focus-visible::after {
     color: var(--link-hover);
 }
 
