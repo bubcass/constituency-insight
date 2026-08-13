@@ -347,15 +347,20 @@ body {
 
     .oireachtas-masthead--index .oireachtas-masthead__index-title {
         position: absolute;
-        left: 50%;
+        right: 0;
+        left: 0;
         top: 50%;
         grid-column: 2;
         justify-self: center;
+        width: max-content;
+        max-width: calc(100% - 15rem);
+        margin-inline: auto;
         overflow: hidden;
         color: #fff;
         font-size: 1.05rem;
+        text-align: center;
         text-overflow: ellipsis;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
     }
 
     .oireachtas-masthead__inner {
@@ -370,19 +375,22 @@ body {
 
     .oireachtas-masthead__resource {
         position: absolute;
-        left: 50%;
+        right: 0;
+        left: 0;
         top: 50%;
         display: block;
         grid-column: 2;
         justify-self: center;
+        width: max-content;
         min-width: 0;
-        max-width: 9rem;
+        max-width: min(9rem, calc(100% - 15rem));
+        margin-inline: auto;
         color: var(--text);
         font-size: 0.76rem;
         line-height: 1.2;
         text-align: center;
         white-space: normal;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
     }
 
     .oireachtas-masthead__resource:hover,
