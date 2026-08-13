@@ -350,16 +350,18 @@ body {
         right: 0;
         left: 0;
         top: 50%;
-        grid-column: 2;
+        grid-column: 1 / -1;
         justify-self: center;
         width: max-content;
-        max-width: calc(100% - 15rem);
+        max-width: min(10.75rem, calc(100% - 13rem));
         margin-inline: auto;
         overflow: hidden;
         color: #fff;
-        font-size: 1.05rem;
+        font-size: 0.9rem;
+        line-height: 1.1;
         text-align: center;
         text-overflow: ellipsis;
+        white-space: nowrap;
         transform: translateY(-50%);
     }
 
@@ -379,17 +381,17 @@ body {
         left: 0;
         top: 50%;
         display: block;
-        grid-column: 2;
+        grid-column: 1 / -1;
         justify-self: center;
         width: max-content;
         min-width: 0;
-        max-width: min(9rem, calc(100% - 15rem));
+        max-width: min(10.75rem, calc(100% - 13rem));
         margin-inline: auto;
         color: var(--text);
-        font-size: 0.76rem;
+        font-size: 0.84rem;
         line-height: 1.2;
         text-align: center;
-        white-space: normal;
+        white-space: nowrap;
         transform: translateY(-50%);
     }
 
@@ -577,6 +579,15 @@ body {
         width: 98px;
     }
 
+}
+
+@media (max-width: 350px) {
+    .oireachtas-masthead__resource,
+    .oireachtas-masthead--index .oireachtas-masthead__index-title {
+        max-width: calc(100% - 12.5rem);
+        font-size: 0.76rem;
+        white-space: normal;
+    }
 }
 
 main.observablehq {
