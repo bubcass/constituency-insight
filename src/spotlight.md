@@ -1,5 +1,5 @@
 ---
-title: "Spotlights"
+title: "Snapshots"
 header: false
 sidebar: false
 footer: false
@@ -22,19 +22,19 @@ display(insightsTabs("spotlights"));
 
 <div class="spotlights-hero">
   <p class="spotlights-hero__eyebrow">Constituency insights</p>
-  <h1>Spotlights</h1>
-  <p class="spotlights-hero__subtitle">Detailed explorations of the topics that matter in constituencies.</p>
+  <h1>Snapshots</h1>
+  <p class="spotlights-hero__subtitle">Focused explorations of the topics that matter in constituencies.</p>
 </div>
 
 ```js
 enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
-  title: "Spotlights — Constituency Insights",
+  title: "Snapshots — Constituency Insights",
 });
 ```
 
 <div class="prose-block spotlights-intro">
   <h2>Specialist insight, local focus</h2>
-  <p>Each spotlight is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
+  <p>Each snapshot is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
   <p>With constituency and district-level data, maps and interactive filters, see beyond the headline numbers and explore how national issues affect constituents at a local level.</p>
 </div>
 
@@ -45,28 +45,28 @@ grid.className = "spotlight-card-grid";
 const topics = [
   {
     href: "./spotlight/road-safety",
-    eyebrow: "Latest spotlight",
+    eyebrow: "Latest snapshot",
     title: "Road safety",
     description: "Reported road collisions by year, severity, location and the type of road users involved.",
     image: roadSafetyImage,
   },
   {
     href: "./spotlight/sports-funding",
-    eyebrow: "Spotlight",
+    eyebrow: "Snapshot",
     title: "Sports funding",
     description: "Community sports funding distribution across projects, organisations and activities.",
     video: sportsFundingVideo,
   },
   {
     href: "./spotlight/health-services",
-    eyebrow: "Spotlight",
+    eyebrow: "Snapshot",
     title: "Health services",
     description: "How constituencies are served by hospitals, health centres, GP practices and pharmacies.",
     image: healthServicesImage,
   },
   //{
 //    href: "./spotlight/derelict-sites",
-//    eyebrow: "Spotlight",
+//    eyebrow: "Snapshot",
 //    title: "Derelict sites",
 //    description: "Local authority derelict site records mapped by constituency.",
  //   image: derelictSitesImage,

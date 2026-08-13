@@ -60,7 +60,7 @@ const topics = [
   },
   {
     href: "./spotlight",
-    eyebrow: "Spotlights",
+    eyebrow: "Snapshots",
     title: "Explore",
     image: spotlightsImage,
   },
