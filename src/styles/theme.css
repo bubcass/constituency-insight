@@ -833,7 +833,7 @@
 /* Spotlight collection */
 
 .spotlights-hero {
-    max-width: var(--text-max);
+    max-width: var(--page-max);
     margin: 0 auto var(--space-7);
     padding: clamp(2.5rem, 7vw, 4.8rem) clamp(1.5rem, 5vw, 3.5rem);
     background:
@@ -868,6 +868,7 @@
 }
 
 .spotlights-intro {
+    max-width: var(--page-max);
     margin-bottom: var(--space-6);
 }
 
@@ -875,7 +876,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
-    max-width: var(--text-max);
+    max-width: var(--page-max);
     margin: 0 auto var(--space-7);
 }
 

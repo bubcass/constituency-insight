@@ -151,9 +151,10 @@ body {
     grid-column: 2;
     grid-row: 1;
     color: rgba(255, 255, 255, 0.94);
-    font-size: 0.9rem;
+    font-size: clamp(1.15rem, 1.65vw, 1.45rem);
     font-weight: 600;
-    letter-spacing: 0.01em;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     text-decoration: none;
     transition: opacity 260ms ease;
 }
@@ -388,7 +389,7 @@ body {
         max-width: min(10.75rem, calc(100% - 13rem));
         margin-inline: auto;
         color: var(--text);
-        font-size: 0.84rem;
+        font-size: 0.9rem;
         line-height: 1.2;
         text-align: center;
         white-space: nowrap;
