@@ -3277,6 +3277,10 @@ body.has-map-fullscreen {
 }
 
 @media (max-width: 720px) {
+    :root[data-theme="dark"] .insights-tabs--mobile-tools {
+        background: transparent;
+    }
+
     :root[data-theme="dark"] .insights-tabs__toggle,
     :root[data-theme="dark"] .insights-tabs__list {
         background: var(--surface-glass);
