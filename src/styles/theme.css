@@ -3176,6 +3176,12 @@ body.has-map-fullscreen {
     background: color-mix(in srgb, var(--page-bg) 84%, transparent);
 }
 
+@media (min-width: 901px) {
+    :root[data-theme="dark"] .insights-tabs--masthead {
+        background: transparent;
+    }
+}
+
 :root[data-theme="dark"] :is(
     .map-layer-control,
     .road-accident-severity__button,

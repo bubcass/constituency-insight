@@ -332,6 +332,7 @@ body {
     }
 
     .oireachtas-masthead--index .oireachtas-masthead__inner {
+        position: relative;
         grid-template-columns: auto minmax(0, 1fr) auto;
         gap: 0.75rem;
     }
@@ -345,15 +346,20 @@ body {
     }
 
     .oireachtas-masthead--index .oireachtas-masthead__index-title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
         grid-column: 2;
         justify-self: center;
         overflow: hidden;
         color: #fff;
         font-size: 1.05rem;
         text-overflow: ellipsis;
+        transform: translate(-50%, -50%);
     }
 
     .oireachtas-masthead__inner {
+        position: relative;
         grid-template-columns: auto minmax(0, 1fr) auto;
         gap: 0.75rem;
     }
@@ -363,6 +369,9 @@ body {
     }
 
     .oireachtas-masthead__resource {
+        position: absolute;
+        left: 50%;
+        top: 50%;
         display: block;
         grid-column: 2;
         justify-self: center;
@@ -373,6 +382,7 @@ body {
         line-height: 1.2;
         text-align: center;
         white-space: normal;
+        transform: translate(-50%, -50%);
     }
 
     .oireachtas-masthead__resource:hover,
