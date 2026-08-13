@@ -7,10 +7,10 @@
 <title>Work | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.b5a8bdd4.css">
+<link rel="preload" as="style" href="./_import/style.5463d8df.css">
 <link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.b5a8bdd4.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.5463d8df.css">
 <link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
@@ -257,6 +257,50 @@
           document.addEventListener("DOMContentLoaded", setupOireachtasMasthead, {once: true});
         } else {
           setupOireachtasMasthead();
+        }
+      })();
+
+
+      (() => {
+        const setupOireachtasFooter = () => {
+          if (!document.body || document.querySelector(".oireachtas-footer")) return;
+
+          const footer = document.createElement("footer");
+          footer.className = "oireachtas-footer";
+
+          const nav = document.createElement("nav");
+          nav.className = "oireachtas-footer__nav";
+          nav.setAttribute("aria-label", "Oireachtas information");
+
+          const list = document.createElement("ul");
+          list.className = "oireachtas-footer__links";
+
+          const links = [
+            ["Accessibility", "https://www.oireachtas.ie/en/accessibility-statement/"],
+            ["Cookies", "https://www.oireachtas.ie/en/cookies/"],
+            ["Transparency", "https://www.oireachtas.ie/en/transparency/"],
+            ["Contact us", "https://www.oireachtas.ie/en/contact-us/"],
+            ["Copyright and reuse", "https://www.oireachtas.ie/en/copyright-and-reuse/"],
+          ];
+
+          for (const [label, href] of links) {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = href;
+            link.textContent = label;
+            item.appendChild(link);
+            list.appendChild(item);
+          }
+
+          nav.appendChild(list);
+          footer.appendChild(nav);
+          document.body.appendChild(footer);
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", setupOireachtasFooter, {once: true});
+        } else {
+          setupOireachtasFooter();
         }
       })();
 
