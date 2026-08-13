@@ -21,6 +21,7 @@
     --surface: #fffdf8;
     --surface-soft: #ebe6da;
     --surface-glass: rgba(255, 253, 248, 0.9);
+    --nav-glass: color-mix(in srgb, var(--page-bg) 76%, transparent);
     --chart-baseline: #8c877d;
     --chart-neutral: #d8d1c2;
     --page-max: 1100px;
@@ -53,6 +54,7 @@
     --surface: #22231f;
     --surface-soft: #2d2e29;
     --surface-glass: rgba(34, 35, 31, 0.94);
+    --nav-glass: color-mix(in srgb, var(--page-bg) 81%, transparent);
     --text: #e7e3d8;
     --text-soft: #c8c2b5;
     --text-muted: #aaa496;
@@ -97,9 +99,9 @@ body {
     height: var(--masthead-height);
     background: #3f3e3a;
     border-top: 1px solid #55544f;
-    border-bottom: 1px solid #292825;
+    border-bottom: 0;
     color: #fff;
-    box-shadow: 0 1px 0 rgba(179, 152, 65, 0.38);
+    box-shadow: none;
     box-sizing: border-box;
     transition:
         background-color 460ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -254,10 +256,12 @@ body {
 
 @media (min-width: 721px) {
     :root.has-floating-insights-tabs .oireachtas-masthead {
-        background: var(--page-bg);
-        border-color: var(--border);
+        background: var(--nav-glass);
+        border-color: transparent;
         color: var(--text);
-        box-shadow: 0 1px 0 color-mix(in srgb, var(--border) 78%, transparent);
+        box-shadow: none;
+        backdrop-filter: blur(14px) saturate(120%);
+        -webkit-backdrop-filter: blur(14px) saturate(120%);
     }
 
     :root:not([data-theme="dark"]).has-floating-insights-tabs .oireachtas-masthead__logo {
@@ -295,10 +299,12 @@ body {
     .oireachtas-masthead {
         position: relative;
         top: auto;
-        background: var(--page-bg);
-        border-color: var(--border);
+        background: var(--nav-glass);
+        border-color: transparent;
         color: var(--text);
-        box-shadow: 0 1px 0 color-mix(in srgb, var(--border) 78%, transparent);
+        box-shadow: none;
+        backdrop-filter: blur(14px) saturate(120%);
+        -webkit-backdrop-filter: blur(14px) saturate(120%);
     }
 
     :root:not([data-theme="dark"]) .oireachtas-masthead__logo {
@@ -316,9 +322,9 @@ body {
     .oireachtas-masthead--index {
         background: #3f3e3a;
         border-top-color: #55544f;
-        border-bottom-color: #292825;
+        border-bottom-color: transparent;
         color: #fff;
-        box-shadow: 0 1px 0 rgba(179, 152, 65, 0.38);
+        box-shadow: none;
     }
 
     :root:not([data-theme="dark"]) .oireachtas-masthead--index .oireachtas-masthead__logo {
@@ -438,6 +444,11 @@ body {
         animation: mobile-reading-tools-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
+    .mobile-reading-tools__back {
+        grid-column: 1;
+        justify-self: start;
+    }
+
     .mobile-reading-tools__back,
     .mobile-reading-tools__more {
         display: grid;
@@ -482,6 +493,7 @@ body {
 
     .mobile-reading-tools__more-wrap {
         position: relative;
+        grid-column: 3;
         justify-self: end;
         pointer-events: auto;
     }

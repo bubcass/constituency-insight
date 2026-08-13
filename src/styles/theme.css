@@ -204,9 +204,9 @@
     max-width: none;
     margin: 0;
     border: 0;
-    background: rgba(246, 243, 234, 0.84);
-    backdrop-filter: blur(13px) saturate(120%);
-    -webkit-backdrop-filter: blur(13px) saturate(120%);
+    background: var(--nav-glass);
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
 }
 
 .insights-tabs--floating:not(.insights-tabs--masthead):not(.insights-tabs--mobile-tools) {
@@ -216,8 +216,8 @@
     width: 100vw;
     transform: translateX(-50%);
     z-index: 1290;
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 4px 12px rgba(47, 47, 47, 0.08);
+    border-bottom: 0;
+    box-shadow: none;
 }
 
 @media (min-width: 901px) {
@@ -2976,6 +2976,7 @@ body.has-map-fullscreen {
     }
 
     .insights-tabs--mobile-tools {
+        grid-column: 2;
         align-self: start;
         justify-self: center;
         width: 100%;
@@ -2990,7 +2991,7 @@ body.has-map-fullscreen {
         min-height: 46px;
         padding-inline: 0.8rem;
         overflow: hidden;
-        background: color-mix(in srgb, var(--surface) 82%, transparent);
+        background: var(--nav-glass);
         box-shadow: 0 5px 20px rgba(32, 31, 28, 0.14);
         text-overflow: ellipsis;
         white-space: nowrap;
