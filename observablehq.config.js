@@ -181,6 +181,50 @@ export default {
         }
       })();
 
+
+      (() => {
+        const setupOireachtasFooter = () => {
+          if (!document.body || document.querySelector(".oireachtas-footer")) return;
+
+          const footer = document.createElement("footer");
+          footer.className = "oireachtas-footer";
+
+          const nav = document.createElement("nav");
+          nav.className = "oireachtas-footer__nav";
+          nav.setAttribute("aria-label", "Oireachtas information");
+
+          const list = document.createElement("ul");
+          list.className = "oireachtas-footer__links";
+
+          const links = [
+            ["Accessibility", "https://www.oireachtas.ie/en/accessibility-statement/"],
+            ["Cookies", "https://www.oireachtas.ie/en/cookies/"],
+            ["Transparency", "https://www.oireachtas.ie/en/transparency/"],
+            ["Contact us", "https://www.oireachtas.ie/en/contact-us/"],
+            ["Copyright and reuse", "https://www.oireachtas.ie/en/copyright-and-reuse/"],
+          ];
+
+          for (const [label, href] of links) {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = href;
+            link.textContent = label;
+            item.appendChild(link);
+            list.appendChild(item);
+          }
+
+          nav.appendChild(list);
+          footer.appendChild(nav);
+          document.body.appendChild(footer);
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", setupOireachtasFooter, {once: true});
+        } else {
+          setupOireachtasFooter();
+        }
+      })();
+
       (() => {
         const setupBackToTop = () => {
           if (!document.body || document.querySelector(".page-back-to-top")) return;

@@ -1094,3 +1094,61 @@ a:focus-visible {
         font-size: 0.82rem;
     }
 }
+
+/* Shared Oireachtas information footer */
+
+.oireachtas-footer {
+    width: 100%;
+    margin-top: var(--space-8, 3rem);
+    padding: 1.5rem max(var(--space-5, 1.25rem), env(safe-area-inset-right)) max(1.5rem, env(safe-area-inset-bottom)) max(var(--space-5, 1.25rem), env(safe-area-inset-left));
+    border-top: 1px solid var(--border);
+    background: color-mix(in srgb, var(--surface-soft) 55%, var(--page-bg));
+    color: var(--text-soft);
+    box-sizing: border-box;
+}
+
+.oireachtas-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem clamp(1.1rem, 3vw, 2.5rem);
+    max-width: var(--page-max, 1100px);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.oireachtas-footer__links a {
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+}
+
+.oireachtas-footer__links a:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+.oireachtas-footer__links a:focus-visible {
+    color: var(--text);
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 4px;
+    text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+    .oireachtas-footer {
+        padding-block: 1.25rem max(1.25rem, env(safe-area-inset-bottom));
+    }
+
+    .oireachtas-footer__links {
+        justify-content: flex-start;
+        gap: 0.55rem 1.25rem;
+    }
+
+    .oireachtas-footer__links a {
+        font-size: 0.86rem;
+    }
+}
