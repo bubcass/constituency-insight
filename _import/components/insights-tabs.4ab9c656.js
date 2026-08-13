@@ -4,7 +4,7 @@ const tabs = [
   { id: "employment", label: "Work", href: "./employment" },
   { id: "housing", label: "Housing", href: "./housing" },
   { id: "transport", label: "Transport", href: "./transport" },
-  { id: "spotlights", label: "Spotlights", href: "./spotlight" },
+  { id: "spotlights", label: "Snapshots", href: "./spotlight" },
 ];
 
 let tabsInstance = 0;
