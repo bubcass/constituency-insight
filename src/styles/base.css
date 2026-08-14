@@ -409,11 +409,10 @@ body {
         width: max-content;
         max-width: min(10.75rem, calc(100% - 13rem));
         margin-inline: auto;
-        overflow: hidden;
+        overflow: visible;
         color: var(--text);
         line-height: 1.1;
         text-align: center;
-        text-overflow: ellipsis;
         white-space: nowrap;
         transform: translateY(-50%);
     }
