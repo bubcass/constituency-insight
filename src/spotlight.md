@@ -32,7 +32,7 @@ enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
 display(insightsTabs("spotlights"));
 ```
 
-<div class="prose-block spotlights-intro">
+<div class="prose-block lead spotlights-intro">
   <h2>Specialist insight, local focus</h2>
   <p>Each snapshot is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
   <p>With constituency and district-level data, maps and interactive filters, see beyond the headline numbers and explore how national issues affect constituents at a local level.</p>

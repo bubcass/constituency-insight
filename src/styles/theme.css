@@ -868,7 +868,6 @@
 }
 
 .spotlights-intro {
-    max-width: var(--page-max);
     margin-bottom: var(--space-6);
 }
 
