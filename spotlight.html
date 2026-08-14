@@ -7,14 +7,14 @@
 <title>Snapshots | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.90bfa14e.css">
+<link rel="preload" as="style" href="./_import/style.e2ce82d4.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.90bfa14e.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.e2ce82d4.css">
 <link rel="modulepreload" href="./_observablehq/client.409fdcff.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_import/components/insights-tabs.4ab9c656.js">
-<link rel="modulepreload" href="./_import/components/hero-share.e5cf896c.js">
+<link rel="modulepreload" href="./_import/components/hero-share.68908229.js">
 
     <link rel="preload" href="./_file/oireachtas-logo.be2bef67.svg" as="image" type="image/svg+xml">
     <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
@@ -22,11 +22,16 @@
       document.documentElement.lang = "en-IE";
 
       (() => {
-        const storageKey = "constituency-insights-theme";
+        const storageKey = "oireachtas-insights-theme";
+        const legacyStorageKey = "constituency-insights-theme";
         const colourScheme = window.matchMedia("(prefers-color-scheme: dark)");
         const readSavedTheme = () => {
           try {
-            const value = localStorage.getItem(storageKey);
+            let value = localStorage.getItem(storageKey);
+            if (value !== "dark" && value !== "light") {
+              value = localStorage.getItem(legacyStorageKey);
+              if (value === "dark" || value === "light") localStorage.setItem(storageKey, value);
+            }
             return value === "dark" || value === "light" ? value : null;
           } catch {
             return null;
@@ -39,6 +44,11 @@
 
         colourScheme.addEventListener("change", () => {
           if (!readSavedTheme()) document.documentElement.dataset.theme = systemTheme();
+        });
+        window.addEventListener("storage", (event) => {
+          if (event.key === storageKey && (event.newValue === "dark" || event.newValue === "light")) {
+            document.documentElement.dataset.theme = event.newValue;
+          }
         });
       })();
 
@@ -79,20 +89,53 @@
 
           const resourceLink = document.createElement("a");
           resourceLink.className = "oireachtas-masthead__resource";
-          resourceLink.textContent = "Constituency Insights";
           const assetUrl = new URL(logo.src, window.location.href);
           assetUrl.pathname = assetUrl.pathname.replace(/_file\/.*$/, "");
           assetUrl.search = "";
           assetUrl.hash = "";
           resourceLink.href = assetUrl.href;
           resourceLink.setAttribute("aria-label", "Constituency Insights home");
+
+          const insightsBrandMarkup = `
+            <span class="oireachtas-masthead__brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 28" focusable="false">
+                <path d="M12 9H26L32 5L38 9H52" />
+                <line x1="12" y1="10.5" x2="52" y2="10.5" />
+                <rect x="12" y="10.5" width="40" height="13.5" />
+                <line x1="27.5" y1="10.5" x2="27.5" y2="24" />
+                <line x1="30" y1="10.5" x2="30" y2="24" />
+                <line x1="34" y1="10.5" x2="34" y2="24" />
+                <line x1="36.5" y1="10.5" x2="36.5" y2="24" />
+                <line x1="26.5" y1="24" x2="37.5" y2="24" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="30.7" y="18.2" width="2.6" height="5.8" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="15" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="19" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="23" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="39.3" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="43.3" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="47.3" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="15" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="19" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="23" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="39.3" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="43.3" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="47.3" y="18" width="1.7" height="1.7" />
+                <line x1="12" y1="24" x2="52" y2="24" />
+              </svg>
+            </span>
+            <span class="oireachtas-masthead__brand-copy">
+              <span class="oireachtas-masthead__brand-title">Constituency Insights</span>
+              <span class="oireachtas-masthead__brand-tagline">Parliamentary visual data</span>
+            </span>
+          `;
+          resourceLink.innerHTML = insightsBrandMarkup;
           const normalizePath = (path) => path
             .replace(/index(?:\.html)?$/, "")
             .replace(/\/+$/, "/");
 
           const indexTitle = document.createElement("h1");
           indexTitle.className = "oireachtas-masthead__index-title";
-          indexTitle.textContent = "Constituency Insights";
+          indexTitle.innerHTML = insightsBrandMarkup;
 
           const syncMastheadRoute = () => {
             const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
@@ -128,7 +171,7 @@
           const moreMenu = mobileTools.querySelector(".mobile-reading-tools__menu");
           backButton.addEventListener("click", () => {
             if (window.history.length > 1) window.history.back();
-            else window.location.href = resourceLink.href;
+            else window.location.href = assetUrl.href;
           });
           const setMoreOpen = (open) => {
             moreMenu.hidden = !open;
@@ -378,7 +421,7 @@ registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg
 registerFile("./media/sports-funding-hero.mp4", {"name":"./media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"./_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
 
 define({id: "6c9e8e6a", inputs: ["FileAttachment"], outputs: ["insightsTabs","enhanceHeroWithShare","roadSafetyImage","derelictSitesImage","healthServicesImage","sportsFundingVideo"], body: async (FileAttachment) => {
-const [{insightsTabs}, {enhanceHeroWithShare}] = await Promise.all([import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/hero-share.e5cf896c.js")]);
+const [{insightsTabs}, {enhanceHeroWithShare}] = await Promise.all([import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/hero-share.68908229.js")]);
 
 const roadSafetyImage = await FileAttachment("./media/road-with-glass.jpg").url();
 const derelictSitesImage = await FileAttachment("./media/abandoned-building.jpg").url();
@@ -387,14 +430,14 @@ const sportsFundingVideo = await FileAttachment("./media/sports-funding-hero.mp4
 return {insightsTabs,enhanceHeroWithShare,roadSafetyImage,derelictSitesImage,healthServicesImage,sportsFundingVideo};
 }});
 
-define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
-display(insightsTabs("spotlights"));
-}});
-
 define({id: "39677a94", inputs: ["enhanceHeroWithShare"], body: (enhanceHeroWithShare) => {
 enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
   title: "Snapshots — Constituency Insights",
 });
+}});
+
+define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
+display(insightsTabs("spotlights"));
 }});
 
 define({id: "c535c8b4", inputs: ["roadSafetyImage","sportsFundingVideo","healthServicesImage","display"], outputs: ["grid","topics"], body: (roadSafetyImage,sportsFundingVideo,healthServicesImage,display) => {
@@ -464,13 +507,13 @@ return {grid,topics};
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
 <div class="observablehq observablehq--block"><!--:6c9e8e6a:--></div>
-<div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
 <div class="spotlights-hero">
   <p class="spotlights-hero__eyebrow">Constituency insights</p>
   <h1>Snapshots</h1>
   <p class="spotlights-hero__subtitle">Focused explorations of the topics that matter in constituencies.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:39677a94:--></div>
+<div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
 <div class="prose-block spotlights-intro">
   <h2>Specialist insight, local focus</h2>
   <p>Each snapshot is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>
