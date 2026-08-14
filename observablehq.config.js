@@ -7,11 +7,16 @@ export default {
       document.documentElement.lang = "en-IE";
 
       (() => {
-        const storageKey = "constituency-insights-theme";
+        const storageKey = "oireachtas-insights-theme";
+        const legacyStorageKey = "constituency-insights-theme";
         const colourScheme = window.matchMedia("(prefers-color-scheme: dark)");
         const readSavedTheme = () => {
           try {
-            const value = localStorage.getItem(storageKey);
+            let value = localStorage.getItem(storageKey);
+            if (value !== "dark" && value !== "light") {
+              value = localStorage.getItem(legacyStorageKey);
+              if (value === "dark" || value === "light") localStorage.setItem(storageKey, value);
+            }
             return value === "dark" || value === "light" ? value : null;
           } catch {
             return null;
@@ -24,6 +29,11 @@ export default {
 
         colourScheme.addEventListener("change", () => {
           if (!readSavedTheme()) document.documentElement.dataset.theme = systemTheme();
+        });
+        window.addEventListener("storage", (event) => {
+          if (event.key === storageKey && (event.newValue === "dark" || event.newValue === "light")) {
+            document.documentElement.dataset.theme = event.newValue;
+          }
         });
       })();
 
@@ -64,20 +74,53 @@ export default {
 
           const resourceLink = document.createElement("a");
           resourceLink.className = "oireachtas-masthead__resource";
-          resourceLink.textContent = "Constituency Insights";
           const assetUrl = new URL(logo.src, window.location.href);
           assetUrl.pathname = assetUrl.pathname.replace(/_file\\/.*$/, "");
           assetUrl.search = "";
           assetUrl.hash = "";
           resourceLink.href = assetUrl.href;
           resourceLink.setAttribute("aria-label", "Constituency Insights home");
+
+          const insightsBrandMarkup = \`
+            <span class="oireachtas-masthead__brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 28" focusable="false">
+                <path d="M12 9H26L32 5L38 9H52" />
+                <line x1="12" y1="10.5" x2="52" y2="10.5" />
+                <rect x="12" y="10.5" width="40" height="13.5" />
+                <line x1="27.5" y1="10.5" x2="27.5" y2="24" />
+                <line x1="30" y1="10.5" x2="30" y2="24" />
+                <line x1="34" y1="10.5" x2="34" y2="24" />
+                <line x1="36.5" y1="10.5" x2="36.5" y2="24" />
+                <line x1="26.5" y1="24" x2="37.5" y2="24" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="30.7" y="18.2" width="2.6" height="5.8" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="15" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="19" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="23" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="39.3" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="43.3" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="47.3" y="13" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="15" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="19" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="23" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="39.3" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="43.3" y="18" width="1.7" height="1.7" />
+                <rect class="oireachtas-masthead__brand-mark-fill" x="47.3" y="18" width="1.7" height="1.7" />
+                <line x1="12" y1="24" x2="52" y2="24" />
+              </svg>
+            </span>
+            <span class="oireachtas-masthead__brand-copy">
+              <span class="oireachtas-masthead__brand-title">Constituency Insights</span>
+              <span class="oireachtas-masthead__brand-tagline">Parliamentary visual data</span>
+            </span>
+          \`;
+          resourceLink.innerHTML = insightsBrandMarkup;
           const normalizePath = (path) => path
             .replace(/index(?:\\.html)?$/, "")
             .replace(/\\/+$/, "/");
 
           const indexTitle = document.createElement("h1");
           indexTitle.className = "oireachtas-masthead__index-title";
-          indexTitle.textContent = "Constituency Insights";
+          indexTitle.innerHTML = insightsBrandMarkup;
 
           const syncMastheadRoute = () => {
             const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
@@ -113,7 +156,7 @@ export default {
           const moreMenu = mobileTools.querySelector(".mobile-reading-tools__menu");
           backButton.addEventListener("click", () => {
             if (window.history.length > 1) window.history.back();
-            else window.location.href = resourceLink.href;
+            else window.location.href = assetUrl.href;
           });
           const setMoreOpen = (open) => {
             moreMenu.hidden = !open;

@@ -16,10 +16,6 @@ const healthServicesImage = await FileAttachment("media/health-services-hero.jpg
 const sportsFundingVideo = await FileAttachment("media/sports-funding-hero.mp4").url();
 ```
 
-```js
-display(insightsTabs("spotlights"));
-```
-
 <div class="spotlights-hero">
   <p class="spotlights-hero__eyebrow">Constituency insights</p>
   <h1>Snapshots</h1>
@@ -30,6 +26,10 @@ display(insightsTabs("spotlights"));
 enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
   title: "Snapshots — Constituency Insights",
 });
+```
+
+```js
+display(insightsTabs("spotlights"));
 ```
 
 <div class="prose-block spotlights-intro">
