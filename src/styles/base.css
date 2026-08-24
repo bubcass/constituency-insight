@@ -91,6 +91,17 @@ body {
     line-height: 1.6;
 }
 
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    touch-action: manipulation;
+}
+
 .oireachtas-masthead {
     position: sticky;
     z-index: 1300;
@@ -298,6 +309,16 @@ body {
 .oireachtas-masthead__action:focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: 3px;
+}
+
+.oireachtas-masthead__action:active {
+    transform: translateY(0);
+}
+
+.oireachtas-masthead__action:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .oireachtas-masthead__status {
