@@ -341,13 +341,9 @@ export function topicPointMap({
 
     const clearBtn = document.createElement("button");
     clearBtn.type = "button";
+    clearBtn.className = "topic-map-control-action topic-map-control-action--clear";
     clearBtn.textContent = labels.clearAll;
     clearBtn.title = labels.clearAllTitle;
-    clearBtn.style.cssText = `
-      background:#f8f8f8; border:1px solid #ddd; border-radius:6px;
-      padding:3px 6px; font-size:12px; cursor:pointer;
-      font-family:"IBM Plex Sans", sans-serif;
-    `;
 
     bar.appendChild(clearBtn);
     overlayBox.prepend(bar);
@@ -488,12 +484,9 @@ export function topicPointMap({
       extraEl.style.display = "none";
 
       toggleBtn = document.createElement("button");
-      toggleBtn.style.cssText = `
-        margin-top:4px; background:var(--surface-soft); color:var(--text);
-        border:1px solid var(--border); border-radius:6px;
-        padding:3px 5px; font-size:10px; cursor:pointer; display:none;
-        font-family:"IBM Plex Sans", sans-serif;
-      `;
+      toggleBtn.type = "button";
+      toggleBtn.className = "topic-map-control-action topic-map-control-action--legend";
+      toggleBtn.style.display = "none";
       toggleBtn.addEventListener("click", () => {
         const shown = extraEl.style.display !== "none";
         extraEl.style.display = shown ? "none" : "block";

@@ -7,18 +7,18 @@
 <title>Health services | Constituency Insights</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="../_import/style.edb2e99a.css">
+<link rel="preload" as="style" href="../_import/style.8e13866f.css">
 <link rel="preload" as="style" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="../_import/style.edb2e99a.css">
+<link rel="stylesheet" type="text/css" href="../_import/style.8e13866f.css">
 <link rel="stylesheet" type="text/css" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
-<link rel="modulepreload" href="../_observablehq/client.409fdcff.js">
+<link rel="modulepreload" href="../_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="../_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="../_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="../_import/components/insights-tabs.4ab9c656.js">
 <link rel="modulepreload" href="../_import/components/constituency-select.be8dda34.js">
 <link rel="modulepreload" href="../_import/components/constituency-location.64a17faf.js">
-<link rel="modulepreload" href="../_import/components/topic-point-map.8c3ed662.js">
+<link rel="modulepreload" href="../_import/components/topic-point-map.2d5e3d0e.js">
 <link rel="modulepreload" href="../_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="../_import/components/member-cards.6cf0eabb.js">
 <link rel="modulepreload" href="../_import/components/member-data.58a3d52a.js">
@@ -474,7 +474,7 @@
   
 <script type="module">
 
-import {define} from "../_observablehq/client.409fdcff.js";
+import {define} from "../_observablehq/client.f787155f.js";
 import {registerFile} from "../_observablehq/stdlib.277aeab8.js";
 
 registerFile("../data/derived/health-services-normalized.csv", {"name":"../data/derived/health-services-normalized.csv","mimeType":"text/csv","path":"../_file/data/derived/health-services-normalized.8e35688b.csv","lastModified":1786473164326,"size":1110607});
@@ -485,7 +485,7 @@ registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json
 registerFile("../media/health-services-hero.jpg", {"name":"../media/health-services-hero.jpg","mimeType":"image/jpeg","path":"../_file/media/health-services-hero.bc59fb4e.jpg","lastModified":1785964191909,"size":1841587});
 
 define({id: "77e9390c", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","metricCards","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","downloadButton","createReactiveMount","enhanceHeroWithShare","healthServicesTopic","healthServiceTooltip","buildHealthServiceMetrics","filterHealthServices","healthServiceDownloadRows","serviceRows","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentMemberContributions","heroImage","constituencies","HEALTH_TOPIC_MATCHER","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","constituencyMembers","recentHealthQuestions","recentHealthContributions","restoreScroll","rerender","mountReactive","renderScopeControl"], body: async (FileAttachment) => {
-const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {downloadButton}, {createReactiveMount}, {enhanceHeroWithShare}, {healthServicesTopic, healthServiceTooltip}, {buildHealthServiceMetrics, filterHealthServices, healthServiceDownloadRows}] = await Promise.all([import("../_import/components/insights-tabs.4ab9c656.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/topic-point-map.8c3ed662.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.68908229.js"), import("../_import/topics/health-services/config.0f4bb984.js"), import("../_import/topics/health-services/transforms.9d2701e0.js")]);
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {downloadButton}, {createReactiveMount}, {enhanceHeroWithShare}, {healthServicesTopic, healthServiceTooltip}, {buildHealthServiceMetrics, filterHealthServices, healthServiceDownloadRows}] = await Promise.all([import("../_import/components/insights-tabs.4ab9c656.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/topic-point-map.2d5e3d0e.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.68908229.js"), import("../_import/topics/health-services/config.0f4bb984.js"), import("../_import/topics/health-services/transforms.9d2701e0.js")]);
 
 const serviceRows = await FileAttachment("../data/derived/health-services-normalized.csv").csv({typed: true});
 const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
