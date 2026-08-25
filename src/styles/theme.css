@@ -2787,7 +2787,7 @@ body.has-map-fullscreen {
 }
 
 .debates-list--pqs .debates-list__row--pqs {
-    grid-template-columns: 180px minmax(0, 1fr) 160px;
+    grid-template-columns: 220px minmax(0, 1fr) 160px;
 }
 
 .debates-list__topic--with-avatar {
