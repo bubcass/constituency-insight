@@ -26,7 +26,10 @@ const fallbackPath = path.resolve(
   scriptDir,
   "../data/geo/electoral-district-validity-fallbacks.geojson",
 );
-const mapshaperPath = path.resolve(scriptDir, "../../node_modules/.bin/mapshaper");
+const mapshaperPath = path.resolve(
+  scriptDir,
+  "../../tools/electoral-districts/node_modules/.bin/mapshaper",
+);
 const runFile = promisify(execFile);
 
 const existingNames = await readExistingNames(outputPath);

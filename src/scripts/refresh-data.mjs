@@ -9,6 +9,7 @@ const ROOT = path.resolve(SCRIPT_DIR, "../..");
 const STATIC_INPUTS = [
   "src/data/demographics-age-2022.csv",
   "src/data/geo/constituencies.json",
+  "src/data/geo/electoral-districts-2022.geojson",
   "src/data/geo/electoral-district-validity-fallbacks.geojson",
   "src/data/data_road_accidents.csv",
   "src/data/data_sports_funding.csv",
@@ -22,8 +23,6 @@ const STATIC_INPUTS = [
 ];
 
 const TASKS = [
-  task("foundation", "Electoral-district geometry", "src/scripts/build-electoral-districts.mjs"),
-
   task("census", "Education qualifications", "src/scripts/build-education-qualification.mjs"),
   task("census", "Education participation", "src/scripts/build-education-participation.mjs"),
   task("census", "Irish-speaking frequency", "src/scripts/build-irish-speaking.mjs"),
@@ -57,7 +56,7 @@ const TASKS = [
   task("derived", "Planning-application normalization", "src/scripts/spotlights/build-planning-applications.mjs"),
 ];
 
-const GROUPS = new Set(["foundation", "census", "current", "derived"]);
+const GROUPS = new Set(["census", "current", "derived"]);
 const options = parseArgs(process.argv.slice(2));
 
 if (options.list) {

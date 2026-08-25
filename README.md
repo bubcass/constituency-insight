@@ -5,7 +5,7 @@
 Run `npm run data:refresh` from the repository root to rebuild the resource's
 complete data layer. The command validates the versioned static inputs, then:
 
-1. fetches the current electoral-district geometry;
+1. validates the versioned electoral-district and other static inputs;
 2. fetches and validates every CSO dataset used by the topic pages;
 3. refreshes Oireachtas, PQ Explorer and public-transport data;
 4. rebuilds the derived spotlight datasets from their versioned source files;
@@ -17,6 +17,12 @@ They are checked before a refresh but are not silently replaced. This includes
 the manually downloaded RSA, PBO, HSE, planning, derelict-site and deprivation
 snapshots. Replace those source files explicitly when a new edition is
 published, then rerun the command.
+
+The verified `src/data/geo/electoral-districts-2022.geojson` is also a
+versioned input. Normal installs, site builds and data refreshes use that file
+and do not install or run mapshaper. Boundary regeneration is a separate,
+infrequent maintenance operation documented in
+`tools/electoral-districts/README.md`.
 
 Useful variants are:
 

@@ -1,0 +1,17 @@
+{
+  "name": "constituency-insights-electoral-district-tool",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@10.9.2",
+  "scripts": {
+    "build": "node ../../src/scripts/build-electoral-districts.mjs",
+    "security:audit": "npm audit"
+  },
+  "dependencies": {
+    "mapshaper": "0.7.55"
+  },
+  "engines": {
+    "node": ">=22.12.0 <25"
+  }
+}
