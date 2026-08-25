@@ -1,5 +1,5 @@
-import { point } from "npm:@turf/helpers";
-import booleanPointInPolygon from "npm:@turf/boolean-point-in-polygon";
+import { point } from "npm:@turf/helpers@7.3.4";
+import booleanPointInPolygon from "npm:@turf/boolean-point-in-polygon@7.3.4";
 
 const STORAGE_KEY = "constituency-insights:selected-constituency";
 

@@ -1,4 +1,4 @@
-import * as d3 from "npm:d3";
+import * as d3 from "npm:d3@7.9.0";
 import {chartPalette} from "../config/chart-palette.js";
 import {waterfallSegmentsChart} from "./waterfall-segments-chart.js";
 import {percentageStripChart} from "./percentage-strip-chart.js";

@@ -7,7 +7,7 @@ toc: false
 ---
 
 ```js
-import * as d3 from "npm:d3";
+import * as d3 from "npm:d3@7.9.0";
 import { constituencySelect } from "../components/constituency-select.js";
 import { detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency } from "../components/constituency-location.js";
 import { metricCards } from "../components/metric-cards.js";

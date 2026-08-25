@@ -1,4 +1,4 @@
-import L from "npm:leaflet";
+import L from "npm:leaflet@1.9.4";
 import { chartColors } from "../config/chart-palette.js";
 import {
   addStandardBaseLayer,

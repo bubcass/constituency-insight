@@ -1,4 +1,4 @@
-@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@import "./vendor/leaflet/leaflet.css";
 @import "./base.css";
 
 /* Constituency Insights index */

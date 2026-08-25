@@ -1,9 +1,9 @@
-import L from "npm:leaflet";
-import * as d3 from "npm:d3";
-import bbox from "npm:@turf/bbox";
-import booleanPointInPolygon from "npm:@turf/boolean-point-in-polygon";
-import buffer from "npm:@turf/buffer";
-import {featureCollection, multiPolygon, point, polygon} from "npm:@turf/helpers";
+import L from "npm:leaflet@1.9.4";
+import * as d3 from "npm:d3@7.9.0";
+import bbox from "npm:@turf/bbox@7.3.4";
+import booleanPointInPolygon from "npm:@turf/boolean-point-in-polygon@7.3.4";
+import buffer from "npm:@turf/buffer@7.3.4";
+import {featureCollection, multiPolygon, point, polygon} from "npm:@turf/helpers@7.3.4";
 import { chartPalette } from "../config/chart-palette.js";
 import {
   addStandardBaseLayer,

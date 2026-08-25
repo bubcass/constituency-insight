@@ -1,5 +1,5 @@
-import * as Plot from "npm:@observablehq/plot";
-import * as d3 from "npm:d3";
+import * as Plot from "npm:@observablehq/plot@0.6.17";
+import * as d3 from "npm:d3@7.9.0";
 import {chartStyle, plotStyle} from "../config/chart-style.js";
 import {contrastingChartText} from "../config/chart-contrast.js";
 

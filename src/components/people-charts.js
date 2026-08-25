@@ -1,5 +1,5 @@
-import * as d3 from "npm:d3";
-import * as Plot from "npm:@observablehq/plot";
+import * as d3 from "npm:d3@7.9.0";
+import * as Plot from "npm:@observablehq/plot@0.6.17";
 import {chartPalette} from "../config/chart-palette.js";
 import {chartStyle, plotStyle, responsivePlotWidth} from "../config/chart-style.js";
 import {waterfallSegmentsChart} from "./waterfall-segments-chart.js";

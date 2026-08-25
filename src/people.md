@@ -9,7 +9,7 @@ toc: false
 <!-- People topic page -->
 
 ```js
-import * as d3 from "npm:d3";
+import * as d3 from "npm:d3@7.9.0";
 import { insightsTabs } from "./components/insights-tabs.js";
 import { constituencySelect } from "./components/constituency-select.js";
 import { detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency } from "./components/constituency-location.js";
