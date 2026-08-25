@@ -21,8 +21,9 @@ import {metricCards} from "./components/metric-cards.js";
 import {downloadButton} from "./components/download-button.js";
 import {chartColors} from "./config/chart-palette.js";
 import {transportMeansWaterfall, commuteTimingHeatmap} from "./components/transport-charts.js";
+import {tabularRows} from "./components/tabular-data.js";
 
-const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
+const constituencyRows = tabularRows(await FileAttachment("data/derived/browser/demographics-age-2022.json").json());
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();

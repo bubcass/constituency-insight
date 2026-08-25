@@ -23,8 +23,9 @@ import {waterfallSegmentsChart} from "../components/waterfall-segments-chart.js"
 import {chartPalette} from "../config/chart-palette.js";
 import {derelictSitesTopic} from "../topics/derelict-sites/config.js";
 import {buildAuthoritySegments, buildDerelictSiteDownloadRows, buildDerelictSiteSummary, filterDerelictSites} from "../topics/derelict-sites/transforms.js";
+import {tabularRows} from "../components/tabular-data.js";
 
-const siteRows = await FileAttachment("../data/derived/derelict-sites-normalized.csv").csv({typed: true});
+const siteRows = tabularRows(await FileAttachment("../data/derived/browser/derelict-sites-normalized.json").json());
 const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("../data/members-lookup.json").json();
 const housingQuestions = await FileAttachment("../data/derived/recent-housing-questions.json").json();

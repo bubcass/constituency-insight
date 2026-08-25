@@ -22,11 +22,12 @@ import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {educationQualificationWaterfall, educationCeasedAgeWaffle, irishLanguagePercentageBar} from "./components/education-charts.js";
 import {downloadButton} from "./components/download-button.js";
 import {chartPalette} from "./config/chart-palette.js";
+import {tabularRows} from "./components/tabular-data.js";
 
-const constituencyRows = await FileAttachment("data/demographics-age-2022.csv").csv({typed: true});
-const educationQualification = await FileAttachment("data/education-qualification-2022.csv").csv({typed: true});
-const educationParticipation = await FileAttachment("data/education-participation-2022.csv").csv({typed: true});
-const irishSpeakingFrequency = await FileAttachment("data/irish-speaking-frequency-2022.csv").csv({typed: true});
+const constituencyRows = tabularRows(await FileAttachment("data/derived/browser/demographics-age-2022.json").json());
+const educationQualification = tabularRows(await FileAttachment("data/derived/browser/education-qualification-2022.json").json());
+const educationParticipation = tabularRows(await FileAttachment("data/derived/browser/education-participation-2022.json").json());
+const irishSpeakingFrequency = tabularRows(await FileAttachment("data/derived/browser/irish-speaking-frequency-2022.json").json());
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();

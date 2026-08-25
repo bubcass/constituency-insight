@@ -38,6 +38,8 @@
     "build:health-services": "node src/scripts/spotlights/build-health-services.mjs",
     "build:planning-applications": "node src/scripts/spotlights/build-planning-applications.mjs",
     "build:waterfall": "node src/scripts/spotlights/build-sports-funding-waterfall.mjs src/data/derived/sports-funding-enriched.json src/data/derived/waterfall-segments.json",
+    "build:browser-data": "node src/scripts/build-browser-data.mjs",
+    "check:browser-data": "node src/scripts/build-browser-data.mjs --check",
     "data:refresh": "node src/scripts/refresh-data.mjs",
     "data:refresh:current": "node src/scripts/refresh-data.mjs --group=current",
     "data:rebuild": "node src/scripts/refresh-data.mjs --group=derived",
@@ -45,7 +47,7 @@
     "observable": "observable",
     "security:audit": "npm audit --audit-level=critical",
     "security:runtime": "npm audit --omit=dev --audit-level=high",
-    "verify": "npm run build && npm run security:runtime"
+    "verify": "npm run check:browser-data && npm run build && npm run security:runtime"
   },
   "devDependencies": {
     "@observablehq/framework": "1.13.4",

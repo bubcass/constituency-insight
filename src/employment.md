@@ -24,12 +24,13 @@ import { parliamentaryQuestionList, memberContributionList } from "./components/
 import { relatedResearchResource } from "./components/related-research.js";
 import { createReactiveMount } from "./components/reactive-mount.js";
 import { enhanceHeroWithShare } from "./components/hero-share.js";
+import { tabularRows } from "./components/tabular-data.js";
 
-const employmentData = await FileAttachment("data/employment-industry-2022.csv").csv({typed: true});
-const occupationData = await FileAttachment("data/employment-occupation-2022.csv").csv({typed: true});
-const economicStatusData = await FileAttachment("data/principal-economic-status-2022.csv").csv({typed: true});
-const workingFromHomeData = await FileAttachment("data/working-from-home-2022.csv").csv({typed: true});
-const householdIncomeData = await FileAttachment("data/household-income-2022.csv").csv({typed: true});
+const employmentData = tabularRows(await FileAttachment("data/derived/browser/employment-industry-2022.json").json());
+const occupationData = tabularRows(await FileAttachment("data/derived/browser/employment-occupation-2022.json").json());
+const economicStatusData = tabularRows(await FileAttachment("data/derived/browser/principal-economic-status-2022.json").json());
+const workingFromHomeData = tabularRows(await FileAttachment("data/derived/browser/working-from-home-2022.json").json());
+const householdIncomeData = tabularRows(await FileAttachment("data/derived/browser/household-income-2022.json").json());
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();

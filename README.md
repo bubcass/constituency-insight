@@ -44,6 +44,25 @@ All stages run sequentially and the command exits on the first failure. A
 scheduled job should commit or deploy generated files only after the command
 exits successfully.
 
+## Browser-ready data
+
+CSV remains the canonical interchange and review format for the census and
+topic pipelines, including data produced in R. Browsers do not parse those CSV
+files. The final offline stage, `npm run build:browser-data`, validates and
+converts the selected outputs into compact, typed tabular JSON under
+`src/data/derived/browser`.
+
+The JSON uses one column list plus value arrays, keeping payloads close to CSV
+size without relying on dynamic CSV parser functions in the browser. Dates,
+identifiers and other string-sensitive fields are declared explicitly in
+`src/scripts/build-browser-data.mjs`.
+
+`npm run data:refresh` and `npm run data:rebuild` run this finalization stage
+after their normal transformers. A routine `npm run build` packages the
+reviewed, versioned JSON without regenerating it. Run
+`npm run check:browser-data` to fail when any canonical CSV and browser output
+are out of sync; this check is also part of `npm run verify`.
+
 ## Transport access
 
 Run `npm run build:transport-access` to refresh the bus-stop, rail-station,

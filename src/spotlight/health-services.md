@@ -21,8 +21,9 @@ import {createReactiveMount} from "../components/reactive-mount.js";
 import {enhanceHeroWithShare} from "../components/hero-share.js";
 import {healthServicesTopic, healthServiceTooltip} from "../topics/health-services/config.js";
 import {buildHealthServiceMetrics, filterHealthServices, healthServiceDownloadRows} from "../topics/health-services/transforms.js";
+import {tabularRows} from "../components/tabular-data.js";
 
-const serviceRows = await FileAttachment("../data/derived/health-services-normalized.csv").csv({typed: true});
+const serviceRows = tabularRows(await FileAttachment("../data/derived/browser/health-services-normalized.json").json());
 const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("../data/members-lookup.json").json();
 const recentQuestionsByConstituency = await FileAttachment("../data/derived/recent-questions.json").json();

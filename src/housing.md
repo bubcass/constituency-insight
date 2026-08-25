@@ -24,12 +24,13 @@ import {createReactiveMount} from "./components/reactive-mount.js";
 import {enhanceHeroWithShare} from "./components/hero-share.js";
 import {planningApplicationsTopic} from "./topics/planning-applications/config.js";
 import {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications} from "./topics/planning-applications/transforms.js";
+import {tabularRows} from "./components/tabular-data.js";
 
-const housingData = await FileAttachment("data/housing-tenure-2022.csv").csv({typed: true});
-const housingStockData = await FileAttachment("data/housing-stock-2022.csv").csv({typed: true});
-const adultsWithParentsData = await FileAttachment("data/adults-living-with-parents-2022.csv").csv({typed: true});
-const renewableEnergyHouseholdsData = await FileAttachment("data/renewable-energy-households-2022.csv").csv({typed: true});
-const planningApplicationRows = await FileAttachment("data/derived/planning-applications-normalized.csv").csv({typed: true});
+const housingData = tabularRows(await FileAttachment("data/derived/browser/housing-tenure-2022.json").json());
+const housingStockData = tabularRows(await FileAttachment("data/derived/browser/housing-stock-2022.json").json());
+const adultsWithParentsData = tabularRows(await FileAttachment("data/derived/browser/adults-living-with-parents-2022.json").json());
+const renewableEnergyHouseholdsData = tabularRows(await FileAttachment("data/derived/browser/renewable-energy-households-2022.json").json());
+const planningApplicationRows = tabularRows(await FileAttachment("data/derived/browser/planning-applications-normalized.json").json());
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();

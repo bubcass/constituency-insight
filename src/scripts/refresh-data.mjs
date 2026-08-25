@@ -86,6 +86,9 @@ for (let index = 0; index < selectedTasks.length; index += 1) {
   console.log(`Completed in ${formatDuration(Date.now() - taskStartedAt)}`);
 }
 
+console.log("\n[finalize] Browser-ready JSON");
+await runNode("src/scripts/build-browser-data.mjs");
+
 console.log("\n[check] Cross-dataset consistency");
 await runNode("src/scripts/audit-metric-consistency.mjs");
 console.log(`\nData refresh completed in ${formatDuration(Date.now() - startedAt)}.`);

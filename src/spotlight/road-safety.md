@@ -22,8 +22,9 @@ import {enhanceHeroWithShare} from "../components/hero-share.js";
 import {waterfallSegmentsChart} from "../components/waterfall-segments-chart.js";
 import {roadSafetyTopic} from "../topics/road-safety/config.js";
 import {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents} from "../topics/road-safety/transforms.js";
+import {tabularRows} from "../components/tabular-data.js";
 
-const accidentRows = await FileAttachment("../data/derived/road-accidents-normalized.csv").csv({typed: true});
+const accidentRows = tabularRows(await FileAttachment("../data/derived/browser/road-accidents-normalized.json").json());
 const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("../data/members-lookup.json").json();
 const transportQuestions = await FileAttachment("../data/derived/recent-transport-questions.json").json();
