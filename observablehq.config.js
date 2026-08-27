@@ -120,7 +120,13 @@ export default {
 
           const indexTitle = document.createElement("h1");
           indexTitle.className = "oireachtas-masthead__index-title";
-          indexTitle.innerHTML = insightsBrandMarkup;
+
+          const indexTitleLink = document.createElement("a");
+          indexTitleLink.className = "oireachtas-masthead__index-link";
+          indexTitleLink.href = "https://bubcass.github.io/open-data-insights/#constituency-heading";
+          indexTitleLink.setAttribute("aria-label", "View Constituency Insights on the main Insights page");
+          indexTitleLink.innerHTML = insightsBrandMarkup;
+          indexTitle.appendChild(indexTitleLink);
 
           const syncMastheadRoute = () => {
             const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);

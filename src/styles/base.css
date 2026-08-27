@@ -194,10 +194,30 @@ button {
     grid-row: 1;
     align-items: center;
     justify-self: center;
-    gap: 0.62rem;
     margin: 0;
     color: var(--text);
     line-height: 1;
+}
+
+.oireachtas-masthead__index-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.62rem;
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.oireachtas-masthead__index-link:hover,
+.oireachtas-masthead__index-link:focus-visible {
+    color: var(--link-hover);
+    text-decoration: none;
+}
+
+.oireachtas-masthead__index-link:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 4px;
 }
 
 .oireachtas-masthead__brand-mark {

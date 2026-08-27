@@ -2571,6 +2571,58 @@ body.has-map-fullscreen {
 
 /* Generic loading */
 
+/*
+ * Observable renders prose into the initial HTML, but output cells stay empty
+ * until their JavaScript dependencies have resolved. The topic pages load a
+ * number of datasets in their first (non-rendering) cell, so provide a visual
+ * placeholder for every later output cell during that initial gap. Once a
+ * cell mounts its reactive view (or other content), :empty stops matching and
+ * the normal component-level skeleton takes over.
+ */
+#observablehq-main > .observablehq--block:not(:first-child):empty,
+#observablehq-main .chart-block > .observablehq--block:empty,
+#observablehq-main .education-irish-control-block > .observablehq--block:empty {
+    position: relative;
+    min-height: 136px;
+    overflow: hidden;
+    border: 1px solid rgba(74, 70, 61, 0.12);
+    border-radius: var(--radius);
+    background: var(--surface-soft);
+}
+
+#observablehq-main > .observablehq--block:not(:first-child):empty::after,
+#observablehq-main .chart-block > .observablehq--block:empty::after,
+#observablehq-main .education-irish-control-block > .observablehq--block:empty::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 100%
+    );
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+#observablehq-main > .observablehq--block:nth-child(2):empty {
+    min-height: clamp(300px, 52vw, 620px);
+    border-radius: 0;
+}
+
+#observablehq-main > .observablehq--block:nth-child(3):empty {
+    min-height: 54px;
+}
+
+#observablehq-main .chart-block > .observablehq--block:empty {
+    min-height: 360px;
+}
+
+#observablehq-main .education-irish-control-block > .observablehq--block:empty {
+    min-height: 84px;
+}
+
 .skeleton-shimmer {
     position: relative;
     overflow: hidden;
@@ -2776,6 +2828,9 @@ body.has-map-fullscreen {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    #observablehq-main > .observablehq--block:not(:first-child):empty::after,
+    #observablehq-main .chart-block > .observablehq--block:empty::after,
+    #observablehq-main .education-irish-control-block > .observablehq--block:empty::after,
     .skeleton-shimmer::after,
     .reactive-view.is-updating::after {
         animation: none;
