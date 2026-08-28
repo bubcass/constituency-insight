@@ -354,6 +354,34 @@ button {
     display: none;
 }
 
+/* Match the larger brand treatment used by the main Insights homepage. */
+@media (min-width: 561px) {
+    .oireachtas-masthead--index {
+        --masthead-height: 81px;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__index-link {
+        gap: 0.93rem;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-mark {
+        width: 63px;
+        height: 27px;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-copy {
+        gap: 0.12rem;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-title {
+        font-size: 1.44rem;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-tagline {
+        font-size: 1.02rem;
+    }
+}
+
 @media (min-width: 721px) {
     :root.has-floating-insights-tabs .oireachtas-masthead {
         background: var(--nav-glass);
@@ -643,6 +671,39 @@ button {
     .mobile-reading-tools__menu-action:hover,
     .mobile-reading-tools__menu-action:focus-visible {
         background: var(--surface-soft);
+    }
+}
+
+/* The index follows the main Insights masthead at tablet widths too. */
+@media (min-width: 561px) and (max-width: 720px) {
+    .oireachtas-masthead.oireachtas-masthead--index {
+        position: sticky;
+        top: 0;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__inner {
+        position: static;
+        grid-template-columns: minmax(160px, 1fr) auto minmax(160px, 1fr);
+        gap: 0;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__index-title {
+        position: static;
+        grid-column: 2;
+        width: auto;
+        max-width: none;
+        margin-inline: 0;
+        overflow: visible;
+        transform: none;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__actions {
+        gap: 0.45rem;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__action {
+        width: 36px;
+        height: 36px;
     }
 }
 
