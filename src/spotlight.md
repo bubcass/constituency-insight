@@ -26,9 +26,6 @@ const sportsFundingVideo = await FileAttachment("media/sports-funding-hero.mp4")
 enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
   title: "Snapshots — Constituency Insights",
 });
-```
-
-```js
 display(insightsTabs("spotlights"));
 ```
 
