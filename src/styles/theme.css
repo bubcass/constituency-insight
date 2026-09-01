@@ -3,6 +3,21 @@
 
 /* Constituency Insights index */
 
+:root {
+    --index-card-eyebrow: #e0c766;
+    --index-card-link: #fffdf8;
+    --index-card-link-hover: #f2dc87;
+    --index-card-overlay-start: rgba(24, 22, 19, 0.52);
+    --index-card-overlay-end: rgba(24, 22, 19, 0.72);
+    --index-card-shadow-hover: 0 8px 24px rgba(47, 47, 47, 0.08);
+}
+
+:root[data-theme="dark"] {
+    --index-card-overlay-start: rgba(24, 22, 19, 0.58);
+    --index-card-overlay-end: rgba(24, 22, 19, 0.78);
+    --index-card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.32);
+}
+
 .observablehq--block:has(> .insights-index-intro),
 .observablehq--block:has(> .insights-index-grid) {
     margin: 0 !important;
@@ -38,7 +53,7 @@
 .insights-index-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 1.25rem;
     max-width: var(--page-max);
     margin: 0 auto;
 }
@@ -56,16 +71,16 @@
     color: #fffdf8;
     text-decoration: none;
     transition:
-        transform 180ms ease,
-        border-color 180ms ease,
-        box-shadow 180ms ease;
+        transform 200ms ease,
+        border-color 200ms ease,
+        box-shadow 200ms ease;
 }
 
 .insights-index-card:hover,
 .insights-index-card:focus-visible {
     transform: translateY(-2px);
-    border-color: #b7ad95;
-    box-shadow: 0 10px 28px rgba(47, 47, 47, 0.1);
+    border-color: color-mix(in srgb, var(--border) 70%, var(--text) 30%);
+    box-shadow: var(--index-card-shadow-hover);
     color: #fffdf8;
     text-decoration: none;
 }
@@ -142,15 +157,15 @@
     z-index: 1;
     align-self: end;
     display: grid;
-    gap: 0.25rem;
+    gap: 0.35rem;
     margin: auto 0.9rem 0.9rem;
-    padding: 1rem 1.05rem 1.1rem;
-    border: 1px solid rgba(255, 253, 248, 0.2);
-    border-radius: calc(var(--radius) + 1px);
+    padding: 1.1rem 1.15rem 1.15rem;
+    border: 1px solid color-mix(in srgb, var(--index-card-link) 24%, transparent);
+    border-radius: var(--radius);
     background: linear-gradient(
         180deg,
-        rgba(24, 22, 19, 0.48) 0%,
-        rgba(24, 22, 19, 0.66) 100%
+        var(--index-card-overlay-start) 0%,
+        var(--index-card-overlay-end) 100%
     );
     -webkit-backdrop-filter: blur(18px) saturate(125%);
     backdrop-filter: blur(18px) saturate(125%);
@@ -159,9 +174,9 @@
 
 .insights-index-card__eyebrow {
     margin: 0;
-    color: rgba(255, 248, 227, 0.84);
-    font-size: 0.76rem;
-    font-weight: 600;
+    color: var(--index-card-eyebrow);
+    font-size: 0.82rem;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -174,15 +189,23 @@
     justify-content: flex-start;
     margin: 0;
     padding: 0;
-    color: rgba(255, 253, 248, 0.94);
-    font-size: 0.9rem;
-    font-weight: 500;
+    color: var(--index-card-link);
+    font-size: 0.95rem;
+    font-weight: 600;
     line-height: 1.2;
+    transition: color 180ms ease;
 }
 
 .insights-index-card__arrow {
     flex: 0 0 auto;
+    color: var(--index-card-eyebrow);
+    font-size: 1.05em;
     transition: transform 180ms ease;
+}
+
+.insights-index-card:hover .insights-index-card__heading,
+.insights-index-card:focus-visible .insights-index-card__heading {
+    color: var(--index-card-link-hover);
 }
 
 .insights-index-card:hover .insights-index-card__arrow,
