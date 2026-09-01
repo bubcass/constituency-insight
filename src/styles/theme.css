@@ -2602,6 +2602,11 @@ body.has-map-fullscreen {
     text-wrap: balance;
 }
 
+.insights-members__election-link {
+    max-width: none;
+    margin: 1rem 0 0;
+}
+
 /* Generic loading */
 
 /*

@@ -2,6 +2,7 @@ export function memberCards({
   members = [],
   partyColorMap = new Map(),
   title = null,
+  constituency = null,
   emptyMessage = "No member information available.",
 } = {}) {
   const container = document.createElement("section");
@@ -73,7 +74,46 @@ export function memberCards({
   }
 
   container.appendChild(cardsGrid);
+
+  const selectedConstituency = String(
+    constituency ?? members.find((member) => member?.constituency)?.constituency ?? ""
+  ).trim();
+
+  if (selectedConstituency) {
+    const electionCta = document.createElement("p");
+    electionCta.className = "insights-members__election-link";
+
+    const link = document.createElement("a");
+    link.className = "link-arrow";
+    link.href = electionExplorerUrl(selectedConstituency);
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = selectedConstituency;
+
+    electionCta.append("Explore how the TDs were elected in ");
+    electionCta.appendChild(link);
+    container.appendChild(electionCta);
+  }
+
   return container;
+}
+
+export function electionExplorerUrl(constituency) {
+  const url = new URL("https://bubcass.github.io/election-explorer/");
+  url.searchParams.set("constituency", constituencySlug(constituency));
+  url.searchParams.set("election", "2024-general-election");
+  return url.href;
+}
+
+function constituencySlug(value) {
+  return String(value ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’']/g, "")
+    .replace(/&/g, " and ")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 function escapeHtml(value) {
