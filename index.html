@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Constituency Insights</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.8e13866f.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.8e13866f.css">
+
+<link rel="preload" as="style" href="./_import/style.a56bc25d.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.a56bc25d.css">
 <link rel="modulepreload" href="./_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
@@ -134,7 +132,13 @@
 
           const indexTitle = document.createElement("h1");
           indexTitle.className = "oireachtas-masthead__index-title";
-          indexTitle.innerHTML = insightsBrandMarkup;
+
+          const indexTitleLink = document.createElement("a");
+          indexTitleLink.className = "oireachtas-masthead__index-link";
+          indexTitleLink.href = "https://bubcass.github.io/open-data-insights/#constituency-heading";
+          indexTitleLink.setAttribute("aria-label", "View Constituency Insights on the main Insights page");
+          indexTitleLink.innerHTML = insightsBrandMarkup;
+          indexTitle.appendChild(indexTitleLink);
 
           const syncMastheadRoute = () => {
             const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
@@ -414,37 +418,44 @@
 import {define} from "./_observablehq/client.f787155f.js";
 import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
 
-registerFile("./media/dublin-quays.mp4", {"name":"./media/dublin-quays.mp4","mimeType":"video/mp4","path":"./_file/media/dublin-quays.e27390af.mp4","lastModified":1784300919196,"size":6271001});
-registerFile("./media/education-hero.jpg", {"name":"./media/education-hero.jpg","mimeType":"image/jpeg","path":"./_file/media/education-hero.4fc6aa8c.jpg","lastModified":1785525766172,"size":1142222});
-registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
-registerFile("./media/housing.jpg", {"name":"./media/housing.jpg","mimeType":"image/jpeg","path":"./_file/media/housing.f27123d4.jpg","lastModified":1785525720080,"size":130372});
-registerFile("./media/people-walking-in-blurred.mp4", {"name":"./media/people-walking-in-blurred.mp4","mimeType":"video/mp4","path":"./_file/media/people-walking-in-blurred.e416fe30.mp4","lastModified":1784202251836,"size":5247083});
-registerFile("./media/road-with-glass.jpg", {"name":"./media/road-with-glass.jpg","mimeType":"image/jpeg","path":"./_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
+registerFile("./media/education-index.jpg", {"name":"./media/education-index.jpg","mimeType":"image/jpeg","path":"./_file/media/education-index.e2c6c6a9.jpg","lastModified":1787913240117,"size":36941});
+registerFile("./media/housing.jpg", {"name":"./media/housing.jpg","mimeType":"image/jpeg","path":"./_file/media/housing.1403c150.jpg","lastModified":1788268675256,"size":131324});
+registerFile("./media/people-index.jpg", {"name":"./media/people-index.jpg","mimeType":"image/jpeg","path":"./_file/media/people-index.6c934d27.jpg","lastModified":1787913240118,"size":18473});
+registerFile("./media/people-index.mp4", {"name":"./media/people-index.mp4","mimeType":"video/mp4","path":"./_file/media/people-index.ba1cabfb.mp4","lastModified":1787913240118,"size":1019561});
+registerFile("./media/spotlights-index.jpg", {"name":"./media/spotlights-index.jpg","mimeType":"image/jpeg","path":"./_file/media/spotlights-index.af751fd6.jpg","lastModified":1787913240118,"size":40963});
+registerFile("./media/transport-index.jpg", {"name":"./media/transport-index.jpg","mimeType":"image/jpeg","path":"./_file/media/transport-index.fdb50a95.jpg","lastModified":1787913240119,"size":74790});
+registerFile("./media/transport-index.mp4", {"name":"./media/transport-index.mp4","mimeType":"video/mp4","path":"./_file/media/transport-index.85d84d5b.mp4","lastModified":1787913240119,"size":1193177});
+registerFile("./media/work-index.jpg", {"name":"./media/work-index.jpg","mimeType":"image/jpeg","path":"./_file/media/work-index.e751c31d.jpg","lastModified":1787913240120,"size":90553});
+registerFile("./media/work-index.mp4", {"name":"./media/work-index.mp4","mimeType":"video/mp4","path":"./_file/media/work-index.8379c47d.mp4","lastModified":1787913240122,"size":5171933});
 
-define({id: "2f3bcf4d", inputs: ["FileAttachment"], outputs: ["mountMastheadActions","peopleVideo","educationImage","workVideo","housingImage","transportVideo","spotlightsImage"], body: async (FileAttachment) => {
+define({id: "6c51caa8", inputs: ["FileAttachment"], outputs: ["mountMastheadActions","peopleVideo","peoplePoster","educationImage","workVideo","workPoster","housingImage","transportVideo","transportPoster","spotlightsImage"], body: async (FileAttachment) => {
 const {mountMastheadActions} = await import("./_import/components/hero-share.68908229.js");
 
-const peopleVideo = await FileAttachment("./media/people-walking-in-blurred.mp4").url();
-const educationImage = await FileAttachment("./media/education-hero.jpg").url();
-const workVideo = await FileAttachment("./media/harvest-hero.mp4").url();
+const peopleVideo = await FileAttachment("./media/people-index.mp4").url();
+const peoplePoster = await FileAttachment("./media/people-index.jpg").url();
+const educationImage = await FileAttachment("./media/education-index.jpg").url();
+const workVideo = await FileAttachment("./media/work-index.mp4").url();
+const workPoster = await FileAttachment("./media/work-index.jpg").url();
 const housingImage = await FileAttachment("./media/housing.jpg").url();
-const transportVideo = await FileAttachment("./media/dublin-quays.mp4").url();
-const spotlightsImage = await FileAttachment("./media/road-with-glass.jpg").url();
+const transportVideo = await FileAttachment("./media/transport-index.mp4").url();
+const transportPoster = await FileAttachment("./media/transport-index.jpg").url();
+const spotlightsImage = await FileAttachment("./media/spotlights-index.jpg").url();
 
 mountMastheadActions({
   title: "Constituency Insights",
   text: "Explore constituency-level data and analysis from the Houses of the Oireachtas.",
 });
-return {mountMastheadActions,peopleVideo,educationImage,workVideo,housingImage,transportVideo,spotlightsImage};
+return {mountMastheadActions,peopleVideo,peoplePoster,educationImage,workVideo,workPoster,housingImage,transportVideo,transportPoster,spotlightsImage};
 }});
 
-define({id: "8a61ba21", inputs: ["peopleVideo","educationImage","workVideo","housingImage","transportVideo","spotlightsImage","display"], outputs: ["topics","grid"], body: (peopleVideo,educationImage,workVideo,housingImage,transportVideo,spotlightsImage,display) => {
+define({id: "ee8cb2c5", inputs: ["peopleVideo","peoplePoster","educationImage","workVideo","workPoster","housingImage","transportVideo","transportPoster","spotlightsImage","HTMLImageElement","HTMLVideoElement","IntersectionObserver","display"], outputs: ["topics","grid","reduceMotion","saveData","deferredVideos","activateVideo"], body: (peopleVideo,peoplePoster,educationImage,workVideo,workPoster,housingImage,transportVideo,transportPoster,spotlightsImage,HTMLImageElement,HTMLVideoElement,IntersectionObserver,display) => {
 const topics = [
   {
     href: "./people",
     eyebrow: "People",
     title: "Explore",
     video: peopleVideo,
+    poster: peoplePoster,
   },
   {
     href: "./education",
@@ -457,6 +468,7 @@ const topics = [
     eyebrow: "Work",
     title: "Explore",
     video: workVideo,
+    poster: workPoster,
   },
   {
     href: "./housing",
@@ -469,6 +481,7 @@ const topics = [
     eyebrow: "Transport",
     title: "Explore",
     video: transportVideo,
+    poster: transportPoster,
   },
   {
     href: "./spotlight",
@@ -482,14 +495,18 @@ const grid = document.createElement("section");
 grid.className = "insights-index-grid";
 grid.setAttribute("aria-label", "Constituency insight topics");
 
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const saveData = navigator.connection?.saveData === true;
+const deferredVideos = [];
+
 for (const topic of topics) {
   const card = document.createElement("a");
   card.className = "insights-index-card";
   card.href = topic.href;
 
   const media = topic.video
-    ? `<video class="insights-index-card__asset" src="${topic.video}" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>`
-    : `<img class="insights-index-card__asset" src="${topic.image}" alt="">`;
+    ? `<video class="insights-index-card__asset" data-src="${topic.video}" poster="${topic.poster}" muted loop playsinline preload="none" aria-hidden="true"></video>`
+    : `<img class="insights-index-card__asset" src="${topic.image}" alt="" loading="lazy" decoding="async">`;
 
   card.innerHTML = `
     <div class="insights-index-card__media">
@@ -504,11 +521,49 @@ for (const topic of topics) {
     </div>
   `;
 
+  const mediaFrame = card.querySelector(".insights-index-card__media");
+  const asset = card.querySelector(".insights-index-card__asset");
+  const revealMedia = () => mediaFrame.classList.add("is-loaded");
+
+  if (asset instanceof HTMLImageElement) {
+    asset.addEventListener("load", revealMedia, {once: true});
+    asset.addEventListener("error", revealMedia, {once: true});
+    if (asset.complete) revealMedia();
+  } else if (asset instanceof HTMLVideoElement) {
+    asset.addEventListener("loadeddata", revealMedia, {once: true});
+    asset.addEventListener("error", revealMedia, {once: true});
+    if (reduceMotion || saveData) revealMedia();
+    else deferredVideos.push(asset);
+  }
+
   grid.appendChild(card);
 }
 
+const activateVideo = (video) => {
+  if (video.dataset.src) {
+    video.src = video.dataset.src;
+    delete video.dataset.src;
+    video.load();
+  }
+  video.play().catch(() => {});
+};
+
+if (deferredVideos.length && "IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      const video = entry.target;
+      if (entry.isIntersecting) activateVideo(video);
+      else video.pause();
+    }
+  }, {rootMargin: "240px 0px", threshold: 0.05});
+
+  for (const video of deferredVideos) videoObserver.observe(video);
+} else {
+  for (const video of deferredVideos) activateVideo(video);
+}
+
 display(grid);
-return {topics,grid};
+return {topics,grid,reduceMotion,saveData,deferredVideos,activateVideo};
 }});
 
 </script>
@@ -516,12 +571,12 @@ return {topics,grid};
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:2f3bcf4d:--></div>
+<div class="observablehq observablehq--block"><!--:6c51caa8:--></div>
 <section class="insights-index-intro">
   <p>See beyond the numbers with our data-driven exploration of the people and policies that matter in the constituencies represented by our TDs.</p>
   <p>Constituency Insights is a keystone resource for <strong><a class="link-arrow" href="https://bubcass.github.io/open-data-insights/" target="_self" rel="noopener noreferrer">Insights</a></strong>, our repository of parliamentary visual data.</p>
 </section>
-<div class="observablehq observablehq--block"><!--:8a61ba21:--></div>
+<div class="observablehq observablehq--block"><!--:ee8cb2c5:--></div>
 </main>
 </div>
 </body>

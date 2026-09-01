@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Snapshots | Constituency Insights</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_import/style.8e13866f.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_import/style.8e13866f.css">
+
+<link rel="preload" as="style" href="./_import/style.a56bc25d.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.a56bc25d.css">
 <link rel="modulepreload" href="./_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
@@ -135,7 +133,13 @@
 
           const indexTitle = document.createElement("h1");
           indexTitle.className = "oireachtas-masthead__index-title";
-          indexTitle.innerHTML = insightsBrandMarkup;
+
+          const indexTitleLink = document.createElement("a");
+          indexTitleLink.className = "oireachtas-masthead__index-link";
+          indexTitleLink.href = "https://bubcass.github.io/open-data-insights/#constituency-heading";
+          indexTitleLink.setAttribute("aria-label", "View Constituency Insights on the main Insights page");
+          indexTitleLink.innerHTML = insightsBrandMarkup;
+          indexTitle.appendChild(indexTitleLink);
 
           const syncMastheadRoute = () => {
             const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
@@ -430,13 +434,10 @@ const sportsFundingVideo = await FileAttachment("./media/sports-funding-hero.mp4
 return {insightsTabs,enhanceHeroWithShare,roadSafetyImage,derelictSitesImage,healthServicesImage,sportsFundingVideo};
 }});
 
-define({id: "39677a94", inputs: ["enhanceHeroWithShare"], body: (enhanceHeroWithShare) => {
+define({id: "79840e74", inputs: ["enhanceHeroWithShare","display","insightsTabs"], body: (enhanceHeroWithShare,display,insightsTabs) => {
 enhanceHeroWithShare(document.querySelector(".spotlights-hero"), {
   title: "Snapshots — Constituency Insights",
 });
-}});
-
-define({id: "b1bc525b", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
 display(insightsTabs("spotlights"));
 }});
 
@@ -512,8 +513,7 @@ return {grid,topics};
   <h1>Snapshots</h1>
   <p class="spotlights-hero__subtitle">Focused explorations of the topics that matter in constituencies.</p>
 </div>
-<div class="observablehq observablehq--block"><!--:39677a94:--></div>
-<div class="observablehq observablehq--block"><!--:b1bc525b:--></div>
+<div class="observablehq observablehq--block"><!--:79840e74:--></div>
 <div class="prose-block lead spotlights-intro">
   <h2>Specialist insight, local focus</h2>
   <p>Each snapshot is a curated, data-driven and interactive examination of topics that matter to people around Ireland.</p>

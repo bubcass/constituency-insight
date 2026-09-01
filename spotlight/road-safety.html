@@ -5,35 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Road safety | Constituency Insights</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="../_import/style.8e13866f.css">
-<link rel="preload" as="style" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="../_import/style.8e13866f.css">
-<link rel="stylesheet" type="text/css" href="../_npm/leaflet@1.9.4/dist/leaflet.css">
+
+<link rel="preload" as="style" href="../_import/style.a56bc25d.css">
+<link rel="stylesheet" type="text/css" href="../_import/style.a56bc25d.css">
 <link rel="modulepreload" href="../_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="../_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="../_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="../_import/components/insights-tabs.4ab9c656.js">
 <link rel="modulepreload" href="../_import/components/constituency-select.be8dda34.js">
-<link rel="modulepreload" href="../_import/components/constituency-location.64a17faf.js">
-<link rel="modulepreload" href="../_import/components/topic-point-map.2d5e3d0e.js">
-<link rel="modulepreload" href="../_import/components/download-button.cf825c31.js">
+<link rel="modulepreload" href="../_import/components/constituency-location.f36404de.js">
+<link rel="modulepreload" href="../_import/components/topic-point-map.6328f93f.js">
+<link rel="modulepreload" href="../_import/components/download-button.58b1295c.js">
 <link rel="modulepreload" href="../_import/components/metric-cards.1cb79023.js">
-<link rel="modulepreload" href="../_import/components/member-cards.6cf0eabb.js">
+<link rel="modulepreload" href="../_import/components/member-cards.38adb284.js">
 <link rel="modulepreload" href="../_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="../_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="../_import/components/related-research.2ee2445a.js">
 <link rel="modulepreload" href="../_import/components/reactive-mount.40133ee8.js">
 <link rel="modulepreload" href="../_import/components/hero-share.68908229.js">
-<link rel="modulepreload" href="../_import/components/waterfall-segments-chart.5f399609.js">
+<link rel="modulepreload" href="../_import/components/waterfall-segments-chart.daf4b7eb.js">
 <link rel="modulepreload" href="../_import/topics/road-safety/config.8555e31f.js">
 <link rel="modulepreload" href="../_import/topics/road-safety/transforms.2876253d.js">
+<link rel="modulepreload" href="../_import/components/tabular-data.e41c7133.js">
 <link rel="modulepreload" href="../_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="../_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="../_import/config/chart-palette.7185253a.js">
-<link rel="modulepreload" href="../_import/components/leaflet-map-ui.4fd45fb1.js">
+<link rel="modulepreload" href="../_import/components/leaflet-map-ui.6717fe6b.js">
 <link rel="modulepreload" href="../_npm/leaflet@1.9.4/721623d8.js">
 <link rel="modulepreload" href="../_npm/d3@7.9.0/66d82917.js">
 <link rel="modulepreload" href="../_npm/@turf/bbox@7.3.4/59288137.js">
@@ -41,7 +38,6 @@
 <link rel="modulepreload" href="../_import/config/chart-style.ae393eab.js">
 <link rel="modulepreload" href="../_import/config/chart-contrast.9ba5c9ff.js">
 <link rel="modulepreload" href="../_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
-<link rel="modulepreload" href="../_npm/d3-dsv@3.0.1/9cffc2bd.js">
 <link rel="modulepreload" href="../_npm/point-in-polygon-hao@1.2.4/6dfaf59a.js">
 <link rel="modulepreload" href="../_npm/@turf/invariant@7.3.4/0f53e08e.js">
 <link rel="modulepreload" href="../_npm/d3-array@3.2.4/e93ca09f.js">
@@ -53,6 +49,7 @@
 <link rel="modulepreload" href="../_npm/d3-delaunay@6.0.4/87adea64.js">
 <link rel="modulepreload" href="../_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
 <link rel="modulepreload" href="../_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="../_npm/d3-dsv@3.0.1/9cffc2bd.js">
 <link rel="modulepreload" href="../_npm/d3-ease@3.0.1/cdd7e898.js">
 <link rel="modulepreload" href="../_npm/d3-fetch@3.0.1/b4e2ad9a.js">
 <link rel="modulepreload" href="../_npm/d3-force@3.0.0/5e804d15.js">
@@ -204,7 +201,13 @@
 
           const indexTitle = document.createElement("h1");
           indexTitle.className = "oireachtas-masthead__index-title";
-          indexTitle.innerHTML = insightsBrandMarkup;
+
+          const indexTitleLink = document.createElement("a");
+          indexTitleLink.className = "oireachtas-masthead__index-link";
+          indexTitleLink.href = "https://bubcass.github.io/open-data-insights/#constituency-heading";
+          indexTitleLink.setAttribute("aria-label", "View Constituency Insights on the main Insights page");
+          indexTitleLink.innerHTML = insightsBrandMarkup;
+          indexTitle.appendChild(indexTitleLink);
 
           const syncMastheadRoute = () => {
             const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
@@ -484,17 +487,17 @@
 import {define} from "../_observablehq/client.f787155f.js";
 import {registerFile} from "../_observablehq/stdlib.277aeab8.js";
 
-registerFile("../data/derived/recent-transport-contributions.json", {"name":"../data/derived/recent-transport-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-transport-contributions.ab4ab7ea.json","lastModified":1786702150702,"size":269832});
-registerFile("../data/derived/recent-transport-questions.json", {"name":"../data/derived/recent-transport-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-transport-questions.49627700.json","lastModified":1786605089734,"size":1420763});
-registerFile("../data/derived/road-accidents-normalized.csv", {"name":"../data/derived/road-accidents-normalized.csv","mimeType":"text/csv","path":"../_file/data/derived/road-accidents-normalized.082cbd1f.csv","lastModified":1786473163794,"size":8376937});
+registerFile("../data/derived/browser/road-accidents-normalized.json", {"name":"../data/derived/browser/road-accidents-normalized.json","mimeType":"application/json","path":"../_file/data/derived/browser/road-accidents-normalized.c54dfe3e.json","lastModified":1787674592848,"size":9279737});
+registerFile("../data/derived/recent-transport-contributions.json", {"name":"../data/derived/recent-transport-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-transport-contributions.c32b0f9b.json","lastModified":1788262546405,"size":294612});
+registerFile("../data/derived/recent-transport-questions.json", {"name":"../data/derived/recent-transport-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-transport-questions.33f83c81.json","lastModified":1788262546406,"size":1416491});
 registerFile("../data/geo/constituencies.json", {"name":"../data/geo/constituencies.json","mimeType":"application/json","path":"../_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
-registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.59450f33.json","lastModified":1786702150704,"size":123367});
+registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.18ed7f46.json","lastModified":1788262546409,"size":123368});
 registerFile("../media/road-with-glass.jpg", {"name":"../media/road-with-glass.jpg","mimeType":"image/jpeg","path":"../_file/media/road-with-glass.bf1ea6c5.jpg","lastModified":1784307618599,"size":811201});
 
-define({id: "53d54f72", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","downloadButton","metricCards","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","waterfallSegmentsChart","roadSafetyTopic","buildRoadAccidentDownloadRows","buildRoadAccidentMetrics","buildRoadUserSegments","filterRoadAccidents","accidentRows","constituenciesGeo","membersLookup","transportQuestions","transportContributions","heroImage","INCIDENT_TYPES","years","constituencies","ROAD_SAFETY_MATCHER","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","roadUserChartRows","selectedPeriodLabel","matchedMembers","relevantQuestions","relevantContributions","restoreScroll","rerender","mountReactive","renderConstituencyFilter","renderIncidentFilters"], body: async (FileAttachment) => {
-const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {downloadButton}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {waterfallSegmentsChart}, {roadSafetyTopic}, {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents}] = await Promise.all([import("../_import/components/insights-tabs.4ab9c656.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.64a17faf.js"), import("../_import/components/topic-point-map.2d5e3d0e.js"), import("../_import/components/download-button.cf825c31.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.6cf0eabb.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.68908229.js"), import("../_import/components/waterfall-segments-chart.5f399609.js"), import("../_import/topics/road-safety/config.8555e31f.js"), import("../_import/topics/road-safety/transforms.2876253d.js")]);
+define({id: "b4506583", inputs: ["FileAttachment"], outputs: ["insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","topicPointMap","downloadButton","metricCards","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","waterfallSegmentsChart","roadSafetyTopic","buildRoadAccidentDownloadRows","buildRoadAccidentMetrics","buildRoadUserSegments","filterRoadAccidents","tabularRows","accidentRows","constituenciesGeo","membersLookup","transportQuestions","transportContributions","heroImage","INCIDENT_TYPES","years","constituencies","ROAD_SAFETY_MATCHER","partyColorMap","state","savedConstituency","cleanConstituencyName","selectedConstituencyGeoJSON","selectedRows","roadUserChartRows","selectedPeriodLabel","matchedMembers","relevantQuestions","relevantContributions","restoreScroll","rerender","mountReactive","renderConstituencyFilter","renderIncidentFilters"], body: async (FileAttachment) => {
+const [{insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {topicPointMap}, {downloadButton}, {metricCards}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {waterfallSegmentsChart}, {roadSafetyTopic}, {buildRoadAccidentDownloadRows, buildRoadAccidentMetrics, buildRoadUserSegments, filterRoadAccidents}, {tabularRows}] = await Promise.all([import("../_import/components/insights-tabs.4ab9c656.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.f36404de.js"), import("../_import/components/topic-point-map.6328f93f.js"), import("../_import/components/download-button.58b1295c.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.38adb284.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.68908229.js"), import("../_import/components/waterfall-segments-chart.daf4b7eb.js"), import("../_import/topics/road-safety/config.8555e31f.js"), import("../_import/topics/road-safety/transforms.2876253d.js"), import("../_import/components/tabular-data.e41c7133.js")]);
 
-const accidentRows = await FileAttachment("../data/derived/road-accidents-normalized.csv").csv({typed: true});
+const accidentRows = tabularRows(await FileAttachment("../data/derived/browser/road-accidents-normalized.json").json());
 const constituenciesGeo = await FileAttachment("../data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("../data/members-lookup.json").json();
 const transportQuestions = await FileAttachment("../data/derived/recent-transport-questions.json").json();
@@ -751,7 +754,7 @@ function renderIncidentFilters() {
   section.appendChild(filterGrid);
   return section;
 }
-return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,topicPointMap,downloadButton,metricCards,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,waterfallSegmentsChart,roadSafetyTopic,buildRoadAccidentDownloadRows,buildRoadAccidentMetrics,buildRoadUserSegments,filterRoadAccidents,accidentRows,constituenciesGeo,membersLookup,transportQuestions,transportContributions,heroImage,INCIDENT_TYPES,years,constituencies,ROAD_SAFETY_MATCHER,partyColorMap,state,savedConstituency,cleanConstituencyName,selectedConstituencyGeoJSON,selectedRows,roadUserChartRows,selectedPeriodLabel,matchedMembers,relevantQuestions,relevantContributions,restoreScroll,rerender,mountReactive,renderConstituencyFilter,renderIncidentFilters};
+return {insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,topicPointMap,downloadButton,metricCards,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,waterfallSegmentsChart,roadSafetyTopic,buildRoadAccidentDownloadRows,buildRoadAccidentMetrics,buildRoadUserSegments,filterRoadAccidents,tabularRows,accidentRows,constituenciesGeo,membersLookup,transportQuestions,transportContributions,heroImage,INCIDENT_TYPES,years,constituencies,ROAD_SAFETY_MATCHER,partyColorMap,state,savedConstituency,cleanConstituencyName,selectedConstituencyGeoJSON,selectedRows,roadUserChartRows,selectedPeriodLabel,matchedMembers,relevantQuestions,relevantContributions,restoreScroll,rerender,mountReactive,renderConstituencyFilter,renderIncidentFilters};
 }});
 
 define({id: "dfc394ae", inputs: ["display","insightsTabs"], body: (display,insightsTabs) => {
@@ -937,7 +940,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:53d54f72:--></div>
+<div class="observablehq observablehq--block"><!--:b4506583:--></div>
 <div class="observablehq observablehq--block"><!--:dfc394ae:--></div>
 <div class="observablehq observablehq--block"><!--:1b8695b5:--></div>
 <div class="prose-block lead">
