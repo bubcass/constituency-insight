@@ -278,12 +278,19 @@ button {
 }
 
 .oireachtas-masthead__actions {
+    position: relative;
     display: flex;
     grid-column: 3;
     grid-row: 1;
     justify-self: end;
     gap: 0.45rem;
 }
+
+.oireachtas-masthead__menu { position: absolute; z-index: 20; top: calc(100% + .5rem); right: 0; display: grid; min-width: 10.5rem; padding: .35rem; border: 1px solid var(--border); border-radius: .75rem; background: var(--surface); box-shadow: 0 .75rem 2rem color-mix(in srgb, #000 18%, transparent); }
+.oireachtas-masthead__menu[hidden] { display: none; }
+.oireachtas-masthead__menu .oireachtas-masthead__menu-action { display: flex; width: 100%; min-height: 2.5rem; height: auto; align-items: center; gap: .65rem; padding: .45rem .6rem; border: 0; border-radius: .45rem; background: transparent; box-shadow: none; color: var(--text); font: inherit; text-align: left; transform: none; }
+.oireachtas-masthead__menu .oireachtas-masthead__menu-action:hover, .oireachtas-masthead__menu .oireachtas-masthead__menu-action:focus-visible { background: var(--surface-soft); }
+.oireachtas-masthead__menu .oireachtas-masthead__menu-action svg { width: 1.1rem; height: 1.1rem; }
 
 .oireachtas-masthead__action {
     display: inline-grid;
@@ -704,6 +711,36 @@ button {
     .oireachtas-masthead--index .oireachtas-masthead__action {
         width: 36px;
         height: 36px;
+    }
+}
+
+@media (max-width: 720px) {
+    .oireachtas-masthead--index .oireachtas-masthead__index-title {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(100% - 13rem);
+        white-space: normal;
+        transform: translateY(-50%);
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-mark {
+        display: none;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-copy {
+        align-items: center;
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-title {
+        font-size: clamp(0.76rem, 3.2vw, 1rem);
+    }
+
+    .oireachtas-masthead--index .oireachtas-masthead__brand-tagline {
+        font-size: clamp(0.58rem, 2.4vw, 0.72rem);
     }
 }
 

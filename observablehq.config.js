@@ -183,11 +183,14 @@ export default {
           let updatePending = false;
           const updateMobileTools = () => {
             updatePending = false;
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
             const tabsShell = document.querySelector(".insights-tabs-shell");
             const pastTopicNav = tabsShell
               ? tabsShell.getBoundingClientRect().top <= 12
               : window.scrollY > masthead.offsetHeight + 48;
-            const visible = mobileQuery.matches && pastTopicNav;
+            // The landing page keeps its own uncluttered masthead. Reading tools
+            // belong to hierarchy/detail pages only, never over the index brand.
+            const visible = mobileQuery.matches && !isInsightsIndex && pastTopicNav;
             mobileTools.hidden = !visible;
             if (!visible) setMoreOpen(false);
           };
