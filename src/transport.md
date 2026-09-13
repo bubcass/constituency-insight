@@ -373,6 +373,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "transport:change",
+    defer: true,
     ...options
   });
 }

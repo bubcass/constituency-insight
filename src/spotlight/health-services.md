@@ -131,6 +131,7 @@ function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "health-services:change",
     destroyPrevious: true,
+    defer: true,
     ...options
   });
 }

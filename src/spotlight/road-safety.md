@@ -159,6 +159,7 @@ function mountReactive(renderFn, {eventName = "road-accidents:change", ...option
   return createReactiveMount(renderFn, {
     eventName,
     destroyPrevious: true,
+    defer: true,
     ...options
   });
 }

@@ -30,7 +30,15 @@ const housingData = tabularRows(await FileAttachment("data/derived/browser/housi
 const housingStockData = tabularRows(await FileAttachment("data/derived/browser/housing-stock-2022.json").json());
 const adultsWithParentsData = tabularRows(await FileAttachment("data/derived/browser/adults-living-with-parents-2022.json").json());
 const renewableEnergyHouseholdsData = tabularRows(await FileAttachment("data/derived/browser/renewable-energy-households-2022.json").json());
-const planningApplicationRows = tabularRows(await FileAttachment("data/derived/browser/planning-applications-normalized.json").json());
+// This is the largest page dataset (roughly 47 MB). Do not request or parse it
+// until the planning section is close to the viewport.
+let planningApplicationRowsPromise;
+async function getPlanningApplicationRows() {
+  planningApplicationRowsPromise ??= FileAttachment("data/derived/browser/planning-applications-normalized.json")
+    .json()
+    .then(tabularRows);
+  return planningApplicationRowsPromise;
+}
 const districtGeo = await FileAttachment("data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("data/members-lookup.json").json();
@@ -69,25 +77,16 @@ const HOUSING_STOCK_CATEGORIES = [
   ["Holiday home", "Holiday home"]
 ];
 
-const planningYears = Array.from(
-  new Set(planningApplicationRows.map((row) => Number(row.year)).filter(Number.isFinite))
-).sort((a, b) => a - b);
-
 if (typeof window !== "undefined" && !window.housingState) {
   window.housingState = {
     constituency: null,
     district: "all",
-    planningStartYear: planningYears[0],
-    planningEndYear: planningYears.at(-1)
+    planningStartYear: null,
+    planningEndYear: null
   };
 }
 
 const state = window.housingState;
-if (!planningYears.includes(Number(state.planningStartYear))) state.planningStartYear = planningYears[0];
-if (!planningYears.includes(Number(state.planningEndYear))) state.planningEndYear = planningYears.at(-1);
-if (state.planningStartYear > state.planningEndYear) {
-  [state.planningStartYear, state.planningEndYear] = [state.planningEndYear, state.planningStartYear];
-}
 const constituencies = Array.from(
   new Set(housingData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, "en"));
@@ -253,8 +252,22 @@ function selectedConstituencyGeoJSON() {
   };
 }
 
-function selectedPlanningApplications() {
-  return filterPlanningApplications(planningApplicationRows, {
+async function getPlanningYears() {
+  const rows = await getPlanningApplicationRows();
+  const years = Array.from(new Set(rows.map((row) => Number(row.year)).filter(Number.isFinite)))
+    .sort((a, b) => a - b);
+  if (!years.includes(Number(state.planningStartYear))) state.planningStartYear = years[0];
+  if (!years.includes(Number(state.planningEndYear))) state.planningEndYear = years.at(-1);
+  if (state.planningStartYear > state.planningEndYear) {
+    [state.planningStartYear, state.planningEndYear] = [state.planningEndYear, state.planningStartYear];
+  }
+  return years;
+}
+
+async function selectedPlanningApplications() {
+  const rows = await getPlanningApplicationRows();
+  await getPlanningYears();
+  return filterPlanningApplications(rows, {
     constituency: state.constituency,
     electoralDistrictGuid: state.district,
     startYear: state.planningStartYear,
@@ -303,6 +316,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "housing:change",
+    defer: true,
     ...options
   });
 }
@@ -311,6 +325,7 @@ function mountPlanningReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventNames: ["housing:change", "planning-applications:change"],
     destroyPrevious: true,
+    defer: true,
     ...options
   });
 }
@@ -381,7 +396,8 @@ function renderDistrictMapExplorer() {
   return section;
 }
 
-function renderPlanningYearFilter() {
+async function renderPlanningYearFilter() {
+  const planningYears = await getPlanningYears();
   const section = document.createElement("section");
   section.className = "insights-controls planning-application-controls";
 
@@ -635,7 +651,7 @@ display(mountPlanningReactive(async () => {
   wrap.className = "insights-metrics-full planning-application-metrics";
   wrap.appendChild(metricCards({
     title: null,
-    metrics: buildPlanningApplicationMetrics(selectedPlanningApplications())
+    metrics: buildPlanningApplicationMetrics(await selectedPlanningApplications())
   }));
   return wrap;
 }, {skeleton: "cards"}));
@@ -653,7 +669,7 @@ display(mountPlanningReactive(async () => {
 
   return topicPointMap({
     constituencyGeoJSON: geo,
-    data: selectedPlanningApplications(),
+    data: await selectedPlanningApplications(),
     height: 540,
     enableGeolocation: false,
     fields: planningApplicationsTopic.fields,
@@ -668,7 +684,7 @@ display(mountPlanningReactive(async () => {
 
 ```js
 display(mountPlanningReactive(async () => {
-  const rows = buildPlanningApplicationDownloadRows(selectedPlanningApplications());
+  const rows = buildPlanningApplicationDownloadRows(await selectedPlanningApplications());
   const wrap = document.createElement("div");
   wrap.className = "download-block planning-application-download";
   wrap.appendChild(downloadButton(

@@ -357,6 +357,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "demographics:change",
+    defer: true,
     ...options
   });
 }

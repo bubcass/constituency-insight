@@ -418,6 +418,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "education:change",
+    defer: true,
     ...options
   });
 }

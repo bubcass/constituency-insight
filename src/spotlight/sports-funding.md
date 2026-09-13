@@ -327,7 +327,7 @@ function rerenderWaterfall() {
 }
 
 function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40, ...options } = {}) {
-  return createReactiveMount(renderFn, {eventName, debounceMs, ...options});
+  return createReactiveMount(renderFn, {eventName, debounceMs, defer: true, ...options});
 }
 
 function euro(value) {

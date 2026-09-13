@@ -7,6 +7,8 @@ export function createReactiveMount(renderFn, {
   skeletonDelay = 120,
   destroyPrevious = false,
   animate = true,
+  defer = false,
+  rootMargin = "300px",
 } = {}) {
   const host = document.createElement("div");
   host.className = `reactive-view reactive-view--${skeleton}`;
@@ -57,7 +59,21 @@ export function createReactiveMount(renderFn, {
     timeoutId = setTimeout(run, debounceMs);
   }
 
-  run();
+  // Expensive charts and tables do not need to compete with the page's first
+  // paint.  Keep their layout stable with the existing skeleton, then build
+  // them shortly before they enter the viewport.  This mirrors the deferred
+  // mounts used by PQ Explorer while retaining the same reactive API.
+  if (defer && "IntersectionObserver" in window) {
+    host.replaceChildren(createSkeleton(skeleton, skeletonHeight));
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      run();
+    }, {rootMargin});
+    observer.observe(host);
+  } else {
+    run();
+  }
   for (const name of names) window.addEventListener(name, scheduleRun);
   return host;
 }

@@ -262,22 +262,34 @@ export function electoralDistrictMap({
 
   refreshFeatures();
 
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      map.invalidateSize();
+  const targetBounds = constituencyLayer.getBounds().isValid()
+    ? constituencyLayer.getBounds()
+    : districtLayer.getBounds();
+  let hasFittedBounds = false;
+  let sizeFrame = null;
 
-      const targetBounds = constituencyLayer.getBounds().isValid()
-        ? constituencyLayer.getBounds()
-        : districtLayer.getBounds();
-
-      if (targetBounds.isValid()) {
-        map.fitBounds(targetBounds, {
-          padding: [34, 34],
-          maxZoom: fitMaxZoom,
-        });
+  // Observable appends a displayed node after this factory returns. Deferred
+  // sections can also change the surrounding layout at the same time. Leaflet
+  // otherwise measures a transient size and leaves its 256px tiles scattered.
+  function refreshSize() {
+    if (sizeFrame !== null) return;
+    sizeFrame = requestAnimationFrame(() => {
+      sizeFrame = null;
+      map.invalidateSize({pan: false});
+      if (!hasFittedBounds && targetBounds.isValid()) {
+        hasFittedBounds = true;
+        map.fitBounds(targetBounds, {padding: [34, 34], maxZoom: fitMaxZoom});
       }
     });
-  });
+  }
+
+  const resizeObserver = typeof ResizeObserver === "undefined"
+    ? null
+    : new ResizeObserver(refreshSize);
+  resizeObserver?.observe(container);
+  refreshSize();
+  requestAnimationFrame(refreshSize);
+  setTimeout(refreshSize, 100);
 
   container.setSelectedGuid = (guid = "all") => {
     currentSelectedGuid = guid;
@@ -301,6 +313,8 @@ export function electoralDistrictMap({
   };
 
   container.destroy = () => {
+    resizeObserver?.disconnect();
+    if (sizeFrame !== null) cancelAnimationFrame(sizeFrame);
     mapUi.destroy();
     map.remove();
   };

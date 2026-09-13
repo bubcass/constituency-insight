@@ -304,6 +304,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "employment:change",
+    defer: true,
     ...options
   });
 }

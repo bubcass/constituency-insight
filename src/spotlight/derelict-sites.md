@@ -132,7 +132,7 @@ function rerender({preserveScroll = true} = {}) {
 }
 
 function mountReactive(renderFn, {eventName = "derelict-sites:change", ...options} = {}) {
-  return createReactiveMount(renderFn, {eventName, destroyPrevious: true, ...options});
+  return createReactiveMount(renderFn, {eventName, destroyPrevious: true, defer: true, ...options});
 }
 
 function renderConstituencyFilter() {
