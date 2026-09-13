@@ -6,18 +6,18 @@
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Work | Constituency Insights</title>
 
-<link rel="preload" as="style" href="./_import/style.a56bc25d.css">
-<link rel="stylesheet" type="text/css" href="./_import/style.a56bc25d.css">
+<link rel="preload" as="style" href="./_import/style.b45106ed.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.b45106ed.css">
 <link rel="modulepreload" href="./_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
 <link rel="modulepreload" href="./_import/components/insights-tabs.4ab9c656.js">
-<link rel="modulepreload" href="./_import/components/constituency-select.be8dda34.js">
-<link rel="modulepreload" href="./_import/components/constituency-location.f36404de.js">
+<link rel="modulepreload" href="./_import/components/constituency-select.0c882826.js">
+<link rel="modulepreload" href="./_import/components/constituency-location.b58bd197.js">
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.58b1295c.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.61d0bc16.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.be4ab806.js">
 <link rel="modulepreload" href="./_import/components/employment-charts.2ba10341.js">
 <link rel="modulepreload" href="./_import/components/people-charts.186af8cb.js">
 <link rel="modulepreload" href="./_import/components/percentage-strip-chart.9bcba661.js">
@@ -26,9 +26,10 @@
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
-<link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
-<link rel="modulepreload" href="./_import/components/hero-share.68908229.js">
+<link rel="modulepreload" href="./_import/components/reactive-mount.0c3beeac.js">
+<link rel="modulepreload" href="./_import/components/hero-share.e70c1fd9.js">
 <link rel="modulepreload" href="./_import/components/tabular-data.e41c7133.js">
+<link rel="modulepreload" href="./_import/components/constituency-url-state.3607cf90.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.6717fe6b.js">
@@ -259,11 +260,14 @@
           let updatePending = false;
           const updateMobileTools = () => {
             updatePending = false;
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
             const tabsShell = document.querySelector(".insights-tabs-shell");
             const pastTopicNav = tabsShell
               ? tabsShell.getBoundingClientRect().top <= 12
               : window.scrollY > masthead.offsetHeight + 48;
-            const visible = mobileQuery.matches && pastTopicNav;
+            // The landing page keeps its own uncluttered masthead. Reading tools
+            // belong to hierarchy/detail pages only, never over the index brand.
+            const visible = mobileQuery.matches && !isInsightsIndex && pastTopicNav;
             mobileTools.hidden = !visible;
             if (!visible) setMoreOpen(false);
           };
@@ -487,15 +491,15 @@ registerFile("./data/derived/browser/employment-occupation-2022.json", {"name":"
 registerFile("./data/derived/browser/household-income-2022.json", {"name":"./data/derived/browser/household-income-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/household-income-2022.daaa44a5.json","lastModified":1787674592737,"size":353643});
 registerFile("./data/derived/browser/principal-economic-status-2022.json", {"name":"./data/derived/browser/principal-economic-status-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/principal-economic-status-2022.c642ced6.json","lastModified":1787674592832,"size":377745});
 registerFile("./data/derived/browser/working-from-home-2022.json", {"name":"./data/derived/browser/working-from-home-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/working-from-home-2022.99f1ae33.json","lastModified":1787674592849,"size":321669});
-registerFile("./data/derived/recent-work-contributions.json", {"name":"./data/derived/recent-work-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-contributions.6b4a4d1d.json","lastModified":1787913240110,"size":124492});
-registerFile("./data/derived/recent-work-questions.json", {"name":"./data/derived/recent-work-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-questions.8017b65f.json","lastModified":1788262546408,"size":1433109});
+registerFile("./data/derived/recent-work-contributions.json", {"name":"./data/derived/recent-work-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-contributions.5efc2e42.json","lastModified":1789204198125,"size":129576});
+registerFile("./data/derived/recent-work-questions.json", {"name":"./data/derived/recent-work-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-work-questions.332939f5.json","lastModified":1789252100242,"size":1435371});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.79d7eb54.geojson","lastModified":1785513965574,"size":9442035});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.18ed7f46.json","lastModified":1788262546409,"size":123368});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.0b8cb845.json","lastModified":1789204198127,"size":124533});
 registerFile("./media/harvest-hero.mp4", {"name":"./media/harvest-hero.mp4","mimeType":"video/mp4","path":"./_file/media/harvest-hero.ce4cd23b.mp4","lastModified":1784294485494,"size":10661255});
 
-define({id: "066581e1", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","principalEconomicStatusWaterfall","percentageStripChart","chartColors","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","tabularRows","employmentData","occupationData","economicStatusData","workingFromHomeData","householdIncomeData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","OCCUPATIONS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","occupationRowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","aggregateOccupations","employmentStats","workingFromHomeStats","labourForceStats","selectedDistrictHouseholdIncome","nationalStats","nationalWorkingFromHomeStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","currencyDifferenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderProfileViewControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {principalEconomicStatusWaterfall}, {percentageStripChart}, {chartColors}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {tabularRows}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.f36404de.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.58b1295c.js"), import("./_import/components/electoral-district-map.61d0bc16.js"), import("./_import/components/employment-charts.2ba10341.js"), import("./_import/components/people-charts.186af8cb.js"), import("./_import/components/percentage-strip-chart.9bcba661.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/member-cards.38adb284.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.68908229.js"), import("./_import/components/tabular-data.e41c7133.js")]);
+define({id: "63838393", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","employmentWaffle","principalEconomicStatusWaterfall","percentageStripChart","chartColors","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","tabularRows","employmentData","occupationData","economicStatusData","workingFromHomeData","householdIncomeData","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentWorkContributions","workHeroVideo","WORK_MATCHER","partyColorMap","INDUSTRIES","OCCUPATIONS","ECONOMIC_STATUSES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","occupationRowsForDistrict","rowsForSelectedArea","economicStatusProfile","economicStatusPopulation","constituencyMembers","recentConstituencyWorkQuestions","recentConstituencyWorkContributions","aggregateEmployment","aggregateOccupations","employmentStats","workingFromHomeStats","labourForceStats","selectedDistrictHouseholdIncome","nationalStats","nationalWorkingFromHomeStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","differenceText","currencyDifferenceText","restoreScroll","rerender","mountReactive","renderScopeControl","renderProfileViewControl","renderDistrictMapExplorer","EMPLOYMENT_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {employmentWaffle}, {principalEconomicStatusWaterfall}, {percentageStripChart}, {chartColors}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {tabularRows}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/constituency-select.0c882826.js"), import("./_import/components/constituency-location.b58bd197.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.58b1295c.js"), import("./_import/components/electoral-district-map.be4ab806.js"), import("./_import/components/employment-charts.2ba10341.js"), import("./_import/components/people-charts.186af8cb.js"), import("./_import/components/percentage-strip-chart.9bcba661.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/member-cards.38adb284.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.0c3beeac.js"), import("./_import/components/hero-share.e70c1fd9.js"), import("./_import/components/tabular-data.e41c7133.js")]);
 
 const employmentData = tabularRows(await FileAttachment("./data/derived/browser/employment-industry-2022.json").json());
 const occupationData = tabularRows(await FileAttachment("./data/derived/browser/employment-occupation-2022.json").json());
@@ -775,6 +779,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "employment:change",
+    defer: true,
     ...options
   });
 }
@@ -1119,7 +1124,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:066581e1:--></div>
+<div class="observablehq observablehq--block"><!--:63838393:--></div>
 <div class="observablehq observablehq--block"><!--:6373a063:--></div>
 <div class="observablehq observablehq--block"><!--:9279bc04:--></div>
 <div class="prose-block lead">

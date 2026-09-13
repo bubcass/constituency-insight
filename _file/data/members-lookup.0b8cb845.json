@@ -10,9 +10,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Climate, Environment and Energy",
       "Committee on Members' Interests of Dáil Éireann",
-      "Select Committee on Climate, Environment and Energy"
+      "Select Committee on Climate, Environment and Energy",
+      "Joint Committee on Climate, Environment and Energy"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Ciarán-Ahern.D.2024-11-29/"
   },
@@ -27,10 +27,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food (Leas-Chathaoirleach)",
-      "Joint Committee on Social Protection, Rural and Community Development",
       "Select Committee on Agriculture and Food (Leas-Chathaoirleach)",
-      "Select Committee on Social Protection, Rural and Community Development"
+      "Joint Committee on Agriculture and Food (Leas-Chathaoirleach)",
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/William-Aird.D.2024-11-29/"
   },
@@ -45,9 +45,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Social Protection, Rural and Community Development",
       "Committee of Public Accounts",
-      "Select Committee on Social Protection, Rural and Community Development"
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Catherine-Ardagh.S.2016-04-25/"
   },
@@ -75,10 +75,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Foreign Affairs and Trade",
-      "Select Committee on Foreign Affairs and Trade",
       "Committee of Public Accounts",
-      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)"
+      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
+      "Select Committee on Foreign Affairs and Trade",
+      "Joint Committee on Foreign Affairs and Trade"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Cathy-Bennett.D.2024-11-29/"
   },
@@ -93,11 +93,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
-      "Joint Committee on Transport",
       "Committee of Public Accounts",
       "Select Committee on Children and Equality",
-      "Select Committee on Transport"
+      "Joint Committee on Children and Equality",
+      "Select Committee on Transport",
+      "Joint Committee on Transport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Grace-Boland.D.2024-11-29/"
   },
@@ -112,14 +112,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Housing, Local Government and Heritage",
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Budgetary Oversight",
-      "Select Committee on Housing, Local Government and Heritage",
       "Committee of Selection (Dáil Éireann)",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science"
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
+      "Select Committee on Housing, Local Government and Heritage",
+      "Joint Committee on Housing, Local Government and Heritage"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Richard-Boyd-Barrett.D.2011-03-09/"
   },
@@ -134,14 +134,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Drugs Use",
-      "Joint Committee on Justice, Home Affairs and Migration",
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Social Protection, Rural and Community Development",
-      "Select Committee on Justice, Home Affairs and Migration",
       "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
+      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Justice, Home Affairs and Migration",
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development",
       "Select Committee on Drugs Use",
-      "Select Committee on Social Protection, Rural and Community Development"
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Tom-Brabazon.D.2024-11-29/"
   },
@@ -156,8 +156,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Committee of Public Accounts (Cathaoirleach)"
+      "Committee of Public Accounts (Cathaoirleach)",
+      "Working Group of Committee Cathaoirligh"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/John-Brady.D.2016-10-03/"
   },
@@ -172,16 +172,16 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Foreign Affairs and Trade",
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
-      "Joint Committee on Enterprise, Tourism and Employment (Leas-Chathaoirleach)",
-      "Select Committee on Arts, Media, Communications, Culture and Sport",
-      "Select Committee on Foreign Affairs and Trade",
-      "Select Committee on Enterprise, Tourism and Employment (Leas-Chathaoirleach)",
+      "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Remit Oversight (Dáil Éireann)",
-      "Committee on Standing Orders and Dáil Reform"
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Arts, Media, Communications, Culture and Sport",
+      "Joint Committee on Arts, Media, Communications, Culture and Sport",
+      "Select Committee on Enterprise, Tourism and Employment (Leas-Chathaoirleach)",
+      "Joint Committee on Enterprise, Tourism and Employment (Leas-Chathaoirleach)",
+      "Select Committee on Foreign Affairs and Trade",
+      "Joint Committee on Foreign Affairs and Trade"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Brian-Brennan.D.2024-11-29/"
   },
@@ -196,13 +196,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Foreign Affairs and Trade",
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Committee on Standing Orders and Dáil Reform",
       "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Select Committee on Infrastructure and National Development Plan Delivery",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
       "Select Committee on Foreign Affairs and Trade",
-      "Committee on Standing Orders and Dáil Reform"
+      "Joint Committee on Foreign Affairs and Trade",
+      "Select Committee on Infrastructure and National Development Plan Delivery",
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Shay-Brennan.D.2024-11-29/"
   },
@@ -259,12 +259,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Joint Committee on Health (Leas-Chathaoirleach)",
-      "Joint Committee on Drugs Use",
       "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
       "Select Committee on Health (Leas-Chathaoirleach)",
-      "Select Committee on Drugs Use"
+      "Joint Committee on Health (Leas-Chathaoirleach)",
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Colm-Burke.S.2011-05-25/"
   },
@@ -292,12 +292,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee of Selection (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Mary-Butler.D.2016-10-03/"
   },
@@ -312,15 +312,15 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on European Union Affairs",
+      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
+      "Committee on Remit Oversight (Dáil Éireann)",
       "Joint Committee on Remit Oversight",
+      "Select Committee on Housing, Local Government and Heritage",
       "Joint Committee on Housing, Local Government and Heritage",
+      "Select Committee on Justice, Home Affairs and Migration (Leas-Chathaoirleach)",
       "Joint Committee on Justice, Home Affairs and Migration (Leas-Chathaoirleach)",
       "Select Committee on European Union Affairs",
-      "Select Committee on Justice, Home Affairs and Migration (Leas-Chathaoirleach)",
-      "Committee on Remit Oversight (Dáil Éireann)",
-      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Select Committee on Housing, Local Government and Heritage"
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Paula-Butterly.D.2024-11-29/"
   },
@@ -334,7 +334,9 @@
     "partyCode": "Fine_Gael",
     "startDate": "2024-11-29",
     "endDate": null,
-    "committees": [],
+    "committees": [
+      "Committee on Parliamentary Privileges and Oversight (Seanad Éireann) (Cathaoirleach)"
+    ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Jerry-Buttimer.S.2007-07-23/"
   },
   "Joanna-Byrne.D.2024-11-29": {
@@ -348,13 +350,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
-      "Joint Committee on Remit Oversight",
-      "Select Committee on Arts, Media, Communications, Culture and Sport",
-      "Committee on Remit Oversight (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee of Public Accounts"
+      "Committee of Public Accounts",
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Arts, Media, Communications, Culture and Sport",
+      "Joint Committee on Arts, Media, Communications, Culture and Sport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Joanna-Byrne.D.2024-11-29/"
   },
@@ -369,14 +371,15 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Climate, Environment and Energy",
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Artificial Intelligence (Cathaoirleach)",
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
-      "Select Committee on Artificial Intelligence (Cathaoirleach)",
+      "Working Group of Committee Cathaoirligh",
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Arts, Media, Communications, Culture and Sport",
+      "Joint Committee on Arts, Media, Communications, Culture and Sport",
       "Select Committee on Climate, Environment and Energy",
-      "Select Committee on Arts, Media, Communications, Culture and Sport"
+      "Joint Committee on Climate, Environment and Energy",
+      "Select Committee on Artificial Intelligence (Cathaoirleach)",
+      "Joint Committee on Artificial Intelligence (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Malcolm-Byrne.D.2019-11-29/"
   },
@@ -404,16 +407,16 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Joint Committee on Health",
-      "Joint Committee on Justice, Home Affairs and Migration",
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Fisheries and Maritime Affairs",
       "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food",
+      "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
       "Select Committee on Fisheries and Maritime Affairs",
-      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Fisheries and Maritime Affairs",
       "Select Committee on Health",
-      "Select Committee on Defence and National Security"
+      "Joint Committee on Health",
+      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Justice, Home Affairs and Migration"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Michael-Cahill.D.2024-11-29/"
   },
@@ -441,14 +444,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Education and Youth",
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Justice, Home Affairs and Migration",
       "Committee on Members' Interests of Dáil Éireann (Cathaoirleach)",
-      "Select Committee on Justice, Home Affairs and Migration",
+      "Working Group of Committee Cathaoirligh",
       "Select Committee on Defence and National Security",
-      "Select Committee on Education and Youth"
+      "Joint Committee on Defence and National Security",
+      "Select Committee on Education and Youth",
+      "Joint Committee on Education and Youth",
+      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Justice, Home Affairs and Migration"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Catherine-Callaghan.D.2024-11-29/"
   },
@@ -489,13 +492,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
-      "Joint Committee on Housing, Local Government and Heritage (Cathaoirleach)",
-      "Joint Committee on Disability Matters",
       "Working Group of Committee Cathaoirligh",
-      "Select Committee on Disability Matters",
       "Select Committee on Arts, Media, Communications, Culture and Sport",
-      "Select Committee on Housing, Local Government and Heritage (Cathaoirleach)"
+      "Joint Committee on Arts, Media, Communications, Culture and Sport",
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters",
+      "Select Committee on Housing, Local Government and Heritage (Cathaoirleach)",
+      "Joint Committee on Housing, Local Government and Heritage (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Micheál-Carrigy.S.2020-03-30/"
   },
@@ -524,8 +527,8 @@
     "endDate": null,
     "committees": [
       "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Justice, Home Affairs and Migration (Cathaoirleach)",
-      "Select Committee on Justice, Home Affairs and Migration (Cathaoirleach)"
+      "Select Committee on Justice, Home Affairs and Migration (Cathaoirleach)",
+      "Joint Committee on Justice, Home Affairs and Migration (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Matt-Carthy.D.2020-02-08/"
   },
@@ -553,8 +556,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Health",
-      "Select Committee on Health"
+      "Select Committee on Health",
+      "Joint Committee on Health"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Sorca-Clarke.D.2020-02-08/"
   },
@@ -569,16 +572,16 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on Agriculture and Food",
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
-      "Joint Committee on Disability Matters",
       "Joint Committee on Public Petitions and the Ombudsmen",
-      "Select Committee on Fisheries and Maritime Affairs",
       "Select Committee on Public Petitions and the Ombudsmen",
       "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food",
+      "Select Committee on Arts, Media, Communications, Culture and Sport",
+      "Joint Committee on Arts, Media, Communications, Culture and Sport",
       "Select Committee on Disability Matters",
-      "Select Committee on Arts, Media, Communications, Culture and Sport"
+      "Joint Committee on Disability Matters",
+      "Select Committee on Fisheries and Maritime Affairs",
+      "Joint Committee on Fisheries and Maritime Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Peter-'Chap'-Cleere.D.2024-11-29/"
   },
@@ -593,15 +596,15 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
+      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
+      "Committee on Remit Oversight (Dáil Éireann)",
       "Joint Committee on Remit Oversight",
+      "Select Committee on Enterprise, Tourism and Employment",
       "Joint Committee on Enterprise, Tourism and Employment",
+      "Select Committee on Climate, Environment and Energy",
       "Joint Committee on Climate, Environment and Energy",
       "Select Committee on Infrastructure and National Development Plan Delivery",
-      "Select Committee on Climate, Environment and Energy",
-      "Committee on Remit Oversight (Dáil Éireann)",
-      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Select Committee on Enterprise, Tourism and Employment"
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/John-Clendennen.D.2024-11-29/"
   },
@@ -616,11 +619,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Transport",
-      "Select Committee on Transport",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
-      "Committee of Selection (Dáil Éireann)"
+      "Committee of Selection (Dáil Éireann)",
+      "Select Committee on Transport",
+      "Joint Committee on Transport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Michael-Collins.D.2016-10-03/"
   },
@@ -648,10 +651,10 @@
     "startDate": "2024-11-29",
     "endDate": "2025-10-25",
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Cathaoirleach)",
       "Committee of Public Accounts",
-      "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Cathaoirleach)"
+      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Cathaoirleach)",
+      "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Cathaoirleach)",
+      "Working Group of Committee Cathaoirligh"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Catherine-Connolly.D.2016-10-03/"
   },
@@ -666,16 +669,16 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Key Issues Affecting the Traveller Community",
-      "Joint Committee on Children and Equality",
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Select Committee on Key Issues Affecting the Traveller Community",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
       "Select Committee on Children and Equality",
+      "Joint Committee on Children and Equality",
+      "Select Committee on Fisheries and Maritime Affairs",
+      "Joint Committee on Fisheries and Maritime Affairs",
       "Select Committee on Further and Higher Education, Research, Innovation and Science",
-      "Select Committee on Fisheries and Maritime Affairs"
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/John-Connolly.D.2024-11-29/"
   },
@@ -690,13 +693,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
-      "Joint Committee on Enterprise, Tourism and Employment",
       "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Defence and National Security (Cathaoirleach)",
       "Select Committee on Defence and National Security (Cathaoirleach)",
+      "Joint Committee on Defence and National Security (Cathaoirleach)",
+      "Select Committee on Enterprise, Tourism and Employment",
+      "Joint Committee on Enterprise, Tourism and Employment",
       "Select Committee on the Implementation of the Good Friday Agreement ",
-      "Select Committee on Enterprise, Tourism and Employment"
+      "Joint Committee on the Implementation of the Good Friday Agreement "
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Rose-Conway-Walsh.S.2016-04-25/"
   },
@@ -711,12 +714,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on Housing, Local Government and Heritage",
       "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food",
       "Select Committee on Fisheries and Maritime Affairs",
-      "Select Committee on Housing, Local Government and Heritage"
+      "Joint Committee on Fisheries and Maritime Affairs",
+      "Select Committee on Housing, Local Government and Heritage",
+      "Joint Committee on Housing, Local Government and Heritage"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Joe-Cooney.D.2024-11-29/"
   },
@@ -731,11 +734,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Education and Youth",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Remit Oversight (Dáil Éireann)",
-      "Select Committee on Education and Youth"
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Education and Youth",
+      "Joint Committee on Education and Youth"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Ruth-Coppinger.D.2014-05-23/"
   },
@@ -750,10 +753,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
+      "Select Committee on Climate, Environment and Energy",
       "Joint Committee on Climate, Environment and Energy",
       "Select Committee on Infrastructure and National Development Plan Delivery",
-      "Select Committee on Climate, Environment and Energy"
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Réada-Cronin.D.2020-02-08/"
   },
@@ -768,12 +771,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Education and Youth (Cathaoirleach)",
-      "Joint Committee on Transport",
+      "Committee on Budgetary Oversight",
       "Working Group of Committee Cathaoirligh",
       "Select Committee on Education and Youth (Cathaoirleach)",
+      "Joint Committee on Education and Youth (Cathaoirleach)",
       "Select Committee on Transport",
-      "Committee on Budgetary Oversight"
+      "Joint Committee on Transport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Cathal-Crowe.D.2020-02-08/"
   },
@@ -788,10 +791,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
+      "Select Committee on European Union Affairs",
       "Joint Committee on European Union Affairs",
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
       "Select Committee on the Implementation of the Good Friday Agreement ",
-      "Select Committee on European Union Affairs"
+      "Joint Committee on the Implementation of the Good Friday Agreement "
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Seán-Crowe.D.2002-06-06/"
   },
@@ -806,8 +809,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Health",
-      "Select Committee on Health"
+      "Select Committee on Health",
+      "Joint Committee on Health"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/David-Cullinane.S.2011-05-25/"
   },
@@ -822,11 +825,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Education and Youth",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Remit Oversight (Dáil Éireann)",
-      "Select Committee on Education and Youth"
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Education and Youth",
+      "Joint Committee on Education and Youth"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Jen-Cummins.D.2024-11-29/"
   },
@@ -854,18 +857,20 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Education and Youth",
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Transport",
-      "Joint Committee on Children and Equality",
+      "Committee of Selection (Seanad Éireann)",
+      "Seanad Public Consultation Committee",
       "Business Committee (Dáil Éireann)",
+      "Committee on Standing Orders and Dáil Reform",
+      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee of Selection (Dáil Éireann)",
       "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
       "Select Committee on Children and Equality",
-      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Standing Orders and Dáil Reform",
+      "Joint Committee on Children and Equality",
       "Select Committee on Education and Youth",
-      "Select Committee on Transport"
+      "Joint Committee on Education and Youth",
+      "Select Committee on Transport",
+      "Joint Committee on Transport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Emer-Currie.S.2020-06-29/"
   },
@@ -880,11 +885,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Disability Matters",
-      "Joint Committee on Health",
       "Committee of Public Accounts",
       "Select Committee on Disability Matters",
-      "Select Committee on Health"
+      "Joint Committee on Disability Matters",
+      "Select Committee on Health",
+      "Joint Committee on Health"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Martin-Daly.D.2024-11-29/"
   },
@@ -899,10 +904,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Transport",
+      "Select Committee on Climate, Environment and Energy",
       "Joint Committee on Climate, Environment and Energy",
       "Select Committee on Transport",
-      "Select Committee on Climate, Environment and Energy"
+      "Joint Committee on Transport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Pa-Daly.D.2020-02-08/"
   },
@@ -917,13 +922,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Disability Matters",
-      "Joint Committee on Children and Equality (Leas-Chathaoirleach)",
-      "Joint Committee on Education and Youth",
-      "Select Committee on Education and Youth",
-      "Select Committee on Disability Matters",
+      "Committee on Standing Orders and Dáil Reform",
       "Select Committee on Children and Equality (Leas-Chathaoirleach)",
-      "Committee on Standing Orders and Dáil Reform"
+      "Joint Committee on Children and Equality (Leas-Chathaoirleach)",
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters",
+      "Select Committee on Education and Youth",
+      "Joint Committee on Education and Youth"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Aisling-Dempsey.D.2024-11-29/"
   },
@@ -938,9 +943,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Drugs Use",
       "Committee on Budgetary Oversight",
-      "Select Committee on Drugs Use"
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Máire-Devine.S.2016-04-25/"
   },
@@ -955,11 +960,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on the Implementation of the Good Friday Agreement  (Cathaoirleach)",
-      "Select Committee on the Implementation of the Good Friday Agreement  (Cathaoirleach)",
       "Committee on Standing Orders and Dáil Reform",
-      "Committee on Budgetary Oversight"
+      "Committee on Budgetary Oversight",
+      "Working Group of Committee Cathaoirligh",
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on the Implementation of the Good Friday Agreement  (Cathaoirleach)",
+      "Joint Committee on the Implementation of the Good Friday Agreement  (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Cormac-Devlin.D.2020-02-08/"
   },
@@ -987,8 +993,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
+      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Pearse-Doherty.S.2007-07-23/"
   },
@@ -1003,13 +1009,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Enterprise, Tourism and Employment",
+      "Committee of Public Accounts",
       "Joint Committee on Public Petitions and the Ombudsmen (Leas-Chathaoirleach)",
-      "Joint Committee on Justice, Home Affairs and Migration",
-      "Select Committee on Justice, Home Affairs and Migration",
-      "Select Committee on Enterprise, Tourism and Employment",
       "Select Committee on Public Petitions and the Ombudsmen",
-      "Committee of Public Accounts"
+      "Select Committee on Enterprise, Tourism and Employment",
+      "Joint Committee on Enterprise, Tourism and Employment",
+      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Justice, Home Affairs and Migration"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Albert-Dolan.D.2024-11-29/"
   },
@@ -1024,8 +1030,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Enterprise, Tourism and Employment",
-      "Select Committee on Enterprise, Tourism and Employment"
+      "Select Committee on Enterprise, Tourism and Employment",
+      "Joint Committee on Enterprise, Tourism and Employment"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Paul-Donnelly.D.2020-02-08/"
   },
@@ -1066,8 +1072,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Key Issues Affecting the Traveller Community",
-      "Select Committee on Key Issues Affecting the Traveller Community"
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Dessie-Ellis.D.2011-03-09/"
   },
@@ -1082,8 +1088,8 @@
     "startDate": "2026-05-25",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
-      "Select Committee on Children and Equality"
+      "Select Committee on Children and Equality",
+      "Joint Committee on Children and Equality"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Daniel-Ennis.D.2026-05-25/"
   },
@@ -1098,10 +1104,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Cathaoirleach)",
       "Committee on Budgetary Oversight",
-      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Cathaoirleach)"
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Cathaoirleach)",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Mairéad-Farrell.D.2020-02-08/"
   },
@@ -1116,9 +1122,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
       "Committee of Public Accounts",
-      "Select Committee on Children and Equality"
+      "Select Committee on Children and Equality",
+      "Joint Committee on Children and Equality"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Aidan-Farrelly.D.2024-11-29/"
   },
@@ -1133,12 +1139,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
-      "Joint Committee on Remit Oversight",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Frank-Feighan.S.2002-09-12/"
   },
@@ -1153,8 +1159,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Select Committee on Agriculture and Food"
+      "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Michael-Fitzmaurice.D.2014-10-10/"
   },
@@ -1169,13 +1175,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh (Cathaoirleach)",
-      "Joint Committee on Infrastructure and National Development Plan Delivery (Cathaoirleach)",
-      "Committee of Selection (Dáil Éireann)",
       "Business Committee (Dáil Éireann)",
-      "Select Committee on Infrastructure and National Development Plan Delivery (Cathaoirleach)",
+      "Committee on Budgetary Oversight",
+      "Committee of Selection (Dáil Éireann)",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny) (Cathaoirleach)",
-      "Committee on Budgetary Oversight"
+      "Working Group of Committee Cathaoirligh (Cathaoirleach)",
+      "Select Committee on Infrastructure and National Development Plan Delivery (Cathaoirleach)",
+      "Joint Committee on Infrastructure and National Development Plan Delivery (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Seán-Fleming.D.1997-06-26/"
   },
@@ -1203,10 +1209,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Fisheries and Maritime Affairs (Leas-Chathaoirleach)",
-      "Joint Committee on Social Protection, Rural and Community Development",
       "Select Committee on Fisheries and Maritime Affairs (Leas-Chathaoirleach)",
-      "Select Committee on Social Protection, Rural and Community Development"
+      "Joint Committee on Fisheries and Maritime Affairs (Leas-Chathaoirleach)",
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Pat-the-Cope-Gallagher.D.1981-06-30/"
   },
@@ -1221,11 +1227,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Drugs Use (Cathaoirleach)",
       "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Justice, Home Affairs and Migration",
+      "Working Group of Committee Cathaoirligh",
       "Select Committee on Justice, Home Affairs and Migration",
-      "Select Committee on Drugs Use (Cathaoirleach)"
+      "Joint Committee on Justice, Home Affairs and Migration",
+      "Select Committee on Drugs Use (Cathaoirleach)",
+      "Joint Committee on Drugs Use (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Gary-Gannon.D.2020-02-08/"
   },
@@ -1240,11 +1247,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
-      "Joint Committee on Artificial Intelligence (Leas-Chathaoirleach)",
       "Committee of Public Accounts",
       "Select Committee on Further and Higher Education, Research, Innovation and Science",
-      "Select Committee on Artificial Intelligence"
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
+      "Select Committee on Artificial Intelligence",
+      "Joint Committee on Artificial Intelligence (Leas-Chathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/James-Geoghegan.D.2024-11-29/"
   },
@@ -1259,12 +1266,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
-      "Joint Committee on Artificial Intelligence",
       "Select Committee on Arts, Media, Communications, Culture and Sport",
+      "Joint Committee on Arts, Media, Communications, Culture and Sport",
       "Select Committee on the Implementation of the Good Friday Agreement ",
-      "Select Committee on Artificial Intelligence"
+      "Joint Committee on the Implementation of the Good Friday Agreement ",
+      "Select Committee on Artificial Intelligence",
+      "Joint Committee on Artificial Intelligence"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Sinéad-Gibney.D.2024-11-29/"
   },
@@ -1279,10 +1286,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Enterprise, Tourism and Employment",
-      "Joint Committee on European Union Affairs",
       "Select Committee on Enterprise, Tourism and Employment",
-      "Select Committee on European Union Affairs"
+      "Joint Committee on Enterprise, Tourism and Employment",
+      "Select Committee on European Union Affairs",
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Paul-Nicholas-Gogarty.D.2002-06-06/"
   },
@@ -1297,8 +1304,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Housing, Local Government and Heritage",
-      "Select Committee on Housing, Local Government and Heritage"
+      "Select Committee on Housing, Local Government and Heritage",
+      "Joint Committee on Housing, Local Government and Heritage"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Thomas-Gould.D.2020-02-08/"
   },
@@ -1313,8 +1320,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Drugs Use",
-      "Select Committee on Drugs Use"
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Ann-Graves.D.2024-11-29/"
   },
@@ -1342,9 +1349,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Social Protection, Rural and Community Development",
       "Committee on Budgetary Oversight",
-      "Select Committee on Social Protection, Rural and Community Development"
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Johnny-Guirke.D.2020-02-08/"
   },
@@ -1385,10 +1392,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Social Protection, Rural and Community Development",
       "Joint Committee on Public Petitions and the Ombudsmen",
+      "Select Committee on Public Petitions and the Ombudsmen",
       "Select Committee on Social Protection, Rural and Community Development",
-      "Select Committee on Public Petitions and the Ombudsmen"
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Eoin-Hayes.D.2024-11-29/"
   },
@@ -1403,8 +1410,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Disability Matters",
-      "Select Committee on Disability Matters"
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Seamus-Healy.D.2000-06-22/"
   },
@@ -1419,8 +1426,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Select Committee on Agriculture and Food"
+      "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Danny-Healy-Rae.D.2016-10-03/"
   },
@@ -1448,10 +1455,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Housing, Local Government and Heritage",
       "Joint Committee on Public Petitions and the Ombudsmen",
+      "Select Committee on Public Petitions and the Ombudsmen",
       "Select Committee on Housing, Local Government and Heritage",
-      "Select Committee on Public Petitions and the Ombudsmen"
+      "Joint Committee on Housing, Local Government and Heritage"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Rory-Hearne.D.2024-11-29/"
   },
@@ -1466,8 +1473,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Climate, Environment and Energy",
-      "Select Committee on Climate, Environment and Energy"
+      "Select Committee on Climate, Environment and Energy",
+      "Joint Committee on Climate, Environment and Energy"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Barry-Heneghan.D.2024-11-29/"
   },
@@ -1508,11 +1515,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Arts, Media, Communications, Culture and Sport (Cathaoirleach)",
-      "Joint Committee on Justice, Home Affairs and Migration",
       "Working Group of Committee Cathaoirligh",
+      "Select Committee on Arts, Media, Communications, Culture and Sport (Cathaoirleach)",
+      "Joint Committee on Arts, Media, Communications, Culture and Sport (Cathaoirleach)",
       "Select Committee on Justice, Home Affairs and Migration",
-      "Select Committee on Arts, Media, Communications, Culture and Sport (Cathaoirleach)"
+      "Joint Committee on Justice, Home Affairs and Migration"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Alan-Kelly.S.2007-07-23/"
   },
@@ -1527,9 +1534,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
       "Committee of Public Accounts",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science"
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Eoghan-Kenny.D.2024-11-29/"
   },
@@ -1544,8 +1551,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Select Committee on Agriculture and Food"
+      "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Martin-Kenny.D.2016-10-03/"
   },
@@ -1560,14 +1567,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Disability Matters",
-      "Joint Committee on Children and Equality (Cathaoirleach)",
-      "Joint Committee on Artificial Intelligence",
-      "Select Committee on Disability Matters",
-      "Select Committee on Children and Equality (Cathaoirleach)",
       "Committee on Standing Orders and Dáil Reform",
-      "Select Committee on Artificial Intelligence"
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Children and Equality (Cathaoirleach)",
+      "Joint Committee on Children and Equality (Cathaoirleach)",
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters",
+      "Select Committee on Artificial Intelligence",
+      "Joint Committee on Artificial Intelligence"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Keira-Keogh.D.2024-11-29/"
   },
@@ -1582,10 +1589,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
-      "Joint Committee on Disability Matters",
       "Select Committee on Children and Equality",
-      "Select Committee on Disability Matters"
+      "Joint Committee on Children and Equality",
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Claire-Kerrane.D.2020-02-08/"
   },
@@ -1599,7 +1606,15 @@
     "partyCode": "Fine_Gael",
     "startDate": "2026-05-25",
     "endDate": null,
-    "committees": [],
+    "committees": [
+      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
+      "Committee on Parliamentary Privileges and Oversight (Seanad Éireann)",
+      "Committee of Selection (Seanad Éireann)",
+      "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Seanad Éireann)",
+      "Seanad Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
+      "Seanad Public Consultation Committee"
+    ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Seán-Kyne.D.2011-03-09/"
   },
   "John-Lahart.D.2016-10-03": {
@@ -1613,13 +1628,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Foreign Affairs and Trade (Cathaoirleach)",
-      "Joint Committee on European Union Affairs",
-      "Working Group of Committee Cathaoirligh",
-      "Select Committee on European Union Affairs",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Members' Interests of Dáil Éireann",
-      "Select Committee on Foreign Affairs and Trade (Cathaoirleach)"
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Foreign Affairs and Trade (Cathaoirleach)",
+      "Joint Committee on Foreign Affairs and Trade (Cathaoirleach)",
+      "Select Committee on European Union Affairs",
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/John-Lahart.D.2016-10-03/"
   },
@@ -1647,8 +1662,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Select Committee on Agriculture and Food"
+      "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Paul-Lawless.D.2024-11-29/"
   },
@@ -1664,10 +1679,11 @@
     "endDate": null,
     "committees": [
       "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Enterprise, Tourism and Employment",
-      "Joint Committee on Key Issues Affecting the Traveller Community (Cathaoirleach)",
+      "Working Group of Committee Cathaoirligh",
       "Select Committee on Enterprise, Tourism and Employment",
-      "Select Committee on Key Issues Affecting the Traveller Community (Cathaoirleach)"
+      "Joint Committee on Enterprise, Tourism and Employment",
+      "Select Committee on Key Issues Affecting the Traveller Community (Cathaoirleach)",
+      "Joint Committee on Key Issues Affecting the Traveller Community (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/George-Lawlor.D.2024-11-29/"
   },
@@ -1695,14 +1711,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on Remit Oversight",
-      "Select Committee on Fisheries and Maritime Affairs",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
-      "Committee of Selection (Dáil Éireann)",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee of Selection (Dáil Éireann)",
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Fisheries and Maritime Affairs",
+      "Joint Committee on Fisheries and Maritime Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Pádraig-MacLochlainn.D.2011-03-09/"
   },
@@ -1731,11 +1747,11 @@
     "endDate": null,
     "committees": [
       "Joint Committee on Public Petitions and the Ombudsmen",
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on the Implementation of the Good Friday Agreement  (Leas-Chathaoirleach)",
       "Select Committee on Public Petitions and the Ombudsmen",
       "Select Committee on Fisheries and Maritime Affairs",
-      "Select Committee on the Implementation of the Good Friday Agreement "
+      "Joint Committee on Fisheries and Maritime Affairs",
+      "Select Committee on the Implementation of the Good Friday Agreement ",
+      "Joint Committee on the Implementation of the Good Friday Agreement  (Leas-Chathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/David-Maxwell.D.2024-11-29/"
   },
@@ -1750,15 +1766,15 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Disability Matters",
-      "Joint Committee on Housing, Local Government and Heritage",
-      "Select Committee on Disability Matters",
-      "Select Committee on Housing, Local Government and Heritage",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee of Public Accounts (Leas-Chathaoirleach)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters",
+      "Select Committee on Housing, Local Government and Heritage",
+      "Joint Committee on Housing, Local Government and Heritage"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Paul-McAuliffe.D.2020-02-08/"
   },
@@ -1773,10 +1789,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Foreign Affairs and Trade",
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
       "Select Committee on Foreign Affairs and Trade",
-      "Select Committee on the Implementation of the Good Friday Agreement "
+      "Joint Committee on Foreign Affairs and Trade",
+      "Select Committee on the Implementation of the Good Friday Agreement ",
+      "Joint Committee on the Implementation of the Good Friday Agreement "
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Noel-McCarthy.D.2024-11-29/"
   },
@@ -1804,12 +1820,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Enterprise, Tourism and Employment",
-      "Joint Committee on Key Issues Affecting the Traveller Community",
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
       "Select Committee on Enterprise, Tourism and Employment",
+      "Joint Committee on Enterprise, Tourism and Employment",
       "Select Committee on Key Issues Affecting the Traveller Community",
-      "Select Committee on Infrastructure and National Development Plan Delivery"
+      "Joint Committee on Key Issues Affecting the Traveller Community",
+      "Select Committee on Infrastructure and National Development Plan Delivery",
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Tony-McCormack.D.2024-11-29/"
   },
@@ -1850,8 +1866,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science"
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Donna-McGettigan.D.2024-11-29/"
   },
@@ -1866,10 +1882,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Budgetary Oversight",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Mattie-McGrath.D.2007-06-14/"
   },
@@ -1884,11 +1900,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Housing, Local Government and Heritage (Leas-Chathaoirleach)",
-      "Joint Committee on Key Issues Affecting the Traveller Community",
       "Committee of Public Accounts",
       "Select Committee on Housing, Local Government and Heritage (Leas-Chathaoirleach)",
-      "Select Committee on Key Issues Affecting the Traveller Community"
+      "Joint Committee on Housing, Local Government and Heritage (Leas-Chathaoirleach)",
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Séamus-McGrath.D.2024-11-29/"
   },
@@ -1903,14 +1919,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science (Cathaoirleach)",
+      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
       "Working Group of Committee Cathaoirligh",
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
       "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
       "Select Committee on Further and Higher Education, Research, Innovation and Science (Cathaoirleach)",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science (Cathaoirleach)",
       "Select Committee on the Implementation of the Good Friday Agreement ",
-      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)"
+      "Joint Committee on the Implementation of the Good Friday Agreement "
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Erin-McGreehan.S.2020-06-29/"
   },
@@ -1925,10 +1941,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Fisheries and Maritime Affairs (Cathaoirleach)",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
-      "Select Committee on Fisheries and Maritime Affairs (Cathaoirleach)"
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Fisheries and Maritime Affairs (Cathaoirleach)",
+      "Joint Committee on Fisheries and Maritime Affairs (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Conor-D-McGuinness.D.2024-11-29/"
   },
@@ -1943,9 +1959,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/John-McGuinness.D.1997-06-26/"
   },
@@ -1960,10 +1976,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Denise-Mitchell.D.2016-10-03/"
   },
@@ -1991,13 +2007,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Agriculture and Food (Cathaoirleach)",
-      "Select Committee on Agriculture and Food (Cathaoirleach)",
       "Committee on Budgetary Oversight",
+      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Agriculture and Food (Cathaoirleach)",
+      "Joint Committee on Agriculture and Food (Cathaoirleach)",
       "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)"
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Aindrias-Moynihan.D.2016-10-03/"
   },
@@ -2025,13 +2041,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Transport (Leas-Chathaoirleach)",
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Cathaoirleach)",
-      "Select Committee on Transport (Leas-Chathaoirleach)",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Cathaoirleach)",
-      "Select Committee on the Implementation of the Good Friday Agreement "
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Transport (Leas-Chathaoirleach)",
+      "Joint Committee on Transport (Leas-Chathaoirleach)",
+      "Select Committee on the Implementation of the Good Friday Agreement ",
+      "Joint Committee on the Implementation of the Good Friday Agreement "
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Shane-Moynihan.D.2024-11-29/"
   },
@@ -2059,14 +2075,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Transport (Cathaoirleach)",
-      "Joint Committee on Public Petitions and the Ombudsmen",
-      "Joint Committee on European Union Affairs",
-      "Select Committee on Transport (Cathaoirleach)",
-      "Select Committee on Public Petitions and the Ombudsmen",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
-      "Select Committee on European Union Affairs"
+      "Joint Committee on Public Petitions and the Ombudsmen",
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Public Petitions and the Ombudsmen",
+      "Select Committee on Transport (Cathaoirleach)",
+      "Joint Committee on Transport (Cathaoirleach)",
+      "Select Committee on European Union Affairs",
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Michael-Murphy.D.2024-11-29/"
   },
@@ -2081,13 +2097,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
-      "Joint Committee on Artificial Intelligence",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science",
-      "Select Committee on Artificial Intelligence",
       "Committee on Standing Orders and Dáil Reform",
       "Committee of Public Accounts",
-      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)"
+      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
+      "Select Committee on Artificial Intelligence",
+      "Joint Committee on Artificial Intelligence"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Paul-Murphy.D.2014-10-10/"
   },
@@ -2102,13 +2118,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Remit Oversight (Cathaoirleach)",
-      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann) (Cathaoirleach)",
       "Business Committee (Dáil Éireann) (Cathaoirleach)",
-      "Committee on Remit Oversight (Dáil Éireann) (Cathaoirleach)",
+      "Committee on Standing Orders and Dáil Reform (Cathaoirleach)",
+      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann) (Cathaoirleach)",
       "Committee of Selection (Dáil Éireann) (Cathaoirleach)",
-      "Committee on Standing Orders and Dáil Reform (Cathaoirleach)"
+      "Working Group of Committee Cathaoirligh",
+      "Committee on Remit Oversight (Dáil Éireann) (Cathaoirleach)",
+      "Joint Committee on Remit Oversight (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Verona-Murphy.D.2020-02-08/"
   },
@@ -2123,8 +2139,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Artificial Intelligence",
-      "Select Committee on Artificial Intelligence"
+      "Select Committee on Artificial Intelligence",
+      "Joint Committee on Artificial Intelligence"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Johnny-Mythen.D.2020-02-08/"
   },
@@ -2139,12 +2155,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Joint Committee on Remit Oversight",
-      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Budgetary Oversight",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Gerald-Nash.D.2011-03-09/"
   },
@@ -2172,10 +2188,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Infrastructure and National Development Plan Delivery (Leas-Chathaoirleach)",
       "Committee on Budgetary Oversight",
       "Committee of Public Accounts",
-      "Select Committee on Infrastructure and National Development Plan Delivery (Leas-Chathaoirleach)"
+      "Select Committee on Infrastructure and National Development Plan Delivery (Leas-Chathaoirleach)",
+      "Joint Committee on Infrastructure and National Development Plan Delivery (Leas-Chathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Joe-Neville.D.2024-11-29/"
   },
@@ -2190,8 +2206,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Agriculture and Food",
-      "Select Committee on Agriculture and Food"
+      "Select Committee on Agriculture and Food",
+      "Joint Committee on Agriculture and Food"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Natasha-Newsome-Drennan.D.2024-11-29/"
   },
@@ -2220,9 +2236,9 @@
     "endDate": null,
     "committees": [
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Joint Committee on Education and Youth",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Select Committee on Education and Youth"
+      "Select Committee on Education and Youth",
+      "Joint Committee on Education and Youth"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Shónagh-Ní-Raghallaigh.D.2024-11-29/"
   },
@@ -2250,12 +2266,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Budgetary Oversight",
       "Committee of Selection (Dáil Éireann)",
-      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
+      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Cian-O'Callaghan.D.2020-02-08/"
   },
@@ -2283,12 +2299,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science (Leas-Chathaoirleach)",
       "Joint Committee on Public Petitions and the Ombudsmen",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science (Leas-Chathaoirleach)",
       "Select Committee on Public Petitions and the Ombudsmen",
-      "Select Committee on Defence and National Security"
+      "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
+      "Select Committee on Further and Higher Education, Research, Innovation and Science (Leas-Chathaoirleach)",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science (Leas-Chathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Maeve-O'Connell.D.2024-11-29/"
   },
@@ -2303,13 +2319,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Artificial Intelligence",
-      "Joint Committee on Drugs Use",
-      "Joint Committee on Enterprise, Tourism and Employment (Cathaoirleach)",
       "Working Group of Committee Cathaoirligh",
       "Select Committee on Enterprise, Tourism and Employment (Cathaoirleach)",
+      "Joint Committee on Enterprise, Tourism and Employment (Cathaoirleach)",
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use",
       "Select Committee on Artificial Intelligence",
-      "Select Committee on Drugs Use"
+      "Joint Committee on Artificial Intelligence"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/James-O'Connor.D.2020-02-08/"
   },
@@ -2324,11 +2340,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Housing, Local Government and Heritage",
-      "Joint Committee on Drugs Use",
       "Committee on Members' Interests of Dáil Éireann",
       "Select Committee on Housing, Local Government and Heritage",
-      "Select Committee on Drugs Use"
+      "Joint Committee on Housing, Local Government and Heritage",
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Willie-O'Dea.D.1982-03-09/"
   },
@@ -2356,8 +2372,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Committee on Budgetary Oversight (Cathaoirleach)"
+      "Committee on Budgetary Oversight (Cathaoirleach)",
+      "Working Group of Committee Cathaoirligh"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Richard-O'Donoghue.D.2020-02-08/"
   },
@@ -2372,9 +2388,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on European Union Affairs",
+      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
       "Select Committee on European Union Affairs",
-      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)"
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Robert-O'Donoghue.D.2024-11-29/"
   },
@@ -2402,11 +2418,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Foreign Affairs and Trade",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Remit Oversight (Dáil Éireann)",
-      "Select Committee on Foreign Affairs and Trade"
+      "Joint Committee on Remit Oversight",
+      "Select Committee on Foreign Affairs and Trade",
+      "Joint Committee on Foreign Affairs and Trade"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Ken-O'Flynn.D.2024-11-29/"
   },
@@ -2421,8 +2437,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Transport",
-      "Select Committee on Transport"
+      "Select Committee on Transport",
+      "Joint Committee on Transport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Roderic-O'Gorman.D.2020-02-08/"
   },
@@ -2437,10 +2453,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Transport",
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
       "Select Committee on Transport",
-      "Select Committee on Infrastructure and National Development Plan Delivery"
+      "Joint Committee on Transport",
+      "Select Committee on Infrastructure and National Development Plan Delivery",
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Louis-O'Hara.D.2024-11-29/"
   },
@@ -2455,13 +2471,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Education and Youth",
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
-      "Select Committee on Education and Youth",
+      "Committee on Budgetary Oversight",
       "Select Committee on Defence and National Security",
-      "Committee on Budgetary Oversight"
+      "Joint Committee on Defence and National Security",
+      "Select Committee on Education and Youth",
+      "Joint Committee on Education and Youth",
+      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Ryan-O'Meara.D.2024-11-29/"
   },
@@ -2476,12 +2492,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Social Protection, Rural and Community Development",
+      "Committee on Members' Interests of Dáil Éireann",
       "Joint Committee on Public Petitions and the Ombudsmen (Cathaoirleach)",
+      "Working Group of Committee Cathaoirligh",
       "Working Group of Committee Cathaoirligh",
       "Select Committee on Public Petitions and the Ombudsmen (Cathaoirleach)",
       "Select Committee on Social Protection, Rural and Community Development",
-      "Committee on Members' Interests of Dáil Éireann"
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Louise-O'Reilly.D.2016-10-03/"
   },
@@ -2496,10 +2513,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Education and Youth",
-      "Joint Committee on Artificial Intelligence",
       "Select Committee on Education and Youth",
-      "Select Committee on Artificial Intelligence"
+      "Joint Committee on Education and Youth",
+      "Select Committee on Artificial Intelligence",
+      "Joint Committee on Artificial Intelligence"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Darren-O'Rourke.D.2020-02-08/"
   },
@@ -2514,12 +2531,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Social Protection, Rural and Community Development (Cathaoirleach)",
-      "Joint Committee on Drugs Use",
       "Committee on Budgetary Oversight",
+      "Working Group of Committee Cathaoirligh",
       "Select Committee on Social Protection, Rural and Community Development (Cathaoirleach)",
-      "Select Committee on Drugs Use"
+      "Joint Committee on Social Protection, Rural and Community Development (Cathaoirleach)",
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/John-Paul-O'Shea.D.2024-11-29/"
   },
@@ -2547,16 +2564,16 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Health",
-      "Joint Committee on Justice, Home Affairs and Migration",
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
       "Committee on Standing Orders and Dáil Reform",
-      "Select Committee on Justice, Home Affairs and Migration",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
       "Select Committee on Arts, Media, Communications, Culture and Sport",
-      "Select Committee on Health"
+      "Joint Committee on Arts, Media, Communications, Culture and Sport",
+      "Select Committee on Health",
+      "Joint Committee on Health",
+      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Justice, Home Affairs and Migration"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Pádraig-O'Sullivan.D.2019-11-29/"
   },
@@ -2571,10 +2588,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Social Protection, Rural and Community Development",
+      "Select Committee on Disability Matters",
       "Joint Committee on Disability Matters",
       "Select Committee on Social Protection, Rural and Community Development",
-      "Select Committee on Disability Matters"
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Liam-Quaide.D.2024-11-29/"
   },
@@ -2590,10 +2607,10 @@
     "endDate": null,
     "committees": [
       "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Disability Matters (Cathaoirleach)",
-      "Joint Committee on Key Issues Affecting the Traveller Community",
       "Select Committee on Disability Matters (Cathaoirleach)",
-      "Select Committee on Key Issues Affecting the Traveller Community"
+      "Joint Committee on Disability Matters (Cathaoirleach)",
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Maurice-Quinlivan.D.2016-10-03/"
   },
@@ -2608,12 +2625,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Health (Cathaoirleach)",
-      "Joint Committee on Key Issues Affecting the Traveller Community",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
+      "Working Group of Committee Cathaoirligh",
       "Select Committee on Health (Cathaoirleach)",
-      "Select Committee on Key Issues Affecting the Traveller Community"
+      "Joint Committee on Health (Cathaoirleach)",
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Pádraig-Rice.D.2024-11-29/"
   },
@@ -2641,13 +2658,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Health",
-      "Joint Committee on Education and Youth",
-      "Joint Committee on Social Protection, Rural and Community Development",
-      "Select Committee on Social Protection, Rural and Community Development",
-      "Select Committee on Health",
+      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
       "Select Committee on Education and Youth",
-      "Select Committee on Subsidiarity (European Union Legislative Scrutiny)"
+      "Joint Committee on Education and Youth",
+      "Select Committee on Health",
+      "Joint Committee on Health",
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Peter-Roche.D.2024-11-29/"
   },
@@ -2662,12 +2679,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on European Union Affairs",
       "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
       "Select Committee on Fisheries and Maritime Affairs",
-      "Select Committee on European Union Affairs"
+      "Joint Committee on Fisheries and Maritime Affairs",
+      "Select Committee on European Union Affairs",
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Eamon-Scanlon.S.2002-09-12/"
   },
@@ -2682,8 +2699,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
-      "Select Committee on Infrastructure and National Development Plan Delivery"
+      "Select Committee on Infrastructure and National Development Plan Delivery",
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Conor-Sheehan.D.2024-11-29/"
   },
@@ -2698,10 +2715,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Health",
-      "Joint Committee on Drugs Use",
+      "Committee of Selection (Seanad Éireann)",
+      "Seanad Select Committee on Scrutiny of Draft EU-related Statutory Instruments ",
       "Select Committee on Health",
-      "Select Committee on Drugs Use"
+      "Joint Committee on Health",
+      "Select Committee on Drugs Use",
+      "Joint Committee on Drugs Use"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Marie-Sherlock.S.2020-03-30/"
   },
@@ -2717,9 +2736,9 @@
     "endDate": null,
     "committees": [
       "Joint Committee on Public Petitions and the Ombudsmen",
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
       "Select Committee on Public Petitions and the Ombudsmen",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science"
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Brendan-Smith.D.1992-12-14/"
   },
@@ -2734,13 +2753,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Foreign Affairs and Trade",
-      "Joint Committee on Defence and National Security",
-      "Select Committee on Foreign Affairs and Trade",
-      "Select Committee on Defence and National Security",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
-      "Committee of Selection (Dáil Éireann)"
+      "Committee of Selection (Dáil Éireann)",
+      "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
+      "Select Committee on Foreign Affairs and Trade",
+      "Joint Committee on Foreign Affairs and Trade"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Duncan-Smith.D.2020-02-08/"
   },
@@ -2769,9 +2788,9 @@
     "endDate": null,
     "committees": [
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Joint Committee on Defence and National Security",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Select Committee on Defence and National Security"
+      "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Brian-Stanley.D.2011-03-09/"
   },
@@ -2786,9 +2805,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Leas-Chathaoirleach)",
       "Committee on Budgetary Oversight (Leas-Chathaoirleach)",
-      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Leas-Chathaoirleach)"
+      "Select Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Leas-Chathaoirleach)",
+      "Joint Committee on Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach (Leas-Chathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Edward-Timmins.D.2024-11-29/"
   },
@@ -2803,10 +2822,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Disability Matters",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
-      "Select Committee on Disability Matters"
+      "Select Committee on Disability Matters",
+      "Joint Committee on Disability Matters"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Gillian-Toole.D.2024-11-29/"
   },
@@ -2834,12 +2853,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on the Implementation of the Good Friday Agreement ",
-      "Joint Committee on Infrastructure and National Development Plan Delivery",
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
       "Select Committee on the Implementation of the Good Friday Agreement ",
-      "Select Committee on Infrastructure and National Development Plan Delivery"
+      "Joint Committee on the Implementation of the Good Friday Agreement ",
+      "Select Committee on Infrastructure and National Development Plan Delivery",
+      "Joint Committee on Infrastructure and National Development Plan Delivery"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Peadar-Tóibín.D.2011-03-09/"
   },
@@ -2854,8 +2873,9 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Social Protection, Rural and Community Development",
-      "Select Committee on Social Protection, Rural and Community Development"
+      "Seanad Public Consultation Committee",
+      "Select Committee on Social Protection, Rural and Community Development",
+      "Joint Committee on Social Protection, Rural and Community Development"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Mark-Wall.S.2020-03-30/"
   },
@@ -2870,18 +2890,19 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Remit Oversight",
-      "Joint Committee on Key Issues Affecting the Traveller Community",
-      "Working Group of Committee Cathaoirligh",
-      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Joint Committee on European Union Affairs (Cathaoirleach)",
+      "Committee on Members' Interests of Seanad Éireann",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
-      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
+      "Working Group of Committee Cathaoirligh",
       "Committee on Remit Oversight (Dáil Éireann)",
-      "Select Committee on European Union Affairs (Cathaoirleach)"
+      "Joint Committee on Remit Oversight",
+      "Select Committee on European Union Affairs (Cathaoirleach)",
+      "Joint Committee on European Union Affairs (Cathaoirleach)",
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Barry-Ward.S.2020-03-30/"
   },
@@ -2896,10 +2917,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
-      "Joint Committee on Fisheries and Maritime Affairs",
       "Select Committee on Children and Equality",
-      "Select Committee on Fisheries and Maritime Affairs"
+      "Joint Committee on Children and Equality",
+      "Select Committee on Fisheries and Maritime Affairs",
+      "Joint Committee on Fisheries and Maritime Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Charles-Ward.D.2024-11-29/"
   },
@@ -2914,8 +2935,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Justice, Home Affairs and Migration",
-      "Select Committee on Justice, Home Affairs and Migration"
+      "Select Committee on Justice, Home Affairs and Migration",
+      "Joint Committee on Justice, Home Affairs and Migration"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Mark-Ward.D.2019-11-29/"
   },
@@ -2930,10 +2951,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Climate, Environment and Energy",
-      "Joint Committee on Fisheries and Maritime Affairs",
       "Select Committee on Climate, Environment and Energy",
-      "Select Committee on Fisheries and Maritime Affairs"
+      "Joint Committee on Climate, Environment and Energy",
+      "Select Committee on Fisheries and Maritime Affairs",
+      "Joint Committee on Fisheries and Maritime Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Jennifer-Whitmore.D.2020-02-08/"
   },
@@ -2948,8 +2969,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Housing, Local Government and Heritage",
-      "Select Committee on Housing, Local Government and Heritage"
+      "Select Committee on Housing, Local Government and Heritage",
+      "Joint Committee on Housing, Local Government and Heritage"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Eoin-Ó-Broin.D.2016-10-03/"
   },
@@ -2964,16 +2985,16 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Artificial Intelligence (Cathaoirleach)",
+      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Leas-Chathaoirleach)",
+      "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Leas-Chathaoirleach)",
       "Working Group of Committee Cathaoirligh",
+      "Committee on Remit Oversight (Dáil Éireann)",
       "Joint Committee on Remit Oversight",
+      "Select Committee on Climate, Environment and Energy",
       "Joint Committee on Climate, Environment and Energy",
       "Select Committee on Artificial Intelligence",
-      "Select Committee on Climate, Environment and Energy",
-      "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Leas-Chathaoirleach)",
-      "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)"
+      "Joint Committee on Artificial Intelligence (Cathaoirleach)"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Naoise-Ó-Cearúil.D.2024-11-29/"
   },
@@ -2988,10 +3009,10 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
-      "Joint Committee on Foreign Affairs and Trade",
       "Select Committee on Children and Equality",
-      "Select Committee on Foreign Affairs and Trade"
+      "Joint Committee on Children and Equality",
+      "Select Committee on Foreign Affairs and Trade",
+      "Joint Committee on Foreign Affairs and Trade"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Seán-Ó-Fearghaíl.S.2000-06-09/"
   },
@@ -3006,11 +3027,11 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Defence and National Security",
-      "Joint Committee on Foreign Affairs and Trade",
-      "Select Committee on Foreign Affairs and Trade",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",
-      "Select Committee on Defence and National Security"
+      "Select Committee on Defence and National Security",
+      "Joint Committee on Defence and National Security",
+      "Select Committee on Foreign Affairs and Trade",
+      "Joint Committee on Foreign Affairs and Trade"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Donnchadh-Ó-Laoghaire.D.2016-10-03/"
   },
@@ -3025,13 +3046,13 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Climate, Environment and Energy (Cathaoirleach)",
-      "Working Group of Committee Cathaoirligh",
-      "Joint Committee on Key Issues Affecting the Traveller Community",
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Select Committee on Climate, Environment and Energy (Cathaoirleach)",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Select Committee on Key Issues Affecting the Traveller Community"
+      "Working Group of Committee Cathaoirligh",
+      "Select Committee on Climate, Environment and Energy (Cathaoirleach)",
+      "Joint Committee on Climate, Environment and Energy (Cathaoirleach)",
+      "Select Committee on Key Issues Affecting the Traveller Community",
+      "Joint Committee on Key Issues Affecting the Traveller Community"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Naoise-Ó-Muirí.D.2024-11-29/"
   },
@@ -3046,12 +3067,12 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Children and Equality",
-      "Joint Committee on Disability Matters",
-      "Joint Committee on European Union Affairs",
       "Select Committee on Children and Equality",
+      "Joint Committee on Children and Equality",
       "Select Committee on Disability Matters",
-      "Select Committee on European Union Affairs"
+      "Joint Committee on Disability Matters",
+      "Select Committee on European Union Affairs",
+      "Joint Committee on European Union Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Ruairí-Ó-Murchú.D.2020-02-08/"
   },
@@ -3066,14 +3087,14 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Arts, Media, Communications, Culture and Sport",
-      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Joint Committee on Remit Oversight",
+      "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
-      "Committee on Remit Oversight (Dáil Éireann)",
+      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
+      "Committee on Remit Oversight (Dáil Éireann)",
+      "Joint Committee on Remit Oversight",
       "Select Committee on Arts, Media, Communications, Culture and Sport",
-      "Committee on Standing Orders and Dáil Reform"
+      "Joint Committee on Arts, Media, Communications, Culture and Sport"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Aengus-Ó-Snodaigh.D.2002-06-06/"
   },
@@ -3088,8 +3109,8 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Joint Committee on Further and Higher Education, Research, Innovation and Science",
-      "Select Committee on Further and Higher Education, Research, Innovation and Science"
+      "Select Committee on Further and Higher Education, Research, Innovation and Science",
+      "Joint Committee on Further and Higher Education, Research, Innovation and Science"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Fionntán-Ó-Súilleabháin.D.2024-11-29/"
   }

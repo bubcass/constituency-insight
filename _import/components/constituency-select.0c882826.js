@@ -1,3 +1,5 @@
+import {resolveConstituencyUrlState, updateConstituencyUrl} from "./constituency-url-state.3607cf90.js";
+
 export function constituencySelect({
   state = {
     constituency: null,
@@ -59,9 +61,33 @@ export function constituencySelect({
     const locateButton = container.querySelector(".constituency-location-action");
     const locateStatus = container.querySelector(".constituency-location-status");
 
+    updateConstituencyUrl(state.constituency);
+
+    const applyUrlSelection = () => {
+      const constituency = resolveConstituencyUrlState({
+        constituencies: options,
+        search: window.location.search,
+      });
+      if (!constituency || constituency === state.constituency) return;
+      state.constituency = constituency;
+      onChange(state);
+    };
+
+    const handlers = window.__constituencyUrlHandlers ??= new Map();
+    handlers.set(window.location.pathname, applyUrlSelection);
+    if (!window.__constituencyUrlPopstateListener) {
+      window.__constituencyUrlPopstateListener = true;
+      window.addEventListener("popstate", () => {
+        window.__constituencyUrlHandlers
+          .get(window.location.pathname)
+          ?.();
+      });
+    }
+
     select?.addEventListener("change", () => {
       state.constituency = select.value;
       if (locateStatus) locateStatus.textContent = "";
+      updateConstituencyUrl(state.constituency, {mode: "push"});
       onChange(state);
     });
 
@@ -77,6 +103,7 @@ export function constituencySelect({
           state.constituency = result.constituency;
           select.value = result.constituency;
           locateStatus.textContent = `Showing ${result.constituency}`;
+          updateConstituencyUrl(state.constituency, {mode: "push"});
           onChange(state);
         } else {
           locateStatus.textContent = "Location unavailable — choose from the list.";

@@ -1,10 +1,17 @@
 import { point } from "../../_npm/@turf/helpers@7.3.4/a5e57fe3.js";
 import booleanPointInPolygon from "../../_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js";
+import {resolveConstituencyUrlState} from "./constituency-url-state.3607cf90.js";
 
 const STORAGE_KEY = "constituency-insights:selected-constituency";
 
 export function readSavedConstituency(availableConstituencies = []) {
   if (typeof window === "undefined") return null;
+
+  const fromUrl = resolveConstituencyUrlState({
+    constituencies: availableConstituencies,
+    search: window.location.search,
+  });
+  if (fromUrl) return fromUrl;
 
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);

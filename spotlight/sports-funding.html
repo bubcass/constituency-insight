@@ -6,14 +6,14 @@
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Sports funding | Constituency Insights</title>
 
-<link rel="preload" as="style" href="../_import/style.a56bc25d.css">
-<link rel="stylesheet" type="text/css" href="../_import/style.a56bc25d.css">
+<link rel="preload" as="style" href="../_import/style.b45106ed.css">
+<link rel="stylesheet" type="text/css" href="../_import/style.b45106ed.css">
 <link rel="modulepreload" href="../_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="../_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="../_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="../_npm/d3@7.9.0/66d82917.js">
-<link rel="modulepreload" href="../_import/components/constituency-select.be8dda34.js">
-<link rel="modulepreload" href="../_import/components/constituency-location.f36404de.js">
+<link rel="modulepreload" href="../_import/components/constituency-select.0c882826.js">
+<link rel="modulepreload" href="../_import/components/constituency-location.b58bd197.js">
 <link rel="modulepreload" href="../_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="../_import/components/member-cards.38adb284.js">
 <link rel="modulepreload" href="../_import/components/member-data.58a3d52a.js">
@@ -23,11 +23,12 @@
 <link rel="modulepreload" href="../_import/components/insights-tabs.4ab9c656.js">
 <link rel="modulepreload" href="../_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="../_import/components/related-research.2ee2445a.js">
-<link rel="modulepreload" href="../_import/components/reactive-mount.40133ee8.js">
-<link rel="modulepreload" href="../_import/components/hero-share.68908229.js">
+<link rel="modulepreload" href="../_import/components/reactive-mount.0c3beeac.js">
+<link rel="modulepreload" href="../_import/components/hero-share.e70c1fd9.js">
 <link rel="modulepreload" href="../_import/config/chart-palette.7185253a.js">
 <link rel="modulepreload" href="../_import/topics/sports-funding/config.9943ea05.js">
 <link rel="modulepreload" href="../_import/topics/sports-funding/transforms.1a6f85fd.js">
+<link rel="modulepreload" href="../_import/components/constituency-url-state.3607cf90.js">
 <link rel="modulepreload" href="../_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="../_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="../_import/components/leaflet-map-ui.6717fe6b.js">
@@ -263,11 +264,14 @@
           let updatePending = false;
           const updateMobileTools = () => {
             updatePending = false;
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
             const tabsShell = document.querySelector(".insights-tabs-shell");
             const pastTopicNav = tabsShell
               ? tabsShell.getBoundingClientRect().top <= 12
               : window.scrollY > masthead.offsetHeight + 48;
-            const visible = mobileQuery.matches && pastTopicNav;
+            // The landing page keeps its own uncluttered masthead. Reading tools
+            // belong to hierarchy/detail pages only, never over the index brand.
+            const visible = mobileQuery.matches && !isInsightsIndex && pastTopicNav;
             mobileTools.hidden = !visible;
             if (!visible) setMoreOpen(false);
           };
@@ -486,16 +490,16 @@
 import {define} from "../_observablehq/client.f787155f.js";
 import {registerFile} from "../_observablehq/stdlib.277aeab8.js";
 
-registerFile("../data/derived/recent-sports-contributions.json", {"name":"../data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-sports-contributions.da827dd6.json","lastModified":1787600637433,"size":49034});
-registerFile("../data/derived/recent-sports-questions.json", {"name":"../data/derived/recent-sports-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-sports-questions.a21cdbc8.json","lastModified":1788262546404,"size":602723});
+registerFile("../data/derived/recent-sports-contributions.json", {"name":"../data/derived/recent-sports-contributions.json","mimeType":"application/json","path":"../_file/data/derived/recent-sports-contributions.4f9116e3.json","lastModified":1789204198119,"size":71455});
+registerFile("../data/derived/recent-sports-questions.json", {"name":"../data/derived/recent-sports-questions.json","mimeType":"application/json","path":"../_file/data/derived/recent-sports-questions.468e8c7e.json","lastModified":1789252100237,"size":605799});
 registerFile("../data/derived/sports-funding-enriched.json", {"name":"../data/derived/sports-funding-enriched.json","mimeType":"application/json","path":"../_file/data/derived/sports-funding-enriched.526726eb.json","lastModified":1786473162468,"size":7985219});
 registerFile("../data/derived/waterfall-segments.json", {"name":"../data/derived/waterfall-segments.json","mimeType":"application/json","path":"../_file/data/derived/waterfall-segments.ed664633.json","lastModified":1786473162713,"size":389840});
 registerFile("../data/geo/constituencies.json", {"name":"../data/geo/constituencies.json","mimeType":"application/json","path":"../_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
-registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.18ed7f46.json","lastModified":1788262546409,"size":123368});
+registerFile("../data/members-lookup.json", {"name":"../data/members-lookup.json","mimeType":"application/json","path":"../_file/data/members-lookup.0b8cb845.json","lastModified":1789204198127,"size":124533});
 registerFile("../media/sports-funding-hero.mp4", {"name":"../media/sports-funding-hero.mp4","mimeType":"video/mp4","path":"../_file/media/sports-funding-hero.e861508b.mp4","lastModified":1775935551272,"size":4864380});
 
-define({id: "6f4ee9a7", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","chartPalette","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
-const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {chartPalette}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("../_npm/d3@7.9.0/66d82917.js"), import("../_import/components/constituency-select.be8dda34.js"), import("../_import/components/constituency-location.f36404de.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.38adb284.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/topic-point-map.6328f93f.js"), import("../_import/components/waterfall-segments-chart.daf4b7eb.js"), import("../_import/components/download-button.58b1295c.js"), import("../_import/components/insights-tabs.4ab9c656.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/reactive-mount.40133ee8.js"), import("../_import/components/hero-share.68908229.js"), import("../_import/config/chart-palette.7185253a.js"), import("../_import/topics/sports-funding/config.9943ea05.js"), import("../_import/topics/sports-funding/transforms.1a6f85fd.js")]);
+define({id: "9a84ae81", inputs: ["FileAttachment"], outputs: ["d3","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","memberCards","membersForConstituency","topicPointMap","waterfallSegmentsChart","downloadButton","insightsTabs","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","chartPalette","sportsFundingTopic","filterRowsByConstituency","buildMetricCardData","sportsFundingPromise","waterfallPromise","pqSportsByConstituencyPromise","recentSportsContributionsPromise","constituenciesGeoPromise","heroVideoPromise","membersLookupPromise","partyColorMap","getState","getWaterfallState","clean","cleanConstituencyName","resolveLabel","getMemberImageUrl","getFundingRows","getWaterfallData","getPqSportsByConstituency","getRecentSportsContributionRows","getConstituenciesGeo","getMembersLookup","getMembersArray","getAvailableConstituencies","initialiseConstituencySelection","ensureValidConstituency","getSelectedRows","getFilteredConstituencyGeo","getMatchedMembers","getRecentSportsPQsForConstituency","getWaterfallColorLookup","getRecentSportsContributions","formatIrishDate","rerender","rerenderWaterfall","mountReactive","euro","chartPlaceholder","renderSegmentedControl","getAvailableWaterfallYears","ensureValidWaterfallYear","getSelectedWaterfallRecord"], body: async (FileAttachment) => {
+const [d3, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {memberCards}, {membersForConstituency}, {topicPointMap}, {waterfallSegmentsChart}, {downloadButton}, {insightsTabs}, {memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {chartPalette}, {sportsFundingTopic}, {filterRowsByConstituency, buildMetricCardData}] = await Promise.all([import("../_npm/d3@7.9.0/66d82917.js"), import("../_import/components/constituency-select.0c882826.js"), import("../_import/components/constituency-location.b58bd197.js"), import("../_import/components/metric-cards.1cb79023.js"), import("../_import/components/member-cards.38adb284.js"), import("../_import/components/member-data.58a3d52a.js"), import("../_import/components/topic-point-map.6328f93f.js"), import("../_import/components/waterfall-segments-chart.daf4b7eb.js"), import("../_import/components/download-button.58b1295c.js"), import("../_import/components/insights-tabs.4ab9c656.js"), import("../_import/components/parliamentary-activity.78f3ba08.js"), import("../_import/components/related-research.2ee2445a.js"), import("../_import/components/reactive-mount.0c3beeac.js"), import("../_import/components/hero-share.e70c1fd9.js"), import("../_import/config/chart-palette.7185253a.js"), import("../_import/topics/sports-funding/config.9943ea05.js"), import("../_import/topics/sports-funding/transforms.1a6f85fd.js")]);
 
 
 const sportsFundingPromise = FileAttachment(
@@ -796,7 +800,7 @@ function rerenderWaterfall() {
 }
 
 function mountReactive(renderFn, { eventName = "insights:change", debounceMs = 40, ...options } = {}) {
-  return createReactiveMount(renderFn, {eventName, debounceMs, ...options});
+  return createReactiveMount(renderFn, {eventName, debounceMs, defer: true, ...options});
 }
 
 function euro(value) {
@@ -1338,7 +1342,7 @@ display(
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:6f4ee9a7:--></div>
+<div class="observablehq observablehq--block"><!--:9a84ae81:--></div>
 <div class="observablehq observablehq--block"><!--:dfc394ae:--></div>
 <div class="observablehq observablehq--block"><!--:447c89d8:--></div>
 <div class="prose-block">

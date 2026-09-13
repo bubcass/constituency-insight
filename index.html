@@ -6,12 +6,12 @@
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Constituency Insights</title>
 
-<link rel="preload" as="style" href="./_import/style.a56bc25d.css">
-<link rel="stylesheet" type="text/css" href="./_import/style.a56bc25d.css">
+<link rel="preload" as="style" href="./_import/style.b45106ed.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.b45106ed.css">
 <link rel="modulepreload" href="./_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
-<link rel="modulepreload" href="./_import/components/hero-share.68908229.js">
+<link rel="modulepreload" href="./_import/components/hero-share.e70c1fd9.js">
 
     <link rel="preload" href="./_file/oireachtas-logo.be2bef67.svg" as="image" type="image/svg+xml">
     <link rel="icon" href="./_file/logo.2bab7aac.png" type="image/png" sizes="32x32">
@@ -195,11 +195,14 @@
           let updatePending = false;
           const updateMobileTools = () => {
             updatePending = false;
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
             const tabsShell = document.querySelector(".insights-tabs-shell");
             const pastTopicNav = tabsShell
               ? tabsShell.getBoundingClientRect().top <= 12
               : window.scrollY > masthead.offsetHeight + 48;
-            const visible = mobileQuery.matches && pastTopicNav;
+            // The landing page keeps its own uncluttered masthead. Reading tools
+            // belong to hierarchy/detail pages only, never over the index brand.
+            const visible = mobileQuery.matches && !isInsightsIndex && pastTopicNav;
             mobileTools.hidden = !visible;
             if (!visible) setMoreOpen(false);
           };
@@ -429,7 +432,7 @@ registerFile("./media/work-index.jpg", {"name":"./media/work-index.jpg","mimeTyp
 registerFile("./media/work-index.mp4", {"name":"./media/work-index.mp4","mimeType":"video/mp4","path":"./_file/media/work-index.8379c47d.mp4","lastModified":1787913240122,"size":5171933});
 
 define({id: "6c51caa8", inputs: ["FileAttachment"], outputs: ["mountMastheadActions","peopleVideo","peoplePoster","educationImage","workVideo","workPoster","housingImage","transportVideo","transportPoster","spotlightsImage"], body: async (FileAttachment) => {
-const {mountMastheadActions} = await import("./_import/components/hero-share.68908229.js");
+const {mountMastheadActions} = await import("./_import/components/hero-share.e70c1fd9.js");
 
 const peopleVideo = await FileAttachment("./media/people-index.mp4").url();
 const peoplePoster = await FileAttachment("./media/people-index.jpg").url();

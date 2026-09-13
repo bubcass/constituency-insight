@@ -6,27 +6,28 @@
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Education | Constituency Insights</title>
 
-<link rel="preload" as="style" href="./_import/style.a56bc25d.css">
-<link rel="stylesheet" type="text/css" href="./_import/style.a56bc25d.css">
+<link rel="preload" as="style" href="./_import/style.b45106ed.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.b45106ed.css">
 <link rel="modulepreload" href="./_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
 <link rel="modulepreload" href="./_import/components/insights-tabs.4ab9c656.js">
-<link rel="modulepreload" href="./_import/components/constituency-select.be8dda34.js">
-<link rel="modulepreload" href="./_import/components/constituency-location.f36404de.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.61d0bc16.js">
+<link rel="modulepreload" href="./_import/components/constituency-select.0c882826.js">
+<link rel="modulepreload" href="./_import/components/constituency-location.b58bd197.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.be4ab806.js">
 <link rel="modulepreload" href="./_import/components/member-cards.38adb284.js">
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
-<link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
-<link rel="modulepreload" href="./_import/components/hero-share.68908229.js">
+<link rel="modulepreload" href="./_import/components/reactive-mount.0c3beeac.js">
+<link rel="modulepreload" href="./_import/components/hero-share.e70c1fd9.js">
 <link rel="modulepreload" href="./_import/components/education-charts.ae46c31d.js">
 <link rel="modulepreload" href="./_import/components/download-button.58b1295c.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.7185253a.js">
 <link rel="modulepreload" href="./_import/components/tabular-data.e41c7133.js">
+<link rel="modulepreload" href="./_import/components/constituency-url-state.3607cf90.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/components/leaflet-map-ui.6717fe6b.js">
@@ -259,11 +260,14 @@
           let updatePending = false;
           const updateMobileTools = () => {
             updatePending = false;
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
             const tabsShell = document.querySelector(".insights-tabs-shell");
             const pastTopicNav = tabsShell
               ? tabsShell.getBoundingClientRect().top <= 12
               : window.scrollY > masthead.offsetHeight + 48;
-            const visible = mobileQuery.matches && pastTopicNav;
+            // The landing page keeps its own uncluttered masthead. Reading tools
+            // belong to hierarchy/detail pages only, never over the index brand.
+            const visible = mobileQuery.matches && !isInsightsIndex && pastTopicNav;
             mobileTools.hidden = !visible;
             if (!visible) setMoreOpen(false);
           };
@@ -486,15 +490,15 @@ registerFile("./data/derived/browser/demographics-age-2022.json", {"name":"./dat
 registerFile("./data/derived/browser/education-participation-2022.json", {"name":"./data/derived/browser/education-participation-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/education-participation-2022.788fa2d0.json","lastModified":1787674592732,"size":419917});
 registerFile("./data/derived/browser/education-qualification-2022.json", {"name":"./data/derived/browser/education-qualification-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/education-qualification-2022.0c77fd76.json","lastModified":1787674592733,"size":411537});
 registerFile("./data/derived/browser/irish-speaking-frequency-2022.json", {"name":"./data/derived/browser/irish-speaking-frequency-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/irish-speaking-frequency-2022.754fb2f0.json","lastModified":1787674592739,"size":346899});
-registerFile("./data/derived/recent-education-contributions.json", {"name":"./data/derived/recent-education-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-education-contributions.98d1b2ed.json","lastModified":1788262546398,"size":574097});
-registerFile("./data/derived/recent-education-questions.json", {"name":"./data/derived/recent-education-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-education-questions.acf6e7e9.json","lastModified":1788262546400,"size":1502112});
+registerFile("./data/derived/recent-education-contributions.json", {"name":"./data/derived/recent-education-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-education-contributions.83887117.json","lastModified":1789204198112,"size":635083});
+registerFile("./data/derived/recent-education-questions.json", {"name":"./data/derived/recent-education-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-education-questions.edd86da7.json","lastModified":1789252100225,"size":1499002});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.79d7eb54.geojson","lastModified":1785513965574,"size":9442035});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.18ed7f46.json","lastModified":1788262546409,"size":123368});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.0b8cb845.json","lastModified":1789204198127,"size":124533});
 registerFile("./media/education-hero.mp4", {"name":"./media/education-hero.mp4","mimeType":"video/mp4","path":"./_file/media/education-hero.30f4b4e2.mp4","lastModified":1784301742505,"size":4148933});
 
-define({id: "d118c4c4", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","metricCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","educationQualificationWaterfall","educationCeasedAgeWaffle","irishLanguagePercentageBar","downloadButton","chartPalette","tabularRows","constituencyRows","educationQualification","educationParticipation","irishSpeakingFrequency","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentEducationContributions","educationHeroVideo","EDUCATION_HEADING_MATCHER","EDUCATION_LEVELS","EDUCATION_CEASED_AGES","IRISH_FREQUENCIES","partyColorMap","state","constituencies","savedConstituency","rowsForConstituency","educationRowsForScope","rowsForSelectedArea","educationProfile","educationPopulation","participationProfile","nationalParticipation","ceasedAgeProfile","populationAgedThreePlus","irishSpeakerPopulation","irishSpeakerProfile","nationalIrishSpeakerProfile","irishFrequencyProfile","irishAbilityProfile","educationDownloadRows","differenceText","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","constituencyMembers","recentConstituencyEducationQuestions","recentConstituencyEducationContributions","restoreScroll","rerender","mountReactive","renderScopeControl","renderIrishViewControl","renderDistrictMapExplorer"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {metricCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {educationQualificationWaterfall, educationCeasedAgeWaffle, irishLanguagePercentageBar}, {downloadButton}, {chartPalette}, {tabularRows}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.f36404de.js"), import("./_import/components/electoral-district-map.61d0bc16.js"), import("./_import/components/member-cards.38adb284.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.68908229.js"), import("./_import/components/education-charts.ae46c31d.js"), import("./_import/components/download-button.58b1295c.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/tabular-data.e41c7133.js")]);
+define({id: "1f8a894f", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","electoralDistrictMap","memberCards","metricCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","educationQualificationWaterfall","educationCeasedAgeWaffle","irishLanguagePercentageBar","downloadButton","chartPalette","tabularRows","constituencyRows","educationQualification","educationParticipation","irishSpeakingFrequency","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentEducationContributions","educationHeroVideo","EDUCATION_HEADING_MATCHER","EDUCATION_LEVELS","EDUCATION_CEASED_AGES","IRISH_FREQUENCIES","partyColorMap","state","constituencies","savedConstituency","rowsForConstituency","educationRowsForScope","rowsForSelectedArea","educationProfile","educationPopulation","participationProfile","nationalParticipation","ceasedAgeProfile","populationAgedThreePlus","irishSpeakerPopulation","irishSpeakerProfile","nationalIrishSpeakerProfile","irishFrequencyProfile","irishAbilityProfile","educationDownloadRows","differenceText","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","constituencyMembers","recentConstituencyEducationQuestions","recentConstituencyEducationContributions","restoreScroll","rerender","mountReactive","renderScopeControl","renderIrishViewControl","renderDistrictMapExplorer"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {electoralDistrictMap}, {memberCards}, {metricCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {educationQualificationWaterfall, educationCeasedAgeWaffle, irishLanguagePercentageBar}, {downloadButton}, {chartPalette}, {tabularRows}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/constituency-select.0c882826.js"), import("./_import/components/constituency-location.b58bd197.js"), import("./_import/components/electoral-district-map.be4ab806.js"), import("./_import/components/member-cards.38adb284.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.0c3beeac.js"), import("./_import/components/hero-share.e70c1fd9.js"), import("./_import/components/education-charts.ae46c31d.js"), import("./_import/components/download-button.58b1295c.js"), import("./_import/config/chart-palette.7185253a.js"), import("./_import/components/tabular-data.e41c7133.js")]);
 
 const constituencyRows = tabularRows(await FileAttachment("./data/derived/browser/demographics-age-2022.json").json());
 const educationQualification = tabularRows(await FileAttachment("./data/derived/browser/education-qualification-2022.json").json());
@@ -890,6 +894,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "education:change",
+    defer: true,
     ...options
   });
 }
@@ -1218,7 +1223,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:d118c4c4:--></div>
+<div class="observablehq observablehq--block"><!--:1f8a894f:--></div>
 <div class="observablehq observablehq--block"><!--:2951f542:--></div>
 <div class="observablehq observablehq--block"><!--:834d2a93:--></div>
 <div class="prose-block lead">

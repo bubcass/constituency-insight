@@ -6,29 +6,30 @@
 <meta name="generator" content="Observable Framework v1.13.4">
 <title>Housing | Constituency Insights</title>
 
-<link rel="preload" as="style" href="./_import/style.a56bc25d.css">
-<link rel="stylesheet" type="text/css" href="./_import/style.a56bc25d.css">
+<link rel="preload" as="style" href="./_import/style.b45106ed.css">
+<link rel="stylesheet" type="text/css" href="./_import/style.b45106ed.css">
 <link rel="modulepreload" href="./_observablehq/client.f787155f.js">
 <link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
 <link rel="modulepreload" href="./_import/components/insights-tabs.4ab9c656.js">
-<link rel="modulepreload" href="./_import/components/constituency-select.be8dda34.js">
-<link rel="modulepreload" href="./_import/components/constituency-location.f36404de.js">
+<link rel="modulepreload" href="./_import/components/constituency-select.0c882826.js">
+<link rel="modulepreload" href="./_import/components/constituency-location.b58bd197.js">
 <link rel="modulepreload" href="./_import/components/metric-cards.1cb79023.js">
 <link rel="modulepreload" href="./_import/components/download-button.58b1295c.js">
-<link rel="modulepreload" href="./_import/components/electoral-district-map.61d0bc16.js">
+<link rel="modulepreload" href="./_import/components/electoral-district-map.be4ab806.js">
 <link rel="modulepreload" href="./_import/components/topic-point-map.6328f93f.js">
 <link rel="modulepreload" href="./_import/components/housing-charts.f368ef6a.js">
 <link rel="modulepreload" href="./_import/components/member-cards.38adb284.js">
 <link rel="modulepreload" href="./_import/components/member-data.58a3d52a.js">
 <link rel="modulepreload" href="./_import/components/parliamentary-activity.78f3ba08.js">
 <link rel="modulepreload" href="./_import/components/related-research.2ee2445a.js">
-<link rel="modulepreload" href="./_import/components/reactive-mount.40133ee8.js">
-<link rel="modulepreload" href="./_import/components/hero-share.68908229.js">
+<link rel="modulepreload" href="./_import/components/reactive-mount.0c3beeac.js">
+<link rel="modulepreload" href="./_import/components/hero-share.e70c1fd9.js">
 <link rel="modulepreload" href="./_import/topics/planning-applications/config.d58aa6f8.js">
 <link rel="modulepreload" href="./_import/topics/planning-applications/transforms.72a81cff.js">
 <link rel="modulepreload" href="./_import/components/tabular-data.e41c7133.js">
+<link rel="modulepreload" href="./_import/components/constituency-url-state.3607cf90.js">
 <link rel="modulepreload" href="./_npm/@turf/helpers@7.3.4/a5e57fe3.js">
 <link rel="modulepreload" href="./_npm/@turf/boolean-point-in-polygon@7.3.4/f12a8f4c.js">
 <link rel="modulepreload" href="./_import/config/chart-palette.7185253a.js">
@@ -268,11 +269,14 @@
           let updatePending = false;
           const updateMobileTools = () => {
             updatePending = false;
+            const isInsightsIndex = normalizePath(window.location.pathname) === normalizePath(assetUrl.pathname);
             const tabsShell = document.querySelector(".insights-tabs-shell");
             const pastTopicNav = tabsShell
               ? tabsShell.getBoundingClientRect().top <= 12
               : window.scrollY > masthead.offsetHeight + 48;
-            const visible = mobileQuery.matches && pastTopicNav;
+            // The landing page keeps its own uncluttered masthead. Reading tools
+            // belong to hierarchy/detail pages only, never over the index brand.
+            const visible = mobileQuery.matches && !isInsightsIndex && pastTopicNav;
             mobileTools.hidden = !visible;
             if (!visible) setMoreOpen(false);
           };
@@ -496,21 +500,29 @@ registerFile("./data/derived/browser/housing-stock-2022.json", {"name":"./data/d
 registerFile("./data/derived/browser/housing-tenure-2022.json", {"name":"./data/derived/browser/housing-tenure-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/housing-tenure-2022.30f94589.json","lastModified":1787674592738,"size":442705});
 registerFile("./data/derived/browser/planning-applications-normalized.json", {"name":"./data/derived/browser/planning-applications-normalized.json","mimeType":"application/json","path":"./_file/data/derived/browser/planning-applications-normalized.86c7c7a8.json","lastModified":1787674592831,"size":49226048});
 registerFile("./data/derived/browser/renewable-energy-households-2022.json", {"name":"./data/derived/browser/renewable-energy-households-2022.json","mimeType":"application/json","path":"./_file/data/derived/browser/renewable-energy-households-2022.f9d7ce8a.json","lastModified":1787674592832,"size":320309});
-registerFile("./data/derived/recent-housing-contributions.json", {"name":"./data/derived/recent-housing-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-contributions.a0caf947.json","lastModified":1788262546401,"size":224300});
-registerFile("./data/derived/recent-housing-questions.json", {"name":"./data/derived/recent-housing-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-questions.ff292bf7.json","lastModified":1788262546402,"size":1379203});
+registerFile("./data/derived/recent-housing-contributions.json", {"name":"./data/derived/recent-housing-contributions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-contributions.9b71dd89.json","lastModified":1789204198114,"size":290720});
+registerFile("./data/derived/recent-housing-questions.json", {"name":"./data/derived/recent-housing-questions.json","mimeType":"application/json","path":"./_file/data/derived/recent-housing-questions.50190ccb.json","lastModified":1789252100226,"size":1380537});
 registerFile("./data/geo/constituencies.json", {"name":"./data/geo/constituencies.json","mimeType":"application/json","path":"./_file/data/geo/constituencies.95a11bbf.json","lastModified":1775717386369,"size":4961681});
 registerFile("./data/geo/electoral-districts-2022.geojson", {"name":"./data/geo/electoral-districts-2022.geojson","mimeType":"application/geo+json","path":"./_file/data/geo/electoral-districts-2022.79d7eb54.geojson","lastModified":1785513965574,"size":9442035});
-registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.18ed7f46.json","lastModified":1788262546409,"size":123368});
+registerFile("./data/members-lookup.json", {"name":"./data/members-lookup.json","mimeType":"application/json","path":"./_file/data/members-lookup.0b8cb845.json","lastModified":1789204198127,"size":124533});
 registerFile("./media/housing.mp4", {"name":"./media/housing.mp4","mimeType":"video/mp4","path":"./_file/media/housing.3381d41e.mp4","lastModified":1784297244767,"size":3517495});
 
-define({id: "e9a6a571", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","tabularRows","housingData","housingStockData","adultsWithParentsData","renewableEnergyHouseholdsData","planningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","planningYears","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","adultsWithParentsStats","renewableEnergyHouseholdProfile","nationalAdultsWithParentsStats","nationalRenewableEnergyHouseholdProfile","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
-const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}, {tabularRows}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/constituency-select.be8dda34.js"), import("./_import/components/constituency-location.f36404de.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.58b1295c.js"), import("./_import/components/electoral-district-map.61d0bc16.js"), import("./_import/components/topic-point-map.6328f93f.js"), import("./_import/components/housing-charts.f368ef6a.js"), import("./_import/components/member-cards.38adb284.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.40133ee8.js"), import("./_import/components/hero-share.68908229.js"), import("./_import/topics/planning-applications/config.d58aa6f8.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js"), import("./_import/components/tabular-data.e41c7133.js")]);
+define({id: "5a9abb0b", inputs: ["FileAttachment"], outputs: ["d3","insightsTabs","constituencySelect","detectConstituencyFromLocation","readSavedConstituency","saveSelectedConstituency","metricCards","downloadButton","electoralDistrictMap","topicPointMap","housingStockBar","housingTenureWaterfall","memberCards","membersForConstituency","parliamentaryQuestionList","memberContributionList","relatedResearchResource","createReactiveMount","enhanceHeroWithShare","planningApplicationsTopic","buildPlanningApplicationDownloadRows","buildPlanningApplicationMetrics","filterPlanningApplications","tabularRows","housingData","housingStockData","adultsWithParentsData","renewableEnergyHouseholdsData","planningApplicationRowsPromise","getPlanningApplicationRows","districtGeo","constituenciesGeo","membersLookup","recentQuestionsByConstituency","recentHousingContributions","housingHeroVideo","partyColorMap","TENURES","HOUSING_STOCK_CATEGORIES","state","constituencies","savedConstituency","rowsForConstituency","rowsForDistrict","stockRowsForDistrict","adultsWithParentsStats","renewableEnergyHouseholdProfile","nationalAdultsWithParentsStats","nationalRenewableEnergyHouseholdProfile","constituencyMembers","recentConstituencyHousingQuestions","recentConstituencyHousingContributions","aggregateTenure","housingStats","housingStockStats","nationalStats","districtOptions","selectedDistrictName","scopeLabel","ensureDistrict","selectedConstituencyGeoJSON","getPlanningYears","selectedPlanningApplications","selectedPlanningGeoJSON","planningPeriodLabel","differenceText","restoreScroll","rerender","mountReactive","mountPlanningReactive","rerenderPlanning","renderScopeControl","renderDistrictMapExplorer","renderPlanningYearFilter","HOUSING_CHART_WIDTH"], body: async (FileAttachment) => {
+const [d3, {insightsTabs}, {constituencySelect}, {detectConstituencyFromLocation, readSavedConstituency, saveSelectedConstituency}, {metricCards}, {downloadButton}, {electoralDistrictMap}, {topicPointMap}, {housingStockBar, housingTenureWaterfall}, {memberCards}, {membersForConstituency}, {parliamentaryQuestionList, memberContributionList}, {relatedResearchResource}, {createReactiveMount}, {enhanceHeroWithShare}, {planningApplicationsTopic}, {buildPlanningApplicationDownloadRows, buildPlanningApplicationMetrics, filterPlanningApplications}, {tabularRows}] = await Promise.all([import("./_npm/d3@7.9.0/66d82917.js"), import("./_import/components/insights-tabs.4ab9c656.js"), import("./_import/components/constituency-select.0c882826.js"), import("./_import/components/constituency-location.b58bd197.js"), import("./_import/components/metric-cards.1cb79023.js"), import("./_import/components/download-button.58b1295c.js"), import("./_import/components/electoral-district-map.be4ab806.js"), import("./_import/components/topic-point-map.6328f93f.js"), import("./_import/components/housing-charts.f368ef6a.js"), import("./_import/components/member-cards.38adb284.js"), import("./_import/components/member-data.58a3d52a.js"), import("./_import/components/parliamentary-activity.78f3ba08.js"), import("./_import/components/related-research.2ee2445a.js"), import("./_import/components/reactive-mount.0c3beeac.js"), import("./_import/components/hero-share.e70c1fd9.js"), import("./_import/topics/planning-applications/config.d58aa6f8.js"), import("./_import/topics/planning-applications/transforms.72a81cff.js"), import("./_import/components/tabular-data.e41c7133.js")]);
 
 const housingData = tabularRows(await FileAttachment("./data/derived/browser/housing-tenure-2022.json").json());
 const housingStockData = tabularRows(await FileAttachment("./data/derived/browser/housing-stock-2022.json").json());
 const adultsWithParentsData = tabularRows(await FileAttachment("./data/derived/browser/adults-living-with-parents-2022.json").json());
 const renewableEnergyHouseholdsData = tabularRows(await FileAttachment("./data/derived/browser/renewable-energy-households-2022.json").json());
-const planningApplicationRows = tabularRows(await FileAttachment("./data/derived/browser/planning-applications-normalized.json").json());
+// This is the largest page dataset (roughly 47 MB). Do not request or parse it
+// until the planning section is close to the viewport.
+let planningApplicationRowsPromise;
+async function getPlanningApplicationRows() {
+  planningApplicationRowsPromise ??= FileAttachment("./data/derived/browser/planning-applications-normalized.json")
+    .json()
+    .then(tabularRows);
+  return planningApplicationRowsPromise;
+}
 const districtGeo = await FileAttachment("./data/geo/electoral-districts-2022.geojson").json();
 const constituenciesGeo = await FileAttachment("./data/geo/constituencies.json").json();
 const membersLookup = await FileAttachment("./data/members-lookup.json").json();
@@ -549,25 +561,16 @@ const HOUSING_STOCK_CATEGORIES = [
   ["Holiday home", "Holiday home"]
 ];
 
-const planningYears = Array.from(
-  new Set(planningApplicationRows.map((row) => Number(row.year)).filter(Number.isFinite))
-).sort((a, b) => a - b);
-
 if (typeof window !== "undefined" && !window.housingState) {
   window.housingState = {
     constituency: null,
     district: "all",
-    planningStartYear: planningYears[0],
-    planningEndYear: planningYears.at(-1)
+    planningStartYear: null,
+    planningEndYear: null
   };
 }
 
 const state = window.housingState;
-if (!planningYears.includes(Number(state.planningStartYear))) state.planningStartYear = planningYears[0];
-if (!planningYears.includes(Number(state.planningEndYear))) state.planningEndYear = planningYears.at(-1);
-if (state.planningStartYear > state.planningEndYear) {
-  [state.planningStartYear, state.planningEndYear] = [state.planningEndYear, state.planningStartYear];
-}
 const constituencies = Array.from(
   new Set(housingData.map((d) => d["NEW CONSTITUENCY"]).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, "en"));
@@ -733,8 +736,22 @@ function selectedConstituencyGeoJSON() {
   };
 }
 
-function selectedPlanningApplications() {
-  return filterPlanningApplications(planningApplicationRows, {
+async function getPlanningYears() {
+  const rows = await getPlanningApplicationRows();
+  const years = Array.from(new Set(rows.map((row) => Number(row.year)).filter(Number.isFinite)))
+    .sort((a, b) => a - b);
+  if (!years.includes(Number(state.planningStartYear))) state.planningStartYear = years[0];
+  if (!years.includes(Number(state.planningEndYear))) state.planningEndYear = years.at(-1);
+  if (state.planningStartYear > state.planningEndYear) {
+    [state.planningStartYear, state.planningEndYear] = [state.planningEndYear, state.planningStartYear];
+  }
+  return years;
+}
+
+async function selectedPlanningApplications() {
+  const rows = await getPlanningApplicationRows();
+  await getPlanningYears();
+  return filterPlanningApplications(rows, {
     constituency: state.constituency,
     electoralDistrictGuid: state.district,
     startYear: state.planningStartYear,
@@ -783,6 +800,7 @@ function rerender({preserveScroll = true} = {}) {
 function mountReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventName: "housing:change",
+    defer: true,
     ...options
   });
 }
@@ -791,6 +809,7 @@ function mountPlanningReactive(renderFn, options = {}) {
   return createReactiveMount(renderFn, {
     eventNames: ["housing:change", "planning-applications:change"],
     destroyPrevious: true,
+    defer: true,
     ...options
   });
 }
@@ -861,7 +880,8 @@ function renderDistrictMapExplorer() {
   return section;
 }
 
-function renderPlanningYearFilter() {
+async function renderPlanningYearFilter() {
+  const planningYears = await getPlanningYears();
   const section = document.createElement("section");
   section.className = "insights-controls planning-application-controls";
 
@@ -936,7 +956,7 @@ function renderPlanningYearFilter() {
 }
 
 const HOUSING_CHART_WIDTH = 790;
-return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,topicPointMap,housingStockBar,housingTenureWaterfall,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,planningApplicationsTopic,buildPlanningApplicationDownloadRows,buildPlanningApplicationMetrics,filterPlanningApplications,tabularRows,housingData,housingStockData,adultsWithParentsData,renewableEnergyHouseholdsData,planningApplicationRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentHousingContributions,housingHeroVideo,partyColorMap,TENURES,HOUSING_STOCK_CATEGORIES,planningYears,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,stockRowsForDistrict,adultsWithParentsStats,renewableEnergyHouseholdProfile,nationalAdultsWithParentsStats,nationalRenewableEnergyHouseholdProfile,constituencyMembers,recentConstituencyHousingQuestions,recentConstituencyHousingContributions,aggregateTenure,housingStats,housingStockStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,selectedPlanningApplications,selectedPlanningGeoJSON,planningPeriodLabel,differenceText,restoreScroll,rerender,mountReactive,mountPlanningReactive,rerenderPlanning,renderScopeControl,renderDistrictMapExplorer,renderPlanningYearFilter,HOUSING_CHART_WIDTH};
+return {d3,insightsTabs,constituencySelect,detectConstituencyFromLocation,readSavedConstituency,saveSelectedConstituency,metricCards,downloadButton,electoralDistrictMap,topicPointMap,housingStockBar,housingTenureWaterfall,memberCards,membersForConstituency,parliamentaryQuestionList,memberContributionList,relatedResearchResource,createReactiveMount,enhanceHeroWithShare,planningApplicationsTopic,buildPlanningApplicationDownloadRows,buildPlanningApplicationMetrics,filterPlanningApplications,tabularRows,housingData,housingStockData,adultsWithParentsData,renewableEnergyHouseholdsData,planningApplicationRowsPromise,getPlanningApplicationRows,districtGeo,constituenciesGeo,membersLookup,recentQuestionsByConstituency,recentHousingContributions,housingHeroVideo,partyColorMap,TENURES,HOUSING_STOCK_CATEGORIES,state,constituencies,savedConstituency,rowsForConstituency,rowsForDistrict,stockRowsForDistrict,adultsWithParentsStats,renewableEnergyHouseholdProfile,nationalAdultsWithParentsStats,nationalRenewableEnergyHouseholdProfile,constituencyMembers,recentConstituencyHousingQuestions,recentConstituencyHousingContributions,aggregateTenure,housingStats,housingStockStats,nationalStats,districtOptions,selectedDistrictName,scopeLabel,ensureDistrict,selectedConstituencyGeoJSON,getPlanningYears,selectedPlanningApplications,selectedPlanningGeoJSON,planningPeriodLabel,differenceText,restoreScroll,rerender,mountReactive,mountPlanningReactive,rerenderPlanning,renderScopeControl,renderDistrictMapExplorer,renderPlanningYearFilter,HOUSING_CHART_WIDTH};
 }});
 
 define({id: "cc96da0f", inputs: ["housingHeroVideo","enhanceHeroWithShare","display"], outputs: ["hero"], body: (housingHeroVideo,enhanceHeroWithShare,display) => {
@@ -1084,19 +1104,19 @@ define({id: "01af1fcd", inputs: ["display","mountPlanningReactive","renderPlanni
 display(mountPlanningReactive(async () => renderPlanningYearFilter(), {skeleton: "control"}));
 }});
 
-define({id: "d93d22d3", inputs: ["display","mountPlanningReactive","metricCards","buildPlanningApplicationMetrics","selectedPlanningApplications"], body: (display,mountPlanningReactive,metricCards,buildPlanningApplicationMetrics,selectedPlanningApplications) => {
+define({id: "1f0e3a6e", inputs: ["display","mountPlanningReactive","metricCards","buildPlanningApplicationMetrics","selectedPlanningApplications"], body: (display,mountPlanningReactive,metricCards,buildPlanningApplicationMetrics,selectedPlanningApplications) => {
 display(mountPlanningReactive(async () => {
   const wrap = document.createElement("section");
   wrap.className = "insights-metrics-full planning-application-metrics";
   wrap.appendChild(metricCards({
     title: null,
-    metrics: buildPlanningApplicationMetrics(selectedPlanningApplications())
+    metrics: buildPlanningApplicationMetrics(await selectedPlanningApplications())
   }));
   return wrap;
 }, {skeleton: "cards"}));
 }});
 
-define({id: "cd6abfa6", inputs: ["display","mountPlanningReactive","selectedPlanningGeoJSON","topicPointMap","selectedPlanningApplications","planningApplicationsTopic"], body: (display,mountPlanningReactive,selectedPlanningGeoJSON,topicPointMap,selectedPlanningApplications,planningApplicationsTopic) => {
+define({id: "091ecfb0", inputs: ["display","mountPlanningReactive","selectedPlanningGeoJSON","topicPointMap","selectedPlanningApplications","planningApplicationsTopic"], body: (display,mountPlanningReactive,selectedPlanningGeoJSON,topicPointMap,selectedPlanningApplications,planningApplicationsTopic) => {
 display(mountPlanningReactive(async () => {
   const geo = selectedPlanningGeoJSON();
   if (!geo.features.length) {
@@ -1108,7 +1128,7 @@ display(mountPlanningReactive(async () => {
 
   return topicPointMap({
     constituencyGeoJSON: geo,
-    data: selectedPlanningApplications(),
+    data: await selectedPlanningApplications(),
     height: 540,
     enableGeolocation: false,
     fields: planningApplicationsTopic.fields,
@@ -1121,9 +1141,9 @@ display(mountPlanningReactive(async () => {
 }, {skeleton: "map", skeletonHeight: 540}));
 }});
 
-define({id: "84fb07d2", inputs: ["display","mountPlanningReactive","buildPlanningApplicationDownloadRows","selectedPlanningApplications","downloadButton","state","planningPeriodLabel"], body: (display,mountPlanningReactive,buildPlanningApplicationDownloadRows,selectedPlanningApplications,downloadButton,state,planningPeriodLabel) => {
+define({id: "487703b7", inputs: ["display","mountPlanningReactive","buildPlanningApplicationDownloadRows","selectedPlanningApplications","downloadButton","state","planningPeriodLabel"], body: (display,mountPlanningReactive,buildPlanningApplicationDownloadRows,selectedPlanningApplications,downloadButton,state,planningPeriodLabel) => {
 display(mountPlanningReactive(async () => {
-  const rows = buildPlanningApplicationDownloadRows(selectedPlanningApplications());
+  const rows = buildPlanningApplicationDownloadRows(await selectedPlanningApplications());
   const wrap = document.createElement("div");
   wrap.className = "download-block planning-application-download";
   wrap.appendChild(downloadButton(
@@ -1226,7 +1246,7 @@ display(mountReactive(async () => {
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:e9a6a571:--></div>
+<div class="observablehq observablehq--block"><!--:5a9abb0b:--></div>
 <div class="observablehq observablehq--block"><!--:cc96da0f:--></div>
 <div class="observablehq observablehq--block"><!--:c9f292ef:--></div>
 <div class="prose-block lead">
@@ -1257,9 +1277,9 @@ display(mountReactive(async () => {
   <p>Planning applications related to the provision of housing may give insight into demand or other issues relating to questions of housing need in constituencies and individual districts. Explore these applications with our interactive map, view the summary or click through to see the full record on the relevant planning authority website.</p>
 </div>
 <div class="observablehq observablehq--block"><!--:01af1fcd:--></div>
-<div class="observablehq observablehq--block"><!--:d93d22d3:--></div>
-<div class="observablehq observablehq--block"><!--:cd6abfa6:--></div>
-<div class="observablehq observablehq--block"><!--:84fb07d2:--></div>
+<div class="observablehq observablehq--block"><!--:1f0e3a6e:--></div>
+<div class="observablehq observablehq--block"><!--:091ecfb0:--></div>
+<div class="observablehq observablehq--block"><!--:487703b7:--></div>
 <div class="observablehq observablehq--block"><!--:f70e287b:--></div>
 <div class="prose-block">
   <h2>Recent parliamentary questions related to housing</h2>
