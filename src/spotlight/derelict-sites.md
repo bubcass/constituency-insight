@@ -291,10 +291,14 @@ display(mountReactive(async () => memberCards({
 }), {skeleton: "cards"}));
 ```
 
-<div class="prose-block">
-  <h2>Recent parliamentary questions related to dereliction</h2>
-  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs about derelict sites, vacant properties and related measures.</p>
-</div>
+```js
+display(mountReactive(async () => {
+  const intro = document.createElement("div");
+  intro.className = "prose-block";
+  intro.innerHTML = `<h2>Recent parliamentary questions related to dereliction</h2><p>Read recent parliamentary questions tabled by ${state.constituency} TDs about derelict sites, vacant properties and related measures.</p>`;
+  return intro;
+}, {skeleton: "text"}));
+```
 
 <div class="chart-block">
 
@@ -309,10 +313,14 @@ display(mountReactive(async () => parliamentaryQuestionList({
 
 </div>
 
-<div class="prose-block">
-  <h2>Recent speeches related to dereliction</h2>
-  <p>Read recent contributions in Dáil Éireann in which the TDs who represent ${state.constituency} addressed dereliction and vacancy.</p>
-</div>
+```js
+display(mountReactive(async () => {
+  const intro = document.createElement("div");
+  intro.className = "prose-block";
+  intro.innerHTML = `<h2>Recent speeches related to dereliction</h2><p>Read recent contributions in Dáil Éireann in which the TDs who represent ${state.constituency} addressed dereliction and vacancy.</p>`;
+  return intro;
+}, {skeleton: "text"}));
+```
 
 <div class="chart-block">
 

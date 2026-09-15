@@ -782,10 +782,14 @@ display(
 );
 ```
 
-<div class="prose-block">
-  <h2>Recent parliamentary questions</h2>
-  <p>Read recent parliamentary questions tabled by ${state.constituency} TDs.</p>
-</div>
+```js
+display(mountReactive(async () => {
+  const intro = document.createElement("div");
+  intro.className = "prose-block";
+  intro.innerHTML = `<h2>Recent parliamentary questions</h2><p>Read recent parliamentary questions tabled by ${state.constituency} TDs.</p>`;
+  return intro;
+}, {skeleton: "text"}));
+```
 
 <div class="chart-block">
 
@@ -801,10 +805,14 @@ display(
 
 </div>
 
-<div class="prose-block">
-  <h2>Recent parliamentary speeches</h2>
-  <p>Read recent contributions in Dáil Éireann by the TDs who represent ${state.constituency}.</p>
-</div>
+```js
+display(mountReactive(async () => {
+  const intro = document.createElement("div");
+  intro.className = "prose-block";
+  intro.innerHTML = `<h2>Recent parliamentary speeches</h2><p>Read recent contributions in Dáil Éireann by the TDs who represent ${state.constituency}.</p>`;
+  return intro;
+}, {skeleton: "text"}));
+```
 
 <div class="chart-block">
 
