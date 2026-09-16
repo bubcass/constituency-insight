@@ -10,6 +10,7 @@
     --index-card-overlay-start: rgba(24, 22, 19, 0.52);
     --index-card-overlay-end: rgba(24, 22, 19, 0.72);
     --index-card-shadow-hover: 0 8px 24px rgba(47, 47, 47, 0.08);
+    --skeleton-harp: url("data:image/webp;base64,UklGRpIFAABXRUJQVlA4IIYFAAAwGgCdASpwAHAAPpVCnEmlo6KhKxS7gLASiWUA1DVcOc+Bn0fbennjLzBl4tzLsdNMf0Hsd7D5TENB886k3ejynONa8w9gD+a/4z1mP8zytPg/3IPoYiu2zBjfqlMjGVdMc9//nStEGSaxxjXP1fZQwjrW6WgyrvVpMlIFPWXJcsoo9dkkMrVxbhSjKFclIZ6g4Afe/U32I3uaQZ6w+g1SMfps9rFbKXNGW8YnvZ2kUoB14tX4csKC7d2APb+NEmzSTagtG26YphOy2UErWyVM+3CpFYATRn+CAAD+8dOAAOXOBpcQV7KcIIn9SZ9FkAu/hpchDAwWTEi0Pe+El7LvKYFTsvOIggbMi437gSlcNnJAcFerA4xPLtnLGxw1qq36P8NFkd/02t41PWdWS6/Z1IjkVP5PYGkf7GYTi2/8S633vDP8yhDytoz7zAaqQTTx74L5DSgEO/dTlyAcNPvo7tHMTAwknT8C0VeSifYL1Wuua7WnYLSctJ3MrObdSbsTzTMyJoKLi8cwcOX/dL4YH0nsKqt0oaonU1qprkG/ZIAzYmGatWpK6UTR0d1jZ3VeoQ2pbJgpc69z0JT6ZlsqHl34Q3qUaHTwazlm/3vgBeblJSRECBi/AL01zCBHYxkf9gORrr0gXkMQG2+OzQih4Vv1i+VZzh8Te5vlVjmqbKA40gqpPu3YPrx/XA903U77+4TcsXgMl7SYw5Yg4FtMg9hV8xJj7WYbavyYLfNsabf53aacuF9szawKFLBxZL8Q53SPqKfOIv8EyVUVaqmIBgToXDUjJ5khU/a0G1JQW0BvRzSSej21Wg+zUnqLx1nKLNd7VhyGFnkCrNo+MvhMmaVCS2wXIWBtnHpAYBtqyDLPCLonw8h60NX/bcmPvHPFc3hA4wC9TQSQPEjhdDfwfxQljlQ8EBQDmpaA5P2tXfmNhypc8Cgd4wXOYYERscV/eT61xRIAEIGBNg1zJJqXNkDKB9earUtcGlnWwbnTu6PX2B1zT943tobOSxt1PwgSRQnlU2Mqec2uRYF3YoiPlHWcBCvwtVk4GUPb+7KxKDxyXmDpFiD/qO6fnT2qXzjdI+O6Nk6So+2zwl0TJ8VvzUUe/jE9E52ftufMYiE/4/cWkGqSmgVAd7GOr6FRnOwtOug3fY5JmOCHYg5ud8jcl9+8/ApuZzHYIE96hgSFS4rqe6GiwHT+5bo00ldc27HpjqMOOOZP/cWv6haY4e1czAi0uuH+TSM5dL2d57gLeJftTACC0CvlfqLZoaHEZ6YZ1tDpFecyQTcwxCN3mxu85g5uiIWh8IR8xAcHuaPH06XK3/cAkoOI4v0kzl8UcXz3BJX0wWEW9rKAKI4/xCxkYBQFh4hesmOLpBh+A98+ZJvHJiIxo2YYqZUSIbK4C8slb5nSYz2MmN1AQPP/nalRCZn/efgRJvNTQpxikOg8h/w7MD1iJgX1M8WUsfEUph3QcHK+ky9/w0/cH4NDX/p4utRUQaUpX4IwtLWJJoz5LX7Rls3hHr/mFdnbgLoO2msha8gTixzGNqdlszHgi0CcEWaivytD9Kzvj3sCLyrwwYh2XTUULGacPv6p0ijlmy7s2vBMwfxCqBrmOWKK8+Rlk61CEglzel8Cc4uKt+cohrzt2m8NLSh4FAZs9MEPZD9hUFB82GVQOkRoJDUZyqkLnuigYsQ8iKJKcN3ENwaTFn+xrfCi6oIeIhX9f2YK6vanGj5nR/x9cuhx8OsWyhzsibDcZd4FkmnGhHNUe3OLSL2lg3JjQpXOQgE1AWQZUvM8jQ/0EwsdbEe7LbxHVNtTxJ/6n94HA101M68TFCfsUqXLln7zURCapyrK0VDSPgH2FI3RH4uk0kpYV9DMQfAAAAAAAAAA");
 }
 
 :root[data-theme="dark"] {
@@ -2695,9 +2696,9 @@ body.has-map-fullscreen {
  * cell mounts its reactive view (or other content), :empty stops matching and
  * the normal component-level skeleton takes over.
  */
-#observablehq-main > .observablehq--block:not(:first-child):is(:empty, .prehydrate-skeleton),
-#observablehq-main .chart-block > .observablehq--block:is(:empty, .prehydrate-skeleton),
-#observablehq-main .education-irish-control-block > .observablehq--block:is(:empty, .prehydrate-skeleton) {
+#observablehq-main > .observablehq--block:not(:first-child):empty,
+#observablehq-main .chart-block > .observablehq--block:empty,
+#observablehq-main .education-irish-control-block > .observablehq--block:empty {
     position: relative;
     min-height: 136px;
     overflow: hidden;
@@ -2706,9 +2707,9 @@ body.has-map-fullscreen {
     background: var(--surface-soft);
 }
 
-#observablehq-main > .observablehq--block:not(:first-child):is(:empty, .prehydrate-skeleton)::after,
-#observablehq-main .chart-block > .observablehq--block:is(:empty, .prehydrate-skeleton)::after,
-#observablehq-main .education-irish-control-block > .observablehq--block:is(:empty, .prehydrate-skeleton)::after {
+#observablehq-main > .observablehq--block:not(:first-child):empty::after,
+#observablehq-main .chart-block > .observablehq--block:empty::after,
+#observablehq-main .education-irish-control-block > .observablehq--block:empty::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -2722,20 +2723,20 @@ body.has-map-fullscreen {
     animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
 
-#observablehq-main > .observablehq--block:nth-child(2):is(:empty, .prehydrate-skeleton) {
+#observablehq-main > .observablehq--block:nth-child(2):empty {
     min-height: clamp(300px, 52vw, 620px);
     border-radius: 0;
 }
 
-#observablehq-main > .observablehq--block:nth-child(3):is(:empty, .prehydrate-skeleton) {
+#observablehq-main > .observablehq--block:nth-child(3):empty {
     min-height: 54px;
 }
 
-#observablehq-main .chart-block > .observablehq--block:is(:empty, .prehydrate-skeleton) {
+#observablehq-main .chart-block > .observablehq--block:empty {
     min-height: 360px;
 }
 
-#observablehq-main .education-irish-control-block > .observablehq--block:is(:empty, .prehydrate-skeleton) {
+#observablehq-main .education-irish-control-block > .observablehq--block:empty {
     min-height: 84px;
 }
 
@@ -2838,30 +2839,29 @@ body.has-map-fullscreen {
     box-sizing: border-box;
 }
 
-.reactive-skeleton__emblem,
-.prehydrate-skeleton__emblem {
+#observablehq-main > .observablehq--block:not(:first-child):empty::before,
+#observablehq-main .chart-block > .observablehq--block:empty::before,
+#observablehq-main .education-irish-control-block > .observablehq--block:empty::before,
+.reactive-skeleton::before {
+    content: "";
     position: absolute;
     z-index: 0;
-    top: 50%;
-    left: 50%;
-    width: min(68%, 30rem);
-    height: min(76%, 30rem);
+    inset: 12%;
+    background: var(--skeleton-harp) center / contain no-repeat;
+    filter: grayscale(1) contrast(1.45);
     opacity: 0.055;
     pointer-events: none;
-    filter: grayscale(1) contrast(1.45);
-    object-fit: contain;
-    transform: translate(-50%, -50%);
     animation: skeleton-emblem-pulse 1.8s ease-in-out infinite alternate;
 }
 
-.reactive-skeleton > :not(.reactive-skeleton__emblem) {
+.reactive-skeleton > * {
     position: relative;
     z-index: 1;
 }
 
 @keyframes skeleton-emblem-pulse {
-    from { opacity: 0.035; transform: translate(-50%, -50%) scale(0.97); }
-    to { opacity: 0.075; transform: translate(-50%, -50%) scale(1); }
+    from { opacity: 0.035; transform: scale(0.97); }
+    to { opacity: 0.075; transform: scale(1); }
 }
 
 .reactive-skeleton__status {
@@ -2975,8 +2975,10 @@ body.has-map-fullscreen {
     #observablehq-main .education-irish-control-block > .observablehq--block:empty::after,
     .skeleton-shimmer::after,
     .reactive-view.is-updating::after,
-    .reactive-skeleton__emblem,
-    .prehydrate-skeleton__emblem {
+    .reactive-skeleton::before,
+    #observablehq-main > .observablehq--block:not(:first-child):empty::before,
+    #observablehq-main .chart-block > .observablehq--block:empty::before,
+    #observablehq-main .education-irish-control-block > .observablehq--block:empty::before {
         animation: none;
     }
 

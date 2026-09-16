@@ -234,62 +234,6 @@ export default {
       })();
 
       (() => {
-        const selector = [
-          "#observablehq-main > .observablehq--block:not(:first-child)",
-          "#observablehq-main .chart-block > .observablehq--block",
-          "#observablehq-main .education-irish-control-block > .observablehq--block",
-        ].join(", ");
-
-        const decorateEmptyBlocks = () => {
-          const harpSource = document.querySelector('link[rel~="icon"]')?.href;
-          if (!harpSource) return;
-
-          for (const block of document.querySelectorAll(selector)) {
-            const emblem = block.querySelector(":scope > .prehydrate-skeleton__emblem");
-            const hasOnlyEmblem = block.children.length === 1 && emblem;
-
-            if (!block.childNodes.length || hasOnlyEmblem) {
-              block.classList.add("prehydrate-skeleton");
-              if (!emblem) {
-                const image = document.createElement("img");
-                image.className = "prehydrate-skeleton__emblem";
-                image.src = harpSource;
-                image.alt = "";
-                image.setAttribute("aria-hidden", "true");
-                block.appendChild(image);
-              }
-            } else {
-              block.classList.remove("prehydrate-skeleton");
-              emblem?.remove();
-            }
-          }
-        };
-
-        const setupPrehydrateSkeletons = () => {
-          const main = document.querySelector("#observablehq-main");
-          if (!main) return;
-          let pending = false;
-          const schedule = () => {
-            if (pending) return;
-            pending = true;
-            window.requestAnimationFrame(() => {
-              pending = false;
-              decorateEmptyBlocks();
-            });
-          };
-          decorateEmptyBlocks();
-          new MutationObserver(schedule).observe(main, {childList: true, subtree: true});
-        };
-
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", setupPrehydrateSkeletons, {once: true});
-        } else {
-          setupPrehydrateSkeletons();
-        }
-      })();
-
-
-      (() => {
         const setupOireachtasFooter = () => {
           if (!document.body || document.querySelector(".oireachtas-footer")) return;
 
