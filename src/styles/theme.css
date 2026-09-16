@@ -2838,6 +2838,31 @@ body.has-map-fullscreen {
     box-sizing: border-box;
 }
 
+.reactive-skeleton__emblem {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: min(68%, 30rem);
+    max-height: 76%;
+    height: auto;
+    opacity: 0.055;
+    pointer-events: none;
+    filter: grayscale(1) contrast(1.45);
+    transform: translate(-50%, -50%);
+    animation: skeleton-emblem-pulse 1.8s ease-in-out infinite alternate;
+}
+
+.reactive-skeleton > :not(.reactive-skeleton__emblem) {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes skeleton-emblem-pulse {
+    from { opacity: 0.035; transform: translate(-50%, -50%) scale(0.97); }
+    to { opacity: 0.075; transform: translate(-50%, -50%) scale(1); }
+}
+
 .reactive-skeleton__status {
     position: absolute;
     width: 1px;
@@ -2948,7 +2973,8 @@ body.has-map-fullscreen {
     #observablehq-main .chart-block > .observablehq--block:empty::after,
     #observablehq-main .education-irish-control-block > .observablehq--block:empty::after,
     .skeleton-shimmer::after,
-    .reactive-view.is-updating::after {
+    .reactive-view.is-updating::after,
+    .reactive-skeleton__emblem {
         animation: none;
     }
 

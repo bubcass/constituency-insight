@@ -83,7 +83,23 @@ function createSkeleton(type, height) {
   const safeHeight = Number.isFinite(height) ? Math.max(80, height) : null;
   skeleton.className = `reactive-skeleton reactive-skeleton--${type}`;
   if (safeHeight) skeleton.style.minHeight = `${safeHeight}px`;
-  skeleton.innerHTML = `<span class="reactive-skeleton__status">Loading content…</span>`;
+
+  const status = document.createElement("span");
+  status.className = "reactive-skeleton__status";
+  status.textContent = "Loading content…";
+  skeleton.appendChild(status);
+
+  // Reuse the site's favicon: it is the monochrome Oireachtas harp and is
+  // already available on every page before reactive content begins loading.
+  const harpSource = document.querySelector('link[rel~="icon"]')?.href;
+  if (harpSource) {
+    const emblem = document.createElement("img");
+    emblem.className = "reactive-skeleton__emblem";
+    emblem.src = harpSource;
+    emblem.alt = "";
+    emblem.setAttribute("aria-hidden", "true");
+    skeleton.prepend(emblem);
+  }
 
   if (type === "map") {
     skeleton.classList.add("map-skeleton", "skeleton-shimmer");
