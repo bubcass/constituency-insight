@@ -1773,6 +1773,61 @@
     line-height: 1.45;
 }
 
+/* PBO treatment, deliberately limited to the sports funding spotlight. */
+.sports-funding-hero {
+    border-bottom-color: #6b1448;
+}
+
+.sports-funding-hero .hero__overlay {
+    background: linear-gradient(
+        to top,
+        rgba(64, 10, 42, 0.82),
+        rgba(107, 20, 72, 0.47),
+        rgba(107, 20, 72, 0.08)
+    );
+}
+
+.sports-funding-hero .hero__eyebrow {
+    color: #ffbb00;
+}
+
+.sports-funding-metrics .metric-card {
+    border-color: #e5c9d6;
+    border-top: 3px solid #6b1448;
+    background: linear-gradient(135deg, #fdf7fa, #fffdf8 56%);
+}
+
+.sports-funding-metrics .metric-card__label {
+    color: #6b1448;
+}
+
+:root[data-theme="dark"] .sports-funding-hero {
+    border-bottom-color: #e6a9ca;
+}
+
+:root[data-theme="dark"] .sports-funding-hero .hero__overlay {
+    background: linear-gradient(
+        to top,
+        rgba(31, 8, 23, 0.88),
+        rgba(83, 28, 58, 0.58),
+        rgba(83, 28, 58, 0.12)
+    );
+}
+
+:root[data-theme="dark"] .sports-funding-hero .hero__eyebrow {
+    color: #ffcf4d;
+}
+
+:root[data-theme="dark"] .sports-funding-metrics .metric-card {
+    border-color: #70475d;
+    border-top-color: #e6a9ca;
+    background: linear-gradient(135deg, #302029, #22231f 60%);
+}
+
+:root[data-theme="dark"] .sports-funding-metrics .metric-card__label {
+    color: #e6a9ca;
+}
+
 .election-chart-wrap,
 .waterfall-segments-chart-wrap {
     max-width: var(--data-max);

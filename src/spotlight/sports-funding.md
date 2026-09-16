@@ -21,13 +21,16 @@ import { memberContributionList } from "../components/parliamentary-activity.js"
 import { relatedResearchResource } from "../components/related-research.js";
 import { createReactiveMount } from "../components/reactive-mount.js";
 import { enhanceHeroWithShare } from "../components/hero-share.js";
-import { chartPalette } from "../config/chart-palette.js";
+import { getChartPalette } from "../config/chart-palette.js";
 
 import { sportsFundingTopic } from "../topics/sports-funding/config.js";
 import {
   filterRowsByConstituency,
   buildMetricCardData
 } from "../topics/sports-funding/transforms.js";
+
+// Keep the PBO palette scoped to this spotlight rather than changing the site-wide default.
+const sportsFundingPalette = getChartPalette("pbo");
 
 const sportsFundingPromise = FileAttachment(
   "../data/derived/sports-funding-enriched.json"
@@ -277,7 +280,7 @@ function getWaterfallColorLookup(rows = []) {
   )).sort((a, b) => String(a).localeCompare(String(b), "en"));
   return new Map(categories.map((category, index) => [
     category,
-    chartPalette[index % chartPalette.length]
+    sportsFundingPalette[index % sportsFundingPalette.length]
   ]));
 }
 
@@ -438,7 +441,7 @@ async function getSelectedWaterfallRecord() {
       ...record,
       segments: (record.segments ?? []).map((segment) => ({
         ...segment,
-        color: colorLookup.get(segment.Segment) ?? chartPalette[0]
+        color: colorLookup.get(segment.Segment) ?? sportsFundingPalette[0]
       }))
     } : null;
   }
@@ -466,7 +469,7 @@ async function getSelectedWaterfallRecord() {
     return {
       Segment: d.Segment,
       value: d.value,
-      color: colorLookup.get(d.Segment) ?? chartPalette[0],
+      color: colorLookup.get(d.Segment) ?? sportsFundingPalette[0],
       x1,
       x2,
       share: total > 0 ? d.value / total : 0
@@ -490,7 +493,7 @@ display(insightsTabs("spotlights", {basePath: ".."}));
 
 ```js
 const heroWrap = document.createElement("div");
-heroWrap.className = "hero";
+heroWrap.className = "hero sports-funding-hero";
 
 const heroVideo = await heroVideoPromise;
 
@@ -553,7 +556,7 @@ display(
     const selectedRows = await getSelectedRows();
 
     const wrap = document.createElement("section");
-    wrap.className = "insights-metrics-full";
+    wrap.className = "insights-metrics-full sports-funding-metrics";
 
     wrap.appendChild(
       metricCards({
@@ -600,7 +603,7 @@ display(
         title: "__title"
       },
       labels: sportsFundingTopic.labels,
-      palette: sportsFundingTopic.palette,
+      palette: sportsFundingPalette,
       tooltipHTML: sportsFundingTopic.tooltipHTML,
       amountFormatter: sportsFundingTopic.formatters.amount
     });
