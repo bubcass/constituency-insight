@@ -2695,9 +2695,9 @@ body.has-map-fullscreen {
  * cell mounts its reactive view (or other content), :empty stops matching and
  * the normal component-level skeleton takes over.
  */
-#observablehq-main > .observablehq--block:not(:first-child):empty,
-#observablehq-main .chart-block > .observablehq--block:empty,
-#observablehq-main .education-irish-control-block > .observablehq--block:empty {
+#observablehq-main > .observablehq--block:not(:first-child):is(:empty, .prehydrate-skeleton),
+#observablehq-main .chart-block > .observablehq--block:is(:empty, .prehydrate-skeleton),
+#observablehq-main .education-irish-control-block > .observablehq--block:is(:empty, .prehydrate-skeleton) {
     position: relative;
     min-height: 136px;
     overflow: hidden;
@@ -2706,9 +2706,9 @@ body.has-map-fullscreen {
     background: var(--surface-soft);
 }
 
-#observablehq-main > .observablehq--block:not(:first-child):empty::after,
-#observablehq-main .chart-block > .observablehq--block:empty::after,
-#observablehq-main .education-irish-control-block > .observablehq--block:empty::after {
+#observablehq-main > .observablehq--block:not(:first-child):is(:empty, .prehydrate-skeleton)::after,
+#observablehq-main .chart-block > .observablehq--block:is(:empty, .prehydrate-skeleton)::after,
+#observablehq-main .education-irish-control-block > .observablehq--block:is(:empty, .prehydrate-skeleton)::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -2722,20 +2722,20 @@ body.has-map-fullscreen {
     animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
 
-#observablehq-main > .observablehq--block:nth-child(2):empty {
+#observablehq-main > .observablehq--block:nth-child(2):is(:empty, .prehydrate-skeleton) {
     min-height: clamp(300px, 52vw, 620px);
     border-radius: 0;
 }
 
-#observablehq-main > .observablehq--block:nth-child(3):empty {
+#observablehq-main > .observablehq--block:nth-child(3):is(:empty, .prehydrate-skeleton) {
     min-height: 54px;
 }
 
-#observablehq-main .chart-block > .observablehq--block:empty {
+#observablehq-main .chart-block > .observablehq--block:is(:empty, .prehydrate-skeleton) {
     min-height: 360px;
 }
 
-#observablehq-main .education-irish-control-block > .observablehq--block:empty {
+#observablehq-main .education-irish-control-block > .observablehq--block:is(:empty, .prehydrate-skeleton) {
     min-height: 84px;
 }
 
@@ -2838,17 +2838,18 @@ body.has-map-fullscreen {
     box-sizing: border-box;
 }
 
-.reactive-skeleton__emblem {
+.reactive-skeleton__emblem,
+.prehydrate-skeleton__emblem {
     position: absolute;
     z-index: 0;
     top: 50%;
     left: 50%;
     width: min(68%, 30rem);
-    max-height: 76%;
-    height: auto;
+    height: min(76%, 30rem);
     opacity: 0.055;
     pointer-events: none;
     filter: grayscale(1) contrast(1.45);
+    object-fit: contain;
     transform: translate(-50%, -50%);
     animation: skeleton-emblem-pulse 1.8s ease-in-out infinite alternate;
 }
@@ -2974,7 +2975,8 @@ body.has-map-fullscreen {
     #observablehq-main .education-irish-control-block > .observablehq--block:empty::after,
     .skeleton-shimmer::after,
     .reactive-view.is-updating::after,
-    .reactive-skeleton__emblem {
+    .reactive-skeleton__emblem,
+    .prehydrate-skeleton__emblem {
         animation: none;
     }
 
