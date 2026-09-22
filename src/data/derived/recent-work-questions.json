@@ -4000,6 +4000,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/1433/"
       },
       {
+        "date": "2026-09-16",
+        "deputy": "Denise Mitchell",
+        "department": "Finance",
+        "heading": "Tax Code",
+        "question": "408. Deputy Denise Mitchell asked the Tánaiste and Minister for Finance if he plans for the establishment of a working group to review and propose changes to the taxation of funds, life assurance policies and other investment products, as recommended by the Welfare and Taxation Commission; and if he will make a statement on the matter. [65014/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/408/"
+      },
+      {
         "date": "2026-09-07",
         "deputy": "Barry Heneghan",
         "department": "Transport",
@@ -4454,14 +4462,6 @@
         "heading": "Industrial Relations",
         "question": "480. Deputy Cian O'Callaghan asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation if he is aware that under Building Momentum that 3% was set aside for local bargaining; the reason his Department is blocking political staff in the Houses of the Oireachtas from local bargaining despite the 2022 agreement which linked staff to public service pay agreements; the reason his Department is refusing to engage with the Workplace Relations Commission and a union (details supplied) on this; and if he will make a statement on the matter. [34017/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/480/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Naoise Ó Muirí",
-        "department": "Further and Higher Education",
-        "heading": "Further and Higher Education",
-        "question": "171. Deputy Naoise Ó Muirí asked the Minister for Further and Higher Education, Research, Innovation and Science if he will outline the work his Department is doing to encourage careers in the ORE sector; and if he will make a statement on the matter. [34808/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/171/"
       }
     ]
   },
@@ -8332,6 +8332,14 @@
       {
         "date": "2026-09-16",
         "deputy": "Emer Currie",
+        "department": "Enterprise",
+        "heading": "Business Supports",
+        "question": "468. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment the level of funding provided by local enterprise offices (LEOs) to businesses to assist with the impact of tariffs and tariff-related costs in each of the years 2024, 2025 and to date in 2026; the total amount committed and paid out in each year; the number of businesses that received such support; the amount provided by each individual LEO; and the schemes or funding streams through which this support was provided, by county and by sector. [65560/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/468/"
+      },
+      {
+        "date": "2026-09-16",
+        "deputy": "Emer Currie",
         "department": "Children",
         "heading": "Childcare Services",
         "question": "1009. Deputy Emer Currie asked the Minister for Children, Disability and Equality whether full-day crèches in core funding are subject to minimum hours to assist parents in drop-offs and pick-ups when they work full-time, as some crèches are open from 8.30am to 5.30pm so parents cannot use them. [64174/26]",
@@ -8784,14 +8792,6 @@
         "heading": "Legislative Process",
         "question": "1198. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment when it is planned to submit the general scheme of a Bill to update the Limited Partnerships Act 1907 to the Oireachtas Committee for pre-legislative scrutiny. [27258/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1198/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Emer Currie",
-        "department": "Enterprise",
-        "heading": "Pension Provisions",
-        "question": "1182. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment for an update on progress of recommendation no. 40 of the Action Plan for Competitiveness &amp; Productivity on incentivising pension fund and institutional investor participation in the financing of scaling Irish enterprise. [26313/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1182/"
       }
     ]
   },
@@ -8829,6 +8829,22 @@
         "heading": "Health Services Staff",
         "question": "341. Deputy Richard Boyd Barrett asked the Minister for Health whether, in respect of 2026 general nursing graduates who might have expected to be offered permanent HSE contracts per outlined in HR Memo 013/2026?2, but who have not yet received contracts or confirmed commencement dates, the delay in commencement of employment related to HSE financial pressures, workforce ceilings or a lack of funding from the Department of Health. [66015/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-17/341/"
+      },
+      {
+        "date": "2026-09-16",
+        "deputy": "Barry Ward",
+        "department": "Enterprise",
+        "heading": "Disability Issues",
+        "question": "463. Deputy Barry Ward asked the Minister for Enterprise, Tourism and Employment in cases in which a building under his control is not wheelchair accessible, the reason for this; his plans to remedy this; and the timeline for measures to be completed. [65345/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/463/"
+      },
+      {
+        "date": "2026-09-16",
+        "deputy": "Richard Boyd Barrett",
+        "department": "Enterprise",
+        "heading": "Departmental Contracts",
+        "question": "460. Deputy Richard Boyd Barrett asked the Minister for Enterprise, Tourism and Employment the details of any contracts in place between his Department and agencies under his remit with a company (details supplied) known to have provided material support to the IDF in Gaza, which the Government considers to be guilty of genocide, since 2023. [64851/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/460/"
       },
       {
         "date": "2026-09-07",
@@ -9261,22 +9277,6 @@
         "heading": "Employment Rights",
         "question": "874. Deputy Barry Ward asked the Minister for Agriculture, Food and the Marine the position regarding any mechanism in place within his Department that allows for civil servants to transfer on secondment to an equivalent role within the European Union, without negatively impacting their pension and other employment rights; his views on the merits of such a scheme; and if he will make a statement on the matter. [34415/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/874/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Barry Ward",
-        "department": "Finance",
-        "heading": "Employment Schemes",
-        "question": "461. Deputy Barry Ward asked the Tánaiste and Minister for Finance the position regarding any mechanism in place within his Department that allows for civil servants to transfer on secondment to an equivalent role within the European Union, without negatively impacting their pension and other employment rights; his views on the merits of such a scheme; and if he will make a statement on the matter. [34422/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/461/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Barry Ward",
-        "department": "Housing",
-        "heading": "Planning Issues",
-        "question": "679. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage the research that was carried out by his Department prior to the recent changes to planning regulations for modular homes, specifically in relation to the potential impact on the work of local authorities and their county development plans. [34112/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/679/"
       }
     ]
   },
@@ -15524,6 +15524,22 @@
       {
         "date": "2026-09-16",
         "deputy": "Claire Kerrane",
+        "department": "Finance",
+        "heading": "Departmental Policies",
+        "question": "406. Deputy Claire Kerrane asked the Tánaiste and Minister for Finance the conflict-of-interest, disclosure, recusal and post-employment safeguards apply in circumstances (details supplied); if any cooling-off period applies; and the procedures that exist to ensure that confidential information or relationships acquired during State employment cannot subsequently be used for private commercial advantage. [65033/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/406/"
+      },
+      {
+        "date": "2026-09-16",
+        "deputy": "Claire Kerrane",
+        "department": "Finance",
+        "heading": "Departmental Policies",
+        "question": "407. Deputy Claire Kerrane asked the Tánaiste and Minister for Finance given the increasing role of ISIF in making investments on behalf of the State, the policies and safeguards to ensure the State extracts maximum value from these transactions; the conflict-of-interest and post-employment policies which apply where an ISIF/NTMA employee involved in assessing, recommending or progressing an investment subsequently takes up a senior position as a fund manager on behalf of a company that has received that investment. [65017/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/407/"
+      },
+      {
+        "date": "2026-09-16",
+        "deputy": "Claire Kerrane",
         "department": "Children",
         "heading": "Special Educational Needs",
         "question": "1041. Deputy Claire Kerrane asked the Minister for Children, Disability and Equality if she is aware of concerns being raised by providers regarding the new system for AIM (details supplied); if an AIM worker is expected to be sent home when a child is absent; and if she will ensure greater clarification for on the ground in settings for providers. [65039/26]",
@@ -15984,22 +16000,6 @@
         "heading": "Departmental Strategies",
         "question": "1418. Deputy Martin Daly asked the Minister for Further and Higher Education, Research, Innovation and Science the steps being taken to expand the skilled workforce required to meet the Government’s annual housing delivery target of 50,000 homes; and the way in which apprenticeship programmes and training pathways are being scaled to address shortages in key trades such as carpentry, plumbing, and electrical work. [48566/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-09-17/1418/"
-      },
-      {
-        "date": "2025-09-17",
-        "deputy": "Martin Daly",
-        "department": "Children",
-        "heading": "Disability Services",
-        "question": "1095. Deputy Martin Daly asked the Minister for Children, Disability and Equality if she will consider extending the standard duration of adult disability day services from six to eight hours per day, particularly in counties such as Roscommon where services are delivered by providers such as an organisation (details supplied); and whether such an extension would be supported by additional funding to enable families especially parents to return to work and maintain their own lives alongside caring responsibilities. [48599/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-17/1095/"
-      },
-      {
-        "date": "2025-09-17",
-        "deputy": "Martin Daly",
-        "department": "Climate",
-        "heading": "Electricity Grid",
-        "question": "134. Deputy Martin Daly asked the Minister for Climate, Energy and the Environment the steps have that been taken to enhance the resilience of Ireland’s electricity grid in light of increasingly frequent extreme weather events; and the way in which his Department is working with ESB Networks and the Commission for Regulation of Utilities to future-proof major supply lines. [48557/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-17/134/"
       }
     ]
   },
