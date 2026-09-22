@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: recent-parliamentary-activity
@@ -27,10 +28,12 @@ jobs:
       - name: Build current parliamentary activity datasets
         run: npm run build:parliamentary
 
-      - name: Commit changed dataset
+      - name: Commit changed datasets
+        id: commit
         run: |
           if git diff --quiet -- src/data/members-lookup.json src/data/derived/recent-member-contributions.json src/data/derived/recent-sports-contributions.json src/data/derived/recent-work-contributions.json src/data/derived/recent-questions.json src/data/derived/recent-sports-questions.json src/data/derived/recent-work-questions.json src/data/derived/recent-housing-contributions.json src/data/derived/recent-housing-questions.json src/data/derived/recent-transport-contributions.json src/data/derived/recent-transport-questions.json src/data/derived/recent-education-contributions.json src/data/derived/recent-education-questions.json; then
             echo "No parliamentary activity changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -38,3 +41,16 @@ jobs:
           git add src/data/members-lookup.json src/data/derived/recent-member-contributions.json src/data/derived/recent-sports-contributions.json src/data/derived/recent-work-contributions.json src/data/derived/recent-questions.json src/data/derived/recent-sports-questions.json src/data/derived/recent-work-questions.json src/data/derived/recent-housing-contributions.json src/data/derived/recent-housing-questions.json src/data/derived/recent-transport-contributions.json src/data/derived/recent-transport-questions.json src/data/derived/recent-education-contributions.json src/data/derived/recent-education-questions.json
           git commit -m "Update recent parliamentary activity"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy updated data
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: "deploy.yml",
+              ref: "main"
+            });

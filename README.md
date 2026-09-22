@@ -111,9 +111,9 @@ output to `TOPICS` in `src/scripts/build-recent-questions.mjs` rather than
 introducing a separate question source.
 
 The `Update recent parliamentary activity` GitHub Actions workflow runs both
-refreshes each night, commits the datasets only when their contents change and
-thereby triggers a new GitHub Pages deployment. A manual contributions date
-range can be built with:
+refreshes each night. When the datasets change, it commits them and explicitly
+starts a new GitHub Pages deployment. A manual contributions date range can be
+built with:
 
 ```bash
 node src/scripts/build-recent-contributions.mjs \
