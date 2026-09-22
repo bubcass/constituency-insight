@@ -11,8 +11,11 @@ complete data layer. The command validates the versioned static inputs, then:
 4. rebuilds the derived spotlight datasets from their versioned source files;
 5. runs the cross-dataset consistency audit.
 
-The Census age profile in `src/data/demographics-age-2022.csv`, constituency
-geometry and the files in `src/data/source` are deliberate versioned inputs.
+The Census age-profile transformer retrieves CSO table `SAP2022T1T1ED` and
+combines it with the versioned electoral-district-to-constituency mapping in
+`src/data/source/electoral-district-constituency-2024.csv` and writes the
+chart-ready `src/data/demographics-age-2022.csv`. Constituency geometry and
+the remaining files in `src/data/source` are deliberate versioned inputs.
 They are checked before a refresh but are not silently replaced. This includes
 the manually downloaded RSA, PBO, HSE, planning, derelict-site and deprivation
 snapshots. Replace those source files explicitly when a new edition is
@@ -23,6 +26,16 @@ versioned input. Normal installs, site builds and data refreshes use that file
 and do not install or run mapshaper. Boundary regeneration is a separate,
 infrequent maintenance operation documented in
 `tools/electoral-districts/README.md`.
+
+The age-profile pipeline has two outputs:
+
+1. `npm run build:demographics-age` retrieves and validates the CSO response,
+   then transforms it into the canonical CSV used by the site.
+2. `npm run build:browser-data` converts that CSV into the typed browser JSON
+   consumed by charts.
+
+`npm run data:refresh` runs both stages. `npm run data:rebuild` covers only
+transformers whose inputs are versioned local source files.
 
 Useful variants are:
 

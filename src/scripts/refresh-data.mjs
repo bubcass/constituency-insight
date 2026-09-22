@@ -7,7 +7,7 @@ const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(SCRIPT_DIR, "../..");
 
 const STATIC_INPUTS = [
-  "src/data/demographics-age-2022.csv",
+  "src/data/source/electoral-district-constituency-2024.csv",
   "src/data/geo/constituencies.json",
   "src/data/geo/electoral-districts-2022.geojson",
   "src/data/geo/electoral-district-validity-fallbacks.geojson",
@@ -23,6 +23,7 @@ const STATIC_INPUTS = [
 ];
 
 const TASKS = [
+  task("census", "Census age profile", "src/scripts/build-demographics-age.mjs"),
   task("census", "Education qualifications", "src/scripts/build-education-qualification.mjs"),
   task("census", "Education participation", "src/scripts/build-education-participation.mjs"),
   task("census", "Irish-speaking frequency", "src/scripts/build-irish-speaking.mjs"),

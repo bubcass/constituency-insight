@@ -13,6 +13,7 @@
     "build:recent-questions": "node src/scripts/build-recent-questions.mjs",
     "build:parliamentary": "node src/scripts/build-parliamentary-activity.mjs",
     "build:members": "node src/scripts/build-members-lookup.mjs",
+    "build:demographics-age": "node src/scripts/build-demographics-age.mjs",
     "build:education-qualification": "node src/scripts/build-education-qualification.mjs",
     "build:education-participation": "node src/scripts/build-education-participation.mjs",
     "build:irish-speaking": "node src/scripts/build-irish-speaking.mjs",

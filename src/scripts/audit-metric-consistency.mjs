@@ -44,6 +44,17 @@ const ages = csv("demographics-age-2022.csv");
 const ageBases = ages.columns
   .filter((field) => field.endsWith(" - Total") && field !== "Total")
   .map((field) => field.slice(0, -" - Total".length));
+const chartAgeBands = [
+  {label: "0–9", fields: Array.from({length: 10}, (_, index) => `Age ${index}`)},
+  {label: "10–19", fields: Array.from({length: 10}, (_, index) => `Age ${index + 10}`)},
+  {label: "20–29", fields: ["Age 20 - 24", "Age 25 - 29"]},
+  {label: "30–39", fields: ["Age 30 - 34", "Age 35 - 39"]},
+  {label: "40–49", fields: ["Age 40 - 44", "Age 45 - 49"]},
+  {label: "50–59", fields: ["Age 50 - 54", "Age 55 - 59"]},
+  {label: "60–69", fields: ["Age 60 - 64", "Age 65 - 69"]},
+  {label: "70–79", fields: ["Age 70 - 74", "Age 75 - 79"]},
+  {label: "80+", fields: ["Age 80 - 84", "Age 85 and over"]},
+];
 for (const row of ages) {
   for (const age of ageBases) {
     equal(
@@ -54,6 +65,19 @@ for (const row of ages) {
   }
   equal(sum(row, ageBases.map((age) => `${age} - Total`)), number(row, "Total"), `demographics-age-2022.csv — ${identity(row)} — all ages`);
   equal(number(row, "Total - Males") + number(row, "Total - Females"), number(row, "Total"), `demographics-age-2022.csv — ${identity(row)} — total by sex`);
+  for (const band of chartAgeBands) {
+    const male = sum(row, band.fields.map((field) => `${field} - Males`));
+    const female = sum(row, band.fields.map((field) => `${field} - Females`));
+    const total = sum(row, band.fields.map((field) => `${field} - Total`));
+    equal(male + female, total, `demographics-age-2022.csv — ${identity(row)} — ${band.label} chart band by sex`);
+  }
+  for (const sex of ["Males", "Females", "Total"]) {
+    equal(
+      sum(row, chartAgeBands.flatMap((band) => band.fields.map((field) => `${field} - ${sex}`))),
+      number(row, sex === "Total" ? "Total" : `Total - ${sex}`),
+      `demographics-age-2022.csv — ${identity(row)} — chart bands cover ${sex.toLowerCase()}`,
+    );
+  }
 }
 
 const qualificationFields = csv("education-qualification-2022.csv").columns.filter(
