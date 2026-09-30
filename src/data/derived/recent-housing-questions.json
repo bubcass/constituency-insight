@@ -3691,6 +3691,14 @@
     "constituency": "Donegal",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Pearse Doherty",
+        "department": "Finance",
+        "heading": "Tax Collection",
+        "question": "117. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance if he will outline the estimated cost to the State of vulture funds using structures like IREFs to avoid paying taxes on rental income. [68615/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/117/"
+      },
+      {
         "date": "2026-09-17",
         "deputy": "Pearse Doherty",
         "department": "Finance",
@@ -4161,20 +4169,20 @@
         "heading": "Housing Provision",
         "question": "716. Deputy Charles Ward asked the Minister for Housing, Local Government and Heritage whether he has considered a CALF application for 60 houses in Carndonagh (details supplied); if so, his decision in relation to this application; and if he will make a statement on the matter. [34935/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/716/"
-      },
-      {
-        "date": "2026-05-06",
-        "deputy": "Pádraig Mac Lochlainn",
-        "department": "Housing",
-        "heading": "Defective Building Materials",
-        "question": "524. Deputy Pádraig Mac Lochlainn asked the Minister for Housing, Local Government and Heritage when he will finally commence the defective concrete block scheme for social housing. [32840/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/524/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay North",
     "questions": [
+      {
+        "date": "2026-09-29",
+        "deputy": "Cian O'Callaghan",
+        "department": "Finance",
+        "heading": "Banking Sector",
+        "question": "116. Deputy Cian O'Callaghan asked the Tánaiste and Minister for Finance the action his Department is taking to address the continued tracker mortgage and consumer protection issues arising from the transfer of mortgages (details supplied). [68857/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/116/"
+      },
       {
         "date": "2026-09-23",
         "deputy": "Denise Mitchell",
@@ -4646,14 +4654,6 @@
         "heading": "Housing Provision",
         "question": "498. Deputy Barry Heneghan asked the Minister for Housing, Local Government and Heritage the annual housing delivery targets currently in place, broken down by tenure including private, social, affordable purchase and cost rental; the methodology used to determine these targets having regard to projected population growth and housing demand; and if he will make a statement on the matter. [32043/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/498/"
-      },
-      {
-        "date": "2026-05-06",
-        "deputy": "Barry Heneghan",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "500. Deputy Barry Heneghan asked the Minister for Housing, Local Government and Heritage the number and proportion of homes expected to be delivered annually under current policy that will be social housing, affordable purchase and cost rental; whether specific targets have been set for the share of such housing within overall supply in the coming years; and if he will make a statement on the matter. [32045/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/500/"
       }
     ]
   },
