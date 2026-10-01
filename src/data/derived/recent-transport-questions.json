@@ -4240,6 +4240,14 @@
     "constituency": "Dublin Bay North",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Barry Heneghan",
+        "department": "Finance",
+        "heading": "Disability Issues",
+        "question": "126. Deputy Barry Heneghan asked the Tánaiste and Minister for Finance whether changes to the tax system are being considered for budget 2027 to better recognise the additional costs faced by persons with disabilities, including the cost of transport, energy and medical and assistive equipment; and whether additional or enhanced tax reliefs in this area are under consideration. [68536/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/126/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Barry Heneghan",
         "department": "Transport",
@@ -4710,14 +4718,6 @@
         "heading": "Bus Services",
         "question": "178. Deputy Naoise Ó Muirí asked the Minister for Transport if he will provide an update on the Clongriffin to city centre core bus corridor scheme; when it is expected to complete the planning process; when it is expected to commence; and if he will make a statement on the matter. [47190/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/178/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Naoise Ó Muirí",
-        "department": "Transport",
-        "heading": "Ports Policy",
-        "question": "180. Deputy Naoise Ó Muirí asked the Minister for Transport if he will provide an update on the formation of a new National Ports Policy; whether it will facilitate the development of ORE; and if he will make a statement on the matter. [47192/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/180/"
       }
     ]
   },
@@ -5544,14 +5544,6 @@
         "heading": "Transport Policy",
         "question": "137. Deputy Gary Gannon asked the Minister for Transport if he will request that Iarnród Éireann review the use of protected railway structures such as the Victorian era bridge constructed in 1898, in Ballybough, for advertising purposes, given local heritage concerns and community opposition; and if he will make a statement on the matter. [18241/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/137/"
-      },
-      {
-        "date": "2025-04-01",
-        "deputy": "Mary Lou McDonald",
-        "department": "Taoiseach",
-        "heading": "Cabinet Committees",
-        "question": "49. Deputy Mary Lou McDonald asked the Taoiseach when the Cabinet committee that deals with transport will next meet. [9163/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-01/49/"
       }
     ]
   },
@@ -17221,22 +17213,6 @@
         "heading": "Disability Services",
         "question": "229. Deputy Eamon Scanlon asked the Minister for Children, Equality, Disability, Integration and Youth if there are transport charges for persons with disabilities using day services; and if she will make a statement on the matter. [17758/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-04-09/229/"
-      },
-      {
-        "date": "2025-04-01",
-        "deputy": "Eamon Scanlon",
-        "department": "Children",
-        "heading": "Disability Services",
-        "question": "636. Deputy Eamon Scanlon asked the Minister for Children, Equality, Disability, Integration and Youth if she is aware that people with disabilities using day services in CHO1 are subject to a €4 daily transport charge; if those using day services in other CHOs across the country are subject to such charge; and if she will make a statement on the matter. [15109/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-01/636/"
-      },
-      {
-        "date": "2025-04-01",
-        "deputy": "Eamon Scanlon",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "420. Deputy Eamon Scanlon asked the Minister for Education when she will implement the recommendations of the school transport review concerning lowering the minimum distance limits in relation to the school transport scheme; and if she will make a statement on the matter. [15648/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-01/420/"
       }
     ]
   },

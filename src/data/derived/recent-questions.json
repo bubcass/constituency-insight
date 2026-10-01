@@ -496,6 +496,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/11/"
       },
       {
+        "date": "2026-09-29",
+        "deputy": "Matt Carthy",
+        "department": "Finance",
+        "heading": "Tax Code",
+        "question": "128. Deputy Matt Carthy asked the Tánaiste and Minister for Finance if he will remove excise duty from home heating oil in recognition of the severe pressures faced by families as a result of soaring costs. [68612/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/128/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Brendan Smith",
         "department": "Further and Higher Education",
@@ -958,14 +966,6 @@
         "heading": "International Protection",
         "question": "428. Deputy Matt Carthy asked the Minister for Justice, Home Affairs and Migration the number of appeals currently pending before the International Protection Appeals Tribunal (IPAT). [66789/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/428/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Matt Carthy",
-        "department": "Enterprise",
-        "heading": "Work Permits",
-        "question": "20. Deputy Matt Carthy asked the Minister for Enterprise, Tourism and Employment if as part of the 2025 review of the employment permit occupation lists published in May 2026, the Department considered the availability of housing and accommodation when assessing changes to the critical skills occupations list and other employment permit categories and if so, the manner in which housing capacity was factored into the review process and decision-making. [66914/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/20/"
       }
     ]
   },
@@ -1943,6 +1943,14 @@
     "constituency": "Cork North-Central",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Thomas Gould",
+        "department": "Finance",
+        "heading": "Vacant Properties",
+        "question": "125. Deputy Thomas Gould asked the Tánaiste and Minister for Finance for an update on the collection of the vacant homes tax. [68491/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/125/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Colm Burke",
         "department": "Transport",
@@ -2413,14 +2421,6 @@
         "heading": "Tourism Industry",
         "question": "306. Deputy Ken O'Flynn asked the Minister for Enterprise, Tourism and Employment if his Department was consulted or informed regarding Fáilte Ireland's decision to support the 12th International Conference on Degrowth in Cork in 2027; and if he will make a statement on the matter. [67896/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-24/306/"
-      },
-      {
-        "date": "2026-09-24",
-        "deputy": "Ken O'Flynn",
-        "department": "Enterprise",
-        "heading": "Tourism Industry",
-        "question": "308. Deputy Ken O'Flynn asked the Minister for Enterprise, Tourism and Employment the total value of support, financial or in kind, provided or committed by Fáilte Ireland to the 12th International Conference on Degrowth for Ecological Sustainability and Social Equity in Cork in 2027; and if he will make a statement on the matter. [67883/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-24/308/"
       }
     ]
   },
@@ -3894,6 +3894,14 @@
         "date": "2026-09-29",
         "deputy": "Pearse Doherty",
         "department": "Finance",
+        "heading": "Tax Code",
+        "question": "119. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance if he will consider further measures on excise duty to reduce the cost of petrol and diesel. [68617/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/119/"
+      },
+      {
+        "date": "2026-09-29",
+        "deputy": "Pearse Doherty",
+        "department": "Finance",
         "heading": "Tax Collection",
         "question": "117. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance if he will outline the estimated cost to the State of vulture funds using structures like IREFs to avoid paying taxes on rental income. [68615/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/117/"
@@ -4353,20 +4361,20 @@
         "heading": "Tax Credits",
         "question": "434. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance the estimated savings from removing tax credits from incomes above €100,000 on a tapered basis until they are fully removed at €140,000. [65817/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/434/"
-      },
-      {
-        "date": "2026-09-16",
-        "deputy": "Pearse Doherty",
-        "department": "Finance",
-        "heading": "Tax Yield",
-        "question": "422. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance the estimated revenue that would be raise by implementing a new third rate of income tax of 43% on incomes above €140,000. [65494/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/422/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay North",
     "questions": [
+      {
+        "date": "2026-09-29",
+        "deputy": "Barry Heneghan",
+        "department": "Finance",
+        "heading": "Disability Issues",
+        "question": "126. Deputy Barry Heneghan asked the Tánaiste and Minister for Finance whether changes to the tax system are being considered for budget 2027 to better recognise the additional costs faced by persons with disabilities, including the cost of transport, energy and medical and assistive equipment; and whether additional or enhanced tax reliefs in this area are under consideration. [68536/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/126/"
+      },
       {
         "date": "2026-09-29",
         "deputy": "Cian O'Callaghan",
@@ -4838,14 +4846,6 @@
         "heading": "Housing Provision",
         "question": "355. Deputy Naoise Ó Muirí asked the Minister for Housing, Local Government and Heritage if his Department has estimated the level of pent-up housing demand in the State; the current estimate of that demand; and the projected level of such demand to 2035. [66731/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/355/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Naoise Ó Muirí",
-        "department": "Social",
-        "heading": "Social Welfare Benefits",
-        "question": "388. Deputy Naoise Ó Muirí asked the Minister for Social Protection if he will review the interaction between illness benefit, one-parent family payment and working family payment for parents who have dependent children and who are diagnosed with a terminal or life-limiting illness; and to consider measures to prevent a significant loss of household income when such parents are no longer able to work due to their illness. [66465/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/388/"
       }
     ]
   },
@@ -6308,6 +6308,14 @@
     "constituency": "Dublin Fingal West",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Grace Boland",
+        "department": "Finance",
+        "heading": "Budget 2027",
+        "question": "130. Deputy Grace Boland asked the Tánaiste and Minister for Finance the way in which he intends to balance measures to support working families with the need for continued investment in infrastructure and public services in budget 2027. [68584/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/130/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Grace Boland",
         "department": "Social",
@@ -6778,14 +6786,6 @@
         "heading": "Departmental Reviews",
         "question": "348. Deputy Grace Boland asked the Minister for Transport the current status of the national urban speed limit review and implementation programme. [65702/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/348/"
-      },
-      {
-        "date": "2026-09-16",
-        "deputy": "Grace Boland",
-        "department": "Transport",
-        "heading": "Electric Vehicles",
-        "question": "188. Deputy Grace Boland asked the Minister for Transport whether he and his Department are planning a new grant or incentive scheme following the closure of the ICE to EV Grant in July 2026 which supported motorists in replacing older diesel engine cars with electric vehicles. [64202/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/188/"
       }
     ]
   },
@@ -10188,6 +10188,14 @@
     "constituency": "Galway East",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Louis O'Hara",
+        "department": "Finance",
+        "heading": "Tax Yield",
+        "question": "123. Deputy Louis O'Hara asked the Tánaiste and Minister for Finance to outline the amount of carbon tax collected for the years 2024, 2025 and to date in 2026. [68497/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/123/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Albert Dolan",
         "department": "Social",
@@ -10658,14 +10666,6 @@
         "heading": "Road Projects",
         "question": "335. Deputy Peter Roche asked the Minister for Transport for an update on the Claregalway relief road project; the current stage of development of the project; the work completed to date; the next steps required to advance the project; and the anticipated timeline for progression through the remaining planning and statutory processes. [65617/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/335/"
-      },
-      {
-        "date": "2026-09-16",
-        "deputy": "Peter Roche",
-        "department": "Enterprise",
-        "heading": "Tourism Policy",
-        "question": "461. Deputy Peter Roche asked the Minister for Enterprise, Tourism and Employment for an update on the current status of Dunguaire Castle; the actions that have been taken by his Department so far; whether any progress has been made regarding the future ownership, designation, restoration or tourism development of the castle; the engagements that have taken place with stakeholders in this regard. [65102/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/461/"
       }
     ]
   },
@@ -14562,11 +14562,27 @@
       },
       {
         "date": "2026-09-29",
+        "deputy": "Ged Nash",
+        "department": "Finance",
+        "heading": "Exchequer Returns",
+        "question": "118. Deputy Ged Nash asked the Tánaiste and Minister for Finance to provide details of the impact assessments undertaken on Exchequer revenues in relation to the proposed savings and investment account. [68940/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/118/"
+      },
+      {
+        "date": "2026-09-29",
         "deputy": "Ruairí Ó Murchú",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
         "question": "23. Deputy Ruairí Ó Murchú asked the Taoiseach when the Cabinet committee on EU and international affairs will next meet. [65515/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/23/"
+      },
+      {
+        "date": "2026-09-29",
+        "deputy": "Ruairí Ó Murchú",
+        "department": "Finance",
+        "heading": "Cross-Border Co-operation",
+        "question": "122. Deputy Ruairí Ó Murchú asked the Tánaiste and Minister for Finance whether he intends to engage with the British Government on the issue of cross-Border workers, people who live in the North and work in the South, who face numerous tax anomalies. [68200/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/122/"
       },
       {
         "date": "2026-09-29",
@@ -15015,22 +15031,6 @@
         "heading": "Tourism Policy",
         "question": "36. Deputy Paula Butterly asked the Minister for Enterprise, Tourism and Employment under the implementation of the Government's tourism strategy and tourism development plans, if he will consider introducing specific supports for marine and maritime tourism enterprises to enhance and develop coastal tourism; and if he will make a statement on the matter. [66668/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/36/"
-      },
-      {
-        "date": "2026-09-17",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Children",
-        "heading": "Child and Family Agency",
-        "question": "128. Deputy Ruairí Ó Murchú asked the Minister for Children, Disability and Equality to provide an update on the progress of the restructuring of special care; and whether consideration is being given to dealing with the difficulties created by the loss of high support units. [65849/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-17/128/"
-      },
-      {
-        "date": "2026-09-17",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Children",
-        "heading": "Disabilities Assessments",
-        "question": "58. Deputy Ruairí Ó Murchú asked the Minister for Children, Disability and Equality for an update on the progress being made to provide alternatives to assessment of needs. [65850/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-17/58/"
       }
     ]
   },
@@ -15044,6 +15044,14 @@
         "heading": "Cabinet Committees",
         "question": "20. Deputy Rose Conway-Walsh asked the Taoiseach when the Cabinet committee on EU and international affairs will next meet. [66920/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/20/"
+      },
+      {
+        "date": "2026-09-29",
+        "deputy": "Rose Conway-Walsh",
+        "department": "Finance",
+        "heading": "Cross-Border Co-operation",
+        "question": "121. Deputy Rose Conway-Walsh asked the Tánaiste and Minister for Finance to report on the progress made on a new double taxation convention between the UK and Ireland with the aim of improving cross border labour mobility. [68631/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/121/"
       },
       {
         "date": "2026-09-24",
@@ -15508,14 +15516,6 @@
         "heading": "Bus Services",
         "question": "356. Deputy Paul Lawless asked the Minister for Transport the number of daily services in each direction on the Ballina to Galway corridor that the National Transport Authority determined would be required following the withdrawal of Expressway Route 52; whether the authority is satisfied that the current level of service on the corridor meets the needs identified in its determination report; and if he will make a statement on the matter. [65812/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/356/"
-      },
-      {
-        "date": "2026-09-16",
-        "deputy": "Paul Lawless",
-        "department": "Taoiseach",
-        "heading": "Cabinet Committees",
-        "question": "5. Deputy Paul Lawless asked the Taoiseach when the Cabinet Committee on Housing will next meet. [64905/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/5/"
       }
     ]
   },
@@ -16493,6 +16493,14 @@
     "constituency": "Offaly",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Tony McCormack",
+        "department": "Finance",
+        "heading": "Business Supports",
+        "question": "120. Deputy Tony McCormack asked the Tánaiste and Minister for Finance his plans to implement the recommendations of the cost of business advisory forum report that come under the remit of his Department. [68706/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/120/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "John Clendennen",
         "department": "Transport",
@@ -16963,20 +16971,20 @@
         "heading": "Child Protection",
         "question": "1014. Deputy Carol Nolan asked the Minister for Children, Disability and Equality if she will clarify whether the National LGBTIQ+ Inclusion Strategy can override or qualify statutory child protection obligations; her views on the primacy of safeguarding duties in all publicly funded services involving infants; and if she will make a statement on the matter. [64329/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/1014/"
-      },
-      {
-        "date": "2026-09-16",
-        "deputy": "Carol Nolan",
-        "department": "Health",
-        "heading": "Departmental Communications",
-        "question": "1128. Deputy Carol Nolan asked the Minister for Health if her Department has received complaints from midwives, nurses or lactation consultants regarding the inclusion of a speaker (details supplied); the number of complaints received; and the actions taken in response. [64336/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/1128/"
       }
     ]
   },
   {
     "constituency": "Roscommon-Galway",
     "questions": [
+      {
+        "date": "2026-09-29",
+        "deputy": "Martin Daly",
+        "department": "Finance",
+        "heading": "Banking Sector",
+        "question": "124. Deputy Martin Daly asked the Tánaiste and Minister for Finance the steps he is taking to ensure adequate access to cash and in-person banking services in rural communities, particularly towns in counties Roscommon and Galway; the way in which the effectiveness of the access-to-cash framework is being assessed; and if he will make a statement on the matter. [68571/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/124/"
+      },
       {
         "date": "2026-09-24",
         "deputy": "Claire Kerrane",
@@ -17448,14 +17456,6 @@
         "heading": "Departmental Schemes",
         "question": "715. Deputy Martin Daly asked the Tánaiste and Minister for Finance the measures that will be put in place to ensure that genuine applicants are not disadvantaged by any reforms to the disabled drivers and disabled passengers scheme. [60833/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/715/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Martin Daly",
-        "department": "Finance",
-        "heading": "Departmental Schemes",
-        "question": "716. Deputy Martin Daly asked the Tánaiste and Minister for Finance the engagement that has taken place with disability representative organisations in developing the proposed reforms to the disabled drivers and disabled passengers scheme; and whether further consultation is planned. [60832/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/716/"
       }
     ]
   },
