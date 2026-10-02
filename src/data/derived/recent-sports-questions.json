@@ -296,6 +296,14 @@
     "constituency": "Cavan-Monaghan",
     "questions": [
       {
+        "date": "2026-09-29",
+        "deputy": "Matt Carthy",
+        "department": "Education",
+        "heading": "School Curriculum",
+        "question": "433. Deputy Matt Carthy asked the Minister for Education and Youth if she will engage with the NCCA/SEC and other appropriate bodies to ensure that American football and other minority sports are designated as approved options within the invasion games category within the official LCPE curriculum as the current specification explicitly lists just six approved physical activities and results in the exclusion of others; and if she will make a statement on the matter. [68866/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/433/"
+      },
+      {
         "date": "2026-09-22",
         "deputy": "Cathy Bennett",
         "department": "Culture",
@@ -582,14 +590,6 @@
         "heading": "Sports Funding",
         "question": "579. Deputy Niamh Smyth asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media when the next round of Community Sports Facilities Fund will open; and if he will make a statement on the matter. [16897/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-04-08/579/"
-      },
-      {
-        "date": "2025-04-02",
-        "deputy": "Cathy Bennett",
-        "department": "Tourism",
-        "heading": "Sports Events",
-        "question": "157. Deputy Cathy Bennett asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media the international sporting events the Department will be supporting up until 2030; those for which the Department is currently supporting or considering supporting bids in relation to; and if he will make a statement on the matter. [15955/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-02/157/"
       }
     ]
   },
@@ -1054,6 +1054,14 @@
   {
     "constituency": "Cork North-Central",
     "questions": [
+      {
+        "date": "2026-09-29",
+        "deputy": "Ken O'Flynn",
+        "department": "Social",
+        "heading": "Social Welfare Payments",
+        "question": "521. Deputy Ken O'Flynn asked the Minister for Social Protection further to Parliamentary Question No. 65399/26 of 16 September 2026, which compared the back to school clothing and footwear allowance against uniform costs alone, whether his Department has assessed the cost of school footwear, sports clothing and other required clothing alongside uniforms; the basis for the conclusion that the allowance compares favourably, given that it is intended to cover both clothing and footwear; and whether an increase in the rates will be considered in Budget 2027. [68781/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/521/"
+      },
       {
         "date": "2026-09-16",
         "deputy": "Eoghan Kenny",
@@ -1525,14 +1533,6 @@
         "heading": "Alcohol Advertising",
         "question": "437. Deputy Thomas Gould asked the Minister for Health if she will be updating the evidence base in relation to alcohol sponsorship of sport, as was committed to in the 2014 'Report of the Working Group on Regulating Sponsorship by Alcohol Companies of Major Sporting Events'; if she is aware of recent research on how alcohol sponsorship of sports drives child and youth alcohol consumption (details supplied); and if she is aware that youth alcohol consumption now stands at 78%, only slightly down from 2002 when it stood at approximately 82% and was considered a public health crisis. [23466/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-26/437/"
-      },
-      {
-        "date": "2026-03-25",
-        "deputy": "Ken O'Flynn",
-        "department": "Culture",
-        "heading": "Sports Funding",
-        "question": "143. Deputy Ken O'Flynn asked the Minister for Culture, Communications and Sport the projected overall budget envelope for the 2026 round of the Community Sport Facilities Fund and whether this will exceed the €277.9 million allocated under the 2023 round. [22544/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-25/143/"
       }
     ]
   },
@@ -6166,22 +6166,6 @@
         "heading": "Sports Funding",
         "question": "1125. Deputy Mark Wall asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media if he is considering funding local authorities to provide playing pitches and facilities given the increasing demand for playing pitches throughout the State; and if he will make a statement on the matter. [20622/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-04-29/1125/"
-      },
-      {
-        "date": "2025-04-02",
-        "deputy": "Seán Ó Fearghaíl",
-        "department": "Agriculture",
-        "heading": "Animal Breeding",
-        "question": "230. Deputy Seán Ó Fearghaíl asked the Minister for Agriculture, Food and the Marine if he will indicate the current strength of the sport horse sector with particular reference to the production and marketing of Irish draught horses; and if he will make a statement on the matter. [16134/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-02/230/"
-      },
-      {
-        "date": "2025-04-02",
-        "deputy": "Seán Ó Fearghaíl",
-        "department": "Agriculture",
-        "heading": "Animal Breeding",
-        "question": "233. Deputy Seán Ó Fearghaíl asked the Minister for Agriculture, Food and the Marine if he will indicate the current strength of the sport horse sector with particular reference to the production and marketing of the Connemara pony; and if he will make a statement on the matter. [16151/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-02/233/"
       }
     ]
   },
@@ -7917,22 +7901,6 @@
         "heading": "Departmental Meetings",
         "question": "574. Deputy Alan Kelly asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media to list all meetings he, his advisers and or his Department’s officials have had with RTÉ since he took office, by date and attendees, in tabular form. [16617/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-04-08/574/"
-      },
-      {
-        "date": "2025-04-02",
-        "deputy": "Alan Kelly",
-        "department": "Tourism",
-        "heading": "Departmental Meetings",
-        "question": "170. Deputy Alan Kelly asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media the dates and attendees of all MinMAC meetings in his Department since he took office. [16211/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-02/170/"
-      },
-      {
-        "date": "2025-04-02",
-        "deputy": "Alan Kelly",
-        "department": "Tourism",
-        "heading": "Tourism Industry",
-        "question": "169. Deputy Alan Kelly asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media for tourism the approximate number of hotel rooms registered by the Fáilte Ireland hotel registrar in Ireland for each of the years 2018 to 2022, in tabular form. [16194/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-02/169/"
       }
     ]
   },
