@@ -488,6 +488,22 @@
     "constituency": "Cavan-Monaghan",
     "questions": [
       {
+        "date": "2026-10-01",
+        "deputy": "Matt Carthy",
+        "department": "Foreign",
+        "heading": "Diaspora Issues",
+        "question": "59. Deputy Matt Carthy asked the Minister for Foreign Affairs and Trade if she will report on the support she has provided the Department of Transport regarding the programme for Government commitment to work to facilitate the easier return to Ireland for emigrants including reciprocal driving licence arrangements with the USA, Australia and Canada. [69290/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/59/"
+      },
+      {
+        "date": "2026-10-01",
+        "deputy": "Matt Carthy",
+        "department": "Foreign",
+        "heading": "Diaspora Issues",
+        "question": "81. Deputy Matt Carthy asked the Minister for Foreign Affairs and Trade the countries with which the State has reciprocal recognition of drivers licenses for the purposes of exchange, which her Department has provided assistance to the Department of Transport regarding; and the countries for with which they are currently providing assistance with a view to securing same. [69298/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/81/"
+      },
+      {
         "date": "2026-09-29",
         "deputy": "Brendan Smith",
         "department": "Transport",
@@ -950,22 +966,6 @@
         "heading": "School Transport",
         "question": "1351. Deputy Niamh Smyth asked the Minister for Education and Youth if she will urgently review the case of a person (details supplied); if she will address the concerns raised regarding the termination of a school transport scheme contract; if she will outline the recourse available to a contractor in these circumstances; and if she will make a statement on the matter. [61147/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1351/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Niamh Smyth",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "1574. Deputy Niamh Smyth asked the Minister for Education and Youth if she will review the case of a person (details supplied); the steps that can be taken to increase capacity on school bus services in the Crosskeys area; if she will address the situation whereby 17 children in the area have been refused tickets on the grounds that the bus is at full capacity. [64437/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1574/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Cathy Bennett",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "541. Deputy Cathy Bennett asked the Minister for Transport the estimated timeframe to progress the recommendations within the Strategic Rail Review which will see public rail transport resumed in County Monaghan. [58005/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/541/"
       }
     ]
   },
@@ -1961,6 +1961,14 @@
       {
         "date": "2026-09-29",
         "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Ambulance Service",
+        "question": "765. Deputy Ken O'Flynn asked the Minister for Health whether a national policy governs specifically when a hospital should engage a private ambulance provider in place of the National Ambulance Service, as distinct from the general 2011 non-ambulance patient transport policy; and if she will make a statement on the matter. [68480/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/765/"
+      },
+      {
+        "date": "2026-09-29",
+        "deputy": "Ken O'Flynn",
         "department": "Transport",
         "heading": "Córas Iompair Éireann",
         "question": "297. Deputy Ken O'Flynn asked the Minister for Transport to provide details of the legal and statutory basis upon which the decision taken by the CIÉ board in 2009 not to provide increases to pensions in payment was made; whether that decision constituted an amendment to an existing superannuation scheme within the meaning of section 44 of the Transport Act 1950; whether any Ministerial order or other statutory instrument was made in connection with that decision; and if he will make a statement on the matter. [68804/26]",
@@ -2413,14 +2421,6 @@
         "heading": "Road Network",
         "question": "311. Deputy Eoghan Kenny asked the Minister for Transport further to Parliamentary Question No. 607 of 28 July 2026, whether it is the Government’s intention that physical construction of the N/M20 Cork to Limerick Project will commence by 2030; the current indicative timeline for the commencement of construction, subject to the necessary planning and approval processes (details supplied); and if he will make a statement on the matter. [61021/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/311/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Eoghan Kenny",
-        "department": "Transport",
-        "heading": "Road Network",
-        "question": "487. Deputy Eoghan Kenny asked the Minister for Transport if it is envisaged that a traffic volume and appropriate noise study will be carried out for the N20 between Browns Bridge, Quartertown, Mallow and the first and second roundabouts Mallow, and if he will make a statement on the matter. [62402/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/487/"
       }
     ]
   },
@@ -3756,6 +3756,14 @@
     "questions": [
       {
         "date": "2026-09-29",
+        "deputy": "Charles Ward",
+        "department": "Health",
+        "heading": "Ambulance Service",
+        "question": "687. Deputy Charles Ward asked the Minister for Health in light of ongoing concerns regarding ambulances being delayed in traffic approaching and leaving Letterkenny, what analysis has been carried out to determine the impact of such delays on emergency medical response times, patient safety and the capacity of the National Ambulance Service to respond to subsequent emergency calls in County Donegal. [68044/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/687/"
+      },
+      {
+        "date": "2026-09-29",
         "deputy": "Pádraig Mac Lochlainn",
         "department": "Public Expenditure",
         "heading": "Transport Policy",
@@ -4225,20 +4233,20 @@
         "heading": "Vehicle Registration Tax",
         "question": "259. Deputy Pearse Doherty asked the Minister for Finance if the vehicle classification and VRT calculation will be reviewed for a person (details supplied) in County Donegal; and if he will make a statement on the matter. [35459/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-01/259/"
-      },
-      {
-        "date": "2025-07-01",
-        "deputy": "Pearse Doherty",
-        "department": "Finance",
-        "heading": "Vehicle Registration Tax",
-        "question": "262. Deputy Pearse Doherty asked the Minister for Finance if Revenue can provide any assistance to a person (details supplied) in County Donegal with the transfer-of-residence registration of an imported vehicle; and if he will make a statement on the matter. [35503/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-01/262/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay North",
     "questions": [
+      {
+        "date": "2026-09-30",
+        "deputy": "Cian O'Callaghan",
+        "department": "Transport",
+        "heading": "Transport Policy",
+        "question": "23. Deputy Cian O'Callaghan asked the Minister for Transport to provide an update on the work his Department is doing to establish a dedicated transport police. [69267/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/23/"
+      },
       {
         "date": "2026-09-29",
         "deputy": "Barry Heneghan",
@@ -4710,14 +4718,6 @@
         "heading": "Food Industry",
         "question": "150. Deputy Denise Mitchell asked the Minister for Transport if he will consider removing adverts for food high in fat, sugar and salt, commonly referred to as junk food, from State owned public transport vehicles and related infrastructure; and if he will make a statement on the matter. [48176/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/150/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Barry Heneghan",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "171. Deputy Barry Heneghan asked the Minister for Transport if Iarnród Éireann has plans to repaint the steps leading to Platforms 2 and 3 at Howth Junction and Donaghmede DART Station; the timeframe for carrying out any such works; and if he will make a statement on the matter. [47150/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/171/"
       }
     ]
   },
@@ -5551,6 +5551,14 @@
     "constituency": "Dublin Fingal East",
     "questions": [
       {
+        "date": "2026-09-30",
+        "deputy": "Duncan Smith",
+        "department": "Transport",
+        "heading": "Departmental Funding",
+        "question": "21. Deputy Duncan Smith asked the Minister for Transport if he will commit to ringfencing the funding required to progress the Four North rail capacity enhancement project through its statutory processes, including detailed design, environmental assessment, public consultation, and preparation of a Railway Order; in view of the AllIreland Strategic Rail Review identifying the Connolly–Malahide section of the Northern Line as a critical longterm capacity constraint that must be addressed before any meaningful improvements in service frequency or peak capacity can be delivered under DART+ North. [69116/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/21/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Duncan Smith",
         "department": "Transport",
@@ -6021,14 +6029,6 @@
         "heading": "Traffic Management",
         "question": "98. Deputy Duncan Smith asked the Minister for Transport his Departments plans to tackle traffic congestion on the M1 and M50 respectively; and if he will make a statement on the matter. [53582/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-10-07/98/"
-      },
-      {
-        "date": "2025-09-30",
-        "deputy": "Duncan Smith",
-        "department": "Justice",
-        "heading": "Dublin Airport Authority",
-        "question": "725. Deputy Duncan Smith asked the Minister for Justice, Home Affairs and Migration if he has received a report on the bomb scare incident in Dublin airport; if he is happy with the contents of this report; if he will make that report public; if he is happy that evacuation protocols were followed correctly; and if he will make a statement on the matter. [52007/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-30/725/"
       }
     ]
   },
@@ -6521,6 +6521,14 @@
     "constituency": "Dublin Mid-West",
     "questions": [
       {
+        "date": "2026-10-01",
+        "deputy": "Mark Ward",
+        "department": "Housing",
+        "heading": "Parking Provision",
+        "question": "118. Deputy Mark Ward asked the Minister for Housing, Local Government and Heritage to outline the policy for the number of car parking spaces to be delivered in new housing developments; if current public transport connectivity is taken into account or if it based on future routes; to outline the options for people who do not have a car parking space included in their accommodation; and if the current policy is being reviewed. [69354/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/118/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Eoin Ó Broin",
         "department": "Transport",
@@ -6991,14 +6999,6 @@
         "heading": "International Protection",
         "question": "816. Deputy Paul Nicholas Gogarty asked the Minister for Justice, Home Affairs and Migration whether the Office of Public Works (OPW) has carried out, commissioned, received or relied upon any due diligence concerning title, mapping, access arrangements, easements, wayleaves, road status, Section 183 procedures, Roads Act compliance, or land transfers in relation to a centre (details supplied) since 1 January 2023; whether any records, reports or correspondence exist between the OPW and South Dublin County Council, his Department, the Chief State Solicitor's Office, Transport Infrastructure Ireland, or any other public authority concerning access roads, verges, service corridors, or council-owned lands serving the campus; and if he will make a statement on the matter. [39450/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/816/"
-      },
-      {
-        "date": "2026-05-21",
-        "deputy": "Mark Ward",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "251. Deputy Mark Ward asked the Minister for Education and Youth if schemes exist to cover taxi services to preschools for children with additional needs; the way in which parents can access this; and if she will make a statement on the matter. [38492/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-21/251/"
       }
     ]
   },
@@ -7492,6 +7492,14 @@
     "questions": [
       {
         "date": "2026-10-01",
+        "deputy": "Shay Brennan",
+        "department": "Foreign",
+        "heading": "Foreign Conflicts",
+        "question": "47. Deputy Shay Brennan asked the Minister for Foreign Affairs and Trade her response to the recent attempted drone attack at Leipzig airport. [69030/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/47/"
+      },
+      {
+        "date": "2026-10-01",
         "deputy": "Sinéad Gibney",
         "department": "Foreign",
         "heading": "Northern Ireland",
@@ -7961,14 +7969,6 @@
         "heading": "National Transport Authority",
         "question": "329. Deputy Maeve O'Connell asked the Minister for Transport if a representative from his Department participates in the traffic forum chaired by the NTA. [17059/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-03/329/"
-      },
-      {
-        "date": "2026-03-03",
-        "deputy": "Maeve O'Connell",
-        "department": "Transport",
-        "heading": "National Transport Authority",
-        "question": "330. Deputy Maeve O'Connell asked the Minister for Transport the frequency with which the traffic forum meets; and the details available regarding the forum’s current programme of work. [17060/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-03/330/"
       }
     ]
   },
@@ -8461,6 +8461,14 @@
     "constituency": "Dublin South-West",
     "questions": [
       {
+        "date": "2026-09-30",
+        "deputy": "Seán Crowe",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "18. Deputy Seán Crowe asked the Minister for Defence if a storage site has been identified for the new armoured vehicle fleet for the Irish Army; if a charging facility has been constructed in advance of the vehicles being delivered; if there will be one central charging facility or if facilities will be built across all or several Army locations; and the funding that will be provided for training on the new vehicle fleet. [69221/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/18/"
+      },
+      {
         "date": "2026-09-29",
         "deputy": "John Lahart",
         "department": "Transport",
@@ -8931,20 +8939,20 @@
         "heading": "National Vehicle and Driver File",
         "question": "121. Deputy Ciarán Ahern asked the Minister for Transport the current status of the National Vehicle and Driver File (NVDF) Bill 2026; when this Bill will progress to the next stage; the purposes of the Bill; and if he will make a statement on the matter. [31829/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/121/"
-      },
-      {
-        "date": "2026-05-06",
-        "deputy": "Ciarán Ahern",
-        "department": "Transport",
-        "heading": "Road Traffic Offences",
-        "question": "127. Deputy Ciarán Ahern asked the Minister for Transport if he intends to amend the Road Traffic Act 1961 to introduce graduated penalties for driving under the influence of drugs based on the level of units detected in an individual’s blood as is the case with penalties for driving under the influence of alcohol; and if he will make a statement on the matter. [31920/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/127/"
       }
     ]
   },
   {
     "constituency": "Dublin West",
     "questions": [
+      {
+        "date": "2026-09-30",
+        "deputy": "Ruth Coppinger",
+        "department": "Transport",
+        "heading": "Rail Network",
+        "question": "22. Deputy Ruth Coppinger asked the Minister for Transport to consider adding an additional carriage on the M3 Parkway commuter train route service at peak times. [69136/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/22/"
+      },
       {
         "date": "2026-09-29",
         "deputy": "Emer Currie",
@@ -9416,14 +9424,6 @@
         "heading": "Road Safety",
         "question": "2607. Deputy Emer Currie asked the Minister for Justice, Home Affairs and Migration the breakdown, by Garda division of the number of Gardaí assigned to roads policing; the number assigned to the Garda National Roads Policing Bureau and any central roads policing units (details supplied); and the corresponding figures for each of the past five years, in tabular form. [63708/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2607/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Emer Currie",
-        "department": "Transport",
-        "heading": "Road Safety Authority",
-        "question": "629. Deputy Emer Currie asked the Minister for Transport if he is transferring the ownership of the driver file element of the National Vehicle and Driver File (NVDF) to the RSA; if a new reform policy has been approved by the Government on this; the proposed date for the RSA to be given full responsibility for all driver related services and records including the testing and licensing of drivers and management of penalty point offences; the timeline for these driver file changes; and if legislation is required to underpin these changes. [64108/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/629/"
       }
     ]
   },
@@ -10886,6 +10886,14 @@
     "constituency": "Kerry",
     "questions": [
       {
+        "date": "2026-09-30",
+        "deputy": "Michael Healy-Rae",
+        "department": "Transport",
+        "heading": "Departmental Data",
+        "question": "20. Deputy Michael Healy-Rae asked the Minister for Transport when a grant be provided to a haulage operator (details supplied). [69044/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/20/"
+      },
+      {
         "date": "2026-09-29",
         "deputy": "Michael Cahill",
         "department": "Transport",
@@ -11356,20 +11364,36 @@
         "heading": "Departmental Data",
         "question": "313. Deputy Pa Daly asked the Minister for Transport to provide a breakdown of the number of applications received for the road transport support scheme; the number that are awaiting determination; the number that have been approved; and the number that have been refused, broken down by county, in tabular form. [59730/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/313/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Pa Daly",
-        "department": "Transport",
-        "heading": "Public Transport",
-        "question": "323. Deputy Pa Daly asked the Minister for Transport to report on the work of public transport workforce taskforce; the dates the taskforce has met; to provide a breakdown of all subgroups, their membership and the dates they have met; to provide key achievements to date; the progress to achieving other metrics for success or objectives, in tabular form; and if he will make a statement on the matter. [59920/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/323/"
       }
     ]
   },
   {
     "constituency": "Kildare North",
     "questions": [
+      {
+        "date": "2026-09-30",
+        "deputy": "Réada Cronin",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "74. Deputy Réada Cronin asked the Minister for Education and Youth if her Department is responsible for the allocation of school bus tickets for children with additional needs; and if she will make a statement on the matter. [69378/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/74/"
+      },
+      {
+        "date": "2026-09-30",
+        "deputy": "Réada Cronin",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "76. Deputy Réada Cronin asked the Minister for Education and Youth the number of children that have not received a school bus place for the current school term in North Kildare; and if she will make a statement on the matter. [69373/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/76/"
+      },
+      {
+        "date": "2026-09-30",
+        "deputy": "Réada Cronin",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "77. Deputy Réada Cronin asked the Minister for Education and Youth if her Department via Bus Éireann is responsible for the allocation of school bus tickets for children with additional needs; and if she will make a statement on the matter. [69376/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/77/"
+      },
       {
         "date": "2026-09-24",
         "deputy": "Aidan Farrelly",
@@ -11825,36 +11849,28 @@
         "heading": "Airport Security",
         "question": "316. Deputy Aidan Farrelly asked the Minister for Defence the spend by her Department in upgrading security infrastructure at Shannon Airport in 2026, 2025, 2024 and 2023; and the additional security measures put in place, and cost of each, in tabular form; and if she will make a statement on the matter. [36623/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-19/316/"
-      },
-      {
-        "date": "2026-05-19",
-        "deputy": "Aidan Farrelly",
-        "department": "Defence",
-        "heading": "Airport Security",
-        "question": "317. Deputy Aidan Farrelly asked the Minister for Defence the amount spent, including overtime to Army personnel, in providing security at Shannon Airport in 2026 to date, 2025 and 2024; and if she will make a statement on the matter. [36625/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-19/317/"
-      },
-      {
-        "date": "2026-05-19",
-        "deputy": "Aidan Farrelly",
-        "department": "Transport",
-        "heading": "Airport Security",
-        "question": "341. Deputy Aidan Farrelly asked the Minister for Transport the spend by his Department in upgrading security infrastructure at Shannon Airport in 2026, 2025, 2024 and 2023; and to list the additional security measures put in place, and cost of each, in tabular form; and if he will make a statement on the matter. [36624/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-19/341/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Joe Neville",
-        "department": "Transport",
-        "heading": "Departmental Projects",
-        "question": "439. Deputy Joe Neville asked the Minister for Transport if he will provide a list of all capital projects, including road, public transport, and active travel infrastructure projects, delivered under the remit of his Department, and bodies under their aegis (including the NTA, TII, Iarnród Éireann and Bus Éireann), which have been completed on time and within budget in Kildare in each of the past five years, in tabular form; and if he will make a statement on the matter. [35401/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/439/"
       }
     ]
   },
   {
     "constituency": "Kildare South",
     "questions": [
+      {
+        "date": "2026-09-30",
+        "deputy": "Shónagh Ní Raghallaigh",
+        "department": "Social",
+        "heading": "Disability Issues",
+        "question": "117. Deputy Shónagh Ní Raghallaigh asked the Minister for Social Protection if he will consider introducing a permanent weekly cost of disability payment to assist people with disabilities in meeting unavoidable additional costs, including therapies, supplements, transport and specialist footwear. [69234/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/117/"
+      },
+      {
+        "date": "2026-09-30",
+        "deputy": "Shónagh Ní Raghallaigh",
+        "department": "Children",
+        "heading": "Disability Services",
+        "question": "157. Deputy Shónagh Ní Raghallaigh asked the Minister for Children, Disability and Equality the measures being taken to increase funding and capacity for specialist disability services, including community physiotherapy and targeted transport supports for patients attending hospital appointments. [69236/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/157/"
+      },
       {
         "date": "2026-09-24",
         "deputy": "Shónagh Ní Raghallaigh",
@@ -12318,28 +12334,20 @@
         "heading": "Road Safety",
         "question": "29. Deputy Shónagh Ní Raghallaigh asked the Minister for Transport if his Department has identified any sections of the N78 in County Kildare as requiring safety improvement works; the nature of any such works planned or under consideration; the estimated timelines for delivery; and if he will make a statement on the matter. [44236/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-10/29/"
-      },
-      {
-        "date": "2026-06-10",
-        "deputy": "Shónagh Ní Raghallaigh",
-        "department": "Transport",
-        "heading": "Road Safety",
-        "question": "30. Deputy Shónagh Ní Raghallaigh asked the Minister for Transport the number and value of road safety improvement projects approved for County Kildare under specific road improvement and safety funding programmes in each of the past five years; the locations concerned; and if he will make a statement on the matter. [44237/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-10/30/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Mark Wall",
-        "department": "Transport",
-        "heading": "Bus Services",
-        "question": "388. Deputy Mark Wall asked the Minister for Transport to provide an update on the legislation for the M4 hard shoulder to be used a priority bus lane, given that the infrastructure is already in place. [41441/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/388/"
       }
     ]
   },
   {
     "constituency": "Laois",
     "questions": [
+      {
+        "date": "2026-09-30",
+        "deputy": "William Aird",
+        "department": "Housing",
+        "heading": "Housing Policy",
+        "question": "93. Deputy William Aird asked the Minister for Housing, Local Government and Heritage the measures are being taken to ensure that the increased housing delivery committed to under Delivering Homes, Building Communities 2025–2030 is reaching areas experiencing the greatest pressure, including rural towns and commuter counties. [69187/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/93/"
+      },
       {
         "date": "2026-09-29",
         "deputy": "Sean Fleming",
@@ -12811,14 +12819,6 @@
         "heading": "Road Safety",
         "question": "220. Deputy William Aird asked the Minister for Transport the progress made to date on implementing the Road Safety Strategy 2021-2030, with particular reference to reducing fatalities and serious injuries on rural roads; the level of resources allocated to Garda enforcement and local road safety improvements; and if he will make a statement on the matter. [62633/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-11-13/220/"
-      },
-      {
-        "date": "2025-11-13",
-        "deputy": "William Aird",
-        "department": "Transport",
-        "heading": "Vehicle Testing",
-        "question": "215. Deputy William Aird asked the Minister for Transport the number of those currently waiting for Cat C, Cat C1, and Cat BE testing in test centres in County Laois; the number tested in each of those categories for July, August, September and October 2025; the number of tests scheduled for November 2025, by category, in tabular form; and if he will make a statement on the matter. [62628/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-13/215/"
       }
     ]
   },
@@ -13373,6 +13373,14 @@
     "questions": [
       {
         "date": "2026-09-29",
+        "deputy": "Micheál Carrigy",
+        "department": "Health",
+        "heading": "Healthcare Policy",
+        "question": "825. Deputy Micheál Carrigy asked the Minister for Health the total number of patients travelling from county Longford to a hospital (details supplied) for appointments weekly in each of the years 2023 to 2025 and to date in 2026, in tabular form; and the cost to the HSE of such transport annually. [68788/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/825/"
+      },
+      {
+        "date": "2026-09-29",
         "deputy": "Robert Troy",
         "department": "Education",
         "heading": "School Transport",
@@ -13842,14 +13850,6 @@
         "heading": "EU Meetings",
         "question": "174. Deputy Sorca Clarke asked the Minister for Transport when is the next EU Transport Council Meeting scheduled to occur. [32823/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/174/"
-      },
-      {
-        "date": "2026-05-06",
-        "deputy": "Sorca Clarke",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "175. Deputy Sorca Clarke asked the Minister for Transport the number of WTE staff by job title currently working within facilities and building department within Iarnród Éireann. [32824/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/175/"
       }
     ]
   },
@@ -14342,6 +14342,14 @@
     "constituency": "Mayo",
     "questions": [
       {
+        "date": "2026-10-01",
+        "deputy": "Rose Conway-Walsh",
+        "department": "Foreign",
+        "heading": "Northern Ireland",
+        "question": "20. Deputy Rose Conway-Walsh asked the Minister for Foreign Affairs and Trade for an update on the engagement she has had with the British government concerning the Garvaghy Road parade dispute. [69339/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/20/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Keira Keogh",
         "department": "Transport",
@@ -14812,14 +14820,6 @@
         "heading": "Bus Services",
         "question": "151. Deputy Rose Conway-Walsh asked the Minister for Transport for his assessment of the new Citylink bus service in Mayo serving Ballina-Galway that replaced Bus Éireann’s route 52; if signage for bus stops and new timetables can be upgraded along the route for those who wish to use the service; the reason the replacement service no longer stops in Straide; if a review of the new timetable will be carried out to identify improvements; and if he will make a statement on the matter. [46353/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-18/151/"
-      },
-      {
-        "date": "2026-06-16",
-        "deputy": "Paul Lawless",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "471. Deputy Paul Lawless asked the Minister for Education and Youth the position regarding the implementation of the school transport scheme review; and which recommendations have been implemented to date. [45455/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-16/471/"
       }
     ]
   },
@@ -16282,6 +16282,30 @@
     "constituency": "Roscommon-Galway",
     "questions": [
       {
+        "date": "2026-09-30",
+        "deputy": "Michael Fitzmaurice",
+        "department": "Agriculture",
+        "heading": "Forestry Sector",
+        "question": "132. Deputy Michael Fitzmaurice asked the Minister for Agriculture, Food and the Marine the gross profit margin before interest and tax used in calculating the forest road grant rate for the forestry programme 2023 to 2027. [68984/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/132/"
+      },
+      {
+        "date": "2026-09-30",
+        "deputy": "Michael Fitzmaurice",
+        "department": "Agriculture",
+        "heading": "Forestry Sector",
+        "question": "133. Deputy Michael Fitzmaurice asked the Minister for Agriculture, Food and the Marine the fixed overheads used in calculating the forest road grant rate for the forestry programme 2023 to 2027. [68983/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/133/"
+      },
+      {
+        "date": "2026-09-30",
+        "deputy": "Michael Fitzmaurice",
+        "department": "Agriculture",
+        "heading": "Forestry Sector",
+        "question": "134. Deputy Michael Fitzmaurice asked the Minister for Agriculture, Food and the Marine the charge rate for approved foresters per day used in calculating the forest road grant rate for the forestry programme 2023 to 2027. [68982/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/134/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Claire Kerrane",
         "department": "Transport",
@@ -16736,30 +16760,6 @@
         "heading": "School Transport",
         "question": "514. Deputy Martin Daly asked the Minister for Education and Youth if her Department has assessed the adequacy of school transport services in rural areas such as Roscommon and east Galway; the improvements planned; and if she will make a statement on the matter. [61478/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-11-12/514/"
-      },
-      {
-        "date": "2025-11-04",
-        "deputy": "Claire Kerrane",
-        "department": "Finance",
-        "heading": "Primary Medical Certificates",
-        "question": "505. Deputy Claire Kerrane asked the Minister for Finance if he is aware of the significant challenges the primary medical certificate presents for persons with disabilities and chronic illnesses, particularly when it comes to accessing suitable vehicles; his plans to reform the legislation; and if he will make a statement on the matter. [59460/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-04/505/"
-      },
-      {
-        "date": "2025-10-09",
-        "deputy": "Claire Kerrane",
-        "department": "Finance",
-        "heading": "Tax Credits",
-        "question": "144. Deputy Claire Kerrane asked the Minister for Finance if he will consider introducing a tax credit for motor costs for rural dwellers, in light of high car dependency through no fault of rural dwellers, and the lack of alternatives when it comes to transport; and if he will make a statement on the matter. [54357/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-10-09/144/"
-      },
-      {
-        "date": "2025-09-30",
-        "deputy": "Claire Kerrane",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "509. Deputy Claire Kerrane asked the Minister for Education and Youth if she will provide an additional school bus service (details supplied); and if she will make a statement on the matter. [52026/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-30/509/"
       }
     ]
   },
@@ -17228,6 +17228,22 @@
     "constituency": "Tipperary North",
     "questions": [
       {
+        "date": "2026-09-30",
+        "deputy": "Ryan O'Meara",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "61. Deputy Ryan O'Meara asked the Minister for Education and Youth the total number of reps submitted to Bus Éireann school transport via the designated public reps line (details supplied) in 2026; the number of responses issued by BÉ via this reps line in 2026; and the average response time for reps submitted via this contact line. [69132/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/61/"
+      },
+      {
+        "date": "2026-09-29",
+        "deputy": "Ryan O'Meara",
+        "department": "Climate",
+        "heading": "Electric Vehicles",
+        "question": "219. Deputy Ryan O'Meara asked the Minister for Climate, Energy and the Environment the efforts his Department have made to encourage better take-up of the solar PV scheme by electricity providers. [68695/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/219/"
+      },
+      {
         "date": "2026-09-29",
         "deputy": "Ryan O'Meara",
         "department": "Education",
@@ -17690,22 +17706,6 @@
         "heading": "Office of Public Works",
         "question": "387. Deputy Alan Kelly asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation if a range of utilities were paid for by a former Garda Commissioner (details supplied) in respect of a property at Spa Road, Phoenix Park, which was provided to him for a seven-year contract period by the OPW, through An Garda Síochána, or if the cost of any such utilities were paid for by the OPW or the Exchequer. [73275/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-12-18/387/"
-      },
-      {
-        "date": "2025-12-17",
-        "deputy": "Ryan O'Meara",
-        "department": "Transport",
-        "heading": "Departmental Reviews",
-        "question": "131. Deputy Ryan O'Meara asked the Minister for Transport if he will outline the steps being considered to streamline the current large public service vehicle inspection process, to eliminate duplication between Garda PSV inspections and the commercial vehicle roadworthiness test (CVRT); and whether his Department intends to move toward a simplified licensing model that recognises EU whole vehicle type approval and the annual CVRT as the primary safety mechanisms; and if he will make a statement on the matter. [72607/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-17/131/"
-      },
-      {
-        "date": "2025-12-17",
-        "deputy": "Ryan O'Meara",
-        "department": "Transport",
-        "heading": "Transport Policy",
-        "question": "132. Deputy Ryan O'Meara asked the Minister for Transport if he will reconsider the decision not to introduce any financial support or remediation scheme for passenger transport operators who retrofitted smart tachograph version 2 devices before his Department issued its updated guidance; and if he will make a statement on the matter. [72608/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-17/132/"
       }
     ]
   },
@@ -19026,6 +19026,14 @@
       {
         "date": "2026-09-29",
         "deputy": "John Brady",
+        "department": "Defence",
+        "heading": "Naval Service",
+        "question": "242. Deputy John Brady asked the Minister for Defence to provide an update on the current status of each of the State's naval vessels; whether they are currently at sea; the details of hours sailed by each vessel in each of the years from 2020 to date in 2026; the way in which this compares to time in port each year; the costs associated with maintaining each vessel in port; the reason vessels may not be able to go to sea; and if she will make a statement on the matter. [68954/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/242/"
+      },
+      {
+        "date": "2026-09-29",
+        "deputy": "John Brady",
         "department": "Education",
         "heading": "School Transport",
         "question": "425. Deputy John Brady asked the Minister for Education and Youth to provide an update on the recommencement of a school transport route (details supplied); and if she will make a statement on the matter. [68219/26]",
@@ -19486,14 +19494,6 @@
         "heading": "Rail Network",
         "question": "124. Deputy Jennifer Whitmore asked the Minister for Transport if he is aware that overcrowding issues on the Wexford-Wicklow-Dublin commuter train persist; if he has discussed passenger safety with the NTA and Iarnród Éireann; and if he will make a statement on the matter. [31205/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-30/124/"
-      },
-      {
-        "date": "2026-04-30",
-        "deputy": "Jennifer Whitmore",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "221. Deputy Jennifer Whitmore asked the Minister for Transport if he will meet with the NTA to discuss future DART works over the May bank holiday weekends, considering that this is annually the weekend of the VHI Mini Marathon, an event that attracts up to 30,000 participants each year; and if he will make a statement on the matter. [31201/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-30/221/"
       }
     ]
   },
