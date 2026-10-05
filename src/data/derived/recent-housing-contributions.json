@@ -212,6 +212,20 @@
   {
     "date": "2026-10-01",
     "chamber": "dail",
+    "sectionId": "dbsect_24",
+    "sectionNumber": "24",
+    "topic": "Housing Schemes",
+    "parentTopic": "Ceisteanna Eile - Other Questions",
+    "memberCode": "John-McGuinness.D.1997-06-26",
+    "memberName": "John McGuinness",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/John-McGuinness.D.1997-06-26",
+    "roles": [],
+    "speechCount": 1,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-01/24/member-speech/John-McGuinness.D.1997-06-26/"
+  },
+  {
+    "date": "2026-10-01",
+    "chamber": "dail",
     "sectionId": "dbsect_21",
     "sectionNumber": "21",
     "topic": "Housing Schemes",
