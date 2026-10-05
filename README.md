@@ -84,6 +84,15 @@ Tailte Éireann's Rail Network Segment feature service, assigns features to the
 site's electoral-district and constituency geography, and writes
 `src/data/derived/transport-access.json`.
 
+## Scheduled transport replay
+
+The transport-page timetable replay is a static, representative service day,
+not a live feed. `npm run build:transport-timetable -- --rail <rail-day.json>
+--bus <bus-day.json> --tram <luas-day.json>` clips reviewed one-day GTFS-derived inputs to the 43
+constituency boundaries and writes one browser asset per constituency under
+`src/data/derived/transport-timetables/`. The page will fetch only its selected
+constituency's asset.
+
 ## Recent parliamentary activity
 
 Run `npm run build:parliamentary` to refresh the sitting-member lookup,

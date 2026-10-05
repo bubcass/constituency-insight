@@ -21,6 +21,7 @@ import {metricCards} from "./components/metric-cards.js";
 import {downloadButton} from "./components/download-button.js";
 import {chartColors} from "./config/chart-palette.js";
 import {transportMeansWaterfall, commuteTimingHeatmap} from "./components/transport-charts.js";
+import {timetableReplayMap} from "./components/timetable-replay-map.js";
 import {tabularRows} from "./components/tabular-data.js";
 
 const constituencyRows = tabularRows(await FileAttachment("data/derived/browser/demographics-age-2022.json").json());
@@ -32,6 +33,64 @@ const recentTransportContributions = await FileAttachment("data/derived/recent-t
 const transportAccessData = await FileAttachment("data/derived/transport-access.json").json();
 const transportCommutingData = await FileAttachment("data/transport-commuting-2022.json").json();
 const transportHeroVideo = await FileAttachment("media/dublin-quays.mp4").url();
+const timetableMapAssets = {
+  css: await FileAttachment("vendor/transport-map/maplibre-gl.css").url(),
+  worker: await FileAttachment("vendor/transport-map/maplibre-gl-worker.mjs").url(),
+  workerShared: await FileAttachment("vendor/transport-map/maplibre-gl-shared.mjs").url(),
+  deck: [
+    await FileAttachment("vendor/transport-map/deck/deck.gl.min.js").url()
+  ]
+};
+/* Deprecated dynamic asset lookup (not visible to Observable's build analyser):
+const timetableAssets = Object.fromEntries(await Promise.all([
+  ["Carlow-Kilkenny","carlow-kilkenny"],["Cavan-Monaghan","cavan-monaghan"],["Clare","clare"],["Cork East","cork-east"],["Cork North-Central","cork-north-central"],["Cork North-West","cork-north-west"],["Cork South-Central","cork-south-central"],["Cork South-West","cork-south-west"],["Donegal","donegal"],["Dublin Bay North","dublin-bay-north"],["Dublin Bay South","dublin-bay-south"],["Dublin Central","dublin-central"],["Dublin Fingal East","dublin-fingal-east"],["Dublin Fingal West","dublin-fingal-west"],["Dublin Mid-West","dublin-mid-west"],["Dublin North-West","dublin-north-west"],["Dublin Rathdown","dublin-rathdown"],["Dublin South-Central","dublin-south-central"],["Dublin South-West","dublin-south-west"],["Dublin West","dublin-west"],["Dún Laoghaire","dun-laoghaire"],["Galway East","galway-east"],["Galway West","galway-west"],["Kerry","kerry"],["Kildare North","kildare-north"],["Kildare South","kildare-south"],["Laois","laois"],["Limerick City","limerick-city"],["Limerick County","limerick-county"],["Longford-Westmeath","longford-westmeath"],["Louth","louth"],["Mayo","mayo"],["Meath East","meath-east"],["Meath West","meath-west"],["Offaly","offaly"],["Roscommon-Galway","roscommon-galway"],["Sligo-Leitrim","sligo-leitrim"],["Tipperary North","tipperary-north"],["Tipperary South","tipperary-south"],["Waterford","waterford"],["Wexford","wexford"],["Wicklow","wicklow"],["Wicklow-Wexford","wicklow-wexford"]
+].map(async ([name,file])=>[name,await FileAttachment(`data/derived/transport-timetables/${file}.json`).url()])));
+*/
+const timetableAssets = {
+  "Carlow-Kilkenny": await FileAttachment("data/derived/transport-timetables/carlow-kilkenny.json").url(),
+  "Cavan-Monaghan": await FileAttachment("data/derived/transport-timetables/cavan-monaghan.json").url(),
+  "Clare": await FileAttachment("data/derived/transport-timetables/clare.json").url(),
+  "Cork East": await FileAttachment("data/derived/transport-timetables/cork-east.json").url(),
+  "Cork North-Central": await FileAttachment("data/derived/transport-timetables/cork-north-central.json").url(),
+  "Cork North-West": await FileAttachment("data/derived/transport-timetables/cork-north-west.json").url(),
+  "Cork South-Central": await FileAttachment("data/derived/transport-timetables/cork-south-central.json").url(),
+  "Cork South-West": await FileAttachment("data/derived/transport-timetables/cork-south-west.json").url(),
+  "Donegal": await FileAttachment("data/derived/transport-timetables/donegal.json").url(),
+  "Dublin Bay North": await FileAttachment("data/derived/transport-timetables/dublin-bay-north.json").url(),
+  "Dublin Bay South": await FileAttachment("data/derived/transport-timetables/dublin-bay-south.json").url(),
+  "Dublin Central": await FileAttachment("data/derived/transport-timetables/dublin-central.json").url(),
+  "Dublin Fingal East": await FileAttachment("data/derived/transport-timetables/dublin-fingal-east.json").url(),
+  "Dublin Fingal West": await FileAttachment("data/derived/transport-timetables/dublin-fingal-west.json").url(),
+  "Dublin Mid-West": await FileAttachment("data/derived/transport-timetables/dublin-mid-west.json").url(),
+  "Dublin North-West": await FileAttachment("data/derived/transport-timetables/dublin-north-west.json").url(),
+  "Dublin Rathdown": await FileAttachment("data/derived/transport-timetables/dublin-rathdown.json").url(),
+  "Dublin South-Central": await FileAttachment("data/derived/transport-timetables/dublin-south-central.json").url(),
+  "Dublin South-West": await FileAttachment("data/derived/transport-timetables/dublin-south-west.json").url(),
+  "Dublin West": await FileAttachment("data/derived/transport-timetables/dublin-west.json").url(),
+  "Dún Laoghaire": await FileAttachment("data/derived/transport-timetables/dun-laoghaire.json").url(),
+  "Galway East": await FileAttachment("data/derived/transport-timetables/galway-east.json").url(),
+  "Galway West": await FileAttachment("data/derived/transport-timetables/galway-west.json").url(),
+  "Kerry": await FileAttachment("data/derived/transport-timetables/kerry.json").url(),
+  "Kildare North": await FileAttachment("data/derived/transport-timetables/kildare-north.json").url(),
+  "Kildare South": await FileAttachment("data/derived/transport-timetables/kildare-south.json").url(),
+  "Laois": await FileAttachment("data/derived/transport-timetables/laois.json").url(),
+  "Limerick City": await FileAttachment("data/derived/transport-timetables/limerick-city.json").url(),
+  "Limerick County": await FileAttachment("data/derived/transport-timetables/limerick-county.json").url(),
+  "Longford-Westmeath": await FileAttachment("data/derived/transport-timetables/longford-westmeath.json").url(),
+  "Louth": await FileAttachment("data/derived/transport-timetables/louth.json").url(),
+  "Mayo": await FileAttachment("data/derived/transport-timetables/mayo.json").url(),
+  "Meath East": await FileAttachment("data/derived/transport-timetables/meath-east.json").url(),
+  "Meath West": await FileAttachment("data/derived/transport-timetables/meath-west.json").url(),
+  "Offaly": await FileAttachment("data/derived/transport-timetables/offaly.json").url(),
+  "Roscommon-Galway": await FileAttachment("data/derived/transport-timetables/roscommon-galway.json").url(),
+  "Sligo-Leitrim": await FileAttachment("data/derived/transport-timetables/sligo-leitrim.json").url(),
+  "Tipperary North": await FileAttachment("data/derived/transport-timetables/tipperary-north.json").url(),
+  "Tipperary South": await FileAttachment("data/derived/transport-timetables/tipperary-south.json").url(),
+  "Waterford": await FileAttachment("data/derived/transport-timetables/waterford.json").url(),
+  "Wexford": await FileAttachment("data/derived/transport-timetables/wexford.json").url(),
+  "Wicklow": await FileAttachment("data/derived/transport-timetables/wicklow.json").url(),
+  "Wicklow-Wexford": await FileAttachment("data/derived/transport-timetables/wicklow-wexford.json").url(),
+};
 const transportAccessRows = Array.isArray(transportAccessData?.records) ? transportAccessData.records : [];
 const transportRailLines = Array.isArray(transportAccessData?.lines) ? transportAccessData.lines : [];
 const transportCommutingRows = Array.isArray(transportCommutingData?.records) ? transportCommutingData.records : [];
@@ -516,6 +575,25 @@ function renderTransportAvailabilityExplorer() {
   return section;
 }
 
+function renderTimetableReplay() {
+  const host = document.createElement("div");
+  host.className = "demographics-map-explorer transport-map-explorer";
+  let renderedConstituency = null;
+  const update = () => {
+    if (renderedConstituency === state.constituency) return;
+    renderedConstituency = state.constituency;
+    host.replaceChildren(timetableReplayMap({
+      constituency: state.constituency,
+      dataUrl: timetableAssets[state.constituency],
+      boundary: selectedConstituencyGeoJSON(),
+      assets: timetableMapAssets
+    }));
+  };
+  update();
+  window.addEventListener("transport:change", update);
+  return host;
+}
+
 function renderDistrictMapExplorer() {
   const section = document.createElement("section");
   section.className = "demographics-map-explorer transport-map-explorer";
@@ -736,28 +814,13 @@ display(mountReactive(async () => {
 
 </div>
 
-
-
 <div class="prose-block prose-block--section">
-  <h2>Public transport networks</h2>
-  <p>Bus and rail are the main public transport options across Ireland. Explore the locations of bus stops, passenger rail stations, Luas stops and the rail network.</p>
+  <h2>The shape of public transport</h2>
+  <p>Public transport, including bus, rail and trams, form an interconnected network of stops and stations. Follow the pattern of a typical weekday timetable day for scheduled bus, rail and Luas services where available travelling through the constituency.</p>
 </div>
 
 ```js
-display(renderTransportAvailabilityExplorer());
-```
-
-```js
-display(mountReactive(async () => {
-  const wrap = document.createElement("div");
-  wrap.className = "download-block transport-access-download";
-  wrap.appendChild(downloadButton(
-    accessDownloadRows(),
-    `${scopeSlug()}-public-transport-access.csv`,
-    {label: `Download public transport access data for ${scopeLabel()}`}
-  ));
-  return wrap;
-}, {skeleton: "text"}));
+display(renderTimetableReplay());
 ```
 
 ```js
@@ -785,6 +848,28 @@ display(mountReactive(async () => {
   }
   return wrap;
 }, {skeleton: "cards"}));
+```
+
+<div class="prose-block prose-block--section">
+  <h2>Public transport networks</h2>
+  <p>Bus and rail are the main public transport options across Ireland. Explore the locations of bus stops, passenger rail stations, Luas stops and the rail network.</p>
+</div>
+
+```js
+display(renderTransportAvailabilityExplorer());
+```
+
+```js
+display(mountReactive(async () => {
+  const wrap = document.createElement("div");
+  wrap.className = "download-block transport-access-download";
+  wrap.appendChild(downloadButton(
+    accessDownloadRows(),
+    `${scopeSlug()}-public-transport-access.csv`,
+    {label: `Download public transport access data for ${scopeLabel()}`}
+  ));
+  return wrap;
+}, {skeleton: "text"}));
 ```
 
 ```js

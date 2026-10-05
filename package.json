@@ -31,6 +31,7 @@
     "build:housing-stock": "node src/scripts/build-housing-stock.mjs",
     "build:adults-with-parents": "node src/scripts/build-adults-living-with-parents.mjs",
     "build:transport-access": "node src/scripts/build-transport-access.mjs",
+    "build:transport-timetable": "python3 src/scripts/build-transport-timetable.py",
     "build:transport-commuting": "node src/scripts/build-transport-commuting.mjs",
     "build:sports-funding": "node src/scripts/spotlights/build-sports-funding.mjs",
     "build:road-safety": "node src/scripts/spotlights/build-road-safety.mjs",
@@ -61,5 +62,8 @@
   },
   "engines": {
     "node": ">=22.12.0 <25"
+  },
+  "dependencies": {
+    "maplibre-gl": "6.11.2"
   }
 }
