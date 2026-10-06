@@ -1799,6 +1799,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/9/"
       },
       {
+        "date": "2026-10-01",
+        "deputy": "Ken O'Flynn",
+        "department": "Finance",
+        "heading": "Tax Reliefs",
+        "question": "258. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance if he will consider a tax credit or relief for childcare and school age childcare costs for working lone parents; the estimated full year cost of such a measure at various rates; and if he will make a statement on the matter. [69657/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/258/"
+      },
+      {
         "date": "2026-09-29",
         "deputy": "Colm Burke",
         "department": "Enterprise",
@@ -2261,14 +2269,6 @@
         "heading": "Health Services",
         "question": "727. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 713 of 28 May 2026, to name the expert clinician leading the updated Model of Care, to provide a timeline for its completion, and to confirm whether a revised job description or governance structure has been drafted to date. [52796/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-14/727/"
-      },
-      {
-        "date": "2026-07-14",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Obesity Levels",
-        "question": "744. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No.1011 of 16 June 2026, in which the HSE confirmed that full costing of the National Model of Care for Obesity is dependent on the forthcoming Obesity Policy and Action Plan (OPAP): the expected publication date for OPAP; whether a costed implementation plan will be developed and published before or only after OPAP is finalised; whether the HSE holds any internal or working estimate, published or unpublished, of the total cost of full implementation of the Model of Care; and if she will make a statement on the matter. [52844/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-14/744/"
       }
     ]
   },
@@ -6917,10 +6917,26 @@
       {
         "date": "2026-10-01",
         "deputy": "Sinéad Gibney",
+        "department": "Transport",
+        "heading": "Bus Services",
+        "question": "249. Deputy Sinéad Gibney asked the Minister for Transport whether he plans to engage with TII and NTA for the purpose of introducing efficient routes for essential night bus services from the City Centre to areas of Dublin Rathdown constituency, including Dundrum, Stillorgan, and Ballyogan, so that late-night workers have safe and reliable public transport after work. [69627/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/249/"
+      },
+      {
+        "date": "2026-10-01",
+        "deputy": "Sinéad Gibney",
         "department": "Foreign",
         "heading": "International Bodies",
         "question": "51. Deputy Sinéad Gibney asked the Minister for Foreign Affairs and Trade the steps her Department is taking to support the work of the International Criminal Court and to oppose the sanctions currently being imposed on judges and prosecutors in the ICC by the United States. [69074/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/51/"
+      },
+      {
+        "date": "2026-10-01",
+        "deputy": "Sinéad Gibney",
+        "department": "Foreign",
+        "heading": "International Sanctions",
+        "question": "213. Deputy Sinéad Gibney asked the Minister for Foreign Affairs and Trade the steps her Department is taking to support the work of the International Criminal Court and to oppose the sanctions currently being imposed on Judges and Prosecutors in the ICC by the United States. [69718/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/213/"
       },
       {
         "date": "2026-09-29",
@@ -7377,22 +7393,6 @@
         "heading": "Employment Rights",
         "question": "25. Deputy Sinéad Gibney asked the Minister for Enterprise, Tourism and Employment whether his Department will consider introducing protections for workers in the case of severe weather events in order that they are not placed in undue danger or financially penalised for being unable to attend their workplace during severe weather; and if he will make a statement on the matter. [13368/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/25/"
-      },
-      {
-        "date": "2026-01-27",
-        "deputy": "Maeve O'Connell",
-        "department": "Transport",
-        "heading": "Driver Test",
-        "question": "357. Deputy Maeve O'Connell asked the Minister for Transport if his Department will work with the Department of Education and Youth to encourage making the driver theory test a mandatory part of transition year educational curriculum. [6515/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-27/357/"
-      },
-      {
-        "date": "2026-01-27",
-        "deputy": "Maeve O'Connell",
-        "department": "Transport",
-        "heading": "Local Authorities",
-        "question": "349. Deputy Maeve O'Connell asked the Minister for Transport the number of staff employed in active travel teams or working on active travel projects in each local authority, in tabular form. [6506/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-27/349/"
       }
     ]
   },
@@ -9340,6 +9340,14 @@
     "constituency": "Galway East",
     "questions": [
       {
+        "date": "2026-10-01",
+        "deputy": "Albert Dolan",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "275. Deputy Albert Dolan asked the Minister for Education and Youth the measures her Department is taking to address workload and burnout associated with special education provision; and whether she will establish a protocol ensuring that significant policy changes and guidance are communicated to schools during term time and normal working hours, with adequate consultation and implementation time. [69679/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/275/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Peter Roche",
         "department": "Transport",
@@ -9810,14 +9818,6 @@
         "heading": "Departmental Budgets",
         "question": "991. Deputy Albert Dolan asked the Minister for Enterprise, Tourism and Employment the date on which a supplementary estimate or supplementary estimates was sought in respect of his Department’s Vote for each of the past ten years, and to the date in 2026; the gross and net amount involved in each case; and the Vote subheads to which each supplementary estimate related. [1791/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-01-13/991/"
-      },
-      {
-        "date": "2026-01-13",
-        "deputy": "Louis O'Hara",
-        "department": "Enterprise",
-        "heading": "Work Permits",
-        "question": "972. Deputy Louis O'Hara asked the Minister for Enterprise, Tourism and Employment if a general employment permit renewal (details supplied) can be reinstated; and if he will make a statement on the matter. [74863/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-13/972/"
       }
     ]
   },
@@ -12249,6 +12249,14 @@
   {
     "constituency": "Limerick City",
     "questions": [
+      {
+        "date": "2026-10-01",
+        "deputy": "Willie O'Dea",
+        "department": "Education",
+        "heading": "Teacher Training",
+        "question": "282. Deputy Willie O'Dea asked the Minister for Education and Youth if she is aware of the difficulties being experienced by many newly qualified post-primary teachers in attaining work in schools in order to complete the Droichead induction process; and whether she has any plans to make the Droichead induction process easier to access. [69712/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/282/"
+      },
       {
         "date": "2026-09-22",
         "deputy": "Conor Sheehan",
@@ -18000,6 +18008,14 @@
     "constituency": "Wicklow",
     "questions": [
       {
+        "date": "2026-10-01",
+        "deputy": "Edward Timmins",
+        "department": "Housing",
+        "heading": "Construction Industry",
+        "question": "161. Deputy Edward Timmins asked the Minister for Housing, Local Government and Heritage if work has been carried out to examine ways of reducing the cost of building a house. [69343/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/161/"
+      },
+      {
         "date": "2026-09-17",
         "deputy": "Edward Timmins",
         "department": "Children",
@@ -18470,20 +18486,28 @@
         "heading": "Social Workers Register",
         "question": "2391. Deputy John Brady asked the Minister for Children, Disability and Equality the total number of social workers and family support workers employed by Tusla working in the Wicklow area from the years 2020-2025, in tabular form; and if she will make a statement on the matter. [42193/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-29/2391/"
-      },
-      {
-        "date": "2025-07-29",
-        "deputy": "John Brady",
-        "department": "Education",
-        "heading": "Youth Services",
-        "question": "1105. Deputy John Brady asked the Minister for Education and Youth if she will consider an approach of multi-annual funding commitment for the youth work sector to allow for more sustainable planning; and if she will make a statement on the matter. [42183/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-29/1105/"
       }
     ]
   },
   {
     "constituency": "Wicklow-Wexford",
     "questions": [
+      {
+        "date": "2026-10-01",
+        "deputy": "Malcolm Byrne",
+        "department": "Enterprise",
+        "heading": "Artificial Intelligence",
+        "question": "268. Deputy Malcolm Byrne asked the Minister for Enterprise, Tourism and Employment the way in which the Government is using or will use Artificial Intelligence to reduce inequality in society. [69589/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/268/"
+      },
+      {
+        "date": "2026-10-01",
+        "deputy": "Malcolm Byrne",
+        "department": "Enterprise",
+        "heading": "Artificial Intelligence",
+        "question": "269. Deputy Malcolm Byrne asked the Minister for Enterprise, Tourism and Employment his views on the development of a Basic Income Strategy for Ireland, particularly in the context of developments in Artificial Intelligence and other technologies. [69590/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/269/"
+      },
       {
         "date": "2026-09-29",
         "deputy": "Malcolm Byrne",
@@ -18947,22 +18971,6 @@
         "heading": "Ambulance Service",
         "question": "553. Deputy Fionntán Ó Súilleabháin asked the Minister for Health if she will engage with the National Ambulance Service (NAS) following reports that approximately 80 newly qualified paramedics received an email from the NAS instructing them to sign a 16-week contract extension in order to remain in employment long enough to apply for a permanent position; the reason no prior engagement or warning was provided to the paramedics concerned regarding this change; if she will address concerns that this process enables the NAS to introduce the previously rejected roles and responsibilities, leaving new paramedics with no choice but to accept them in order to secure permanent positions; and if she will make a statement on the matter. [17994/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-05/553/"
-      },
-      {
-        "date": "2026-02-19",
-        "deputy": "Brian Brennan",
-        "department": "Enterprise",
-        "heading": "Job Losses",
-        "question": "36. Deputy Brian Brennan asked the Minister for Enterprise, Tourism and Employment for an update on a factory (details supplied); the progress on support for workers; the future plans for the site; and if he will make a statement on the matter. [13359/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/36/"
-      },
-      {
-        "date": "2026-02-19",
-        "deputy": "Malcolm Byrne",
-        "department": "Enterprise",
-        "heading": "Flexible Work Practices",
-        "question": "292. Deputy Malcolm Byrne asked the Minister for Enterprise, Tourism and Employment if his Department has undertaken any research on the four-day working week; if he will publish that research; and if he will make a statement on the matter. [13770/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/292/"
       }
     ]
   }
