@@ -2,6 +2,7 @@ export default {
   title: "Constituency Insights",
   head: `
     <link rel="preload" href="oireachtas-logo.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="insights-house.svg" as="image" type="image/svg+xml" data-insights-house>
     <link rel="icon" href="logo.png" type="image/png" sizes="32x32">
     <script>
       document.documentElement.lang = "en-IE";
@@ -69,6 +70,7 @@ export default {
           logo.width = 163;
           logo.height = 69;
           logo.src = document.querySelector('link[rel="preload"][as="image"]')?.href || "oireachtas-logo.svg";
+          const houseSrc = document.querySelector('link[data-insights-house]')?.href || "insights-house.svg";
 
           homeLink.appendChild(logo);
 
@@ -82,32 +84,7 @@ export default {
           resourceLink.setAttribute("aria-label", "Constituency Insights home");
 
           const insightsBrandMarkup = \`
-            <span class="oireachtas-masthead__brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 64 28" focusable="false">
-                <path d="M12 9H26L32 5L38 9H52" />
-                <line x1="12" y1="10.5" x2="52" y2="10.5" />
-                <rect x="12" y="10.5" width="40" height="13.5" />
-                <line x1="27.5" y1="10.5" x2="27.5" y2="24" />
-                <line x1="30" y1="10.5" x2="30" y2="24" />
-                <line x1="34" y1="10.5" x2="34" y2="24" />
-                <line x1="36.5" y1="10.5" x2="36.5" y2="24" />
-                <line x1="26.5" y1="24" x2="37.5" y2="24" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="30.7" y="18.2" width="2.6" height="5.8" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="15" y="13" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="19" y="13" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="23" y="13" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="39.3" y="13" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="43.3" y="13" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="47.3" y="13" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="15" y="18" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="19" y="18" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="23" y="18" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="39.3" y="18" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="43.3" y="18" width="1.7" height="1.7" />
-                <rect class="oireachtas-masthead__brand-mark-fill" x="47.3" y="18" width="1.7" height="1.7" />
-                <line x1="12" y1="24" x2="52" y2="24" />
-              </svg>
-            </span>
+            <span class="oireachtas-masthead__brand-mark" aria-hidden="true"><svg viewBox="0 0 1092 526" focusable="false"><use href="\${houseSrc}#house-lockup" /></svg></span>
             <span class="oireachtas-masthead__brand-copy">
               <span class="oireachtas-masthead__brand-title">Constituency Insights</span>
               <span class="oireachtas-masthead__brand-tagline">Parliamentary visual data</span>
