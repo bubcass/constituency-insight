@@ -763,6 +763,17 @@ display(mountReactive(async () => {
 
 </div>
 
+</div>
+
+<div class="prose-block prose-block--section">
+  <h2>Public transport networks</h2>
+  <p>Public transport, including bus, rail and trams, form an interconnected network of stops and stations. Follow the pattern of a typical weekday timetable day for scheduled bus, rail and Luas services where available travelling through the constituency.</p>
+</div>
+
+```js
+display(renderTimetableReplay());
+```
+
 <div class="prose-block prose-block--section">
   <h2>When people leave and journey time</h2>
   <p>Departure times and journey durations for people aged five and over travelling to work, school or college indicate commuting patterns.</p>
@@ -812,16 +823,10 @@ display(mountReactive(async () => {
 }));
 ```
 
-</div>
-
 <div class="prose-block prose-block--section">
-  <h2>The shape of public transport</h2>
-  <p>Public transport, including bus, rail and trams, form an interconnected network of stops and stations. Follow the pattern of a typical weekday timetable day for scheduled bus, rail and Luas services where available travelling through the constituency.</p>
+  <h2>Public transport availability</h2>
+  <p>Explore the locations of bus stops, passenger rail stations, Luas stops and the rail network.</p>
 </div>
-
-```js
-display(renderTimetableReplay());
-```
 
 ```js
 display(mountReactive(async () => {
@@ -849,11 +854,6 @@ display(mountReactive(async () => {
   return wrap;
 }, {skeleton: "cards"}));
 ```
-
-<div class="prose-block prose-block--section">
-  <h2>Public transport networks</h2>
-  <p>Bus and rail are the main public transport options across Ireland. Explore the locations of bus stops, passenger rail stations, Luas stops and the rail network.</p>
-</div>
 
 ```js
 display(renderTransportAvailabilityExplorer());
