@@ -823,10 +823,19 @@ display(mountReactive(async () => {
 }));
 ```
 
-<div class="prose-block prose-block--section">
-  <h2>Public transport availability</h2>
-  <p>Explore the locations of bus stops, passenger rail stations, Luas stops and the rail network.</p>
-</div>
+```js
+display(mountReactive(async () => {
+  const scope = scopeLabel();
+  const intro = document.createElement("div");
+  intro.className = "prose-block prose-block--section";
+  const heading = document.createElement("h2");
+  heading.textContent = `Public transport availability in ${scope}`;
+  const description = document.createElement("p");
+  description.textContent = `Explore the locations of bus stops, passenger rail stations, Luas stops and the rail network in ${scope}.`;
+  intro.append(heading, description);
+  return intro;
+}, {skeleton: "text"}));
+```
 
 ```js
 display(mountReactive(async () => {
