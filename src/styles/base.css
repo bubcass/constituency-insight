@@ -225,8 +225,8 @@ button {
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 31px;
+    width: 84px;
+    height: 36px;
     color: var(--text);
     transform: translateY(-0.05em);
 }
@@ -372,8 +372,8 @@ button {
     }
 
     .oireachtas-masthead--index .oireachtas-masthead__brand-mark {
-        width: 82px;
-        height: 35px;
+        width: 94px;
+        height: 40px;
     }
 
     .oireachtas-masthead--index .oireachtas-masthead__brand-copy {
