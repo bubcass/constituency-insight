@@ -125,9 +125,9 @@ export function mountMastheadActions({title, text} = {}) {
   const more = document.createElement("button");
   more.type = "button";
   more.className = "oireachtas-masthead__action oireachtas-masthead__more";
-  more.setAttribute("aria-label", "More page actions");
+  more.setAttribute("aria-label", "Page menu");
   more.setAttribute("aria-expanded", "false");
-  more.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>';
+  more.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>';
   const menu = document.createElement("div");
   menu.className = "oireachtas-masthead__menu";
   menu.hidden = true;

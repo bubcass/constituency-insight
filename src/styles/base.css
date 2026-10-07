@@ -626,11 +626,6 @@ button {
         stroke-width: 1.8;
     }
 
-    .mobile-reading-tools__more svg {
-        fill: currentColor;
-        stroke: none;
-    }
-
     .mobile-reading-tools__back:focus-visible,
     .mobile-reading-tools__more:focus-visible,
     .mobile-reading-tools__menu-action:focus-visible {

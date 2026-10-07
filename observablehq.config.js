@@ -127,8 +127,8 @@ export default {
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg>
             </button>
             <div class="mobile-reading-tools__more-wrap">
-              <button class="mobile-reading-tools__more" type="button" aria-label="More options" aria-expanded="false" title="More options">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+              <button class="mobile-reading-tools__more" type="button" aria-label="Page menu" aria-expanded="false" title="Page menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
               </button>
               <div class="mobile-reading-tools__menu" hidden></div>
             </div>
