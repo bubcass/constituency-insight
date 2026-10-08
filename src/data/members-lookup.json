@@ -334,9 +334,7 @@
     "partyCode": "Fine_Gael",
     "startDate": "2024-11-29",
     "endDate": null,
-    "committees": [
-      "Committee on Parliamentary Privileges and Oversight (Seanad Éireann) (Cathaoirleach)"
-    ],
+    "committees": [],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Jerry-Buttimer.S.2007-07-23/"
   },
   "Joanna-Byrne.D.2024-11-29": {
@@ -857,8 +855,6 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Committee of Selection (Seanad Éireann)",
-      "Seanad Public Consultation Committee",
       "Business Committee (Dáil Éireann)",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
@@ -1608,16 +1604,9 @@
     "endDate": null,
     "committees": [
       "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Comhchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
       "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge",
-      "Committee on Parliamentary Privileges and Oversight (Seanad Éireann)",
-      "Committee of Selection (Seanad Éireann)",
-      "Roghchoiste na Gaeilge, na Gaeltachta agus Phobal Labhartha na Gaeilge (Seanad Éireann)",
-      "Seanad Select Committee on Defence and National Security",
-      "Joint Committee on Defence and National Security",
       "Select Committee on Fisheries and Maritime Affairs",
-      "Joint Committee on Fisheries and Maritime Affairs",
-      "Seanad Public Consultation Committee"
+      "Joint Committee on Fisheries and Maritime Affairs"
     ],
     "memberUrl": "https://www.oireachtas.ie/en/members/member/Seán-Kyne.D.2011-03-09/"
   },
@@ -2719,8 +2708,6 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Committee of Selection (Seanad Éireann)",
-      "Seanad Select Committee on Scrutiny of Draft EU-related Statutory Instruments ",
       "Select Committee on Health",
       "Joint Committee on Health",
       "Select Committee on Drugs Use",
@@ -2877,7 +2864,6 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Seanad Public Consultation Committee",
       "Select Committee on Social Protection, Rural and Community Development",
       "Joint Committee on Social Protection, Rural and Community Development"
     ],
@@ -2894,7 +2880,6 @@
     "startDate": "2024-11-29",
     "endDate": null,
     "committees": [
-      "Committee on Members' Interests of Seanad Éireann",
       "Committee on Standing Orders and Dáil Reform",
       "Committee on Parliamentary Privileges and Oversight (Dáil Éireann)",
       "Select Committee on Subsidiarity (European Union Legislative Scrutiny)",

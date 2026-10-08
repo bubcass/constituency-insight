@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-06",
+    "chamber": "dail",
+    "sectionId": "dbsect_40",
+    "sectionNumber": "40",
+    "topic": "Forty-first Amendment of the Constitution (Right to Housing) Bill 2026: Second Stage (Resumed) [Private Members]",
+    "parentTopic": "",
+    "memberCode": "Verona-Murphy.D.2020-02-08",
+    "memberName": "Verona Murphy",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Verona-Murphy.D.2020-02-08",
+    "roles": [],
+    "speechCount": 1,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-06/40/member-speech/Verona-Murphy.D.2020-02-08/"
+  },
+  {
     "date": "2026-10-01",
     "chamber": "dail",
     "sectionId": "dbsect_41",
@@ -40,6 +54,20 @@
     "roles": [],
     "speechCount": 1,
     "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-01/41/member-speech/James-Browne.D.2016-10-03/"
+  },
+  {
+    "date": "2026-10-01",
+    "chamber": "dail",
+    "sectionId": "dbsect_41",
+    "sectionNumber": "41",
+    "topic": "Forty-first Amendment of the Constitution (Right to Housing) Bill 2026: Second Stage [Private Members]",
+    "parentTopic": "",
+    "memberCode": "Louise-O'Reilly.D.2016-10-03",
+    "memberName": "Louise O'Reilly",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Louise-O'Reilly.D.2016-10-03",
+    "roles": [],
+    "speechCount": 1,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-01/41/member-speech/Louise-O'Reilly.D.2016-10-03/"
   },
   {
     "date": "2026-10-01",
@@ -8062,33 +8090,5 @@
     "roles": [],
     "speechCount": 2,
     "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-04-10/20/member-speech/Verona-Murphy.D.2020-02-08/"
-  },
-  {
-    "date": "2025-04-08",
-    "chamber": "dail",
-    "sectionId": "dbsect_32",
-    "sectionNumber": "32",
-    "topic": "Housing Provision",
-    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
-    "memberCode": "Edward-Timmins.D.2024-11-29",
-    "memberName": "Edward Timmins",
-    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Edward-Timmins.D.2024-11-29",
-    "roles": [],
-    "speechCount": 2,
-    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-04-08/32/member-speech/Edward-Timmins.D.2024-11-29/"
-  },
-  {
-    "date": "2025-04-08",
-    "chamber": "dail",
-    "sectionId": "dbsect_32",
-    "sectionNumber": "32",
-    "topic": "Housing Provision",
-    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
-    "memberCode": "Kieran-O'Donnell.D.2007-06-14",
-    "memberName": "Kieran O'Donnell",
-    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Kieran-O'Donnell.D.2007-06-14",
-    "roles": [],
-    "speechCount": 2,
-    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-04-08/32/member-speech/Kieran-O'Donnell.D.2007-06-14/"
   }
 ]
