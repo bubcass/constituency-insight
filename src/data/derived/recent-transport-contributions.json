@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-10-08",
+    "chamber": "dail",
+    "sectionId": "dbsect_24",
+    "sectionNumber": "24",
+    "topic": "Road Safety",
+    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
+    "memberCode": "Darragh-O'Brien.D.2007-06-14",
+    "memberName": "Darragh O'Brien",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Darragh-O'Brien.D.2007-06-14",
+    "roles": [],
+    "speechCount": 2,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-08/24/member-speech/Darragh-O'Brien.D.2007-06-14/"
+  },
+  {
+    "date": "2026-10-08",
+    "chamber": "dail",
+    "sectionId": "dbsect_24",
+    "sectionNumber": "24",
+    "topic": "Road Safety",
+    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
+    "memberCode": "Séamus-McGrath.D.2024-11-29",
+    "memberName": "Séamus McGrath",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Séamus-McGrath.D.2024-11-29",
+    "roles": [],
+    "speechCount": 2,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-08/24/member-speech/Séamus-McGrath.D.2024-11-29/"
+  },
+  {
+    "date": "2026-10-08",
+    "chamber": "dail",
+    "sectionId": "dbsect_23",
+    "sectionNumber": "23",
+    "topic": "Rail Network",
+    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
+    "memberCode": "Darragh-O'Brien.D.2007-06-14",
+    "memberName": "Darragh O'Brien",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Darragh-O'Brien.D.2007-06-14",
+    "roles": [],
+    "speechCount": 2,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-08/23/member-speech/Darragh-O'Brien.D.2007-06-14/"
+  },
+  {
+    "date": "2026-10-08",
+    "chamber": "dail",
+    "sectionId": "dbsect_23",
+    "sectionNumber": "23",
+    "topic": "Rail Network",
+    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
+    "memberCode": "Joanna-Byrne.D.2024-11-29",
+    "memberName": "Joanna Byrne",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Joanna-Byrne.D.2024-11-29",
+    "roles": [],
+    "speechCount": 2,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-10-08/23/member-speech/Joanna-Byrne.D.2024-11-29/"
+  },
+  {
     "date": "2026-10-01",
     "chamber": "dail",
     "sectionId": "dbsect_33",
@@ -10372,33 +10428,5 @@
     "roles": [],
     "speechCount": 2,
     "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-04-30/6/member-speech/Michael-Moynihan.D.1997-06-26/"
-  },
-  {
-    "date": "2025-04-09",
-    "chamber": "dail",
-    "sectionId": "dbsect_4",
-    "sectionNumber": "4",
-    "topic": "Rail Network",
-    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
-    "memberCode": "James-Geoghegan.D.2024-11-29",
-    "memberName": "James Geoghegan",
-    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/James-Geoghegan.D.2024-11-29",
-    "roles": [],
-    "speechCount": 2,
-    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-04-09/4/member-speech/James-Geoghegan.D.2024-11-29/"
-  },
-  {
-    "date": "2025-04-09",
-    "chamber": "dail",
-    "sectionId": "dbsect_4",
-    "sectionNumber": "4",
-    "topic": "Rail Network",
-    "parentTopic": "Saincheisteanna Tráthúla - Topical Issue Debate",
-    "memberCode": "Jerry-Buttimer.S.2007-07-23",
-    "memberName": "Jerry Buttimer",
-    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Jerry-Buttimer.S.2007-07-23",
-    "roles": [],
-    "speechCount": 2,
-    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-04-09/4/member-speech/Jerry-Buttimer.S.2007-07-23/"
   }
 ]
