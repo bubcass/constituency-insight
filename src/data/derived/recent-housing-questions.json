@@ -4176,6 +4176,14 @@
     "constituency": "Dublin Bay North",
     "questions": [
       {
+        "date": "2026-10-08",
+        "deputy": "Tom Brabazon",
+        "department": "Transport",
+        "heading": "Rail Network",
+        "question": "115. Deputy Tom Brabazon asked the Minister for Transport whether Iarnród Éireann has identified the number of residential properties that may be directly affected by the FourNorth project, including through land acquisition, works immediately adjacent to properties or other impacts; and when affected property owners will be individually contacted. [71123/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/115/"
+      },
+      {
         "date": "2026-10-06",
         "deputy": "Cian O'Callaghan",
         "department": "Housing",
@@ -4646,14 +4654,6 @@
         "heading": "Defective Building Materials",
         "question": "1168. Deputy Tom Brabazon asked the Minister for Housing, Local Government and Heritage for an update on the remediation scheme for apartments and duplexes impacted by fire safety, structural safety and water ingress defects; the criteria for properties which will be included in the scheme; and when payments will be made to applicants. [44172/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1168/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Tom Brabazon",
-        "department": "Housing",
-        "heading": "Planning Issues",
-        "question": "1090. Deputy Tom Brabazon asked the Minister for Housing, Local Government and Heritage the steps his Department will take to allow for modular homes under planning exemptions. [42769/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1090/"
       }
     ]
   },
@@ -5296,86 +5296,6 @@
         "heading": "Cabinet Committees",
         "question": "30. Deputy Mary Lou McDonald asked the Taoiseach when the Cabinet committee on housing will next meet. [35556/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/30/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Children",
-        "heading": "Child and Family Agency",
-        "question": "350. Deputy Gary Gannon asked the Minister for Children, Equality, Disability, Integration and Youth the measures being taken to address the reported shortage of social workers within Tusla’s aftercare services, which may impact young care leavers' ability to meet the new housing priority criteria put forward by Dublin City Council. [18297/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/350/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Children",
-        "heading": "Child and Family Agency",
-        "question": "351. Deputy Gary Gannon asked the Minister for Children, Equality, Disability, Integration and Youth the measures in place to ensure that all young people leaving State care are adequately supported in their transition to independent living, particularly in light of the current housing emergency. [18298/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/351/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "273. Deputy Gary Gannon asked the Minister for Housing, Local Government and Heritage his Department's position on Dublin City Council's proposal to restrict care leavers' access to social housing, particularly excluding those coming from foster care. [18294/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/273/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "274. Deputy Gary Gannon asked the Minister for Housing, Local Government and Heritage if there are plans to issue national guidelines to ensure that care leavers across all local authorities are adequately supported in accessing social housing. [18295/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/274/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "275. Deputy Gary Gannon asked the Minister for Housing, Local Government and Heritage the steps his Department is taking to support care leavers who are not eligible for housing priority under Dublin City Council's new criteria, particularly those leaving foster care, to prevent them from becoming homeless. [18296/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/275/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "276. Deputy Gary Gannon asked the Minister for Housing, Local Government and Heritage if his Department will review planning regulations around hoarding and advertising on protected structures, such as the railway bridge at Ballybough, the only protected structure in the community, which is currently dominated by large-scale commercial advertising; if he will engage with Dublin City Council and Iarnród Éireann to explore the removal of this signage in light of its visual impact and the community’s desire to see the structure respected as part of the area’s cultural heritage; and if he will make a statement on the matter. [18302/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/276/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "277. Deputy Gary Gannon asked the Minister for Housing, Local Government and Heritage if he is aware of Dublin City Council’s recent decision to restrict priority social housing status to care leavers coming solely from residential care, thereby excluding those transitioning from foster care; the measures his Department is taking to ensure that all vulnerable young people exiting State care, regardless of their care background, receive equitable access to social housing supports to prevent homelessness; and if he will make a statement on the matter. [18303/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/277/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "278. Deputy Gary Gannon asked the Minister for Housing, Local Government and Heritage for an update on the establishment of the Local Democracy Taskforce, as announced by his Department on 26 March 2025; the specific terms of reference for this taskforce; the timeline and mechanisms through which it intends to implement the Government’s commitments to rebalance power between elected councillors and executive officers, enhance the accountability of chief executives and directors of services to councillors, and increase councillors’ input and control over the development and implementation of council budgets; and if he will make a statement on the matter. [18304/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/278/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "234. Deputy Gary Gannon asked the Minister for Education if her Department has assessed current school capacity in the East Wall and Sheriff Street area in anticipation of a significant rise in population due to the completion of large-scale housing developments; whether there are plans to expand existing schools or build new ones; if demographic modelling has been carried out to inform future educational infrastructure needs in this part of Dublin’s north inner city; and if she will make a statement on the matter. [18244/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/234/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Gary Gannon",
-        "department": "Social",
-        "heading": "Social Welfare Schemes",
-        "question": "298. Deputy Gary Gannon asked the Minister for Social Protection if his Department will provide more clarity on the availability of welfare priority for care leavers under exceptional social grounds in situations where they are at risk of homelessness. [18299/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/298/"
       }
     ]
   },
@@ -17953,14 +17873,6 @@
         "heading": "Housing Provision",
         "question": "419. Deputy Johnny Mythen asked the Minister for Housing, Local Government and Heritage the number of households currently on the social housing waiting list in Kildare south; the number of people who have been removed from the list since 2022; and if he will make a statement on the matter. [11300/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-12/419/"
-      },
-      {
-        "date": "2025-04-10",
-        "deputy": "Johnny Mythen",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "260. Deputy Johnny Mythen asked the Minister for Housing, Local Government and Heritage to provide an update on the measures he is taking to increase housing supply in Wexford, including social housing and affordable housing; and if he will make a statement on the matter. [18115/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-04-10/260/"
       }
     ]
   },
