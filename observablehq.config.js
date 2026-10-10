@@ -70,7 +70,8 @@ export default {
           logo.width = 163;
           logo.height = 69;
           logo.src = document.querySelector('link[rel="preload"][as="image"]')?.href || "oireachtas-logo.svg";
-          const houseSrc = document.querySelector('link[data-insights-house]')?.href || "insights-house.svg";
+          const houseSrc = new URL(document.querySelector('link[data-insights-house]')?.href || "insights-house.svg", window.location.href);
+          houseSrc.searchParams.set("canonical", "2");
 
           homeLink.appendChild(logo);
 
@@ -84,7 +85,7 @@ export default {
           resourceLink.setAttribute("aria-label", "Constituency Insights home");
 
           const insightsBrandMarkup = \`
-            <span class="oireachtas-masthead__brand-mark" aria-hidden="true"><svg viewBox="0 0 1092 526" focusable="false"><use href="\${houseSrc}#house-lockup" fill="currentColor" /></svg></span>
+            <span class="oireachtas-masthead__brand-mark" aria-hidden="true" style="--house-mask:url('\${houseSrc}')"><svg viewBox="0 0 790 381" focusable="false"><use href="\${houseSrc}#house-lockup" fill="currentColor" /></svg></span>
             <span class="oireachtas-masthead__brand-copy">
               <span class="oireachtas-masthead__brand-title">Constituency Insights</span>
               <span class="oireachtas-masthead__brand-tagline">Parliamentary visual data</span>
