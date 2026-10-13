@@ -589,6 +589,14 @@
     "constituency": "Clare",
     "questions": [
       {
+        "date": "2026-10-07",
+        "deputy": "Joe Cooney",
+        "department": "Culture",
+        "heading": "Artists' Remuneration",
+        "question": "167. Deputy Joe Cooney asked the Minister for Culture, Communications and Sport the position regarding the basic income for the arts scheme; when successful applicants can expect to be notified of the outcome of the selection process; and a timeline for when payments are expected to be paid. [70730/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/167/"
+      },
+      {
         "date": "2026-09-16",
         "deputy": "Cathal Crowe",
         "department": "Culture",
@@ -1030,6 +1038,14 @@
   {
     "constituency": "Cork North-Central",
     "questions": [
+      {
+        "date": "2026-10-07",
+        "deputy": "Thomas Gould",
+        "department": "Culture",
+        "heading": "Local Authorities",
+        "question": "169. Deputy Thomas Gould asked the Minister for Culture, Communications and Sport the number of local authorities that have not continued the Night Time Economy Advisor pilot. [70902/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/169/"
+      },
       {
         "date": "2026-10-01",
         "deputy": "Colm Burke",
@@ -1501,14 +1517,6 @@
         "heading": "Sports Funding",
         "question": "1562. Deputy Ken O'Flynn asked the Minister for Culture, Communications and Sport whether he will commit to publishing draft guidelines for future rounds of the Community Sport Facilities Fund in advance of opening dates; and whether any internal timeline or policy change is currently under consideration in this regard. [24673/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1562/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Ken O'Flynn",
-        "department": "Culture",
-        "heading": "Sports Funding",
-        "question": "1563. Deputy Ken O'Flynn asked the Minister for Culture, Communications and Sport whether his Department has undertaken any assessment of the adequacy of current grant thresholds for large-scale urban sports infrastructure projects in cities such as Cork; and whether consideration is being given to alternative funding models to address such needs. [24674/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1563/"
       }
     ]
   },
@@ -2055,6 +2063,14 @@
   {
     "constituency": "Dublin Bay North",
     "questions": [
+      {
+        "date": "2026-10-08",
+        "deputy": "Barry Heneghan",
+        "department": "Culture",
+        "heading": "Sports Funding",
+        "question": "190. Deputy Barry Heneghan asked the Minister for Culture, Communications and Sport the funding provided each year to a programme (details supplied). [71040/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/190/"
+      },
       {
         "date": "2026-10-01",
         "deputy": "Cian O'Callaghan",
@@ -4205,6 +4221,14 @@
     "constituency": "Dublin West",
     "questions": [
       {
+        "date": "2026-10-07",
+        "deputy": "Roderic O'Gorman",
+        "department": "Culture",
+        "heading": "Media Sector",
+        "question": "172. Deputy Roderic O'Gorman asked the Minister for Culture, Communications and Sport if, in Budget 2027, he will provide accessible and simple funding for public service content on independent radio, which would not involve disproportionate bureaucracy or a requirement to produce content that does not fit current radio schedules. [71009/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/172/"
+      },
+      {
         "date": "2026-10-01",
         "deputy": "Ruth Coppinger",
         "department": "Culture",
@@ -4675,14 +4699,6 @@
         "heading": "Sports Funding",
         "question": "252. Deputy Ruth Coppinger asked the Minister for Culture, Communications and Sport if he will reinstate Sport Ireland funding to an organisation (details supplied); and if he will make a statement on the matter. [60585/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-11-06/252/"
-      },
-      {
-        "date": "2025-11-06",
-        "deputy": "Ruth Coppinger",
-        "department": "Culture",
-        "heading": "Sports Funding",
-        "question": "253. Deputy Ruth Coppinger asked the Minister for Culture, Communications and Sport his plans to ensure equal female representation on Sport Ireland funded organisations. [60586/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-06/253/"
       }
     ]
   },
@@ -5830,6 +5846,30 @@
     "constituency": "Kildare North",
     "questions": [
       {
+        "date": "2026-10-08",
+        "deputy": "Aidan Farrelly",
+        "department": "Culture",
+        "heading": "Departmental Expenditure",
+        "question": "197. Deputy Aidan Farrelly asked the Minister for Culture, Communications and Sport the amount (in totals over €20,000) paid out by the Department and agencies under its aegis to third parties in connection with an event (details supplied), in tabular form. [71242/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/197/"
+      },
+      {
+        "date": "2026-10-08",
+        "deputy": "Aidan Farrelly",
+        "department": "Culture",
+        "heading": "Sports Events",
+        "question": "193. Deputy Aidan Farrelly asked the Minister for Culture, Communications and Sport the amount in totals over €20,000 spent by his Department and agencies under its aegis to third parties in connection with the hosting of a sport event (details supplied) in 2025 and 2026, in tabular form. [71246/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/193/"
+      },
+      {
+        "date": "2026-10-08",
+        "deputy": "Aidan Farrelly",
+        "department": "Culture",
+        "heading": "Sports Events",
+        "question": "196. Deputy Aidan Farrelly asked the Minister for Culture, Communications and Sport the amount (in totals over €20,000) paid out by his Department and agencies under its aegis to third parties (details supplied), in tabular form. [71244/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/196/"
+      },
+      {
         "date": "2026-09-22",
         "deputy": "Aidan Farrelly",
         "department": "Culture",
@@ -6655,6 +6695,14 @@
     "constituency": "Louth",
     "questions": [
       {
+        "date": "2026-10-07",
+        "deputy": "Joanna Byrne",
+        "department": "Culture",
+        "heading": "Legislative Measures",
+        "question": "173. Deputy Joanna Byrne asked the Minister for Culture, Communications and Sport his views on a recent media report which suggested a Department of Culture, Communications and Sport proposal on telecoms broadband infrastructure for new homes could add almost €400 million to the cost of building these new homes over the next five years; if he has concerns about the risk of these additional costs impacting the affordability of new homes; if he has engaged with the Minister for Culture, Communications and Sport on this proposal; and the measures he has undertaken to ensure that these costs do not materialise. [70783/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/173/"
+      },
+      {
         "date": "2026-10-01",
         "deputy": "Ged Nash",
         "department": "Culture",
@@ -7125,14 +7173,6 @@
         "heading": "Departmental Legal Cases",
         "question": "80. Deputy Ged Nash asked the Minister for Culture, Communications and Sport for an update from the Chief State Solicitor's Office on a matter (details supplied). [37991/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-09/80/"
-      },
-      {
-        "date": "2025-07-08",
-        "deputy": "Joanna Byrne",
-        "department": "Culture",
-        "heading": "Sports Funding",
-        "question": "479. Deputy Joanna Byrne asked the Minister for Culture, Communications and Sport the funding earmarked for the development of grassroots football academies and player development; and if he will make a statement on the matter. [37470/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-08/479/"
       }
     ]
   },
