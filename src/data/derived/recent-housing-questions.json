@@ -488,6 +488,14 @@
     "constituency": "Cavan-Monaghan",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Niamh Smyth",
+        "department": "Finance",
+        "heading": "Departmental Schemes",
+        "question": "188. Deputy Niamh Smyth asked the Tánaiste and Minister for Finance if he will review matters raised in correspondence (details supplied); if he will provide a response to the queries raised; and if he will consider a transitional arrangement under the help-to-buy scheme for first-time buyers who received the previous maximum payment shortly before the increase announced in Budget 2027 and whose homes remain under construction. [72042/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/188/"
+      },
+      {
         "date": "2026-10-07",
         "deputy": "David Maxwell",
         "department": "Housing",
@@ -958,14 +966,6 @@
         "heading": "Housing Policy",
         "question": "168. Deputy Matt Carthy asked the Minister for Housing, Local Government and Heritage the percentage of students studying on English language courses who were housed in the private rented sector; who were housed in designated student accommodation; who were staying with host families; and who were in other types of accommodation, in the last five years, in tabular form; and if he will make a statement on the matter. [64305/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-11-19/168/"
-      },
-      {
-        "date": "2025-11-18",
-        "deputy": "Niamh Smyth",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "552. Deputy Niamh Smyth asked the Minister for Housing, Local Government and Heritage to review an application (details supplied); and if he will make a statement on the matter. [62765/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-18/552/"
       }
     ]
   },
@@ -3691,6 +3691,14 @@
     "constituency": "Donegal",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Pearse Doherty",
+        "department": "Finance",
+        "heading": "Rental Sector",
+        "question": "212. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance if the increase in rent a room relief is universal or solely for multi-room lets; and the assessment or analysis carried out on the likely impact this will have on rents charged. [72388/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/212/"
+      },
+      {
         "date": "2026-10-06",
         "deputy": "Charles Ward",
         "department": "Housing",
@@ -4161,14 +4169,6 @@
         "heading": "Banking Sector",
         "question": "490. Deputy Pádraig Mac Lochlainn asked the Tánaiste and Minister for Finance if he is aware that persons and families that are resident in the Republic of Ireland and working in Northern Ireland are being turned down for a mortgage by lenders in this State because they are not working in this State; and if he will progress the development of standardised underwriting approaches for cross-Border incomes. [40266/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/490/"
-      },
-      {
-        "date": "2026-05-26",
-        "deputy": "Pearse Doherty",
-        "department": "Finance",
-        "heading": "Tax Code",
-        "question": "168. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance to outline his rationale for ruling out introducing an entity level tax on vulture funds using IREF structures to own residential property, despite his own Department recognising there is a 'strong case' for such a tax in order to ensure rental income does not flow out of the State untaxed. [39784/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/168/"
       }
     ]
   },
@@ -8823,6 +8823,14 @@
     "constituency": "Dún Laoghaire",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Finance",
+        "heading": "Tax Code",
+        "question": "166. Deputy Barry Ward asked the Tánaiste and Minister for Finance the position regarding a review of the local property tax system that will require local authority tenants who are in employment to be included in this tax net. [71520/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/166/"
+      },
+      {
         "date": "2026-10-07",
         "deputy": "Barry Ward",
         "department": "Transport",
@@ -9293,14 +9301,6 @@
         "heading": "Housing Policy",
         "question": "1674. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage the way in which Ireland intends to contribute to European efforts to address rising levels of homelessness and housing affordability challenges across Member States; and if he will make a statement on the matter. [56316/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1674/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Barry Ward",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "1751. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage the position regarding the mechanism and research behind the setting of the cost rental housing income limits; and if he will make a statement on the matter. [57672/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1751/"
       }
     ]
   },
@@ -9793,6 +9793,22 @@
     "constituency": "Galway West",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Enterprise",
+        "heading": "Rented Dwellings Register",
+        "question": "246. Deputy John Connolly asked the Minister for Enterprise, Tourism and Employment the full range of documentation, certificates, proofs of compliance and personal or business information that will be required to register a short-term letting property on the new Fáilte Ireland Short-Term Letting Register from 1 December 2026; the documentation that will be required from individual hosts and company owners respectively; whether applicants will be required to submit evidence relating to planning permission, building regulations, fire safety compliance, ownership of the property and tax registration; and if he will make a statement on the matter. [71646/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/246/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Enterprise",
+        "heading": "Rented Dwellings Register",
+        "question": "247. Deputy John Connolly asked the Minister for Enterprise, Tourism and Employment for an update on the opening of the portal for Fáilte Ireland short-term let registration; and when the registration Process will be able to advise of properties that are compliant having successfully completed the registration process. [71647/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/247/"
+      },
+      {
         "date": "2026-10-08",
         "deputy": "Seán Kyne",
         "department": "Housing",
@@ -10255,22 +10271,6 @@
         "heading": "Housing Provision",
         "question": "228. Deputy Mairéad Farrell asked the Minister for Housing, Local Government and Heritage his attention has been drawn to the complete lack of housing commencement notices lodged in Galway city so far this year; and if he will make a statement on the matter. [17799/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-05/228/"
-      },
-      {
-        "date": "2026-03-05",
-        "deputy": "Mairéad Farrell",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "172. Deputy Mairéad Farrell asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No. 49 of 8 October 2025, if he will provide an update on discussions his Department has had with Galway County Council in relation to the Ros a Mhíl and Eanach Mheáin social housing developments; the current status of the feasibility studies and cost reports on the sites; and if he will make a statement on the matter. [17800/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-05/172/"
-      },
-      {
-        "date": "2026-03-03",
-        "deputy": "Mairéad Farrell",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "603. Deputy Mairéad Farrell asked the Minister for Housing, Local Government and Heritage if there are any supports available to homeowners who have become disabled after purchasing their home and are struggling with mortgage payments as a result of a change in income; if not, if he is considering enacting supports of this nature; and if he will make a statement on the matter. [16683/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-03/603/"
       }
     ]
   },
