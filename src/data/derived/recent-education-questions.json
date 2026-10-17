@@ -3,6 +3,14 @@
     "constituency": "Carlow-Kilkenny",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Catherine Callaghan",
+        "department": "Education",
+        "heading": "Employment Schemes",
+        "question": "382. Deputy Catherine Callaghan asked the Minister for Education and Youth if she will consider issuing guidance by January each year regarding substitute teaching arrangements for teachers on approved job-sharing and career-break schemes for the following school year (details supplied). [72206/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/382/"
+      },
+      {
         "date": "2026-10-07",
         "deputy": "Catherine Callaghan",
         "department": "Transport",
@@ -473,14 +481,6 @@
         "heading": "Departmental Data",
         "question": "1295. Deputy Peter 'Chap' Cleere asked the Minister for Further and Higher Education, Research, Innovation and Science if he visited University of Sydney during his visit to Australia for the recent St. Patrick's Day. [30010/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/1295/"
-      },
-      {
-        "date": "2026-04-28",
-        "deputy": "Peter 'Chap' Cleere",
-        "department": "Health",
-        "heading": "Hospital Equipment",
-        "question": "1153. Deputy Peter 'Chap' Cleere asked the Minister for Health the number of holter monitors and cardiac event monitors available at University Hospital Waterford; the number of patients awaiting the use of a holter monitor and cardiac event monitor; and the average wait time to access these monitors at UHW. [30012/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/1153/"
       }
     ]
   },
@@ -975,10 +975,42 @@
       {
         "date": "2026-10-13",
         "deputy": "Donna McGettigan",
+        "department": "Further and Higher Education",
+        "heading": "Departmental Meetings",
+        "question": "893. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science for an update on his recent visit to China. [71730/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/893/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Donna McGettigan",
+        "department": "Further and Higher Education",
+        "heading": "Departmental Meetings",
+        "question": "894. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science the engagement his Department or the HEA has had with China General Technology Research Institute. [71728/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/894/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Donna McGettigan",
+        "department": "Further and Higher Education",
+        "heading": "Question Heading for question(s) 888",
+        "question": "889. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science to review correspondence (details supplied); and whether he is satisfied that Gaza students holding full scholarships from Irish institutions were refused visas, while Government of Ireland scholars submitting comparable documentation were granted them. [71363/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/889/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Donna McGettigan",
         "department": "Education",
         "heading": "School Meals Programme",
         "question": "272. Deputy Donna McGettigan asked the Minister for Education and Youth if alternative arrangements can be approved for small schools where existing kitchen facilities do not meet the new requirements for the School Meals Programme; if funding is available to help schools make the necessary adaptations; if the impact of these requirements on small and rural schools has been assessed; and the immediate solution that can be put in place to restore the lunch programme for pupils in a school (details supplied) in County Clare. [71425/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/272/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Donna McGettigan",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "511. Deputy Donna McGettigan asked the Minister for Justice, Home Affairs and Migration if he will clarify the number of study visas issued and other matters in relation to students from Gaza in 2026 (details supplied). [71361/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/511/"
       },
       {
         "date": "2026-10-08",
@@ -1419,38 +1451,6 @@
         "heading": "Teaching Qualifications",
         "question": "1114. Deputy Cathal Crowe asked the Minister for Education and Youth if she will review the criteria used by her Department to award incremental salary credit to returning Irish teachers with overseas experience; if she will specifically address the current discrepancy where primary teachers frequently receive credit for international experience while post-primary teachers face widespread refusals; her views on whether excluding service in highly-regulated private international schools, such as those delivering the International Baccalaureate curriculum, hinders teacher recruitment efforts during a severe domestic shortage; and if she will make a statement on the matter. [54845/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1114/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Donna McGettigan",
-        "department": "Education",
-        "heading": "Education and Training Provision",
-        "question": "1113. Deputy Donna McGettigan asked the Minister for Education and Youth each nationally available programme during 2026 through which students collect, geolocate, classify or analyse real-world scientific observations using smartphones, geographic information systems or other digital tools; for each programme, the provider, participating schools and students, funding, dataset or research output produced, teacher training provided and geographical availability; and if she will make a statement on the matter. [54822/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1113/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Donna McGettigan",
-        "department": "Further and Higher Education",
-        "heading": "EU Presidency",
-        "question": "4199. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science the Minister accountable to Government for national citizen-science policy; and the Department or public body responsible for coordinating its implementation. [56567/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4199/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Donna McGettigan",
-        "department": "Further and Higher Education",
-        "heading": "International Students",
-        "question": "4184. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science to engage with an organisation (details supplied) over their concerns of international students owed money by businesses operating in Ireland and on the number of compliance inspections carried out in the English language education sector in the past five years. [55554/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4184/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Donna McGettigan",
-        "department": "Further and Higher Education",
-        "heading": "Third Level Admissions",
-        "question": "4228. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science if he will review the date on which CAO offers come out to give students and their families more time to prepare for starting third level education. [58995/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4228/"
       }
     ]
   },
@@ -1477,9 +1477,41 @@
         "date": "2026-10-13",
         "deputy": "Pat Buckley",
         "department": "Education",
+        "heading": "Employment Schemes",
+        "question": "381. Deputy Pat Buckley asked the Minister for Education and Youth if a review of the 92-day rolling four-year assault-leave limit, regarding teachers in special education settings, where employees experience separate workplace assaults will be carried out; and if she will make a statement on the matter. [72139/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/381/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pat Buckley",
+        "department": "Education",
+        "heading": "Employment Support Services",
+        "question": "357. Deputy Pat Buckley asked the Minister for Education and Youth to establish meaningful national reporting and analysis of assaults, injuries and assault-related absence in special education, including mechanisms for identifying repeated incidents and ensuring that reporting leads to reflection and change. [72147/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/357/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pat Buckley",
+        "department": "Education",
         "heading": "Special Educational Needs",
         "question": "355. Deputy Pat Buckley asked the Minister for Education and Youth to provide ring-fenced funding for additional staffing, specialist input and other control measures identified as necessary through individual and workplace risk assessment in special education. [72150/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/355/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pat Buckley",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "377. Deputy Pat Buckley asked the Minister for Education and Youth to calculate the true cost of workplace violence in special education including assault leave, ordinary sick leave, substitution, occupational health, healthcare, staff turnover and long-term absence; and to compare it with the cost of prevention. [72142/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/377/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pat Buckley",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "510. Deputy Pat Buckley asked the Minister for Justice, Home Affairs and Migration noting a statement in Dáil Éireann on 23 September 2026 that 50 study visas were granted to students from Gaza in 2026, while figures provided by his Department indicate that 50 long-stay study visas were granted in 2026 to Palestinian nationals generally, including applicants from the West Bank and elsewhere, if he will clarify matters (details supplied). [71350/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/510/"
       },
       {
         "date": "2026-09-29",
@@ -1904,44 +1936,68 @@
         "heading": "Special Educational Needs",
         "question": "852. Deputy Liam Quaide asked the Minister for Education and Youth whether her Department has issued guidance to primary schools that provide, host, facilitate or contract after-school services on the inclusion of children with disabilities or additional needs; whether such services are expected to be accessible to children with additional care, communication, sensory, behavioural or medical needs; the supports available to schools to ensure that children are not excluded from after-school provision on the basis of disability or additional need; and if special needs assistants or other school supports may be used in any circumstances during school-based after-school provision. [42621/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/852/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Liam Quaide",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "853. Deputy Liam Quaide asked the Minister for Education and Youth whether school-age childcare and after-school services operating in or through primary schools are required to make provision for children with disabilities or additional needs; what statutory, regulatory or funding obligations apply to such services in relation to inclusion and reasonable accommodation; if supports are available to providers to enable the participation of children with additional care, communication, sensory, behavioural or medical needs; and the recourse available to parents where a child is refused access or effectively excluded from an after-school service because of additional needs. [42622/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/853/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Pat Buckley",
-        "department": "Education",
-        "heading": "EU Programmes",
-        "question": "822. Deputy Pat Buckley asked the Minister for Education and Youth the reason a highly-regarded European programme (details supplied) cannot get her Departments support. [42157/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/822/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Pat Buckley",
-        "department": "Education",
-        "heading": "European Union",
-        "question": "821. Deputy Pat Buckley asked the Minister for Education and Youth whether her Department will circulate a single email to all primary schools in mid-August 2026, in advance of the new school year and coinciding with Ireland's Presidency of the Council of the European Union, publicising Key to the EU, an innovative and engaging education programme on active European citizenship at primary level, fully funded and highly acknowledged and praised at European level, which offers free classroom resources for teachers with all curriculum links and differentiation options; and if she will make a statement on the matter. [42156/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/821/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Pat Buckley",
-        "department": "Health",
-        "heading": "Hospital Staff",
-        "question": "2244. Deputy Pat Buckley asked the Minister for Health the number of WTE consultant paediatric ophthalmologists and WTE paediatric ophthalmologists based at South Infirmary Victoria University Hospital as of 1 June 2026, in tabular form. [43352/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/2244/"
       }
     ]
   },
   {
     "constituency": "Cork North-Central",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Colm Burke",
+        "department": "Social",
+        "heading": "School Meals Programme",
+        "question": "483. Deputy Colm Burke asked the Minister for Social Protection if his Department will consider an increase in the secondary dinner rate with a drink in the school meals programme to €3,20 from €2.50 to equalise it with the hot schools meal and backdate it to the beginning of this school year, as providers are finding it difficult to maintain services with the costs incurred. [71653/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/483/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Colm Burke",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "521. Deputy Colm Burke asked the Minister for Justice, Home Affairs and Migration the status of an application (details supplied); when it is likely that an acknowledgement will issue to the applicant; and when it is likely that same will be processed and completed. [71479/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/521/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Colm Burke",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "523. Deputy Colm Burke asked the Minister for Justice, Home Affairs and Migration the status of an application (details supplied); and when it is likely that an acknowledgement will issue in view that it is over seven weeks since the application was submitted and the applicant has yet to receive a response, and taking into account that the delay in the processing of the application may affect him continuing in his employment. [71477/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/523/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Eoghan Kenny",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "307. Deputy Eoghan Kenny asked the Minister for Education and Youth whether she will consider introducing interim measures, pending the enactment of the Education (Medical Emergencies in Schools) Bill 2026, to ensure that all schools have clear medical emergency protocols, appropriately trained personnel and the necessary safeguards to respond effectively to life-threatening medical incidents. [71651/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/307/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Eoghan Kenny",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "308. Deputy Eoghan Kenny asked the Minister for Education and Youth the steps being taken to address the absence of a comprehensive statutory framework requiring schools to implement standardised medical emergency policies, ensure appropriate access to emergency medication and provide mandatory, regularly updated training for designated school staff. [71650/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/308/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Eoghan Kenny",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "309. Deputy Eoghan Kenny asked the Minister for Education and Youth whether she acknowledges the significant gaps in medical emergency preparedness across Irish schools, particularly in relation to the recognition and management of life-threatening conditions such as anaphylaxis, epileptic seizures and severe asthma attacks. [71649/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/309/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Eoghan Kenny",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "310. Deputy Eoghan Kenny asked the Minister for Education and Youth the current status of the Education (Medical Emergencies in Schools) Bill 2026, introduced by Deputy Eoghan Kenny, including whether the Government intends to support the progression of the Bill through the Houses of the Oireachtas and the anticipated timeframe for its consideration at Committee Stage. [71648/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/310/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "Ken O'Flynn",
@@ -2081,6 +2137,30 @@
       {
         "date": "2026-10-13",
         "deputy": "Ken O'Flynn",
+        "department": "Children",
+        "heading": "Gender Recognition",
+        "question": "642. Deputy Ken O'Flynn asked the Minister for Children, Disability and Equality if Tusla records the source of referrals concerning parental disagreement with or refusal to affirm a child’s stated gender identity; and if so, the number referred by teachers, counsellors, psychotherapists, psychologists, social workers, healthcare professionals and other mandated persons in each year since 2017. [71868/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/642/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Ken O'Flynn",
+        "department": "Children",
+        "heading": "Gender Recognition",
+        "question": "644. Deputy Ken O'Flynn asked the Minister for Children, Disability and Equality whether Tusla has issued guidance to teachers, counsellors, psychotherapists, psychologists, social workers or other mandated persons concerning circumstances in which parental disagreement with or refusal to affirm a child’s stated gender identity may constitute a child protection or welfare concern requiring referral; and if she will provide a copy of such guidance. [71870/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/644/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Health Services",
+        "question": "783. Deputy Ken O'Flynn asked the Minister for Health whether her Department or the HSE have conducted a cost-benefit or economic impact assessment of funding specialist FASD support services; whether the potential costs to health, disability, education, social care, justice and other public services arising from unmet FASD needs were considered when determining 2026 funding; and if she will provide details of any such assessment. [71935/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/783/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Ken O'Flynn",
         "department": "Education",
         "heading": "School Attendance",
         "question": "346. Deputy Ken O'Flynn asked the Minister for Education and Youth whether a school may satisfy a parent's exercise of the right under section 30(2)(e) of the Education Act 1998 by requiring a child to remain physically present in the classroom while the instruction to which the parent has objected is delivered; if not, the national guidance that has been issued to schools regarding the physical removal or alternative supervision of a child during such instruction. [71881/26]",
@@ -2120,6 +2200,30 @@
       },
       {
         "date": "2026-10-13",
+        "deputy": "Ken O'Flynn",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "358. Deputy Ken O'Flynn asked the Minister for Education and Youth the arrangements that are in place for assistive technology provided to a child under the Department's assistive technology scheme when that child transfers to another primary school or the child moves from primary to post-primary education; whether the child retains the device and brings it to their new school; whether a new application or assessment is required; whether responsibility for the device transfers to the post-primary school; and whether there is any circumstance in which a child is required to return the device to their primary school and in this circumstance. [72055/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/358/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Ken O'Flynn",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "369. Deputy Ken O'Flynn asked the Minister for Education and Youth whether all primary and post-primary schools have been formally informed of the provisions of Circular 0010/2013, concerning the transfer of assistive technology with a pupil when they change school, including when progressing to post-primary; whether further guidance has issued to schools on this process; and whether she will publish any circular, guidance or communication issued to schools in this regard. [72074/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/369/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Justice",
+        "heading": "An Garda Síochána",
+        "question": "543. Deputy Pádraig O'Sullivan asked the Minister for Justice, Home Affairs and Migration the number of Garda members at the end of 2025 and at the latest date in 2026; the projected number at the end of 2026 and the end of 2027; and the number of trainees who entered the Garda College to date in 2026. [71832/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/543/"
+      },
+      {
+        "date": "2026-10-13",
         "deputy": "Pádraig O'Sullivan",
         "department": "Public Expenditure",
         "heading": "Budget 2027",
@@ -2137,10 +2241,26 @@
       {
         "date": "2026-10-13",
         "deputy": "Pádraig O'Sullivan",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "639. Deputy Pádraig O'Sullivan asked the Minister for Children, Disability and Equality the number of children who availed of the early childhood care and education programme and the National Childcare Scheme in 2025 and in 2026 to date; the reason the Budget 2027 expenditure report projects almost 100,000 ECCE children compared with over 105,000 in Budget 2026; and how the projection of 293,000 NCS children, described as an increase of 16,000, compares with the 286,000 projected in Budget 2026. [71857/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/639/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pádraig O'Sullivan",
         "department": "Education",
         "heading": "School Staff",
         "question": "330. Deputy Pádraig O'Sullivan asked the Minister for Education and Youth the number of special needs assistants in post at the end of 2025 and at the latest date in 2026; and the way that the budget 2027 provision of 2,339 additional SNAs, bringing the total to 28,000, reconciles with the budget 2026 figure of almost 24,900. [71855/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/330/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Further and Higher Education",
+        "heading": "Student Accommodation",
+        "question": "898. Deputy Pádraig O'Sullivan asked the Minister for Further and Higher Education, Research, Innovation and Science the capital funding provided in Budget 2027 for student accommodation, including under the Higher Education sector student accommodation programme and the National Student Accommodation Strategy 2026-2035, given that the Budget 2027 expenditure report does not set out a specific allocation; and the number of student beds expected to commence and to be completed in 2027. [71856/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/898/"
       },
       {
         "date": "2026-10-13",
@@ -2149,6 +2269,14 @@
         "heading": "Schools Building Projects",
         "question": "284. Deputy Thomas Gould asked the Minister for Education and Youth for an update on a school building project (details supplied). [71524/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/284/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Thomas Gould",
+        "department": "Further and Higher Education",
+        "heading": "Third Level Education",
+        "question": "895. Deputy Thomas Gould asked the Minister for Further and Higher Education, Research, Innovation and Science the reasons ICOT have been removed from the Interim List of Eligible Programs. [71682/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/895/"
       },
       {
         "date": "2026-10-08",
@@ -2293,134 +2421,6 @@
         "heading": "Healthcare Policy",
         "question": "601. Deputy Pádraig O'Sullivan asked the Minister for Health if the DOMINO midwife-led continuity of care scheme at Cork University Maternity Hospital has been suspended, following reports on 29 September 2026 that women were informed at routine antenatal appointments that the service would no longer be available to them for the remainder of their pregnancies; the reason for this decision; the number of women currently booked on the scheme who are affected; the date on which the service is expected to resume. [70138/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/601/"
-      },
-      {
-        "date": "2026-10-06",
-        "deputy": "Pádraig O'Sullivan",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "290. Deputy Pádraig O'Sullivan asked the Minister for Education and Youth the status of the standalone extension project at a school (details supplied). [70506/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/290/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "399. Deputy Ken O'Flynn asked the Minister for Children, Disability and Equality whether transport provided by a school age childcare service between a child's school and the service can be included in the fee subsidised under the national childcare scheme; if not, the reason; the number of services that levy a separate transport charge, if known; and if she will make a statement on the matter. [69650/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/399/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "400. Deputy Ken O'Flynn asked the Minister for Children, Disability and Equality if her Department will review the national childcare scheme subsidy rates for school age childcare, having regard to hourly fees in many services substantially exceeding those charged for early years care; the estimated cost of increasing the hourly subsidy for school age childcare by €1, €2 and €3 respectively; and if she will make a statement on the matter. [69649/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/400/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "401. Deputy Ken O'Flynn asked the Minister for Children, Disability and Equality the average hourly fee charged by school age childcare services, broken down by services participating in Core Funding and those not participating, in each of the years 2024, 2025 and to date in 2026; the fee management controls that apply to each category; and if she will make a statement on the matter. [69648/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/401/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "454. Deputy Ken O'Flynn asked the Minister for Health whether consideration has been given to enabling other neurology centres, including Cork University Hospital, to assess and prescribe Skyclarys for patients with Friedreich's Ataxia under a shared care arrangement with Tallaght University Hospital, to reduce waiting times and travel burden for patients outside Dublin; and if she will make a statement on the matter. [69643/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/454/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Medicinal Products",
-        "question": "457. Deputy Ken O'Flynn asked the Minister for Health whether the HSE will allocate additional dedicated resources, including consultant, nursing, administrative and cardiac ECHO capacity, to the Combined Ataxia Clinic at Tallaght University Hospital; to ensure all eligible patients with Friedreich's Ataxia are assessed and prescribed Skyclarys by 31 December 2026; the cost of such resources; and if she will make a statement on the matter. [69639/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/457/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Social",
-        "heading": "Social Welfare Eligibility",
-        "question": "364. Deputy Ken O'Flynn asked the Minister for Social Protection if his Department will review the income thresholds for the working family payment as they apply to lone parent households, including whether childcare costs could be taken into account in the means assessment; the estimated cost of increasing the thresholds by 5% and 10% respectively; and if he will make a statement on the matter. [69652/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/364/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Ken O'Flynn",
-        "department": "Finance",
-        "heading": "Tax Reliefs",
-        "question": "258. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance if he will consider a tax credit or relief for childcare and school age childcare costs for working lone parents; the estimated full year cost of such a measure at various rates; and if he will make a statement on the matter. [69657/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/258/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Pádraig O'Sullivan",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "273. Deputy Pádraig O'Sullivan asked the Minister for Education and Youth the rationale behind recent changes to the SEN school transport escort payment guidelines whereby escorts are paid only for Department-approved journey time; if she acknowledges that many escorts are required to travel for significant periods before the first child is collected without remuneration; if she is concerned that this may worsen existing recruitment and retention difficulties in a service already experiencing shortages; and if she will review the policy to ensure escorts are fairly compensated for all time spent on duty in providing school transport for children. [69538/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/273/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Thomas Gould",
-        "department": "Justice",
-        "heading": "Student Visas",
-        "question": "382. Deputy Thomas Gould asked the Minister for Justice, Home Affairs and Migration the reason visas for Palestinian students have not been prioritised given the Irish Government rhetoric on Gaza. [69488/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/382/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Eoghan Kenny",
-        "department": "Education",
-        "heading": "Disadvantaged Status",
-        "question": "409. Deputy Eoghan Kenny asked the Minister for Education and Youth the additional funding requirement for the rollout of DEIS plus in 2027; to provide an itemised breakdown of the projected additional costs; and to provide the estimated cost to include a further ten additional primary schools in the DEIS plus scheme. [68679/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/409/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Ken O'Flynn",
-        "department": "Children",
-        "heading": "Child and Family Agency",
-        "question": "679. Deputy Ken O'Flynn asked the Minister for Children, Disability and Equality further to Parliamentary Question No. 64980/26 of 16 September 2026, which did not provide the yes or no requested, whether profit margin is assessed as a criterion in the award of private residential childcare contracts by Tusla, the Child and Family Agency; and to state yes or no. [68764/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/679/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "792. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 3895 of 7 September 2026, and given that approximately 200 HSE staff are members of an organisation (details supplied), the mechanisms by which the HSE assures itself of the evidence base and content of the continuing education those staff receive through the organisation. [68696/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/792/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "796. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 3876 and 3895 of 7 September 2026, to provide the number of education, training or seminar events delivered by an organisation (details supplied) to HSE staff in each of the past five years; the subjects covered; the number of HSE staff who attended in each year; and whether the HSE made any payment to the organisation for that education. [68690/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/796/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "858. Deputy Ken O'Flynn asked the Minister for Health the number of WTE consultant neonatologist posts filled at Cork University Maternity Hospital in the years 2024, 2025 and to date in 2026, in tabular form. [68751/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/858/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Hospital Staff",
-        "question": "864. Deputy Ken O'Flynn asked the Minister for Health whether the HSE plans to extend the internal audit of non-EU doctor recruitment to hospitals in the HSE South West region, including Cork University Hospital, the Mercy University Hospital, the South Infirmary Victoria University Hospital and Mallow General Hospital; if not, the reason; and if she will make a statement on the matter. [68924/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/864/"
       }
     ]
   },
@@ -2913,6 +2913,30 @@
     "constituency": "Cork South-Central",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Pádraig Rice",
+        "department": "Health",
+        "heading": "Departmental Expenditure",
+        "question": "847. Deputy Pádraig Rice asked the Minister for Health further to Parliamentary Question No. 913 of 14 July 2026, to provide the updated spend on outsourcing arrangements in University Hospital Galway to address laboratory backlogs to date in 2026. [72260/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/847/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Pádraig Rice",
+        "department": "Health",
+        "heading": "Health Services Staff",
+        "question": "682. Deputy Pádraig Rice asked the Minister for Health if private recruitment firms have been contracted by Cork University Hospital or the south west region to hire nurses for the adaptation programme; the spend by firm in 2025 and to date in 2026; if a procurement fee is paid to the firm for each new hire; and to state the procurement fee paid. [71418/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/682/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Séamus McGrath",
+        "department": "Education",
+        "heading": "Schools Building Projects",
+        "question": "391. Deputy Séamus McGrath asked the Minister for Education and Youth to provide an update on the building project for a school (details supplied). [72249/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/391/"
+      },
+      {
         "date": "2026-10-08",
         "deputy": "Pádraig Rice",
         "department": "Health",
@@ -3367,36 +3391,20 @@
         "heading": "Hospital Staff",
         "question": "767. Deputy Pádraig Rice asked the Minister for Health if the termination of a service level agreement will lead to the discontinuation of private work across all laboratory services in University Hospital Galway (details supplied); and if she will make a statement on the matter. [48902/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/767/"
-      },
-      {
-        "date": "2026-06-30",
-        "deputy": "Séamus McGrath",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "324. Deputy Séamus McGrath asked the Minister for Education and Youth to clarify when the construction phase will commence for a school (details supplied) in County Cork. [48780/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/324/"
-      },
-      {
-        "date": "2026-06-25",
-        "deputy": "Séamus McGrath",
-        "department": "Education",
-        "heading": "School Funding",
-        "question": "292. Deputy Séamus McGrath asked the Minister for Education and Youth the way in which a school (details supplied) should proceed to seek funding for essential electrical works. [48573/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-25/292/"
-      },
-      {
-        "date": "2026-06-24",
-        "deputy": "Séamus McGrath",
-        "department": "Further and Higher Education",
-        "heading": "Health and Safety",
-        "question": "340. Deputy Séamus McGrath asked the Minister for Further and Higher Education, Research, Innovation and Science in light of recent HSA data showing that 40% of workplace fatalities involve the self-employed, will expand the existing foundational ETB modules funded under the EIST programme to include specific, machine-certified safety modules (such as commercial woodchipper and advanced chainsaw tickets) to meet the real-world safety needs of Ireland's estimated 10,000 independent landscaping contractors. [48038/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/340/"
       }
     ]
   },
   {
     "constituency": "Cork South-West",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Michael Collins",
+        "department": "Health",
+        "heading": "Hospital Services",
+        "question": "790. Deputy Michael Collins asked the Minister for Health the curtailments that will be made to the Domino maternity scheme at Cork University Maternity Hospital, as of 12 October 2026; the arrangements that have been made for expectant mothers currently booked under the Domino scheme; and the date the Domino maternity scheme will fully resume its normal independent operations. [71897/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/790/"
+      },
       {
         "date": "2026-09-17",
         "deputy": "Holly Cairns",
@@ -3868,20 +3876,20 @@
         "heading": "Departmental Funding",
         "question": "537. Deputy Holly Cairns asked the Minister for Culture, Communications and Sport if he will consider providing funding to a theatre (details supplied) as a production created specifically for Leaving Certificate English students across Munster; if he will advise on alternative funding avenues which may be available; and if he will consider funding annual productions in line with the Leaving Certificate curriculum in the future. [39558/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/537/"
-      },
-      {
-        "date": "2025-07-15",
-        "deputy": "Holly Cairns",
-        "department": "Education",
-        "heading": "School Funding",
-        "question": "506. Deputy Holly Cairns asked the Minister for Education and Youth if she will consider providing funding to a theatre (details supplied) as a production created specifically for leaving certificate English students across Munster; if she will advise on alternative funding avenues which may be available; and if she will consider funding annual productions in line with the leaving certificate curriculum in the future. [39559/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/506/"
       }
     ]
   },
   {
     "constituency": "Donegal",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Pearse Doherty",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "380. Deputy Pearse Doherty asked the Minister for Education and Youth if she is aware of a special education school (details supplied) reducing the number of days per weeks students can attend due to insufficient teaching and SNA staff numbers; and if her Department will provide assistance to resolve the matter. [72209/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/380/"
+      },
       {
         "date": "2026-10-07",
         "deputy": "Pearse Doherty",
@@ -4353,20 +4361,44 @@
         "heading": "School Accommodation",
         "question": "49. Deputy Pádraig Mac Lochlainn asked the Minister for Education and Youth the exact date of her visit to a school (details supplied) to view the unacceptable conditions for the children, teachers, and staff at the school and to make a statement on her plans to advance the delivery of the new school facilities that have been long delayed. [28755/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-23/49/"
-      },
-      {
-        "date": "2026-04-23",
-        "deputy": "Pádraig Mac Lochlainn",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "82. Deputy Pádraig Mac Lochlainn asked the Minister for Education and Youth if she will visit a school (details supplied) to view the unacceptable conditions for the children, teachers and staff at the school and to advise them on the way in which plans can be advanced for a new school on the new site offered free of charge to the State, within the town boundaries of Milford. [28754/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-23/82/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay North",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Heneghan",
+        "department": "Health",
+        "heading": "Medicinal Products",
+        "question": "791. Deputy Barry Heneghan asked the Minister for Health whether she is aware of delays in accessing a drug (details supplied) for Friedreich’s ataxia due to capacity constraints at the Combined Ataxia Clinic, Tallaght University Hospital; the timeframe for all eligible patients to commence treatment; whether additional resources will be provided; the current clinic waiting times; and measures to ensure timely specialist review and annual multidisciplinary assessment. [71846/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/791/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Heneghan",
+        "department": "Education",
+        "heading": "School Attendance",
+        "question": "320. Deputy Barry Heneghan asked the Minister for Education and Youth the arrangements in place for Leaving Certificate students who, due to disability, medical needs or school avoidance, cannot regularly attend school to complete required coursework or additional assessment components; whether alternative arrangements are available to allow these students to complete the assessments; and the way in which she will ensure they are not prevented from taking any specific subject as a result. [71768/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/320/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Heneghan",
+        "department": "Education",
+        "heading": "School Attendance",
+        "question": "376. Deputy Barry Heneghan asked the Minister for Education and Youth the arrangements available for students who cannot attend school regularly for medical reasons to complete and have their additional assessment components authenticated; whether an alternative process will be available; where this cannot be done through their school; and the guidance that has been provided to schools on such cases. [72184/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/376/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Cian O'Callaghan",
+        "department": "Education",
+        "heading": "Departmental Surveys",
+        "question": "359. Deputy Cian O'Callaghan asked the Minister for Education and Youth to outline, with regard to the primary school survey, the statistical basis and appropriateness of applying a margin of error to a voluntary, self-selected survey; how the Department distinguishes the preferences actually expressed by respondents from assumptions about non-respondents; the reason multiple submissions associated with the same eircode were permitted where the survey was intended to capture one submission per household; and the arrangements in place to ensure the integrity and security of the survey. [71969/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/359/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "Cian O'Callaghan",
@@ -4406,6 +4438,14 @@
         "heading": "School Patronage",
         "question": "265. Deputy Denise Mitchell asked the Minister for Education and Youth the way in which existing common enrolment systems for primary schools should operate if a change of ethos results in two linked schools having differing patrons; and if there is a best practice guide for schools undergoing a change of patron in terms of whether they should proceed via a phased transition or a whole-of-school transition to the new ethos. [71382/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/265/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Denise Mitchell",
+        "department": "Further and Higher Education",
+        "heading": "Third Level Education",
+        "question": "897. Deputy Denise Mitchell asked the Minister for Further and Higher Education, Research, Innovation and Science if he is aware of proposals to close a college (details supplied) in north Dublin; the engagement he has had with the board of management and staff at the college on the matter; and the steps he is taking to avoid the closure of this education and training centre. [71944/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/897/"
       },
       {
         "date": "2026-10-08",
@@ -4806,52 +4846,36 @@
         "heading": "Schools Building Projects",
         "question": "505. Deputy Tom Brabazon asked the Minister for Education and Youth for an update on the new school building project (details supplied). [64563/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-16/505/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Barry Heneghan",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "2883. Deputy Barry Heneghan asked the Minister for Children, Disability and Equality if she will review the operation of the national childcare scheme in cases (details supplied); if her Department is aware of concerns from childcare providers and parents regarding the impact of this rule; the number of representations received by her Department on this issue; if changes to the scheme are being considered; and if she will make a statement on the matter. [61235/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2883/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Barry Heneghan",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "3019. Deputy Barry Heneghan asked the Minister for Children, Disability and Equality the number of childcare services registered with Tusla in the Dublin Bay North constituency; the number currently participating in core funding; the number not participating, by type of service, including full day care, part-time, sessional and school-age childcare, showing separately the number participating and not participating in core funding for each category, in tabular form; and if she will make a statement on the matter. [62630/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/3019/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Barry Heneghan",
-        "department": "Education",
-        "heading": "Information and Communications Technology",
-        "question": "1111. Deputy Barry Heneghan asked the Minister for Education and Youth whether her Department is considering introducing a grant or support scheme, similar to the free schoolbooks scheme, to help parents meet the cost of laptops, chromebooks and other essential digital devices required by schools; whether this proposal is being considered as part of Budget 2027; and if she will make a statement on the matter. [59891/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1111/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Barry Heneghan",
-        "department": "Education",
-        "heading": "State Examinations",
-        "question": "1349. Deputy Barry Heneghan asked the Minister for Education and Youth the provisions available to Leaving Certificate students who are prevented from sitting both the main examinations and the deferred examination sitting due to serious illness, emergency surgery or other exceptional medically certified circumstances; whether any alternative assessment arrangements exist in such cases; whether consideration is being given to reviewing the current system where a student is unable to complete either examination sitting through no fault of their own; and if she will make a statement on the matter. [62725/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1349/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Cian O'Callaghan",
-        "department": "Education",
-        "heading": "School Enrolments",
-        "question": "1281. Deputy Cian O'Callaghan asked the Minister for Education and Youth to examine the case of a person (details supplied) who does not yet have a school place for the upcoming school year; and if she will make a statement on the matter. [62246/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1281/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay South",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Ivana Bacik",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "396. Deputy Ivana Bacik asked the Minister for Education and Youth the portion of funding announced in Budget 2027 that will be committed to special education in Dublin bay south; the number of new places in mainstream and special schools that will result from that allocation in Dublin bay south, respectively; and her plans to ensure that pupils with additional needs will be required to leave their community to access education. [72467/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/396/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Ivana Bacik",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "535. Deputy Ivana Bacik asked the Minister for Justice, Home Affairs and Migration the number of study visas granted and refused in 2026 to residents of Gaza. [71678/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/535/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Ivana Bacik",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "536. Deputy Ivana Bacik asked the Minister for Justice, Home Affairs and Migration if the source of scholarship funding for a prospective student from Gaza is a factor in assessing his or her visa application; the reason sector figures indicate that 12 of 13 Government of Ireland/Ireland-Palestine Scholarship Programme scholars from Gaza were granted study visas while all 58 applicants holding full institutional or full mixed funding were refused; the criteria applied to the two cohorts; and the way in which a 100% refusal rate for one cohort is consistent with each application being assessed on its individual merits. [71680/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/536/"
+      },
       {
         "date": "2026-10-06",
         "deputy": "Ivana Bacik",
@@ -5307,30 +5331,6 @@
         "heading": "Special Educational Needs",
         "question": "562. Deputy James Geoghegan asked the Minister for Education and Youth whether the correlation between schools with high needs, under measures of disadvantage and measures of special education need have been evaluated; if so, what does it show; and if she will make a statement on the matter. [30101/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/562/"
-      },
-      {
-        "date": "2026-04-23",
-        "deputy": "James Geoghegan",
-        "department": "Further and Higher Education",
-        "heading": "Further and Higher Education",
-        "question": "257. Deputy James Geoghegan asked the Minister for Further and Higher Education, Research, Innovation and Science the timeline for the establishment of the National Skills Observatory committed to in the National Digital and AI Strategy; and if he will make a statement on the matter. [22069/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-23/257/"
-      },
-      {
-        "date": "2026-04-21",
-        "deputy": "Ivana Bacik",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "868. Deputy Ivana Bacik asked the Minister for Health if her attention has been drawn to the impact on certain nurses and pharmacists facing difficulty in continuing their education and workplace attendance due to delays in the renewal of IRP cards (details supplied); and if she will make a statement on the matter. [28477/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-21/868/"
-      },
-      {
-        "date": "2026-04-21",
-        "deputy": "Ivana Bacik",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "511. Deputy Ivana Bacik asked the Minister for Education and Youth if she will report on progress regarding pay and conditions for school secretaries. [28482/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-21/511/"
       }
     ]
   },
@@ -6793,6 +6793,62 @@
     "constituency": "Dublin Mid-West",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Eoin Ó Broin",
+        "department": "Education",
+        "heading": "School Staff",
+        "question": "315. Deputy Eoin Ó Broin asked the Minister for Education and Youth to confirm an appeal regarding teacher allocation has been received from a school (details supplied); if the points outlined in the appeal will be comprehensively considered, taking into account the school's previous enrollment; and the unique experience of the school. [71675/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/315/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Mark Ward",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "552. Deputy Mark Ward asked the Minister for Justice, Home Affairs and Migration for an update on the visas for Gazan students who were due to study in Ireland; and the interventions his Department has taken to help them obtain their visas. [72160/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/552/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Paul Nicholas Gogarty",
+        "department": "Health",
+        "heading": "Health Services Staff",
+        "question": "762. Deputy Paul Nicholas Gogarty asked the Minister for Health the steps being taken to recruit and retain public health nurses to support the school vaccination programme; and whether a workforce assessment has been undertaken to determine the number of additional nurses required to ensure the timely delivery of school-based immunisations nationwide. [71761/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/762/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Paul Nicholas Gogarty",
+        "department": "Health",
+        "heading": "Health Services Staff",
+        "question": "766. Deputy Paul Nicholas Gogarty asked the Minister for Health the number of sanctioned public health nurse posts that are currently vacant, by CHO7 health region; the number of vacancies specifically affecting the delivery of the school immunisation programme; and the measures being taken to address staffing shortages. [71763/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/766/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Paul Nicholas Gogarty",
+        "department": "Health",
+        "heading": "Health Services Staff",
+        "question": "767. Deputy Paul Nicholas Gogarty asked the Minister for Health if she will provide a breakdown, by HSE CHO7 region, of the number of public health nurses assigned to the school vaccination programme; the recommended staffing levels for each region; and the current staffing deficit. [71762/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/767/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Paul Nicholas Gogarty",
+        "department": "Health",
+        "heading": "Vaccination Programme",
+        "question": "763. Deputy Paul Nicholas Gogarty asked the Minister for Health the extent to which shortages of public health nurses have affected the delivery of the school vaccination programme, including the HPV, Tdap, MenACWY and other routine school-based vaccinations, in each of the past three school years; and the number of schools where vaccination clinics were postponed or delayed due to staffing shortages. [71760/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/763/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Shane Moynihan",
+        "department": "Education",
+        "heading": "School Curriculum",
+        "question": "378. Deputy Shane Moynihan asked the Minister for Education and Youth the guidance provided to post-primary schools on the use of class periods for students exempt from Irish; and if consideration is being given to issuing further guidance on their appropriate use. [72217/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/378/"
+      },
+      {
         "date": "2026-10-06",
         "deputy": "Mark Ward",
         "department": "Education",
@@ -7215,62 +7271,6 @@
         "heading": "Schools Building Projects",
         "question": "1273. Deputy Mark Ward asked the Minister for Education and Youth the plans for new schools or school extension within Dublin Mid-West due to the population increases; the funding associated with these; and if she will make a statement on the matter. [57077/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1273/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Shane Moynihan",
-        "department": "Further and Higher Education",
-        "heading": "Education Costs",
-        "question": "4180. Deputy Shane Moynihan asked the Minister for Further and Higher Education, Research, Innovation and Science the financial supports available for graduates undertaking Professional Master of Education (PME) programmes in teacher shortage subjects, particularly Irish; and if he will make a statement on the matter. [55412/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4180/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Shane Moynihan",
-        "department": "Education",
-        "heading": "Teacher Training",
-        "question": "1105. Deputy Shane Moynihan asked the Minister for Education and Youth the financial supports available for graduates undertaking private professional master of education programmes in teacher shortage subjects, particularly Irish; and if she will make a statement on the matter. [59016/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1105/"
-      },
-      {
-        "date": "2026-07-16",
-        "deputy": "Eoin Ó Broin",
-        "department": "Education",
-        "heading": "School Funding",
-        "question": "51. Deputy Eoin Ó Broin asked the Minister for Education and Youth to provide an update on the funding for the new build and refurbishment of a school (details supplied). [50295/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/51/"
-      },
-      {
-        "date": "2026-07-16",
-        "deputy": "Eoin Ó Broin",
-        "department": "Education",
-        "heading": "School Management",
-        "question": "105. Deputy Eoin Ó Broin asked the Minister for Education and Youth to reverse the decision to remove a teaching position from a school (details supplied), given this decision will have a detrimental impact both for the students and the future development of the school. [50294/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/105/"
-      },
-      {
-        "date": "2026-07-16",
-        "deputy": "Shane Moynihan",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "12. Deputy Shane Moynihan asked the Minister for Education and Youth for an update on existing school building projects in Dublin Mid-West which are not yet approved; the current stage of each; and if she will make a statement on the matter. [54070/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/12/"
-      },
-      {
-        "date": "2026-07-16",
-        "deputy": "Shane Moynihan",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "87. Deputy Shane Moynihan asked the Minister for Education and Youth for a progress report on school building projects approved in Dublin mid-west; and if she will make a statement on the matter. [54069/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/87/"
-      },
-      {
-        "date": "2026-07-15",
-        "deputy": "Mark Ward",
-        "department": "Taoiseach",
-        "heading": "Cabinet Committees",
-        "question": "58. Deputy Mark Ward asked the Taoiseach when the Cabinet committee on Children and Education will next meet. [49326/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-15/58/"
       }
     ]
   },
@@ -7764,11 +7764,59 @@
     "questions": [
       {
         "date": "2026-10-13",
+        "deputy": "Maeve O'Connell",
+        "department": "Further and Higher Education",
+        "heading": "Third Level Admissions",
+        "question": "896. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science the projected increase of student enrolments over the next five years; and the anticipated additional funding that will be required to meet this demand. [71735/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/896/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Shay Brennan",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "664. Deputy Shay Brennan asked the Minister for Children, Disability and Equality the number of childcare facilitators who are not in core funding by constituency/local authority. [72268/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/664/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Shay Brennan",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "665. Deputy Shay Brennan asked the Minister for Children, Disability and Equality the number of childcare facilitators who are in core funding by constituency/local authority. [72267/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/665/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Sinéad Gibney",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "638. Deputy Sinéad Gibney asked the Minister for Children, Disability and Equality the timeline for the publication of the national childcare scheme review; the reason the publication of the review has been delayed from the original scheduled time of Q3 2026; and if she will make a statement on the matter. [71805/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/638/"
+      },
+      {
+        "date": "2026-10-13",
         "deputy": "Sinéad Gibney",
         "department": "Education",
         "heading": "EU Presidency",
         "question": "280. Deputy Sinéad Gibney asked the Minister for Education and Youth to provide a schedule of EU Presidency events being hosted by her Department broken down by name of the event, location, date, State agencies or other departments involved in the organising of the event; and cost or budgeted cost of same (including costs borne by state agencies under its aegis), in tabular form. [71401/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/280/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Sinéad Gibney",
+        "department": "Further and Higher Education",
+        "heading": "EU Presidency",
+        "question": "890. Deputy Sinéad Gibney asked the Minister for Further and Higher Education, Research, Innovation and Science to provide a schedule of EU Presidency events being hosted by his Department broken down by name of the event, location, date, State agencies or other departments involved in the organising of the event; and cost or budgeted cost of same (including costs borne by state agencies under its aegis), in tabular form. [71405/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/890/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Sinéad Gibney",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "324. Deputy Sinéad Gibney asked the Minister for Education and Youth the number of post-primary schools in the Dublin Rathdown constituency that offer autism classes, broken down by whether they are single sex or co-ed schools, fee-paying or public, in tabular form; her Department’s plans to oblige schools without autism classes to provide them; and if she will make a statement on the matter. [71806/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/324/"
       },
       {
         "date": "2026-10-01",
@@ -8193,60 +8241,28 @@
         "heading": "Third Level Staff",
         "question": "2630. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science the number of academic and teaching staff which currently work in the TU sector; and the number of academic and teaching staff which currently work in traditional universities. [2506/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-01-13/2630/"
-      },
-      {
-        "date": "2026-01-13",
-        "deputy": "Maeve O'Connell",
-        "department": "Further and Higher Education",
-        "heading": "Third Level Staff",
-        "question": "2631. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science if his Department is considering amending the teaching requirements for academic staff in Technological Universities in order to bring them in line with their counterparts in traditional universities. [2507/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-13/2631/"
-      },
-      {
-        "date": "2025-12-17",
-        "deputy": "Sinéad Gibney",
-        "department": "Education",
-        "heading": "Education Schemes",
-        "question": "251. Deputy Sinéad Gibney asked the Minister for Education and Youth the measures her Department is taking to address the shortage of autism class places at national school level in the Dublin Rathdown constituency and nationally in advance of the academic year 2026-27; and if she will make a statement on the matter. [73197/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-17/251/"
-      },
-      {
-        "date": "2025-12-11",
-        "deputy": "Maeve O'Connell",
-        "department": "Education",
-        "heading": "School Admissions",
-        "question": "393. Deputy Maeve O'Connell asked the Minister for Education and Youth to provide an update on the work of her Department to ensure the provision of adequate school places for the Kilternan school planning area. [70631/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-11/393/"
-      },
-      {
-        "date": "2025-12-11",
-        "deputy": "Maeve O'Connell",
-        "department": "Education",
-        "heading": "School Facilities",
-        "question": "392. Deputy Maeve O'Connell asked the Minister for Education and Youth to provide an update on a new school building project (details supplied). [70632/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-11/392/"
-      },
-      {
-        "date": "2025-12-09",
-        "deputy": "Shay Brennan",
-        "department": "Health",
-        "heading": "Health Strategies",
-        "question": "890. Deputy Shay Brennan asked the Minister for Health if she will report on the availability of training teachers/coaches to administer lifesaving EPI pens in schools, sports clubs and childcare facilities. [69206/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-09/890/"
-      },
-      {
-        "date": "2025-12-04",
-        "deputy": "Sinéad Gibney",
-        "department": "Education",
-        "heading": "School Admissions",
-        "question": "277. Deputy Sinéad Gibney asked the Minister for Education and Youth the steps her Department is taking to ensure there is adequate school provision in Dublin Rathdown, particularly in areas where the population has grown significantly in recent years, and local school places have not kept pace with population growth; and if she will make a statement on the matter. [68637/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-04/277/"
       }
     ]
   },
   {
     "constituency": "Dublin South-Central",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Jen Cummins",
+        "department": "Education",
+        "heading": "Educational Disadvantage",
+        "question": "385. Deputy Jen Cummins asked the Minister for Education and Youth if her Department will consult young carers on their views on early recognition; and the way in which the framework will assess whether schools are recognising them before attendance or attainment has already suffered. [72220/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/385/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Jen Cummins",
+        "department": "Education",
+        "heading": "Educational Disadvantage",
+        "question": "386. Deputy Jen Cummins asked the Minister for Education and Youth the evidence her Department has that young carers experiences have informed DEIS school improvement planning (details supplied). [72219/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/386/"
+      },
       {
         "date": "2026-10-08",
         "deputy": "Jen Cummins",
@@ -8710,28 +8726,44 @@
         "heading": "Special Educational Needs",
         "question": "326. Deputy Jen Cummins asked the Minister for Education and Youth the reason managers of the summer programme are prevented by the ESINET system being paid as manager until the entire programme concludes at the end of August. [54516/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/326/"
-      },
-      {
-        "date": "2026-07-15",
-        "deputy": "Jen Cummins",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "199. Deputy Jen Cummins asked the Minister for Education and Youth her plans to address the ongoing concerns of SNAs after the SNA Workforce Development Plan, which was rejected by members of a union (details supplied). [53861/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-15/199/"
-      },
-      {
-        "date": "2026-07-14",
-        "deputy": "Jen Cummins",
-        "department": "Education",
-        "heading": "Pupil-Teacher Ratio",
-        "question": "302. Deputy Jen Cummins asked the Minister for Education and Youth the reason for the decision to remove the preferential teacher-to-pupil ratio for Gaelscoileanna. [53018/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-14/302/"
       }
     ]
   },
   {
     "constituency": "Dublin South-West",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "John Lahart",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "637. Deputy John Lahart asked the Minister for Children, Disability and Equality the timeframe that a facility (details supplied) will be ready to take children for preschool care, being rolled out as part of the early learning and childcare capital projects. [71784/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/637/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Lahart",
+        "department": "Education",
+        "heading": "National Educational Psychological Service",
+        "question": "388. Deputy John Lahart asked the Minister for Education and Youth if she will examine the circumstances whereby a school (details supplied) has been informed that it will not be assigned a dedicated NEPS psychologist for the 2026-2027 school year, particularly given that this will be the third year since 2023 in which the school has been without a dedicated NEPS psychologist; and the alternative supports that will be made available to the school. [72240/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/388/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Lahart",
+        "department": "Education",
+        "heading": "National Educational Psychological Service",
+        "question": "389. Deputy John Lahart asked the Minister for Education and Youth the measures in place to ensure continuity of NEPS psychological support where a school cannot be assigned a dedicated psychologist for an academic year; and the way in which pupils requiring psychological assessment or intervention in those schools can access NEPS services. [72237/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/389/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Lahart",
+        "department": "Education",
+        "heading": "National Educational Psychological Service",
+        "question": "390. Deputy John Lahart asked the Minister for Education and Youth the number of schools nationally and in Dublin, that have not been assigned a dedicated NEPS psychologist for the 2026/2027 school year due to staffing or capacity constraints; and the steps being taken to address current staffing pressures within NEPS. [72236/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/390/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "Paul Murphy",
@@ -9179,38 +9211,6 @@
         "heading": "Childcare Services",
         "question": "1620. Deputy Ciarán Ahern asked the Minister for Children, Disability and Equality her plans to review the early withdrawal provisions of the national childcare subsidy scheme with the objective of eliminating the subsidy penalty imposed on families who withdraw their children early; if her Department will conduct a consultation with childcare providers to understand the actual fee structures and charging practices used in the Irish childcare market, and realign the subsidy system accordingly; to consider alternative approaches that account for the fixed-fee, full-time charging model that dominates Irish childcare; and if she will make a statement on the matter. [42857/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1620/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Ciarán Ahern",
-        "department": "Further and Higher Education",
-        "heading": "Departmental Data",
-        "question": "2495. Deputy Ciarán Ahern asked the Minister for Further and Higher Education, Research, Innovation and Science if he expects the tuition support scheme for graduate entry medicine committed to in the Programme for Government will be established by the 2027/2028 academic year; whether supports will be backdated so that students who have already began their course are not disadvantaged; and if he will make a statement on the matter. [42943/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/2495/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Ciarán Ahern",
-        "department": "Health",
-        "heading": "Medical Aids and Appliances",
-        "question": "2386. Deputy Ciarán Ahern asked the Minister for Health if national guidance exists for schools, sports clubs, youth organisations and other voluntary bodies on the administration by staff or volunteers of prescribed medicines and emergency adrenaline auto-injectors; if she will consider developing a standard national framework to support staff and volunteers in responding to medical emergencies including when off-site, on trips and so on; if training and indemnity protections will be provided to staff and volunteers; and if she will make a statement on the matter. [43871/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/2386/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "John Lahart",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "1653. Deputy John Lahart asked the Minister for Children, Disability and Equality the further steps being considered to support families with the cost of childcare and to improve availability of places; if she will outline any planned measures in this area; and if she will make a statement on the matter. [43300/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1653/"
-      },
-      {
-        "date": "2026-05-27",
-        "deputy": "Seán Crowe",
-        "department": "Transport",
-        "heading": "Driver Licences",
-        "question": "50. Deputy Seán Crowe asked the Minister for Transport the length of time it takes for a foreign driving licence to be exchanged from a recognised state; his views on whether a waiting time of one to three months places a serious obstacle to accessing education, employment and childcare for those entering or returning to the country from abroad; the measures that will be put in place to reduce this waiting period; and if he will make a statement on the matter. [40785/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-27/50/"
       }
     ]
   },
@@ -9703,6 +9703,70 @@
     "constituency": "Dún Laoghaire",
     "questions": [
       {
+        "date": "2026-10-15",
+        "deputy": "Richard Boyd Barrett",
+        "department": "Health",
+        "heading": "National Educational Psychological Service",
+        "question": "166. Deputy Richard Boyd Barrett asked the Minister for Health her plans to ensure timely access to therapists for children with disabilities and mental health difficulties; if she plans to work with her counterpart at the Department of Education and Youth regarding NEPS vacancies; and if NEPS vacancies are accounted for in the allocation of therapists to HSE-funded services in a given catchment. [73017/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/166/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "617. Deputy Barry Ward asked the Minister for Children, Disability and Equality the actions she is taking to engage with a childcare centre (details supplied) in relation to their withdrawal from the core funding model; and the actions she will take to support parents with the knock-on price increase. [71459/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/617/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "651. Deputy Barry Ward asked the Minister for Children, Disability and Equality the position regarding families with children in childcare centres that are not part of the core funding scheme; if they will benefit from the €550 cap per month as announced in Budget 2027. [72164/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/651/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Children",
+        "heading": "Departmental Schemes",
+        "question": "675. Deputy Barry Ward asked the Minister for Children, Disability and Equality the position regarding the €550 cap on childcare fees as announced in Budget 2027; and if it will apply to all childcare bands, including Band F. [72468/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/675/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "306. Deputy Barry Ward asked the Minister for Education and Youth the position regarding the review of the formal recognition of QQI level 6 qualification for special needs assistants relative to their pay scale and conditions. [71611/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/306/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "317. Deputy Barry Ward asked the Minister for Education and Youth the actions she is taking to increase access to specialist reading classes within children's local communities. [71759/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/317/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "318. Deputy Barry Ward asked the Minister for Education and Youth the actions she is taking to improve the systems in place to ensure that children with dyslexia and other reading challenges are identified at as early an age as possible. [71758/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/318/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "319. Deputy Barry Ward asked the Minister for Education and Youth the mechanisms in place to ensure that children with dyslexia and other reading challenges are identified at as early an age as possible. [71756/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/319/"
+      },
+      {
         "date": "2026-10-13",
         "deputy": "Barry Ward",
         "department": "Education",
@@ -9720,11 +9784,27 @@
       },
       {
         "date": "2026-10-13",
+        "deputy": "Barry Ward",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "518. Deputy Barry Ward asked the Minister for Justice, Home Affairs and Migration the position regarding the review ongoing within his Department in relation to the refusal of visas to Palestinian students, particularly those who had been offered scholarships in Ireland and were due to start their studies in September 2026. [71510/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/518/"
+      },
+      {
+        "date": "2026-10-13",
         "deputy": "Richard Boyd Barrett",
         "department": "Education",
         "heading": "School Curriculum",
         "question": "350. Deputy Richard Boyd Barrett asked the Minister for Education and Youth when the data collected through the 2025-26 primary annual census on the estimated number of pupils withdrawn from religious instruction in each school will be published; whether this data will be broken down by school patronage type and county; and the actions her Department intends to take on foot of these findings, including the development of national guidance for schools on provision for these pupils. [72069/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/350/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Richard Boyd Barrett",
+        "department": "Education",
+        "heading": "School Curriculum",
+        "question": "362. Deputy Richard Boyd Barrett asked the Minister for Education and Youth whether her Department has issued, or plans to issue, guidance to primary schools on the educational provision and supervision of pupils withdrawn from religious instruction, including during sacramental preparation and school-time religious ceremonies; and if she will make a statement on the matter. [72070/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/362/"
       },
       {
         "date": "2026-10-13",
@@ -10101,92 +10181,36 @@
         "heading": "School Management",
         "question": "246. Deputy Barry Ward asked the Minister for Education and Youth if her attention has been drawn to the concerns of management in a school (details supplied) in relation to the failure of her Department to maintain support levels and resourcing to match their significant growth in student numbers. [66359/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/246/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Management",
-        "question": "247. Deputy Barry Ward asked the Minister for Education and Youth the position regarding the mechanisms in place to support schools that are experiencing rapid growth due to significant population increases in their locality; and the way they can be supported to manage this growth in terms of resources. [66358/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/247/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "249. Deputy Barry Ward asked the Minister for Education and Youth if the basis for the requirement for secondary school teachers to complete Croke Park hours has been negotiated with the relevant teacher unions; and if she will make a statement on the matter. [66383/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/249/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "250. Deputy Barry Ward asked the Minister for Education and Youth if the basis for the requirement for secondary school teachers to complete Croke Park hours can be outlined; and if she will make a statement on the matter. [66381/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/250/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "252. Deputy Barry Ward asked the Minister for Education and Youth if the requirement for secondary school teachers to complete Croke Park hours is under review; and if she will make a statement on the matter. [66379/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/252/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "253. Deputy Barry Ward asked the Minister for Education and Youth the position regarding the requirement for secondary school teachers to complete Croke Park hours; if this is set out as a requirement in their contracts; and if she will make a statement on the matter. [66378/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/253/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "254. Deputy Barry Ward asked the Minister for Education and Youth if the basis for the requirement for primary school teachers to complete Croke Park hours has been negotiated with the relevant teacher unions; and if she will make a statement on the matter. [66377/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/254/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "255. Deputy Barry Ward asked the Minister for Education and Youth if the basis for the requirement for primary school teachers to complete Croke Park hours can be outlined; and if she will make a statement on the matter. [66376/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/255/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "256. Deputy Barry Ward asked the Minister for Education and Youth if the requirement for primary school teachers to complete Croke Park hours is under review; and if she will make a statement on the matter. [66375/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/256/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "257. Deputy Barry Ward asked the Minister for Education and Youth the position regarding the requirement for primary school teachers to complete Croke Park hours; if this is set out as a requirement in their contracts; and if she will make a statement on the matter. [66373/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/257/"
-      },
-      {
-        "date": "2026-09-22",
-        "deputy": "Barry Ward",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "243. Deputy Barry Ward asked the Minister for Education and Youth the position regarding a timeline for the development of a new secondary school in Cherrywood, County Dublin; and if she is concerned that the significant growth in population in this area is not being match with school places. [66363/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-22/243/"
       }
     ]
   },
   {
     "constituency": "Galway East",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Albert Dolan",
+        "department": "Further and Higher Education",
+        "heading": "Apprenticeship Programmes",
+        "question": "903. Deputy Albert Dolan asked the Minister for Further and Higher Education, Research, Innovation and Science if annual targets have been established for each county or region for 2026 to 2030 regarding the Government target of 12,500 apprenticeship registrations annually by 2030, in tabular form; and, if not, the way in which the geographic distribution of the additional apprenticeship places required to meet the national target is being planned. [72355/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/903/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Louis O'Hara",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "364. Deputy Louis O'Hara asked the Minister for Education and Youth whether the current pupil-teacher ratio includes special education teachers; if so, the rationale for their inclusion as special education teachers do not generally teach children within a whole classroom setting. [72081/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/364/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Louis O'Hara",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "365. Deputy Louis O'Hara asked the Minister for Education and Youth whether her Department has plans to establish standalone special educational needs co-ordinator positions within the education system. [72082/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/365/"
+      },
       {
         "date": "2026-10-08",
         "deputy": "Louis O'Hara",
@@ -10642,36 +10666,20 @@
         "heading": "Education and Training Provision",
         "question": "4224. Deputy Peter Roche asked the Minister for Further and Higher Education, Research, Innovation and Science the measures being taken by his Department to expand apprenticeship, further education and training opportunities for young people in County Galway; the additional programmes or course places planned for the county; and if he will make a statement on the matter. [58975/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4224/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Peter Roche",
-        "department": "Education",
-        "heading": "Education Schemes",
-        "question": "1442. Deputy Peter Roche asked the Minister for Education and Youth the number of children who have been approved for the home tuition grant scheme due to the unavailability of an appropriate school place in each of the past five years; whether the Government accepts that home tuition is intended as a temporary measure rather than a substitute for a school placement; and the actions being taken to reduce reliance on this scheme; and if she will make a statement on the matter. [59077/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1442/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Peter Roche",
-        "department": "Further and Higher Education",
-        "heading": "Grant Payments",
-        "question": "4225. Deputy Peter Roche asked the Minister for Further and Higher Education, Research, Innovation and Science if he will review the criteria used to assess grant eligibility for mature students who reside with their parents but receive no financial support from them; whether consideration is being given to excluding parental income from the means test in such circumstances; and if he will make a statement on the matter. [58976/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4225/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Peter Roche",
-        "department": "Further and Higher Education",
-        "heading": "Grant Payments",
-        "question": "4226. Deputy Peter Roche asked the Minister for Further and Higher Education, Research, Innovation and Science if he will review the criteria used to assess grant eligibility for mature students who reside with their parents, who are in receipt of the State pension; whether consideration is being given to excluding parental income from the means test in such circumstances; and if he will make a statement on the matter. [58977/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/4226/"
       }
     ]
   },
   {
     "constituency": "Galway West",
     "questions": [
+      {
+        "date": "2026-10-15",
+        "deputy": "John Connolly",
+        "department": "Health",
+        "heading": "Budget 2027",
+        "question": "209. Deputy John Connolly asked the Minister for Health the way in which Budget 2027 will provide additional capacity and services in University Hospital Galway. [72368/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/209/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Seán Kyne",
@@ -10711,6 +10719,62 @@
         "heading": "School Transport",
         "question": "352. Deputy John Connolly asked the Minister for Education and Youth the number of post-primary students nationally who were refused school transport in each of the past three school years due to the fact that they were not attending their nearest eligible school; the number of such students in County Galway; and whether this issue is being considered as part of the School Transport 2030 reform programme. [72114/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/352/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "370. Deputy John Connolly asked the Minister for Education and Youth the objective criteria used to select each area included in the School Transport 2030 pilot schemes in the 2024-2025 and 2025-2026 school years; the weighting applied to each criterion; and if she will make a statement on the matter. [72085/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/370/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "371. Deputy John Connolly asked the Minister for Education and Youth the process by which areas were identified for inclusion in the School Transport 2030 pilot schemes in the 2024-2025 and 2025-2026 school years; who proposed or nominated each area selected; whether schools, parents, local authorities or public representatives were consulted; and if she will make a statement on the matter. [72087/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/371/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "373. Deputy John Connolly asked the Minister for Education and Youth whether additional areas will be selected for inclusion in the School Transport 2030 pilot schemes for the 2026-2027 school year; the process that will be used to identify and select such areas; and whether an application or nomination process will be available. [72097/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/373/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "374. Deputy John Connolly asked the Minister for Education and Youth whether consideration will be given to including the Clarinbridge–Athenry school transport corridor in future School Transport 2030 pilot schemes, having regard to the number of pupils who are ineligible for transport under the nearest-school rule despite attending post-primary schools in Athenry. [72104/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/374/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "375. Deputy John Connolly asked the Minister for Education and Youth whether the evaluations of the School Transport 2030 pilot schemes operated during the 2024-2025 school year have been completed; if so, when they were completed; and whether the evaluation reports, supporting data and findings will be published. [72091/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/375/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Further and Higher Education",
+        "heading": "Technological Universities",
+        "question": "905. Deputy John Connolly asked the Minister for Further and Higher Education, Research, Innovation and Science for an update on the provision of a borrowing framework for the technological universities. [72275/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/905/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "John Connolly",
+        "department": "Education",
+        "heading": "Trade Unions",
+        "question": "305. Deputy John Connolly asked the Minister for Education and Youth to provide an update on the engagement between her Department and trade unions representing school secretaries and caretakers. [71615/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/305/"
       },
       {
         "date": "2026-10-07",
@@ -11087,70 +11151,6 @@
         "heading": "State Pensions",
         "question": "293. Deputy Seán Kyne asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation to outline the rules regarding the single pension scheme; the reason researchers in technological universities are prevented from accessing the scheme; whether their equivalents in universities can access the scheme; and if he will make a statement on the matter. [51819/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/293/"
-      },
-      {
-        "date": "2026-07-02",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "319. Deputy John Connolly asked the Minister for Education and Youth if the Stage 2B report for the development of a new school (details supplied) has been submitted by Patron Body to her Department’s Buildings Section; if her Department has commenced the review of the report; when the review might be complete; and if she will make a statement on the matter. [50595/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-02/319/"
-      },
-      {
-        "date": "2026-07-02",
-        "deputy": "John Connolly",
-        "department": "Further and Higher Education",
-        "heading": "Third Level Education",
-        "question": "560. Deputy John Connolly asked the Minister for Further and Higher Education, Research, Innovation and Science for an update on the development of the new college (details supplied); and if he will make a statement on the matter. [50596/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-02/560/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Schools Administration",
-        "question": "387. Deputy John Connolly asked the Minister for Education and Youth if she will publish the collective national results of the surveys undertaken specifically by the parents of pre-school age children who participated in the national primary-school survey on the issues of co-education/single gender preference, language of instruction preference and patronage/ethos preference; and if she will make a statement on the matter. [47789/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/387/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "314. Deputy John Connolly asked the Minister for Education and Youth when the Stage 1 stakeholders meeting will be scheduled with the representatives of the board of management of a school (details supplied); and if she will make a statement on the matter. [47052/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/314/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "315. Deputy John Connolly asked the Minister for Education and Youth for an update on the progression of emergency works at a school (details supplied); and if she will make a statement on the matter. [47053/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/315/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "316. Deputy John Connolly asked the Minister for Education and Youth for an update on any planned enhancement and/or development works at a school (details supplied); and if she will make a statement on the matter. [47054/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/316/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "317. Deputy John Connolly asked the Minister for Education and Youth if all of the schools that have been allocated additional teaching resources for September 2026 will open as planned (details supplied); if any of the schools have indicated constraining circumstances that limit or prevent the opening of the new class; and if she will make a statement on the matter. [47056/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/317/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "318. Deputy John Connolly asked the Minister for Education and Youth if the NCSE will provide the number of pupils across the country that applied for a place in one of the existing classes that provide for pupils with specific learning difficulty/ dyslexia; the number who could be provided with a space; and if she will make a statement on the matter. [47057/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/318/"
       }
     ]
   },
@@ -11159,11 +11159,51 @@
     "questions": [
       {
         "date": "2026-10-13",
+        "deputy": "Michael Cahill",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "312. Deputy Michael Cahill asked the Minister for Education and Youth if she is aware that families attending a school (details supplied) are currently privately funding school transport at significant cost due to the absence of a Bus Éireann school transport service; if her Department has assessed the transport needs of pupils attending the school; whether consideration will be given to establishing a dedicated school transport route or extending an existing route to serve the school; and if she will make a statement on the matter. [71711/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/312/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Michael Cahill",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "528. Deputy Michael Cahill asked the Minister for Justice, Home Affairs and Migration the number of Palestinian students who secured places at Irish higher education institutions who were granted and refused study visas in 2026; if his Department has engaged with the institutions concerned regarding these refusals; and if he will make a statement on the matter. [71623/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/528/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Michael Cahill",
+        "department": "Justice",
+        "heading": "Student Visas",
+        "question": "539. Deputy Michael Cahill asked the Minister for Justice, Home Affairs and Migration if discussions between his Department and the relevant universities include measures to expedite visa appeals for affected scholarship students from Gaza (details supplied) seeking to commence their studies during the current academic year; the number of such visa appeals currently pending; the average and anticipated timeframe for decisions on those appeals; and if he will make a statement on the matter. [71940/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/539/"
+      },
+      {
+        "date": "2026-10-13",
         "deputy": "Michael Healy-Rae",
         "department": "Transport",
         "heading": "Bus Services",
         "question": "88. Deputy Michael Healy-Rae asked the Minister for Transport if the local link service travelling from Ardgroom in County Cork will travel earlier to make connecting services in Kenmare and Killarney in order to allow persons to arrive in Cork earlier to start work, attend college and so on. [71620/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/88/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Michael Healy-Rae",
+        "department": "Transport",
+        "heading": "Departmental Schemes",
+        "question": "154. Deputy Michael Healy-Rae asked the Minister for Transport when further funding will be provided for round five of the safe routes to school programme. [72438/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/154/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Michael Healy-Rae",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "392. Deputy Michael Healy-Rae asked the Minister for Education and Youth her views on a school bus route (details supplied). [72251/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/392/"
       },
       {
         "date": "2026-10-08",
@@ -11596,46 +11636,6 @@
         "heading": "School Staff",
         "question": "1486. Deputy Michael Cahill asked the Minister for Education and Youth to address concerns raised in correspondence (details supplied) and allow for substitute teaching work in this case; and if she will make a statement on the matter. [63394/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1486/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Michael Cahill",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "1131. Deputy Michael Cahill asked the Minister for Education and Youth if she will review a school transport case of a child (details supplied) where Bus Éireann has advised that no suitable transport service is available and the family has instead been offered a special transport grant; if alternative transport arrangements can be provided, as the child's mother is unable to transport the child to and from school on a daily basis; and if she will make a statement on the matter [60578/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1131/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Michael Cahill",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "1406. Deputy Michael Cahill asked the Minister for Education and Youth to urgently allow for the allocated school transport to remain in place for a person (details supplied); and if she will make a statement on the matter. [62927/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1406/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Michael Cahill",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "1426. Deputy Michael Cahill asked the Minister for Education and Youth if she will ensure that school transport is provided for a non-verbal autistic child (details supplied) who has secured a place in a newly established ASD class in Cahersiveen; and if she will make a statement on the matter. [63026/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1426/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Michael Cahill",
-        "department": "Social",
-        "heading": "Social Welfare Eligibility",
-        "question": "2022. Deputy Michael Cahill asked the Minister for Social Protection if he will exclude all foster carers from the means test for back-to-school allowance (details supplied); and will the Minister make a statement on the matter. [60099/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2022/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Michael Cahill",
-        "department": "Education",
-        "heading": "Teaching Council of Ireland",
-        "question": "1257. Deputy Michael Cahill asked the Minister for Education and Youth to request the Teaching Council to re-examine an outstanding case (details supplied); if she will request the Teaching Council to engage directly with this teacher and work with them to resolve the issue; and if she will make a statement on the matter. [61023/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1257/"
       }
     ]
   },
@@ -11649,6 +11649,14 @@
         "heading": "Dental Services",
         "question": "96. Deputy Joe Neville asked the Minister for Health if she is aware of the major backlog in the school dental screening service in Kildare; and if her Department will consider screening children earlier to ensure children are screened before leaving primary school. [72906/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/96/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Joe Neville",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "652. Deputy Joe Neville asked the Minister for Children, Disability and Equality to provide a list of all crèches in receipt of core funding in County Kildare. [72059/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/652/"
       },
       {
         "date": "2026-10-06",
@@ -12113,20 +12121,20 @@
         "heading": "School Accommodation",
         "question": "109. Deputy Réada Cronin asked the Minister for Education and Youth her plans to expand secondary school capacity in north Kildare, considering that schools are currently operating considerable waiting lists; and if she will make a statement on the matter. [46370/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-17/109/"
-      },
-      {
-        "date": "2026-06-16",
-        "deputy": "Aidan Farrelly",
-        "department": "Further and Higher Education",
-        "heading": "Further and Higher Education",
-        "question": "1037. Deputy Aidan Farrelly asked the Minister for Further and Higher Education, Research, Innovation and Science the extent of further and higher education and research links between Ireland and Singapore; and the way in which those links will be further enhanced. [45233/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-16/1037/"
       }
     ]
   },
   {
     "constituency": "Kildare South",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Seán Ó Fearghaíl",
+        "department": "Children",
+        "heading": "Departmental Correspondence",
+        "question": "620. Deputy Seán Ó Fearghaíl asked the Minister for Children, Disability and Equality if she will address the concerns raised in correspondence (details supplied) regarding the rising cost of childcare. [71588/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/620/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "Seán Ó Fearghaíl",
@@ -12162,10 +12170,26 @@
       {
         "date": "2026-10-13",
         "deputy": "Seán Ó Fearghaíl",
+        "department": "Further and Higher Education",
+        "heading": "Third Level Education",
+        "question": "891. Deputy Seán Ó Fearghaíl asked the Minister for Further and Higher Education, Research, Innovation and Science if he will address the concerns raised in correspondence (details supplied) regarding a university student who has been refused progression to fourth year. [71587/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/891/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Seán Ó Fearghaíl",
         "department": "Education",
         "heading": "Trade Unions",
         "question": "301. Deputy Seán Ó Fearghaíl asked the Minister for Education and Youth the engagement that has taken place between her Department and the education unions regarding the current industrial dispute; the measures being taken to minimise disruption to pupils and families arising from industrial action, and the contingency arrangements being considered in the event of further escalation of the dispute. [71585/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/301/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Shónagh Ní Raghallaigh",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "393. D'fhiafraigh Deputy Shónagh Ní Raghallaigh den Aire Oideachais agus Óige the CPD resources available to teachers seeking to upskill to support dyslexic students. [72474/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/393/"
       },
       {
         "date": "2026-10-08",
@@ -12582,36 +12606,28 @@
         "heading": "School Transport",
         "question": "1512. Deputy Mark Wall asked the Minister for Education and Youth if she will provide a school place bus for a child (details supplied) in County Kildare. [63582/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1512/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Seán Ó Fearghaíl",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "1449. Deputy Seán Ó Fearghaíl asked the Minister for Education and Youth if she will address the concerns raised in correspondence (details supplied) regarding the continued lack of clarity on substitute teaching arrangements for teachers on career break and job-sharing arrangements for the 2026/2027 school year; the current status of her Department's review of these arrangements; when a decision will be communicated to schools and teachers; and if she will make a statement on the matter. [63150/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1449/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Seán Ó Fearghaíl",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "1288. Deputy Seán Ó Fearghaíl asked the Minister for Education and Youth if she will address the concerns raised in correspondence (details supplied) regarding the operation of the school transport scheme (details supplied); the measures being considered to address the issues raised, particularly in relation to concessionary tickets, parental choice of school, school ethos, and access to education in rural areas; and if she will make a statement on the matter. [62349/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1288/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Seán Ó Fearghaíl",
-        "department": "Further and Higher Education",
-        "heading": "Third Level Fees",
-        "question": "4093. Deputy Seán Ó Fearghaíl asked the Minister for Further and Higher Education, Research, Innovation and Science the estimated full-year cost if the student contribution charge for free eligible students was reduced from €2,500 to €2,200; and if he will make a statement on the matter. [63402/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/4093/"
       }
     ]
   },
   {
     "constituency": "Laois",
     "questions": [
+      {
+        "date": "2026-10-15",
+        "deputy": "Sean Fleming",
+        "department": "Health",
+        "heading": "Health Services Waiting Lists",
+        "question": "130. Deputy Sean Fleming asked the Minister for Health her plans to reduce waiting lists in the school dental programme and to improve access to more complex dental treatment. [72334/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/130/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Sean Fleming",
+        "department": "Education",
+        "heading": "School Funding",
+        "question": "322. Deputy Sean Fleming asked the Minister for Education and Youth if there are funding schemes, grants or other avenues of support available for a school (details supplied) in County Laois. [71739/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/322/"
+      },
       {
         "date": "2026-09-30",
         "deputy": "William Aird",
@@ -13075,28 +13091,44 @@
         "heading": "Flexible Work Practices",
         "question": "1015. Deputy William Aird asked the Minister for Children, Disability and Equality if her Department has examined the role of remote working in supporting parents with childcare responsibilities; whether this will inform future childcare policy or workforce participation strategies; and if she will make a statement on the matter. [12040/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-17/1015/"
-      },
-      {
-        "date": "2026-02-12",
-        "deputy": "Brian Stanley",
-        "department": "Education",
-        "heading": "School Facilities",
-        "question": "199. Deputy Brian Stanley asked the Minister for Education and Youth if her Department will approve the funding to carry out the alterations required to facilitate disability and wheelchair access in a school (details supplied); and if she will make a statement on the matter. [10772/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-12/199/"
-      },
-      {
-        "date": "2026-02-12",
-        "deputy": "Brian Stanley",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "143. Deputy Brian Stanley asked the Minister for Education and Youth if she will ensure that sufficient funding is approved to re-start and complete the construction of a school (details supplied); and if she will make a statement on the matter. [10771/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-12/143/"
       }
     ]
   },
   {
     "constituency": "Limerick City",
     "questions": [
+      {
+        "date": "2026-10-15",
+        "deputy": "Maurice Quinlivan",
+        "department": "Health",
+        "heading": "Departmental Projects",
+        "question": "127. Deputy Maurice Quinlivan asked the Minister for Health if she will report on the independent evaluation report by the University of Limerick on the Community Access Support Team (CAST) pilot project in Limerick. [72884/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/127/"
+      },
+      {
+        "date": "2026-10-15",
+        "deputy": "Maurice Quinlivan",
+        "department": "Health",
+        "heading": "Hospital Overcrowding",
+        "question": "202. Deputy Maurice Quinlivan asked the Minister for Health if she will report on the ongoing trolley crisis at University Hospital Limerick. [72883/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/202/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Conor Sheehan",
+        "department": "Further and Higher Education",
+        "heading": "Departmental Expenditure",
+        "question": "901. Deputy Conor Sheehan asked the Minister for Further and Higher Education, Research, Innovation and Science the amount spent on improving facilities and capacity within further education campuses in Limerick in 2024, 2025 and to date in 2026, in tabular form. [72129/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/901/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Willie O'Dea",
+        "department": "Education",
+        "heading": "Education Standards",
+        "question": "372. Deputy Willie O'Dea asked the Minister for Education and Youth if she is aware that graduates (details supplied) have been informed that their qualification is not recognised by an organisation; and her proposals to assist these graduates. [71999/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/372/"
+      },
       {
         "date": "2026-10-08",
         "deputy": "Conor Sheehan",
@@ -13544,44 +13576,20 @@
         "heading": "Hospital Services",
         "question": "2620. Deputy Conor Sheehan asked the Minister for Health further to Parliamentary Question No. 559 of 11 December 2025, if there has been any progress in sourcing a dedicated space for rheumatology patients at Cork University Hospital; and if she will make a statement on the matter. [23598/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/2620/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Conor Sheehan",
-        "department": "Health",
-        "heading": "Hospital Staff",
-        "question": "2991. Deputy Conor Sheehan asked the Minister for Health if working hours have been reduced for student nurses in University Hospital Limerick; if she will engage with the HSE to ascertain the reason these hours have been cut considering the constant levels of overcrowding in UHL; if these hours will be reinstated; and if she will make a statement on the matter. [25203/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/2991/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Conor Sheehan",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "1225. Deputy Conor Sheehan asked the Minister for Education and Youth when a school (details supplied) will receive approval to proceed to tender to replace a rotting roof; when approval to proceed to tender on a proposed extension for special classes will be received; and if she will make a statement on the matter. [23646/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1225/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Conor Sheehan",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "1362. Deputy Conor Sheehan asked the Minister for Education and Youth to provide an up-to-date list of school building major projects applications; the current status of each; the length of time it is currently taking to approve each project, in tabular form; and if she will make a statement on the matter. [25243/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1362/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Conor Sheehan",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "1363. Deputy Conor Sheehan asked the Minister for Education and Youth to provide an up-to-date list of additional accommodation applications; the current status of each; the length of time it is currently taking to approve each project, in tabular form; and if she will make a statement on the matter. [25244/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1363/"
       }
     ]
   },
   {
     "constituency": "Limerick County",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Niall Collins",
+        "department": "Education",
+        "heading": "School Funding",
+        "question": "323. Deputy Niall Collins asked the Minister for Education and Youth the status of an application (details supplied). [71801/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/323/"
+      },
       {
         "date": "2026-09-17",
         "deputy": "Niall Collins",
@@ -13979,6 +13987,30 @@
   {
     "constituency": "Longford-Westmeath",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Micheál Carrigy",
+        "department": "Further and Higher Education",
+        "heading": "Student Accommodation",
+        "question": "899. Deputy Micheál Carrigy asked the Minister for Further and Higher Education, Research, Innovation and Science if there has been further engagement with a college (details supplied) regarding potential sites for student accommodation. [71863/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/899/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Robert Troy",
+        "department": "Social",
+        "heading": "School Meals Programme",
+        "question": "478. Deputy Robert Troy asked the Minister for Social Protection if his Department will urgently review the payment rate for the secondary school meals programme; and his views on whether the secondary school meal rate should be brought in line with the primary school rate and increased to €3.20 per meal. [71435/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/478/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Robert Troy",
+        "department": "Further and Higher Education",
+        "heading": "Third Level Fees",
+        "question": "902. Deputy Robert Troy asked the Minister for Further and Higher Education, Research, Innovation and Science the appeal process available for third level students in relation to free fee's for Irish students in circumstances (details supplied). [72258/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/902/"
+      },
       {
         "date": "2026-10-01",
         "deputy": "Robert Troy",
@@ -14434,30 +14466,6 @@
         "heading": "School Meals Programme",
         "question": "540. Deputy Robert Troy asked the Minister for Social Protection the guidance,or assistance that can be afforded to a school (details supplied) whereby they are having difficulty in securing a hot school meals provider. [49192/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/540/"
-      },
-      {
-        "date": "2026-06-30",
-        "deputy": "Robert Troy",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "429. Deputy Robert Troy asked the Minister for Education and Youth whether NEPS has engaged with the Higher Education Authority in relation to increasing the number of educational psychology doctorate trainees; whether NEPS has proposed to act as the principal placement provider for such trainees; whether the HSE, CHI, CDNTs, CAMHS and primary care psychology services were consulted; and if she will make a statement on the matter. [49874/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/429/"
-      },
-      {
-        "date": "2026-06-30",
-        "deputy": "Sorca Clarke",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "315. Deputy Sorca Clarke asked the Minister for Education and Youth the recent engagements her Department has had with trade unions and representative bodies regarding the pay and employment conditions of school secretaries; the outstanding issues that remain to be resolved; the timeline for further improvements in terms and conditions; and if she will make a statement on the matter. [48752/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/315/"
-      },
-      {
-        "date": "2026-06-30",
-        "deputy": "Sorca Clarke",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "316. Deputy Sorca Clarke asked the Minister for Education and Youth the progress that has been made in providing school secretaries with improved pay, terms and conditions of employment; whether discussions or negotiations have taken place with representative bodies and trade unions on this matter; the outcome of any such discussions; the further measures under consideration by her Department; and if she will make a statement on the matter. [48753/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/316/"
       }
     ]
   },
@@ -14950,6 +14958,14 @@
     "constituency": "Mayo",
     "questions": [
       {
+        "date": "2026-10-15",
+        "deputy": "Keira Keogh",
+        "department": "Health",
+        "heading": "Hospital Staff",
+        "question": "170. Deputy Keira Keogh asked the Minister for Health whether her Department has assessed the need for hospital-based crisis mental health nurses at Mayo University Hospital in view of demand for mental health services; the funding allocated in Budget 2027 to expand crisis intervention and mental health nursing services at Mayo University Hospital; and if she will make a statement on the matter. [69154/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/170/"
+      },
+      {
         "date": "2026-10-13",
         "deputy": "Paul Lawless",
         "department": "Transport",
@@ -15420,20 +15436,28 @@
         "heading": "School Curriculum",
         "question": "5. Deputy Paul Lawless asked the Minister for Education and Youth the arrangements in place for parents and parent representative organisations to raise concerns directly with her Department regarding the national education curriculum and provision of educational resources; and the frequency with which she personally meets with such bodies. [54436/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/5/"
-      },
-      {
-        "date": "2026-07-16",
-        "deputy": "Rose Conway-Walsh",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "18. Deputy Rose Conway-Walsh asked the Minister for Education and Youth if the twenty-one students who attend a school (details supplied) and applied and paid for school transport through Bus Éireann can instead be accommodated on existing routes from Westport and Castlebar, following their own application being declined after all students were assessed as concessionary; and if she will make a statement on the matter. [54125/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-16/18/"
       }
     ]
   },
   {
     "constituency": "Meath East",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Darren O'Rourke",
+        "department": "Health",
+        "heading": "Medical Cards",
+        "question": "749. Deputy Darren O'Rourke asked the Minister for Health if she is aware that a number of survivors of industrial schools have been unable to access the healthcare services to which they are entitled under their newly issued enhanced medical cards, as some service providers are not recognising or accepting the cards; and if she will make a statement on the matter. [71625/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/749/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Darren O'Rourke",
+        "department": "Education",
+        "heading": "School Transport",
+        "question": "316. Deputy Darren O'Rourke asked the Minister for Education and Youth the reason Bus Éireann reserves payments and then in many cases to refuse access to school bus transport and issue a refund (details supplied); her views on after offering/providing a place/service; and if this practice has been assessed and deemed financially sound. [71732/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/316/"
+      },
       {
         "date": "2026-10-08",
         "deputy": "Darren O'Rourke",
@@ -15897,22 +15921,6 @@
         "heading": "Education Schemes",
         "question": "349. Deputy Darren O'Rourke asked the Minister for Education and Youth if alternative funding has been arranged for the STEM engagement officer and the STEM programme in County Laois; if she recognises the positive contribution made by this role; and if she will make a statement on the matter. [47353/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/349/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Darren O'Rourke",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "297. Deputy Darren O'Rourke asked the Minister for Education and Youth the number of schools in County Mayo that applied for the emergency works scheme in the past 12-months; and the status of each application, in tabular form. [46829/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/297/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Darren O'Rourke",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "298. Deputy Darren O'Rourke asked the Minister for Education and Youth the number of schools in Tipperary that applied for the emergency works scheme in the past 12-months; and the status of each application, in tabular form. [46830/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/298/"
       }
     ]
   },
@@ -15958,6 +15966,30 @@
         "heading": "Youth Services",
         "question": "274. Deputy Johnny Guirke asked the Minister for Education and Youth for a breakdown of funding provided to youth organisations in County Meath from 1 January to date in 2026. [71470/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/274/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Peadar Tóibín",
+        "department": "Education",
+        "heading": "Education Policy",
+        "question": "379. Deputy Peadar Tóibín asked the Minister for Education and Youth the procedures followed when a person enrolled in second-level education is subsequently determined not to be a minor; whether such persons are removed from second-level education; and the number removed in each of the past five years. [72140/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/379/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Peadar Tóibín",
+        "department": "Justice",
+        "heading": "Unaccompanied Minors and Separated Children",
+        "question": "555. Deputy Peadar Tóibín asked the Minister for Justice, Home Affairs and Migration the annual cost associated with supports provided to persons who claimed to be minors but were subsequently determined not to be minors, including accommodation, education and social supports, in each of the past five years. [72146/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/555/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Peadar Tóibín",
+        "department": "Justice",
+        "heading": "Unaccompanied Minors and Separated Children",
+        "question": "560. Deputy Peadar Tóibín asked the Minister for Justice, Home Affairs and Migration the number of international protection applicants who claimed to be minors but were subsequently determined not to be minors and who, prior to that determination, were enrolled in second-level education in each of the past five years, broken down by year. [72125/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/560/"
       },
       {
         "date": "2026-10-07",
@@ -16374,30 +16406,6 @@
         "heading": "Special Educational Needs",
         "question": "1392. Deputy Peadar Tóibín asked the Minister for Education and Youth the number of schools that have availed of translation or interpretation services to support engagement with parents and guardians in each of the past five school years. [62872/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1392/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Peadar Tóibín",
-        "department": "Health",
-        "heading": "Dental Services",
-        "question": "3953. Deputy Peadar Tóibín asked the Minister for Health the number of schoolchildren who did not receive their routine school dental screening in each school year from 2020-2021 to 2025-2026, by age cohort and HSE area. [58282/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/3953/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Peadar Tóibín",
-        "department": "Health",
-        "heading": "Dental Services",
-        "question": "3956. Deputy Peadar Tóibín asked the Minister for Health the number of schools that did not receive a routine school dental screening visit in each year from 2020 to 2025 and to date in 2026, by county. [58285/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/3956/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Peadar Tóibín",
-        "department": "Education",
-        "heading": "Departmental Funding",
-        "question": "1460. Deputy Peadar Tóibín asked the Minister for Education and Youth the 100 non-governmental organisations that received the highest levels of public funding in the most recent year for which figures are available; the amount received by each organisation; and the Department, agency or public body from which the funding originated. [59492/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1460/"
       }
     ]
   },
@@ -16892,6 +16900,30 @@
       {
         "date": "2026-10-13",
         "deputy": "Claire Kerrane",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "646. Deputy Claire Kerrane asked the Minister for Children, Disability and Equality the percentage of staff turnover, by county within the early years sector in 2025, in tabular form. [72034/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/646/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Claire Kerrane",
+        "department": "Children",
+        "heading": "Childcare Services",
+        "question": "655. Deputy Claire Kerrane asked the Minister for Children, Disability and Equality the number of childminders that have engaged in the consultation process to date, both in submissions and questionnaire; her views on tweaking the the current regulations; her plans to on the back of this consultation; and if the timeline for registration is to be moved. [72029/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/655/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Claire Kerrane",
+        "department": "Children",
+        "heading": "Departmental Schemes",
+        "question": "654. Deputy Claire Kerrane asked the Minister for Children, Disability and Equality the number of parents that will benefit and from September 2027 pay €550 per month for childcare as announced in Budget 2027. [72031/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/654/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Claire Kerrane",
         "department": "Education",
         "heading": "School Staff",
         "question": "282. Deputy Claire Kerrane asked the Minister for Education and Youth to advise when a teacher (details supplied) will receive payment for teaching hours. [71508/26]",
@@ -17344,36 +17376,28 @@
         "heading": "Early Childhood Care and Education",
         "question": "485. Deputy Claire Kerrane asked the Minister for Children, Disability and Equality if she will examine core funding guidelines, specifically in relation to temporary room closures (details supplied); and if she will make a statement on the matter. [40974/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-28/485/"
-      },
-      {
-        "date": "2026-05-28",
-        "deputy": "Claire Kerrane",
-        "department": "Children",
-        "heading": "Early Childhood Care and Education",
-        "question": "486. Deputy Claire Kerrane asked the Minister for Children, Disability and Equality if she will extend reporting obligations by early years providers in core funding in order that it is not just in cases in which there is a closure for more than four weeks; and if she will make a statement on the matter. [40975/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-28/486/"
-      },
-      {
-        "date": "2026-05-28",
-        "deputy": "Claire Kerrane",
-        "department": "Education",
-        "heading": "School Management",
-        "question": "333. Deputy Claire Kerrane asked the Minister for Education and Youth if she will provide an update on an application for additional school accommodation (details supplied) which was acknowledged by her office in March 2026; and if she will make a statement on the matter. [40985/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-28/333/"
-      },
-      {
-        "date": "2026-05-28",
-        "deputy": "Claire Kerrane",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "177. Deputy Claire Kerrane asked the Minister for Education and Youth to outline her plans to expand capacity on school bus transport; and if she will make a statement on the matter. [39682/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-28/177/"
       }
     ]
   },
   {
     "constituency": "Sligo-Leitrim",
     "questions": [
+      {
+        "date": "2026-10-13",
+        "deputy": "Eamon Scanlon",
+        "department": "Education",
+        "heading": "Special Educational Needs",
+        "question": "361. Deputy Eamon Scanlon asked the Minister for Education and Youth if she will engage with the management of a school (details supplied) in relation to their SNA resource allocation in terms of dealing with pupils with additional needs. [72027/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/361/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Frankie Feighan",
+        "department": "Social",
+        "heading": "School Meals Programme",
+        "question": "482. Deputy Frankie Feighan asked the Minister for Social Protection if the mechanism to pay suppliers under the current school meals programme has been modified; and if the Minister is satisfied that all suppliers will be paid within 30 days of invoices having been submitted. [71565/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/482/"
+      },
       {
         "date": "2026-10-06",
         "deputy": "Eamon Scanlon",
@@ -17837,22 +17861,6 @@
         "heading": "Special Educational Needs",
         "question": "613. Deputy Martin Kenny asked the Minister for Education and Youth his plans to announce any more special education class places and if a school (details supplied) will be included in the allocation as the need for the class has been recognised; and if she will make a statement on the matter. [8755/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-04/613/"
-      },
-      {
-        "date": "2026-01-27",
-        "deputy": "Martin Kenny",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "1006. Deputy Martin Kenny asked the Minister for Health the measures that have been taken to address the significant patient waitlists, particularly in the Galway University Hospitals. [5787/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-27/1006/"
-      },
-      {
-        "date": "2026-01-27",
-        "deputy": "Martin Kenny",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "1013. Deputy Martin Kenny asked the Minister for Health whether the absence of an emergency department in Roscommon University Hospital has been formally assessed for its impact on neighbouring hospitals in the CHO1 and CHO2 areas. [5794/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-27/1013/"
       }
     ]
   },
@@ -18348,6 +18356,14 @@
         "date": "2026-10-13",
         "deputy": "Mattie McGrath",
         "department": "Education",
+        "heading": "Education Policy",
+        "question": "321. Deputy Mattie McGrath asked the Minister for Education and Youth to provide an update on the proposal by a school (details supplied) to transition from an English-medium school to a Gaelscoil; the outcome of the meeting between Department officials; and the projected timeline for progressing the proposal. [71779/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/321/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Mattie McGrath",
+        "department": "Education",
         "heading": "Special Educational Needs",
         "question": "269. Deputy Mattie McGrath asked the Minister for Education and Youth to outline plans to fund a panel of 20+ dyslexia support specialists throughout the country to carry out dyslexia assessments and support children with dyslexia in schools across the country; the way in which such specialists with the required credentials and experience can apply for such roles; when such roles will be advertised; and where they will be based. [71420/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/269/"
@@ -18815,14 +18831,6 @@
         "heading": "Education Policy",
         "question": "548. Deputy Michael Murphy asked the Minister for Education and Youth whether a review of the policy governing the recognition of overseas teaching experience is underway; and if she will consider reforms to ensure that experienced teachers returning to the State are treated in a fair and transparent manner. [30043/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/548/"
-      },
-      {
-        "date": "2026-04-28",
-        "deputy": "Michael Murphy",
-        "department": "Education",
-        "heading": "Education Policy",
-        "question": "600. Deputy Michael Murphy asked the Minister for Education and Youth the criteria used by her Department to assess overseas teaching experience for the purpose of incremental credit; the extent to which teaching experience gained in private and international schools is recognised; and whether a review of these criteria is planned. [30579/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/600/"
       }
     ]
   },
@@ -19314,6 +19322,14 @@
   {
     "constituency": "Wexford",
     "questions": [
+      {
+        "date": "2026-10-15",
+        "deputy": "George Lawlor",
+        "department": "Health",
+        "heading": "Hospital Services",
+        "question": "156. Deputy George Lawlor asked the Minister for Health to discuss the serious backlog and waiting times at the pain management clinic at University Hospital Waterford; and the steps she will take to improve the service. [69401/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/156/"
+      },
       {
         "date": "2026-09-16",
         "deputy": "George Lawlor",
@@ -20253,6 +20269,30 @@
     "constituency": "Wicklow-Wexford",
     "questions": [
       {
+        "date": "2026-10-13",
+        "deputy": "Malcolm Byrne",
+        "department": "Education",
+        "heading": "Education Schemes",
+        "question": "366. Deputy Malcolm Byrne asked the Minister for Education and Youth the total number, by county, of home school liaison teachers operating at present in primary schools. [72083/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/366/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Malcolm Byrne",
+        "department": "Education",
+        "heading": "Education Schemes",
+        "question": "367. Deputy Malcolm Byrne asked the Minister for Education and Youth the total number, by county, of home school liaison teachers operating at present in secondary schools. [72084/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/367/"
+      },
+      {
+        "date": "2026-10-13",
+        "deputy": "Malcolm Byrne",
+        "department": "Education",
+        "heading": "Education Schemes",
+        "question": "384. Deputy Malcolm Byrne asked the Minister for Education and Youth to outline when applications may open for schools for new home school liaison teachers; and the criteria to be used for allocation. [72122/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/384/"
+      },
+      {
         "date": "2026-10-08",
         "deputy": "Malcolm Byrne",
         "department": "Further and Higher Education",
@@ -20707,30 +20747,6 @@
         "heading": "Social Media",
         "question": "557. Deputy Malcolm Byrne asked the Minister for Further and Higher Education, Research, Innovation and Science the number of complaints made by his Department to social media or online marketing companies about specific online posts or accounts for each year from 2020 to 2025, and to date in 2026. [48614/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-25/557/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Fionntán Ó Súilleabháin",
-        "department": "Children",
-        "heading": "Childcare Services",
-        "question": "614. Deputy Fionntán Ó Súilleabháin asked the Minister for Children, Disability and Equality in light of reports that more than 50 childcare providers have exited the core funding scheme in the past two years, to outline the analysis her Department has undertaken into the reasons for these withdrawals; whether rising operating costs are being fully met under current funding arrangements; the immediate measures that are being considered to prevent further providers from leaving the scheme; and if she will make a statement on the matter. [47320/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/614/"
-      },
-      {
-        "date": "2026-06-18",
-        "deputy": "Fionntán Ó Súilleabháin",
-        "department": "Education",
-        "heading": "School Transport",
-        "question": "276. Deputy Fionntán Ó Súilleabháin asked the Minister for Education and Youth if she will ensure that provision of school transport service in the Wexford/Wicklow area will be reviewed and addressed before the new academic year begins. [46443/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-18/276/"
-      },
-      {
-        "date": "2026-06-16",
-        "deputy": "Malcolm Byrne",
-        "department": "Further and Higher Education",
-        "heading": "Construction Industry",
-        "question": "1034. Deputy Malcolm Byrne asked the Minister for Further and Higher Education, Research, Innovation and Science to outline any programmes to encourage young people into careers in construction. [45146/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-16/1034/"
       }
     ]
   }
