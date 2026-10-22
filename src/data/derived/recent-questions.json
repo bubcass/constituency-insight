@@ -1943,6 +1943,30 @@
     "constituency": "Cork North-Central",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Colm Burke",
+        "department": "Culture",
+        "heading": "Sport and Recreational Development",
+        "question": "133. Deputy Colm Burke asked the Minister for Culture, Communications and Sport the mechanisms available for a community group and sports clubs to apply for funding for a sports pavilion where the funding level required is greatly in excess of the €250,000 for local groups in the community sport facilities fund. [73901/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/133/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Colm Burke",
+        "department": "Culture",
+        "heading": "Sports Funding",
+        "question": "123. Deputy Colm Burke asked the Minister for Culture, Communications and Sport to confirm the details of the community sport facilities fund which is opening to applications in October 2026; the total amount of funding allocated to the fund; and the additional measures available in this round. [73899/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/123/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Culture",
+        "heading": "Sports Facilities",
+        "question": "124. Deputy Pádraig O'Sullivan asked the Minister for Culture, Communications and Sport further to parliamentary question No. 44338/26 of 11 June 2026, and his statement that “projects that are not moving forward will have to be taken off the books so new ones can be considered”, whether any projects have since been removed from consideration under the large-scale sport infrastructure fund; the amount of funding involved; and whether that funding is to be reallocated. [74009/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/124/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Colm Burke",
         "department": "Rural",
@@ -2397,30 +2421,6 @@
         "heading": "Health and Safety",
         "question": "795. Deputy Ken O'Flynn asked the Minister for Health the number of inspections, market surveillance checks and product sampling exercises carried out by the Health Products Regulatory Authority on cosmetic products used in nail salons and nail bars, including acrylic monomer liquids and gel nail products, in each of the years 2023 to 2025 and to date in 2026; the number of products found to contain substances prohibited or restricted under the EU Cosmetics Regulation; the enforcement action taken in each case; and if she will make a statement on the matter. [72839/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/795/"
-      },
-      {
-        "date": "2026-10-15",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Screening Programmes",
-        "question": "772. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 70659/26, which stated that development of a new National Skin Cancer Prevention Plan will depend on a new National Cancer Strategy, the arrangements in place in the interim for the surveillance of patients at high risk of melanoma, including former patients of the pigmented lesion service at Cork University Hospital; and if she will make a statement on the matter. [73165/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/772/"
-      },
-      {
-        "date": "2026-10-15",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "705. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 68555/26, which confirmed that post operative complication and re-admission data for the treatment abroad scheme patients is held only on individual patient records, whether the Health Service Executive will establish central recording of outcomes for patients treated under the scheme; if not, the means by which her Department assesses the clinical outcomes and value for money of the scheme; and if she will make a statement on the matter. [73138/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/705/"
-      },
-      {
-        "date": "2026-10-15",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "706. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 68555/26, to confirm by yes or no whether she, her Department or the Health Service Executive has requested the Comptroller and Auditor General to conduct a value for money examination of the treatment abroad scheme; whether the 2022 audit referenced in that reply was a financial audit or a value for money examination; and if she will make a statement on the matter. [73136/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/706/"
       }
     ]
   },
@@ -4385,6 +4385,14 @@
       },
       {
         "date": "2026-10-20",
+        "deputy": "Barry Heneghan",
+        "department": "Culture",
+        "heading": "Sports Facilities",
+        "question": "120. Deputy Barry Heneghan asked the Minister for Culture, Communications and Sport the position regarding plans to develop new all-weather pitches across north Dublin, including the locations being considered; the funding allocated and the expected timelines for delivery; and whether additional funding will be made available to meet the growing demand from local sports clubs. [74087/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/120/"
+      },
+      {
+        "date": "2026-10-20",
         "deputy": "Cian O'Callaghan",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -4838,14 +4846,6 @@
         "heading": "Education Policy",
         "question": "300. Deputy Cian O'Callaghan asked the Minister for Education and Youth the timeline for her Department to begin preparations for the next edition of the governance manual for primary schools; and the format of input parents and guardians can factor into the development of same. [71579/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/300/"
-      },
-      {
-        "date": "2026-10-13",
-        "deputy": "Cian O'Callaghan",
-        "department": "Education",
-        "heading": "Education Policy",
-        "question": "303. Deputy Cian O'Callaghan asked the Minister for Education and Youth to detail the level of oversight her Department has over patron bodies; and the actions her Department can take if a school is not compliant with the Governance Manual for Primary Schools 2023-2027. [71580/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/303/"
       }
     ]
   },
@@ -6308,6 +6308,22 @@
     "constituency": "Dublin Fingal West",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Grace Boland",
+        "department": "Culture",
+        "heading": "Broadband Infrastructure",
+        "question": "121. Deputy Grace Boland asked the Minister for Culture, Communications and Sport the measures being taken to address broadband connectivity issues in towns and villages that fall outside the National Broadband Plan intervention area but where residents and businesses continue to report poor broadband service. [66726/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/121/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Grace Boland",
+        "department": "Culture",
+        "heading": "Broadband Infrastructure",
+        "question": "128. Deputy Grace Boland asked the Minister for Culture, Communications and Sport his views that the current broadband supports available to remote workers and small businesses who remain affected by poor connectivity are sufficient; and whether additional measures are under consideration pending the completion of fibre rollout. [66727/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/128/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Grace Boland",
         "department": "Health",
@@ -6770,22 +6786,6 @@
         "heading": "Youth Services",
         "question": "64. Deputy Grace Boland asked the Minister for Education and Youth the gender-responsive measures that her Department is taking to support boys' emotional literacy and help-seeking, particularly in light of the finding of a report (details supplied). [69170/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/64/"
-      },
-      {
-        "date": "2026-09-30",
-        "deputy": "Grace Boland",
-        "department": "Education",
-        "heading": "Youth Services",
-        "question": "65. Deputy Grace Boland asked the Minister for Education and Youth in light of the finding of a report (details supplied), the measures her Department will take to reduce this pressure while strengthening students' confidence and coping skills; and whether these measures will include universal, preventative programmes in schools rather than opt-in supports. [69169/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/65/"
-      },
-      {
-        "date": "2026-09-30",
-        "deputy": "Grace Boland",
-        "department": "Education",
-        "heading": "Youth Services",
-        "question": "66. Deputy Grace Boland asked the Minister for Education and Youth the current timeline for the roll-out of school-based wellbeing and mental health supports across post-primary schools; her views on the finding in a report (details supplied); whether she will review the timing of evidence-based wellbeing supports to ensure students receive them from first year; and if she will provide details of any planned actions and associated timelines. [69168/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/66/"
       }
     ]
   },
@@ -7787,6 +7787,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/6/"
       },
       {
+        "date": "2026-10-20",
+        "deputy": "Sinéad Gibney",
+        "department": "Culture",
+        "heading": "Raidió Teilifís Éireann",
+        "question": "117. Deputy Sinéad Gibney asked the Minister for Culture, Communications and Sport for an update on the funding of RTÉ and the reinstatement of the €20 million in promised multiannual funding. [74373/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/117/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Shay Brennan",
         "department": "Health",
@@ -8233,20 +8241,36 @@
         "heading": "Education Policy",
         "question": "291. Deputy Sinéad Gibney asked the Minister for Education and Youth if her Department has costed student teacher placement hours against that paid to final-year student nurses and midwives; and the results of any student teacher projection. [69624/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/291/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Sinéad Gibney",
-        "department": "Education",
-        "heading": "Education Policy",
-        "question": "292. Deputy Sinéad Gibney asked the Minister for Education and Youth the number of school placement hours worked by student teachers in the 2025-2026 academic year, broken down by county, in tabular form. [69623/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/292/"
       }
     ]
   },
   {
     "constituency": "Dublin South-Central",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Aengus Ó Snodaigh",
+        "department": "Culture",
+        "heading": "Budget 2027",
+        "question": "130. Deputy Aengus Ó Snodaigh asked the Minister for Culture, Communications and Sport the position regarding the culture card which was promised in advance of budget 2027; if he has considered the activity card proposal put forward by Sinn Féin which would apply not only to ticketed events but to active participation of children in sports and cultural activities. [74475/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/130/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Aengus Ó Snodaigh",
+        "department": "Culture",
+        "heading": "Budget 2027",
+        "question": "132. Deputy Aengus Ó Snodaigh asked the Minister for Culture, Communications and Sport the engagement his officials had with the Department of Finance in advance of budget 2027 in relation to tax relief for arts and culture, specifically in relation to developing a regional uplift for section 481 and to extending the tax relief for donations to certain sports bodies to apply also to arts bodies; and the consideration his Department has given to these proposals. [74474/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/132/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Aengus Ó Snodaigh",
+        "department": "Culture",
+        "heading": "Departmental Bodies",
+        "question": "116. Deputy Aengus Ó Snodaigh asked the Minister for Culture, Communications and Sport to list the agencies under his Department’s aegis which have had a real-terms cut in Budget 2027 compared to Budget 2026 when inflation is factored in and where he expects the resulting cuts to be made. [74421/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/116/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Aengus Ó Snodaigh",
@@ -8702,30 +8726,6 @@
         "heading": "Vaccination Programme",
         "question": "566. Deputy Jen Cummins asked the Minister for Health her plans to increase education about HPV, and the vaccine in schools. [69875/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/566/"
-      },
-      {
-        "date": "2026-10-06",
-        "deputy": "Máire Devine",
-        "department": "Health",
-        "heading": "Health Service Executive",
-        "question": "725. Deputy Máire Devine asked the Minister for Health the position regarding the administration of the auto-enrolment scheme for an organisation grant-aided by the HSE (details supplied), who were advised that the costs associated with the scheme would be funded by the State/HSE however, no reimbursement or additional funding has been provided. [70482/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/725/"
-      },
-      {
-        "date": "2026-10-01",
-        "deputy": "Aengus Ó Snodaigh",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "145. Deputy Aengus Ó Snodaigh asked the Minister for Housing, Local Government and Heritage the current position and timeframe for housing regeneration at locations (details supplied). [68473/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-01/145/"
-      },
-      {
-        "date": "2026-09-30",
-        "deputy": "Jen Cummins",
-        "department": "Education",
-        "heading": "Education Schemes",
-        "question": "58. Deputy Jen Cummins asked the Minister for Education and Youth will there be an increase in the budget to school completion programme to address the increase demand on their services. [69114/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-30/58/"
       }
     ]
   },
@@ -9704,6 +9704,14 @@
     "questions": [
       {
         "date": "2026-10-20",
+        "deputy": "Barry Ward",
+        "department": "Culture",
+        "heading": "Social Media",
+        "question": "125. Deputy Barry Ward asked the Minister for Culture, Communications and Sport the position regarding any engagement he has had with his EU counterparts to push for an EU-wide ban on social media use for under-16s. [73604/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/125/"
+      },
+      {
+        "date": "2026-10-20",
         "deputy": "Richard Boyd Barrett",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -10173,14 +10181,6 @@
         "heading": "Special Educational Needs",
         "question": "297. Deputy Barry Ward asked the Minister for Education and Youth the position regarding the 72 hours provisions listed in Circular 0071/2011; and the engagement she has had on this matter with trade unions representing special needs assistants. [71610/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/297/"
-      },
-      {
-        "date": "2026-10-13",
-        "deputy": "Barry Ward",
-        "department": "Justice",
-        "heading": "Student Visas",
-        "question": "518. Deputy Barry Ward asked the Minister for Justice, Home Affairs and Migration the position regarding the review ongoing within his Department in relation to the refusal of visas to Palestinian students, particularly those who had been offered scholarships in Ireland and were due to start their studies in September 2026. [71510/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/518/"
       }
     ]
   },
@@ -10210,6 +10210,14 @@
         "heading": "Cabinet Committees",
         "question": "34. Deputy Louis O'Hara asked the Taoiseach when the Cabinet committee on children and education will meet next. [67764/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/34/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Louis O'Hara",
+        "department": "Culture",
+        "heading": "Sports Funding",
+        "question": "129. Deputy Louis O'Hara asked the Minister for Culture, Communications and Sport if he plans to introduce a new grant scheme for local authorities to fund the development of swimming pools. [73536/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/129/"
       },
       {
         "date": "2026-10-15",
@@ -10658,14 +10666,6 @@
         "heading": "An Garda Síochána",
         "question": "63. Deputy Albert Dolan asked the Minister for Justice, Home Affairs and Migration the measures being taken to ensure that Garda divisions serving rural communities have sufficient frontline Garda personnel and resources to provide a visible policing presence; and the steps being taken to address vacancies and recruitment pressures. [70452/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/63/"
-      },
-      {
-        "date": "2026-10-07",
-        "deputy": "Albert Dolan",
-        "department": "Justice",
-        "heading": "Immigration Support Services",
-        "question": "34. Deputy Albert Dolan asked the Minister for Justice, Home Affairs and Migration the measures being taken to reduce delays and backlogs across the immigration and international protection systems; and the current actions being taken to improve processing times and administrative capacity. [70523/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/34/"
       }
     ]
   },
@@ -11651,6 +11651,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/25/"
       },
       {
+        "date": "2026-10-20",
+        "deputy": "Naoise Ó Cearúil",
+        "department": "Culture",
+        "heading": "Sports Funding",
+        "question": "122. Deputy Naoise Ó Cearúil asked the Minister for Culture, Communications and Sport the way in which population growth, existing facility provision and projected demand will be considered in the allocation of sports capital funding provided for under budget 2027, particularly in rapidly growing constituencies such as Kildare North. [74017/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/122/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Aidan Farrelly",
         "department": "Foreign",
@@ -12113,14 +12121,6 @@
         "heading": "Animal Welfare",
         "question": "40. Deputy Joe Neville asked the Minister for Agriculture, Food and the Marine the number of animal welfare cases which his Department has begun since the beginning of 2026. [71012/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/40/"
-      },
-      {
-        "date": "2026-10-08",
-        "deputy": "Joe Neville",
-        "department": "Agriculture",
-        "heading": "Animal Welfare",
-        "question": "68. Deputy Joe Neville asked the Minister for Agriculture, Food and the Marine the measures his Department has taken to introduce additional resources for enforcement of animal welfare legislation. [71002/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/68/"
       }
     ]
   },
@@ -14562,6 +14562,22 @@
       },
       {
         "date": "2026-10-20",
+        "deputy": "Joanna Byrne",
+        "department": "Culture",
+        "heading": "Raidió Teilifís Éireann",
+        "question": "119. Deputy Joanna Byrne asked the Minister for Culture, Communications and Sport to detail the reasons, missed key performance indicators or criteria that led to his decision to cut RTÉ’s previously agreed public funding for 2027 by €20 million. [73874/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/119/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Joanna Byrne",
+        "department": "Culture",
+        "heading": "Sports Funding",
+        "question": "118. Deputy Joanna Byrne asked the Minister for Culture, Communications and Sport the way in which he plans to clear the backlog in approved applications for the large-scale sport infrastructure fund when the scheme has only been given an allocation of €39 million for 2027. [73886/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/118/"
+      },
+      {
+        "date": "2026-10-20",
         "deputy": "Ruairí Ó Murchú",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -15015,22 +15031,6 @@
         "heading": "International Protection",
         "question": "58. Deputy Ruairí Ó Murchú asked the Minister for Justice, Home Affairs and Migration the current average processing times for international protection applicants; and the progress being made to reduce the processing times for international protection applicants. [70493/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/58/"
-      },
-      {
-        "date": "2026-10-07",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Justice",
-        "heading": "Legal Aid",
-        "question": "70. Deputy Ruairí Ó Murchú asked the Minister for Justice, Home Affairs and Migration to provide an update on the progress being made to resolve the solicitors' dispute over the introduction of the new criminal legal aid scheme. [69731/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/70/"
-      },
-      {
-        "date": "2026-10-07",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Health",
-        "heading": "Medical Qualifications",
-        "question": "258. Deputy Ruairí Ó Murchú asked the Minister for Health if the Government has considered the workforce implications of graduates from EU medical schools who wish to work in Ireland not being able to participate in the Irish matching process because their final-year centile ranking was not available by the HSE deadline. [70712/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-07/258/"
       }
     ]
   },
@@ -19889,6 +19889,14 @@
     "questions": [
       {
         "date": "2026-10-20",
+        "deputy": "Edward Timmins",
+        "department": "Culture",
+        "heading": "Commemorative Events",
+        "question": "126. Deputy Edward Timmins asked the Minister for Culture, Communications and Sport the position regarding the American Presidents Trail. [74079/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/126/"
+      },
+      {
+        "date": "2026-10-20",
         "deputy": "Jennifer Whitmore",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -20358,14 +20366,6 @@
         "heading": "Public Procurement Contracts",
         "question": "461. Deputy Jennifer Whitmore asked the Minister for Culture, Communications and Sport the expected timeline for the procurement process to begin for the cell broadcast public warning system CB-PWS; the expected timeline for the system to be fully operational; and the procedures in place in the meantime as we head into the winter months. [68838/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/461/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Jennifer Whitmore",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "307. Deputy Jennifer Whitmore asked the Minister for Transport whether an assessment has been undertaken of the vulnerability of the Rosslare rail corridor to coastal erosion, storm surge and sea-level rise; and if so, to publish its findings. [68832/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/307/"
       }
     ]
   },
