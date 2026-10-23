@@ -1799,6 +1799,86 @@
     "constituency": "Cork North-Central",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Eoghan Kenny",
+        "department": "Transport",
+        "heading": "Driver Test",
+        "question": "316. Deputy Eoghan Kenny asked the Minister for Transport if priority will be given to a driving test for a person (details supplied) considering their current study/work circumstances. [74315/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/316/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Finance",
+        "heading": "Departmental Policies",
+        "question": "395. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance if his Department has examined, at any time since 2016, the introduction of a tax relief or housing support for former residents returning to live and work in the State after a period abroad; if legal advice has been obtained on the compatibility with EU law of such a measure (details supplied); if he will examine such a measure in the context of skills shortages in construction and healthcare; and if he will make a statement on the matter. [74331/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/395/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Finance",
+        "heading": "Departmental Policies",
+        "question": "396. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance if his Department has assessed the extent to which the limitation of help-to-buy relief to income tax and DIRT paid in the State in the four years preceding the year of application reduces or removes eligibility for former residents who have recently returned to the State after a period of employment abroad; whether any data is held on the number of help-to-buy claimants who were not tax resident in the State for part of that four year period; whether any alternative support for such returning former residents has been considered; and if he will make a statement on the matter. [74324/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/396/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Health Service Executive",
+        "question": "951. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 64311/26, if she will confirm whether an audit took place in 2020 (details supplied); if not, whether the reply to Question No. 1032 was incorrect; if the work described as the 2022 audit of the scheme formed part of the Comptroller and Auditor General's audit of the HSE annual financial statements for 2022 rather than a separate examination of the scheme; if a management letter or other written findings were issued to the HSE in respect of the scheme; and if she will make a statement on the matter. [73853/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/951/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Health Service Executive",
+        "question": "990. Deputy Ken O'Flynn asked the Minister for Health whether HSE framework agreements with staffing agencies require the agency to be notified where a worker it supplies is involved in a patient safety incident; the number of agency workers removed from placement following a patient safety incident in each of the years 2023, 2024 and 2025; and if she will make a statement on the matter. [74328/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/990/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Health Service Executive",
+        "question": "1006. Deputy Ken O'Flynn asked the Minister for Health whether the HSE took account of patients' clinical need and social circumstances, including patients unable to work pending a surgical consultation, when deciding which appointments to cancel or retain in advance of the strike on 14 October 2026; the derogations agreed with health unions for that day and for any further strike day on 21 October 2026; and if she will make a statement on the matter. [74337/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/1006/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Finance",
+        "heading": "Insurance Industry",
+        "question": "404. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance whether the remit of the new Flood Insurance Working Group includes examining the practice of insurers declining to offer any home or contents cover, or offering cover with flood excluded, to properties assessed as at risk of flooding; and, if not, whether he will extend the remit to do so. [74054/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/404/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Patient Safety",
+        "question": "994. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 49266/26, whether the HSE has assessed the technical feasibility, cost and timeframe of adding a field to the national incident management system to record the employment status of staff involved in a patient safety incident (directly employed, agency, panel or locum); if such a change has been considered or ruled out; the reasons; and if she will make a statement on the matter. [74326/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/994/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Health",
+        "heading": "Patient Safety",
+        "question": "1007. Deputy Ken O'Flynn asked the Minister for Health if her Department or HIQA has at any time requested or recommended that the HSE record the employment status of staff involved in patient safety incidents; if she will direct the HSE to introduce such a field within NIMS given the scale of HSE expenditure on agency staffing; and if she will make a statement on the matter. [74323/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/1007/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ken O'Flynn",
+        "department": "Enterprise",
+        "heading": "Work Permits",
+        "question": "445. Deputy Ken O'Flynn asked the Minister for Enterprise, Tourism and Employment the number of employment permits issued to the HSE as employer in respect of medical practitioners in each of the years 2022 to 2025 and to date in 2026, by permit type; and if he will make a statement on the matter. [74357/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/445/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Ken O'Flynn",
         "department": "Justice",
@@ -2197,86 +2277,6 @@
         "heading": "Departmental Data",
         "question": "2078. Deputy Ken O'Flynn asked the Minister for Social Protection whether his Department has assessed the number of working families with school going children who are above the income threshold for the back to school clothing and footwear allowance but report difficulty meeting school costs; and if such data are not held, the reason. [62818/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2078/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Justice",
-        "heading": "Departmental Data",
-        "question": "2274. Deputy Ken O'Flynn asked the Minister for Justice, Home Affairs and Migration the number of beneficiaries currently in ARP-supported accommodation who are not in employment or self-employment and therefore may not meet the proposed eligibility criteria for the temporary protection transition scheme. [61325/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2274/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Departmental Data",
-        "question": "3914. Deputy Ken O'Flynn asked the Minister for Health if she is aware of differing terminology being used by organisations providing breastfeeding education and support in Ireland; whether the HSE has issued guidance on preferred terminology to organisations working with or funded by the HSE; and if she will make a statement on the matter. [63261/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/3914/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Finance",
-        "heading": "Departmental Reviews",
-        "question": "821. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance if consideration will be given to broadening the qualifying conditions for the seafarers' allowance, which as currently drafted are confined to seafarers employed on EU-registered vessels used solely for the carriage of passengers or cargo for reward, so as to reflect the realities of contemporary maritime employment including crew serving on yachts; and if he will make a statement on the matter. [63397/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/821/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Enterprise",
-        "heading": "Employment Rights",
-        "question": "1075. Deputy Ken O'Flynn asked the Minister for Enterprise, Tourism and Employment the current statutory sick leave entitlement provided to employees; whether any further increase in that entitlement is planned for 2027; and if he will make a statement on the matter. [63736/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1075/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Service Executive",
-        "question": "3322. Deputy Ken O'Flynn asked the Minister for Health whether a company (details supplied) currently or previously held any contracts, framework agreements or subcontracting arrangements with the HSE; if so, the nature and duration of those arrangements and the HSE facilities or projects to which they related; whether the HSE requires contractors and subcontractors to demonstrate compliance with employment and pension legislation; and if she will make a statement on the matter. [61192/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/3322/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Service Executive",
-        "question": "3327. Deputy Ken O'Flynn asked the Minister for Health whether the HSE has procedures for ensuring that contractors engaged to provide services to the HSE comply with their obligations to employees regarding written terms and conditions of employment, PRSI and occupational pension contributions; whether such compliance is monitored during the lifetime of a contract; and if she will make a statement on the matter. [61193/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/3327/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "3728. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question Nos 726 and 730 of 14 July 2026, which state that both consultation with clinical experts, patients and advocacy groups was undertaken as referenced in Parliamentary Question No. 691 of 28 May 2026, and that no minutes, records, file notes, meeting notes, internal correspondence or email communications exist in relation to that work, to state the documentary basis on which the HSE is able to assert that such consultation took place; and to identify the source relied upon for the statement made in Parliamentary Question No. 691 of 28 May 2026. [62462/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/3728/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "1336. Deputy Ken O'Flynn asked the Minister for Education and Youth if she will introduce fractional or pro-rata teaching contracts, for example 0.6 or 0.8 of a full time post, as an alternative to the current binary 50% option available under the job sharing scheme in Circular 0054/2019; the reason a more granular flexible working arrangement has not been made available to registered teachers; and if she will make a statement on the matter. [62672/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1336/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "1338. Deputy Ken O'Flynn asked the Minister for Education and Youth if the suspension of the restriction preventing job sharing teachers from undertaking substitute work will be placed on a permanent footing (details supplied); the number of primary schools that employed persons without a teaching qualification in a substitute capacity in the most recent school year for which data is available; and if she will make a statement on the matter. [62673/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1338/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Education",
-        "heading": "School Staff",
-        "question": "1340. Deputy Ken O'Flynn asked the Minister for Education and Youth if the restriction under Circular 54/2019 preventing job-sharing teachers from undertaking substitute work has been suspended for the 2026-2027 school year, in line with the arrangements that applied in each year from 2021-2022 to 2025-2026; the information note giving effect to this; the date of its publication; the date from which job-sharing teachers may take up such work in the current school year; and if she will make a statement on the matter. [62676/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1340/"
       }
     ]
   },
@@ -4032,6 +4032,30 @@
     "constituency": "Dublin Bay North",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Barry Heneghan",
+        "department": "Health",
+        "heading": "Alcohol Pricing",
+        "question": "1095. Deputy Barry Heneghan asked the Minister for Health when the final report of the Alcohol Act Technical Evaluation Group, AATEG, will be published; and the key recommendations arising from its work. [74124/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/1095/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Barry Heneghan",
+        "department": "Housing",
+        "heading": "House Sales",
+        "question": "579. Deputy Barry Heneghan asked the Minister for Housing, Local Government and Heritage whether his Department has undertaken work or plans to introduce requirements for estate agents and property websites to clearly label AI-generated or digitally altered images in residential property advertisements. [73687/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/579/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Denise Mitchell",
+        "department": "Finance",
+        "heading": "Departmental Schemes",
+        "question": "364. Deputy Denise Mitchell asked the Tánaiste and Minister for Finance the number of productions that have availed of the scéal uplift scheme since its introduction; and whether the Government is considering any additional measures to encourage film production and employment in regional areas outside Dublin. [73616/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/364/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Barry Heneghan",
         "department": "Finance",
@@ -4486,30 +4510,6 @@
         "heading": "Public Sector Pensions",
         "question": "371. Deputy Cian O'Callaghan asked the Minister for Culture, Communications and Sport if he will provide a timeline for the pension increases to come into effect for retired An Post workers; and if he will make a statement on the matter. [53264/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-14/371/"
-      },
-      {
-        "date": "2026-07-14",
-        "deputy": "Tom Brabazon",
-        "department": "Children",
-        "heading": "Child and Family Agency",
-        "question": "644. Deputy Tom Brabazon asked the Minister for Children, Disability and Equality the number of WTE qualified social workers that joined TUSLA in 2024, 2025 and to-date in 2026; and the number of qualified social workers that left TUSLA during same period, in tabular form. [52639/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-14/644/"
-      },
-      {
-        "date": "2026-07-14",
-        "deputy": "Tom Brabazon",
-        "department": "Children",
-        "heading": "Child and Family Agency",
-        "question": "697. Deputy Tom Brabazon asked the Minister for Children, Disability and Equality the number of WTE qualified social workers that joined TUSLA in each of the years of 2024, 2025 and to date in 2026; and the number of qualified social workers that left TUSLA during same period, in tabular form. [53736/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-14/697/"
-      },
-      {
-        "date": "2026-07-08",
-        "deputy": "Denise Mitchell",
-        "department": "Justice",
-        "heading": "Visa Applications",
-        "question": "161. Deputy Denise Mitchell asked the Minister for Justice, Home Affairs and Migration if he can clarify the situation for a person in an instance where their Stamp 4 work permit expires while the individual is awaiting the renewal of their Irish residence permit (IRP) card, particularly in an instance where the wait for the IRP card has gone beyond the twelve week grace period; if he is aware that delays in IRP renewals processing means that employers are seeking clarity on their obligations when a Stamp 4 expires during this limbo period; and if he will make a statement on the matter. [52229/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-08/161/"
       }
     ]
   },
@@ -5002,6 +5002,22 @@
     "constituency": "Dublin Central",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Daniel Ennis",
+        "department": "Health",
+        "heading": "Health Services",
+        "question": "964. Deputy Daniel Ennis asked the Minister for Health the number of consultant plastic surgeons working in the public health services; her plans to expand this number; and the international recommended best practice ratio for consultant plastic surgeons to population and Ireland's ratio. [73920/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/964/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Daniel Ennis",
+        "department": "Health",
+        "heading": "Hospital Staff",
+        "question": "965. Deputy Daniel Ennis asked the Minister for Health the number of whole-time equivalent, WTE, staff by job title working in the pharmacy department of Children's Health Ireland, CHI, Temple Street, in tabular form; and if a senior pharmacist is on call after normal working hours and at weekends. [73921/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/965/"
+      },
+      {
         "date": "2026-10-08",
         "deputy": "Marie Sherlock",
         "department": "Health",
@@ -5464,22 +5480,6 @@
         "heading": "Teaching Qualifications",
         "question": "311. Deputy Marie Sherlock asked the Minister for Education and Youth the reason teachers with a further education qualification and currently working in the primary and secondary school system are discriminated against in terms of accessing a contract of indefinite duration within schools. [50130/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-09-23/311/"
-      },
-      {
-        "date": "2025-09-23",
-        "deputy": "Marie Sherlock",
-        "department": "Education",
-        "heading": "Teaching Qualifications",
-        "question": "312. Deputy Marie Sherlock asked the Minister for Education and Youth the reason teachers with a further education qualification and currently working in the primary and secondary school system are discriminated against in terms of admission to route 4 within special needs education. [50131/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-23/312/"
-      },
-      {
-        "date": "2025-09-08",
-        "deputy": "Gary Gannon",
-        "department": "Health",
-        "heading": "Alcohol Sales",
-        "question": "2395. Deputy Gary Gannon asked the Minister for Health if she will engage with the Department of Enterprise, Tourism and Employment on ensuring that metrology regulations relating to draught beer and cider are consistent with both EU law and Ireland's public health objectives. [45804/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-08/2395/"
       }
     ]
   },
@@ -5683,6 +5683,14 @@
   {
     "constituency": "Dublin Fingal West",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Grace Boland",
+        "department": "Enterprise",
+        "heading": "Consumer Protection",
+        "question": "450. Deputy Grace Boland asked the Minister for Enterprise, Tourism and Employment the engagement his Department has had with the Competition and Consumer Protection Commission regarding competition, transparency and consumer protection within the private health insurance market. [74234/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/450/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Louise O'Reilly",
@@ -6154,14 +6162,6 @@
         "heading": "Social Welfare Benefits",
         "question": "1220. Deputy Louise O'Reilly asked the Minister for Social Protection the estimated first year and full year cost of hiring a case worker to help social welfare applicants. [43109/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1220/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Louise O'Reilly",
-        "department": "Social",
-        "heading": "Social Welfare Payments",
-        "question": "1233. Deputy Louise O'Reilly asked the Minister for Social Protection the first year and full-year cost of increasing community employment, Tús and rural social scheme payments by €1 per week, each year for two years. [43126/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1233/"
       }
     ]
   },
@@ -6654,6 +6654,14 @@
     "constituency": "Dublin North-West",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Paul McAuliffe",
+        "department": "Housing",
+        "heading": "Regulatory Bodies",
+        "question": "589. Deputy Paul McAuliffe asked the Minister for Housing, Local Government and Heritage the preparatory work undertaken by his Department regarding the transfer of responsibility for the Multi-Unit Developments Act 2011; and the timeline for establishment of a regulatory framework for owners' management companies following the transfer. [73918/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/589/"
+      },
+      {
         "date": "2026-09-24",
         "deputy": "Paul McAuliffe",
         "department": "Social",
@@ -6906,6 +6914,14 @@
   {
     "constituency": "Dublin Rathdown",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Sinéad Gibney",
+        "department": "Enterprise",
+        "heading": "Ministerial Communications",
+        "question": "444. Deputy Sinéad Gibney asked the Minister for Enterprise, Tourism and Employment if the speeches given by the Ministers in his Department for the International AI Summit were written by civil servants or private consultants working within his Department. [74378/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/444/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Sinéad Gibney",
@@ -7377,14 +7393,6 @@
         "heading": "Healthcare Policy",
         "question": "2670. Deputy Shay Brennan asked the Minister for Health whether the HSE working group established in 2023 to develop a national care pathway for lipoedema has completed its work; when the pathway is expected to be published; and whether patient advocacy organisations, including an organisation (details supplied) will be included in the development and implementation of this pathway. [23761/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/2670/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Sinéad Gibney",
-        "department": "Enterprise",
-        "heading": "Flexible Work Practices",
-        "question": "1166. Deputy Sinéad Gibney asked the Minister for Enterprise, Tourism and Employment the steps his Department is currently taking to promote the wider adoption of remote and flexible working arrangements; and if he will make a statement on the matter. [26064/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1166/"
       }
     ]
   },
@@ -7877,6 +7885,14 @@
     "constituency": "Dublin South-West",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Ciarán Ahern",
+        "department": "Transport",
+        "heading": "Transport Policy",
+        "question": "261. Deputy Ciarán Ahern asked the Minister for Transport if he supports the transfer of responsibility for alcohol and psychoactive substance testing of aviation personnel from State authorities to individual airlines or other private entities; if the constitutional, employment-law, licensing, criminal-law, privacy, data-protection and fair-procedure implications of such a transfer have been fully examined; and whether consideration has been given to retaining testing as an independent State function while providing the IAA and/or An Garda Síochána with the resources necessary to operate an effective testing regime. [73503/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/261/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Ciarán Ahern",
         "department": "Justice",
@@ -8347,20 +8363,44 @@
         "heading": "Gender Recognition",
         "question": "328. Deputy Paul Murphy asked the Minister for Health the exact number of representatives with direct lived experience who are on the working group for the National Clinical Programme for Gender Healthcare. [70648/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-12-10/328/"
-      },
-      {
-        "date": "2025-12-10",
-        "deputy": "Paul Murphy",
-        "department": "Health",
-        "heading": "Gender Recognition",
-        "question": "331. Deputy Paul Murphy asked the Minister for Health if she will confirm that the clinician in the recording mentioned during the trans healthcare Dáil debate on 3 December 2025 (details supplied) has no involvement in the National Clinical Programme for Gender Healthcare, including as a member of the working group or clinical advisory group. [70651/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-10/331/"
       }
     ]
   },
   {
     "constituency": "Dublin West",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Emer Currie",
+        "department": "Enterprise",
+        "heading": "Artificial Intelligence",
+        "question": "446. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment for an update on implementation of the action in the 2025 Action Plan on Competitiveness and Productivity to “publish guidance and support for innovative companies on compliance with the EU AI Act and other sectoral regulations, with a particular focus on SMEs and startups. [74382/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/446/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Emer Currie",
+        "department": "Enterprise",
+        "heading": "Artificial Intelligence",
+        "question": "447. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment the plans for enhanced AI and digital vouchers proposed as part of the Intelligence:Applied Programme; and the way in which this initiative relates to the review of the grow digital voucher scheme and any proposals for enhancements to that scheme. [74381/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/447/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Emer Currie",
+        "department": "Enterprise",
+        "heading": "Artificial Intelligence",
+        "question": "448. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment the terms of reference and membership of the new National AI Literacy Taskforce established under the Intelligence:Applied Programme. [74380/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/448/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Roderic O'Gorman",
+        "department": "Enterprise",
+        "heading": "Departmental Staff",
+        "question": "451. Deputy Roderic O'Gorman asked the Minister for Enterprise, Tourism and Employment to provide the number of full-time equivalent staff within the climate action unit or division of his Department from 2020 to 2026 to date, broken down by year, in tabular form. [73978/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/451/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Roderic O'Gorman",
@@ -8808,38 +8848,6 @@
         "heading": "Work Permits",
         "question": "727. Deputy Ruth Coppinger asked the Minister for Enterprise, Tourism and Employment to consider a review of a work permit application for a person (details supplied); and if he will make a statement on the matter. [44189/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/727/"
-      },
-      {
-        "date": "2026-05-26",
-        "deputy": "Roderic O'Gorman",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "406. Deputy Roderic O'Gorman asked the Minister for Transport the current status and expected timeline for progressing the proposal in the All-Island Strategic Rail Review to install a curve at Limerick Junction to enable trains travelling on the Cork-Dublin line to connect with the Limerick-Waterford line; whether this project has been subject to any feasibility, design, appraisal or cost-benefit work to date; whether any specific funding has been allocated for the project; and if he will make a statement on the matter. [39923/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/406/"
-      },
-      {
-        "date": "2026-05-26",
-        "deputy": "Ruth Coppinger",
-        "department": "Enterprise",
-        "heading": "Work Permits",
-        "question": "519. Deputy Ruth Coppinger asked the Minister for Enterprise, Tourism and Employment to report on the application renewal of a work permit (details supplied); and if he will make a statement on the matter. [39530/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/519/"
-      },
-      {
-        "date": "2026-05-26",
-        "deputy": "Ruth Coppinger",
-        "department": "Enterprise",
-        "heading": "Work Permits",
-        "question": "520. Deputy Ruth Coppinger asked the Minister for Enterprise, Tourism and Employment to report on the application renewal of a work permit (details supplied); and if he will make a statement on the matter. [39531/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/520/"
-      },
-      {
-        "date": "2026-05-26",
-        "deputy": "Ruth Coppinger",
-        "department": "Enterprise",
-        "heading": "Work Permits",
-        "question": "521. Deputy Ruth Coppinger asked the Minister for Enterprise, Tourism and Employment in instances where the approval an application for the renewal of a work permit is significantly delayed through no fault of the permit holder but eventually approved and where the successful renewal is accompanied by a higher minimum annual remuneration and if that higher minimum annual remuneration be back dated to the time of the prior permit's expiration; and if he will make a statement on the matter. [39576/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/521/"
       }
     ]
   },
@@ -9332,6 +9340,14 @@
     "constituency": "Galway East",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Louis O'Hara",
+        "department": "Culture",
+        "heading": "Swimming Pools",
+        "question": "169. Deputy Louis O'Hara asked the Minister for Culture, Communications and Sport if he will work in conjunction with Galway County Council to progress a publicly owned swimming pool in Loughrea. [73537/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/169/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Louis O'Hara",
         "department": "Transport",
@@ -9802,20 +9818,28 @@
         "heading": "Road Traffic Accidents",
         "question": "218. Deputy Louis O'Hara asked the Minister for Transport the way in which road collision data is compiled; the agency or body that is responsible for compiling these statistics; if his Department have access to this data including the location of collisions; whether his Department is undergoing work to identify the most dangerous roads in the State based on this data; and if he will make a statement on the matter. [18511/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-18/218/"
-      },
-      {
-        "date": "2026-03-05",
-        "deputy": "Louis O'Hara",
-        "department": "Transport",
-        "heading": "Air Safety",
-        "question": "283. Deputy Louis O'Hara asked the Minister for Transport given the proposals to increase traffic volumes at Dublin Airport, if a company (details supplied) has given his Department written confirmation that they can safely manage the additional flights without having to rely on controllers agreeing to work on their days off, and that the company has a plan to ensure adequate staffing to handle increased traffic volumes; and if he will make a statement on the matter. [17925/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-05/283/"
       }
     ]
   },
   {
     "constituency": "Galway West",
     "questions": [
+      {
+        "date": "2026-10-22",
+        "deputy": "Mairéad Farrell",
+        "department": "Public Expenditure",
+        "heading": "Budget 2027",
+        "question": "3. Deputy Mairéad Farrell asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation to give an update on the way in which public expenditure within budget 2027 will impact on workers and families struggling with the cost-of-living. [74674/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/3/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Mairéad Farrell",
+        "department": "Education",
+        "heading": "School Staff",
+        "question": "489. Deputy Mairéad Farrell asked the Minister for Education and Youth if her attention has been drawn to issues regarding the transparency of recruitment and interview processes for primary school teaching positions; and if her Department has carried out work to increase transparency in the recruitment process for primary school teachers. [73881/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/489/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "John Connolly",
@@ -10279,28 +10303,28 @@
         "heading": "Youth Work Projects",
         "question": "514. Deputy John Connolly asked the Minister for Justice, Home Affairs and Migration the number of youth diversion projects operating in County Galway; the staffing cohort associated with each project; the number of participants at each project; and if he will make a statement on the matter. [65009/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-11-20/514/"
-      },
-      {
-        "date": "2025-11-20",
-        "deputy": "Mairéad Farrell",
-        "department": "Culture",
-        "heading": "Telecommunications Infrastructure",
-        "question": "20. Deputy Mairéad Farrell asked the Minister for Culture, Communications and Sport to provide an update on the work his Department is doing to improve communication infrastructure, and in particular to improve access to communication services during and after strong storms; if he will provide an update on the work his Department has carried out since the publication on the review of Storm Éowyn in October 2025; and if he will make a statement on the matter. [64220/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-20/20/"
-      },
-      {
-        "date": "2025-09-30",
-        "deputy": "John Connolly",
-        "department": "Education",
-        "heading": "Workplace Relations Commission",
-        "question": "444. Deputy John Connolly asked the Minister for Education and Youth the current status of talks commenced at the Workplace Relations Commission (details supplied); and if she will make a statement on the matter. [51333/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-09-30/444/"
       }
     ]
   },
   {
     "constituency": "Kerry",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Michael Cahill",
+        "department": "Enterprise",
+        "heading": "Tourism Funding",
+        "question": "441. Deputy Michael Cahill asked the Minister for Enterprise, Tourism and Employment to consider the points raised in correspondence (details supplied) and allow for larger supports for bed and breakfasts especially in rural areas, where they support tourism and local employment. [73843/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/441/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Michael Healy-Rae",
+        "department": "Enterprise",
+        "heading": "Business Supports",
+        "question": "454. Deputy Michael Healy-Rae asked the Minister for Enterprise, Tourism and Employment to provide details on the €15 million package for rural pubs; and the way in which the package will work. [74202/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/454/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Pa Daly",
@@ -10764,28 +10788,28 @@
         "heading": "Health Services",
         "question": "1052. Deputy Michael Cahill asked the Minister for Health further to Parliamentary Question No. 2778 of 14 April 2026 (details supplied), if she will confirm the length of time these vacancies have existed; if they will be filled in a temporary capacity pending permanent appointments; her views that there will be additional vacancies due to sick leave and maternity leave, and that the HSE has a 9.57% absence rate for staff who work in patient and client care positions; her views on whether patients are receiving the best care and service, with this level of vacancy; and if she will make a statement on the matter. [34226/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/1052/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Michael Cahill",
-        "department": "Justice",
-        "heading": "Work Permits",
-        "question": "840. Deputy Michael Cahill asked the Minister for Justice, Home Affairs and Migration to expedite a work visa (details supplied); and if he will make a statement on the matter. [34784/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/840/"
-      },
-      {
-        "date": "2026-04-30",
-        "deputy": "Michael Cahill",
-        "department": "Education",
-        "heading": "Cost of Living Issues",
-        "question": "313. Deputy Michael Cahill asked the Minister for Education and Youth if consideration will be given to the cost-of-living crisis and ensure that low to middle-income workers are a priority in the upcoming budget; and if she will make a statement on the matter. [31678/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-30/313/"
       }
     ]
   },
   {
     "constituency": "Kildare North",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Aidan Farrelly",
+        "department": "Transport",
+        "heading": "Cross-Border Co-operation",
+        "question": "356. Deputy Aidan Farrelly asked the Minister for Transport the extent to which he and or his officials have engaged with the Department of Infrastructure in Northern Ireland in respect of a reciprocal arrangement for smaller passenger vans (details supplied) and so on, to operate in each other's jurisdictions; if he has consulted with Tourism Ireland in respect of same; and if he has engaged with the Minister for Enterprise, Tourism and Employment regarding same. [73783/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/356/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Joe Neville",
+        "department": "Culture",
+        "heading": "Social Media",
+        "question": "164. Deputy Joe Neville asked the Minister for Culture, Communications and Sport the Bills his department may be working on with the help of Coimisiún na Meán and the Garda to address the issue of antisocial behaviour being recorded and posted online on social media by mainly teenagers. [74064/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/164/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Naoise Ó Cearúil",
@@ -11249,22 +11273,6 @@
         "heading": "Work Permits",
         "question": "1186. Deputy Aidan Farrelly asked the Minister for Enterprise, Tourism and Employment the number of work permits issued to persons from outside the UK and EEA intending to take up positions of dentists in the each of the years 2024, 2025 and to-date in 2026, in tabular form. [26662/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1186/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Joe Neville",
-        "department": "Children",
-        "heading": "Disability Services",
-        "question": "2513. Deputy Joe Neville asked the Minister for Children, Disability and Equality the work that has been carried out to help families who have an adult child with Down syndrome who live at home with their parents and who have multiple care needs (details supplied) [25639/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/2513/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Joe Neville",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "747. Deputy Joe Neville asked the Minister for Transport if he will work alongside the NTA to ensure that there is adequate public lighting at Athy Train Station; if he will consider installing a real-time passenger information display board at the same location; and if he will make a statement on the matter. [25538/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/747/"
       }
     ]
   },
@@ -11757,6 +11765,22 @@
     "constituency": "Laois",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Sean Fleming",
+        "department": "Taoiseach",
+        "heading": "Employment Data",
+        "question": "181. Deputy Sean Fleming asked the Taoiseach the number of people in employment in County Laois in 2022; and the current estimate level of employment in 2026. [73483/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/181/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Sean Fleming",
+        "department": "Enterprise",
+        "heading": "Employment Rights",
+        "question": "432. Deputy Sean Fleming asked the Minister for Enterprise, Tourism and Employment to respond to matters raised in correspondence (details supplied). [73523/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/432/"
+      },
+      {
         "date": "2026-09-23",
         "deputy": "William Aird",
         "department": "Enterprise",
@@ -12219,22 +12243,6 @@
         "heading": "Dental Services",
         "question": "1002. Deputy Brian Stanley asked the Minister for Health if Tullamore Hospital is currently prevented from outsourcing work to clear the orthodontic waiting lists; if the hospital is prevented from outsourcing this and from utilising the services for example, of the National Treatment Purchase fund; and if she will make a statement on the matter. [62962/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-11-18/1002/"
-      },
-      {
-        "date": "2025-11-18",
-        "deputy": "William Aird",
-        "department": "Health",
-        "heading": "Covid-19 Pandemic",
-        "question": "1082. Deputy William Aird asked the Minister for Health if she will reconsider recognising long covid as an occupational illness for health care workers currently availing of the special scheme of paid leave; the number of staff currently availing of this scheme; and if she will make a statement on the matter. [63400/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-18/1082/"
-      },
-      {
-        "date": "2025-11-18",
-        "deputy": "William Aird",
-        "department": "Enterprise",
-        "heading": "Job Creation",
-        "question": "399. Deputy William Aird asked the Minister for Enterprise, Tourism and Employment the total annual funding received by local enterprise offices in each local authority area in each of the past five years, in tabular form; and if he will make a statement on the matter. [62748/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-11-18/399/"
       }
     ]
   },
@@ -13185,6 +13193,22 @@
     "constituency": "Louth",
     "questions": [
       {
+        "date": "2026-10-22",
+        "deputy": "Ged Nash",
+        "department": "Public Expenditure",
+        "heading": "Public Expenditure Policy",
+        "question": "2. Deputy Ged Nash asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation to provide details of his proposed public spending efficiency task force; its terms of reference and membership, and when the task force will commence its work. [75204/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/2/"
+      },
+      {
+        "date": "2026-10-20",
+        "deputy": "Ruairí Ó Murchú",
+        "department": "Culture",
+        "heading": "Departmental Policies",
+        "question": "160. Deputy Ruairí Ó Murchú asked the Minister for Culture, Communications and Sport to confirm whether the proposed Culture Card is still under consideration by his Department; and whether work will continue to develop the card for launch at a later date. [73991/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/160/"
+      },
+      {
         "date": "2026-10-13",
         "deputy": "Erin McGreehan",
         "department": "Climate",
@@ -13647,22 +13671,6 @@
         "heading": "Northern Ireland",
         "question": "28. Deputy Ruairí Ó Murchú asked the Taoiseach if he will report on the work of the shared island unit in his Department. [26723/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-26/28/"
-      },
-      {
-        "date": "2026-05-21",
-        "deputy": "Erin McGreehan",
-        "department": "Justice",
-        "heading": "An Garda Síochána",
-        "question": "285. Deputy Erin McGreehan asked the Minister for Justice, Home Affairs and Migration the number of outstanding Garda vetting applications for early years childcare workers. [38452/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-21/285/"
-      },
-      {
-        "date": "2026-05-21",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Rural",
-        "heading": "Community Development Projects",
-        "question": "122. Deputy Ruairí Ó Murchú asked the Minister for Rural and Community Development and the Gaeltacht if he will provide an update on the work being carried out by his Department to ensure the viability of community centres and community and voluntary organisations in County Louth, through the provision of capital and non-capital funding; and if he will make a statement on the matter. [38263/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-21/122/"
       }
     ]
   },
@@ -16095,6 +16103,14 @@
     "constituency": "Sligo-Leitrim",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Eamon Scanlon",
+        "department": "Enterprise",
+        "heading": "Work Permits",
+        "question": "440. Deputy Eamon Scanlon asked the Minister for Enterprise, Tourism and Employment whether a person (details supplied) who transferred from employment under a critical skills employment permit to a position with an organisation in 2025 required a new employment permit; and the options available to regularise their position if a permit was required but not obtained. [73723/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/440/"
+      },
+      {
         "date": "2026-10-13",
         "deputy": "Eamon Scanlon",
         "department": "Health",
@@ -16275,6 +16291,14 @@
   {
     "constituency": "Tipperary North",
     "questions": [
+      {
+        "date": "2026-10-20",
+        "deputy": "Alan Kelly",
+        "department": "Enterprise",
+        "heading": "Protected Disclosures",
+        "question": "452. Deputy Alan Kelly asked the Minister for Enterprise, Tourism and Employment when his Department last reviewed its policies, operations and handling of protected disclosures under all relevant protected disclosures legislation. [74433/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/452/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "Ryan O'Meara",
@@ -16746,14 +16770,6 @@
         "heading": "Public Sector Pay",
         "question": "557. Deputy Alan Kelly asked the Minister for Housing, Local Government and Heritage the historical pay-scales for jobs outside the Dublin area (details supplied) from 2013 to date, in tabular form. [55258/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-10-14/557/"
-      },
-      {
-        "date": "2025-10-14",
-        "deputy": "Ryan O'Meara",
-        "department": "Health",
-        "heading": "Primary Care Centres",
-        "question": "862. Deputy Ryan O'Meara asked the Minister for Health the total number of job posts anticipated for the Nenagh primary care centre; the total number of new posts anticipated for the Nenagh primary care centre; if she will provide a breakdown of these new posts by job title or position; when and where these new posts will be advertised; and if she will make a statement on the matter. [54939/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-10-14/862/"
       }
     ]
   },
@@ -18509,6 +18525,14 @@
     "constituency": "Wicklow-Wexford",
     "questions": [
       {
+        "date": "2026-10-20",
+        "deputy": "Fionntán Ó Súilleabháin",
+        "department": "Foreign",
+        "heading": "EU Presidency",
+        "question": "207. Deputy Fionntán Ó Súilleabháin asked the Minister for Foreign Affairs and Trade the total financial cost and security assessment criteria behind choosing a location (details supplied) for the recent EU Defence and Foreign Affairs Ministers' meetings; the reasons a civilian community was selected over secluded venues; the total number of Defence Forces and Garda personnel deployed; the level of maritime and aviation restrictions; if local community and business disruptions were assessed; and if standard guidelines exist for Garda interaction with local workers, such as beekeepers, during security lockdowns. [74179/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/207/"
+      },
+      {
         "date": "2026-10-15",
         "deputy": "Malcolm Byrne",
         "department": "Enterprise",
@@ -18979,14 +19003,6 @@
         "heading": "Employment Data",
         "question": "2. Deputy Malcolm Byrne asked the Taoiseach the number of persons recorded as unemployed in the State at the end of each year from 1986 to 2025, in tabular form. [23008/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-25/2/"
-      },
-      {
-        "date": "2026-03-24",
-        "deputy": "Malcolm Byrne",
-        "department": "Enterprise",
-        "heading": "Artificial Intelligence",
-        "question": "429. Deputy Malcolm Byrne asked the Minister for Enterprise, Tourism and Employment to provide an update on the development of artificial intelligence sandboxes. [21613/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-24/429/"
       }
     ]
   }
