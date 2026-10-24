@@ -9,7 +9,7 @@
     "security:audit": "npm audit"
   },
   "dependencies": {
-    "mapshaper": "0.7.55"
+    "mapshaper": "^0.7.98"
   },
   "engines": {
     "node": ">=22.12.0 <25"
