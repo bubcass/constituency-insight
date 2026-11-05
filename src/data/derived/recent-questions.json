@@ -4,6 +4,14 @@
     "questions": [
       {
         "date": "2026-11-03",
+        "deputy": "Catherine Callaghan",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "102. Deputy Catherine Callaghan asked the Minister for Defence whether peace enforcement missions are a new departure for Ireland or whether members of the Defence Forces have historically participated in UN and UN-authorised operations involving robust mandates and the potential use of force to protect civilians, uphold mission mandates or maintain international peace and security. [77449/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/102/"
+      },
+      {
+        "date": "2026-11-03",
         "deputy": "Peter 'Chap' Cleere",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -473,14 +481,6 @@
         "heading": "Planning Issues",
         "question": "381. Deputy Catherine Callaghan asked the Minister for Housing, Local Government and Heritage whether he is satisfied that communities affected by strategic infrastructure developments, SIDs, have adequate opportunities to participate in the planning process; and if he will outline any proposals to enhance public participation. [70347/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/381/"
-      },
-      {
-        "date": "2026-10-06",
-        "deputy": "Catherine Callaghan",
-        "department": "Agriculture",
-        "heading": "Renewable Energy Generation",
-        "question": "492. Deputy Catherine Callaghan asked the Minister for Agriculture, Food and the Marine the amount of land owned by Coillte currently designated or leased for onshore wind energy developments in County Kilkenny; the criteria used by Coillte when selecting sites for renewable energy projects; and if he will make a statement on the matter. [70345/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/492/"
       }
     ]
   },
@@ -1482,6 +1482,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/37/"
       },
       {
+        "date": "2026-11-03",
+        "deputy": "Noel McCarthy",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "137. Deputy Noel McCarthy asked the Minister for Defence to outline the measures her Department is taking to encourage recruitment to the Reserve Defence Forces. [77381/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/137/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "James O'Connor",
         "department": "Public Expenditure",
@@ -1928,20 +1936,20 @@
         "heading": "Special Educational Needs",
         "question": "355. Deputy Pat Buckley asked the Minister for Education and Youth to provide ring-fenced funding for additional staffing, specialist input and other control measures identified as necessary through individual and workplace risk assessment in special education. [72150/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/355/"
-      },
-      {
-        "date": "2026-10-13",
-        "deputy": "Pat Buckley",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "377. Deputy Pat Buckley asked the Minister for Education and Youth to calculate the true cost of workplace violence in special education including assault leave, ordinary sick leave, substitution, occupational health, healthcare, staff turnover and long-term absence; and to compare it with the cost of prevention. [72142/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/377/"
       }
     ]
   },
   {
     "constituency": "Cork North-Central",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Defence",
+        "heading": "Legislative Process",
+        "question": "100. Deputy Pádraig O'Sullivan asked the Minister for Defence the timeline for progressing the Defence (Amendment) Bill 2026 through the Dáil and Seanad, given that it was published in late June 2026 and is due to come before the Dáil early in this Oireachtas session; and whether the Bill remains on track for enactment by the end of the year. [69260/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/100/"
+      },
       {
         "date": "2026-10-22",
         "deputy": "Colm Burke",
@@ -2413,14 +2421,6 @@
         "heading": "Tobacco Control Measures",
         "question": "463. Deputy Ken O'Flynn asked the Minister for Health the number of targeted compliance checks carried out by the HSE since 2 February 2026 to detect the sale of tobacco products or nicotine inhaling products without a licence, by county and separately for Cork city and Cork County; the number of premises found to be selling without a licence; the enforcement action taken, including prosecutions; and if she will make a statement on the matter. [75277/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/463/"
-      },
-      {
-        "date": "2026-10-22",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Tobacco Control Measures",
-        "question": "481. Deputy Ken O'Flynn asked the Minister for Health the number of retail licences granted to date under the Public Health (Tobacco Products and Nicotine Inhaling Products) Act 2023, broken down by licence type, that is, tobacco products only, nicotine inhaling products only, and both, by county, separately for the administrative areas of Cork City Council and Cork County Council, and by retail premises and online sales; and if she will make a statement on the matter. [75273/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/481/"
       }
     ]
   },
@@ -2914,6 +2914,30 @@
     "questions": [
       {
         "date": "2026-11-03",
+        "deputy": "Donnchadh Ó Laoghaire",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "94. Deputy Donnchadh Ó Laoghaire asked the Minister for Defence her views on the Government's proposal to end the requirement for a UN mandate for the deployment of Irish personnel as part of an international force. [77955/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/94/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Donnchadh Ó Laoghaire",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "96. Deputy Donnchadh Ó Laoghaire asked the Minister for Defence if and when she will provide for permission for NCOs to participate in the First Line Reserve of the Defence Forces, given the benefit they can provide in terms of their skill and expertise. [77957/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/96/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Donnchadh Ó Laoghaire",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "97. Deputy Donnchadh Ó Laoghaire asked the Minister for Defence if she will provide a study of the health outcomes relating to former Air Corps aircraft maintenance personnel. [77958/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/97/"
+      },
+      {
+        "date": "2026-11-03",
         "deputy": "Séamus McGrath",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -3367,30 +3391,6 @@
         "heading": "Healthcare Policy",
         "question": "290. Deputy Pádraig Rice asked the Minister for Health if applications for reimbursement for lipoedema treatment under the Cross Border Healthcare Directive have been placed on hold, delayed or otherwise prevented from progressing pending clinical review or clinical advice; if so, the date on which this commenced; the reason for the decision; the number of applications affected; and the anticipated timeframe for resolving the matter. [71115/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/290/"
-      },
-      {
-        "date": "2026-10-08",
-        "deputy": "Pádraig Rice",
-        "department": "Health",
-        "heading": "Healthcare Policy",
-        "question": "291. Deputy Pádraig Rice asked the Minister for Health if there has been any change since 29 August 2025 to the assessment, processing or reimbursement of applications relating to the treatment of lipoedema under the Cross Border Healthcare Directive; if standard applications for treatment of the limbs under the Z01B code are now routinely being referred for clinical review; the date on which any such change was introduced; and the person or body that authorised the change. [71114/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/291/"
-      },
-      {
-        "date": "2026-10-08",
-        "deputy": "Pádraig Rice",
-        "department": "Health",
-        "heading": "Healthcare Policy",
-        "question": "293. Deputy Pádraig Rice asked the Minister for Health the reason any change to the processing, clinical review or eligibility requirements for lipoedema applications under the Cross Border Healthcare Directive was not communicated to patients in advance, having regard to a written commitment (details supplied). [71124/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/293/"
-      },
-      {
-        "date": "2026-10-08",
-        "deputy": "Pádraig Rice",
-        "department": "Health",
-        "heading": "Healthcare Policy",
-        "question": "294. Deputy Pádraig Rice asked the Minister for Health the number of applications for reimbursement relating to lipoedema treatment under the Cross Border Healthcare Directive that are currently outstanding, broken down by month of receipt from October 2025 to date; the number currently awaiting administrative processing, clinical review or clinical advice respectively; the number processed and reimbursed during the same period; and the current average and longest processing time for such applications. [71125/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-08/294/"
       }
     ]
   },
@@ -4408,6 +4408,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/19/"
       },
       {
+        "date": "2026-11-03",
+        "deputy": "Naoise Ó Muirí",
+        "department": "Defence",
+        "heading": "United Nations",
+        "question": "148. Deputy Naoise Ó Muirí asked the Minister for Defence if she will reaffirm Ireland's commitment to United Nations peacekeeping; to outline the contribution made by Irish Defence Forces personnel to UN missions over recent decades; and to clarify whether the proposed legislation will in any way diminish Ireland's ability to participate in UN-led peacekeeping operations. [77494/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/148/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "Barry Heneghan",
         "department": "Enterprise",
@@ -4838,14 +4846,6 @@
         "heading": "Cabinet Committees",
         "question": "8. Deputy Cian O'Callaghan asked the Taoiseach when the Cabinet committee on the economy, trade and competitiveness will meet next. [69993/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/8/"
-      },
-      {
-        "date": "2026-10-20",
-        "deputy": "Cian O'Callaghan",
-        "department": "Taoiseach",
-        "heading": "Cabinet Committees",
-        "question": "14. Deputy Cian O'Callaghan asked the Taoiseach when the Cabinet committee on the economy, trade and competitiveness will meet next. [67182/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/14/"
       }
     ]
   },
@@ -4859,6 +4859,14 @@
         "heading": "Cabinet Committees",
         "question": "10. Deputy James Geoghegan asked the Taoiseach when the Cabinet committee on infrastructure will meet next. [69903/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/10/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "James Geoghegan",
+        "department": "Defence",
+        "heading": "Legislative Process",
+        "question": "111. Deputy James Geoghegan asked the Minister for Defence to outline the constitutional protections relating to Ireland's participation in an EU common defence, including those introduced following the Nice treaty referendum in 2002; to clarify whether the proposed reforms to the triple lock have any implications for these protections; and if she will make a statement on the matter. [77518/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/111/"
       },
       {
         "date": "2026-10-22",
@@ -5323,14 +5331,6 @@
         "heading": "Insurance Coverage",
         "question": "314. Deputy Ivana Bacik asked the Tánaiste and Minister for Finance if he is aware of reports that different properties on the same street or development are receiving different treatment by the same insurers in terms of flood insurance cover; his plans to ensure that flood insurance is extended to buildings with limited or no flood insurance cover, excluding NDP flood relief schemes; the progress made to implement action 17 of the Action Plan for Insurance Reform 2025 to 2029; and if action 17 will be completed by 2029. [68258/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/314/"
-      },
-      {
-        "date": "2026-09-29",
-        "deputy": "Ivana Bacik",
-        "department": "Public Expenditure",
-        "heading": "Office of Public Works",
-        "question": "335. Deputy Ivana Bacik asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation further to Parliamentary Question No. 924 of 7 September 2026, seeking to establish the proportion of earned revenue that is reinvested in the Iveagh Gardens, to confirm the amount invested in each of the past five years; the stated purpose of monies returned for the benefit of Iveagh Gardens; the value of reinvestment for same, in tabular form; the amount of earned revenue reinvested, specifically for the Office of Public Works's conservation plan for the gardens; his views on the need to ringfence monies raised in rent for conservation and if he will make a statement on the matter. [68259/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-29/335/"
       }
     ]
   },
@@ -7764,11 +7764,35 @@
     "questions": [
       {
         "date": "2026-11-03",
+        "deputy": "Maeve O'Connell",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "99. Deputy Maeve O'Connell asked the Minister for Defence if members of the Reserve Defence Forces have received an allowance for additional duties undertaken during Ireland's term as EU President. [75853/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/99/"
+      },
+      {
+        "date": "2026-11-03",
         "deputy": "Sinéad Gibney",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
         "question": "15. Deputy Sinéad Gibney asked the Taoiseach when the Cabinet committee on infrastructure will meet next. [71965/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/15/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Sinéad Gibney",
+        "department": "Defence",
+        "heading": "Legislative Measures",
+        "question": "95. Deputy Sinéad Gibney asked the Minister for Defence to provide an update on her plans to remove the requirement for UN authorisation via the Security Council or the General Assembly in order to deploy Irish troops overseas as part of an international force. [77487/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/95/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Sinéad Gibney",
+        "department": "Defence",
+        "heading": "United Nations",
+        "question": "103. Deputy Sinéad Gibney asked the Minister for Defence the engagement her Department has had on joining one of the ten UN peacekeeping missions outside of UNIFIL, or any global non-UN missions which have a UN mandate; and if she will make a statement on the matter. [77437/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/103/"
       },
       {
         "date": "2026-10-22",
@@ -8217,30 +8241,6 @@
         "heading": "EU Presidency",
         "question": "397. Deputy Sinéad Gibney asked the Minister for Culture, Communications and Sport to provide a schedule of EU Presidency events being hosted by his Department broken down by name of the event, location, date, State agencies or other departments involved in the organising of the event; and cost or budgeted cost of same (including costs borne by state agencies under its aegis), in tabular form. [71399/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/397/"
-      },
-      {
-        "date": "2026-10-13",
-        "deputy": "Sinéad Gibney",
-        "department": "Housing",
-        "heading": "EU Presidency",
-        "question": "410. Deputy Sinéad Gibney asked the Minister for Housing, Local Government and Heritage to provide a schedule of EU Presidency events being hosted by his Department broken down by name of the event, location, date, State agencies or other departments involved in the organising of the event; and cost or budgeted cost of same (including costs borne by state agencies under its aegis), in tabular form. [71407/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/410/"
-      },
-      {
-        "date": "2026-10-13",
-        "deputy": "Sinéad Gibney",
-        "department": "Social",
-        "heading": "EU Presidency",
-        "question": "479. Deputy Sinéad Gibney asked the Minister for Social Protection to provide a schedule of EU Presidency events being hosted by his Department broken down by name of the event, location, date, State agencies or other departments involved in the organising of the event; and cost or budgeted cost of same (including costs borne by state agencies under its aegis), in tabular form. [71411/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/479/"
-      },
-      {
-        "date": "2026-10-13",
-        "deputy": "Sinéad Gibney",
-        "department": "Justice",
-        "heading": "EU Presidency",
-        "question": "515. Deputy Sinéad Gibney asked the Minister for Justice, Home Affairs and Migration to provide a schedule of EU Presidency events being hosted by his Department, broken down by the name of the event, location, date and State agencies or other Departments involved in the organising of the event; and cost or budgeted cost of same, including costs borne by State agencies under its aegis, in tabular form. [71408/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-13/515/"
       }
     ]
   },
@@ -8749,6 +8749,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/36/"
       },
       {
+        "date": "2026-11-03",
+        "deputy": "Paul Murphy",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "98. Deputy Paul Murphy asked the Minister for Defence to provide a detailed explanation of the similarities and differences between the mandates of UNIFIL and the European Union Support Mission in Lebanon; and if she will make a statement on the matter. [77098/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/98/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "Ciarán Ahern",
         "department": "Public Expenditure",
@@ -9203,14 +9211,6 @@
         "heading": "Departmental Schemes",
         "question": "434. Deputy Paul Murphy asked the Minister for Education and Youth the current status of an application (details supplied); the reason for the delay in progressing the application; and the expected timeline for a decision and, subject to approval, the provision of funding for the proposed extension. [73171/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/434/"
-      },
-      {
-        "date": "2026-10-15",
-        "deputy": "Paul Murphy",
-        "department": "Enterprise",
-        "heading": "Employment Rights",
-        "question": "410. Deputy Paul Murphy asked the Minister for Enterprise, Tourism and Employment if his previous commitment to make a decision to abolish subminimum pay rates for young workers in 2029 still stands; and if he will make a statement on the matter. [72532/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/410/"
       }
     ]
   },
@@ -9232,6 +9232,14 @@
         "heading": "Cross-Border Co-operation",
         "question": "27. Deputy Emer Currie asked the Taoiseach if he will report on the work of the shared island unit in his Department. [75643/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/27/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Emer Currie",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "175. Deputy Emer Currie asked the Minister for Defence to provide an update on her recent visit to Lebanon, including her engagements with Irish peacekeepers serving with UNIFIL, and her assessment of the situation on the ground; and if she will make a statement on the matter. [77466/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/175/"
       },
       {
         "date": "2026-11-03",
@@ -9688,14 +9696,6 @@
         "heading": "Flexible Work Practices",
         "question": "836. Deputy Emer Currie asked the Minister for Children, Disability and Equality the timing and publication of the review on the work life balance Bill provisions for flexible working, including consideration of extending the right to request flexible work to everyone. [74025/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/836/"
-      },
-      {
-        "date": "2026-10-20",
-        "deputy": "Emer Currie",
-        "department": "Health",
-        "heading": "Health Screening Programmes",
-        "question": "1090. Deputy Emer Currie asked the Minister for Health whether the National Cancer Control Programme has assessed the capacity of symptomatic breast clinics and radiology departments to meet demand for post-treatment breast cancer surveillance; and whether additional investment is planned to address capacity constraints and delays. [74104/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/1090/"
       }
     ]
   },
@@ -10673,6 +10673,14 @@
     "constituency": "Galway West",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "Seán Kyne",
+        "department": "Defence",
+        "heading": "Rights of Way",
+        "question": "101. Deputy Seán Kyne asked the Minister for Defence the measures being considered by her Department, in consultation with Galway City Council, to provide alternative access and connectivity following the closure of the walkway along the railway line at Dún Uí Mhaoilíosa Barracks, Renmore, Galway. [77456/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/101/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "John Connolly",
         "department": "Public Expenditure",
@@ -11143,14 +11151,6 @@
         "heading": "Primary Care Centres",
         "question": "1061. Deputy John Connolly asked the Minister for Health the progress made to date under the Primary Care Centres Programme in Galway and surrounding areas, specifically an update on the progress made on the provision of a primary care centre in Claregalway, forthcoming stages of programme delivery; the expected timelines for implementation; the estimated cost range for the programme; and if she will make a statement on the matter. [74183/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/1061/"
-      },
-      {
-        "date": "2026-10-20",
-        "deputy": "John Connolly",
-        "department": "Health",
-        "heading": "Primary Care Centres",
-        "question": "1063. Deputy John Connolly asked the Minister for Health the progress made to date under the Primary Care Centres Programme to provide a primary care centre for South Connemara, forthcoming stages of programme delivery; the expected timelines for implementation; the estimated cost range for the programme; and if she will make a statement on the matter. [74182/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/1063/"
       }
     ]
   },
@@ -13098,6 +13098,14 @@
     "constituency": "Limerick City",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "Willie O'Dea",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "136. Deputy Willie O'Dea asked the Minister for Defence for a report on the Reserve Defence Forces regeneration plan. [76430/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/136/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "Conor Sheehan",
         "department": "Health",
@@ -13568,14 +13576,6 @@
         "heading": "International Protection",
         "question": "469. Deputy Conor Sheehan asked the Minister for Justice, Home Affairs and Migration if the National Standards on Accommodation offered to people in the International Protection process are being reviewed and updated in line with recent legislative and policy changes; the status of any such work; the person or body leading it; and the stakeholders are being consulted. [70667/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/469/"
-      },
-      {
-        "date": "2026-10-06",
-        "deputy": "Conor Sheehan",
-        "department": "Justice",
-        "heading": "International Protection",
-        "question": "470. Deputy Conor Sheehan asked the Minister for Justice, Home Affairs and Migration the number of accommodation centres currently under the remit of HIQA, the number of accommodation centres not under the remit of HIQA; and the accommodation centres that do and do not come under the remit of HIQA, in tabular form. [70679/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-06/470/"
       }
     ]
   },
@@ -14562,6 +14562,14 @@
       },
       {
         "date": "2026-11-03",
+        "deputy": "Erin McGreehan",
+        "department": "Defence",
+        "heading": "Defence Forces",
+        "question": "105. Deputy Erin McGreehan asked the Minister for Defence for an update on the final dispatch of Defence Forces peacekeepers to the UNIFIL mission. [76828/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/105/"
+      },
+      {
+        "date": "2026-11-03",
         "deputy": "Ruairí Ó Murchú",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -15023,14 +15031,6 @@
         "heading": "Mental Health Services",
         "question": "161. Deputy Ruairí Ó Murchú asked the Minister for Health to provide an update on the progress of the development of ten additional beds at the Drogheda department of psychiatry; and when it is expected these beds will be fully operational. [72817/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/161/"
-      },
-      {
-        "date": "2026-10-15",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Health",
-        "heading": "Nursing Homes",
-        "question": "778. Deputy Ruairí Ó Murchú asked the Minister for Health If a person attending a respite service requires additional support during their respite stay because their disability-related needs cannot be adequately met within the standard staffing/resources available, is the respite service responsible for submitting a business case to the HSE requesting additional funding to provide that support; and if so, the process for submitting such a business case; who within the HSE should the service submit it to; if the respite service expected to make the application, or whether this the responsibility of the individual’s local disability services. [73205/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/778/"
       }
     ]
   },
@@ -16494,6 +16494,14 @@
     "questions": [
       {
         "date": "2026-11-03",
+        "deputy": "John Clendennen",
+        "department": "Defence",
+        "heading": "Legislative Process",
+        "question": "113. Deputy John Clendennen asked the Minister for Defence the way in which the Defence (Amendment) Bill 2026 will ensure that Ireland’s long-standing policy of military neutrality is maintained while providing greater autonomy in the deployment of Defence Forces personnel overseas. [77379/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/113/"
+      },
+      {
+        "date": "2026-11-03",
         "deputy": "Tony McCormack",
         "department": "Taoiseach",
         "heading": "Cabinet Committees",
@@ -16963,14 +16971,6 @@
         "heading": "Arts Funding",
         "question": "543. Deputy Carol Nolan asked the Minister for Culture, Communications and Sport the number and value of arts grants awarded since 2023 to organisations engaged in public advocacy or political campaigning activities; and the criteria used to distinguish artistic activity from political advocacy. [74258/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/543/"
-      },
-      {
-        "date": "2026-10-20",
-        "deputy": "Carol Nolan",
-        "department": "Agriculture",
-        "heading": "Budget 2026",
-        "question": "785. Deputy Carol Nolan asked the Minister for Agriculture, Food and the Marine the number of representations received from livestock marts, farming organisations, agricultural co-operatives and representative bodies regarding the reduction in the farmer VAT flat-rate addition since budget 2026; and the organisations from which such representations were received. [73718/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-20/785/"
       }
     ]
   },
