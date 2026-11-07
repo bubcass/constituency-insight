@@ -3,6 +3,14 @@
     "constituency": "Carlow-Kilkenny",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "John McGuinness",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1118. Deputy John McGuinness asked the Minister for Housing, Local Government and Heritage If he will instruct all local authorities to exclude all short term social welfare benefit payments and carers allowance payments when calculating the amount of rent to be paid by a local authority tenant and establish a uniformed approach across the country. [77347/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1118/"
+      },
+      {
         "date": "2026-10-13",
         "deputy": "Natasha Newsome Drennan",
         "department": "Housing",
@@ -473,14 +481,6 @@
         "heading": "Capital Expenditure Programme",
         "question": "149. Deputy Peter 'Chap' Cleere asked the Minister for Finance if any measures are being taken to unlock the significant amount of capital held on deposit accounts in Ireland to support housing and critical infrastructure delivery; and if he will make a statement on the matter. [39055/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/149/"
-      },
-      {
-        "date": "2025-07-15",
-        "deputy": "Peter 'Chap' Cleere",
-        "department": "Finance",
-        "heading": "Vacant Properties",
-        "question": "151. Deputy Peter 'Chap' Cleere asked the Minister for Finance if his Department is looking into mechanisms, including tax relief, to further incentivise the purchase and renovation of vacant homes; and if he will make a statement on the matter. [39054/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/151/"
       }
     ]
   },
@@ -1943,6 +1943,22 @@
     "constituency": "Cork North-Central",
     "questions": [
       {
+        "date": "2026-11-04",
+        "deputy": "Ken O'Flynn",
+        "department": "Defence",
+        "heading": "Climate Action Plan",
+        "question": "13. Deputy Ken O'Flynn asked the Minister for Defence further to Parliamentary Question No. 72855/26, whether the energy costs for Áras an tSáile, Renmore, Galway, set out in the reply relate to the entire building; and the way in which energy costs are apportioned or recharged to the National Shared Services Office and the Department of Agriculture, Food and the Marine as tenants of the building; and if she will make a statement on the matter. [77992/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/13/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Ken O'Flynn",
+        "department": "Housing",
+        "heading": "Citizenship Applications",
+        "question": "1023. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No. 71212/26, whether local authorities record the citizenship or immigration status of the main applicant at the point of allocation of a social housing dwelling; if so, whether the Department will collate and publish that information for each local authority; if not, whether the Department will require it to be recorded once the lawful residency provisions of the Housing and Residential Tenancies (Miscellaneous Provisions) Act 2026 are commenced. [75358/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1023/"
+      },
+      {
         "date": "2026-11-03",
         "deputy": "Ken O'Flynn",
         "department": "Finance",
@@ -1965,6 +1981,38 @@
         "heading": "Departmental Data",
         "question": "2336. Deputy Ken O'Flynn asked the Minister for Health the number of applications for social housing support received by each local authority in 2024, 2025 and to date in 2026 from persons residing in HSE funded residential care settings, including disability residential services. [78440/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2336/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Ken O'Flynn",
+        "department": "Housing",
+        "heading": "Homeless Accommodation",
+        "question": "1145. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage whether his Department has sought information from local authorities regarding State-funded homeless accommodation that lacked required fire-safety certification or compliance since 2020; when the Department was notified, what records of inspections and risk assessments are held, and the steps that were taken to address any identified risks. [77959/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1145/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Ken O'Flynn",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1027. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage whether the Department has issued any guidance to local authorities on assessing social housing support applications; and whether such applicants may be deemed qualified for social housing support while resident in those settings. [75361/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1027/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Ken O'Flynn",
+        "department": "Housing",
+        "heading": "Legislative Measures",
+        "question": "1028. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No. 71213/26, the date on which the lawful residency and habitual residency provisions of the Housing and Residential Tenancies (Miscellaneous Provisions) Act 2026 will be commenced; the date on which guidance for local authorities and applicants will be published; and whether the new criteria will apply to households already qualified for social housing support on the date of commencement. [75360/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1028/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1082. Deputy Pádraig O'Sullivan asked the Minister for Housing, Local Government and Heritage the status of the older persons housing financial contribution scheme; the reason for the curtailment or discontinuation of the scheme, if applicable; whether a review of the scheme has been undertaken; and if he will consider reinstating or expanding the scheme in view of its role in supporting older people to rightsize into more suitable accommodation while increasing the availability of housing stock for local authorities. [76583/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1082/"
       },
       {
         "date": "2026-10-22",
@@ -2373,60 +2421,20 @@
         "heading": "Housing Policy",
         "question": "1851. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage the date on which the Housing Agency review of the older persons housing financial contribution scheme commenced; the date on which that review is expected to conclude; the expected publication date of the action plan on housing for older people; and if he will make a statement on the matter. [62262/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1851/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Justice",
-        "heading": "Housing Policy",
-        "question": "2243. Deputy Ken O'Flynn asked the Minister for Justice, Home Affairs and Migration whether discussions have taken place with local authorities, the Department of Housing, Local Government and Heritage, the Department of Social Protection, and relevant housing and homelessness services regarding the potential consequences of the withdrawal of the accommodation recognition payment, ARP; if he will publish a detailed transition plan setting out the accommodation and support pathway available to each category of beneficiary currently dependent on ARP before the scheme terminates; and if he will make a statement on the matter. [61328/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2243/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "1848. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage the age profile of qualified applicants on the social housing waiting list, broken down by age band and by local authority, for each of the years 2020 to 2025; and if he will make a statement on the matter. [62278/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1848/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Justice",
-        "heading": "Housing Provision",
-        "question": "2566. Deputy Ken O'Flynn asked the Minister for Justice, Home Affairs and Migration the status of the commitment given at the outset of the Rapid Build programme that modular units would be offered to the relevant local authority for social housing after three years of use; and how that commitment is being applied to the Ballinure Way, Mahon, Cork city, and Charleville, County Cork, sites specifically. [60615/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2566/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Justice",
-        "heading": "Housing Provision",
-        "question": "2647. Deputy Ken O'Flynn asked the Minister for Justice, Home Affairs and Migration the decision on the future use of 654 rapid-build housing units (details supplied); following the conclusion of their current use, to confirm if the units will be transferred to local authority housing stock, made available for allocation to households on local authority social housing waiting lists, or for other forms of housing provision; whether his Department assessed the suitability of these units for long-term social housing use; when the Government will make a final decision on the future ownership, management and allocation of these units; and if he will make a statement on the matter. [61752/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/2647/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "1850. Deputy Ken O'Flynn asked the Minister for Housing, Local Government and Heritage the number of housing assistance payment tenancies held by persons aged 60 and over, and by persons aged 66 and over, for each of the years 2020 to 2025; and if he will make a statement on the matter. [62279/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1850/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Ken O'Flynn",
-        "department": "Finance",
-        "heading": "Insurance Coverage",
-        "question": "701. Deputy Ken O'Flynn asked the Tánaiste and Minister for Finance if he will consider introducing measures requiring mortgage lenders to establish a system whereby the continued existence of buildings insurance on a mortgaged property can be verified directly with the relevant insurance provider, rather than requiring individual mortgage holders to provide annual confirmation of insurance to their lender; if he will consider whether such a system could reduce unnecessary administrative burdens on mortgage holders while ensuring that lenders remain adequately protected in respect of their security; and if he will make a statement on the matter. [61188/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/701/"
       }
     ]
   },
   {
     "constituency": "Cork North-West",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "John Paul O'Shea",
+        "department": "Housing",
+        "heading": "Septic Tanks",
+        "question": "1131. Deputy John Paul O'Shea asked the Minister for Housing, Local Government and Heritage the funding allocated and actual expenditure under each domestic wastewater treatment systems grant scheme in 2025 and to date in 2026; the average time from application to decision and from submission of a valid payment claim to payment; the number of approved applications awaiting payment; and the reasons for outstanding payments, broken down by local authority. [77770/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1131/"
+      },
       {
         "date": "2026-10-15",
         "deputy": "John Paul O'Shea",
@@ -2898,14 +2906,6 @@
         "heading": "Housing Provision",
         "question": "293. Deputy John Paul O'Shea asked the Minister for Housing, Local Government and Heritage to outline the current proposals by Cork City Council, Cork County Council and approved housing bodies for the provision of cost-rental homes for 2025 and 2026; and if he will make a statement on the matter. [53310/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-10-07/293/"
-      },
-      {
-        "date": "2025-07-29",
-        "deputy": "Aindrias Moynihan",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "1544. Deputy Aindrias Moynihan asked the Minister for Housing, Local Government and Heritage the number of local authority home loans approved and drawn down for Cork county for 2023, 2024 and 2025 to date, in tabular form; and if he will make a statement on the matter. [42257/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-29/1544/"
       }
     ]
   },
@@ -3539,12 +3539,44 @@
     "constituency": "Donegal",
     "questions": [
       {
+        "date": "2026-11-04",
+        "deputy": "Charles Ward",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "76. Deputy Charles Ward asked the Minister for Housing, Local Government and Heritage whether the review being undertaken under section 51 of the Housing (Miscellaneous Provisions) Act 2024 in respect of the defective concrete blocks grant scheme will include an assessment of the adequacy of the current square metre rates and associated grant costings for remediation, demolition and rebuild works; whether the review will examine the impact of construction inflation and increased building costs on homeowners participating in the scheme; and when he expects the review to be completed and its findings published. [78002/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/76/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Charles Ward",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1128. Deputy Charles Ward asked the Minister for Housing, Local Government and Heritage the steps being taken to ensure a consistent national approach to the administration of the defective concrete blocks grant scheme across all local authorities; whether applicants in Donegal County Council can access the rental accommodation grant prior to the submission of a commencement notice; whether Limerick City and County Council requires a commencement notice to be submitted before rental supports are approved; if this represents a divergence in administrative practice between local authorities; and whether any guidance has been issued by his Department on this matter. [77777/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1128/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Charles Ward",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1130. Deputy Charles Ward asked the Minister for Housing, Local Government and Heritage given that applications to the apartment and duplex defects remediation scheme must be made by an owners' management company, the provisions that will apply to affected duplexes and apartment developments where no owners' management company exists or is operational; the way in which homeowners in such developments can access the scheme; and the steps being taken to ensure that the absence of an owners' management company does not exclude otherwise eligible homeowners from redress. [77769/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1130/"
+      },
+      {
         "date": "2026-11-03",
         "deputy": "Charles Ward",
         "department": "Public Expenditure",
         "heading": "Flood Relief Schemes",
         "question": "555. Deputy Charles Ward asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation whether his Department is currently working with the Department of Housing, Local Government and Heritage on a relocation plan for the nine households at a location (details supplied) whose homes are affected by defective concrete and flood risk; if so, the progress that has been made; and when the plan is expected to be finalised. [75399/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/555/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Pádraig Mac Lochlainn",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1102. Deputy Pádraig Mac Lochlainn asked the Minister for Housing, Local Government and Heritage the reason there is no nationally agreed protocol, based on the updated I.S. 465: 2026, for houses being bought and sold in areas affected by defective concrete blocks; if his attention has been drawn to the fact that the absence of such a protocol has a profound effect on the housing market in those areas with devastating impacts on some homeowners that cannot sell their homes. [77079/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1102/"
       },
       {
         "date": "2026-10-20",
@@ -3985,38 +4017,6 @@
         "heading": "Defective Building Materials",
         "question": "199. Deputy Pádraig Mac Lochlainn asked the Minister for Housing, Local Government and Heritage if he acknowledges that the revision of I.S. 465 strengthens the position of homeowners whose applications were downgraded by the Housing Agency and who have consistently argued that such downgrade decisions were legally and scientifically flawed; and if he will confirm that all downgrade appeals will continue to be heard by the appeals board. [47980/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/199/"
-      },
-      {
-        "date": "2026-06-24",
-        "deputy": "Pádraig Mac Lochlainn",
-        "department": "Housing",
-        "heading": "Defective Building Materials",
-        "question": "200. Deputy Pádraig Mac Lochlainn asked the Minister for Housing, Local Government and Heritage if he will confirm that the defective concrete blocks appeals boards will continue to hear and determine outstanding downgrade appeals without interruption or delay, given that all downgrade appeals determined to date have resulted in the Housing Agency's decisions being annulled; that those appeals were lodged and adjudicated on the basis of the existing I.S. 465 standard at the time; and that the revision of I.S. 465 on 2 June 2026 can only strengthen the position of appellants whose cases were prepared and submitted under the existing standard. [47981/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/200/"
-      },
-      {
-        "date": "2026-06-24",
-        "deputy": "Pádraig Mac Lochlainn",
-        "department": "Housing",
-        "heading": "Defective Building Materials",
-        "question": "201. Deputy Pádraig Mac Lochlainn asked the Minister for Housing, Local Government and Heritage if, in light of the fact that all downgrade appeals heard to date have resulted in the Housing Agency's decisions being annulled, he will direct that cases returned to the Housing Agency for re-assessment be dealt with immediately and as a priority; given that some homeowners have been engaged with the defective concrete blocks scheme since 2021 and their homes have continued to deteriorate in the interim. [47982/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/201/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Pearse Doherty",
-        "department": "Finance",
-        "heading": "Tax Code",
-        "question": "236. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance the estimated first and full year cost of removing stamp duty for first-time buyers on properties below the value of €500,000. [47020/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/236/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Pearse Doherty",
-        "department": "Finance",
-        "heading": "Tax Code",
-        "question": "240. Deputy Pearse Doherty asked the Tánaiste and Minister for Finance the estimated first and full year cost of increasing the rent tax credit with the credit equivalent to 8.3% of an individual’s annual rent, with a minimum credit of €1,500 and a maximum credit of €2,500, per year, clarifying both the full cost and the estimated net cost if the Government has any funding allocated for rent relief in 2027. [47034/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/240/"
       }
     ]
   },
@@ -4994,6 +4994,14 @@
     "constituency": "Dublin Central",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "Daniel Ennis",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1063. Deputy Daniel Ennis asked the Minister for Housing, Local Government and Heritage the capital funding available to local authorities to install, upgrade and maintain gates and access control systems in local authority flat complexes; whether such works are eligible under existing refurbishment or estate regeneration programmes; the amount drawn down by Dublin City Council for such works in each of the years 2024 to 2026; and if he will consider a dedicated funding stream to improve security for local authority tenants affected by anti-social behaviour. [76188/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1063/"
+      },
+      {
         "date": "2026-10-21",
         "deputy": "Daniel Ennis",
         "department": "Housing",
@@ -5339,6 +5347,14 @@
   {
     "constituency": "Dublin Fingal West",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Robert O'Donoghue",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1083. Deputy Robert O'Donoghue asked the Minister for Housing, Local Government and Heritage to provide details of the latest guidelines issued to local authorities in relation to implementation of Section 39 (2)(e) of the miscellaneous Provisions Act 2014 which relates to “Good Faith” HAP tenancies. [76617/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1083/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Grace Boland",
@@ -5810,20 +5826,100 @@
         "heading": "Housing Policy",
         "question": "1061. Deputy Robert O'Donoghue asked the Minister for Housing, Local Government and Heritage whether he will publish any internal reports or analysis undertaken by the Department or the housing agency comparing emergency accommodation and the tenant-in-situ scheme approaches [19341/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-18/1061/"
-      },
-      {
-        "date": "2026-03-18",
-        "deputy": "Robert O'Donoghue",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "1044. Deputy Robert O'Donoghue asked the Minister for Housing, Local Government and Heritage in light of the ongoing homelessness crisis and the Government's decision to restrict the tenant-in-situ scheme; the specific alternative mechanism put in place at the time of the restriction to prevent tenants at risk from entering homelessness; the date this mechanism become operational; and if he will make a statement on the matter. [19236/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-18/1044/"
       }
     ]
   },
   {
     "constituency": "Dublin Mid-West",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Departmental Contracts",
+        "question": "1098. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to provide a list of all contracts entered into by his Department with external consultants; the subject matter of those contracts; the cost of those contracts; and a status update on each of the contracts that is completed, ongoing and so on. [76782/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1098/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Departmental Data",
+        "question": "1065. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage when he intends to publish the Q3 2026 social and affordable housing delivery data. [76190/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1065/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Departmental Data",
+        "question": "1066. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to provide a breakdown of the 9000 new build social housing delivered in 2025 by the following criteria; directly delivered by councils and AHBs on public land; turnkey acquisition; partnership development agreement on private land; and Part V. [76189/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1066/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Departmental Policies",
+        "question": "1093. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the timeframe for the planning policy statement on short-term letting to be published; and whether the Oireachtas Committee on Housing, Local Government and Heritage will have an opportunity to scrutinise the draft statement before it is approved by Cabinet. [76722/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1093/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Housing Policy",
+        "question": "1091. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage for an update on the review of the social housing income eligibility thresholds. [76725/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1091/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1092. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage for an update on the review of the HAP payment limits. [76724/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1092/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Ministerial Responsibilities",
+        "question": "1081. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the number of meetings that have taken place and the dates of these meetings, between his officials and the Department of Justice, Home Affairs and Migration regarding the transfer of responsibility for the Multi-Unit Developments Act 2011 and related functions from the Department of Justice, Home Affairs and Migration to his Department; the additional resources required by his Department to facilitate the transfer of these functions; when further meetings are due to take place; and the steps he is taking to resolve this matter. [76493/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1081/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Planning Issues",
+        "question": "1090. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to provide a list of all sections of the Planning and Development Act 2024 that have not yet been commenced; and to provide the timeline for the commencement of each of these sections, in tabular form. [76726/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1090/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Shane Moynihan",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1032. Deputy Shane Moynihan asked the Minister for Housing, Local Government and Heritage if provision exists within the vacant property refurbishment grant scheme for discretion or exceptional arrangements where a homeowner has complied with all scheme requirements, including verifying and submitting a contractor's valid tax clearance certificate prior to the commencement of works, but is subsequently unable to obtain an updated tax clearance certificate because the contractor has become uncontactable (details supplied); and if he will make a statement on the matter. [75625/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1032/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Shane Moynihan",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1123. Deputy Shane Moynihan asked the Minister for Housing, Local Government and Heritage the treatment will be applied to auto-enrolment pension contributions under My Future Fund when calculating differential rents for local authority tenants; and whether such contributions will be included in the assessment of reckonable income for rent purposes. [77688/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1123/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Shane Moynihan",
+        "department": "Education",
+        "heading": "School Enrolments",
+        "question": "846. Deputy Shane Moynihan asked the Minister for Education and Youth to outline the housing, migration and population data currently informing school capacity planning for the Newcastle-Rathcoole School Planning Area; whether her Department has reviewed its methodology for assessing housing completions following the Comptroller and Auditor General's findings; and if she will make a statement on the matter. [77650/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/846/"
+      },
       {
         "date": "2026-10-21",
         "deputy": "Eoin Ó Broin",
@@ -6215,100 +6311,52 @@
         "heading": "Development Contributions",
         "question": "476. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the total cost to the development levy waiver and water utility connection for each year the waiver has been in operation, the number of homes against which the waiver was claimed in each year; and the average cost of the waiver in each year. [51394/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/476/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "471. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the average cost (both CREL and all-in cost) of the delivery of a cost rental home in 2025. [51389/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/471/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "472. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the average cost of the delivery of an affordable purchase home in 2025. [51390/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/472/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "473. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the average cost per unit of accommodation to carry out a social housing stock condition survey. [51391/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/473/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "474. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the total allocation for sub head A39, DPGs/Improvements/Remedials in Budget 2026. [51392/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/474/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "475. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the average gross and net cost to the Exchequer per year of the 2,328 homeless HAP tenancies set up in 2025. [51393/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/475/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "477. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the total number of new social housing leases entered into in 2025; the average cost per year arising from these leases; the breakdown of lease type and average annual cost of each sub type per unit leased. [51395/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/477/"
-      },
-      {
-        "date": "2026-07-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Planning Issues",
-        "question": "499. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the public consultation and engagement with the Oireachtas Committee on Housing, Local Government and Heritage he intends to undertake with respect to the Sustainable Rural &amp; Gaeltacht Housing DRAFT National Planning Policy. [51824/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/499/"
-      },
-      {
-        "date": "2026-07-02",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "343. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to set out the procedures for updating city and county development plans following the adoption of a national planning policy statement by Government, including statutory timelines for public consultation or adoption of the content of the policy statements into existing development plans. [50730/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-02/343/"
-      },
-      {
-        "date": "2026-07-02",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "342. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage the number of applications for the vacant above the shop grant since the scheme opened; the number of grants approved; the number of grants drawn down; and to provide a breakdown for this information by local authority area. [50635/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-02/342/"
-      },
-      {
-        "date": "2026-07-01",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Approved Housing Bodies",
-        "question": "195. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to provide an update on the five year review of the approved housing body regulatory authority. [50053/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-01/195/"
-      },
-      {
-        "date": "2026-07-01",
-        "deputy": "Eoin Ó Broin",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "192. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to confirm whether he has issued guidance or instruction to local authorities regarding the operation of their social housing transfer lists in recent times; and if so, to outline the guidance or instruction and to publish a copy of the correspondence. [49969/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-01/192/"
       }
     ]
   },
   {
     "constituency": "Dublin North-West",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Rory Hearne",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1034. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage the amount of accelerated CALF approved in 2026; the number of individual projects approved; and the number of AHBs these projects relate to, in tabular form. [75561/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1034/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Rory Hearne",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1038. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage the amount of accelerated CALF repaid for projects that received funds but subsequently did not commence for the years 2015 to 2025, in tabular form. [75560/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1038/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Rory Hearne",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1039. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage the number of projects that received accelerated CALF; the number of projects commenced, the number of projects yet to commence; and the number of projects completed for the years 2015 to 2025, in tabular form. [75559/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1039/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Rory Hearne",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1040. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage the number of AHBs that received accelerated CALF for the years 2015 to 2025, in tabular form. [75558/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1040/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Rory Hearne",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1041. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage the amount of accelerated CALF provided to AHBs; and the number of individual projects that received accelerated CALF for the years 2015 to 2025, inclusive. [75555/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1041/"
+      },
       {
         "date": "2026-10-21",
         "deputy": "Paul McAuliffe",
@@ -6748,52 +6796,20 @@
         "heading": "Housing Policy",
         "question": "406. Deputy Rory Hearne asked the Minister for Housing; Local Government and Heritage to provide an updated timeline for the completion of the review of the code of practice regarding pets in local authority and approved housing body tenancies; if it is still on track for its scheduled for completion by H2 2026; and if he will make a statement on the matter. [29394/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-23/406/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Paul McAuliffe",
-        "department": "Children",
-        "heading": "Disability Services",
-        "question": "2591. Deputy Paul McAuliffe asked the Minister for Children, Disability and Equality if there is cross-departmental co-ordination between her Department and the Department of Housing, Local Government and Heritage for the long-term planning of residential places for adults with an intellectual disability; and if she will make a statement on the matter. [27146/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/2591/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Rory Hearne",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "1713. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage if an entitlement to the current rate of RAS payment of a person will be affected in cases in which a tenant may receive an inheritance; and if he will make a statement on the matter. [24985/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1713/"
-      },
-      {
-        "date": "2026-03-26",
-        "deputy": "Rory Hearne",
-        "department": "Housing",
-        "heading": "Emergency Accommodation",
-        "question": "305. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage if he plans to expand the data provided in the monthly homelessness reports to include breakdowns of the number of children living in emergency accommodation, by age categories; and if he will make a statement on the matter. [23211/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-26/305/"
-      },
-      {
-        "date": "2026-03-25",
-        "deputy": "Rory Hearne",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "149. Deputy Rory Hearne asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No.1025 of 18 March 2026, if he intends to introduce a measure to count the number of build-to-rent apartments that are being built; and if he will make a statement on the matter. [22655/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-25/149/"
-      },
-      {
-        "date": "2026-03-24",
-        "deputy": "Paul McAuliffe",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "584. Deputy Paul McAuliffe asked the Minister for Housing, Local Government and Heritage the progress to date in the publishing of planning regulations to exempt detached modular homes and log cabins in back gardens from planning permission; and if he will make a statement on the matter. [21606/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-24/584/"
       }
     ]
   },
   {
     "constituency": "Dublin Rathdown",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Sinéad Gibney",
+        "department": "Housing",
+        "heading": "Heritage Projects",
+        "question": "1127. Deputy Sinéad Gibney asked the Minister for Housing, Local Government and Heritage to provide an update on talks between his Department and Galway Country Council in order to secure the necessary funding to bring Dunguaire Castle back into public use. [77554/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1127/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "Sinéad Gibney",
@@ -7223,6 +7239,14 @@
   {
     "constituency": "Dublin South-Central",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Jen Cummins",
+        "department": "Housing",
+        "heading": "Departmental Data",
+        "question": "1120. Deputy Jen Cummins asked the Minister for Housing, Local Government and Heritage the number of people homeless in Dublin south central over the past five years, in tabular form. [77613/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1120/"
+      },
       {
         "date": "2026-10-01",
         "deputy": "Aengus Ó Snodaigh",
@@ -7694,14 +7718,6 @@
         "heading": "Housing Provision",
         "question": "239. Deputy Aengus Ó Snodaigh asked the Minister for Housing, Local Government and Heritage the reason for the delays in having housing built on the OPW site on Jamestown Road, Inchicore and on the surplus lands of the CIÉ Works in Dublin 8, despite the site being identified for housing over a decade and a half ago. [54049/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-10-08/239/"
-      },
-      {
-        "date": "2025-10-08",
-        "deputy": "Aengus Ó Snodaigh",
-        "department": "Housing",
-        "heading": "Regeneration Projects",
-        "question": "238. Deputy Aengus Ó Snodaigh asked the Minister for Housing, Local Government and Heritage the reason responsibility for regeneration of Dolphin House, Dublin 8, transferred from Dublin City Council to the Land Development Agency; and if he can reassure the community that commitments entered into by the local authority in terms of social, affordable homes will be confirmed, and the associated community facilities delivered. [54048/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-10-08/238/"
       }
     ]
   },
@@ -8194,6 +8210,22 @@
     "constituency": "Dublin West",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "Roderic O'Gorman",
+        "department": "Housing",
+        "heading": "Electoral Commission",
+        "question": "1022. Deputy Roderic O'Gorman asked the Minister for Housing, Local Government and Heritage when he intends to request An Coimisiún Toghcháin to prepare a report on amendments to local electoral area boundaries as recommended by the local democracy task force. [75340/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1022/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Roderic O'Gorman",
+        "department": "Housing",
+        "heading": "Forestry Sector",
+        "question": "1067. Deputy Roderic O'Gorman asked the Minister for Housing, Local Government and Heritage to provide the number of hectares of forest removed already or to be removed in 2027 and in subsequent years in the Slieve Bloom mountains SPA to support conservation of the endangered hen harrier; and to provide details on the number of hectares of forestry to be removed in the Slieve Aughty mountains SPA, Mullaghanish to Musheramore SPA, Slieve Beagh SPA, Slievefelim to Silvermines mountains SPA, and the Stack's to Mullaghereirk mountains, West Limerick hills and Mount Eagle SPA to support hen harrier conservation. [76297/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1067/"
+      },
+      {
         "date": "2026-10-21",
         "deputy": "Emer Currie",
         "department": "Housing",
@@ -8656,28 +8688,28 @@
         "heading": "Housing Schemes",
         "question": "497. Deputy Roderic O'Gorman asked the Minister for Housing, Local Government and Heritage if the capital budget for cost rental is fully allocated for 2026; if additional resources will be made available to support AHBs with the purchase of additional cost rental apartments that will be delivered in the Dublin area in 2027; and if he will make a statement on the matter. [32029/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-06/497/"
-      },
-      {
-        "date": "2026-04-28",
-        "deputy": "Roderic O'Gorman",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "689. Deputy Roderic O'Gorman asked the Minister for Housing, Local Government and Heritage if consideration has been given to expanding the first home scheme and help-to-buy scheme to cover second hand homes for first time buyers given the cost of new homes in this housing crisis. [30086/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/689/"
-      },
-      {
-        "date": "2026-04-16",
-        "deputy": "Roderic O'Gorman",
-        "department": "Climate",
-        "heading": "Energy Policy",
-        "question": "98. Deputy Roderic O'Gorman asked the Minister for Climate, Energy and the Environment if consideration is being given by his Department to permitting the use of plug-in solar panels for residential properties in Ireland; and if he will make a statement on the matter. [27602/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-16/98/"
       }
     ]
   },
   {
     "constituency": "Dún Laoghaire",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Barry Ward",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1030. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage in the context of the National Housing Strategy for Disabled People 2022–2027, the mechanisms in place to identify properties suitable for people with disabilities but that cannot be brought into use because the property requires adaptation, renovation or other capital works for which an appropriate funding mechanism is not available; the number of such cases identified by his Department or local authorities; the average length of time such properties remain unavailable; and whether he will establish a dedicated mechanism to fund necessary works where existing schemes do not cover them. [75437/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1030/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Barry Ward",
+        "department": "Housing",
+        "heading": "Public Parks",
+        "question": "1072. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage the position regarding any review of parks and open spaces policies in order to identify suitable sites in all counties for circuses. [76389/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1072/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Barry Ward",
@@ -9141,28 +9173,20 @@
         "heading": "Homeless Persons Supports",
         "question": "1565. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage the steps being taken by his Department to ensure that Ireland utilises its influence within European housing policy structures to advance measures aimed at preventing and ending homelessness across the European Union; and if he will make a statement on the matter. [56310/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1565/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Barry Ward",
-        "department": "Housing",
-        "heading": "Homeless Persons Supports",
-        "question": "1566. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage if he is advocating for a renewed commitment to the European Platform on Combatting Homelessness (EPOCH) as part of ongoing discussions at EU level; and if he will make a statement on the matter. [56311/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1566/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Barry Ward",
-        "department": "Housing",
-        "heading": "Homeless Persons Supports",
-        "question": "1567. Deputy Barry Ward asked the Minister for Housing, Local Government and Heritage if he will use Ireland's Presidency of the Council of the European Union to advance a renewed European strategy to prevent and end homelessness; to outline any proposals currently under consideration in this regard; and if he will make a statement on the matter. [56312/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1567/"
       }
     ]
   },
   {
     "constituency": "Galway East",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Albert Dolan",
+        "department": "Housing",
+        "heading": "Departmental Expenditure",
+        "question": "1076. Deputy Albert Dolan asked the Minister for Housing, Local Government and Heritage whether his Department will introduce quarterly reporting and publication of actual expenditure incurred by each of the nine homelessness regions, broken down by expenditure category, including emergency accommodation and homelessness prevention, tenancy sustainment and resettlement supports; whether the relevant lead local authorities currently record this expenditure on a quarterly basis; whether the existing annual reporting arrangements could be amended to provide quarterly returns; and if not, the specific legal, technical or administrative reasons preventing this. [76275/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1076/"
+      },
       {
         "date": "2026-10-22",
         "deputy": "Albert Dolan",
@@ -9634,14 +9658,6 @@
         "heading": "Wastewater Treatment",
         "question": "237. Deputy Peter Roche asked the Minister for Housing, Local Government and Heritage if his Department is aware of ongoing constraints on housing delivery arising from wastewater treatment and network capacity in rural Galway; whether his Department has considered mechanisms whereby developer-led or developer-funded delivery of strategic wastewater infrastructure, in partnership with Uisce Éireann, could be utilised to accelerate wastewater projects; if such proposals have been assessed or piloted; and if he will make a statement on the matter. [17624/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-05/237/"
-      },
-      {
-        "date": "2026-02-19",
-        "deputy": "Albert Dolan",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "418. Deputy Albert Dolan asked the Minister for Housing, Local Government and Heritage whether his Department has identified any structural, legal, financial, or administrative constraints that limit the effective use of the Land Acquisition Fund by local authorities, including issues related to site viability, timing, valuation, or co-funding requirements; and if he will outline any steps taken to address such constraints. [13903/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/418/"
       }
     ]
   },
@@ -10134,6 +10150,62 @@
     "constituency": "Kerry",
     "questions": [
       {
+        "date": "2026-11-04",
+        "deputy": "Michael Cahill",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "81. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage to provide a detailed report in relation to number of qualified housing applicants in County Kerry with a moderate to profound disability; the number of properties will be made available in County Kerry and in each local authority throughout the country to applicants with a moderate disability, in tabular form; and the number that will be made available to applicants with a profound disability during each of the next five years. [78058/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/81/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Michael Cahill",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1035. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage the number of properties that will be provided by each local authority for people with a disability in each of the years 2026 to 2031, inclusive, in tabular form. [75681/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1035/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Michael Cahill",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1037. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage the number of properties that will be provided by Kerry County Council for people with a disability in each of the years 2026 to 2031, inclusive, in tabular form. [75679/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1037/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Michael Cahill",
+        "department": "Housing",
+        "heading": "Tourist Accommodation",
+        "question": "1113. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage in view of the European Court of Justice ruling in the SmartFlats case, to support an approach to short term lets that recognises the contribution of self-catering accommodation to tourism, rural communities and local economies (details supplied). [77298/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1113/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Michael Cahill",
+        "department": "Housing",
+        "heading": "Tourist Accommodation",
+        "question": "1114. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage to ensure restrictions to short term lets are evidence-based, proportionate and compliant with EU law (details supplied). [77297/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1114/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Michael Cahill",
+        "department": "Housing",
+        "heading": "Tourist Accommodation",
+        "question": "1116. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage to consider the European Court of Justice ruling in the SmartFlats case, and to review his Departments proposed planning restrictions on STLs considering the ruling. [77296/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1116/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Michael Healy-Rae",
+        "department": "Housing",
+        "heading": "Land Issues",
+        "question": "1096. Deputy Michael Healy-Rae asked the Minister for Housing, Local Government and Heritage the supports that are in place to help a family (details supplied) whose land is being destroyed by a badger. [76761/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1096/"
+      },
+      {
         "date": "2026-10-21",
         "deputy": "Michael Healy-Rae",
         "department": "Housing",
@@ -10556,68 +10628,44 @@
         "heading": "Departmental Data",
         "question": "339. Deputy Pa Daly asked the Minister for Housing, Local Government and Heritage the estimated cost to double the funding for biodiversity officers, broken down by cap ex and op ex, in tabular form. [48734/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-25/339/"
-      },
-      {
-        "date": "2026-06-25",
-        "deputy": "Pa Daly",
-        "department": "Housing",
-        "heading": "Rental Sector",
-        "question": "85. Deputy Pa Daly asked the Minister for Housing, Local Government and Heritage the measures he is taking to address rent increases in Kerry; and if he will make a statement on the matter. [48101/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-25/85/"
-      },
-      {
-        "date": "2026-06-25",
-        "deputy": "Pa Daly",
-        "department": "Housing",
-        "heading": "State Bodies",
-        "question": "310. Deputy Pa Daly asked the Minister for Housing, Local Government and Heritage the estimated cost to hire 10% additional staff in the An Coimisiún Pleanála with environmental, marine and/or ecological expertise; and the estimated cost to hire 20% 30%, 40%, 50% additional staff in An Coimisiún Pleanála. [48726/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-25/310/"
-      },
-      {
-        "date": "2026-06-24",
-        "deputy": "Pa Daly",
-        "department": "Housing",
-        "heading": "Departmental Funding",
-        "question": "197. Deputy Pa Daly asked the Minister for Housing, Local Government and Heritage to provide a detailed breakdown of the funding his Department provided to the water advisory body in each of the years 2020 to date in 2026, in tabular form. [47918/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/197/"
-      },
-      {
-        "date": "2026-06-24",
-        "deputy": "Pa Daly",
-        "department": "Housing",
-        "heading": "Water Quality",
-        "question": "196. Deputy Pa Daly asked the Minister for Housing, Local Government and Heritage to provide a detailed breakdown of the funding allocated to improving Ireland’s water quality by his Department broken down by programme allocation, CapEx and OpEx in each of the years 2020 to date in 2026, in tabular form. [47917/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-24/196/"
-      },
-      {
-        "date": "2026-06-23",
-        "deputy": "Michael Cahill",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "418. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage to include the replacement of double glazed windows under the housing aid for older people's grant; and if he will make a statement on the matter. [46966/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-23/418/"
-      },
-      {
-        "date": "2026-06-18",
-        "deputy": "Danny Healy-Rae",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "319. Deputy Danny Healy-Rae asked the Minister for Housing, Local Government and Heritage for an update on housing schemes (details supplied); and if he will make a statement on the matter. [46417/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-18/319/"
-      },
-      {
-        "date": "2026-05-28",
-        "deputy": "Michael Cahill",
-        "department": "Housing",
-        "heading": "Transport Infrastructure Ireland",
-        "question": "404. Deputy Michael Cahill asked the Minister for Housing, Local Government and Heritage if he will provide an update on any proposed changes to the policy or guidance governing Transport Infrastructure Ireland objections to one-off housing developments with access onto national roads; if a review has taken place following issues raised in Dáil Éireann in January 2026 regarding restrictions affecting rural families and young farmers seeking planning permission on lands adjoining national roads; whether revised guidance is being considered to allow for greater flexibility where existing family entrances already exist onto a national route; and if he will make a statement on the matter. [41320/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-28/404/"
       }
     ]
   },
   {
     "constituency": "Kildare North",
     "questions": [
+      {
+        "date": "2026-11-04",
+        "deputy": "Joe Neville",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "75. Deputy Joe Neville asked the Minister for Housing, Local Government and Heritage the work the working group created to assist with the wind down of the pyrite remediation scheme has carried out to date; and the way in which to contact them. [78004/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/75/"
+      },
+      {
+        "date": "2026-11-04",
+        "deputy": "Réada Cronin",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "84. Deputy Réada Cronin asked the Minister for Housing, Local Government and Heritage whether a targeted financial support scheme for first-time buyers purchasing existing homes is being considered. [78298/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/84/"
+      },
+      {
+        "date": "2026-11-04",
+        "deputy": "Réada Cronin",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "85. Deputy Réada Cronin asked the Minister for Housing, Local Government and Heritage the reason grants are not available to first-time buyers purchasing a second hand home, when grants are available for those purchasing new-builds; and if he has considered allowing grants for first-time buyers of second hand homes. [78297/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/85/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Réada Cronin",
+        "department": "Climate",
+        "heading": "Data Centres",
+        "question": "263. Deputy Réada Cronin asked the Minister for Climate, Energy and the Environment the assessment that has been carried out regarding the impact of increasing data centre electricity demand on available grid capacity for housing and public services. [76529/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/263/"
+      },
       {
         "date": "2026-10-22",
         "deputy": "Aidan Farrelly",
@@ -11065,44 +11113,20 @@
         "heading": "Housing Provision",
         "question": "1065. Deputy Réada Cronin asked the Minister for Housing, Local Government and Heritage the position regarding the construction of infrastructure that will help to deliver housing in North Kildare; and if he will make a statement on the matter. [19385/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-18/1065/"
-      },
-      {
-        "date": "2026-03-05",
-        "deputy": "Naoise Ó Cearúil",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "226. Deputy Naoise Ó Cearúil asked the Minister for Housing, Local Government and Heritage the way in which his Department will ensure strong oversight and quality standards under the new contractor-led pathway within the buy and renew scheme; the way in which this approach will support timely delivery of refurbished social homes; and if he will make a statement on the matter. [17541/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-05/226/"
-      },
-      {
-        "date": "2026-02-24",
-        "deputy": "Aidan Farrelly",
-        "department": "Housing",
-        "heading": "House Sales",
-        "question": "625. Deputy Aidan Farrelly asked the Minister for Housing, Local Government and Heritage the total number of homes purchased in Ireland by investment funds, by area and house size, across 2023, 2024, 2025 and to date in 2026, in tabular form. [14473/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-24/625/"
-      },
-      {
-        "date": "2026-02-17",
-        "deputy": "Aidan Farrelly",
-        "department": "Justice",
-        "heading": "Housing Policy",
-        "question": "916. Deputy Aidan Farrelly asked the Minister for Justice, Home Affairs and Migration if he will clarify comments in respect of compliance with the required standard for each resident to have 4.56 sq.m of space (details supplied) when that obligation was only met by a diversion of the Department’s own requirements in relation to the use of bunk beds, as borne out by official inspections (most recently on 13 May 2025); if he will clarify the position in relation to the application and oversight of the relevant standards and requirements in this case and for IPAS centres generally; and if he will make a statement on the matter. [12494/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-17/916/"
-      },
-      {
-        "date": "2026-02-17",
-        "deputy": "Aidan Farrelly",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "812. Deputy Aidan Farrelly asked the Minister for Housing, Local Government and Heritage the number of successful applications up to and including January 31, 2026 for the Vacant Property Refurbishment Grant, by county; and the number of unsuccessful applicants and the amount in funds released to date under the scheme, in tabular form. [12499/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-17/812/"
       }
     ]
   },
   {
     "constituency": "Kildare South",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Shónagh Ní Raghallaigh",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1042. Deputy Shónagh Ní Raghallaigh asked the Minister for Housing, Local Government and Heritage his plans to assist Kildare County Council in dealing with the backlog of unauthorised development cases in County Kildare. [75570/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1042/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Seán Ó Fearghaíl",
@@ -11574,14 +11598,6 @@
         "heading": "Housing Policy",
         "question": "1176. Deputy Seán Ó Fearghaíl asked the Minister for Enterprise, Tourism and Employment if he will address the concerns regarding short-term rental legislation raised in correspondence(details supplied); and if he will make a statement on the matter. [26252/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1176/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Shónagh Ní Raghallaigh",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "1710. Deputy Shónagh Ní Raghallaigh asked the Minister for Housing, Local Government and Heritage the specific measures he is taking to provide accommodation for one-parent families given the higher vulnerability of this group to experience homelessness; and if he will make a statement on the matter. [24974/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1710/"
       }
     ]
   },
@@ -12074,6 +12090,14 @@
     "constituency": "Limerick City",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "Conor Sheehan",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1124. Deputy Conor Sheehan asked the Minister for Housing, Local Government and Heritage the number of defective concrete block scheme remediation downgrade decisions that have been reviewed by the statutory appeals panel to date; the proportion of those adjudicated decisions that have been annulled due to identified errors of fact and/or law; and the steps his Department is taking to review the initial technical and engineering assessment processes that led to these flawed determinations, in tabular form. [77684/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1124/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "Conor Sheehan",
         "department": "Justice",
@@ -12544,14 +12568,6 @@
         "heading": "Housing Schemes",
         "question": "1044. Deputy Willie O'Dea asked the Minister for Housing, Local Government and Heritage his plans to revise the first home scheme house value limits for Limerick; if he will consider allowing individuals to avail of the scheme to attain the 30% of the existing limit and fund the balance themselves; and if he will make a statement on the matter. [41998/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/1044/"
-      },
-      {
-        "date": "2026-05-27",
-        "deputy": "Willie O'Dea",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "128. Deputy Willie O'Dea asked the Minister for Housing, Local Government and Heritage if he plans to allow micro-companies to apply for the vacant above-the-shop grant scheme; the timeline for the potential inclusion of micro-companies; and if he will make a statement on the matter. [40362/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-27/128/"
       }
     ]
   },
@@ -12643,6 +12659,22 @@
   {
     "constituency": "Longford-Westmeath",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Robert Troy",
+        "department": "Housing",
+        "heading": "Departmental Schemes",
+        "question": "1064. Deputy Robert Troy asked the Minister for Housing, Local Government and Heritage if his Department will provide an increase in funding through the housing aid for the elderly scheme, housing adaptation scheme, and mobility aids grant scheme to Westmeath County Council (details supplied). [76361/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1064/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Robert Troy",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1060. Deputy Robert Troy asked the Minister for Housing, Local Government and Heritage If his Department will consider the introduction of a rent to buy scheme for households who have previously been accommodated through the tenant in situ and are paying rent to a local authority. [76133/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1060/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Robert Troy",
@@ -13106,28 +13138,52 @@
         "heading": "Grant Payments",
         "question": "1671. Deputy Robert Troy asked the Minister for Housing, Local Government and Heritage if he will consider the possibility of making more funding available to local authorities to administer the housing adaption and housing aid for the elderly schemes in all future years. [44058/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-29/1671/"
-      },
-      {
-        "date": "2025-07-09",
-        "deputy": "Robert Troy",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "88. Deputy Robert Troy asked the Minister for Housing, Local Government and Heritage if there are any grant or funding opportunities through his Department towards the purchase of a mobile home where a family cannot provide accommodation through other means. [37994/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-09/88/"
-      },
-      {
-        "date": "2025-07-09",
-        "deputy": "Robert Troy",
-        "department": "Housing",
-        "heading": "Local Authorities",
-        "question": "89. Deputy Robert Troy asked the Minister for Housing, Local Government and Heritage if he will urgently provide additional funding to Westmeath County Council in relation to housing aid for the elderly and housing adaptions for those with a disability. [37999/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-09/89/"
       }
     ]
   },
   {
     "constituency": "Louth",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Joanna Byrne",
+        "department": "Housing",
+        "heading": "Homeless Persons Supports",
+        "question": "1070. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage his plans to address the worsening homelessness crisis; and the recent engagement he has had with local authorities in this regard. [76285/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1070/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Joanna Byrne",
+        "department": "Housing",
+        "heading": "Housing Policy",
+        "question": "1069. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage for an update on the review of the social housing income eligibility thresholds. [76286/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1069/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Joanna Byrne",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1068. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage If he intends to further fund Louth County Council with more resources to keep up with the growing demand for Housing Adaptation Grants which has resulted in the local authority having to close the schemes for applications due to funding constraints. [76287/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1068/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Joanna Byrne",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1071. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage for an update on the review of HAP rates; and if changes are forthcoming this year to the rates and discretion levels. [76284/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1071/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Joanna Byrne",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1074. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage for an update on the scheme to allow victims and survivors of domestic violence to transfer to a different local authority housing list and keep their time; and if people on HAP transfer lists will also be considered for same. [76282/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1074/"
+      },
       {
         "date": "2026-10-13",
         "deputy": "Joanna Byrne",
@@ -13567,52 +13623,52 @@
         "heading": "Fire Stations",
         "question": "403. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage for an update on the planned new fire station, for Bunclody, County Wexford. [11134/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-12/403/"
-      },
-      {
-        "date": "2026-02-12",
-        "deputy": "Joanna Byrne",
-        "department": "Housing",
-        "heading": "Land Development Agency",
-        "question": "404. Deputy Joanna Byrne asked the Minister for Housing, Local Government and Heritage the number of cases, by each local authority, currently awaiting a decision from Tailte Éireann on rates valuation; and the number which have been with Tailte Éireann for six months or longer. [11135/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-12/404/"
-      },
-      {
-        "date": "2026-02-10",
-        "deputy": "Paula Butterly",
-        "department": "Further and Higher Education",
-        "heading": "Third Level Costs",
-        "question": "1259. Deputy Paula Butterly asked the Minister for Further and Higher Education, Research, Innovation and Science the reason SUSI grant benefits are not offered to Irish students studying in the UK; whether the rent tax credit is available to Irish students/guardians paying student accommodation rent in a UK institution; the plans his Department have to support Irish students studying in UK institutions; and if he will make a statement on the matter. [10112/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-10/1259/"
-      },
-      {
-        "date": "2026-01-22",
-        "deputy": "Erin McGreehan",
-        "department": "Housing",
-        "heading": "Planning Issues",
-        "question": "269. Deputy Erin McGreehan asked the Minister for Housing, Local Government and Heritage if he will report on which county councils have rezoned land for housing; and if he will make a statement on the matter. [4928/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-22/269/"
-      },
-      {
-        "date": "2026-01-22",
-        "deputy": "Paula Butterly",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "207. Deputy Paula Butterly asked the Minister for Housing, Local Government and Heritage whether he has examined the use of compulsory sales orders, whereby local authorities could compel the sale of vacant or derelict properties, as a means of activating dormant assets and supporting regeneration; and if he will make a statement on the matter. [3420/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-22/207/"
-      },
-      {
-        "date": "2026-01-22",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "249. Deputy Ruairí Ó Murchú asked the Minister for Housing, Local Government and Heritage to provide an update on the progress of work to update policy direction and guidance in respect of rural housing, initially in the form of a section 28 guideline which is being reviewed and prepared as a national planning statement; and if he will make a statement on the matter. [4931/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-22/249/"
       }
     ]
   },
   {
     "constituency": "Mayo",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Keira Keogh",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1031. Deputy Keira Keogh asked the Minister for Housing, Local Government and Heritage the process for individuals following a decision by a mortgage lender to not grant mortgages on properties that would qualify for the vacant homes grant; the steps his Department is taking to address this issue; and if he will make a statement on the matter. [75536/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1031/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Paul Lawless",
+        "department": "Housing",
+        "heading": "Departmental Funding",
+        "question": "1075. Deputy Paul Lawless asked the Minister for Housing, Local Government and Heritage the number of houses constructed in the 1930s that have received funding under the Historic Structures Fund in each of the past five years; whether a dwelling built in the 1930s that is not included on a Record of Protected Structures is eligible for assistance under the scheme; and whether he plans to extend eligibility to historically and architecturally significant properties of this period that are currently excluded from support. [76374/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1075/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Paul Lawless",
+        "department": "Climate",
+        "heading": "Energy Policy",
+        "question": "258. Deputy Paul Lawless asked the Minister for Climate, Energy and the Environment if he is aware that owners of older and historic homes can be excluded from accessing grants for replacement windows and doors under the sustainable energy authority of Ireland (SEAI) scheme due to being required to undertake additional insulation measures to meet minimum heat-loss reduction thresholds; if he will examine cases where the fabric or heritage status of a dwelling makes such insulation measures inappropriate, impractical or prohibited; and if he will consider introducing a derogation or alternative pathway to allow homeowners in such circumstances to qualify for windows and doors. [76372/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/258/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Paul Lawless",
+        "department": "Climate",
+        "heading": "Energy Policy",
+        "question": "259. Deputy Paul Lawless asked the Minister for Climate, Energy and the Environment if he is aware that owners of older and historic homes can be excluded from accessing grants for replacement windows and doors under the Sustainable Energy Authority of Ireland (SEAI) scheme because they are required to undertake additional insulation measures to meet minimum heat-loss reduction thresholds; if he will examine cases where the fabric or heritage status of a dwelling makes such insulation measures inappropriate, impractical or prohibited; and to consider introducing a derogation or alternative pathway to allow homeowners in such circumstances to qualify for window and door. [76373/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/259/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Paul Lawless",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1094. Deputy Paul Lawless asked the Minister for Housing, Local Government and Heritage the total number of homes delivered, approved, or drawing down funding within County Mayo for the full year of 2025 under the first home scheme, shared equity completions; the local authority affordable purchase scheme; the local authority home loan, approved and drawn down; the help to buy scheme, claims approved and paid out by Revenue; the tenant (incremental) purchase scheme; the ready to build scheme, serviced sites allocated; and if he will make a statement on the matter. [76739/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1094/"
+      },
       {
         "date": "2026-11-03",
         "deputy": "Paul Lawless",
@@ -14052,52 +14108,36 @@
         "heading": "Rental Sector",
         "question": "1154. Deputy Paul Lawless asked the Minister for Enterprise, Tourism and Employment the way in which the national short term letting register will capture and publish data at county level, including for County Mayo; and whether such data will be made available to local authorities and public representatives. [25724/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1154/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Paul Lawless",
-        "department": "Enterprise",
-        "heading": "Rental Sector",
-        "question": "1155. Deputy Paul Lawless asked the Minister for Enterprise, Tourism and Employment the engagement that has taken place between his Department, Fáilte Ireland and tourism stakeholders in County Mayo regarding the impact of the new short term letting registration and platform obligations on local tourism capacity [25725/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1155/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Paul Lawless",
-        "department": "Enterprise",
-        "heading": "Rental Sector",
-        "question": "1156. Deputy Paul Lawless asked the Minister for Enterprise, Tourism and Employment the enforcement measures that will apply in cases where short term rental platforms advertise properties in County Mayo without a valid registration number once the new system comes into force. [25726/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1156/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Paul Lawless",
-        "department": "Housing",
-        "heading": "Rental Sector",
-        "question": "1748. Deputy Paul Lawless asked the Minister for Housing, Local Government and Heritage the way in which the forthcoming planning framework for short term letting will apply in County Mayo, particularly in towns with populations below 10,000; and the discretion Mayo County Council will have in setting local policy. [25727/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1748/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Paul Lawless",
-        "department": "Housing",
-        "heading": "Rental Sector",
-        "question": "1749. Deputy Paul Lawless asked the Minister for Housing, Local Government and Heritage the assessment his Department has made of the impact of short term rentals on long term housing availability in County Mayo, including in coastal and high tourism areas. [25728/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1749/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Paul Lawless",
-        "department": "Housing",
-        "heading": "Rental Sector",
-        "question": "1750. Deputy Paul Lawless asked the Minister for Housing, Local Government and Heritage the way in which local authorities such as Mayo County Council will be supported to enforce planning requirements relating to short term letting, including staffing, resources, and access to data from the national register. [25729/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1750/"
       }
     ]
   },
   {
     "constituency": "Meath East",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Darren O'Rourke",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1033. Deputy Darren O'Rourke asked the Minister for Housing, Local Government and Heritage for an update on the legacy defects support scheme. [75567/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1033/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Gillian Toole",
+        "department": "Housing",
+        "heading": "Housing Provision",
+        "question": "1126. Deputy Gillian Toole asked the Minister for Housing, Local Government and Heritage when the national guidelines for the assessment and allocation process, for social housing provision for people with a disability, will be reviewed by his Department and the Housing Agency. [77751/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1126/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Gillian Toole",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1141. Deputy Gillian Toole asked the Minister for Housing, Local Government and Heritage if all local authorities have housing and disability steering groups; the reports to they produce; and when will groups and reports be reviewed by the Department to ensure timely and consistent outcomes for persons with disabilities. [77758/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1141/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Darren O'Rourke",
@@ -14495,6 +14535,30 @@
   {
     "constituency": "Meath West",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Peadar Tóibín",
+        "department": "Housing",
+        "heading": "Planning Issues",
+        "question": "1049. Deputy Peadar Tóibín asked the Minister for Housing, Local Government and Heritage the number of planning applications for solar installations on protected structures that have been granted and refused nationally since October 2022. [75836/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1049/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Peadar Tóibín",
+        "department": "Housing",
+        "heading": "Planning Issues",
+        "question": "1052. Deputy Peadar Tóibín asked the Minister for Housing, Local Government and Heritage the number of applications relating to solar panel installations within architectural conservation areas granted and refused since October 2022. [75841/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1052/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Peadar Tóibín",
+        "department": "Housing",
+        "heading": "Planning Issues",
+        "question": "1053. Deputy Peadar Tóibín asked the Minister for Housing, Local Government and Heritage the number of appeals to An Bord Pleanála relating to solar installations on protected structures or within ACAs since October 2022; and the outcome of those appeals. [75842/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1053/"
+      },
       {
         "date": "2026-10-21",
         "deputy": "Peadar Tóibín",
@@ -14950,36 +15014,44 @@
         "heading": "Housing Schemes",
         "question": "568. Deputy Johnny Guirke asked the Minister for Housing, Local Government and Heritage if he can provide an update on the Housing Infrastructure Investment Fund (HIIF) application submitted by Meath County Council to provide funding for the Local Distributor Road (LDR) 1a, linking the Trim and Dublin Roads near Springfield Glen in Navan [28073/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-21/568/"
-      },
-      {
-        "date": "2026-04-21",
-        "deputy": "Peadar Tóibín",
-        "department": "Housing",
-        "heading": "Local Authorities",
-        "question": "563. Deputy Peadar Tóibín asked the Minister for Housing, Local Government and Heritage the number of members of staff responsible for currently planning work for each local authority in the State; the numbers for the past four years; and the number of planning applications processed by each local authority in the same timeframe. [27980/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-21/563/"
-      },
-      {
-        "date": "2026-04-21",
-        "deputy": "Peadar Tóibín",
-        "department": "Finance",
-        "heading": "Tax Code",
-        "question": "267. Deputy Peadar Tóibín asked the Tánaiste and Minister for Finance if he has conducted an impact assessment on a proposed 0% VAT rate for construction materials to lower the cost of building new homes; his views on whether such a measure would more effectively stimulate supply than the current 9% VAT rate applied only to completed apartments; the estimated cost to the Exchequer of zero-rating these materials for the duration of the current Dáil term; and if he will make a statement on the matter. [17811/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-21/267/"
-      },
-      {
-        "date": "2026-04-16",
-        "deputy": "Peadar Tóibín",
-        "department": "Climate",
-        "heading": "Climate Change Policy",
-        "question": "164. Deputy Peadar Tóibín asked the Minister for Climate, Energy and the Environment if he will provide the most up-to-date estimate of the total financial liability the State faces between now and 2030 for failing to meet EU greenhouse gas emissions targets under the Effort Sharing Regulation; if he will specify from which existing departmental budgets or capital projects these multi-billion euro compliance costs will be drawn; his views on the immorality of potentially diverting billions of euros away from frontline services like health and housing to pay for administrative penalties, while simultaneously continuing to hike carbon taxes on struggling families and farmers who have no viable alternatives; and if he will make a statement on the matter. [27724/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-16/164/"
       }
     ]
   },
   {
     "constituency": "Offaly",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Carol Nolan",
+        "department": "Housing",
+        "heading": "Departmental Expenditure",
+        "question": "1054. Deputy Carol Nolan asked the Minister for Housing, Local Government and Heritage the number of cars, vans and other non-specialist vehicles owned or leased by his Department and public bodies under the aegis of his Department; and the total costs involved with respect to purchase and leasing of same. [75959/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1054/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Carol Nolan",
+        "department": "Housing",
+        "heading": "Local Authorities",
+        "question": "1050. Deputy Carol Nolan asked the Minister for Housing, Local Government and Heritage the number of local-authority posts sanctioned by his Department in each year from 2022 to 2025 and to date in 2026 that remain unfilled, broken down by local authority, functional area and year of sanction; the median time between departmental sanction and appointment; and the number of sanctioned posts subsequently withdrawn or allowed to lapse. [75900/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1050/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Carol Nolan",
+        "department": "Housing",
+        "heading": "Planning Issues",
+        "question": "1105. Deputy Carol Nolan asked the Minister for Housing, Local Government and Heritage whether data is collected by his Department, local authorities or An Coimisiún Pleanála on applicants who are required to submit multiple planning applications in respect of a proposed one-off rural dwelling before obtaining permission; and the estimated costs incurred by such applicants. [77217/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1105/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Carol Nolan",
+        "department": "Housing",
+        "heading": "Planning Issues",
+        "question": "1106. Deputy Carol Nolan asked the Minister for Housing, Local Government and Heritage the number of appeals to An Coimisiún Pleanála in each of the past five years relating to refusals of one-off rural housing applications; and the number and percentage of those appeals which resulted in the original refusal being overturned. [77216/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1106/"
+      },
       {
         "date": "2026-10-22",
         "deputy": "Carol Nolan",
@@ -15427,38 +15499,6 @@
         "heading": "Homeless Accommodation",
         "question": "1410. Deputy Carol Nolan asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No. 518 of 8 July 2025, the reason rough sleepers are not counted in the monthly homeless statistics; and if he will make a statement on the matter. [40967/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-29/1410/"
-      },
-      {
-        "date": "2025-07-15",
-        "deputy": "Carol Nolan",
-        "department": "Finance",
-        "heading": "Tax Credits",
-        "question": "363. Deputy Carol Nolan asked the Minister for Finance if the rent tax credit available to the parents of third level students will be available for the duration of 2026; and if he will make a statement on the matter. [39484/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/363/"
-      },
-      {
-        "date": "2025-07-08",
-        "deputy": "Carol Nolan",
-        "department": "Housing",
-        "heading": "Homeless Accommodation",
-        "question": "518. Deputy Carol Nolan asked the Minister for Housing, Local Government and Heritage the reason that rough sleepers, who are homeless people by definition, are not included in the \"Monthly Homeless Report\" produced by his Department; and if he will make a statement on the matter. [37319/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-08/518/"
-      },
-      {
-        "date": "2025-07-01",
-        "deputy": "John Clendennen",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "7. Deputy John Clendennen asked the Minister for Housing, Local Government and Heritage if his Department has undertaken a review of utility infrastructure deficits in rural towns and villages; how these deficits are currently limiting the delivery of rural housing; and if he will make a statement on the matter. [36137/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-01/7/"
-      },
-      {
-        "date": "2025-07-01",
-        "deputy": "Tony McCormack",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "70. Deputy Tony McCormack asked the Minister for Housing, Local Government and Heritage when the new national ‘over-the-shop’ grant scheme will be launched; to outline the eligibility and funding timelines; and if he will make a statement on the matter. [35851/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-01/70/"
       }
     ]
   },
@@ -15951,6 +15991,14 @@
     "constituency": "Sligo-Leitrim",
     "questions": [
       {
+        "date": "2026-11-03",
+        "deputy": "Martin Kenny",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1057. Deputy Martin Kenny asked the Minister for Housing, Local Government and Heritage if the payments listed by the Department of Social Protection under the Social Welfare Acts (Part4. Income that is not assessable) on the Government household means policy should be disregarded in all cases when calculating local authority and social housing schemes rent. [76021/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1057/"
+      },
+      {
         "date": "2026-10-20",
         "deputy": "Frankie Feighan",
         "department": "Culture",
@@ -16307,6 +16355,30 @@
   {
     "constituency": "Tipperary North",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Ryan O'Meara",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1086. Deputy Ryan O'Meara asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No.28023/26, when it is expected the statutory designation process will be completed for County Tipperary. [76677/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1086/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Ryan O'Meara",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1087. Deputy Ryan O'Meara asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No.28023/26, if the Housing Agency has made its recommendation to him under Section 5 of the Remediation of Dwellings Damaged by the Use of Defective Concrete Blocks Act 2022; if so, when was it sent to him; and if the recommendations include all or part of County Tipperary. [76676/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1087/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Ryan O'Meara",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "1088. Deputy Ryan O'Meara asked the Minister for Housing, Local Government and Heritage further to Parliamentary Question No. 28023/26, if the final test results for Tipperary have been received by the Housing Agency; and if so, when they were received. [76674/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1088/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Alan Kelly",
@@ -16762,30 +16834,6 @@
         "heading": "Departmental Meetings",
         "question": "819. Deputy Alan Kelly asked the Minister for Housing; Local Government and Heritage the dates and attendees of all his physical or virtual meetings with CFI since he took office. [29741/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-06-10/819/"
-      },
-      {
-        "date": "2025-06-10",
-        "deputy": "Ryan O'Meara",
-        "department": "Finance",
-        "heading": "Housing Schemes",
-        "question": "414. Deputy Ryan O'Meara asked the Minister for Finance if he has given consideration to extending the help-to-buy scheme to include second-hand homes; and if he will make a statement on the matter. [30635/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-06-10/414/"
-      },
-      {
-        "date": "2025-05-15",
-        "deputy": "Ryan O'Meara",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "11. Deputy Ryan O'Meara asked the Minister for Housing, Local Government and Heritage his plans to expand the provision of modular housing; and if he will make a statement on the matter. [24654/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-15/11/"
-      },
-      {
-        "date": "2025-05-13",
-        "deputy": "Ryan O'Meara",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "702. Deputy Ryan O'Meara asked the Minister for Housing, Local Government and Heritage when he intends to introduce the “above the shop” property refurbishment grant to address vacancy and dereliction in our towns and villages, as committed to under the Programme for Government; and if he will make a statement on the matter. [23370/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-13/702/"
       }
     ]
   },
@@ -17245,6 +17293,14 @@
   {
     "constituency": "Waterford",
     "questions": [
+      {
+        "date": "2026-11-03",
+        "deputy": "Conor D. McGuinness",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "1078. Deputy Conor D. McGuinness asked the Minister for Housing, Local Government and Heritage the number of applications received, the number of applications approved, and the number of applicants paid and properties completed under the Vacant Property Refurbishment Grant, by county and year since the scheme launched, in tabular form. [76462/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1078/"
+      },
       {
         "date": "2026-10-20",
         "deputy": "Conor D. McGuinness",
@@ -17716,14 +17772,6 @@
         "heading": "Housing Provision",
         "question": "1836. Deputy David Cullinane asked the Minister for Housing, Local Government and Heritage the level of funding made available in each year to each local authority for housing assistance for older persons. [27267/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1836/"
-      },
-      {
-        "date": "2026-01-22",
-        "deputy": "David Cullinane",
-        "department": "Housing",
-        "heading": "Housing Provision",
-        "question": "229. Deputy David Cullinane asked the Minister for Housing, Local Government and Heritage the number of homes commenced in Waterford in 2025; and if he will make a statement on the matter. [5047/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-01-22/229/"
       }
     ]
   },
@@ -18325,6 +18373,30 @@
     "constituency": "Wicklow-Wexford",
     "questions": [
       {
+        "date": "2026-11-04",
+        "deputy": "Malcolm Byrne",
+        "department": "Finance",
+        "heading": "Credit Unions",
+        "question": "39. Deputy Malcolm Byrne asked the Tánaiste and Minister for Finance if he plans to review the investment regulations for credit unions in order that they may provide funding to tier 1 &amp; 2 approved housing bodies for social housing, or to lend to them directly. [78175/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/39/"
+      },
+      {
+        "date": "2026-11-04",
+        "deputy": "Malcolm Byrne",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "82. Deputy Malcolm Byrne asked the Minister for Housing, Local Government and Heritage to outline the entitlement of an individual to apply for social or affordable housing where they are currently living in a private home but where they are going through separation or divorce proceedings and have to share the home with their current spouse. [78219/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-04/82/"
+      },
+      {
+        "date": "2026-11-03",
+        "deputy": "Malcolm Byrne",
+        "department": "Housing",
+        "heading": "Cybersecurity Policy",
+        "question": "1061. Deputy Malcolm Byrne asked the Minister for Housing, Local Government and Heritage the way in which his Department is building cyber resilience; and the strategy in place to address cyber attacks. [76145/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1061/"
+      },
+      {
         "date": "2026-11-03",
         "deputy": "Malcolm Byrne",
         "department": "Finance",
@@ -18779,30 +18851,6 @@
         "heading": "Housing Provision",
         "question": "1707. Deputy Malcolm Byrne asked the Minister for Housing, Local Government and Heritage the total number of transfers in 2025 from the social housing list of one local authority to another local authority. [24933/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1707/"
-      },
-      {
-        "date": "2026-04-14",
-        "deputy": "Malcolm Byrne",
-        "department": "Housing",
-        "heading": "Local Authorities",
-        "question": "1798. Deputy Malcolm Byrne asked the Minister for Housing, Local Government and Heritage the number of affordable homes completed by each local authority in each of the years 2021 to 2025; and the number scheduled to be completed in 2026, in tabular form. [26405/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-14/1798/"
-      },
-      {
-        "date": "2026-03-26",
-        "deputy": "Malcolm Byrne",
-        "department": "Housing",
-        "heading": "Environmental Schemes",
-        "question": "314. Deputy Malcolm Byrne asked the Minister for Housing, Local Government and Heritage Ireland's progress under the Nature Restoration Law. [23391/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-26/314/"
-      },
-      {
-        "date": "2026-03-26",
-        "deputy": "Malcolm Byrne",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "315. Deputy Malcolm Byrne asked the Minister for Housing, Local Government and Heritage the reason the social housing list for Arklow, County Wicklow remains so long; the reason a shortage of new social housing continues to exist; the measures planned to address this; and if he will make a statement on the matter. [23392/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-26/315/"
       }
     ]
   }
