@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-11-12",
+    "chamber": "dail",
+    "sectionId": "dbsect_15",
+    "sectionNumber": "15",
+    "topic": "Employment Schemes",
+    "parentTopic": "Ceisteanna Eile - Other Questions",
+    "memberCode": "Dara-Calleary.D.2007-06-14",
+    "memberName": "Dara Calleary",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Dara-Calleary.D.2007-06-14",
+    "roles": [],
+    "speechCount": 3,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-11-12/15/member-speech/Dara-Calleary.D.2007-06-14/"
+  },
+  {
+    "date": "2026-11-12",
+    "chamber": "dail",
+    "sectionId": "dbsect_15",
+    "sectionNumber": "15",
+    "topic": "Employment Schemes",
+    "parentTopic": "Ceisteanna Eile - Other Questions",
+    "memberCode": "David-Maxwell.D.2024-11-29",
+    "memberName": "David Maxwell",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/David-Maxwell.D.2024-11-29",
+    "roles": [],
+    "speechCount": 1,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-11-12/15/member-speech/David-Maxwell.D.2024-11-29/"
+  },
+  {
+    "date": "2026-11-12",
+    "chamber": "dail",
+    "sectionId": "dbsect_15",
+    "sectionNumber": "15",
+    "topic": "Employment Schemes",
+    "parentTopic": "Ceisteanna Eile - Other Questions",
+    "memberCode": "Tony-McCormack.D.2024-11-29",
+    "memberName": "Tony McCormack",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Tony-McCormack.D.2024-11-29",
+    "roles": [],
+    "speechCount": 2,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-11-12/15/member-speech/Tony-McCormack.D.2024-11-29/"
+  },
+  {
+    "date": "2026-11-11",
+    "chamber": "dail",
+    "sectionId": "dbsect_27",
+    "sectionNumber": "27",
+    "topic": "Protection of Young Persons (Employment in Food and Beverage Services Sector) Regulations 2026: Motion",
+    "parentTopic": "",
+    "memberCode": "George-Lawlor.D.2024-11-29",
+    "memberName": "George Lawlor",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/George-Lawlor.D.2024-11-29",
+    "roles": [],
+    "speechCount": 1,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-11-11/27/member-speech/George-Lawlor.D.2024-11-29/"
+  },
+  {
+    "date": "2026-11-11",
+    "chamber": "dail",
+    "sectionId": "dbsect_27",
+    "sectionNumber": "27",
+    "topic": "Protection of Young Persons (Employment in Food and Beverage Services Sector) Regulations 2026: Motion",
+    "parentTopic": "",
+    "memberCode": "Peter-Burke.D.2016-10-03",
+    "memberName": "Peter Burke",
+    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Peter-Burke.D.2016-10-03",
+    "roles": [],
+    "speechCount": 1,
+    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2026-11-11/27/member-speech/Peter-Burke.D.2016-10-03/"
+  },
+  {
     "date": "2026-10-20",
     "chamber": "dail",
     "sectionId": "dbsect_8",
@@ -2980,19 +3050,5 @@
     "roles": [],
     "speechCount": 3,
     "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-05-29/16/member-speech/Peter-Roche.D.2024-11-29/"
-  },
-  {
-    "date": "2025-05-13",
-    "chamber": "dail",
-    "sectionId": "dbsect_6",
-    "sectionNumber": "6",
-    "topic": "Appointment of Cathaoirleach of Working Group of Committee Cathaoirligh: Motion",
-    "parentTopic": "",
-    "memberCode": "Mary-Butler.D.2016-10-03",
-    "memberName": "Mary Butler",
-    "memberUri": "https://data.oireachtas.ie/ie/oireachtas/member/id/Mary-Butler.D.2016-10-03",
-    "roles": [],
-    "speechCount": 1,
-    "url": "https://www.oireachtas.ie/en/debates/debate/dail/2025-05-13/6/member-speech/Mary-Butler.D.2016-10-03/"
   }
 ]
