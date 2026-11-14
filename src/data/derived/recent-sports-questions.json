@@ -1095,6 +1095,14 @@
     "constituency": "Cork North-Central",
     "questions": [
       {
+        "date": "2026-11-12",
+        "deputy": "Ken O'Flynn",
+        "department": "Education",
+        "heading": "School Facilities",
+        "question": "264. Deputy Ken O'Flynn asked the Minister for Education and Youth further to her Department's updated June 2024 procedures on the use of school property and sports facilities outside of school hours, whether her Department has engaged with the Department of Rural and Community Development and the Gaeltacht, regarding schools which have received public funding for the development of community sports facilities and Community Centre Investment funds; and if she will make a statement on the matter. [80453/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/264/"
+      },
+      {
         "date": "2026-11-05",
         "deputy": "Colm Burke",
         "department": "Culture",
@@ -1565,14 +1573,6 @@
         "heading": "Drugs in Sport",
         "question": "129. Deputy Pádraig O'Sullivan asked the Minister for Culture, Communications and Sport the number of anti-doping rule violations recorded since 2021 that were attributed to contaminated or mislabelled nutritional supplements; the education provided by Sport Ireland to athletes on the risks associated with supplement use; and if he will make a statement on the matter. [44400/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-10/129/"
-      },
-      {
-        "date": "2026-06-10",
-        "deputy": "Pádraig O'Sullivan",
-        "department": "Culture",
-        "heading": "Drugs in Sport",
-        "question": "130. Deputy Pádraig O'Sullivan asked the Minister for Culture, Communications and Sport the legal costs incurred by Sport Ireland in connection with anti-doping cases in each year since 2021; the number of anti-doping cases appealed to the Court of Arbitration for Sport or equivalent body over the same period; and if he will make a statement on the matter. [44401/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-10/130/"
       }
     ]
   },
@@ -1722,14 +1722,6 @@
         "heading": "Sports Funding",
         "question": "145. Deputy Aindrias Moynihan asked the Minister for Culture, Communications and Sport if additional funding will be made available to clubs and organisations successful on their sports capital funding applications with rising costs of construction works, meaning lower value in the funding approval; and if he will make a statement on the matter. [34891/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-06-26/145/"
-      },
-      {
-        "date": "2025-05-15",
-        "deputy": "John Paul O'Shea",
-        "department": "Tourism",
-        "heading": "Sports Funding",
-        "question": "237. Deputy John Paul O'Shea asked the Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media for an update on the payment of a sports capital grant for a club (details supplied) where the works are now complete; and if he will make a statement on the matter. [24985/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-15/237/"
       }
     ]
   },
@@ -2612,6 +2604,19 @@
     ]
   },
   {
+    "constituency": "Dublin Fingal East",
+    "questions": [
+      {
+        "date": "2026-11-11",
+        "deputy": "Duncan Smith",
+        "department": "Finance",
+        "heading": "Sports Funding",
+        "question": "75. Deputy Duncan Smith asked the Tánaiste and Minister for Finance if his Department has any mechanism to identify which sports raise what proportion of the betting levy. [80032/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/75/"
+      }
+    ]
+  },
+  {
     "constituency": "Dublin Fingal West",
     "questions": [
       {
@@ -3413,6 +3418,30 @@
   {
     "constituency": "Dublin Rathdown",
     "questions": [
+      {
+        "date": "2026-11-11",
+        "deputy": "Sinéad Gibney",
+        "department": "Culture",
+        "heading": "Departmental Schemes",
+        "question": "126. Deputy Sinéad Gibney asked the Minister for Culture, Communications and Sport the number of applicants to date who have been informed of the outcome of their basic income for artists application, broken down by successful or unsuccessful applications. [80062/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/126/"
+      },
+      {
+        "date": "2026-11-11",
+        "deputy": "Sinéad Gibney",
+        "department": "Culture",
+        "heading": "Departmental Schemes",
+        "question": "128. Deputy Sinéad Gibney asked the Minister for Culture, Communications and Sport the reasoning for informing basic income for artists applicants in tranches. [80059/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/128/"
+      },
+      {
+        "date": "2026-11-11",
+        "deputy": "Sinéad Gibney",
+        "department": "Culture",
+        "heading": "Departmental Schemes",
+        "question": "129. Deputy Sinéad Gibney asked the Minister for Culture, Communications and Sport when all applicants to the basic income for artists scheme will be informed of the outcome of their application. [80057/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/129/"
+      },
       {
         "date": "2026-11-03",
         "deputy": "Sinéad Gibney",
@@ -6133,6 +6162,14 @@
   {
     "constituency": "Kildare North",
     "questions": [
+      {
+        "date": "2026-11-11",
+        "deputy": "Réada Cronin",
+        "department": "Climate",
+        "heading": "Departmental Data",
+        "question": "14. Deputy Réada Cronin asked the Minister for Climate, Energy and the Environment the number of schools, sports clubs, charities and community groups that have participated in fundraising activities through the deposit return scheme; and the total funds generated by those organisations. [80191/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/14/"
+      },
       {
         "date": "2026-11-03",
         "deputy": "Réada Cronin",
