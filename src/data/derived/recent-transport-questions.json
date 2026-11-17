@@ -4717,6 +4717,14 @@
     "constituency": "Dublin Bay South",
     "questions": [
       {
+        "date": "2026-11-12",
+        "deputy": "James Geoghegan",
+        "department": "Transport",
+        "heading": "Public Transport",
+        "question": "189. Deputy James Geoghegan asked the Minister for Transport his views on the timeline associated with the Luas to Poolbeg; and if he will report on his engagement with the National Transport Authority in respect of same and the works underway in his Department for the project. [78958/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/189/"
+      },
+      {
         "date": "2026-11-05",
         "deputy": "Eoin Hayes",
         "department": "Transport",
@@ -5187,14 +5195,6 @@
         "heading": "Public Transport",
         "question": "271. Deputy Eoin Hayes asked the Minister for Transport the position regarding the acceptance of credit and debit card payments on all public transport; and if he will make a statement on the matter. [57096/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-10-21/271/"
-      },
-      {
-        "date": "2025-10-09",
-        "deputy": "James Geoghegan",
-        "department": "Transport",
-        "heading": "Aviation Industry",
-        "question": "129. Deputy James Geoghegan asked the Minister for Transport if matters raised in correspondence (details supplied) will be reviewed; and if he will make a statement on the matter. [54505/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-10-09/129/"
       }
     ]
   },
@@ -6532,9 +6532,25 @@
         "date": "2026-11-12",
         "deputy": "Mark Ward",
         "department": "Transport",
+        "heading": "Public Transport",
+        "question": "206. Deputy Mark Ward asked the Minister for Transport the funding allocated for Dart+ Southwest; the timeline for the project; and if his Department will work to deliver the project ahead of time. [74829/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/206/"
+      },
+      {
+        "date": "2026-11-12",
+        "deputy": "Mark Ward",
+        "department": "Transport",
         "heading": "Rail Network",
         "question": "173. Deputy Mark Ward asked the Minister for Transport his views on the capacity of trains at peak morning and evening times along the Kishoge, Fonthill, Adamstown line; and the expected timeframe for additional capacity to be added. [80142/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/173/"
+      },
+      {
+        "date": "2026-11-12",
+        "deputy": "Shane Moynihan",
+        "department": "Transport",
+        "heading": "Public Transport",
+        "question": "135. Deputy Shane Moynihan asked the Minister for Transport when the emerging preferred route for Luas Lucan is expected to be published; and the anticipated timeframe for public consultation and the next stages of the project. [80260/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/135/"
       },
       {
         "date": "2026-11-12",
@@ -6967,22 +6983,6 @@
         "heading": "Bus Services",
         "question": "153. Deputy Shane Moynihan asked the Minister for Transport for an update on plans to improve bus service frequency in Newcastle, Rathcoole and Saggart; and if he will make a statement on the matter. [45482/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-18/153/"
-      },
-      {
-        "date": "2026-06-18",
-        "deputy": "Shane Moynihan",
-        "department": "Transport",
-        "heading": "Bus Services",
-        "question": "156. Deputy Shane Moynihan asked the Minister for Transport if there is scope to deliver standalone bus services for communities in Clonburris and Adamstown pending delivery of DART+ South West; and if he will make a statement on the matter. [45481/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-18/156/"
-      },
-      {
-        "date": "2026-06-16",
-        "deputy": "Shane Moynihan",
-        "department": "Transport",
-        "heading": "Public Transport",
-        "question": "310. Deputy Shane Moynihan asked the Minister for Transport the position regarding the establishment of the proposed transport security force; and if he will make a statement on the matter. [45526/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-16/310/"
       }
     ]
   },

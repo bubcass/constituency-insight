@@ -2609,6 +2609,14 @@
       {
         "date": "2026-11-11",
         "deputy": "Duncan Smith",
+        "department": "Culture",
+        "heading": "Sports Events",
+        "question": "124. Deputy Duncan Smith asked the Minister for Culture, Communications and Sport the consultation taking place with a community (details supplied) in advance of a competition. [80031/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/124/"
+      },
+      {
+        "date": "2026-11-11",
+        "deputy": "Duncan Smith",
         "department": "Finance",
         "heading": "Sports Funding",
         "question": "75. Deputy Duncan Smith asked the Tánaiste and Minister for Finance if his Department has any mechanism to identify which sports raise what proportion of the betting levy. [80032/26]",
@@ -3293,6 +3301,22 @@
   {
     "constituency": "Dublin North-West",
     "questions": [
+      {
+        "date": "2026-11-10",
+        "deputy": "Paul McAuliffe",
+        "department": "Culture",
+        "heading": "Arts Policy",
+        "question": "507. Deputy Paul McAuliffe asked the Minister for Culture, Communications and Sport the way in which the Department have assessed applications for the basic income for the arts scheme. [79041/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/507/"
+      },
+      {
+        "date": "2026-11-10",
+        "deputy": "Paul McAuliffe",
+        "department": "Culture",
+        "heading": "Arts Policy",
+        "question": "508. Deputy Paul McAuliffe asked the Minister for Culture, Communications and Sport the way in which his Department has ensured maximum fairness for applicants of the basic income for the arts scheme. [79037/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/508/"
+      },
       {
         "date": "2026-11-03",
         "deputy": "Rory Hearne",
@@ -4285,6 +4309,14 @@
     "constituency": "Dublin South-West",
     "questions": [
       {
+        "date": "2026-11-10",
+        "deputy": "Ciarán Ahern",
+        "department": "Culture",
+        "heading": "Departmental Schemes",
+        "question": "505. Deputy Ciarán Ahern asked the Minister for Culture, Communications and Sport to provide a timeline for when the remaining tranches of successful applicants to the basic income for the arts scheme will be notified; of the successful applicants notified to date, the number that have accepted the offer and completed the requisite paperwork; and to confirm when unsuccessful applicants will be notified. [78988/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/505/"
+      },
+      {
         "date": "2026-10-22",
         "deputy": "Ciarán Ahern",
         "department": "Culture",
@@ -4441,6 +4473,30 @@
   {
     "constituency": "Dublin West",
     "questions": [
+      {
+        "date": "2026-11-10",
+        "deputy": "Emer Currie",
+        "department": "Culture",
+        "heading": "Departmental Funding",
+        "question": "504. Deputy Emer Currie asked the Minister for Culture, Communications and Sport for an update on the drawdown of funding (details supplied). [78739/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/504/"
+      },
+      {
+        "date": "2026-11-10",
+        "deputy": "Emer Currie",
+        "department": "Culture",
+        "heading": "Sports Funding",
+        "question": "518. Deputy Emer Currie asked the Minister for Culture, Communications and Sport further to Parliamentary Question No. 75684/26, if his Department has processed a document (details supplied). [79697/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/518/"
+      },
+      {
+        "date": "2026-11-10",
+        "deputy": "Roderic O'Gorman",
+        "department": "Culture",
+        "heading": "Artists' Remuneration",
+        "question": "513. Deputy Roderic O'Gorman asked the Minister for Culture, Communications and Sport to outline the rationale for announcing recipients of the basic income for the arts in tranches with an initial announcement of 750 successful applicants; the number of further announcements that are intended; and the timeframe for these announcements. [79541/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/513/"
+      },
       {
         "date": "2026-11-03",
         "deputy": "Emer Currie",
@@ -4896,30 +4952,6 @@
         "heading": "Sports Organisations",
         "question": "365. Deputy Ruth Coppinger asked the Minister for Culture, Communications and Sport his position on the continued participation of Israel in FIBA given issues that have been raised (details supplied); and if he will make a statement on the matter. [2947/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-01-15/365/"
-      },
-      {
-        "date": "2025-12-18",
-        "deputy": "Paul Donnelly",
-        "department": "Finance",
-        "heading": "Banking Sector",
-        "question": "196. Deputy Paul Donnelly asked the Tánaiste and Minister for Finance his views on the difficulty of community, volunteer and sports organisations accessing bank accounts. [72889/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-18/196/"
-      },
-      {
-        "date": "2025-12-17",
-        "deputy": "Emer Currie",
-        "department": "Culture",
-        "heading": "Social Media",
-        "question": "259. Deputy Emer Currie asked the Minister for Culture, Communications and Sport the types of online platforms and services that will be subject to the proposed age verification mechanism which is being developed using Ireland’s digital wallet. [72783/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-17/259/"
-      },
-      {
-        "date": "2025-12-16",
-        "deputy": "Paul Donnelly",
-        "department": "Culture",
-        "heading": "Sports Facilities",
-        "question": "532. Deputy Paul Donnelly asked the Minister for Culture, Communications and Sport if the contract for the construction of the new National Velodrome and Badminton Centre has been signed; and if so, when his Department expects this work to commence. [71767/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-12-16/532/"
       }
     ]
   },
