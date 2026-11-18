@@ -3,6 +3,14 @@
     "constituency": "Carlow-Kilkenny",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Peter 'Chap' Cleere",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "6. Deputy Peter 'Chap' Cleere asked the Taoiseach when the Cabinet committee on health will meet next. [81056/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/6/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Peter 'Chap' Cleere",
         "department": "Transport",
@@ -473,14 +481,6 @@
         "heading": "Common Agricultural Policy",
         "question": "638. Deputy Catherine Callaghan asked the Minister for Agriculture, Food and the Marine the measures being pursued by Ireland in the post-2027 Common Agricultural Policy negotiations to support generational renewal and encourage more young people into farming. [73217/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/638/"
-      },
-      {
-        "date": "2026-10-15",
-        "deputy": "Catherine Callaghan",
-        "department": "Finance",
-        "heading": "Financial Services",
-        "question": "353. Deputy Catherine Callaghan asked the Tánaiste and Minister for Finance the Government's future plans regarding the eight-year deemed disposal regime for investment funds and ETFs; and whether further changes are under consideration following the measures announced in Budget 2027. [73241/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-15/353/"
       }
     ]
   },
@@ -1458,6 +1458,14 @@
     "constituency": "Cork East",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Liam Quaide",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "12. Deputy Liam Quaide asked the Taoiseach when the Cabinet committee on health will meet next. [79367/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/12/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "James O'Connor",
         "department": "Transport",
@@ -1928,20 +1936,28 @@
         "heading": "Youth Services",
         "question": "94. Deputy Liam Quaide asked the Minister for Education and Youth the funding to be provided for youth services in 2027; the number of additional staff to be recruited through this funding, broken down by role, funding scheme and county; the net increase in staffing compared with 2026; and the timetable for recruitment and filling these posts, in tabular form. [74607/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/94/"
-      },
-      {
-        "date": "2026-10-22",
-        "deputy": "Noel McCarthy",
-        "department": "Education",
-        "heading": "Departmental Policies",
-        "question": "133. Deputy Noel McCarthy asked the Minister for Education and Youth her Department's plans to establish a new special school or expand existing special school provision within the east Cork area. [74730/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/133/"
       }
     ]
   },
   {
     "constituency": "Cork North-Central",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "20. Deputy Pádraig O'Sullivan asked the Taoiseach when the Cabinet committee on health will meet next. [64346/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/20/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Pádraig O'Sullivan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "37. Deputy Pádraig O'Sullivan asked the Taoiseach when the Cabinet committee on disability will meet next. [64348/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/37/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Colm Burke",
@@ -2201,6 +2217,14 @@
       {
         "date": "2026-11-12",
         "deputy": "Thomas Gould",
+        "department": "Health",
+        "heading": "Health Service Executive",
+        "question": "363. Deputy Thomas Gould asked the Minister for Health if a person (details supplied) will continue in their role; and if an interim person has been appointed to this role. [80336/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/363/"
+      },
+      {
+        "date": "2026-11-12",
+        "deputy": "Thomas Gould",
         "department": "Social",
         "heading": "Social Welfare Payments",
         "question": "9. Deputy Thomas Gould asked the Minister for Social Protection the percentage of Domiciliary Care Allowance applications with addresses in Cork refused; and the percentage of these then accepted on appeal. [79073/26]",
@@ -2221,14 +2245,6 @@
         "heading": "Traffic Management",
         "question": "149. Deputy Thomas Gould asked the Minister for Transport whether he is aware of growing congestion in Cork city; and whether he will consider emergency funding for park and ride services to reduce this. [79076/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/149/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Thomas Gould",
-        "department": "Health",
-        "heading": "Undefined",
-        "question": "363. Deputy Thomas Gould asked the Minister for Health if a person (details supplied) will continue in their role; and if an interim person has been appointed to this role. [80336/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/363/"
       },
       {
         "date": "2026-11-11",
@@ -2405,22 +2421,6 @@
         "heading": "Health Services Staff",
         "question": "215. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 74355/26, the number of consultant posts in the HSE south west region reported as unfilled at the close of the public jobs campaigns in each of the years 2024 to 2025 and to date in 2026, which are currently filled on a locum or temporary basis, by hospital and specialty. [79969/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/215/"
-      },
-      {
-        "date": "2026-11-11",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "216. Deputy Ken O'Flynn asked the Minister for Health the number of recommendations in HSE Internal Audit report OPS012RGN0626 on international doctor recruitment; for each recommendation the agreed implementation date; and whether it has been implemented, partially implemented or not yet implemented. [79968/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/216/"
-      },
-      {
-        "date": "2026-11-11",
-        "deputy": "Ken O'Flynn",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "217. Deputy Ken O'Flynn asked the Minister for Health further to Parliamentary Question No. 74356/26, given that the NERs database applies to non-consultant hospital doctor posts only, the system used to record pre-employment documentation, including Garda vetting and overseas police clearance, for consultants; and whether that record is held centrally or at hospital level. [79967/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/217/"
       }
     ]
   },
@@ -2913,6 +2913,14 @@
     "constituency": "Cork South-Central",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Séamus McGrath",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "8. Deputy Séamus McGrath asked the Taoiseach when the Cabinet committee on health will next meet. [64526/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/8/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Pádraig Rice",
         "department": "Health",
@@ -3383,14 +3391,6 @@
         "heading": "Commissions of Investigation",
         "question": "2329. Deputy Pádraig Rice asked the Minister for Health if she can identify any previous Tribunal of Inquiry in Ireland where a child under 18 was publicly cross-examined; and to identify the statutory provision which would require children participating in the proposed CHI inquiry to be publicly cross-examined. [77922/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2329/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Pádraig Rice",
-        "department": "Health",
-        "heading": "Departmental Data",
-        "question": "1671. Deputy Pádraig Rice asked the Minister for Health the number of staff in each acute public hospital, by grade category in each of the years 2020 to 2025 and to date in 2026, in tabular form. [75481/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1671/"
       }
     ]
   },
@@ -4368,6 +4368,38 @@
     "constituency": "Dublin Bay North",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Barry Heneghan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "4. Deputy Barry Heneghan asked the Taoiseach when the Cabinet committee on health will meet next. [80782/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/4/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Barry Heneghan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "29. Deputy Barry Heneghan asked the Taoiseach when the Cabinet committee on disability will meet next. [80785/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/29/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Cian O'Callaghan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "19. Deputy Cian O'Callaghan asked the Taoiseach when the Cabinet committee on health will next meet. [78954/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/19/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Cian O'Callaghan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "36. Deputy Cian O'Callaghan asked the Taoiseach when the Cabinet committee on disability will meet next. [78955/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/36/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Barry Heneghan",
         "department": "Transport",
@@ -4814,44 +4846,28 @@
         "heading": "Visa Applications",
         "question": "684. Deputy Cian O'Callaghan asked the Minister for Justice, Home Affairs and Migration the average number of calendar days between receipt of a long-stay study visa application from a Palestinian national in Gaza and the first-instance decision, for decisions issued in each of the years 2024, 2025 and 2026 to date; and to specify whether the starting date used was receipt of the online application, receipt of supporting documents at the Embassy, or receipt of the application by the deciding officer. [79249/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/684/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cian O'Callaghan",
-        "department": "Justice",
-        "heading": "Visa Applications",
-        "question": "686. Deputy Cian O'Callaghan asked the Minister for Justice, Home Affairs and Migration in respect of long-stay study visa applications by Palestinian nationals in Gaza in each of the years 2024, 2025 and 2026 to date, the number and percentage of applications in which officials of his Department, or persons acting on its behalf, sought further information or documentation before a first-instance decision, whether directly or through the Department of Foreign Affairs; and the policy governing such requests. [79248/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/686/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cian O'Callaghan",
-        "department": "Justice",
-        "heading": "Visa Applications",
-        "question": "687. Deputy Cian O'Callaghan asked the Minister for Justice, Home Affairs and Migration in respect of long-stay study visa applications by Palestinian nationals in Gaza in each of the years 2024, 2025 and to date in 2026, the number and percentage that were refused at first instance wholly or partly because the required evidence of English-language proficiency had not been provided; and to state the denominator used for each percentage. [79244/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/687/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cian O'Callaghan",
-        "department": "Justice",
-        "heading": "Visa Applications",
-        "question": "688. Deputy Cian O'Callaghan asked the Minister for Justice, Home Affairs and Migration in respect of long-stay study visa applications by Palestinian nationals in Gaza in each of the years 2024, 2025 and to date in 2026, the number and percentage that included six months’ bank statements; included a written explanation for not providing those statements in full; included a certificate or other required evidence of English-language proficiency; included a written explanation for not providing that evidence; and were refused at first instance wholly or partly because six months’ bank statements had not been provided, in tabular form. [79243/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/688/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cian O'Callaghan",
-        "department": "Justice",
-        "heading": "Visa Applications",
-        "question": "689. Deputy Cian O'Callaghan asked the Minister for Justice, Home Affairs and Migration the number and percentage of long-stay study visa applications by Palestinian nationals in Gaza that were granted despite the absence of one or more ordinarily required documents in each of the years 2024, 2025 and 2026 to date; the documentary requirements concerned; and the policy, discretion or alternative evidence relied upon in granting those applications. [79247/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/689/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay South",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "James Geoghegan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "18. Deputy James Geoghegan asked the Taoiseach when the Cabinet committee on health will meet next. [78977/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/18/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "James Geoghegan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "35. Deputy James Geoghegan asked the Taoiseach when the Cabinet committee on disability will meet next. [78972/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/35/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Eoin Hayes",
@@ -5315,28 +5331,20 @@
         "heading": "Legislative Measures",
         "question": "1403. Deputy Ivana Bacik asked the Minister for Justice, Home Affairs and Migration the reason for the delay in transfer from his Department of responsibility of the Multi-Unit Developments Act 2011 and amendments to same; when the transfer will be complete; the number of staff assigned to the transfer; if there have been substantive meetings between his officials and their counterparts in the Department of Housing, Local Government and Heritage; and if so, the number of meetings that took place and the issues discussed. [77637/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1403/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Ivana Bacik",
-        "department": "Health",
-        "heading": "Medicinal Products",
-        "question": "1799. Deputy Ivana Bacik asked the Minister for Health if she has made representations to the HPRA in respect of the need to make available 2mg and 1mg doses of a mediction (details supplied) for treating anaphylaxis, approved in August 2025 and March 2026, respectively. [75829/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1799/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Ivana Bacik",
-        "department": "Housing",
-        "heading": "Ministerial Responsibilities",
-        "question": "1125. Deputy Ivana Bacik asked the Minister for Housing, Local Government and Heritage the reason for the delay in transfer to his Department of responsibility of the Multi-Unit Developments Act 2011 and amendments to same; when the transfer will be complete; the number of staff assigned to the transfer; if there have been substantive meetings between his officials and their counterparts in the Department of Justice, Home Affairs and Migration and; and if so, the number of meetings that took place and the issues discussed. [77636/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1125/"
       }
     ]
   },
   {
     "constituency": "Dublin Central",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Mary Lou McDonald",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "17. Deputy Mary Lou McDonald asked the Taoiseach when the Cabinet committee on health will meet next. [79002/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/17/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Marie Sherlock",
@@ -5808,14 +5816,6 @@
         "heading": "Dental Services",
         "question": "1790. Deputy Marie Sherlock asked the Minister for Health the number of approved posts funded to clear the backlog of 51,000 children who have missed out on their sixth class checks in the child oral health programme. [75913/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1790/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Marie Sherlock",
-        "department": "Health",
-        "heading": "Departmental Schemes",
-        "question": "1792. Deputy Marie Sherlock asked the Minister for Health the number of women who have availed of the travel abroad scheme for vaginal mesh/tape procedures in each of the years 2019 to date in 2026. [75933/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1792/"
       }
     ]
   },
@@ -8733,6 +8733,22 @@
     "constituency": "Dublin South-West",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Paul Murphy",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "13. Deputy Paul Murphy asked the Taoiseach when the Cabinet committee on health will meet next. [79264/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/13/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Paul Murphy",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "31. Deputy Paul Murphy asked the Taoiseach when the Cabinet committee on disability will meet next. [81015/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/31/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Ciarán Ahern",
         "department": "Children",
@@ -9195,28 +9211,28 @@
         "heading": "Civil Service",
         "question": "593. Deputy Paul Murphy asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation the number of mobility transfer offers within the civil service mobility scheme that were withdrawn or blocked due to alleged conflict of interest from 2024 to date in 2026; the specific criteria and guidelines utilised by departments to define and verify conflicts; the reason an independent, comprehensive general appeals mechanism does not exist to allow civil servants to formally contest these specific decisions; if he will act to eliminate this administrative deficit by establishing an independent appeals process to ensure transparency and protect staff from arbitrary or unverified refusals. [77699/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/593/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Paul Murphy",
-        "department": "Public Expenditure",
-        "heading": "Civil Service",
-        "question": "594. Deputy Paul Murphy asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation the number of applications within the civil service mobility scheme that were impacted by the Human Resources Management System IT flaw which misrecorded departmental cancellations under the status \"Employee Cancelled\"; the steps the National Shared Services Office has taken to correct the historical records of the affected civil servants; the specific date on which the system modification agreed with the Department’s Mobility Policy section was fully implemented; and the total financial cost incurred to deliver this software patch and system upgrade. [77696/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/594/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Paul Murphy",
-        "department": "Taoiseach",
-        "heading": "Cross-Border Co-operation",
-        "question": "36. Deputy Paul Murphy asked the Taoiseach if he will report on the work of the shared island unit in his Department. [70059/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/36/"
       }
     ]
   },
   {
     "constituency": "Dublin West",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Ruth Coppinger",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "3. Deputy Ruth Coppinger asked the Taoiseach when the Cabinet committee on health will meet next. [80755/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/3/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Ruth Coppinger",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "28. Deputy Ruth Coppinger asked the Taoiseach when the Cabinet committee on disability will meet next. [80756/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/28/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Emer Currie",
@@ -9680,28 +9696,28 @@
         "heading": "Greyhound Industry",
         "question": "719. Deputy Roderic O'Gorman asked the Minister for Agriculture, Food and the Marine to provide the mortality rate between registration at birth in the Irish Coursing Club stud book and registration at microchipping (12 weeks-of-age) in the Irish Coursing Club Stud Book for the 9,004 non-coursing greyhounds born in 2025. [78957/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/719/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Roderic O'Gorman",
-        "department": "Agriculture",
-        "heading": "Greyhound Industry",
-        "question": "720. Deputy Roderic O'Gorman asked the Minister for Agriculture, Food and the Marine the current status of non-coursing greyhounds (details supplied) who were being tracked on Rasaiocht Con Éireann’s traceability system (RCETS) as of 08 May 2026, giving a detailed breakdown into active, inactive, exported. [78956/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/720/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Ruth Coppinger",
-        "department": "Climate",
-        "heading": "Climate Change Policy",
-        "question": "193. Deputy Ruth Coppinger asked the Minister for Climate, Energy and the Environment given the recent report published by the Climate Change Advisory Council that estimates that estimated that Ireland faces an annual biodiversity investment shortfall of approximately €700 million, the measures his Department will take to invest on biodiversity protection. [79604/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/193/"
       }
     ]
   },
   {
     "constituency": "Dún Laoghaire",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Richard Boyd Barrett",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "14. Deputy Richard Boyd Barrett asked the Taoiseach when the Cabinet committee on health will meet next. [79098/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/14/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Richard Boyd Barrett",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "30. Deputy Richard Boyd Barrett asked the Taoiseach when the Cabinet committee on disability will meet next. [81000/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/30/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Barry Ward",
@@ -10165,28 +10181,28 @@
         "heading": "Schools Building Projects",
         "question": "464. Deputy Cormac Devlin asked the Minister for Education and Youth to provide an update on the tender for a school (details supplied); and the expected timeline for same. [79221/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/464/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cormac Devlin",
-        "department": "Defence",
-        "heading": "Small and Medium Enterprises",
-        "question": "214. Deputy Cormac Devlin asked the Minister for Defence if in all new Government-to-Government contracts (details supplied) that her Department is initiating, the local participation clause where a percentage of indigenous SMEs across Ireland is utilised. [79229/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/214/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cormac Devlin",
-        "department": "Social",
-        "heading": "Social Welfare Code",
-        "question": "608. Deputy Cormac Devlin asked the Minister for Social Protection will examine increasing the income threshold for people seeking the back-to-school clothing and footwear allowance; in particular if he will examine payments based assessed on a net income basis as opposed to a parent or guardian's gross income. [79242/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/608/"
       }
     ]
   },
   {
     "constituency": "Galway East",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Louis O'Hara",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "11. Deputy Louis O'Hara asked the Taoiseach when the Cabinet committee on health will meet next. [67767/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/11/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Louis O'Hara",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "34. Deputy Louis O'Hara asked the Taoiseach when the Cabinet committee on disability will meet next. [75838/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/34/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Albert Dolan",
@@ -10650,28 +10666,20 @@
         "heading": "Special Educational Needs",
         "question": "468. Deputy Peter Roche asked the Minister for Education and Youth the current average and longest processing times for assistive technology applications at primary and post-primary level; the number awaiting a decision, broken down by month of receipt; and the processing timeframe the Department aims to meet. [79491/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/468/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Peter Roche",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "471. Deputy Peter Roche asked the Minister for Education and Youth the date an assistive technology application in respect of a child (details supplied) was received by the Department; whether the application is complete; its current processing status; the reason a decision remains outstanding; and when a decision is expected. [79497/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/471/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Peter Roche",
-        "department": "Education",
-        "heading": "Special Educational Needs",
-        "question": "472. Deputy Peter Roche asked the Minister for Education and Youth whether a system will be introduced allowing schools to track the progress of assistive technology applications; and whether applicants will receive confirmation that documentation is complete, an estimated decision date and notification of any delays. [79496/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/472/"
       }
     ]
   },
   {
     "constituency": "Galway West",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "John Connolly",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "16. Deputy John Connolly asked the Taoiseach when the Cabinet committee on health will meet next. [64511/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/16/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "John Connolly",
@@ -11143,20 +11151,28 @@
         "heading": "Family Resource Centres",
         "question": "98. Deputy Seán Kyne asked the Minister for Children, Disability and Equality for an update on the ten new family resource centres announced in Budget 2027; the current status of the process to establish these centres under consideration for allocation; and when their locations will be determined. [77335/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/98/"
-      },
-      {
-        "date": "2026-11-05",
-        "deputy": "Seán Kyne",
-        "department": "Further and Higher Education",
-        "heading": "Third Level Education",
-        "question": "199. Deputy Seán Kyne asked the Minister for Further and Higher Education, Research, Innovation and Science his assessment of the reported funding shortfalls facing the University of Galway; and the impact these financial pressures may have on the university’s operations, staffing levels, student services and performance. [72032/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/199/"
       }
     ]
   },
   {
     "constituency": "Kerry",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Michael Healy-Rae",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "7. Deputy Michael Healy-Rae asked the Taoiseach when the Cabinet committee on health will meet next. [81116/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/7/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Michael Healy-Rae",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "32. Deputy Michael Healy-Rae asked the Taoiseach when the Cabinet committee on disability will meet next. [81119/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/32/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Michael Cahill",
@@ -11620,22 +11636,6 @@
         "heading": "Bus Services",
         "question": "244. Deputy Michael Cahill asked the Minister for Transport to provide the necessary funding for Kerry Local Link to introduce a bus service from the Gap of Dunlop to Beaufort and on to Killarney town, where there is strong demand. [78937/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/244/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Michael Cahill",
-        "department": "Transport",
-        "heading": "Bus Services",
-        "question": "245. Deputy Michael Cahill asked the Minister for Transport to provide the necessary funding for Kerry Local Link to introduce a bus service from Beaufort to Whitfield to Killorglin, where there is strong demand. [78936/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/245/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Michael Cahill",
-        "department": "Justice",
-        "heading": "Departmental Policies",
-        "question": "653. Deputy Michael Cahill asked the Minister for Justice, Home Affairs and Migration if he will advise on any proposals currently under consideration by his Department for an area (details supplied). [79000/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/653/"
       }
     ]
   },
@@ -14553,6 +14553,30 @@
     "constituency": "Louth",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Erin McGreehan",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "26. Deputy Erin McGreehan asked the Taoiseach when the Cabinet committee on disability will meet next. [80710/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/26/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Ruairí Ó Murchú",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "21. Deputy Ruairí Ó Murchú asked the Taoiseach when the Cabinet committee on health will meet next. [77363/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/21/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Ruairí Ó Murchú",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "39. Deputy Ruairí Ó Murchú asked the Taoiseach when the Cabinet committee on disability will meet next. [81136/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/39/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Erin McGreehan",
         "department": "Social",
@@ -15007,36 +15031,44 @@
         "heading": "Bus Services",
         "question": "485. Deputy Erin McGreehan asked the Minister for Transport the cross-Border bus routes and operators participating in the student and young adult discounted fare schemes, including services serving County Louth; and whether further routes are being considered for inclusion, in tabular form. [77880/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/485/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Erin McGreehan",
-        "department": "Transport",
-        "heading": "Bus Services",
-        "question": "486. Deputy Erin McGreehan asked the Minister for Transport if he will extend student and young adult fare discounts to cross-border services operated by eligible licensed commercial bus and coach operators; the funding and arrangements required; and the timetable for doing so. [77879/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/486/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Erin McGreehan",
-        "department": "Transport",
-        "heading": "Bus Services",
-        "question": "487. Deputy Erin McGreehan asked the Minister for Transport to clarify an apparent inconsistency raised by cross-Border student commuters whereby discounted fares are available on Expressway Route 64 between Letterkenny and Derry but equivalent discounts are unavailable on services between Letterkenny and Belfast; and the reasons for any difference. [77878/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/487/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Erin McGreehan",
-        "department": "Taoiseach",
-        "heading": "Cabinet Committees",
-        "question": "68. Deputy Erin McGreehan asked the Taoiseach when the Cabinet Committee on Disability will meet next. [64353/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/68/"
       }
     ]
   },
   {
     "constituency": "Mayo",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Paul Lawless",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "23. Deputy Paul Lawless asked the Taoiseach when the Cabinet committee on health will next meet. [81414/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/23/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Paul Lawless",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "40. Deputy Paul Lawless asked the Taoiseach when the Cabinet committee on disability will meet next. [81415/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/40/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Rose Conway-Walsh",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "9. Deputy Rose Conway-Walsh asked the Taoiseach when the Cabinet committee on health will meet next. [79417/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/9/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Rose Conway-Walsh",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "38. Deputy Rose Conway-Walsh asked the Taoiseach when the Cabinet committee on disability will meet next. [81207/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/38/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Keira Keogh",
@@ -15484,44 +15516,28 @@
         "heading": "Cancer Services",
         "question": "2137. Deputy Paul Lawless asked the Minister for Health the reason a patient (details supplied) who was informed of a lung abnormality requiring follow-up was allegedly left without an appointment despite referrals reportedly being sent on two occasions by the referring clinician to the respiratory service at Mayo University Hospital; and whether an investigation has been undertaken into the whereabouts of those referrals. [77209/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2137/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Paul Lawless",
-        "department": "Health",
-        "heading": "Cancer Services",
-        "question": "2138. Deputy Paul Lawless asked the Minister for Health if she is aware of a case in which a patient was informed that their medical file contained details of a bronchoscopy procedure which the patient states they never underwent; and whether this matter has been investigated as a potential medical records error. [77208/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2138/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Paul Lawless",
-        "department": "Health",
-        "heading": "Cancer Services",
-        "question": "2142. Deputy Paul Lawless asked the Minister for Health if she will investigate the circumstances in which a person (details supplied) who had completed cancer treatment and understood themselves to be cancer-free subsequently received an appointment from Mayo University Hospital for chemotherapy treatment which the hospital later acknowledged had been issued in error; the steps taken to establish how the error occurred; and whether any patient safety review has been conducted. [77207/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2142/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Paul Lawless",
-        "department": "Defence",
-        "heading": "Defence Forces",
-        "question": "109. Deputy Paul Lawless asked the Minister for Defence if she has requested an assessment from the Defence Forces or departmental officials on the implications of European Union defence-related mandates concerning foreign military service exemptions for individuals seeking refuge here; and if she will make a statement on the matter. [77479/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/109/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Paul Lawless",
-        "department": "Health",
-        "heading": "Dental Services",
-        "question": "1829. Deputy Paul Lawless asked the Minister for Health whether her Department has examined the impact of prolonged waiting times for orthodontic assessment and treatment on children's oral health and wellbeing; whether research or a review has been conducted in this regard; and if she will make a statement on the matter. [76018/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1829/"
       }
     ]
   },
   {
     "constituency": "Meath East",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Darren O'Rourke",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "2. Deputy Darren O'Rourke asked the Taoiseach when the Cabinet committee on health will meet next. [79597/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/2/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Darren O'Rourke",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "25. Deputy Darren O'Rourke asked the Taoiseach when the Cabinet committee on disability will meet next. [79599/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/25/"
+      },
       {
         "date": "2026-11-10",
         "deputy": "Darren O'Rourke",
@@ -15985,28 +16001,52 @@
         "heading": "Education Schemes",
         "question": "88. Deputy Darren O'Rourke asked the Minister for Education and Youth the amount spent on the scheme for the commissioning of psychological assessments, SCPA, in each of the past five school years, broken down by primary and secondary and year, in tabular form. [74817/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/88/"
-      },
-      {
-        "date": "2026-10-22",
-        "deputy": "Darren O'Rourke",
-        "department": "Education",
-        "heading": "School Attendance",
-        "question": "90. Deputy Darren O'Rourke asked the Minister for Education and Youth the way in which she plans to respond to recent school attendance data; and the supports and training her Department has in place for school leaders, home school community liaisons, HSCLs, teachers and SNAs regarding emotionally based school non-attendance, EBSNA. [74815/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/90/"
-      },
-      {
-        "date": "2026-10-22",
-        "deputy": "Darren O'Rourke",
-        "department": "Education",
-        "heading": "School Management",
-        "question": "159. Deputy Darren O'Rourke asked the Minister for Education and Youth the way in which she is responding to the recent spate of threatening emails to schools which have resulted in some cases to forced school closures. [74820/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-10-22/159/"
       }
     ]
   },
   {
     "constituency": "Meath West",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Aisling Dempsey",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "27. Deputy Aisling Dempsey asked the Taoiseach when the Cabinet committee on disability will meet next. [80709/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/27/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Peadar Tóibín",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "1. Deputy Peadar Tóibín asked the Taoiseach when the Cabinet committee on health will meet next. [79026/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/1/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Peadar Tóibín",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "5. Deputy Peadar Tóibín asked the Taoiseach when the Cabinet committee on health will meet next. [81006/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/5/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Peadar Tóibín",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "15. Deputy Peadar Tóibín asked the Taoiseach when the Cabinet committee on health will meet next. [79024/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/15/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Peadar Tóibín",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "24. Deputy Peadar Tóibín asked the Taoiseach when the Cabinet committee on disability will meet next. [79027/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/24/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Aisling Dempsey",
@@ -16446,46 +16486,6 @@
         "heading": "Road Tolls",
         "question": "215. Deputy Peadar Tóibín asked the Minister for Transport the legal firms and debt collection agencies engaged by Transport Infrastructure Ireland, eFlow or any toll operator in connection with toll enforcement and debt recovery; the value of payments made to each provider in each of the past five years; the procurement procedures used; and whether the contracts were awarded following an open competition. [78762/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/215/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Peadar Tóibín",
-        "department": "Transport",
-        "heading": "Road Tolls",
-        "question": "216. Deputy Peadar Tóibín asked the Minister for Transport the name of each solicitor, legal practice or legal services provider engaged in relation to tolling operations, toll enforcement, toll concessions or associated legal proceedings during the past five years; the value of each contract awarded; the procurement process used in each instance; whether the contract was subject to a public tender competition and the duration of each contract, in tabular form. [78761/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/216/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Peadar Tóibín",
-        "department": "Transport",
-        "heading": "Road Tolls",
-        "question": "217. Deputy Peadar Tóibín asked the Minister for Transport in respect of the appointment of a person (details supplied) the date on which the engagement commenced; the basis upon which the firm was selected; if a procurement or tender process was undertaken; the number of bidders that participated; the total amount paid to date, the amount committed under the contract, and if he will make a statement on the matter. [78759/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/217/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Peadar Tóibín",
-        "department": "Transport",
-        "heading": "Road Tolls",
-        "question": "218. Deputy Peadar Tóibín asked the Minister for Transport the gross revenue collected from tolls on each tolled road, bridge and tunnel in the State in each of the past five years; the amount retained by the toll operator in each case; the amount remitted to the Exchequer, Transport Infrastructure Ireland or any other public body; the purpose for which such revenue was allocated or expended, in tabular form. [78757/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/218/"
-      },
-      {
-        "date": "2026-11-05",
-        "deputy": "Aisling Dempsey",
-        "department": "Children",
-        "heading": "Departmental Funding",
-        "question": "126. Deputy Aisling Dempsey asked the Minister for Children, Disability and Equality the additional supports she can provide to an organisation (details supplied) in view of the important advocacy and work they do. [78295/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/126/"
-      },
-      {
-        "date": "2026-11-05",
-        "deputy": "Aisling Dempsey",
-        "department": "Children",
-        "heading": "Early Childhood Care and Education",
-        "question": "80. Deputy Aisling Dempsey asked the Minister for Children, Disability and Equality for an update on her work on the early learning and childcare planning matters working group regarding a review of the 2001 planning guidelines for local authorities on early learning and childcare settings. [78614/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/80/"
       }
     ]
   },
@@ -16978,6 +16978,22 @@
     "constituency": "Roscommon-Galway",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Martin Daly",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "10. Deputy Martin Daly asked the Taoiseach when the Cabinet committee on health will meet next. [66874/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/10/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Martin Daly",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "33. Deputy Martin Daly asked the Taoiseach when the Cabinet committee on disability will meet next. [66875/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/33/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Claire Kerrane",
         "department": "Transport",
@@ -17440,22 +17456,6 @@
         "heading": "Dental Services",
         "question": "1901. Deputy Martin Daly asked the Minister for Health whether the HSE will review the arrangements governing access to community dental services for children with additional or special needs living near county boundaries, with a view to allowing children to receive treatment at the nearest appropriate facility regardless of county boundaries or school location; and if she will make a statement on the matter. [76321/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1901/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Martin Daly",
-        "department": "Health",
-        "heading": "Dental Services",
-        "question": "1902. Deputy Martin Daly asked the Minister for Health whether children with additional or special needs who reside in County Roscommon but attend school in County Galway can access community dental services in Roscommon where these services are significantly closer to their home, rather than being required to travel to Galway city; and if she will make a statement on the matter. [76320/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1902/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Martin Daly",
-        "department": "Health",
-        "heading": "Dental Services",
-        "question": "1903. Deputy Martin Daly asked the Minister for Health whether eligibility for HSE community dental services for children with additional or special needs is determined by a child’s county of residence, the location of the school they attend or the relevant HSE service area; and if she will make a statement on the matter. [76319/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1903/"
       }
     ]
   },
@@ -18918,6 +18918,14 @@
     "constituency": "Waterford",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Conor D. McGuinness",
+        "department": "Taoiseach",
+        "heading": "Cabinet Committees",
+        "question": "22. Deputy Conor D. McGuinness asked the Taoiseach when the Cabinet committee on health will next meet. [81288/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/22/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Conor D. McGuinness",
         "department": "Transport",
@@ -19388,14 +19396,6 @@
         "heading": "Health Services Staff",
         "question": "2265. Deputy David Cullinane asked the Minister for Health the total salary and associated employment costs incurred by the HSE in respect of the lead coordinator post in the South East Regional Drug and Alcohol Task Force for each of the years 2020 to 2026, the period the appointed post holder was absent from the post; and if she will make a statement on the matter. [77728/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2265/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "David Cullinane",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "2267. Deputy David Cullinane asked the Minister for Health the reason a permanent or acting replacement lead coordinator has not been appointed to the South East Regional Drug and Alcohol Task Force during the prolonged absence of the current holder; the steps the HSE has taken to resolve the matter; when it expects the position to be filled on a substantive basis; and if she will make a statement on the matter. [77727/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/2267/"
       }
     ]
   },
