@@ -7249,38 +7249,6 @@
         "heading": "Student Accommodation",
         "question": "852. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science the status of the delivery of student housing across University College Dublin, Dublin City University and Maynooth University. [27285/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-05-27/852/"
-      },
-      {
-        "date": "2025-05-20",
-        "deputy": "Maeve O'Connell",
-        "department": "Further and Higher Education",
-        "heading": "Student Accommodation",
-        "question": "915. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science to report on how eligibility for the 30% target group for reduced rent beds student accommodation is being verified and enforced across each relevant institution. [25178/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-20/915/"
-      },
-      {
-        "date": "2025-05-20",
-        "deputy": "Maeve O'Connell",
-        "department": "Further and Higher Education",
-        "heading": "Student Accommodation",
-        "question": "916. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science to report on whether any additional supports will be made available to students who may not be eligible for the targeted reduced rent beds but still encounter financial difficulties. [25179/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-20/916/"
-      },
-      {
-        "date": "2025-05-20",
-        "deputy": "Maeve O'Connell",
-        "department": "Further and Higher Education",
-        "heading": "Student Accommodation",
-        "question": "922. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science to report on any plans either ongoing or under consideration to expand the student assistance fund to meet rising demand from students due to rent costs. [25185/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-20/922/"
-      },
-      {
-        "date": "2025-05-20",
-        "deputy": "Maeve O'Connell",
-        "department": "Further and Higher Education",
-        "heading": "Student Accommodation",
-        "question": "923. Deputy Maeve O'Connell asked the Minister for Further and Higher Education, Research, Innovation and Science to report on the main learnings by his Department from the 2024 rent-a-room campaign, and how these learnings will inform future campaigns and outreach programmes. [25186/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-05-20/923/"
       }
     ]
   },
@@ -9716,15 +9684,15 @@
         "date": "2026-11-10",
         "deputy": "John Connolly",
         "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "549. Deputy John Connolly asked the Minister for Housing, Local Government and Heritage when the national planning statement on short-term letting will be published; where members of the public and accommodation providers will be able to access the statement; and if he will make a statement on the matter. [79288/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/549/"
+        "heading": "Planning Issues",
+        "question": "561. Deputy John Connolly asked the Minister for Housing, Local Government and Heritage whether a property that receives planning permission, including retention permission, for use as a short-term let under the proposed National Planning Statement on Short-Term Letting, will become liable for local authority commercial rates; commercial water and wastewater charges; disability access certificate requirements; additional fire safety certification requirements; and any other charges, levies, taxes or regulatory obligations that would not apply to a standard residential dwelling; and if he will make a statement on the matter. [79626/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/561/"
       },
       {
         "date": "2026-11-10",
         "deputy": "John Connolly",
         "department": "Housing",
-        "heading": "Housing Policy",
+        "heading": "Planning Issues",
         "question": "562. Deputy John Connolly asked the Minister for Housing, Local Government and Heritage if he will clarify whether a dwelling that receives planning permission, including retention permission, for use as a short-term let under the proposed National Planning Statement on Short-Term Letting will be classified as a commercial property; a residential property with an ancillary commercial use; or another planning category; and if he will set out the implications of each classification for property ownership, mortgage eligibility, future sale on the residential market, and any subsequent reversion of the property to full residential use. [79625/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/562/"
       },
@@ -9732,9 +9700,17 @@
         "date": "2026-11-10",
         "deputy": "John Connolly",
         "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "561. Deputy John Connolly asked the Minister for Housing, Local Government and Heritage whether a property that receives planning permission, including retention permission, for use as a short-term let under the proposed National Planning Statement on Short-Term Letting, will become liable for local authority commercial rates; commercial water and wastewater charges; disability access certificate requirements; additional fire safety certification requirements; and any other charges, levies, taxes or regulatory obligations that would not apply to a standard residential dwelling; and if he will make a statement on the matter. [79626/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/561/"
+        "heading": "Rental Sector",
+        "question": "521. Deputy John Connolly asked the Minister for Housing, Local Government and Heritage whether, under the national Short-Term Letting Register due to become operational on 1 December 2026, properties that may have been operating as short-term lets for a continuous period exceeding seven years and are therefore potentially immune from planning enforcement under section 157 of the Planning and Development Act 2000 will be treated as compliant for the purposes of registration; whether any specific verification of planning status will be required in such cases; and whether guidance has been issued or is being prepared for local authorities and Fáilte Ireland on this matter. [78690/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/521/"
+      },
+      {
+        "date": "2026-11-10",
+        "deputy": "John Connolly",
+        "department": "Housing",
+        "heading": "Rental Sector",
+        "question": "549. Deputy John Connolly asked the Minister for Housing, Local Government and Heritage when the National Planning Statement on Short-Term Letting, will be published; where members of the public and accommodation providers will be able to access the statement; and if he will make a statement on the matter. [79288/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/549/"
       },
       {
         "date": "2026-11-10",
@@ -9748,7 +9724,7 @@
         "date": "2026-11-10",
         "deputy": "Mairéad Farrell",
         "department": "Housing",
-        "heading": "Housing Policy",
+        "heading": "Rental Sector",
         "question": "540. Deputy Mairéad Farrell asked the Minister for Housing, Local Government and Heritage regarding the recently published National Planning Statement, if Furbo County Galway will be considered outside of the area boundaries any larger town and or city with a population in excess of 20,000; the date on which the Short Term Lettings and Tourism Bill 2026 will apply the seven years retention threshold to; if a property is not registered under the Short Term Lettings and Tourism Bill 2026, if the listing default to a max 22 night stay; and if a landlord cannot get a registration number while their retention application is pending, if they have to stop listing on 1 January 2027. [79141/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/540/"
       },
@@ -10183,14 +10159,6 @@
         "heading": "Housing Policy",
         "question": "121. Deputy Mairéad Farrell asked the Minister for Housing; Local Government and Heritage his views on whether it is reasonable to expect a person whose income is below the social housing eligibility threshold to pay for accommodation in a hotel or hostel while they are homeless; if there is a legislative basis for a local authority to refuse homeless services to a person based on their employment status if they qualify for social housing support; and if he will make a statement on the matter. [28823/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-04-22/121/"
-      },
-      {
-        "date": "2026-04-22",
-        "deputy": "Mairéad Farrell",
-        "department": "Housing",
-        "heading": "Housing Policy",
-        "question": "135. Deputy Mairéad Farrell asked the Minister for Housing, Local Government and Heritage to provide an update on plans to introduce a passport for social housing tenants and applicants who have experienced domestic abuse in order that they can seek support immediately from a new local authority if they need to move for safety reasons and can keep their years on the housing waiting list; and if he will make a statement on the matter. [28976/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-22/135/"
       }
     ]
   },
