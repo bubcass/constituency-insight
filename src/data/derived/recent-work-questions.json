@@ -360,6 +360,14 @@
     "constituency": "Cavan-Monaghan",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Cathy Bennett",
+        "department": "Social",
+        "heading": "Social Welfare Schemes",
+        "question": "594. Deputy Cathy Bennett asked the Minister for Social Protection the State pension or redress available to women who were denied the ability to work due to the marriage ban. [81514/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/594/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Brendan Smith",
         "department": "Social",
@@ -830,20 +838,28 @@
         "heading": "Legal Aid",
         "question": "206. Deputy Matt Carthy asked the Minister for Justice, Home Affairs and Migration whether the proposed fee structure under the revised criminal legal aid scheme represents an increase or decrease in effective remuneration for solicitors undertaking criminal legal aid work, including any modelling carried out in that regard; and if he will make a statement on the matter. [22924/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-03-25/206/"
-      },
-      {
-        "date": "2026-03-25",
-        "deputy": "Matt Carthy",
-        "department": "Justice",
-        "heading": "Legal Aid",
-        "question": "208. Deputy Matt Carthy asked the Minister for Justice, Home Affairs and Migration whether any assessment has been made of the risk that the proposed changes to the criminal legal aid scheme could result in reduced participation by solicitors in criminal legal aid work; the implications of any such reduction; and if he will make a statement on the matter. [22926/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-03-25/208/"
       }
     ]
   },
   {
     "constituency": "Clare",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Cathal Crowe",
+        "department": "Social",
+        "heading": "Employment Support Services",
+        "question": "571. Deputy Cathal Crowe asked the Minister for Social Protection if his Department will examine the introduction of enhanced statutory sick leave protections, flexible income supports, or specific workplace accommodations tailored for individuals dealing with recurring, medically documented chronic illnesses who wish to remain in full-time employment. [80684/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/571/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Donna McGettigan",
+        "department": "Social",
+        "heading": "Employment Support Services",
+        "question": "575. Deputy Donna McGettigan asked the Minister for Social Protection if the Government will examine additional paid sick-leave protection or other income supports for workers with recurring, medically documented chronic illnesses like endometriosis; and the practical support that is available to people who are still working but whose chronic condition significantly limits their ability to work and enjoy everyday life. [80904/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/575/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Joe Cooney",
@@ -1307,22 +1323,6 @@
         "heading": "Employment Rights",
         "question": "706. Deputy Donna McGettigan asked the Minister for Enterprise, Tourism and Employment if his attention has been drawn to staff at a centre (details supplied) who are being pressured to accept new contracts, terms and conditions of employment at short notice; the steps he will take; and if he will make a statement on the matter. [42949/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/706/"
-      },
-      {
-        "date": "2026-06-09",
-        "deputy": "Donna McGettigan",
-        "department": "Further and Higher Education",
-        "heading": "Further and Higher Education",
-        "question": "2488. Deputy Donna McGettigan asked the Minister for Further and Higher Education, Research, Innovation and Science the long term plans for St Patricks College Carlow ; the plans for the building and site if the college closes; the courses that will be protected; the job protections can be given to the staff currently facing uncertainty. [42460/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-09/2488/"
-      },
-      {
-        "date": "2026-05-28",
-        "deputy": "Donna McGettigan",
-        "department": "Enterprise",
-        "heading": "Data Centres",
-        "question": "307. Deputy Donna McGettigan asked the Minister for Enterprise, Tourism and Employment if he will report on the proposed data centre campus in Ennis, County Clare: if the Government has official figures showing the number of permanent, on-site jobs will be created once the facility is up and running, not including construction work; and if he will make a statement on the matter. [40940/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-28/307/"
       }
     ]
   },
@@ -4032,6 +4032,22 @@
     "constituency": "Dublin Bay North",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Cian O'Callaghan",
+        "department": "Social",
+        "heading": "Pension Provisions",
+        "question": "599. Deputy Cian O'Callaghan asked the Minister for Social Protection if he will examine the interaction between employment-status classifications, PAYE reporting, Special Collection PRSI arrangements and eligibility for MyFutureFund; whether procedures exist to review cases where a worker pays class A PRSI but does not appear in PAYE reporting data; and whether a revised employment-status determination can result in the correction of PAYE records for automatic-enrolment purposes. [81456/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/599/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Cian O'Callaghan",
+        "department": "Justice",
+        "heading": "Ukraine War",
+        "question": "602. Deputy Cian O'Callaghan asked the Minister for Justice, Home Affairs and Migration the reason there is no phone number available for the Ukraine Crisis Temporary Accommodation Team; and the reason there are no social workers assigned to support and manage vulnerable Ukrainian families, like there is for families in IPAS accommodation. [80548/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/602/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Barry Heneghan",
         "department": "Social",
@@ -4494,28 +4510,20 @@
         "heading": "Domestic Violence",
         "question": "1831. Deputy Barry Heneghan asked the Minister for Housing, Local Government and Heritage whether his Department is working with the Department of Justice, Home Affairs and Migration and local authorities to ensure that victims of domestic violence who leave unsafe homes can access emergency and longer-term accommodation in a timely manner; and if he will make a statement on the matter. [58534/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1831/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Barry Heneghan",
-        "department": "Housing",
-        "heading": "Mayoral Election",
-        "question": "1871. Deputy Barry Heneghan asked the Minister for Housing, Local Government and Heritage whether his Department has examined the potential merits of introducing a directly elected Mayor for Dublin with executive powers; whether work is underway on proposals in this regard; and if he will make a statement on the matter. [58987/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1871/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Barry Heneghan",
-        "department": "Social",
-        "heading": "Social Welfare Benefits",
-        "question": "2078. Deputy Barry Heneghan asked the Minister for Social Protection whether his Department has examined the adequacy of maternity benefit and paid parental leave supports available to working families, particularly in the context of childcare costs; and if he will make a statement on the matter. [58537/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/2078/"
       }
     ]
   },
   {
     "constituency": "Dublin Bay South",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Eoin Hayes",
+        "department": "Social",
+        "heading": "Legislative Measures",
+        "question": "592. Deputy Eoin Hayes asked the Minister for Social Protection the officer or body that has statutory responsibility under the Social Welfare Consolidation Act 2005, for deciding whether employment is subsidiary employment for the purposes of Schedule C, paragraph 4 of S.I. 312 of 1996; and whether the Minister for Defence has a statutory role in that decision. [81469/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/592/"
+      },
       {
         "date": "2026-11-12",
         "deputy": "Eoin Hayes",
@@ -4987,14 +4995,6 @@
         "heading": "Environmental Policy",
         "question": "89. Deputy Eoin Hayes asked the Taoiseach if he will provide an update on the work of the research and modelling group. [39426/25]",
         "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/89/"
-      },
-      {
-        "date": "2025-07-15",
-        "deputy": "Ivana Bacik",
-        "department": "Taoiseach",
-        "heading": "Departmental Bodies",
-        "question": "86. Deputy Ivana Bacik asked the Taoiseach if he will provide an update on the work of the economic division of his Department. [39421/25]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2025-07-15/86/"
       }
     ]
   },
@@ -6661,6 +6661,14 @@
   {
     "constituency": "Dublin North-West",
     "questions": [
+      {
+        "date": "2026-11-17",
+        "deputy": "Paul McAuliffe",
+        "department": "Social",
+        "heading": "Social Welfare Payments",
+        "question": "572. Deputy Paul McAuliffe asked the Minister for Social Protection the status of a working family payment for a person (details supplied). [80820/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/572/"
+      },
       {
         "date": "2026-10-22",
         "deputy": "Paul McAuliffe",
@@ -8378,6 +8386,22 @@
     "constituency": "Dublin West",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Emer Currie",
+        "department": "Social",
+        "heading": "Community Employment Schemes",
+        "question": "565. Deputy Emer Currie asked the Minister for Social Protection whether he intends on reforming the community employment scheme (details supplied). [80549/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/565/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Roderic O'Gorman",
+        "department": "Social",
+        "heading": "Disability Issues",
+        "question": "600. Deputy Roderic O'Gorman asked the Minister for Social Protection for an update on the achievement of commitment 6 – supporting disabled people to work of the National Human Rights Strategy for Disabled People 2025-2030. [81524/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/600/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Roderic O'Gorman",
         "department": "Social",
@@ -8840,22 +8864,6 @@
         "heading": "School Staff",
         "question": "1344. Deputy Ruth Coppinger asked the Minister for Education and Youth following the release of the study results carried out by the DCU Centre for Collaborative Research Across Teacher Education that focused on the occupational wellbeing of over 900 primary and second-level school principals, the measures her Department will take to assist school principals who reportedly suffer from work burnout. [62681/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1344/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Emer Currie",
-        "department": "Enterprise",
-        "heading": "Departmental Data",
-        "question": "977. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment the most up-to-date contact list for queries from Oireachtas members to agencies under his Department, in tabular form. [55579/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/977/"
-      },
-      {
-        "date": "2026-07-28",
-        "deputy": "Emer Currie",
-        "department": "Enterprise",
-        "heading": "Departmental Reviews",
-        "question": "1055. Deputy Emer Currie asked the Minister for Enterprise, Tourism and Employment for an update on the review of the grow digital voucher scheme. [57836/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-07-28/1055/"
       }
     ]
   },
@@ -14664,6 +14672,22 @@
     "constituency": "Meath West",
     "questions": [
       {
+        "date": "2026-11-17",
+        "deputy": "Aisling Dempsey",
+        "department": "Social",
+        "heading": "Carer's Leave",
+        "question": "584. Deputy Aisling Dempsey asked the Minister for Social Protection the action he is taking to better protect women's employment opportunities, earnings and pension entitlements when they have caring responsibilities. [80960/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/584/"
+      },
+      {
+        "date": "2026-11-17",
+        "deputy": "Aisling Dempsey",
+        "department": "Social",
+        "heading": "Social Welfare Schemes",
+        "question": "595. Deputy Aisling Dempsey asked the Minister for Social Protection whether his Department has identified cases where persons with disabilities who participated in supported employment programmes or employment provided through organisations (details supplied) accrued insufficient PRSI records for State Pension (Contributory) purposes despite being in long-term employment; the number of such cases identified; and the measures available to address pension shortfalls arising from these circumstances. [81511/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/595/"
+      },
+      {
         "date": "2026-11-12",
         "deputy": "Aisling Dempsey",
         "department": "Education",
@@ -15126,22 +15150,6 @@
         "heading": "Job Losses",
         "question": "353. Deputy Peadar Tóibín asked the Minister for Rural and Community Development and the Gaeltacht if he will engage with the Department of Finance regarding targeted measures to support the sustainability of rural pubs; and if he will make a statement on the matter. [50213/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-01/353/"
-      },
-      {
-        "date": "2026-06-30",
-        "deputy": "Johnny Guirke",
-        "department": "Transport",
-        "heading": "Departmental Data",
-        "question": "233. Deputy Johnny Guirke asked the Minister for Transport if he will meet with an organisation (details supplied) to discuss their ongoing work; and if he will make a statement on the matter. [49569/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/233/"
-      },
-      {
-        "date": "2026-06-30",
-        "deputy": "Johnny Guirke",
-        "department": "Transport",
-        "heading": "Departmental Data",
-        "question": "240. Deputy Johnny Guirke asked the Minister for Transport if he will issue a directive to the Road Safety Authority to begin work on a unilateral drivers licence agreement with the USA; and if he will make a statement on the matter. [49675/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-30/240/"
       }
     ]
   },
