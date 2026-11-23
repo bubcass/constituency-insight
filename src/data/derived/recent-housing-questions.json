@@ -973,6 +973,14 @@
     "constituency": "Clare",
     "questions": [
       {
+        "date": "2026-11-19",
+        "deputy": "Joe Cooney",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "156. Deputy Joe Cooney asked the Minister for Housing, Local Government and Heritage his plans to ensure the Defective Concrete Block Appeals Panel is adequately resourced to ensure it can deal with the expected increase in appeals arising from the recent amendments to the scheme. [81757/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/156/"
+      },
+      {
         "date": "2026-11-17",
         "deputy": "Cathal Crowe",
         "department": "Justice",
@@ -1443,14 +1451,6 @@
         "heading": "Housing Provision",
         "question": "673. Deputy Cathal Crowe asked the Minister for Housing, Local Government and Heritage if he will provide an overview of the progress made to expand social housing provision since 2020; the priorities for further expansion under the latest housing plans; and if he will make a statement on the matter. [14748/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-02-24/673/"
-      },
-      {
-        "date": "2026-02-19",
-        "deputy": "Cathal Crowe",
-        "department": "Housing",
-        "heading": "Rental Sector",
-        "question": "421. Deputy Cathal Crowe asked the Minister for Housing, Local Government and Heritage to clarify the administrative boundaries that will be used to determine towns in excess of 20,000 people for the purposes of regulating short-term rentals; and if he will make a statement on the matter. [13326/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-02-19/421/"
       }
     ]
   },
@@ -3555,6 +3555,14 @@
     "constituency": "Donegal",
     "questions": [
       {
+        "date": "2026-11-19",
+        "deputy": "Pat the Cope Gallagher",
+        "department": "Housing",
+        "heading": "Vacant Properties",
+        "question": "151. Deputy Pat the Cope Gallagher asked the Minister for Housing, Local Government and Heritage the way in which grants have been paid under the vacant property refurbishment grant to date in 2026. [81707/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/151/"
+      },
+      {
         "date": "2026-11-17",
         "deputy": "Pearse Doherty",
         "department": "Social",
@@ -4025,14 +4033,6 @@
         "heading": "Housing Policy",
         "question": "450. Deputy Pearse Doherty asked the Minister for Housing, Local Government and Heritage if, as part of the new national planning statement, he will review or amend the provisions of the national roads guidelines that restrict one-off housing on national secondary roads such as the N56; and if he will make a statement on the matter. [51135/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-07-07/450/"
-      },
-      {
-        "date": "2026-06-25",
-        "deputy": "Charles Ward",
-        "department": "Housing",
-        "heading": "Defective Building Materials",
-        "question": "332. Deputy Charles Ward asked the Minister for Housing, Local Government and Heritage if he is aware that a number of homeowners whose applications were upgraded to full demolition and rebuild following successful defective concrete block scheme appeals have been advised by the Housing Agency that their grant amounts cannot be recalculated until I.S. 465 becomes legislation, despite other homeowners in the same circumstances having received revised grant approvals prior to 2 June 2025; the reason for this apparent inconsistency in treatment; and if he will make a statement on the matter. [48564/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-06-25/332/"
       }
     ]
   },
@@ -5865,6 +5865,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/143/"
       },
       {
+        "date": "2026-11-19",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "160. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage for an update on the review of the social housing income eligibility thresholds. [82035/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/160/"
+      },
+      {
         "date": "2026-11-17",
         "deputy": "Eoin Ó Broin",
         "department": "Housing",
@@ -6319,14 +6327,6 @@
         "heading": "State Bodies",
         "question": "1945. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage to provide an update on the ongoing industrial relations issues impacting the work of Tailte Eireann. [63721/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/1945/"
-      },
-      {
-        "date": "2026-09-07",
-        "deputy": "Eoin Ó Broin",
-        "department": "Finance",
-        "heading": "Tax Code",
-        "question": "704. Deputy Eoin Ó Broin asked the Tánaiste and Minister for Finance if VAT is payable by local authorities or approved housing bodies purchasing land for the delivery of social housing. [60146/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-09-07/704/"
       }
     ]
   },
@@ -9220,6 +9220,22 @@
     "constituency": "Galway East",
     "questions": [
       {
+        "date": "2026-11-19",
+        "deputy": "Albert Dolan",
+        "department": "Housing",
+        "heading": "Housing Policy",
+        "question": "153. Deputy Albert Dolan asked the Minister for Housing, Local Government and Heritage the funding being allocated for starter home supports in 2027; and the number of new owners who will be supported by this. [81735/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/153/"
+      },
+      {
+        "date": "2026-11-19",
+        "deputy": "Peter Roche",
+        "department": "Housing",
+        "heading": "Solar Energy Guidelines",
+        "question": "149. Deputy Peter Roche asked the Minister for Housing, Local Government and Heritage the progress his Department is making in developing national policy and guidance for large-scale solar energy developments and wind farm developments (remove energy storage) to support the delivery of Ireland's clean energy objectives. [78469/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/149/"
+      },
+      {
         "date": "2026-11-17",
         "deputy": "Louis O'Hara",
         "department": "Housing",
@@ -9682,22 +9698,6 @@
         "heading": "Departmental Projects",
         "question": "112. Deputy Peter Roche asked the Minister for Housing, Local Government and Heritage if he will provide a list of all capital projects including social and affordable housing, water services, heritage and local authority-led projects funded under the remit of his Department which have been completed on time and within budget in Galway in each of the past five years, in tabular form; and if he will make a statement on the matter. [35660/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-05-13/112/"
-      },
-      {
-        "date": "2026-05-12",
-        "deputy": "Louis O'Hara",
-        "department": "Housing",
-        "heading": "Housing Schemes",
-        "question": "745. Deputy Louis O'Hara asked the Minister for Housing, Local Government and Heritage if an application has been made to the Housing Activation Office in respect of the next section of the Athenry Ring Road; when a decision is expected to be made on this application; and if he will make a statement on the matter. [35204/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-05-12/745/"
-      },
-      {
-        "date": "2026-04-28",
-        "deputy": "Louis O'Hara",
-        "department": "Housing",
-        "heading": "Legislative Measures",
-        "question": "681. Deputy Louis O'Hara asked the Minister for Housing, Local Government and Heritage the current status of the fire services Bill; will this Bill move to the next stages. [29688/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-04-28/681/"
       }
     ]
   },

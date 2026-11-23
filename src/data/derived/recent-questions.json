@@ -981,6 +981,14 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/28/"
       },
       {
+        "date": "2026-11-19",
+        "deputy": "Joe Cooney",
+        "department": "Housing",
+        "heading": "Defective Building Materials",
+        "question": "156. Deputy Joe Cooney asked the Minister for Housing, Local Government and Heritage his plans to ensure the Defective Concrete Block Appeals Panel is adequately resourced to ensure it can deal with the expected increase in appeals arising from the recent amendments to the scheme. [81757/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/156/"
+      },
+      {
         "date": "2026-11-18",
         "deputy": "Cathal Crowe",
         "department": "Justice",
@@ -1443,14 +1451,6 @@
         "heading": "Healthcare Policy",
         "question": "1018. Deputy Cathal Crowe asked the Minister for Health if her Department will review the funding and remuneration model for healthcare and social work students undertaking mandatory full-time placements within public health and care settings, in light of current cost-of-living pressures and sector recruitment shortages; and if she will make a statement on the matter. [79717/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/1018/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Cathal Crowe",
-        "department": "Health",
-        "heading": "Hospital Waiting Lists",
-        "question": "926. Deputy Cathal Crowe asked the Minister for Health the steps being taken by the HSE to address the two-year waiting list for deep brain stimulation surgery at Beaumont Hospital; if she will increase funding and allocated operating theatre time for these neurosurgical procedures to support approved patients; and if she will make a statement on the matter. [79320/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/926/"
       }
     ]
   },
@@ -3883,6 +3883,14 @@
     "constituency": "Donegal",
     "questions": [
       {
+        "date": "2026-11-19",
+        "deputy": "Pat the Cope Gallagher",
+        "department": "Housing",
+        "heading": "Vacant Properties",
+        "question": "151. Deputy Pat the Cope Gallagher asked the Minister for Housing, Local Government and Heritage the way in which grants have been paid under the vacant property refurbishment grant to date in 2026. [81707/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/151/"
+      },
+      {
         "date": "2026-11-18",
         "deputy": "Pat the Cope Gallagher",
         "department": "Health",
@@ -4353,14 +4361,6 @@
         "heading": "Flood Relief Schemes",
         "question": "555. Deputy Charles Ward asked the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation whether his Department is currently working with the Department of Housing, Local Government and Heritage on a relocation plan for the nine households at a location (details supplied) whose homes are affected by defective concrete and flood risk; if so, the progress that has been made; and when the plan is expected to be finalised. [75399/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/555/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Pádraig Mac Lochlainn",
-        "department": "Culture",
-        "heading": "Artists' Remuneration",
-        "question": "959. Deputy Pádraig Mac Lochlainn asked the Minister for Culture, Communications and Sport the timeframe for the remaining successful applicants to the basic income for the arts scheme to be notified; and if he will provide a clear timetable for contacting the remaining approximately 1,250 artists. [77402/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/959/"
       }
     ]
   },
@@ -6810,11 +6810,27 @@
       },
       {
         "date": "2026-11-19",
+        "deputy": "Eoin Ó Broin",
+        "department": "Housing",
+        "heading": "Housing Schemes",
+        "question": "160. Deputy Eoin Ó Broin asked the Minister for Housing, Local Government and Heritage for an update on the review of the social housing income eligibility thresholds. [82035/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/160/"
+      },
+      {
+        "date": "2026-11-19",
         "deputy": "Shane Moynihan",
         "department": "Health",
         "heading": "Nicotine Inhaling Products",
         "question": "7. Deputy Shane Moynihan asked the Minister for Health whether test purchasing inspections are being conducted in vape shops to assess compliance with associated regulations, the number of such inspections undertaken in 2025 and to date in 2026 and the number and nature of breaches identified. [81872/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/7/"
+      },
+      {
+        "date": "2026-11-19",
+        "deputy": "Shane Moynihan",
+        "department": "Housing",
+        "heading": "Nicotine Inhaling Products",
+        "question": "155. Deputy Shane Moynihan asked the Minister for Housing, Local Government and Heritage whether he has considered creating a distinct planning use class for vape shops, similar to betting offices, in order to give local authorities greater powers to regulate the number and concentration of such premises in town centres and near schools. [81156/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/155/"
       },
       {
         "date": "2026-11-18",
@@ -7255,22 +7271,6 @@
         "heading": "Public Transport",
         "question": "198. Deputy Shane Moynihan asked the Minister for Transport the outcome of the NTA's public consultation on proposed new bus routes serving Adamstown and Clonburris; the next steps towards introducing these services; and the anticipated implementation timeframe. [80258/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/198/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Shane Moynihan",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "102. Deputy Shane Moynihan asked the Minister for Transport for an update on the delivery of DART+ South West; the progress made on funding and procurement to date; and the anticipated timeline for commencement of construction. [80263/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/102/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Shane Moynihan",
-        "department": "Social",
-        "heading": "Social Welfare Schemes",
-        "question": "71. Deputy Shane Moynihan asked the Minister for Social Protection if he has considered the impact of the treatment benefit scheme contribution conditions on older people who have substantial lifetime PRSI contribution records but are ineligible for hearing aid supports because they do not satisfy the requirement to have 39 paid or credited contributions in the contribution years used to assess entitlement. [79729/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/71/"
       }
     ]
   },
@@ -10188,6 +10188,22 @@
     "constituency": "Galway East",
     "questions": [
       {
+        "date": "2026-11-19",
+        "deputy": "Albert Dolan",
+        "department": "Housing",
+        "heading": "Housing Policy",
+        "question": "153. Deputy Albert Dolan asked the Minister for Housing, Local Government and Heritage the funding being allocated for starter home supports in 2027; and the number of new owners who will be supported by this. [81735/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/153/"
+      },
+      {
+        "date": "2026-11-19",
+        "deputy": "Peter Roche",
+        "department": "Housing",
+        "heading": "Solar Energy Guidelines",
+        "question": "149. Deputy Peter Roche asked the Minister for Housing, Local Government and Heritage the progress his Department is making in developing national policy and guidance for large-scale solar energy developments and wind farm developments (remove energy storage) to support the delivery of Ireland's clean energy objectives. [78469/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/149/"
+      },
+      {
         "date": "2026-11-18",
         "deputy": "Albert Dolan",
         "department": "Social",
@@ -10650,22 +10666,6 @@
         "heading": "Primary Care Centres",
         "question": "871. Deputy Louis O'Hara asked the Minister for Health the reason the Radiology Department at Tuam Primary Care Centre has been closed in recent weeks; if this is due to staffing issues; when this issue will be addressed; and the arrangements in place for patients who cannot access this service in the meantime. [78903/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/871/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Louis O'Hara",
-        "department": "Enterprise",
-        "heading": "Tourism Policy",
-        "question": "132. Deputy Louis O'Hara asked the Minister for Enterprise, Tourism and Employment the supports available to communities included in the Wild Atlantic Way initiative. [78719/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/132/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Louis O'Hara",
-        "department": "Enterprise",
-        "heading": "Tourism Promotion",
-        "question": "118. Deputy Louis O'Hara asked the Minister for Enterprise, Tourism and Employment his Department’s efforts to promote tourism in east County Galway. [78718/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/118/"
       }
     ]
   },
@@ -14554,6 +14554,14 @@
     "questions": [
       {
         "date": "2026-11-19",
+        "deputy": "Paula Butterly",
+        "department": "Housing",
+        "heading": "Nicotine Inhaling Products",
+        "question": "170. Deputy Paula Butterly asked the Minister for Housing, Local Government and Heritage for an update on amending the Planning and Development Regulations to classify standalone vape shops as a distinct planning use class similar to betting shops and off-licences so local authorities can refuse applications based on over-concentration; and if he will make a statement on the matter. [82007/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-19/170/"
+      },
+      {
+        "date": "2026-11-19",
         "deputy": "Ruairí Ó Murchú",
         "department": "Health",
         "heading": "Hospital Facilities",
@@ -15023,14 +15031,6 @@
         "heading": "Departmental Budgets",
         "question": "40. Deputy Ruairí Ó Murchú asked the Minister for Climate, Energy and the Environment the timeline and the budget available for the SEAI free solar PV scheme for the medically vulnerable; when eligible customers will be contacted about the scheme; and the number of customers who have already availed of the scheme. [78198/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/40/"
-      },
-      {
-        "date": "2026-11-05",
-        "deputy": "Ruairí Ó Murchú",
-        "department": "Children",
-        "heading": "Health Services Staff",
-        "question": "107. Deputy Ruairí Ó Murchú asked the Minister for Children, Disability and Equality to detail the aggregate total number of vacant positions currently in CDNTs across the State; and the plans to address the way in which these vacancies will be filled. [78200/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/107/"
       }
     ]
   },
