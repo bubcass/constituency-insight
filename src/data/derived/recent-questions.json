@@ -488,6 +488,38 @@
     "constituency": "Cavan-Monaghan",
     "questions": [
       {
+        "date": "2026-11-24",
+        "deputy": "Brendan Smith",
+        "department": "Justice",
+        "heading": "Cross-Border Co-operation",
+        "question": "84. Deputy Brendan Smith asked the Minister for Justice, Home Affairs and Migration the proposals to intensify cross-Border collaboration to deal with criminality on this## island. [83310/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/84/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Matt Carthy",
+        "department": "Justice",
+        "heading": "Departmental Strategies",
+        "question": "86. Deputy Matt Carthy asked the Minister for Justice, Home Affairs and Migration whether the forthcoming national migration and integration strategy will include consideration of an all-island approach to the management of migration. [83233/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/86/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Matt Carthy",
+        "department": "Justice",
+        "heading": "Domestic, Sexual and Gender-based Violence",
+        "question": "70. Deputy Matt Carthy asked the Minister for Justice, Home Affairs and Migration if he will consider establishing an independent court reporting project for sexual violence cases, modelled on the family law reporting project, to provide greater transparency on the operation of sexual offence proceedings including the implementation and effectiveness of the new provisions governing access to counselling records. [83431/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/70/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Matt Carthy",
+        "department": "Justice",
+        "heading": "International Protection",
+        "question": "72. Deputy Matt Carthy asked the Minister for Justice, Home Affairs and Migration if he will initiate a full look-back review of all IPAS contracts. [83432/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/72/"
+      },
+      {
         "date": "2026-11-19",
         "deputy": "Brendan Smith",
         "department": "Health",
@@ -934,38 +966,6 @@
         "heading": "Road Projects",
         "question": "146. Deputy Brendan Smith asked the Minister for Transport if he will ensure that adequate funding is provided to Cavan and Monaghan county councils for the non-national road network for 2027, taking into account the urgent need for increased investment in upgrading and repairing local and regional roads. [80126/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/146/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Brendan Smith",
-        "department": "Social",
-        "heading": "School Meals Programme",
-        "question": "91. Deputy Brendan Smith asked the Minister for Social Protection to report on the findings of the nutritional review and survey on hot school meals. [79751/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/91/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Brendan Smith",
-        "department": "Education",
-        "heading": "Schools Building Projects",
-        "question": "270. Deputy Brendan Smith asked the Minister for Education and Youth when a proposed building project will proceed to the next stage (details supplied). [80537/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/270/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Niamh Smyth",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "364. Deputy Niamh Smyth asked the Minister for Health if she will review the case of a person (details supplied); and if the appointment will be expedited. [80379/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/364/"
-      },
-      {
-        "date": "2026-11-11",
-        "deputy": "Brendan Smith",
-        "department": "Children",
-        "heading": "Disability Services",
-        "question": "196. Deputy Brendan Smith asked the Minister for Children, Disability and Equality the outcome of her discussions (details supplied) in relation to the urgent need to ensure that residential places are provided for people with disabilities. [80124/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/196/"
       }
     ]
   },
@@ -4370,10 +4370,26 @@
       {
         "date": "2026-11-24",
         "deputy": "Barry Heneghan",
+        "department": "Justice",
+        "heading": "An Garda Síochána",
+        "question": "82. Deputy Barry Heneghan asked the Minister for Justice, Home Affairs and Migration the current status and delivery timeline for the proposed new Garda station serving Belmayne and Clongriffin (details supplied); if funding and planning arrangements are in place; and if provision has been made for the estimated 100 additional Garda personnel identified as necessary to meet the area’s growing policing needs. [83305/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/82/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Barry Heneghan",
         "department": "Taoiseach",
         "heading": "Departmental Offices",
         "question": "4. Deputy Barry Heneghan asked the Taoiseach to report on the work of the child poverty and well-being programme office in his Department. [82885/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/4/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Naoise Ó Muirí",
+        "department": "Justice",
+        "heading": "Courts Service",
+        "question": "78. Deputy Naoise Ó Muirí asked the Minister for Justice, Home Affairs and Migration the work being undertaken by his Department ahead of the implementation of phase one of the Family Courts Act 2024. [83246/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/78/"
       },
       {
         "date": "2026-11-19",
@@ -4830,22 +4846,6 @@
         "heading": "Disability Services",
         "question": "56. Deputy Barry Heneghan asked the Minister for Social Protection for an update on plans to introduce a cost of disability payment; whether consideration is being given to providing this payment to people with disabilities who are in employment and do not qualify for existing disability-related social welfare supports; and when a decision on its introduction is expected. [80239/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/56/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Barry Heneghan",
-        "department": "Transport",
-        "heading": "Rail Network",
-        "question": "114. Deputy Barry Heneghan asked the Minister for Transport the immediate measures being taken to address persistent overcrowding on DART services, particularly during peak hours on the Malahide to Bray route; whether additional carriages and services will be introduced; and for an update on DART+ Coastal North, including the expected timeline for delivering increased passenger capacity. [80248/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/114/"
-      },
-      {
-        "date": "2026-11-12",
-        "deputy": "Naoise Ó Muirí",
-        "department": "Social",
-        "heading": "Social Welfare Benefits",
-        "question": "38. Deputy Naoise Ó Muirí asked the Minister for Social Protection if he will consider increasing the household benefits package, recognising the increase in electricity and gas bills. [80146/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-12/38/"
       }
     ]
   },
@@ -5346,6 +5346,22 @@
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/3/"
       },
       {
+        "date": "2026-11-24",
+        "deputy": "Gary Gannon",
+        "department": "Justice",
+        "heading": "Court Procedures",
+        "question": "71. Deputy Gary Gannon asked the Minister for Justice, Home Affairs and Migration if his Department has undertaken or intends to undertake a review of the operation of the in camera rule in family law proceedings, particularly regarding its impact on transparency, accountability and oversight; and whether alternative approaches operating in other jurisdictions are being examined. [83161/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/71/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Gary Gannon",
+        "department": "Justice",
+        "heading": "Misuse of Drugs",
+        "question": "81. Deputy Gary Gannon asked the Minister for Justice, Home Affairs and Migration the number of persons diverted by An Garda Síochána to health services under the health diversion scheme since its commencement; the number of Garda members who received specific training on the operation of the scheme prior to its commencement and to date; and the number of occasions on which a person eligible for diversion was not referred. [83249/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/81/"
+      },
+      {
         "date": "2026-11-19",
         "deputy": "Gary Gannon",
         "department": "Culture",
@@ -5800,22 +5816,6 @@
         "heading": "Mental Health Services",
         "question": "980. Deputy Marie Sherlock asked the Minister for Health the total number of children on CAMHS waiting lists in 2025 and YTD 2026 per health region per those waiting under three months, greater than three months, six months, nine months, and 12 months. [81503/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/980/"
-      },
-      {
-        "date": "2026-11-17",
-        "deputy": "Mary Lou McDonald",
-        "department": "Taoiseach",
-        "heading": "Cabinet Committees",
-        "question": "17. Deputy Mary Lou McDonald asked the Taoiseach when the Cabinet committee on health will meet next. [79002/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/17/"
-      },
-      {
-        "date": "2026-11-17",
-        "deputy": "Mary Lou McDonald",
-        "department": "Taoiseach",
-        "heading": "Child Poverty",
-        "question": "48. Deputy Mary Lou McDonald asked the Taoiseach for a report on the work of the Child Poverty and Well-Being Programme Office in his Department. [79003/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/48/"
       }
     ]
   },
@@ -6793,6 +6793,14 @@
     "constituency": "Dublin Mid-West",
     "questions": [
       {
+        "date": "2026-11-24",
+        "deputy": "Mark Ward",
+        "department": "Justice",
+        "heading": "Crime Prevention",
+        "question": "74. Deputy Mark Ward asked the Minister for Justice, Home Affairs and Migration the work his Department is doing in response to drug debt intimidation and grooming children into drug crime; and if new initiatives are being considered to tackle these crimes. [83434/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/74/"
+      },
+      {
         "date": "2026-11-19",
         "deputy": "Eoin Ó Broin",
         "department": "Further and Higher Education",
@@ -7263,14 +7271,6 @@
         "heading": "Health Services",
         "question": "944. Deputy Paul Nicholas Gogarty asked the Minister for Health to state the specific non clinical administrative mechanisms, including statutory corporate instructions or ministerial directives, available to ensure the HSE treatment abroad scheme can be accessed by a paediatric patient requiring complex orthopaedic intervention, in instances where local hospital administration has failed to progress the care path. [81348/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/944/"
-      },
-      {
-        "date": "2026-11-17",
-        "deputy": "Paul Nicholas Gogarty",
-        "department": "Social",
-        "heading": "Social Welfare Benefits",
-        "question": "579. Deputy Paul Nicholas Gogarty asked the Minister for Social Protection if he will investigate best practice internationally as to whether women who are made involuntarily redundant during pregnancy should retain earlier access to Maternity Benefit than at present, provided they have met the necessary PRSI contribution requirements (details supplied); and if he will make a statement on the matter. [80919/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-17/579/"
       }
     ]
   },
@@ -7764,6 +7764,14 @@
     "questions": [
       {
         "date": "2026-11-24",
+        "deputy": "Maeve O'Connell",
+        "department": "Justice",
+        "heading": "Animal Welfare",
+        "question": "75. Deputy Maeve O'Connell asked the Minister for Justice, Home Affairs and Migration if he will review the laws governing pet theft; and if he will consider redefining the theft of a pet as a specific offence, distinct from other property. [82836/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/75/"
+      },
+      {
+        "date": "2026-11-24",
         "deputy": "Sinéad Gibney",
         "department": "Taoiseach",
         "heading": "Departmental Offices",
@@ -8233,14 +8241,6 @@
         "heading": "Financial Services",
         "question": "81. Deputy Sinéad Gibney asked the Tánaiste and Minister for Finance the number of financial services providers providing business loans to companies; and the value of these loans at the end of December 2025. [80046/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/81/"
-      },
-      {
-        "date": "2026-11-11",
-        "deputy": "Sinéad Gibney",
-        "department": "Foreign",
-        "heading": "Foreign Conflicts",
-        "question": "3. Deputy Sinéad Gibney asked the Minister for Foreign Affairs and Trade the steps Ireland is taking at UN and EU levels to advocate for civilian protection and humanitarian access in eastern Democratic Republic of the Congo; and the steps Ireland is taking to advocate for the cessation of violence perpetrated by state-funded and military-backed militias from DRC and Rwanda in eastern DRC. [80055/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-11/3/"
       }
     ]
   },
@@ -9713,6 +9713,14 @@
       {
         "date": "2026-11-24",
         "deputy": "Richard Boyd Barrett",
+        "department": "Justice",
+        "heading": "Deportation Orders",
+        "question": "77. Deputy Richard Boyd Barrett asked the Minister for Justice, Home Affairs and Migration if a person can be detained for removal from the State while an application for a judicial review or a stay on a deportation order is pending before the High Court; and if he is planning to offer any additional legal supports to migrants whose rights may be breached by the State. [83109/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/77/"
+      },
+      {
+        "date": "2026-11-24",
+        "deputy": "Richard Boyd Barrett",
         "department": "Taoiseach",
         "heading": "Taoiseach's Meetings and Engagements",
         "question": "27. Deputy Richard Boyd Barrett asked the Taoiseach to report on his recent meeting with US President Trump. [65173/26]",
@@ -10173,14 +10181,6 @@
         "heading": "Flexible Work Practices",
         "question": "374. Deputy Barry Ward asked the Minister for Enterprise, Tourism and Employment whether, as part of the review of remote work legislation, commuting time, congestion, commuting costs and the environmental impact of travelling to work will be recognised as legitimate factors when an employer considers a flexible or remote working request, particularly where the role can be carried out effectively on a hybrid or remote basis. [79071/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/374/"
-      },
-      {
-        "date": "2026-11-10",
-        "deputy": "Barry Ward",
-        "department": "Enterprise",
-        "heading": "Flexible Work Practices",
-        "question": "375. Deputy Barry Ward asked the Minister for Enterprise, Tourism and Employment will the review of remote working specifically consider the impact of stricter office attendance policies on people with disabilities, long-term health conditions and neurodivergent people, including autistic people, where remote or hybrid working may help them to enter, remain in or return to employment. [79070/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-10/375/"
       }
     ]
   },
@@ -12613,6 +12613,14 @@
     "constituency": "Laois",
     "questions": [
       {
+        "date": "2026-11-24",
+        "deputy": "Brian Stanley",
+        "department": "Justice",
+        "heading": "Prison Service",
+        "question": "76. Deputy Brian Stanley asked the Minister for Justice, Home Affairs and Migration if his Department and the Irish Prison Service, IPS, will consider providing a more comprehensive medical primary care service at Portlaoise and Midlands Prison to reduce the number of prisoner transfers to Portlaoise hospital for medical treatment. [83334/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/76/"
+      },
+      {
         "date": "2026-11-19",
         "deputy": "Brian Stanley",
         "department": "Health",
@@ -13083,14 +13091,6 @@
         "heading": "Health Services",
         "question": "470. Deputy William Aird asked the Minister for Health the resources being made available to ensure sufficient appropriately qualified healthcare professionals are in place to undertake the required assessments and support the treatment pathway for adults with SMA. [78544/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/470/"
-      },
-      {
-        "date": "2026-11-05",
-        "deputy": "William Aird",
-        "department": "Health",
-        "heading": "Health Services",
-        "question": "472. Deputy William Aird asked the Minister for Health the steps being taken, in conjunction with the HSE, to address delays in clinical assessments for adults with SMA seeking access to risdiplam. [78543/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-05/472/"
       }
     ]
   },
@@ -17949,6 +17949,14 @@
     "questions": [
       {
         "date": "2026-11-24",
+        "deputy": "Alan Kelly",
+        "department": "Justice",
+        "heading": "Protected Disclosures",
+        "question": "73. Deputy Alan Kelly asked the Minister for Justice, Home Affairs and Migration the improvements and safeguards he has made in relation to how his Department handles protected disclosures it receives. [83577/26]",
+        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-24/73/"
+      },
+      {
+        "date": "2026-11-24",
         "deputy": "Ryan O'Meara",
         "department": "Taoiseach",
         "heading": "Departmental Offices",
@@ -18418,14 +18426,6 @@
         "heading": "Health Services Staff",
         "question": "1818. Deputy Ryan O'Meara asked the Minister for Health the number of graduate nurses and midwives in the Dublin and northeast HSE region in 2026, in tabular form; the number of offers issued to these graduates; and the number of posts accepted. [75870/26]",
         "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1818/"
-      },
-      {
-        "date": "2026-11-03",
-        "deputy": "Ryan O'Meara",
-        "department": "Health",
-        "heading": "Health Services Staff",
-        "question": "1820. Deputy Ryan O'Meara asked the Minister for Health for a breakdown of the number of graduate nurses and midwives in the west and northwest HSE region in 2026; the number of offers issued to these graduates; and the number of posts accepted, in tabular form. [75871/26]",
-        "url": "https://www.oireachtas.ie/en/debates/question/2026-11-03/1820/"
       }
     ]
   },
