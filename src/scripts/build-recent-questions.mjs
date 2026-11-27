@@ -4,8 +4,7 @@ import {fileURLToPath} from "node:url";
 
 const DEFAULT_LOOKBACK_DAYS = 548;
 const PER_CONSTITUENCY_LIMIT = 60;
-const PQ_EXPLORER_RAW_BASE =
-  "https://raw.githubusercontent.com/bubcass/pq-explorer/main/src/data/pq";
+const PQS_RAW_BASE = "https://raw.githubusercontent.com/bubcass/PQs/main";
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.resolve(SCRIPT_DIR, "../data");
 const DERIVED_DIR = path.join(DATA_DIR, "derived");
@@ -58,7 +57,7 @@ function normaliseName(value) {
 
 function parseArgs(argv) {
   const options = {
-    sourceBase: PQ_EXPLORER_RAW_BASE,
+    sourceBase: PQS_RAW_BASE,
     sourceDir: null,
     members: path.join(DATA_DIR, "members-lookup.json"),
     generalOutput: path.join(DERIVED_DIR, "recent-questions.json"),
@@ -117,7 +116,7 @@ async function fetchJson(url, attempts = 4) {
   throw new Error(`Failed to fetch ${url}: ${lastError?.message ?? lastError}`);
 }
 
-async function readPqExplorerYear(year, options) {
+async function readQuestionYear(year, options) {
   if (options.sourceDir) {
     const file = path.join(
       options.sourceDir,
@@ -127,9 +126,10 @@ async function readPqExplorerYear(year, options) {
     return JSON.parse(await fs.readFile(file, "utf8"));
   }
 
-  const url = `${options.sourceBase}/${year}/constituency-download-all.json`;
-  console.log(`Fetching PQ Explorer questions for ${year}...`);
-  return fetchJson(url);
+  const url = `${options.sourceBase}/PQs_${year}_paginated.json`;
+  console.log(`Fetching raw parliamentary questions for ${year}...`);
+  const data = await fetchJson(url);
+  return Array.isArray(data) ? data : (Array.isArray(data?.results) ? data.results : []);
 }
 
 function yearsBetween(dateStart, dateEnd) {
@@ -138,17 +138,27 @@ function yearsBetween(dateStart, dateEnd) {
   return Array.from({length: last - first + 1}, (_, index) => first + index);
 }
 
-function activeMembersByConstituency(lookup, asOf) {
-  const grouped = new Map();
+function activeMembersByCode(lookup, asOf) {
+  const members = new Map();
 
-  for (const member of Object.values(lookup ?? {})) {
+  for (const [memberCode, member] of Object.entries(lookup ?? {})) {
     const constituency = clean(member?.constituency);
-    const name = normaliseName(member?.memberName);
     const start = clean(member?.startDate);
     const end = clean(member?.endDate);
+    if (!constituency || (start && start > asOf) || (end && end < asOf)) continue;
+    members.set(clean(member?.memberCode) || memberCode, member);
+  }
+
+  return members;
+}
+
+function activeMembersByConstituency(membersByCode) {
+  const grouped = new Map();
+
+  for (const member of membersByCode.values()) {
+    const constituency = clean(member?.constituency);
+    const name = normaliseName(member?.memberName);
     if (!constituency || !name) continue;
-    if (start && start > asOf) continue;
-    if (end && end < asOf) continue;
     if (!grouped.has(constituency)) grouped.set(constituency, new Set());
     grouped.get(constituency).add(name);
   }
@@ -156,7 +166,58 @@ function activeMembersByConstituency(lookup, asOf) {
   return grouped;
 }
 
-function flattenSource(groups, activeMembers, dateStart, dateEnd) {
+function flattenSource(groups, membersByCode, dateStart, dateEnd) {
+  const rows = new Map();
+
+  function addQuestion(constituency, question) {
+    const date = clean(question?.date).slice(0, 10);
+    const deputy = clean(question?.deputy).replace(/^Deputy\s+/i, "");
+    if (date < dateStart || date > dateEnd) return;
+
+    const row = {
+      date,
+      deputy,
+      department: clean(question?.department),
+      heading: clean(question?.heading) || "Parliamentary question",
+      question: clean(question?.question),
+      url: clean(question?.url),
+    };
+    const key = `${constituency}|${row.date}|${row.deputy}|${row.url}|${row.heading}`;
+    rows.set(key, {constituency, ...row});
+  }
+
+  for (const source of groups.flat()) {
+    const question = source?.question;
+    const memberCode = clean(question?.by?.memberCode);
+    const member = membersByCode.get(memberCode);
+    const constituency = clean(member?.constituency);
+    const date = clean(source?.contextDate).slice(0, 10);
+    if (!member || !constituency || date < dateStart || date > dateEnd) continue;
+
+    const questionNumber = clean(question?.questionNumber);
+    const url = date && questionNumber
+      ? `https://www.oireachtas.ie/en/debates/question/${date}/${questionNumber}/`
+      : "";
+    addQuestion(constituency, {
+      date,
+      deputy: clean(question?.by?.showAs) || clean(member?.memberName),
+      department: question?.to?.showAs,
+      heading: question?.debateSection?.showAs,
+      question: question?.showAs,
+      url,
+    });
+  }
+
+  return [...rows.values()].sort(
+    (a, b) =>
+      a.constituency.localeCompare(b.constituency, "en") ||
+      b.date.localeCompare(a.date) ||
+      a.deputy.localeCompare(b.deputy, "en") ||
+      a.heading.localeCompare(b.heading, "en"),
+  );
+}
+
+function flattenLegacySource(groups, activeMembers, dateStart, dateEnd) {
   const rows = new Map();
 
   for (const group of groups.flat()) {
@@ -165,11 +226,10 @@ function flattenSource(groups, activeMembers, dateStart, dateEnd) {
     if (!constituency || !activeNames) continue;
 
     for (const question of group?.questions ?? []) {
-      const date = clean(question?.date).slice(0, 10);
       const deputy = clean(question?.deputy).replace(/^Deputy\s+/i, "");
-      if (date < dateStart || date > dateEnd) continue;
       if (!activeNames.has(normaliseName(deputy))) continue;
-
+      const date = clean(question?.date).slice(0, 10);
+      if (date < dateStart || date > dateEnd) continue;
       const row = {
         date,
         deputy,
@@ -228,17 +288,22 @@ async function main() {
   const years = yearsBetween(dateStart, dateEnd);
   const [membersLookup, ...sourceGroups] = await Promise.all([
     fs.readFile(options.members, "utf8").then(JSON.parse),
-    ...years.map((year) => readPqExplorerYear(year, options)),
+    ...years.map((year) => readQuestionYear(year, options)),
   ]);
-  const activeMembers = activeMembersByConstituency(membersLookup, dateEnd);
-  const rows = flattenSource(sourceGroups, activeMembers, dateStart, dateEnd);
+  const membersByCode = activeMembersByCode(membersLookup, dateEnd);
+  const activeMembers = activeMembersByConstituency(membersByCode);
+  const rawRows = sourceGroups.flat();
+  const usesLegacySource = rawRows.some((row) => row?.constituency && Array.isArray(row?.questions));
+  const rows = usesLegacySource
+    ? flattenLegacySource(sourceGroups, activeMembers, dateStart, dateEnd)
+    : flattenSource(sourceGroups, membersByCode, dateStart, dateEnd);
   const general = groupByConstituency(rows);
   const generalCount = general.reduce((sum, group) => sum + group.questions.length, 0);
 
   await writeJson(options.generalOutput, general);
   console.log(
     `Wrote ${generalCount} recent questions for ${general.length} constituencies ` +
-      `from PQ Explorer (${dateStart} to ${dateEnd})`,
+      `from parliamentary questions data (${dateStart} to ${dateEnd})`,
   );
 
   for (const topic of TOPICS) {

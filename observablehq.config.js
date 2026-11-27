@@ -1,3 +1,7 @@
+const insightsHome = process.env.INSIGHTS_TARGET === "aws"
+  ? "/"
+  : "https://bubcass.github.io/open-data-insights/";
+
 export default {
   title: "Constituency Insights",
   head: `
@@ -101,7 +105,10 @@ export default {
 
           const indexTitleLink = document.createElement("a");
           indexTitleLink.className = "oireachtas-masthead__index-link";
-          indexTitleLink.href = "https://bubcass.github.io/open-data-insights/#constituency-heading";
+          indexTitleLink.href = ${JSON.stringify(insightsHome + "#constituency-heading")};
+          document.querySelectorAll("a[data-insights-home]").forEach((link) => {
+            link.href = ${JSON.stringify(insightsHome)};
+          });
           indexTitleLink.setAttribute("aria-label", "View Constituency Insights on the main Insights page");
           indexTitleLink.innerHTML = insightsBrandMarkup;
           indexTitle.appendChild(indexTitleLink);

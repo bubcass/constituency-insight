@@ -111,13 +111,12 @@ The same run also writes `recent-sports-contributions.json`, filtering the full
 the per-member limit. This keeps topic pages complete without enlarging the
 general browser resource.
 
-Run `npm run build:recent-questions` to fetch PQ Explorer's committed annual
-constituency datasets from `bubcass/pq-explorer`. One run rebuilds the general,
-sports, work, housing, transport and education question feeds from that shared
-source. Questions are limited to Deputies marked as sitting in
-`src/data/members-lookup.json`. New topic pages should add their matcher and
-output to `TOPICS` in `src/scripts/build-recent-questions.mjs` rather than
-introducing a separate question source.
+Run `npm run build:recent-questions` to fetch the annual raw PQ datasets from
+`bubcass/PQs` and map each question to its constituency using
+`src/data/members-lookup.json`. It rebuilds the general, sports, work, housing,
+transport and education question feeds without reading data from the
+`bubcass/pq-explorer` repo or its Pages site. New topic pages should add their
+matcher and output to `TOPICS` in `src/scripts/build-recent-questions.mjs`.
 
 The `Update recent parliamentary activity` GitHub Actions workflow runs both
 refreshes each night. When the datasets change, it commits them and explicitly
@@ -130,8 +129,8 @@ node src/scripts/build-recent-contributions.mjs \
   --date-end 2026-07-17
 ```
 
-For local question-pipeline development, a PQ Explorer checkout can be used
-without downloading its GitHub snapshots:
+For local question-pipeline development, existing derived PQ Explorer files
+can still be supplied explicitly:
 
 ```bash
 npm run build:recent-questions -- \

@@ -1,0 +1,26 @@
+version: 0.2
+
+env:
+  variables:
+    INSIGHTS_TARGET: "aws"
+    SITE_BUCKET: "pq-explorer-test-716904822267-20261116"
+    SITE_PREFIX: "insights-pilot/constituency-insight"
+    CLOUDFRONT_DISTRIBUTION_ID: "E18L5O4CYRKV4Y"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - test -n "$SITE_BUCKET"
+      - npm ci
+
+  build:
+    commands:
+      - npm run build:parliamentary
+      - npm run build
+      - aws s3 sync dist/ "s3://${SITE_BUCKET}/${SITE_PREFIX}/" --delete
+
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --paths "/constituency-insight/*"
